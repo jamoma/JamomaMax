@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 308.0, 44.0, 1115.0, 793.0 ],
@@ -30,24 +31,50 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-84",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 827.0, 714.0, 236.0, 20.0 ],
-					"text" : "get the highlight state of a j.remote"
+					"id" : "obj-1",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 733.0, 143.0, 96.0, 18.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-82",
-					"maxclass" : "button",
+					"id" : "obj-3",
+					"maxclass" : "jit.pwindow",
 					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 674.0, 165.0, 80.0, 60.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-42",
+					"maxclass" : "message",
+					"numinlets" : 2,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 809.0, 715.0, 20.0, 20.0 ]
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 438.0, 143.0, 96.0, 18.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-84",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 809.0, 713.0, 236.0, 20.0 ],
+					"text" : "observe the highlight state of a j.remote"
 				}
 
 			}
@@ -59,7 +86,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 809.0, 757.0, 20.0, 20.0 ]
+					"patching_rect" : [ 809.0, 771.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -68,12 +95,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-50",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 809.0, 736.0, 203.0, 20.0 ],
-					"text" : "j.receive /interface/rate:highlight"
+					"patching_rect" : [ 809.0, 736.0, 203.0, 33.0 ],
+					"text" : "j.receive /interface/rate(slider):highlight"
 				}
 
 			}
@@ -101,8 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 921.0, 144.0, 180.0, 18.0 ],
-					"text" : "fps 33.294228"
+					"patching_rect" : [ 921.0, 144.0, 180.0, 18.0 ]
 				}
 
 			}
@@ -129,7 +156,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 349.0, 610.0, 20.0, 20.0 ]
+					"patching_rect" : [ 331.0, 610.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -142,8 +169,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 349.0, 632.0, 80.0, 18.0 ],
-					"text" : "fps:freeze $1"
+					"patching_rect" : [ 331.0, 632.0, 125.0, 18.0 ],
+					"text" : "fps(flonum):freeze $1"
 				}
 
 			}
@@ -310,7 +337,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 141.0, 735.0, 167.0, 41.0 ],
-					"text" : ";\rmax launchbrowser http://jamoma.org/forum.html"
+					"text" : ";\rmax launchbrowser http://jamoma.org/forum"
 				}
 
 			}
@@ -339,8 +366,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 340.0, 353.0, 552.0, 47.0 ],
-					"text" : "Here is an intantiation of a movie view : \nthe first argument specifies the model to bind to (equivalent to the model/address internal parameter) \nthe second (optional) argument defines the address of the view  (here /interface)"
+					"patching_rect" : [ 340.0, 353.0, 495.0, 47.0 ],
+					"text" : "Here is an intantiation of a movie view : \nthe first argument specifies the model to bind to (equivalent to the model:address attribute) \nthe second (optional) argument defines the address of the view  (here /interface)"
 				}
 
 			}
@@ -367,7 +394,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 348.0, 563.0, 20.0, 20.0 ]
+					"patching_rect" : [ 330.0, 563.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -380,8 +407,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 348.0, 585.0, 78.0, 18.0 ],
-					"text" : "fps:active $1"
+					"patching_rect" : [ 330.0, 585.0, 120.0, 18.0 ],
+					"text" : "fps(flonum):active $1"
 				}
 
 			}
@@ -391,12 +418,12 @@
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
 					"id" : "obj-13",
-					"linecount" : 11,
+					"linecount" : 9,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 479.0, 606.0, 303.0, 154.0 ],
-					"text" : "With no argument in the bpatcher, a view bpatcher registers his namespace below a /movie(view) node in order to do not create a new /movie instance.\nThe first argument can be used to set the /model/address directly. By default /model/address will be /movie if this instance exists (because it is a movie.view patch). Here the /model/address is /player.A.\nThen a second argument can register the view under another name than /movie(view) (here /interface address)"
+					"patching_rect" : [ 479.0, 606.0, 316.0, 127.0 ],
+					"text" : "With no argument in the bpatcher, a view bpatcher registers his namespace below a /movie(view) node in order to do not create a new /movie instance.\nThe first argument can be used to set the model:address directly. By default model:address will be /movie if this instance exists (because it is a movie.view patch). Here the model:address is /player.A.\nThen a second argument can register the view under another name than /movie(view) (here /interface address)"
 				}
 
 			}
@@ -439,8 +466,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.0, 474.0, 52.0, 18.0 ],
-					"text" : "file/load"
+					"patching_rect" : [ 330.0, 473.0, 120.0, 18.0 ],
+					"text" : "file/load(button)"
 				}
 
 			}
@@ -452,7 +479,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 345.0, 419.0, 20.0, 20.0 ]
+					"patching_rect" : [ 330.0, 419.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -465,8 +492,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 345.0, 441.0, 49.0, 18.0 ],
-					"text" : "play $1"
+					"patching_rect" : [ 330.0, 441.0, 120.0, 18.0 ],
+					"text" : "play(textbutton) $1"
 				}
 
 			}
@@ -493,8 +520,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 809.0, 521.0, 266.0, 47.0 ],
-					"text" : "Here the movie.model have a j.out so it provides internals /out/mute, /out/freeze and /out/preview parameter."
+					"patching_rect" : [ 809.0, 521.0, 269.0, 47.0 ],
+					"text" : "Here the movie.model have a j.out so it provides internals data/mute, data/freeze and data/preview parameter."
 				}
 
 			}
@@ -523,8 +550,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 479.0, 408.0, 335.0, 33.0 ],
-					"text" : "It's possible to set the /model/address parameter of a view bpatcher to make it binds on a particular instance of a model."
+					"patching_rect" : [ 479.0, 408.0, 359.0, 33.0 ],
+					"text" : "It's possible to set the model:address attribute of a view bpatcher to make it binds on a particular instance of a model."
 				}
 
 			}
@@ -537,8 +564,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 479.0, 585.0, 153.0, 18.0 ],
-					"text" : "fps 22.664623"
+					"patching_rect" : [ 479.0, 585.0, 153.0, 18.0 ]
 				}
 
 			}
@@ -552,7 +578,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 896.0, 441.0, 53.0, 18.0 ],
-					"text" : "ui/panel"
+					"text" : "ui:panel"
 				}
 
 			}
@@ -567,8 +593,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 629.0, 441.0, 139.0, 18.0 ],
-					"text" : "model/address /player.B",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"text" : "model:address /player.B"
 				}
 
 			}
@@ -583,47 +608,22 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 441.0, 139.0, 18.0 ],
-					"text" : "model/address /player.A",
-					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"text" : "model:address /player.A"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "an interface for a movie model",
 					"args" : [ "/player.A", "/interface" ],
 					"id" : "obj-51",
 					"maxclass" : "bpatcher",
-					"name" : "movie.view.maxpat",
+					"name" : "myMovie.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 479.0, 474.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 300.0, 105.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "jit.pwindow",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 810.0, 143.0, 80.0, 60.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-3",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 597.0, 143.0, 96.0, 18.0 ],
-					"text" : "fps 33.294228"
 				}
 
 			}
@@ -697,6 +697,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
@@ -705,7 +706,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 674.0, 118.0, 155.0, 20.0 ],
-					"text" : "movie.model player.B"
+					"text" : "myMovie.model player.B"
 				}
 
 			}
@@ -902,8 +903,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 6,
-							"minor" : 0,
-							"revision" : 8
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
 						}
 ,
 						"rect" : [ 48.0, 230.0, 647.0, 226.0 ],
@@ -1265,21 +1267,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 515.0, 143.0, 80.0, 60.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-42",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 302.0, 143.0, 96.0, 18.0 ],
-					"text" : "fps 22.664623"
+					"patching_rect" : [ 379.0, 165.0, 80.0, 60.0 ]
 				}
 
 			}
@@ -1353,6 +1341,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-31",
@@ -1361,7 +1350,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 379.0, 118.0, 155.0, 20.0 ],
-					"text" : "movie.model player.A"
+					"text" : "myMovie.model player.A"
 				}
 
 			}
@@ -1434,7 +1423,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 4.0, 433.0, 167.0, 18.0 ],
-					"text" : "load movie.view.maxpat"
+					"text" : "load myMovie.view.maxpat"
 				}
 
 			}
@@ -1466,7 +1455,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-1", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-12", 1 ]
@@ -1475,7 +1464,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-12", 0 ]
@@ -1496,7 +1485,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 354.5, 496.0, 421.5, 496.0, 421.5, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 339.5, 496.0, 472.5, 496.0, 472.5, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-21", 0 ]
 				}
 
@@ -1506,7 +1495,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 354.5, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 339.5, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -1543,7 +1532,7 @@
 					"destination" : [ "obj-42", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 0 ]
+					"source" : [ "obj-31", 1 ]
 				}
 
 			}
@@ -1552,7 +1541,7 @@
 					"destination" : [ "obj-43", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 1 ]
+					"source" : [ "obj-31", 0 ]
 				}
 
 			}
@@ -1687,7 +1676,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 358.5, 654.0, 472.5, 654.0, 472.5, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 340.5, 654.0, 472.5, 654.0, 472.5, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-53", 0 ]
 				}
 
@@ -1835,7 +1824,7 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 357.5, 607.0, 472.0, 607.0, 472.0, 466.0, 488.5, 466.0 ],
+					"midpoints" : [ 339.5, 607.0, 472.0, 607.0, 472.0, 466.0, 488.5, 466.0 ],
 					"source" : [ "obj-77", 0 ]
 				}
 
@@ -1849,34 +1838,25 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-50", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-82", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/movie",
+				"name" : "myMovie.model.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/movie",
+				"name" : "myMovie.view.maxpat",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
 				"patcherrelativepath" : "../movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "basicView.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/patches",
-				"patcherrelativepath" : "",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/patches",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1886,10 +1866,6 @@
 			}
 , 			{
 				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
 				"type" : "iLaX"
 			}
 , 			{

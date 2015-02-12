@@ -334,7 +334,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 650.0, 446.5, 358.0, 33.0 ],
-									"text" : "j.message myFloat @range/clipmode none @type decimal @ramp/drive Max @description \"My float\"",
+									"text" : "j.message myFloat @clipmode none @type decimal @ramp/drive max @description \"My float\"",
 									"varname" : "my_float"
 								}
 
@@ -452,7 +452,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 147.0, 614.0, 208.0, 18.0 ],
-									"text" : "model/address /Basic"
+									"text" : "model:address /Basic"
 								}
 
 							}

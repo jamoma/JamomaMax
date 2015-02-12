@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief j.clip≈ : Range clipping external for Jamoma AudioGraph.
+ * @brief j.clip~ : Range clipping external for Jamoma AudioGraph.
  *
  * @details This wraps the Jamoma DSP class #Clipper as a Jamoma AudioGraph external for Max.
  *
@@ -16,7 +16,7 @@
 
 #include "TTClassWrapperMax.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	TTDSPInit();
 	return wrapTTClassAsMaxClass(TT("clipper"), "j.clip~", NULL);

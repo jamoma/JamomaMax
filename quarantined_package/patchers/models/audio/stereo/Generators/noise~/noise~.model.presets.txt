@@ -1,0 +1,9 @@
+
+
+
+- preset "default"
+  audio/gain 0
+  audio/mute 1
+  mode 0
+  
+

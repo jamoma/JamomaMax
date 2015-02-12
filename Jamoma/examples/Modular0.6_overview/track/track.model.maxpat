@@ -3,8 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 4
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 25.0, 69.0, 510.0, 103.0 ],
@@ -33,7 +34,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 472.0, 66.0, 25.0, 25.0 ]
+					"patching_rect" : [ 206.0, 71.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -44,12 +45,13 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 298.0, 66.0, 25.0, 25.0 ]
+					"patching_rect" : [ 32.0, 71.0, 25.0, 25.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-6",
@@ -57,13 +59,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 326.0, 37.0, 165.0, 20.0 ],
-					"text" : "movie.model channel.B"
+					"patching_rect" : [ 206.0, 42.0, 165.0, 20.0 ],
+					"text" : "myMovie.model channel.B"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "a movie playback model",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-5",
@@ -71,8 +74,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 152.0, 37.0, 165.0, 20.0 ],
-					"text" : "movie.model channel.A"
+					"patching_rect" : [ 32.0, 42.0, 165.0, 20.0 ],
+					"text" : "myMovie.model channel.A"
 				}
 
 			}
@@ -83,7 +86,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 66.0, 25.0, 25.0 ]
+					"patching_rect" : [ 393.0, 71.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -95,7 +98,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.0, 4.0, 25.0, 25.0 ]
+					"patching_rect" : [ 393.0, 9.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -109,7 +112,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 5.0, 37.0, 72.0, 20.0 ],
+					"patching_rect" : [ 393.0, 42.0, 72.0, 20.0 ],
 					"text" : "j.model"
 				}
 
@@ -138,7 +141,7 @@
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 1 ]
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -147,45 +150,9 @@
 					"destination" : [ "obj-12", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-6", 1 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "movie.model.maxpat",
-				"bootpath" : "/Users/bltzr/Documents/dev/Jamoma/Modules/Modular/Max/documentation/examples/Modular0.6_overview/movie",
-				"patcherrelativepath" : "../movie",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.preset.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

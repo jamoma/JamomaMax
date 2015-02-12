@@ -1,0 +1,14 @@
+#################################
+- preset "default"
+# "edit a comment"
+#################################
+
+delay/maxSize 1000000
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+delay/left 0
+delay/right 0
+ 
+

@@ -1,0 +1,40 @@
+- cue "black & white"
+- description "pixels are only black, grey or white"
+# ###########################################
+# 
+/noise%/data/active 1
+/noise%/data/bypass 0
+/noise%/dim 8 6 ramp 1000
+/noise%/framemotor 1
+/noise%/framemotor/fps 25 ramp 1000
+/noise%/planes 4 ramp 1000
+# 
+/brcosa%/brightness 1.000000 ramp 1000
+/brcosa%/contrast 2.000000 ramp 1000
+/brcosa%/data/active 1
+/brcosa%/data/bypass 0
+/brcosa%/monochrome 0
+/brcosa%/saturation 0.000000 ramp 1000
+# 
+# ###########################################
+
+- cue "vivid colors"
+- description "vivid colors are nice too"
+# ###########################################
+# 
+/noise%/data/active 1
+/noise%/data/bypass 0
+/noise%/dim 8 6 ramp 2000
+/noise%/framemotor 1
+/noise%/framemotor/fps 25 ramp 2000
+/noise%/planes 4 ramp 2000
+# 
+/brcosa%/brightness 2.000000 ramp 2000
+/brcosa%/contrast 2.000000 ramp 2000
+/brcosa%/data/active 1
+/brcosa%/data/bypass 0
+/brcosa%/monochrome 0
+/brcosa%/saturation 1.000000 ramp 2000
+# 
+# ###########################################
+

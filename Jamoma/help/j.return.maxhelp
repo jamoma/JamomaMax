@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 7,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 349.0, 163.0, 650.0, 559.0 ],
+		"rect" : [ 175.0, 87.0, 650.0, 559.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -33,6 +33,65 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 6,
+							"minor" : 1,
+							"revision" : 7,
+							"architecture" : "x86"
+						}
+,
+						"rect" : [ 0.0, 26.0, 650.0, 533.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 0,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 0,
+						"gridsize" : [ 15.0, 15.0 ],
+						"gridsnaponopen" : 0,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 1,
+						"boxanimatetime" : 200,
+						"imprint" : 0,
+						"enablehscroll" : 1,
+						"enablevscroll" : 1,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"showontab" : 1,
+						"boxes" : [  ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 157.0, 315.0, 24.0, 18.0 ],
+					"saved_object_attributes" : 					{
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"default_fontsize" : 12.0,
+						"description" : "",
+						"digest" : "",
+						"fontface" : 0,
+						"fontname" : "Arial",
+						"fontsize" : 12.0,
+						"globalpatchername" : "",
+						"tags" : ""
+					}
+,
+					"text" : "p ?"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 10.0,
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -42,11 +101,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 7,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 349.0, 189.0, 650.0, 533.0 ],
+						"rect" : [ 175.0, 113.0, 650.0, 533.0 ],
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -86,11 +145,12 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 388.0, 386.0, 164.0, 60.0 ],
+									"patching_rect" : [ 379.0, 406.0, 184.0, 60.0 ],
 									"presentation" : 0,
-									"presentation_rect" : [ 388.0, 344.0, 0.0, 0.0 ],
+									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
+									"prototypename" : "Jamoma.light",
 									"text" : "You can also use listen to your model using other Jamoma externals such as j.receive, j.map, etc.",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"textjustification" : 0,
 									"underline" : 0
 								}
@@ -140,15 +200,16 @@
 									"hidden" : 0,
 									"id" : "obj-3",
 									"ignoreclick" : 1,
-									"linecount" : 3,
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 388.0, 279.0, 158.0, 47.0 ],
+									"patching_rect" : [ 270.0, 292.5, 189.0, 33.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
+									"prototypename" : "Jamoma.light",
 									"text" : "Outputs declared using a j.return are sent out by j.model.",
-									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"textjustification" : 0,
 									"underline" : 0
 								}
@@ -193,7 +254,7 @@
 									"patching_rect" : [ 74.0, 299.0, 50.0, 18.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "1981",
+									"text" : "122",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0
 								}
@@ -211,7 +272,7 @@
 									"id" : "obj-13",
 									"ignoreclick" : 0,
 									"maxclass" : "newobj",
-									"numinlets" : 1,
+									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 105.0, 247.0, 197.0, 20.0 ],
@@ -225,6 +286,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"background" : 0,
 									"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"color" : [ 0.7, 0.7, 0.7, 1.0 ],
@@ -244,11 +306,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 3,
+											"revision" : 7,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 54.0, 94.0, 853.0, 476.0 ],
+										"rect" : [ 122.0, 313.0, 853.0, 476.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -283,13 +345,11 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-39",
-													"linecount" : 2,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 248.0, 198.0, 115.0, 31.0 ],
-													"text" : "model/address /myMetronomModel"
+													"patching_rect" : [ 248.0, 198.0, 115.0, 18.0 ]
 												}
 
 											}
@@ -303,7 +363,7 @@
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
 													"patching_rect" : [ 164.0, 198.0, 35.0, 18.0 ],
-													"text" : "1981"
+													"text" : "122"
 												}
 
 											}
@@ -339,13 +399,13 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-26",
-													"linecount" : 4,
+													"linecount" : 5,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 395.0, 223.0, 271.0, 60.0 ],
-													"text" : "j.return myCounter @type integer @active 1 @range/bounds 0 10 @range/clipmode wrap @repetitions/allow 0 @description \"Count from 0 to 9\""
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 395.0, 227.0, 190.0, 74.0 ],
+													"text" : "j.return myCounter @type integer @active 1 @range 0 10 @clipmode wrap @repetitions/filter 1 @description \"Count from 0 to 9\""
 												}
 
 											}
@@ -355,7 +415,7 @@
 													"fontsize" : 12.0,
 													"id" : "obj-24",
 													"maxclass" : "newobj",
-													"numinlets" : 1,
+													"numinlets" : 3,
 													"numoutlets" : 3,
 													"outlettype" : [ "", "", "" ],
 													"patching_rect" : [ 91.0, 164.0, 196.0, 20.0 ],
@@ -384,13 +444,12 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-21",
-													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 412.0, 132.0, 252.0, 33.0 ],
-													"text" : "j.return myMetro @type generic @description \"Send bang out of j.hub\""
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 411.0, 135.0, 412.0, 20.0 ],
+													"text" : "j.return myMetro @type generic @description \"Send bang out of the model\""
 												}
 
 											}
@@ -581,7 +640,7 @@
 									"bgcolor2" : [ 0.867, 0.867, 0.867, 1.0 ],
 									"fontface" : 0,
 									"fontname" : "Arial",
-									"fontsize" : 10.0,
+									"fontsize" : 12.0,
 									"gradient" : 0,
 									"hidden" : 0,
 									"id" : "obj-7",
@@ -590,10 +649,10 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 64.0, 481.0, 175.0, 16.0 ],
+									"patching_rect" : [ 31.0, 477.0, 208.0, 18.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "/myMetronomModel/myCounter:value",
+									"text" : "/myMetronomModel/myCounter",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0
 								}
@@ -606,7 +665,7 @@
 									"bgcolor2" : [ 0.867, 0.867, 0.867, 1.0 ],
 									"fontface" : 0,
 									"fontname" : "Arial",
-									"fontsize" : 10.0,
+									"fontsize" : 12.0,
 									"gradient" : 0,
 									"hidden" : 0,
 									"id" : "obj-6",
@@ -615,10 +674,10 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 43.0, 440.0, 81.0, 16.0 ],
+									"patching_rect" : [ 34.0, 440.0, 90.0, 18.0 ],
 									"presentation" : 0,
 									"presentation_rect" : [ 0.0, 0.0, 0.0, 0.0 ],
-									"text" : "1981",
+									"text" : "122",
 									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"textjustification" : 0
 								}

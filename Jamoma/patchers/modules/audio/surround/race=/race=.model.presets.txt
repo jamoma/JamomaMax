@@ -1,0 +1,15 @@
+
+
+
+- preset "default"
+  attenation -2.500000
+  bypass 0
+  delay 70.000000
+  gain 100.000000
+  lowMid 250
+  midHigh 7000
+  mute 0
+  sidechain 0.000000
+
+  
+

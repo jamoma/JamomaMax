@@ -1,13 +1,18 @@
-/** 
-	\file j.meter~.cpp
-	External for Jamoma: signal level meter
-	By Tim Place, Copyright � 2005
-	Modifications for Compiling on Windows by Thomas Grill, 2005
-	Re-write for Max 5 by Tim Place, 2008
-	
-	License: This code is licensed under the terms of the GNU LGPL
-	http://www.gnu.org/licenses/lgpl.html 
-  */
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief j.meter~ : Audio signal level meter GUI.
+ *
+ * @details This external is deprecated, use live.meter~ instead.
+ *
+ * @authors Tim Place, Thomas Grill, Trond Lossius
+ *
+ * @copyright © 2005 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
+ */
+
 
 #include "ext.h"
 #include "ext_obex.h"
@@ -97,7 +102,7 @@ static t_class*	s_meter_class;
 #pragma mark Class Definition
 #endif // 0
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c = class_new("j.meter~", (method)meter_new, (method)meter_free, sizeof(t_meter), (method)NULL, A_GIMME, 0L);
 	
@@ -446,7 +451,8 @@ void meterCacheSurface(t_meter* x)
 			for (j=0; j < x->gradientRect.height; j++)
 				jgraphics_image_surface_set_pixel(x->gradientSurface, i, j, color);
 		}
-	}else {
+	}
+	else {
 		for (j=0; j < x->gradientRect.height; j++) {
 			color.red = 1. - (j / x->gradientRect.height);	
 			for (i=0; i < x->gradientRect.width; i++)

@@ -1,0 +1,12 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+anchor 0.500000 0.500000
+offset 0.000000 0.000000
+theta 0
+zoom 0.500000 0.500000
+boundmode wrap
+# 
+# ###########################################

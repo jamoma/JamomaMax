@@ -1,0 +1,200 @@
+
+
+
+- preset "default"
+  numChannels 4
+  type source
+  source.1/position 4 4 0.000000 
+  source.2/position 4 -4 0.000000 
+  source.3/position -4 -4 0.000000 
+  source.4/position -4 4 0.000000
+  view/highlight none
+  
+
+- preset "2 (2-0) channel stereo"
+  type speaker
+  numChannels 2
+  speaker.1/position -2.500000 4.330127 0.000000 
+  speaker.2/position 2.500000 4.330127 0.000000 
+  
+
+- preset "3 (3-0) channel stereo"
+  type speaker
+  numChannels 3
+  speaker.1/position -2.500000 4.330127 0.000000 
+  speaker.2/position 0.000000 5.000000 0.000000 
+  speaker.3/position 2.500000 4.330127 0.000000 
+  
+
+- preset "4 (3-1) channel surround"
+  type speaker
+  numChannels 4
+  speaker.1/position -2.500000 4.330127 0.000000 
+  speaker.2/position 0.000000 5.000000 0.000000 
+  speaker.3/position 2.500000 4.330127 0.000000 
+  speaker.4/position -0.000000 -5.000000 0.000000 
+  
+
+- preset "ITU 5 (3-2) channel surround"
+  type speaker
+  numChannels 5
+  speaker.1/position -2.500000 4.330127 0.000000 
+  speaker.2/position 0.000000 5.000000 0.000000 
+  speaker.3/position 2.500000 4.330127 0.000000 
+  speaker.4/position 4.698463 -1.710101 0.000000 
+  speaker.5/position -4.698463 -1.710101 0.000000 
+  
+
+- preset "ITU 7 (3-4) channel surround"
+  type speaker
+  numChannels 7
+  speaker.1/position -2.500000 4.330127 0.000000 
+  speaker.2/position 0.000000 5.000000 0.000000 
+  speaker.3/position 2.500000 4.330127 0.000000 
+  speaker.4/position 5.000000 0.000000 0.000000 
+  speaker.5/position 2.500000 -4.330127 0.000000 
+  speaker.6/position -2.500000 -4.330127 0.000000 
+  speaker.7/position -5.000000 0.000000 0.000000 
+  
+
+- preset "Rig 2D 4 channels"
+  type speaker
+  numChannels 4
+  speaker.1/position -3.535534 3.535534 0.000000 
+  speaker.2/position 3.535534 3.535534 0.000000 
+  speaker.3/position 3.535534 -3.535534 0.000000 
+  speaker.4/position -3.535534 -3.535534 0.000000 
+  
+
+- preset "Rig 2D 5 channels"
+  type speaker
+  numChannels 5
+  speaker.1/position -2.938926 4.045085 0.000000 
+  speaker.2/position 2.938926 4.045085 0.000000 
+  speaker.3/position 4.755282 -1.545085 0.000000 
+  speaker.4/position -0.000000 -5.000000 0.000000 
+  speaker.5/position -4.755282 -1.545085 0.000000 
+  
+
+- preset "Rig 2D 6 channels"
+  type speaker
+  numChannels 6
+  speaker.1/position -2.500000 4.330127 0.000000 
+  speaker.2/position 2.500000 4.330127 0.000000 
+  speaker.3/position 5.000000 0.000000 0.000000 
+  speaker.4/position 2.500000 -4.330127 0.000000 
+  speaker.5/position -2.500000 -4.330127 0.000000 
+  speaker.6/position -5.000000 0.000000 0.000000 
+  
+
+- preset "Rig 2D 8 channels 1"
+  type speaker
+  numChannels 8
+  speaker.1/position -1.913416 4.619398 0.000000 
+  speaker.2/position 1.913416 4.619398 0.000000 
+  speaker.3/position 4.619398 1.913417 0.000000 
+  speaker.4/position 4.619398 -1.913417 0.000000 
+  speaker.5/position 1.913416 -4.619398 0.000000 
+  speaker.6/position -1.913416 -4.619398 0.000000 
+  speaker.7/position -4.619398 -1.913417 0.000000 
+  speaker.8/position -4.619398 1.913417 0.000000 
+  
+
+- preset "Rig 2D 8 channels 2"
+  type speaker
+  numChannels 8
+  speaker.1/position 0.000000 5.000000 0.000000 
+  speaker.2/position 3.535534 3.535534 0.000000 
+  speaker.3/position 5.000000 0.000000 0.000000 
+  speaker.4/position 3.535534 -3.535534 0.000000 
+  speaker.5/position -0.000000 -5.000000 0.000000 
+  speaker.6/position -3.535534 -3.535534 0.000000 
+  speaker.7/position -5.000000 0.000000 0.000000 
+  speaker.8/position -3.535534 3.535534 0.000000 
+  
+
+- preset "Rig 2D 12 channels"
+  type speaker
+  numSpeakers 12
+  speaker.1/position 0.000000 5.000000 0.000000 
+  speaker.2/position 2.500000 4.330127 0.000000 
+  speaker.3/position 4.330127 2.500000 0.000000 
+  speaker.4/position 5.000000 0.000000 0.000000 
+  speaker.5/position 4.330127 -2.500000 0.000000 
+  speaker.6/position 2.500000 -4.330127 0.000000 
+  speaker.7/position 0.000000 -5.000000 0.000000 
+  speaker.8/position -2.500000 -4.330127 0.000000 
+  speaker.9/position -4.330127 -2.500000 0.000000 
+  speaker.10/position -5.000000 -0.000000 0.000000 
+  speaker.11/position -4.330127 2.500000 0.000000 
+  speaker.12/position -2.500000 4.330127 0.000000
+  
+
+- preset "Rig 2D 16 channels"
+  type speaker
+  numSpeakers 16
+  speaker.1/position 0.000000 5.000000 0.000000 
+  speaker.2/position 1.913417 4.619398 0.000000 
+  speaker.3/position 3.535534 3.535534 0.000000 
+  speaker.4/position 4.619398 1.913417 0.000000 
+  speaker.5/position 5.000000 0.000000 0.000000 
+  speaker.6/position 4.619398 -1.913417 0.000000 
+  speaker.7/position 3.535534 -3.535534 0.000000 
+  speaker.8/position 1.913417 -4.619398 0.000000 
+  speaker.9/position 0.000000 -5.000000 0.000000 
+  speaker.10/position -1.913417 -4.619398 0.000000 
+  speaker.11/position -3.535534 -3.535534 0.000000 
+  speaker.12/position -4.619398 -1.913417 0.000000 
+  speaker.13/position -5.000000 -0.000000 0.000000 
+  speaker.14/position -4.619398 1.913417 0.000000 
+  speaker.15/position -3.535534 3.535534 0.000000 
+  speaker.16/position -1.913417 4.619398 0.000000 
+  
+
+- preset "Rig 3D 8 channels (Cube)"
+  type speaker
+  numChannels 8
+  speaker.1/position -2.896140 2.896140 2.867882 
+  speaker.2/position 2.896140 2.896140 2.867882 
+  speaker.3/position 2.896140 -2.896140 2.867882 
+  speaker.4/position -2.896140 -2.896140 2.867882 
+  speaker.5/position -2.896140 2.896140 -2.867882 
+  speaker.6/position 2.896140 2.896140 -2.867882 
+  speaker.7/position 2.896140 -2.896140 -2.867882 
+  speaker.8/position -2.896140 -2.896140 -2.867882 
+  
+
+- preset "Rig 3D 12 channels (Dodecahedron1)"
+  type speaker
+  numChannels 12
+  speaker.1/position -0.000000 0.000000 5.000000 
+  speaker.2/position -0.000000 0.000000 -5.000000 
+  speaker.3/position -2.630147 3.620085 2.230989 
+  speaker.4/position 2.630147 -3.620086 -2.230989 
+  speaker.5/position 2.630147 3.620085 2.230989 
+  speaker.6/position -2.630147 -3.620086 -2.230989 
+  speaker.7/position -4.255666 -1.382750 2.230989 
+  speaker.8/position 4.255666 1.382748 -2.230989 
+  speaker.9/position 4.255666 -1.382750 2.230989 
+  speaker.10/position -4.255666 1.382749 -2.230989 
+  speaker.11/position -0.000000 -4.474672 2.230989 
+  speaker.12/position 0.000000 4.474672 -2.230989 
+  
+
+- preset "Rig 3D 12 channels 2 (Dodecahedron 2)"
+  type speaker
+  numChannels 12
+  speaker.1/position 0.000000 5.000000 0.000000 
+  speaker.2/position -0.000000 -5.000000 0.000000 
+  speaker.3/position 0.000000 2.230989 -4.474672 
+  speaker.4/position -0.000000 -2.230989 4.474672 
+  speaker.5/position -4.263248 2.219306 -1.378187 
+  speaker.6/position 4.263247 -2.219306 1.378187 
+  speaker.7/position 4.263247 2.219306 -1.378187 
+  speaker.8/position -4.263247 -2.219306 1.378187 
+  speaker.9/position -2.617144 2.235253 3.626872 
+  speaker.10/position 2.617144 -2.235253 -3.626872 
+  speaker.11/position 2.617144 2.235253 3.626872 
+  speaker.12/position -2.617144 -2.235253 -3.626872 
+  
+

@@ -1,0 +1,206 @@
+- preset "default"
+- description "something about this cue"
+# ###########################################
+# 
+window%/border 1
+window%/data/active 1
+window%/depthbuffer 1
+window%/doublebuffer 1
+window%/floating 0
+window%/fsaa 0
+window%/fsmenubar 1
+window%/fullscreen 0
+window%/fullscreen/shortcut 27
+window%/grow 1
+window%/name default
+window%/position 0.000000 45.000000
+window%/shared 0
+window%/size 320 240
+window%/sync 0
+# 
+# 
+gl_render/GL/context default
+gl_render/GL/alpha 1.000000
+gl_render/GL/anchor 0.000000 0.000000 0.000000
+gl_render/GL/anim UID
+gl_render/GL/antialias 0
+gl_render/GL/automatic 1
+gl_render/GL/aux_alpha 1.000000
+gl_render/GL/aux_color 1.000000 1.000000 1.000000
+gl_render/GL/axes 0
+gl_render/GL/blend/enable 0
+gl_render/GL/blend/mode 6 7
+gl_render/GL/color 1.000000 1.000000 1.000000
+gl_render/GL/color/inherit 0
+gl_render/GL/cull_face 0
+gl_render/GL/depth/clear 0
+gl_render/GL/depth/enable 1
+gl_render/GL/depth/inherit 0
+gl_render/GL/depth/write 1
+gl_render/GL/enable 1
+gl_render/GL/filterclass default
+gl_render/GL/fog/amount 0.000000
+gl_render/GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+gl_render/GL/inherit_all 0
+gl_render/GL/inherit_texture 0
+gl_render/GL/layer 0
+gl_render/GL/light/enable 0
+gl_render/GL/line_width 1.000000
+gl_render/GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+gl_render/GL/material/automatic 1
+gl_render/GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+gl_render/GL/material/emission 0.000000 0.000000 0.000000 0.000000
+gl_render/GL/material/inherit 0
+gl_render/GL/material/matfile none
+gl_render/GL/material/name none
+gl_render/GL/material/shininess 10.000000
+gl_render/GL/material/specular 0.000000 0.000000 0.000000 0.000000
+gl_render/GL/matrixoutput 0
+gl_render/GL/point_size 1.000000
+gl_render/GL/poly_mode 0 0
+gl_render/GL/position 0.000000 0.000000 0.000000
+gl_render/GL/rotate 0.000000 0.000000 0.000000 1.000000
+gl_render/GL/scale 1.000000 1.000000 1.000000
+gl_render/GL/shader none
+gl_render/GL/smooth_shading 0
+gl_render/GL/tex_map 0
+gl_render/GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+gl_render/GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+gl_render/GL/texture none
+gl_render/GL/transform_reset 0
+gl_render/GL/viewalign 0
+gl_render/camera/lens_angle 45.000000
+gl_render/camera/lookat 0.000000 0.000000 0.000000
+gl_render/camera/position 0.000000 0.000000 2.000000
+gl_render/camera/up 0.000000 1.000000 0.000000
+gl_render/data/active 1
+gl_render/data/bypass 0
+gl_render/doublebuffer 1
+gl_render/draw_buffer default
+gl_render/erase_color 0.200000 0.200000 0.200000
+gl_render/erase_color_alpha 1.000000
+gl_render/far_clip 100.000000
+gl_render/framerate 25.000000
+gl_render/fsaa 0
+gl_render/geom_rows 0
+gl_render/light/ambient 0.000000 0.000000 0.000000 1.000000
+gl_render/light/diffuse 1.000000 1.000000 1.000000 1.000000
+gl_render/light/global_ambient 0.000000 0.000000 0.000000 1.000000
+gl_render/light/position 1.000000 1.000000 1.000000 0.000000
+gl_render/light/specular 1.000000 1.000000 1.000000 1.000000
+gl_render/near_clip 0.100000
+gl_render/point_atten 1.000000 0.000000 0.100000
+gl_render/point_fade 60.000000
+gl_render/rotate_order auto
+gl_render/stereo 0
+gl_render/sync 1
+gl_render/verbose 1
+# 
+gl_brcosa/context default
+gl_brcosa/active 1
+gl_brcosa/adapt 1
+gl_brcosa/antialias 0
+gl_brcosa/automatic 1
+gl_brcosa/brightness 1.000000
+gl_brcosa/contrast 1.000000
+gl_brcosa/data/active 1
+gl_brcosa/data/bypass 0
+gl_brcosa/dim 720 480
+gl_brcosa/rect 0 0 1 1
+gl_brcosa/saturation 0.000000
+gl_brcosa/texrect 0 0 1 1
+# 
+gl_framediff/context default
+gl_framediff/active 1
+gl_framediff/adapt 1
+gl_framediff/antialias 0
+gl_framediff/automatic 1
+gl_framediff/data/active 1
+gl_framediff/data/bypass 0
+gl_framediff/dim 720 480
+gl_framediff/mode ref
+gl_framediff/rect 0 0 1 1
+gl_framediff/texrect 0 0 1 1
+gl_framediff/threshold -0.280000
+# 
+# 
+gl_videoplane/GL/context default
+gl_videoplane/GL/alpha 1.000000
+gl_videoplane/GL/anchor 0.000000 0.000000 0.000000
+gl_videoplane/GL/anim UID
+gl_videoplane/GL/antialias 0
+gl_videoplane/GL/automatic 1
+gl_videoplane/GL/aux_alpha 1.000000
+gl_videoplane/GL/aux_color 1.000000 1.000000 1.000000
+gl_videoplane/GL/axes 0
+gl_videoplane/GL/blend/enable 0
+gl_videoplane/GL/blend/mode 6 7
+gl_videoplane/GL/color 1.000000 1.000000 1.000000
+gl_videoplane/GL/color/inherit 0
+gl_videoplane/GL/cull_face 0
+gl_videoplane/GL/depth/clear 0
+gl_videoplane/GL/depth/enable 1
+gl_videoplane/GL/depth/inherit 0
+gl_videoplane/GL/depth/write 1
+gl_videoplane/GL/enable 1
+gl_videoplane/GL/filterclass default
+gl_videoplane/GL/fog/amount 0.000000
+gl_videoplane/GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+gl_videoplane/GL/inherit_all 0
+gl_videoplane/GL/inherit_texture 0
+gl_videoplane/GL/layer 0
+gl_videoplane/GL/light/enable 0
+gl_videoplane/GL/line_width 1.000000
+gl_videoplane/GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+gl_videoplane/GL/material/automatic 1
+gl_videoplane/GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+gl_videoplane/GL/material/emission 0.000000 0.000000 0.000000 0.000000
+gl_videoplane/GL/material/inherit 0
+gl_videoplane/GL/material/matfile none
+gl_videoplane/GL/material/name none
+gl_videoplane/GL/material/shininess 10.000000
+gl_videoplane/GL/material/specular 0.000000 0.000000 0.000000 0.000000
+gl_videoplane/GL/matrixoutput 0
+gl_videoplane/GL/point_size 1.000000
+gl_videoplane/GL/poly_mode 0 0
+gl_videoplane/GL/position 0.000000 0.000000 0.000000
+gl_videoplane/GL/rotate 0.000000 0.000000 0.000000 1.000000
+gl_videoplane/GL/scale 1.000000 1.000000 1.000000
+gl_videoplane/GL/shader none
+gl_videoplane/GL/smooth_shading 0
+gl_videoplane/GL/tex_map 0
+gl_videoplane/GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+gl_videoplane/GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+gl_videoplane/GL/texture none
+gl_videoplane/GL/transform_reset 0
+gl_videoplane/GL/viewalign 0
+gl_videoplane/data/active 1
+gl_videoplane/data/bypass 0
+gl_videoplane/videoplane/client_storage 1
+gl_videoplane/videoplane/colormode argb
+gl_videoplane/videoplane/dim 20 20
+gl_videoplane/videoplane/displaylist 0
+gl_videoplane/videoplane/gridmode 0
+gl_videoplane/videoplane/interpolate 1
+gl_videoplane/videoplane/nudge 0.010000
+gl_videoplane/videoplane/texture/offset 0.000000 0.000000
+gl_videoplane/videoplane/texture/scale 1.000000 1.000000
+# 
+input%/dim 640 480
+# 
+input%/cam/dim 640 480
+input%/data/active 1
+input%/data/bypass 0
+# 
+input%/file/dim 640 480
+input%/file/path redball.mov
+input%/file/loop/mode loop
+input%/file/loop/points 0 10600
+input%/framemotor 1
+input%/framemotor/fps 25
+# 
+input%/noise/dim 640 480
+input%/source file
+# 
+# ###########################################
+

@@ -1,0 +1,83 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+data/active 1
+GL/alpha 1.000000
+light/ambient 0.000000 0.000000 0.000000 1.000000
+GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+GL/fog/amount 0.000000
+GL/anchor 0.000000 0.000000 0.000000
+GL/anim UID
+GL/antialias 0
+GL/automatic 1
+GL/material/automatic 1
+GL/aux_alpha 1.000000
+GL/aux_color 1.000000 1.000000 1.000000
+GL/axes 0
+data/bypass 0
+GL/depth/clear 0
+GL/color 1.000000 1.000000 1.000000
+GL/context default
+GL/cull_face 0
+light/diffuse 1.000000 1.000000 1.000000 1.000000
+GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+doublebuffer 1
+draw_buffer default
+GL/material/emission 0.000000 0.000000 0.000000 0.000000
+GL/light/enable 0
+GL/enable 1
+GL/depth/enable 1
+GL/blend/enable 0
+erase_color 0.200000 0.200000 0.200000
+erase_color_alpha 1.000000
+far_clip 100.000000
+GL/filterclass default
+framerate 25.000000
+fsaa 0
+geom_rows 0
+light/global_ambient 0.000000 0.000000 0.000000 1.000000
+GL/depth/inherit 0
+GL/color/inherit 0
+GL/material/inherit 0
+GL/inherit_all 0
+GL/inherit_texture 0
+GL/layer 0
+camera/lens_angle 45.000000
+GL/line_width 1.000000
+camera/lookat 0.000000 0.000000 0.000000
+GL/material/matfile none
+GL/matrixoutput 0
+GL/blend/mode 6 7
+GL/material/name none
+near_clip 0.100000
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+point_atten 1.000000 0.000000 0.100000
+point_fade 60.000000
+GL/point_size 1.000000
+GL/poly_mode 0 0
+GL/position 0.000000 0.000000 0.000000
+camera/position 0.000000 0.000000 2.000000
+light/position 1.000000 1.000000 1.000000 0.000000
+GL/rotate 0.000000 0.000000 0.000000 1.000000
+rotate_order auto
+GL/scale 1.000000 1.000000 1.000000
+GL/shader none
+GL/material/shininess 10.000000
+GL/smooth_shading 0
+light/specular 1.000000 1.000000 1.000000 1.000000
+GL/material/specular 0.000000 0.000000 0.000000 0.000000
+stereo 0
+sync 1
+GL/tex_map 0
+GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+GL/texture none
+GL/transform_reset 0
+camera/up 0.000000 1.000000 0.000000
+verbose 1
+GL/viewalign 0
+GL/depth/write 1
+# 
+# ###########################################

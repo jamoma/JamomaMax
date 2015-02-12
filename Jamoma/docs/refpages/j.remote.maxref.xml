@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.remote" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		access parameter values remotely
 	</digest>
 	<description>
-		TEXT_HERE
+		j.remote allows to access parameter values remotely by connecting UI objects to them
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			Jamoma
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -188,7 +188,7 @@
 				TEXT_HERE
 			</description>
 		</attribute>
-		<attribute name="dataspace/unit" get="1" set="1" type="symbol" size="1">
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
@@ -226,7 +226,7 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>
 		</attribute>
-		<attribute name="tag" get="1" set="1" type="symbol" size="1">
+		<attribute name="tags" get="1" set="1" type="symbol" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>

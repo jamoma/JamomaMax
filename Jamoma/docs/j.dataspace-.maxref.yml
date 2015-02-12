@@ -1,0 +1,45 @@
+title: j.unit-
+author: [Jamoma, Nils Peters]
+created_at: 2012/1/1
+tags: [conversion, math, units]
+
+brief: A swiss-army knife unit converter for the Jamoma Graph
+
+desc: >
+ j.unit- converts between various types of units using the Jamoma dataspaceLib.
+
+inputs:
+ - name: 1
+   desc: Input data (float or list of floats).
+   type: Jamoma dictionary
+
+outputs:
+ - name: 1
+   desc: Converted data (float or list of floats).
+   type: Jamoma dictionary
+ - name: 2
+   desc: dumpout
+
+attributes:
+ - name: dataspace
+   type: symbol
+   desc: set the dataspace
+   unit:
+   default: 
+ - name: input
+   type: symbol
+   desc: set the input unit
+   unit:
+   default: 
+ - name: output
+   type: symbol
+   desc: set the output unit
+   unit:
+   default:
+
+messages:
+
+seealso:
+ - j.parameter
+ - j.message
+ - j.unit

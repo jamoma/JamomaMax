@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.parameter_array" module="" category="Jamoma">
+	<digest>
+		Handling array of parameters in Jamoma model
+	</digest>
+	<description>
+		j.parameter_array creates an arrtay of parameters in a Jamoma model
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			parameter
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+				Value of the selected instance(s)
+			</digest>
+			<description>
+				Value of the selected instance(s)
+			</description>
+		</inlet>
+		<inlet id="1" type="INLET_TYPE">
+			<digest>
+				index
+			</digest>
+			<description>
+				Index of the instance to send value to. (1 to max number of instance. * will send value to all instances)
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				direct: values
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				OSC name defining an array of parameters in the namespace using a bracket-based syntaxe: my/message.[2]
+			</digest>
+			<description>
+				OSC name defining an array of parameters in the namespace using a bracket-based syntaxe: my/message.[2]
+			</description>
+		</objarg>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="bang">
+			<arglist />
+			<digest>
+				<!-- TEXT_HERE -->
+			</digest>
+			<description>
+				<!-- TEXT_HERE -->
+			</description>
+		</method>
+		<method name="int">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				<!-- TEXT_HERE -->
+			</digest>
+			<description>
+				<!-- TEXT_HERE -->
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="ARG_NAME_0" type="float" optional="0" />
+			</arglist>
+			<digest>
+				<!-- TEXT_HERE -->
+			</digest>
+			<description>
+				<!-- TEXT_HERE -->
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				<!-- TEXT_HERE -->
+			</digest>
+			<description>
+				<!-- TEXT_HERE -->
+			</description>
+		</method>
+		<method name="anything">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				<!-- TEXT_HERE -->
+			</digest>
+			<description>
+				<!-- TEXT_HERE -->
+			</description>
+		</method>
+		<method name="+">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Increment the value by the amount defined by the @stepsize attribute
+			</digest>
+			<description>
+				Increment the value by the amount defined by the @stepsize attribute
+			</description>
+		</method>
+		<method name="-">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Decrement the value by the amount defined by the @stepsize attribute
+			</digest>
+			<description>
+				Decrement the value by the amount defined by the @stepsize attribute
+			</description>
+		</method>
+		<method name="address">
+			<arglist>
+				<arg name="ARG_NAME_0" type="symbol" optional="0" />
+			</arglist>
+			<digest>
+				Define an array of parameters in the namespace. Ex: 'address my/message.[5]'
+			</digest>
+			<description>
+				The address message followed by an osc name containing a number of instances placed in bracket declares an array of parameters in the namespace. Ex: 'address my/message.[5]'
+			</description>
+		</method>
+		<method name="array">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Dispatch a list of values to instances of the parameters
+			</digest>
+			<description>
+				Dispatch a list of values to instances of the parameters
+			</description>
+		</method>
+		<method name="array/select">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				This message select which instance to address
+			</digest>
+			<description>
+				This message select which j.parameter_array's instance to address
+			</description>
+		</method>
+		<method name="array/resize">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				Change the number of instances
+			</digest>
+			<description>
+				Change the number of instances
+			</description>
+		</method>
+		<method name="dec">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Decrement the value by the amount defined by the @stepsize attribute
+			</digest>
+			<description>
+				Decrement the value by the amount defined by the @stepsize attribute
+			</description>
+		</method>
+		<method name="dump">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Dump
+			</digest>
+			<description>
+				Dum all attributes values
+			</description>
+		</method>
+		<method name="inc">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Increment the value by the amount defined by the @stepsize attribute
+			</digest>
+			<description>
+				Increment the value by the amount defined by the @stepsize attribute
+			</description>
+		</method>
+		<method name="init">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Reset the selected j.parameter instance to its default state
+			</digest>
+			<description>
+				Reset the selected j.parameter instance to its default state
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="active" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable or disable parameter instances
+			</digest>
+			<description>
+				Enable or disable parameter instances
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Dataspace used for unit conversion
+			</digest>
+			<description>
+				Set the dataspace used internally by parameters for unit conversion. For example, for a gain dataspace with a unit dB, one can set the value from a remote using midi value
+			</description>
+		</attribute>
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+			<digest>
+				The dataspace unit used for remote communication
+			</digest>
+			<description>
+				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.unit help patch for more information.
+			</description>
+		</attribute>
+		<attribute name="description" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Short info about the parameters
+			</digest>
+			<description>
+				Short info about the parameters. Used for auto-documentation of the model
+			</description>
+		</attribute>
+		<attribute name="format" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Format of the values output: single or array
+			</digest>
+			<description>
+				Format of the values output: single or array
+			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
+					<enumlist>
+						<enum name="single">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="array">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+			</attributelist>
+		</attribute>
+		<attribute name="priority" get="1" set="1" type="int" size="1">
+			<digest>
+				Priority of the parameter instances
+			</digest>
+			<description>
+				Define priority in which parameters value will be recalled when initialization for example
+			</description>
+		</attribute>
+		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
+			</digest>
+			<description>
+				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
+			</description>
+		</attribute>
+		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Function used for ramping
+			</digest>
+			<description>
+				The mapping function determining the curve of the ramping to new message value
+			</description>
+		</attribute>
+		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
+			<digest>
+				Optional parameters for the chosen ramping function
+			</digest>
+			<description>
+				Optional parameters for the chosen ramping function
+			</description>
+		</attribute>
+		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
+			<digest>
+				Ramp status
+			</digest>
+			<description>
+				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
+			</description>
+		</attribute>
+		<attribute name="range" get="1" set="1" type="atom" size="1">
+			<digest>
+				Lower and upper value oundaries
+			</digest>
+			<description>
+				Lower and upper boundaries defining the range of possible message values
+			</description>
+		</attribute>
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Define clipping behaviour at the boundaries of the message range
+			</digest>
+			<description>
+				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
+			</description>
+		</attribute>
+		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
+			<digest>
+				Filtering out repeting values
+			</digest>
+			<description>
+				Determines whether repeated values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)
+			</description>
+		</attribute>
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
+			<digest>
+				Some optional tags
+			</digest>
+			<description>
+				Some optional tags
+			</description>
+		</attribute>
+		<attribute name="type" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
+			</digest>
+			<description>
+				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
+			</description>
+		</attribute>
+		<attribute name="value" get="1" set="1" type="int" size="1">
+			<digest>
+				Current parameters value
+			</digest>
+			<description>
+				Current parameters value
+			</description>
+		</attribute>
+		<attribute name="default" get="1" set="1" type="int" size="1">
+			<digest>
+				Default parameters value
+			</digest>
+			<description>
+				Default parameters value. This value will be recall on initialization of the model
+			</description>
+		</attribute>
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
+			<digest>
+				increment/decrement amount
+			</digest>
+			<description>
+				Step by which the current value is being increased/decreased when a 'inc' or 'dec' message is received
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.parameter">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+	</seealsolist>
+</c74object>

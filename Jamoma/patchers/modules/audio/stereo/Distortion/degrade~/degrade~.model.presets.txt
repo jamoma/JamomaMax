@@ -1,0 +1,25 @@
+
+- preset "default"
+- description "edit a description"
+# ###########################################
+# 
+samplerateRatio 1.000000
+bitdepth 24
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+# 
+# ###########################################
+
+- preset "crunchy"
+- description "edit a description"
+# ###########################################
+# 
+samplerateRatio 0.050000
+bitdepth 5
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+# 

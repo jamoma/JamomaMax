@@ -8,19 +8,29 @@
 
 /* Begin PBXFileReference section */
 		46ABF92A16842D9900B0DCB9 /* j.out~.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.out~.yml"; sourceTree = "<group>"; };
+		46BEF4EF18C8EFDF0071F8B7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		46DEED0D177067F3003FC4F0 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 		46DEED0E177067F3003FC4F0 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		D22F0B89155E673E0090ED01 /* j.out.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.out.cpp; path = ../j.out/j.out.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		46BEF4EE18C8EFD00071F8B7 /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				D22F0B89155E673E0090ED01 /* j.out.cpp */,
+				46DEED0D177067F3003FC4F0 /* TTModularClassWrapperMax.h */,
+				46DEED0E177067F3003FC4F0 /* TTModularClassWrapperMax.cpp */,
+			);
+			name = sources;
+			sourceTree = "<group>";
+		};
 		A72D873215188DFD001DA7C1 = {
 			isa = PBXGroup;
 			children = (
 				46ABF92A16842D9900B0DCB9 /* j.out~.yml */,
-				D22F0B89155E673E0090ED01 /* j.out.cpp */,
-				46DEED0D177067F3003FC4F0 /* TTModularClassWrapperMax.h */,
-				46DEED0E177067F3003FC4F0 /* TTModularClassWrapperMax.cpp */,
+				46BEF4EF18C8EFDF0071F8B7 /* Makefile */,
+				46BEF4EE18C8EFD00071F8B7 /* sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,7 +57,7 @@
 		A72D873415188DFD001DA7C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "BEK - Bergen senter for elektronisk kunst";
 			};
 			buildConfigurationList = A72D873715188DFD001DA7C1 /* Build configuration list for PBXProject "j.out~" */;
@@ -71,9 +81,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -91,7 +102,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
@@ -103,9 +116,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -117,7 +131,9 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
@@ -127,10 +143,6 @@
 		A72D873D15188DFF001DA7C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					"$(ARCHS_STANDARD_64_BIT)",
-				);
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUGGING_SYMBOLS = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -144,10 +156,6 @@
 		A72D873E15188DFF001DA7C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					"$(ARCHS_STANDARD_64_BIT)",
-				);
 				COMBINE_HIDPI_IMAGES = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";

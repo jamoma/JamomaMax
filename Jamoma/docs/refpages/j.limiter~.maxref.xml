@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			audio
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
@@ -244,7 +247,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.limiter≈"/>
+		<seealso name="j.limiter="/>
 		<seealso name="omx.comp~"/>
 	</seealsolist>
 </c74object>

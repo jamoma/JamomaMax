@@ -1,10 +1,10 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief delay~ : Delays a signal using several interpolation methods
+ * @brief j.delay~ : Delays a signal using several interpolation methods
  *
- * @details This wraps the Jamoma DSP class #TTDelay as a Jamoma external for Max MSP
+ * @details This wraps the Jamoma DSP class #TTDelay as a a Jamoma external for MSP
  *
  * @authors Tim Place, Trond Lossius
  *
@@ -16,7 +16,7 @@
 
 #include "TTClassWrapperMax.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	TTDSPInit();
 	return wrapTTClassAsMaxClass(TT("delay"), "j.delay~", NULL);

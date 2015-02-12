@@ -1,10 +1,10 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief dcblock~ : Remove DC Offsets from a signal
+ * @brief j.dcblock~ : Remove DC Offsets from a signal
  *
- * @details This wraps the Jamoma DSP class #TTDCBlock as a Jamoma external for Max MSP
+ * @details This wraps the Jamoma DSP class #TTDCBlock as a a Jamoma external for MSP
  *
  * @authors Tim Place, Trond Lossius
  *
@@ -16,7 +16,7 @@
 
 #include "TTClassWrapperMax.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	TTDSPInit();
 	return wrapTTClassAsMaxClass(TT("dcblock"), "j.dcblock~", NULL);

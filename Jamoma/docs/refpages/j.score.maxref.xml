@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.score" module="" category="Jamoma">
+	<digest>
+		handle a score project locally or remotely
+	</digest>
+	<description>
+		j.score allows to play interactive scores created with JamomaScore. This can be performed through the i-score sequencer: http://i-score.org
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			score
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+			</digest>
+			<description>
+				messages to the score
+			</description>
+		</inlet>
+	</inletlist> -->
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="bang">
+			<digest>
+				bang when initialization starts
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+		<outlet id="1" type="bang">
+			<digest>
+				bang when initialization is done
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="read">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				read a score file
+			</digest>
+			<description>
+				The 'read' message followed by a file name in Max searchpath will read a score file to be played by j.score. With no argument, 'read' will bring a popup window to select the file to load
+			</description>
+		</method>
+		<method name="read/again">
+			<arglist />
+			<digest>
+				read the same score file again
+			</digest>
+			<description>
+				The 'read/again' message will load once again the last loaded score file 
+			</description>
+		</method>
+		<method name="write">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				write a score file
+			</digest>
+			<description>
+				The 'write' message followed by a file name in Max searchpath will write the score file loaded in j.score. With no argument, 'write' will bring a popup window to select the file to write
+			</description>
+		</method>
+		<method name="write/again">
+			<arglist />
+			<digest>
+				write the same score file again
+			</digest>
+			<description>
+				The 'write/again' message will write once again the last loaded/written score file 
+			</description>
+		</method>
+		<method name="start">
+			<arglist />
+			<digest>
+				play the score
+			</digest>
+			<description>
+				The 'start' message will play the loaded score from the beginning 
+			</description>
+		</method>
+		<method name="next">
+			<arglist />
+			<digest>
+				trigger the next available interactive point
+			</digest>
+			<description>
+				The 'next' message will trigger the next available interactive point 
+			</description>
+		</method>
+		<method name="end">
+			<arglist />
+			<digest>
+				stop the score
+			</digest>
+			<description>
+				The 'end' message will interrupt the execution of the current score 
+			</description>		
+		</method>
+		<method name="speed">
+			<arglist>
+				<arg name="" type="float" optional="0" />
+			</arglist>
+			<digest>
+				Change the score's execution speed
+			</digest>
+			<description>
+				The 'speed' message followed by a floating point number will change the score's execution speed (1. being its nominal speed)
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.initialized"/>
+		<seealso name="j.model"/>
+		<seealso name="loadbang"/>
+	</seealsolist>
+</c74object>

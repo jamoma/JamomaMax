@@ -56,9 +56,9 @@ attributes:
    desc: "Optional parameters for the chosen ramping function."
    unit:
    default: NULL
- - name: repetitions/allow
+ - name: repetitions/filter
    type: toggle
-   desc: "Determines whether repeated parameter values will be filtered: when this attribute is disabled (default), repetitions are filtered out (like [change] object in Max)"
+   desc: "Determines whether repeated parameter values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)"
    unit:
    default: 0
  - name: dataspace
@@ -66,7 +66,7 @@ attributes:
    desc: "Set what dataspace used internally by the parameter for unit conversions."
    unit:
    default: none
- - name: dataspace/unit
+ - name: unit
    type: symbol
    desc: "The dataspace unit used for communication to the algorithm from the outside world."
    unit:
@@ -108,11 +108,11 @@ attributes:
  #   default: 1.
 
 seealso:
- - j.parameterArray
+ - j.parameter_array
  - j.message
  - j.return
  - j.model
  - j.ramp
- - j.dataspace
+ - j.unit
 
 discussion: Jamoma is a free and open source project. http://www.jamoma.org

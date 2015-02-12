@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			Jamoma
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -240,8 +240,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="avgerage~">
-			TEXT_HERE
-		</seealso>
+		<seealso name="avgerage~"/>
 	</seealsolist>
 </c74object>

@@ -1,0 +1,27 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+enable 1
+blend/enable 0
+layer 0
+alpha 1.000000
+context default
+binary 1
+invert 0
+modus 0
+keycolor 1.000000 1.000000 1.000000
+antialias 0
+automatic 1
+depth/inherit 0
+depth/enable 1
+depth/clear 0
+position 0.000000 0.000000 0.000000
+blend/mode 6 7
+color 1.000000 1.000000 1.000000
+inherit/color 0
+inherit/material 0
+data/active 1
+# 
+# ###########################################

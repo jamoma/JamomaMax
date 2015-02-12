@@ -1,6 +1,6 @@
 
 sources:
-  - j.oscroute.cpp		
+  - j.oscroute.cpp
   - ../c74support/max-includes/common/commonsyms.cpp
     
 includes:
@@ -18,5 +18,6 @@ libraries:
   - FOUNDATION
   - MODULAR  
   - C74
+  - JAMOMA_FOR_MAX
 
 prefix: ../c74support/max-includes/macho-prefix.pch

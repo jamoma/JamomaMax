@@ -18,9 +18,12 @@
 		<metadata name="tag">
 			delta
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<!-- <inletlist>
+	<inletlist>
 		<inlet id="0" type="int/float">
 			<digest>
 				function value
@@ -85,7 +88,7 @@
 	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="int">
+		<!-- <method name="int"> -->
 			<!-- <arglist>
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>

@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief allpass~ : wrapping the #TTAllpass class as an MSP external
+ * @brief j.allpass~ : wrapping the #TTAllpass class as an MSP external
  *
  * @details
  *
@@ -15,7 +15,7 @@
 
 #include "TTClassWrapperMax.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	WrappedClassOptionsPtr	options = new WrappedClassOptions;
     WrappedClassPtr			c = NULL;

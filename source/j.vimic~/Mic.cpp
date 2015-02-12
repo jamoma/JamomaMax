@@ -97,11 +97,11 @@ void Mic::dirGainA(double newDirGain)
 {
     bool capped = false;
 
-    if (newDirGain > 1.0){
+    if (newDirGain > 1.0) {
 		newDirGain = 1.0;
         capped = true;
     }
-    else if (newDirGain < -1.0){
+    else if (newDirGain < -1.0) {
 		newDirGain = -1.0;
         capped = true;
     }

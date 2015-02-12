@@ -1,6 +1,6 @@
 defines:
   - AUDIO_EXTERNAL
-  - JCOM_OUT_TILDE
+  - J_OUT_TILDE
   
 sources:
   - ../j.out/j.out.cpp		
@@ -24,5 +24,6 @@ libraries:
   - MODULAR 
   - DSP
   - C74
+  - JAMOMA_FOR_MAX
 
 prefix: ../c74support/max-includes/macho-prefix.pch

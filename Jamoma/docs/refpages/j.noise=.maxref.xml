@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.noise=" module="" category="Jamoma">
+	<digest>
+		Multichannels noise generator
+	</digest>
+	<description>
+		Multimode noise generator as multichannel signal
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			multichannel
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+				Multichannel input and control messages
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</inlet>
+		<inlet id="1" type="INLET_TYPE">
+			<digest>
+				Multichannel input 2
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				Multichannel output 1
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+		<outlet id="1" type="OUTLET_TYPE">
+			<digest>
+				dumpout
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</objarg>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="audio.connect">
+			<arglist>
+				<arg name="ARG_NAME_0" type="" optional="0" />
+				<arg name="ARG_NAME_1" type="int" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+	<method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
+	<method name="getProcessingBenchmark">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+				<method name="graph.connect">
+			<arglist>
+				<arg name="ARG_NAME_0" type="" optional="0" />
+				<arg name="ARG_NAME_1" type="int" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+		<method name="resetBenchmarking">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+		<method name="test">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="gain" get="1" set="1" type="float" size="1">
+			<digest>
+				Gain value of the output noise
+			</digest>
+			<description>
+				Gain value of the output noise
+			</description>
+		</attribute>
+		<attribute name="mean" get="1" set="1" type="float" size="1">
+			<digest>
+				Mean value (gauss mode only)
+			</digest>
+			<description>
+				Mean value (gauss mode only)
+			</description>
+		</attribute>
+		<attribute name="mode" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Noise color
+			</digest>
+			<description>
+				Noise color
+			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="5">
+					<enumlist>
+						<enum name="white">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="pink">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="brown">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="blue">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="gauss">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+			</attributelist>
+		</attribute>
+		<attribute name="mute" get="1" set="1" type="int" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="numChannels" get="1" set="1" type="int" size="1">
+			<digest>
+				Number of output channels
+			</digest>
+			<description>
+				Number of output channels
+			</description>
+		</attribute>
+		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute>
+		<attribute name="std" get="1" set="1" type="float" size="1">
+			<digest>
+				Standard deviation (gauss mode only)
+			</digest>
+			<description>
+				Standard deviation (gauss mode only)
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.wavetable=" />
+		<seealso name="noise~" />
+		<seealso name="pink~" />
+	</seealsolist>
+</c74object>

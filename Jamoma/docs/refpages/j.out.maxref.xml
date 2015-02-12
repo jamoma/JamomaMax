@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			communication
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
@@ -209,7 +212,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.in">
-		<seealso name="j.out~">
+		<seealso name="j.in"/>
+		<seealso name="j.out~"/>
 	</seealsolist>
 </c74object>

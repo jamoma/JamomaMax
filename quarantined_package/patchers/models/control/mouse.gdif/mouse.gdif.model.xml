@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.6'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset name='default'>
+    <command address="gdif/body/on">0</command>
+    <command address="gdif/cooked/on">0</command>
+    <command address="gdif/device/on">0</command>
+    <command address="gdif/emotion/on">0</command>
+    <command address="gdif/environment/on">0</command>
+    <command address="gdif/performance/on">0</command>
+    <command address="gdif/raw/on">0</command>
+    <command address="mode">poll</command>
+    <command address="mouse_on">0</command>
+    <command address="reference">screen</command>
+    <command address="sample_rate">0</command>
+    <command address="view/freeze">0</command>
+  </preset>
+</jamoma>

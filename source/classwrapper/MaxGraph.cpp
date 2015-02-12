@@ -16,7 +16,7 @@
 // Data Structure for this object
 typedef struct _wrappedInstance {
     t_object				obj;						///< Max audio object header
-	TTGraphObjectPtr		graphObject;				///< ** must be second **
+	TTGraphObjectBasePtr	graphObject;				///< ** must be second **
 	TTPtr					graphOutlets[MAX_NUM_INLETS];			///< Array of outlets, may eventually want this to be more dynamic
 	TTPtr					inlets[MAX_NUM_INLETS];					///< Array of proxy inlets beyond the first inlet
 	WrappedClassPtr			wrappedClassDefinition;		///< A pointer to the class definition
@@ -29,7 +29,7 @@ typedef WrappedInstance* WrappedInstancePtr;		///< Pointer to a wrapped instance
 static t_hashtab*	wrappedMaxClasses = NULL;
 
 
-ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
+t_object* wrappedClass_new(t_symbol* name, long argc, t_atom* argv)
 {	
 	WrappedClass*		wrappedMaxClass = NULL;
     WrappedInstancePtr	self = NULL;
@@ -40,7 +40,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
  	long				attrstart = attr_args_offset(argc, argv);		// support normal arguments
 	
 	// Find the WrappedClass
-	hashtab_lookup(wrappedMaxClasses, name, (ObjectPtr*)&wrappedMaxClass);
+	hashtab_lookup(wrappedMaxClasses, name, (t_object**)&wrappedMaxClass);
 	
 	// If the WrappedClass has a validity check defined, then call the validity check function.
 	// If it returns an error, then we won't instantiate the object.
@@ -55,10 +55,10 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 	
 	if (!err)
 		self = (WrappedInstancePtr)object_alloc(wrappedMaxClass->maxClass);
-    if (self){
+    if (self) {
 
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("argumentDefinesNumInlets"), v)) {
-			long argumentOffsetToDefineTheNumberOfInlets = v;
+			int argumentOffsetToDefineTheNumberOfInlets = v;
 			if ((attrstart-argumentOffsetToDefineTheNumberOfInlets > 0) && argv+argumentOffsetToDefineTheNumberOfInlets)
 				numInputs = atom_getlong(argv+argumentOffsetToDefineTheNumberOfInlets);
 		}
@@ -67,7 +67,7 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 		
     	object_obex_store((void*)self, _sym_dumpout, (object*)outlet_new(self, NULL));	// dumpout
 		if (wrappedMaxClass->options && !wrappedMaxClass->options->lookup(TT("argumentDefinesNumOutlets"), v)) {
-			long argumentOffsetToDefineTheNumberOfOutlets = v;
+			int argumentOffsetToDefineTheNumberOfOutlets = v;
 			if ((attrstart-argumentOffsetToDefineTheNumberOfOutlets > 0) && argv+argumentOffsetToDefineTheNumberOfOutlets)
 				numOutputs = atom_getlong(argv+argumentOffsetToDefineTheNumberOfOutlets);
 		}
@@ -75,15 +75,15 @@ ObjectPtr wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv)
 			self->graphOutlets[i] = outlet_new(self, "audio.connect");
 
 		self->wrappedClassDefinition = wrappedMaxClass;
-		v.setSize(3);
-		v.set(0, wrappedMaxClass->ttClassName);
-		v.set(1, numInputs);
-		v.set(2, numOutputs);
+		v.resize(3);
+		v[0] = wrappedMaxClass->ttClassName;
+		v[1] = numInputs;
+		v[2] = numOutputs;
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->graphObject, v);
 				
 		attr_args_process(self, argc, argv);
 	}
-	return ObjectPtr(self);
+	return (t_object*)self;
 }
 
 
@@ -103,30 +103,30 @@ void wrappedClass_free(WrappedInstancePtr self)
 // METHODS SPECIFIC TO AUDIO GRAPH EXTERNALS
 
 
-TTErr MaxGraphReset(ObjectPtr x)
+TTErr MaxGraphReset(t_object* x)
 {
 	WrappedInstancePtr self = WrappedInstancePtr(x);
 	return self->graphObject->reset();
 }
 
 
-TTErr MaxGraphSetup(ObjectPtr x)
+TTErr MaxGraphSetup(t_object* x)
 {
 	WrappedInstancePtr	self = WrappedInstancePtr(x);
 	t_atom				a[2];
 	TTUInt16			i=0;
 	
-	atom_setobj(a+0, ObjectPtr(self->graphObject));
+	atom_setobj(a+0, (t_object*)self->graphObject);
 	while (self->graphOutlets[i]) {
 		atom_setlong(a+1, i);
-		outlet_anything(self->graphOutlets[i], GENSYM("graph.connect"), 2, a);
+		outlet_anything(self->graphOutlets[i], gensym("graph.connect"), 2, a);
 		i++;
 	}
 	return kTTErrNone;
 }
 
 
-TTErr MaxGraphConnect(ObjectPtr x, TTGraphObjectPtr audioSourceObject, TTUInt16 sourceOutletNumber)
+TTErr MaxGraphConnect(t_object* x, TTGraphObjectBasePtr audioSourceObject, TTUInt16 sourceOutletNumber)
 {
 	WrappedInstancePtr	self = WrappedInstancePtr(x);
 	long				inletNumber = proxy_getinlet(SELF);
@@ -135,20 +135,20 @@ TTErr MaxGraphConnect(ObjectPtr x, TTGraphObjectPtr audioSourceObject, TTUInt16 
 }
 
 
-TTErr MaxGraphDrop(ObjectPtr x, long inletNumber, ObjectPtr sourceMaxObject, long sourceOutletNumber)
+TTErr MaxGraphDrop(t_object* x, long inletNumber, t_object* sourceMaxObject, long sourceOutletNumber)
 {
-	WrappedInstancePtr	self = WrappedInstancePtr(x);
-	TTGraphObjectPtr	sourceObject = NULL;
-	TTErr 				err;
+	WrappedInstancePtr	    self            = WrappedInstancePtr(x);
+	TTGraphObjectBasePtr    sourceObject    = NULL;
+	TTErr 				    err;
 	
-	err = (TTErr)long(object_method(sourceMaxObject, GENSYM("graph.object"), &sourceObject));
+	err = (TTErr)long(object_method(sourceMaxObject, gensym("graph.object"), &sourceObject));
 	if (self->graphObject && sourceObject && !err)
 		err = self->graphObject->drop(sourceObject, sourceOutletNumber, inletNumber);	
 	return err;
 }
 
 
-TTErr MaxGraphObject(ObjectPtr x, TTGraphObjectPtr* returnedGraphObject)
+TTErr MaxGraphObject(t_object* x, TTGraphObjectBasePtr* returnedGraphObject)
 {
 	WrappedInstancePtr	self = WrappedInstancePtr(x);
 	
@@ -157,40 +157,37 @@ TTErr MaxGraphObject(ObjectPtr x, TTGraphObjectPtr* returnedGraphObject)
 }
 
 
-t_max_err wrappedClass_attrGet(WrappedInstancePtr self, ObjectPtr attr, AtomCount* argc, AtomPtr* argv)
+t_max_err wrappedClass_attrGet(WrappedInstancePtr self, t_object* attr, long* argc, t_atom** argv)
 {
-	SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+	t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
 	TTValue		v;
-	AtomCount	i;
+	long		i;
 	TTPtr		rawpointer;
-	MaxErr		err;
+	t_max_err	err;
 	
-	err = hashtab_lookup(self->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&rawpointer);
+	err = hashtab_lookup(self->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&rawpointer);
 	if (err)
 		return err;
 
 	TTSymbol	ttAttrName(rawpointer);
 	
-	self->graphObject->mKernel->getAttributeValue(ttAttrName, v);
+	self->graphObject->mKernel.get(ttAttrName, v);
 
-	*argc = v.getSize();
+	*argc = v.size();
 	if (!(*argv)) // otherwise use memory passed in
-		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.getSize());
+		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 
-	for (i=0; i<v.getSize(); i++) {
-		if(v.getType(i) == kTypeFloat32 || v.getType(i) == kTypeFloat64){
-			TTFloat64	value;
-			v.get(i, value);
+	for (i=0; i<v.size(); i++) {
+		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
+			TTFloat64	value = v[i];
 			atom_setfloat(*argv+i, value);
 		}
-		else if(v.getType(i) == kTypeSymbol){
-			TTSymbol	value;
-			v.get(i, value);
+		else if (v[i].type() == kTypeSymbol) {
+			TTSymbol	value = v[i];
 			atom_setsym(*argv+i, gensym((char*)value.c_str()));
 		}
-		else{	// assume int
-			TTInt32		value;
-			v.get(i, value);
+		else {	// assume int
+			TTInt32		value = v[i];
 			atom_setlong(*argv+i, value);
 		}
 	}	
@@ -198,46 +195,46 @@ t_max_err wrappedClass_attrGet(WrappedInstancePtr self, ObjectPtr attr, AtomCoun
 }
 
 
-t_max_err wrappedClass_attrSet(WrappedInstancePtr self, ObjectPtr attr, AtomCount argc, AtomPtr argv)
+t_max_err wrappedClass_attrSet(WrappedInstancePtr self, t_object* attr, long argc, t_atom* argv)
 {
 	if (argc && argv) {
-		SymbolPtr	attrName = (SymbolPtr)object_method(attr, _sym_getname);
+		t_symbol*	attrName = (t_symbol*)object_method(attr, _sym_getname);
 		TTValue		v;
-		AtomCount	i;
-		MaxErr		err;
+		long	i;
+		t_max_err		err;
 		TTPtr		ptr;
 		
-		err = hashtab_lookup(self->wrappedClassDefinition->maxNamesToTTNames, attrName, (ObjectPtr*)&ptr);
+		err = hashtab_lookup(self->wrappedClassDefinition->maxNamesToTTNames, attrName, (t_object**)&ptr);
 		if (err)
 			return err;
 		
 		TTSymbol	ttAttrName(ptr);
 		
-		v.setSize(argc);
+		v.resize(argc);
 		for (i=0; i<argc; i++) {
-			if(atom_gettype(argv+i) == A_LONG)
-				v.set(i, AtomGetInt(argv+i));
-			else if(atom_gettype(argv+i) == A_FLOAT)
-				v.set(i, atom_getfloat(argv+i));
-			else if(atom_gettype(argv+i) == A_SYM)
-				v.set(i, TT(atom_getsym(argv+i)->s_name));
+			if (atom_gettype(argv+i) == A_LONG)
+				v[i] = (TTInt32)atom_getlong(argv+i);
+			else if (atom_gettype(argv+i) == A_FLOAT)
+				v[i] = atom_getfloat(argv+i);
+			else if (atom_gettype(argv+i) == A_SYM)
+				v[i] = TT(atom_getsym(argv+i)->s_name);
 			else
 				object_error(SELF, "bad type for attribute setter");
 		}
-		self->graphObject->mKernel->setAttributeValue(ttAttrName, v);
+		self->graphObject->mKernel.set(ttAttrName, v);
 		return MAX_ERR_NONE;
 	}
 	return MAX_ERR_GENERIC;
 }
 
 
-void wrappedClass_anything(WrappedInstancePtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+void wrappedClass_anything(WrappedInstancePtr self, t_symbol* s, long argc, t_atom* argv)
 {
 	TTValue		v;
 	TTSymbol	ttName;
-	MaxErr		err;
+	t_max_err	err;
 	
-	err = hashtab_lookup(self->wrappedClassDefinition->maxNamesToTTNames, s, (ObjectPtr*)&ttName);
+	err = hashtab_lookup(self->wrappedClassDefinition->maxNamesToTTNames, s, (t_object**)&ttName);
 	if (err) {
 		object_post(SELF, "no method found for %s", s->s_name);
 		return;
@@ -246,40 +243,37 @@ void wrappedClass_anything(WrappedInstancePtr self, SymbolPtr s, AtomCount argc,
 	if (argc && argv) {
 		TTValue	v;
 		
-		v.setSize(argc);
-		for (AtomCount i=0; i<argc; i++) {
+		v.resize(argc);
+		for (long i=0; i<argc; i++) {
 			if (atom_gettype(argv+i) == A_LONG)
-				v.set(i, AtomGetInt(argv+i));
+				v[i] = (TTInt32)atom_getlong(argv+i);
 			else if (atom_gettype(argv+i) == A_FLOAT)
-				v.set(i, atom_getfloat(argv+i));
+				v[i] = atom_getfloat(argv+i);
 			else if (atom_gettype(argv+i) == A_SYM)
-				v.set(i, TT(atom_getsym(argv+i)->s_name));
+				v[i] = TT(atom_getsym(argv+i)->s_name);
 			else
 				object_error(SELF, "bad type for message arg");
 		}
-		self->graphObject->mKernel->sendMessage(ttName, v, v); // FIXME: TEMPORARY HACK WHILE WE TRANSITION FROM 1-ARG MESSAGES to 2-ARG MESSAGES
+		self->graphObject->mKernel.send(ttName, v, v); // FIXME: TEMPORARY HACK WHILE WE TRANSITION FROM 1-ARG MESSAGES to 2-ARG MESSAGES
 		
 		// process the returned value for the dumpout outlet
 		{
-			AtomCount	ac = v.getSize();
+			long	ac = v.size();
 
 			if (ac) {
-				AtomPtr		av = (AtomPtr)malloc(sizeof(t_atom) * ac);
+				t_atom*		av = (t_atom*)malloc(sizeof(t_atom) * ac);
 				
-				for (AtomCount i=0; i<ac; i++) {
-					if (v.getType() == kTypeSymbol){
-						TTSymbol ttSym;
-						v.get(i, ttSym);
+				for (long i=0; i<ac; i++) {
+					if (v[i].type() == kTypeSymbol) {
+						TTSymbol ttSym = v[i];
 						atom_setsym(av+i, gensym((char*)ttSym.c_str()));
 					}
-					else if (v.getType() == kTypeFloat32 || v.getType() == kTypeFloat64) {
-						TTFloat64 f = 0.0;
-						v.get(i, f);
+					else if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
+						TTFloat64 f = v[i];
 						atom_setfloat(av+i, f);
 					}
 					else {
-						TTInt32 l = 0;
-						v.get(i, l);
+						TTInt32 l = v[i];
 						atom_setfloat(av+i, l);
 					}
 				}
@@ -289,7 +283,7 @@ void wrappedClass_anything(WrappedInstancePtr self, SymbolPtr s, AtomCount argc,
 		}
 	}
 	else
-		self->graphObject->mKernel->sendMessage(ttName);
+		self->graphObject->mKernel.send(ttName);
 }
 
 
@@ -324,7 +318,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	WrappedClass*	wrappedMaxClass = NULL;
 	TTSymbol		name;
 	TTCString		nameCString = NULL;
-	SymbolPtr		nameMaxSymbol = NULL;
+	t_symbol*		nameMaxSymbol = NULL;
 	TTUInt32		nameSize = 0;
 
 	common_symbols_init();
@@ -352,14 +346,14 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	TTObjectBaseInstantiate(ttClassName, &o, numChannels);
 
 	o->getMessageNames(v);
-	for (TTUInt16 i=0; i<v.getSize(); i++) {
-		v.get(i, name);
+	for (TTUInt16 i=0; i<v.size(); i++) {
+		name = v[i];
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);
 
 		nameMaxSymbol = gensym(nameCString);			
-		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, ObjectPtr(name.rawpointer()));
+		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, (t_object*)name.rawpointer());
 		class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_anything, nameCString, A_GIMME, 0);
 
 		delete nameCString;
@@ -367,11 +361,11 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	}
 	
 	o->getAttributeNames(v);
-	for (TTUInt16 i=0; i<v.getSize(); i++) {
+	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTAttributePtr	attr = NULL;
-		SymbolPtr		maxType = _sym_long;
+		t_symbol*		maxType = _sym_long;
 		
-		v.get(i, name);
+		name = v[i];
 		nameSize = strlen(name.c_str());
 		nameCString = new char[nameSize+1];
 		strncpy_zero(nameCString, name.c_str(), nameSize+1);
@@ -393,7 +387,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 		else if (attr->type == kTypeSymbol || attr->type == kTypeString)
 			maxType = _sym_symbol;
 		
-		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, ObjectPtr(name.rawpointer()));
+		hashtab_store(wrappedMaxClass->maxNamesToTTNames, nameMaxSymbol, (t_object*)name.rawpointer());
 		class_addattr(wrappedMaxClass->maxClass, attr_offset_new(nameCString, maxType, 0, (method)wrappedClass_attrGet, (method)wrappedClass_attrSet, 0));
 		
 		// Add display styles for the Max 5 inspector
@@ -419,7 +413,7 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	if (c)
 		*c = wrappedMaxClass;
 	
-	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, ObjectPtr(wrappedMaxClass));
+	hashtab_store(wrappedMaxClasses, wrappedMaxClass->maxClassName, (t_object*)wrappedMaxClass);
 	return kTTErrNone;
 }
 
@@ -469,17 +463,3 @@ TTErr wrapAsMaxGraph(TTSymbol& ttClassName, char* maxClassName, WrappedClassPtr*
 	return err;
 }
 
-
-// NOTE: DUPLICATIONS FROM THE MSP WRAPPER
-
-#ifdef __LP64__
-TTInt64	AtomGetInt(AtomPtr a)
-{
-	return (TTInt64)atom_getlong(a);
-}
-#else
-int AtomGetInt(AtomPtr a)
-{
-	return (int)atom_getlong(a);
-}
-#endif

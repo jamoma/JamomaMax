@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.mutesolo=" module="" category="Jamoma">
+	<digest>
+		Mute and solo individual channels in an AudioGraph signal
+	</digest>
+	<description>
+		j.mutesolo= enables muting or soloing of individual channels in an AudioGraph multi-channel audio signal.
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			audio
+		</metadata>
+		<metadata name="tag">
+			gain
+		</metadata>
+		<metadata name="tag">
+			mixing
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="AudioGraph/messages">
+			<digest>
+				Input
+			</digest>
+			<description>
+				A Jamoma AudioGraph multichannel signal.
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="AudioGraph">
+			<digest>
+				direct: values
+			</digest>
+			<description>
+				The processed multi-channel AudioGraph signal.
+			</description>
+		</outlet>
+		<outlet id="1" type="dumpout">
+			<digest>
+				direct: values
+			</digest>
+			<description>
+				A getChannelMute message returns current mute settings for all channels as a list. A getChannelSolo message returns current solo settings for all channels as a list.
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist />
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="AudioGraph-signal">
+			<arglist />
+			<digest>
+				Multi-channel AudioGraph signal to control
+			</digest>
+			<description>
+				Each inlet can be muted or soloed. When no channels are muted or soloed, all signals are passed through un-affected.
+			</description>
+		</method>
+		<method name="clear">
+			<arglist/>
+			<digest>
+				Clear current mute and solo settings.
+			</digest>
+			<description>
+				Resets the object to its default settings where none of the channels are muted or soloed.
+			</description>
+		</method>
+		<method name="getChannelMute">
+			<arglist/>
+			<digest>
+				Get current mute settings.
+			</digest>
+			<description>
+				A getChannelMute message returns current mute settings for all channels as a list at the dumpout outlet.
+			</description>
+		</method>
+		<method name="getChannelSolo">
+			<arglist/>
+			<digest>
+				Get current solo settings.
+			</digest>
+			<description>
+				A getChannelSolo message returns current solo settings for all channels as a list at the dumpout outlet.
+			</description>
+		</method>
+		<method name="setChannelMute">
+			<arglist>
+				<arg name="channel" optional="0" type="int" />
+				<arg name="mute value" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Set the mute status for one channel
+			</digest>
+			<description>
+				A <tt>setChannelMute</tt> message followed by an integer specifying the channel (counting from 0) and a mute-value mutes this channel if the value is non-zero, and un-mutes it if the value is zero. If one or more channels are soloed, it overrides any current settings for channel mute.
+			</description>
+		</method>
+		<method name="setChannelSolo">
+			<arglist>
+				<arg name="channel" optional="0" type="int" />
+				<arg name="solo value" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Set the solo status for one channel
+			</digest>
+			<description>
+				A <tt>setChannelSolo</tt> message followed by an integer specifying the channel (counting from 0) and a solo-value soloes this channel if the value is non-zero, while it is not soloed if the value is zero. If one or more channels are soloed, it overrides any current settings for channel mute.
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="bypass" get="1" set="1" type="int" size="1">
+			<digest>
+				Bypass object
+			</digest>
+			<description>
+				When non-zero, signal processing in this object is bypassed.
+			</description>
+			<attributelist>
+				<attribute name="default" get="1" set="1" type="int" size="1" value="0" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Bypass object" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="interpolate" get="1" set="1" type="int" size="1">
+			<digest>
+				Smooth Changes
+			</digest>
+			<description>
+				When non-zero, gain levels for each channel is interpolated to new values over one sample vector if channel mute or solo settings are changed.
+			</description>
+			<attributelist>
+				<attribute name="default" get="1" set="1" type="int" size="1" value="0" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Smooth Changes" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="mute" get="1" set="1" type="int" size="1">
+			<digest>
+				Mute all of the object
+			</digest>
+			<description>
+				When non-zero, signal processing in all of this object is muted.
+			</description>
+			<attributelist>
+				<attribute name="default" get="1" set="1" type="int" size="1" value="0" />
+				<attribute name="label" get="1" set="1" type="symbol" size="1" value="Mute object" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.gain~" />
+		<seealso name="j.gain=" />
+		<seealso name="j.mixer=" />
+		<seealso name="j.multimixer=" />
+		<seealso name="j.mutesolo" />
+	</seealsolist>
+</c74object>

@@ -1,0 +1,152 @@
+##############################
+CUE initialisation # (fold)
+##############################
+
+    # Model input_help
+    
+    /input_help/source pink
+    /input_help/audio/gain 0.                   # Midi units can be specified as floats in Jamoma
+    /input_help/balance 0.
+    
+    # Model filter_help
+    /filter_help/filtertype bandpass
+    /filter_help/audio/gain 100.
+    /filter_help/audio/mix 100.000
+    /filter_help/audio/bypass 0
+    /filter_help/audio/mute 0
+    /filter_help/view/freeze 0
+    /filter_help/frequency 300.0
+    /filter_help/q 1.472
+    /filter_help/filtergain -1.780
+    
+    # Model output_help
+    /output_help/audio/active 0                 # Turn off the dsp
+    /output_help/ch.1 1
+    /output_help/ch.2 2
+    /output_help/audio/gain 0.000
+    /output_help/record/filetype aiff
+    /output_help/record/samptype int24
+    /output_help/saturation/depth 10.000
+    /output_help/saturation/active 1
+    /output_help/limiter/preamp 6.000
+    /output_help/limiter/postamp 0.000
+    /output_help/limiter/lookahead 64
+    /output_help/limiter/release 300.000
+    /output_help/limiter/threshold -6.000
+    /output_help/limiter/mode exponential
+    /output_help/limiter/active 1
+    /output_help/view/freeze 0
+    /output_help/record/active 0
+    
+# (end)
+
+
+
+##############################
+CUE audio_on # (fold)
+##############################
+
+    # Model output_help
+    /output_help/audio/active 1                 # Turn on the DSP
+
+    # Model input_help
+    /input_help/audio/gain 90.000 ramp 2000     # Ramp to this new value over 2 seconds...
+    
+    # Model filter_help
+    /filter_help/audio/gain 100.000 ramp 2000
+
+# (end)    
+
+
+
+##############################
+CUE fade_in # (fold)
+##############################
+
+    # Model output_help
+    /output_help/audio/gain 90.000 ramp 2000
+
+# (end)
+
+
+
+##############################
+CUE sweep # (fold)
+##############################
+
+    # Model filter_help
+    /filter_help/frequency 3000 ramp 3000
+    
+    WAIT 6000                                   # The wait directive pauses us for 6 seconds
+    
+    /filter_help/frequency 200 ramp 3000
+
+# (end)
+
+
+
+##############################
+CUE dataspaceDemo	# (fold)
+##############################
+
+	# This makes gain changes audible on cheap laptop speakers
+	/filter_help/frequency 4000                
+
+    # Set gain using dB unit
+	/output_help/audio/gain 0 dB
+	
+	WAIT 2000
+	
+    # Set gain using the default unit (midi)
+	/output_help/audio/gain 0
+	
+	WAIT 2000
+	
+    # Ramp to new value specified using the linear unit
+	/output_help/audio/gain 0.5 linear ramp 2000
+		
+	WAIT 4000
+	
+	# Change the ramp function from the default linear function to a cosince function
+	/output_help/audio/gain:/ramp/function easeInOutSine
+	# Options for regular functions: cosine, exponential, linear, logarithm, lowpass, power, smoothPolynomial, tanh, 
+	# Options for window functions: bartlett, blackman, blackmanHarris, expodec, gauss, hamming, hanning, kaiser, nuttall, rectangular, trapezoid, tukey, welch
+		
+	# Now ramp using linear unit
+	/output_help/audio/gain 1.0 linear ramp 2000
+
+# (end)
+
+
+
+##############################
+CUE fade_out	# (fold)
+##############################
+
+	# If you've been utilising the WAIT command, it is a good idea to make
+	# sure that the next event sets all parameters to expected final state of
+	# previous cue. This prevents errouneous state in the case that the next cue
+	# is triggered before the previous one had finished executing.
+    /filter_help/frequency 200
+
+    # Model output_help
+    /output_help/audio/gain 0.000 ramp 2000    
+    
+# (end)
+
+
+
+##############################
+CUE audio_off	# (fold)
+##############################
+    
+    # Model input_help
+    /input_help/audio/gain 0 ramp 100
+    
+    # Model output_help
+    /filter_help/audio/gain 0 ramp 100
+
+    # Turn off the dsp
+    /output_help/audio/active 0
+
+# (end)

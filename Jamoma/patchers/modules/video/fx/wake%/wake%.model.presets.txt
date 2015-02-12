@@ -1,0 +1,10 @@
+
+- preset "default"
+# "edit a comment"
+data/active 1
+bleed 0.150000
+data/bypass 0
+feedback 0.600000
+feedforward 0.100000
+gain 1.000000
+normalize 0

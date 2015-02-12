@@ -1,0 +1,43 @@
+- cue init
+- description "Initialisation. Models are ready to play."
+/mouse/reference screen
+/mouse/active 0
+/degrade~/samplerateRatio 1.000000
+/degrade~/bitdepth 24
+/degrade~/audio/gain 100.000000
+/degrade~/audio/mix 0.000000
+/degrade~/audio/bypass 0
+/degrade~/audio/mute 0
+
+- cue Act I - Scene I
+- description "Mouse mapping activated + audio FX applied"
+/mouse/reference screen
+/mouse/active 1
+/degrade~/samplerateRatio 1.000000
+/degrade~/bitdepth 24
+/degrade~/audio/gain 100.000000
+/degrade~/audio/mix 100.000000
+/degrade~/audio/bypass 0
+/degrade~/audio/mute 0
+
+- cue Act I - Scene II
+- description "audio degrade get harsher"
+/mouse/reference screen
+/mouse/active 1
+/degrade~/samplerateRatio 0.100000
+/degrade~/bitdepth 1
+/degrade~/audio/gain 80.000000
+/degrade~/audio/mix 100.000000
+/degrade~/audio/bypass 0
+/degrade~/audio/mute 0
+
+- cue "Outro"
+- description "Slow fadeout toward the end of the show"
+/mouse/reference screen
+/mouse/active 0
+/degrade~/samplerateRatio 0.100000 ramp 2000
+/degrade~/bitdepth 1 ramp 2000
+/degrade~/audio/gain 0.000000 ramp 2000
+/degrade~/audio/mix 0.000000 ramp 2000
+/degrade~/audio/bypass 0
+

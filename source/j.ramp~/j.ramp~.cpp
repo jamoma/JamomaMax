@@ -1,13 +1,18 @@
-/* 
- *	tt.ramp~
- *	External object for Max/MSP
- *	
- *	Example project for TTBlue
- *	Copyright © 2008 by Timothy Place
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief j.ramp~ : wraps the #TTRamp class as a Jamoma external for MSP
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 #include "ext.h"					// Max Header
@@ -51,7 +56,7 @@ t_class *ramp_class;				// Required. Global pointing to this class
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	long attrflags = 0;
 	t_class *c;
@@ -94,9 +99,9 @@ void* ramp_new(t_symbol *msg, short argc, t_atom *argv)
 	short		i;
    
     x = (t_ramp *)object_alloc(ramp_class);
-    if(x){
+    if (x) {
 		x->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
-		if(attrstart && argv)
+		if (attrstart && argv)
 			x->maxNumChannels = atom_getlong(argv);
 
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
@@ -108,7 +113,7 @@ void* ramp_new(t_symbol *msg, short argc, t_atom *argv)
 				
     	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout	
 	    dsp_setup((t_pxobject *)x, x->maxNumChannels);								// inlets
-		for(i=0; i < x->maxNumChannels; i++)
+		for (i=0; i < x->maxNumChannels; i++)
 			outlet_new((t_pxobject *)x, "signal");									// outlets
 		
 		x->obj.z_misc = Z_NO_INPLACE;
@@ -131,14 +136,14 @@ void ramp_free(t_ramp *x)
 // Method for Assistance Messages
 void ramp_assist(t_ramp *x, void *b, long msg, long arg, char *dst)
 {
-	if(msg==1){ 	// Inlets
-		if(arg == 0)
+	if (msg==1) { 	// Inlets
+		if (arg == 0)
 			strcpy(dst, "(signal) input 1, control messages");					
 		else 
 			snprintf(dst, 256, "(signal) input %ld", arg+1); 
 	}
-	else if(msg==2){ // Outlets
-		if(arg == x->maxNumChannels)
+	else if (msg==2) { // Outlets
+		if (arg == x->maxNumChannels)
 			strcpy(dst, "dumpout");					
 		else 
 			snprintf(dst, 256, "(signal) Filtered output %ld", arg+1); 
@@ -174,7 +179,7 @@ t_int *ramp_perform(t_int *w)
 {	
 	t_ramp *x = (t_ramp *)(w[1]);
 			
-	if(!(x->obj.z_disabled))
+	if (!(x->obj.z_disabled))
 		x->ramp->process(*x->audioOut);
 
 	//TTAUDIOSIGNAL_GETVECTOR32(x->audioOut, 0, x->vs, w[2]);
@@ -200,11 +205,11 @@ void ramp_dsp(t_ramp *x, t_signal **sp, short *count)
 
 t_max_err ramp_setMode(t_ramp *x, void *attr, long argc, t_atom *argv)
 {
-	if(argc){
+	if (argc) {
 		x->attrMode = atom_getsym(argv);
-		if(x->attrMode == gensym("sample_accurate"))
+		if (x->attrMode == gensym("sample_accurate"))
 			x->ramp->setAttributeValue(TT("mode"), TT("sample"));
-		else if(x->attrMode == gensym("vector_accurate"))
+		else if (x->attrMode == gensym("vector_accurate"))
 			x->ramp->setAttributeValue(TT("mode"), TT("vector"));
 	}
 	return MAX_ERR_NONE;
@@ -213,7 +218,7 @@ t_max_err ramp_setMode(t_ramp *x, void *attr, long argc, t_atom *argv)
 void ramp_perform64(t_ramp *x, t_object *dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	x->ramp->process(*x->audioOut);
-	x->audioOut->getVector(0, x->vs, outs[0]);
+	x->audioOut->getVector(0, x->vs, (t_float *)(outs[0]));
 }
 
 void ramp_dsp64(t_ramp *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)

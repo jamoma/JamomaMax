@@ -1,0 +1,1 @@
+- preset "default"# "edit a comment"data/active 1data/bypass 0glow 0.003922 1.000000 0.660161luminance 0.630000mode 0tolerance 0.400000

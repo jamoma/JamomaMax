@@ -1,0 +1,16 @@
+
+
+- preset "default"
+# "edit a comment"
+colors 0.000000 0.000000 0.000000 1.000000
+data/freeze 0
+dimensions/height 240
+data/mute 0
+data/preview 0
+scaling 4.000000
+metro/speed 0
+speed 1000
+threshold 0.100000
+dimensions/width 1024
+ 
+

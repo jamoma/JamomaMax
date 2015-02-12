@@ -1,22 +1,31 @@
-/* 
- * j.model | view
- * External for Jamoma : the main control center of a model | view patcher
- * By Tim Place and Théo de la Hogue, Copyright � 2010
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.model / j.view - The main control center of Jamoma model and view patcher
+ *
+ * @details
+ *
+ * @authors Tim Place, Théo de la Hogue, Trond Lossius
+ *
+ * @copyright Copyright © 2010 by Tim Place and Théo de la Hogue @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
+
 #include "j.model.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
 	spec->_wrap = &WrapTTContainerClass;
 	spec->_new = &WrappedContainerClass_new;
 	spec->_free = &WrappedContainerClass_free;
 	spec->_any = &WrappedContainerClass_anything;
-
+    
+    TTModelInfo::registerClass();
+    
 #ifndef JCOM_VIEW
 	return wrapTTModularClassAsMaxClass(kTTSym_Container, "j.model", NULL, spec);
 #else
@@ -36,12 +45,9 @@ void WrapTTContainerClass(WrappedClassPtr c)
     
     class_addmethod(c->maxClass, (method)model_return_upper_view_model_address,"return_upper_view_model_address", A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)model_help,                        "model_help",			A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_reference,                   "model_reference",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_open,                        "model_open",           A_CANT, 0);
-//	class_addmethod(c->maxClass, (method)model_mute,                        "model_mute",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_address,                     "model_address",		A_CANT, 0);
-	class_addmethod(c->maxClass, (method)model_autodoc,                     "doc_generate",			A_CANT, 0);
+    
+    class_addmethod(c->maxClass, (method)model_reference_write,             "reference_write",      A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_preset_return_names,         "return_names",			A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_filechanged,          "filechanged",			A_CANT, 0);
@@ -54,108 +60,119 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "dblclick",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edclose,              "edclose",				A_CANT, 0);
-	
+#ifndef JCOM_VIEW
 	class_addmethod(c->maxClass, (method)model_preset_read,                 "preset:read",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_write,                "preset:write",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "preset:edit",			A_GIMME, 0);
 	
 	class_addmethod(c->maxClass, (method)model_preset_read_again,           "preset:read/again",	0);
 	class_addmethod(c->maxClass, (method)model_preset_write_again,          "preset:write/again",	0);
+#endif
+    class_addmethod(c->maxClass, (method)model_signal_amenities,            "input_created",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_amenities,            "output_created",		A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)model_signal_return_content,       "return_content",		A_CANT, 0);
-    
-    class_addmethod(c->maxClass, (method)model_signal_return_data_mute,     "return_data_mute",		A_CANT, 0);
+    class_addmethod(c->maxClass, (method)model_signal_return_data_active,   "return_data_active",	A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_signal_return_data_bypass,   "return_data_bypass",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_freeze,   "return_data_freeze",	A_CANT, 0);
-    class_addmethod(c->maxClass, (method)model_signal_return_data_preview,  "return_data_preview",  A_CANT, 0);
     
     class_addmethod(c->maxClass, (method)model_signal_return_audio_mute,    "return_audio_mute",	A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_bypass,  "return_audio_bypass",  A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_mix,     "return_audio_mix",     A_CANT, 0);
     class_addmethod(c->maxClass, (method)model_signal_return_audio_gain,    "return_audio_gain",	A_CANT, 0);
-	
-	CLASS_ATTR_LONG(c->maxClass,		"load_default",	0,		WrappedModularInstance,	extra);
-	CLASS_ATTR_DEFAULT(c->maxClass,		"load_default",	0,		"1");
-	CLASS_ATTR_ACCESSORS(c->maxClass,	"load_default",			model_preset_get_load_default,	model_preset_set_load_default);
-	CLASS_ATTR_STYLE(c->maxClass,		"load_default",	0,		"onoff");
     
     CLASS_ATTR_ATOM(c->maxClass,        "amenities",	0,		WrappedModularInstance,	extra);
 	CLASS_ATTR_DEFAULT(c->maxClass,		"amenities",	0,		"all");
 	CLASS_ATTR_ACCESSORS(c->maxClass,	"amenities",			model_get_amenities, model_set_amenities);
 	CLASS_ATTR_STYLE(c->maxClass,		"amenities",	0,		"text");
+    
+    CLASS_ATTR_ATOM(c->maxClass,        "presets",	0,          WrappedModularInstance,	extra);
+	CLASS_ATTR_DEFAULT(c->maxClass,		"presets",	0,          "none");
+	CLASS_ATTR_ACCESSORS(c->maxClass,	"presets",              model_preset_get_presets, model_preset_set_presets);
+	CLASS_ATTR_STYLE(c->maxClass,		"presets",	0,          "text");
 }
 
-void WrappedContainerClass_new(TTPtr self, AtomCount argc, AtomPtr argv)
+void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
- 	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
+	TTValue     none;
+    t_object    *aPatcher;
+    
+    // is there already a j.model or j.view in the patcher ?
+    jamoma_patcher_get_model_or_view(jamoma_patcher_get((t_object*)x), &aPatcher);
+    
+    if (aPatcher) {
+        object_error((t_object*)x, "can't have two models or views in the same patcher");
+        return;
+    }
 		
 	// create a container
-	jamoma_container_create((ObjectPtr)x, &x->wrappedObject);
+	jamoma_container_create((t_object*)x, x->wrappedObject);
 	
 #ifndef JCOM_VIEW
 	x->patcherContext = kTTSym_model;
-	x->wrappedObject->setAttributeValue(kTTSym_tag, kTTSym_model);
+	x->wrappedObject.set(kTTSym_service, kTTSym_model);
 #else
 	x->patcherContext = kTTSym_view;
-	x->wrappedObject->setAttributeValue(kTTSym_tag, kTTSym_view);
+	x->wrappedObject.set(kTTSym_service, kTTSym_view);
 #endif
 		
 	// Make two outlets
 	x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
 	x->outlets[data_out] = outlet_new(x, NULL);						// anything outlet to output data
 	
-	// Prepare memory to store internal datas
-	x->internals = new TTHash();
-	
 	// Prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
-	EXTRA->modelAddress = kTTAdrsEmpty;
+    EXTRA->modelInfo = new TTObject();
+    EXTRA->containerAddress = kTTAdrsEmpty;
     EXTRA->argAddress = kTTAdrsEmpty;
     EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
-    EXTRA->presetManager = NULL;
-    EXTRA->attr_load_default = true;
+    EXTRA->presetManager = new TTObject();
+    EXTRA->attr_presets = kTTSym_none;
 	EXTRA->filewatcher = NULL;
-	EXTRA->toEdit = x->wrappedObject;
+    EXTRA->toEdit = new TTObject();
+	*EXTRA->toEdit = x->wrappedObject;
 	EXTRA->presetName = kTTSymEmpty;
-    EXTRA->readingContent = NO;
     EXTRA->attr_amenities = new TTHash();
     EXTRA->all_amenities = NO;
     EXTRA->no_amenities = NO;
     
-    EXTRA->attr_amenities->append(TTSymbol("all"), kTTValNONE);
+    EXTRA->attr_amenities->append(TTSymbol("all"), none);
     
     // handle attribute args
 	attr_args_process(x, argc, argv);
 	
-    // create the preset manager
-	jamoma_presetManager_create((ObjectPtr)x, &EXTRA->presetManager);
-	
 	// The following must be deferred because we have to interrogate our box,
 	// and our box is not yet valid until we have finished instantiating the object.
 	// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-	defer_low((ObjectPtr)x, (method)model_subscribe, NULL, 0, 0);
+	defer_low((t_object*)x, (method)model_subscribe, NULL, 0, 0);
 }
 
 void WrappedContainerClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTAddress    modelAddress, presetAddress;
-    TTValue      v;
+    TTValue      v, none;
     
-    if (EXTRA->presetManager) {
-        // get the modelAddress from the preset manager address
-        EXTRA->presetManager->getAttributeValue(kTTSym_address, v);
-        modelAddress = v[0];
-        presetAddress = modelAddress.appendAddress(TTAddress("preset"));
+    if (!EXTRA)
+        return;
+    
+    if (EXTRA->modelInfo->valid()) {
+        
+        modelAddress = EXTRA->containerAddress.appendAddress(TTAddress("model"));
+        
+        // remove the model node
+        JamomaApplication.send("ObjectUnregister", modelAddress, none);
+    }
+    delete EXTRA->modelInfo;
+    
+    if (EXTRA->presetManager->valid()) {
+        
+        presetAddress = EXTRA->containerAddress.appendAddress(TTAddress("preset"));
         
         // remove the preset node
-        JamomaDirectory->TTNodeRemove(presetAddress);
-        
-        // delete the preset manager
-        TTObjectBaseRelease(&EXTRA->presetManager);
+         JamomaApplication.send("ObjectUnregister", presetAddress, none);
     }
+    delete EXTRA->presetManager;
     
     // delete filewatcher
 	if (EXTRA->filewatcher) {
@@ -163,37 +180,72 @@ void WrappedContainerClass_free(TTPtr self)
 		object_free(EXTRA->filewatcher);
 	}
     
+    delete EXTRA->toEdit;
+    
+    // unbind the container
+    x->wrappedObject.set(kTTSym_address, kTTSymEmpty);
+
 	free(EXTRA);
 }
 
 void model_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue						v, args;
+	TTValue						v, args, none;
     TTNodePtr                   returnedNode = NULL;
     TTNodePtr                   returnedContextNode = NULL;
-	TTObjectBasePtr				aData, aReceiver;
-	TTTextHandlerPtr			aTextHandler;
+	TTObject                    aReceiver;
+	TTObject                    aTextHandler;
 	TTBoolean					isSubModel;
-	TTAddress                   returnedAddress;
-	AtomCount					ac;
-	AtomPtr						av;
-	ObjectPtr					aPatcher = jamoma_patcher_get((ObjectPtr)x);
+	TTAddress                   returnedAddress, adrs;
+    TTSymbol                    description;
+	long                        ac;
+	t_atom*						av;
+    t_atom                      a;
+	t_object*					aPatcher = jamoma_patcher_get((t_object*)x);
 
 	// if the subscription is successful
-	if (!jamoma_subscriber_create((ObjectPtr)x, x->wrappedObject, kTTAdrsEmpty, &x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
+	if (!jamoma_subscriber_create((t_object*)x, x->wrappedObject, kTTAdrsEmpty, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
 		
 		// get all info relative to our patcher
-		jamoma_patcher_get_info((ObjectPtr)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
+		jamoma_patcher_get_info((t_object*)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 		
 		// set the address attribute of the Container 
-		x->wrappedObject->setAttributeValue(kTTSym_address, returnedAddress);
+		x->wrappedObject.set(kTTSym_address, returnedAddress);
         
-        if (x->patcherContext == kTTSym_model)
-            EXTRA->modelAddress = returnedAddress;
-		
+        // keep the address for model_free (because the wrappedObject will be freed before)
+        EXTRA->containerAddress = returnedAddress;
+        
+        // set annotation attribute of the patcher using description attribute
+        x->wrappedObject.get(kTTSym_description, v);
+        description = v[0];
+        atom_setsym(&a, gensym(description.c_str()));
+        object_attr_setvalueof(jpatcher_get_box(x->patcherPtr), _sym_annotation , 1, &a);
+        
 		// if the j.model|j.view is well subscribed
 		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
+            
+            // create a model object (for j.view too !)
+            *EXTRA->modelInfo = TTObject("ModelInfo", (TTPtr)x);
+            
+            // set his class attribute
+            EXTRA->modelInfo->set("class", x->patcherClass);
+            
+            // suscribe it under a model node
+            adrs = returnedAddress.appendAddress(TTAddress("model"));
+            args = TTValue(adrs, *EXTRA->modelInfo, x->patcherPtr);
+            
+            if (JamomaApplication.send("ObjectRegister", args, none))
+                object_error((t_object*)x, "can't subscribe model object");
+            
+            // In model patcher : set model:address with the model address
+			if (x->patcherContext == kTTSym_model) {
+                
+				EXTRA->modelInfo->set(kTTSym_address, returnedAddress);
+                
+                // then set the address attribute readOnly
+                TTModelInfoPtr(EXTRA->modelInfo->instance())->setAddressReadOnly(YES);
+            }
             
             // Get patcher arguments
 			ac = 0;
@@ -208,8 +260,18 @@ void model_subscribe(TTPtr self)
 			// check if it's a sub model
 			isSubModel = atom_getsym(av) == _sym_p;
 			
-			// in subpatcher the name of the patcher is part of the argument
+			// in subpatcher :
 			if (jamoma_patcher_get_hierarchy(aPatcher) == _sym_subpatcher) {
+                
+                // remove first 'p' or 'patcher'
+                if (ac > 0 && av) {
+                    if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
+                        ac--;
+                        av++;
+                    }
+                }
+                
+                // remove the next argument because it is the class
 				ac--;
 				av++;
 			}
@@ -222,100 +284,37 @@ void model_subscribe(TTPtr self)
 					attr_args_process(x, ac, av);
                 
                 // Create internal TTTextHandler (for documention and preset management)
-                aTextHandler = NULL;
-                TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&aTextHandler), args);
-                v = TTValue(aTextHandler);
-                x->internals->append(kTTSym_TextHandler, v);
-                v = TTValue(x->wrappedObject);
-                aTextHandler->setAttributeValue(kTTSym_object, v);
+                aTextHandler = TTObject(kTTSym_TextHandler);
+                x->internals->append(kTTSym_TextHandler, aTextHandler);
                 
                 if (!EXTRA->attr_amenities->lookup(TTSymbol("all"), v))
                     EXTRA->all_amenities = YES;
                 
                 if (!EXTRA->attr_amenities->lookup(TTSymbol("none"), v))
                     EXTRA->no_amenities = YES;
-				
-                // Add amenities relative to model informations
-                if (model_test_amenities(self, TTSymbol("model"))) {
-                    
-                    // Add a /class data
-                    makeInternals_data(x, returnedAddress, TTSymbol("model/class"), gensym("model_class"), x->patcherPtr, kTTSym_return, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_string);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("The patcher class"));
-                    aData->setAttributeValue(kTTSym_value, x->patcherClass);
-                    
-                    // Add a /help data
-                    makeInternals_data(x, returnedAddress, TTSymbol("model/help"), gensym("model_help"), x->patcherPtr, kTTSym_message, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("Open the maxhelp patch"));
-                    
-                    // Add a /reference data
-                    makeInternals_data(x, returnedAddress, TTSymbol("model/reference"), gensym("model_reference"), x->patcherPtr, kTTSym_message, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("Open the reference page"));
-                    
-                    // Add a /open data
-                    makeInternals_data(x, returnedAddress, TTSymbol("model/open"), gensym("model_open"), x->patcherPtr, kTTSym_message, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("Open the patcher"));
-                    
-                    // Add a /documentation/generate data
-                    makeInternals_data(x, returnedAddress, TTSymbol("model/documentation/generate"), gensym("doc_generate"), x->patcherPtr, kTTSym_message, &aData);
-                    aData->setAttributeValue(kTTSym_type, kTTSym_none);
-                    aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                    aData->setAttributeValue(kTTSym_description, TTSymbol("Make a html page description"));
-                    
-                    /* Add a /model/mute data
-                     makeInternals_data(x, nodeAdrs, TTSymbol("model/mute"), gensym("model_mute"), x->patcherContext, kTTSym_parameter, &aData);
-                     aData->setAttributeValue(kTTSym_type, kTTSym_boolean);
-                     aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-                     aData->setAttributeValue(kTTSym_priority, -1); // very high priority flag
-                     aData->setAttributeValue(kTTSym_description, TTSymbol("Mute all parameters in the patcher"));
-                     */
-                }
                 
                 // Add amenities relative to preset informations
                 if (model_test_amenities(self, TTSymbol("preset")))
                     
-                    // subscribe preset manager object
-                    model_preset_subscribe(self, returnedAddress);
+                    // add preset managment features
+                    model_preset_amenities(self);
                 
                 // Add amenities relative to signal informations
                 if (model_test_amenities(self, TTSymbol("data")) || model_test_amenities(self, TTSymbol("audio"))) {
                     
-                    // observe model's content to create signal in/out datas
-                    makeInternals_receiver(self, returnedAddress, kTTSym_content, gensym("return_content"), &aReceiver, YES, YES); // we need to deferlow to avoid lock crash on TTContainer content
-                    aReceiver->sendMessage(kTTSym_Get);
+                    // look at model's content to create signal in/out datas
+                    model_signal_amenities(self, _sym_nothing, 0, NULL);
+                    
                 }
 			}
-			
-			// In model *and* view patcher : Add /model/address data
-			if (x->patcherContext == kTTSym_model) // as return
-				makeInternals_data(x, returnedAddress,  TTSymbol("model/address"), gensym("model_address"), x->patcherPtr, kTTSym_return, &aData);
-			
-			if (x->patcherContext == kTTSym_view) // as parameter
-				makeInternals_data(x, returnedAddress,  TTSymbol("model/address"), gensym("model_address"), x->patcherPtr, kTTSym_parameter, &aData);
-			
-			aData->setAttributeValue(kTTSym_type, kTTSym_string);
-			aData->setAttributeValue(kTTSym_tag, kTTSym_generic);
-			aData->setAttributeValue(kTTSym_description, TTSymbol("The model address to bind for the view. A model patcher bind on himself"));
-			aData->setAttributeValue(kTTSym_priority, -1); // very high priority flag
-			
-			// In model patcher : set /model/address with his address
-			if (x->patcherContext == kTTSym_model)
-				aData->setAttributeValue(kTTSym_value, returnedAddress);
 			
 			// In view patcher : see in model_subscribe_view
 			if (x->patcherContext == kTTSym_view)
                 model_subscribe_view(self, _sym_nothing, ac, av);
 
-			// output ContextNode address
+			// output node address
 			t_atom a;
-			x->subscriberObject->getAttributeValue(TTSymbol("contextNodeAddress"), v);
+			x->subscriberObject.get("nodeAddress", v);
             
             if (v.size() == 1) {
                 returnedAddress = v[0];
@@ -323,120 +322,127 @@ void model_subscribe(TTPtr self)
                 object_obex_dumpout(self, gensym("address"), 1, &a);
             }
 			
-			// init the model (but not subModel)
-			if (!isSubModel)
+			// init the model (but not subModel) or any model registered under the root
+			if (!isSubModel || returnedContextNode->getParent()->getContext() == accessApplicationLocalDirectory->getRoot()->getContext())
 				defer_low(x, (method)model_init, 0, 0, 0L);
 		}
 	}
 }
 
-void model_subscribe_view(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTObjectBasePtr modelAddressData, aReceiver;
-    SymbolPtr		hierarchy;
-    ObjectPtr		aPatcher;
+    TTObject        aReceiver;
+    t_symbol*		hierarchy;
+    t_object*		aPatcher;
     TTList          whereToSearch;
     TTBoolean       isThere;
     TTNodePtr       firstTTNode;
-    TTAddress       containerAdrs, argAdrs;
-    TTValue         v, o;
-    TTErr           tterr;
+    TTAddress       modelAdrs, argAdrs, viewAdrs;
+    TTValue         v;
     
-    tterr = x->internals->lookup(TTSymbol("model/address"), o);
+    // look at hierarchy
+    hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
     
-    if (!tterr) {
+    // if args exists, the first argument of the patcher is the model:address value
+    if (argc > 0 && atom_gettype(argv) == A_SYM) {
+
+        argAdrs = TTAddress(atom_getsym(argv)->s_name);
         
-        modelAddressData = o[0];
+        // in poly case : use the same instance as the container address
+        if (hierarchy == gensym("poly"))
+            if (argAdrs.getInstance() == kTTSymEmpty)
+                argAdrs = argAdrs.appendInstance(EXTRA->containerAddress.getInstance());
         
-        hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
-        
-        // if the view is inside a bpatcher
-        if (hierarchy == _sym_bpatcher)
-            // look for a model of the same class into the patcher of the bpatcher to get his model/address
-            jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
-        else
-            // look for a model of the same class into the patcher to get his model/address
-            jamoma_patcher_get_model_patcher(x->patcherPtr, x->patcherClass, &aPatcher);
-        
-        // if a model exists
-        if (aPatcher) {
+        // if the address is absolute : use it directly
+        if (argAdrs.getType() == kAddressAbsolute) {
             
-            // is there a container (e.g. a j.model) registered with the same context in this model patcher ?
-            whereToSearch.append(JamomaDirectory->getRoot());
-            JamomaDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
-            
-            if (isThere) {
-                firstTTNode->getAddress(containerAdrs);
-                EXTRA->modelAddress = containerAdrs;
-            }
-            
-            // deferlow to try another time because the model patcher is maybe not ready
-            else {
-                defer_low((ObjectPtr)x, (method)model_subscribe_view, _sym_nothing, argc, argv);
-                return;
-            }
+            // set the model:address attribute to notify all observers
+            EXTRA->modelInfo->set(kTTSym_address, argAdrs);
+            return;
         }
         
-        // else, if args exists, the first argument of the patcher is the model/address value
-        else if (argc > 0 && atom_gettype(argv) == A_SYM) {
+        // in case of relative address : try to use the upper view patcher model:address (else use root)
+        else {
             
-            argAdrs = TTAddress(atom_getsym(argv)->s_name);
-            
-            // if the model/address is absolute : use it directly
-            if (argAdrs.getType() == kAddressAbsolute)
-                EXTRA->modelAddress = argAdrs;
-            
-            // in case of relative address : try to use the upper view patcher model/address (else use root)
-            else {
+            // if there is a parent view address : get the upper view address
+            if (EXTRA->containerAddress.getParent() != kTTAdrsRoot) {
                 
                 // keep the argument address
                 EXTRA->argAddress = argAdrs;
                 
-                // get the address attribute of the Container
-                x->wrappedObject->getAttributeValue(kTTSym_address, v);
-                containerAdrs = v[0];
-                
-                // observe upper view model/address parameter
-                makeInternals_receiver(self, containerAdrs.getParent(), TTAddress("model/address"), gensym("return_upper_view_model_address"), &aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
-                aReceiver->sendMessage(kTTSym_Get);
+                // observe the selected view model:address attribute
+                makeInternals_receiver(self, EXTRA->containerAddress.getParent(), TTAddress("model:address"), gensym("return_upper_view_model_address"), aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
+            }
+            // use the argument address as an absolute address
+            else {
+
+                // set the model:address attribute to notify all observers
+                EXTRA->modelInfo->set(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
+                return;
             }
         }
-        
-        // if the model/address is empty : the view is not binding a model for instant
-        if (EXTRA->modelAddress == kTTSymEmpty)
-            EXTRA->modelAddress = TTAddress("/noModelAddress");
-        
-        // set the model/address data value to notify all observers
-        modelAddressData->setAttributeValue(kTTSym_value, EXTRA->modelAddress);
     }
+    // else look around the patcher for model of the same class
+    else {
+        
+        // look for a model of the same class into the patcher of the bpatcher to get his model:address
+        jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
+        
+        // if a model exists
+        if (aPatcher) {
+
+            // is there a container (e.g. a j.model) registered with the same context in this model patcher ?
+            whereToSearch.append(accessApplicationLocalDirectory->getRoot());
+            accessApplicationLocalDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
+            
+            if (isThere) {
+                
+                firstTTNode->getAddress(modelAdrs);
+                
+                // set the model:address attribute to notify all observers
+                EXTRA->modelInfo->set(kTTSym_address, modelAdrs);
+                return;
+            }
+            
+            // deferlow to try another time because the model patcher is maybe not ready
+            else {
+
+                defer_low((t_object*)x, (method)model_subscribe_view, _sym_nothing, argc, argv);
+                return;
+            }
+        }
+    }
+    
+    // check if the model address have been filled or not (see in model_return_upper_view_model_address)
+    EXTRA->modelInfo->get(kTTSym_address, v);
+    modelAdrs = v[0];
+    
+    // if the model:address is still empty : the view is not binding a model for instant
+    if (modelAdrs == kTTSymEmpty)
+        modelAdrs = TTAddress("/no_model_address");
+    
+    // set the model:address attribute to notify all observers
+    EXTRA->modelInfo->set(kTTSym_address, modelAdrs);
 }
 
-void model_return_upper_view_model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_return_upper_view_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTObjectBasePtr modelAddressData;
     TTAddress       upperViewModelAddress;
     TTValue         v, o, out;
-    TTErr           tterr;
     
     jamoma_ttvalue_from_Atom(v, msg, argc, argv);
     upperViewModelAddress = v[0];
     
     // append argAddress stored in model_view_subscribe
     if (upperViewModelAddress != kTTSymEmpty)
-        EXTRA->modelAddress = upperViewModelAddress.appendAddress(EXTRA->argAddress);
+        upperViewModelAddress = upperViewModelAddress.appendAddress(EXTRA->argAddress);
     else
-        EXTRA->modelAddress = kTTAdrsRoot.appendAddress(EXTRA->argAddress);
+        upperViewModelAddress = kTTAdrsRoot.appendAddress(EXTRA->argAddress);
     
-    // set the model/address data
-    tterr = x->internals->lookup(TTSymbol("model/address"), o);
-    
-    if (!tterr) {
-        
-        modelAddressData = o[0];
-        modelAddressData->sendMessage(kTTSym_Command, EXTRA->modelAddress, out);
-    }
+    // set the model:address attribute to notify all observers
+    EXTRA->modelInfo->set(kTTSym_address, upperViewModelAddress);
 }
 
 void model_init(TTPtr self)
@@ -446,10 +452,10 @@ void model_init(TTPtr self)
 	TTValue		v;
 	
 	// Check if the model has not been initialized by a upper model
-	x->wrappedObject->getAttributeValue(kTTSym_initialized, v);
+	x->wrappedObject.get(kTTSym_initialized, v);
 	initialized = v[0];
 	if (!initialized)
-		x->wrappedObject->sendMessage(kTTSym_Init);
+		x->wrappedObject.send(kTTSym_Init);
 }
 
 // Method for Assistance Messages
@@ -494,130 +500,72 @@ void model_share_patcher_node(TTPtr self, TTNodePtr *patcherNode)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue v;
 	
-	if (x->subscriberObject) {
-		x->subscriberObject->getAttributeValue(TTSymbol("contextNode"), v);
+	if (x->subscriberObject.valid()) {
+		x->subscriberObject.get("contextNode", v);
 		*patcherNode = TTNodePtr((TTPtr)v[0]);
 	}
 }
 
-void model_list(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void WrappedContainerClass_anything(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
 	// the msg have to contains a relative address
-	jamoma_container_send((TTContainerPtr)x->wrappedObject, msg, argc, argv);
+	jamoma_container_send(x->wrappedObject, msg, argc, argv);
 }
 
-void WrappedContainerClass_anything(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_return_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	// the msg have to contains a relative address
-	jamoma_container_send((TTContainerPtr)x->wrappedObject, msg, argc, argv);
-}
-
-void model_return_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
+    
+    // store the address temporary into msg member to use it into model_return_value()
 	x->msg = msg;
 }
 
-void model_return_value(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
+    // using the temporay address stored previously into msg member in model_return_address()
 	outlet_anything(x->outlets[data_out], x->msg, argc, argv);
 }
 
-void model_help(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_reference_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	// opening the module helpfile (no help file dedicated for model or view)
-	if (x->patcherClass != kTTSymEmpty) {
-		
-		SymbolPtr helpfileName;
-		jamoma_edit_filename(*HelpPatcherFormat, x->patcherClass, &helpfileName);
-		classname_openhelp((char*)helpfileName->s_name);
-	}
+	defer(self, (method)model_reference_dowrite, msg, argc, argv);
 }
 
-void model_reference(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	if (x->patcherContext != kTTSymEmpty && x->patcherClass != kTTSymEmpty) {
-		
-		SymbolPtr refpagefileName;
-		jamoma_edit_filename(*RefpageFormat, x->patcherClass, &refpagefileName);
-		classname_openrefpage((char*)refpagefileName->s_name);
-	}
-}
-
-void model_open(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	
-	ObjectPtr p = jamoma_patcher_get((ObjectPtr)x);
-	
-	object_method(p, _sym_vis);
-}
-
-void model_autodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	defer(self, (method)model_doautodoc, msg, argc, argv);
-}
-
-void model_doautodoc(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_reference_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char				filename[MAX_FILENAME_CHARS];
 	TTSymbol			fullpath;
-	TTValue				o, v;
-	TTTextHandlerPtr	aTextHandler;
+	TTValue				o, v, none;
+	TTObject            aTextHandler;
 	TTErr				tterr;
 	
-	if (x->wrappedObject) {
+	if (x->wrappedObject.valid()) {
 		
 		// Default HTML file name
 		snprintf(filename, MAX_FILENAME_CHARS, DocumentationFormat->data(), x->patcherClass.c_str());
-		fullpath = jamoma_file_write((ObjectPtr)x, argc, argv, filename);
+		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
 		
-		tterr = x->internals->lookup(TTSymbol("TextHandler"), o);
+		tterr = x->internals->lookup(kTTSym_TextHandler, o);
 		
 		if (!tterr) {
-			aTextHandler = TTTextHandlerPtr((TTObjectBasePtr)o[0]);
+			aTextHandler = o[0];
+
+			aTextHandler.set(kTTSym_object, x->wrappedObject);
 			
 			critical_enter(0);
-			aTextHandler->sendMessage(TTSymbol("Write"), v, kTTValNONE);
+			aTextHandler.send(kTTSym_Write, v, none);
 			critical_exit(0);
 		}
 	}
 }
 
-/*
-void model_mute(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	ObjectPtr					patcher = jamoma_patcher_get((ObjectPtr)x);
-	long						mute;
-	t_atom						a[2];
-	
-	// 'setrock' is the message that is used by pcontrol to enable patcher
-	// it was inside former j.in or out. Not sure for what it was used (audio mute maybe...)
-	
-	if (argc && argv)
-		if (atom_gettype(argv) == A_LONG) {
-			mute = atom_getlong(argv);
-			atom_setlong(a+0, !mute);
-			atom_setlong(a+1, 1);
-			object_method(patcher, gensym("setrock"), 2, a);
-		}
-}
-*/
-
-void model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
+void model_address(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -625,12 +573,16 @@ void model_address(TTPtr self, SymbolPtr msg, AtomCount argc, AtomPtr argv)
 	if (x->patcherContext == kTTSym_view) {
 		
 		if (atom_gettype(argv) == A_SYM) {
-			EXTRA->modelAddress = TTAddress(atom_getsym(argv)->s_name);
+            
+			TTAddress modelAdrs = TTAddress(atom_getsym(argv)->s_name);
+            
+            // set the model:address attribute to notify all observers
+            EXTRA->modelInfo->set(kTTSym_address, modelAdrs);
 		}
 	}
 }
 
-t_max_err model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av)
+t_max_err model_get_amenities(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTValue keys;
@@ -643,7 +595,7 @@ t_max_err model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av
         
 		//otherwise allocate memory
 		*ac = keys.size();
-		if (!(*av = (AtomPtr)getbytes(sizeof(Atom)*(*ac)))) {
+		if (!(*av = (t_atom*)getbytes(sizeof(t_atom)*(*ac)))) {
 			*ac = 0;
 			return MAX_ERR_OUT_OF_MEM;
 		}
@@ -654,10 +606,10 @@ t_max_err model_get_amenities(TTPtr self, TTPtr attr, AtomCount *ac, AtomPtr *av
 	return MAX_ERR_NONE;
 }
 
-t_max_err model_set_amenities(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
+t_max_err model_set_amenities(TTPtr self, TTPtr attr, long ac, t_atom *av)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTValue     keys;
+    TTValue     keys, none;
     TTSymbol    key;
     
     EXTRA->attr_amenities->clear();
@@ -669,11 +621,11 @@ t_max_err model_set_amenities(TTPtr self, TTPtr attr, AtomCount ac, AtomPtr av)
         for (TTUInt8 i = 0; i < keys.size(); i++) {
             
             key = keys[i];
-            EXTRA->attr_amenities->append(key, kTTValNONE);
+            EXTRA->attr_amenities->append(key, none);
         }
     }
 	else
-		EXTRA->attr_amenities->append(TTSymbol("all"), kTTValNONE); // default all
+		EXTRA->attr_amenities->append(TTSymbol("all"), none); // default all
 	
 	return MAX_ERR_NONE;
 }

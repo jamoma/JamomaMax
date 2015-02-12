@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.loader - Simply used to load the framework when Max is launched
+ * @brief j.loader - Simply used to load the framework when Max is launched
  *
  * @details
  *
@@ -13,7 +13,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 
 // Data Structure for this object
@@ -35,16 +35,16 @@ static t_class *loader_class;
 
 #ifdef STUFF_INHERITED_FROM_PLUGTASTIC
 
-static ClassPtr		sPlugtasticClass;
-static ObjectPtr	sPlugtasticObject;
-static SymbolPtr	ps_plugtastic;
+static t_class*		sPlugtasticClass;
+static (t_object*)	sPlugtasticObject;
+static t_symbol*	ps_plugtastic;
 static long			sPlugtasticSplash = 1;
 
 
 typedef struct _plugtastic {
 	Object		obj;
 	long*		openSplash;
-	ObjectPtr	forward;
+	t_object*	forward;
 } t_plugtastic;
 
 

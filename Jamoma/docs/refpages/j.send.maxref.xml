@@ -16,7 +16,10 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			remote
+		</metadata>
+		<metadata name="tag">
+			Jamoma
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -25,16 +28,16 @@
 			<digest>
 			</digest>
 			<description>
-				TEXT_HERE
+				Value to send
 			</description>
 		</inlet>
-		<inlet id="1" type="INLET_TYPE">
+		<!-- <inlet id="1" type="INLET_TYPE">
 			<digest>
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</inlet>
+		</inlet> -->
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
@@ -42,7 +45,7 @@
 			<digest>
 			</digest>
 			<description>
-				TEXT_HERE
+				Absolute address of the target node
 			</description>
 		</outlet>
 	</outletlist>
@@ -50,10 +53,10 @@
 	<objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
-				TEXT_HERE
+				Target node
 			</digest>
 			<description>
-				TEXT_HERE
+				Address of the target node (ie. parameter)
 			</description>
 		</objarg>
 	</objarglist>
@@ -62,10 +65,10 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="int">
@@ -73,10 +76,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="float">
@@ -84,10 +87,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="list">
@@ -95,10 +98,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="anything">
@@ -106,10 +109,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 		<method name="address">
@@ -117,10 +120,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Target node address
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'address' followed by an absolute or relative address set the target address
 			</description>
 		</method>
 		<method name="dump">
@@ -128,10 +131,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump object attributes value
 			</description>
 		</method>
 		<method name="symbol">
@@ -139,10 +142,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</digest>
 			<description>
-				TEXT_HERE
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 	</methodlist>
@@ -150,10 +153,10 @@
 	<attributelist>
 		<attribute name="address" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Target node address
 			</digest>
 			<description>
-				TEXT_HERE
+				The message 'address' followed by an absolute or relative address set the target address
 			</description>
 		</attribute>
 	</attributelist>
@@ -163,8 +166,14 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.remote">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.receive">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="send">
+			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
 </c74object>

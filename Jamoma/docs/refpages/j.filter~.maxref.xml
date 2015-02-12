@@ -18,9 +18,12 @@
 		<metadata name="tag">
 			filter
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
-	<!-- <inletlist>
+	<inletlist>
 		<inlet id="0" type="signal">
 			<digest>
 				input 1, control messages
@@ -56,7 +59,7 @@
 	</inletlist> -->
 	<!--OUTLETS-->
 	<outletlist>
-		<!-- <outlet id="0" type="signal">
+		<outlet id="0" type="signal">
 			<digest>
 				Filtered output 1
 			</digest>
@@ -174,9 +177,9 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.filter≈"/>
-		<seealso name="equalizer~.model"
-		<seealso name="biquad~"
-		<seealso name="filtergraph~">
+		<seealso name="j.filter="/>
+		<seealso name="equalizer~.model"/>
+		<seealso name="biquad~"/>
+		<seealso name="filtergraph~"/>
 	</seealsolist>
 </c74object>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
+ <application author="jamoma team" version="v1" name="remoteOSCApp" type="proxy">
+  <!--"an audio playback model"-->
+  <player object="Container" service="model" priority="0">
+   <!--"play the soundfile"-->
+   <play object="Data" service="parameter" type="boolean" rangeBounds="0 1" priority="1" />
+   <!--"audio level"-->
+   <gain object="Data" service="parameter" type="decimal" dataspace="gain" dataspaceUnit="dB" rampDrive="external" rangeBounds="-100. 12." rangeClipmode="both" priority="0" valueStepsize="0.100000" valueDefault="0.000000" />
+   <!--"end of soundfile"-->
+   <end object="Data" service="return" type="none" />
+  </player>
+  <!--"a filter model"-->
+  <filter object="Container" service="model" priority="0">
+   <!--"filter type"-->
+   <type object="Data" service="parameter" type="string" priority="1" />
+   <!--"frequency of the filter"-->
+   <frequency object="Data" service="parameter" type="decimal" dataspace="frequency" dataspaceUnit="Hz" rampDrive="Max" rangeBounds="0. 22050." rangeClipmode="low" priority="0" valueStepsize="0.100000" valueDefault="0.000000" />
+  </filter>
+ </application>
+</jamoma>

@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.route" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		A routing object with some advanced features
 	</digest>
 	<description>
-		TEXT_HERE
+		A routing object with some advanced features
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,10 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			route
+		</metadata>
+		<metadata name="tag">
+			Jamoma
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -26,17 +29,17 @@
 				Input
 			</digest>
 			<description>
-				TEXT_HERE
+				Input
 			</description>
 		</inlet>
-		<inlet id="1" type="INLET_TYPE">
+		<!-- <inlet id="1" type="INLET_TYPE">
 			<digest>
 				Input
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</inlet>
+		</inlet> -->
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
@@ -45,7 +48,7 @@
 				Matching Output
 			</digest>
 			<description>
-				TEXT_HERE
+				Output for message matching the string defined in searchstring attribute
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
@@ -53,7 +56,7 @@
 				Unmatching Output
 			</digest>
 			<description>
-				TEXT_HERE
+				Output for message unmatching the string defined in searchstring attribute
 			</description>
 		</outlet>
 		<outlet id="2" type="OUTLET_TYPE">
@@ -61,12 +64,12 @@
 				Dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dumpout
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
-	<objarglist>
+	<!-- <objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -75,16 +78,16 @@
 				TEXT_HERE
 			</description>
 		</objarg>
-	</objarglist>
+	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="bang">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Value input
 			</digest>
 			<description>
-				TEXT_HERE
+				Value input	
 			</description>
 		</method>
 		<method name="list">
@@ -92,10 +95,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value input
 			</digest>
 			<description>
-				TEXT_HERE
+				Value input
 			</description>
 		</method>
 		<method name="anything">
@@ -103,10 +106,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Value input
 			</digest>
 			<description>
-				TEXT_HERE
+				Value input
 			</description>
 		</method>
 	</methodlist>
@@ -114,26 +117,26 @@
 	<attributelist>
 		<attribute name="partialmatch" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable or disable partial match
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable or disable partial match. When enabled, input message partially matching the searchstring attribute will pass
 			</description>
 		</attribute>
 		<attribute name="searchpositions" get="1" set="1" type="int" size="100">
 			<digest>
-				TEXT_HERE
+				Set position in input list to test
 			</digest>
 			<description>
-				TEXT_HERE
+				Set position in input list to test
 			</description>
 		</attribute>
 		<attribute name="searchstring" get="1" set="1" type="symbol" size="100">
 			<digest>
-				TEXT_HERE
+				String to search within the input messages
 			</digest>
 			<description>
-				TEXT_HERE
+				String to search within the input messages
 			</description>
 		</attribute>
 	</attributelist>
@@ -143,8 +146,11 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="route">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="regexp">
+			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
 </c74object>

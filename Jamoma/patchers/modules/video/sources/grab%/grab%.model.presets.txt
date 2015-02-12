@@ -1,0 +1,11 @@
+
+
+- preset "default"
+# "edit a comment"
+data/active 1
+data/bypass 0
+framemotor 1
+framemotor/fps 25
+dim 640 480
+output_texture 0
+status open

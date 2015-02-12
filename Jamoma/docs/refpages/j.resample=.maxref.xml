@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.resample=" module="" category="Jamoma">
+	<digest>
+		Resample an input signal at a different sample rate or block size
+	</digest>
+	<description>
+		Resample an input signal at a different sample rate or block size
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			audio graph
+		</metadata>
+		<metadata name="tag">
+			multichannel
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+				Multichannel input and control messages
+			</digest>
+			<description>
+				Multichannel input and control messages
+			</description>
+		</inlet>
+		<inlet id="1" type="INLET_TYPE">
+			<digest>
+				Multichannel input 2
+			</digest>
+			<description>
+				Multichannel input 2
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				Multichannel output 1
+			</digest>
+			<description>
+				Multichannel output 1
+			</description>
+		</outlet>
+		<outlet id="1" type="OUTLET_TYPE">
+			<digest>
+				dumpout
+			</digest>
+			<description>
+				dumpout outlet
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<!-- <objarglist>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</objarg>
+	</objarglist> -->
+	<!--MESSAGES-->
+	<methodlist>
+		<!-- 	<method name="audio.connect">
+			<arglist>
+				<arg name="ARG_NAME_0" type="" optional="0" />
+				<arg name="ARG_NAME_1" type="int" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+		<!-- <method name="calculate">
+	<arglist>
+		<arg name="ARG_NAME_0" type="list" optional="0" />
+	</arglist>
+	<digest>
+		TEXT_HERE
+	</digest>
+	<description>
+		TEXT_HERE
+	</description>
+</method> -->
+		<!-- 		<method name="getProcessingBenchmark">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+		<!-- 				<method name="graph.connect">
+			<arglist>
+				<arg name="ARG_NAME_0" type="" optional="0" />
+				<arg name="ARG_NAME_1" type="int" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+		<!-- 						<method name="resetBenchmarking">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+		<!-- 								<method name="test">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+ -->
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="bypass" get="1" set="1" type="int" size="1">
+			<digest>
+				Bypass resampling
+			</digest>
+			<description>
+				Bypass resampling
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="direction" get="1" set="1" type="symbol" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute>
+		<attribute name="mode" get="1" set="1" type="symbol" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute>
+		<attribute name="mute" get="1" set="1" type="int" size="1">
+			<digest>
+				Mute the resampling
+			</digest>
+			<description>
+				Mute the resampling
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="sampleRate" get="1" set="1" type="int" size="1">
+			<digest>
+				Sampling rate
+			</digest>
+			<description>
+				Sampling rate
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.degrade=">
+		</seealso>
+	</seealsolist>
+</c74object>

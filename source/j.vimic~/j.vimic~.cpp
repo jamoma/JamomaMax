@@ -18,7 +18,7 @@ bool globWarningFlag;
 bool globReportFlag;
 
 /// Setup max class and bind messages to corresponding handlers.
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {   
 	t_class *c;
 	
@@ -90,7 +90,7 @@ void *vimic_new(t_symbol *s, int argc, t_atom *argv)
 {
     long n;
     t_vimic *x = (t_vimic*)object_alloc(vimic_class);
-    if(x){
+    if (x) {
 		x->numOfSources = 1;	
 		x->numOfChannels = 8;	
 		x->reflOrder = 2;
@@ -103,12 +103,12 @@ void *vimic_new(t_symbol *s, int argc, t_atom *argv)
 		x->minSensi = 0.0;		
 		x->distModel = 1;	
 		
-		if(argc){
-			if(argv[0].a_w.w_long > 0 && argv[0].a_w.w_long <= Properties::MAXNUMCHANNELS)
+		if (argc) {
+			if (argv[0].a_w.w_long > 0 && argv[0].a_w.w_long <= Properties::MAXNUMCHANNELS)
 				x->numOfChannels = (int) argv[0].a_w.w_long;
 			else if (globWarningFlag) 
 				post("requested number of channels could not be set. Set to default of 8 instead");
-        /*if(argv[1].a_w.w_long >= 0 && argv[1].a_w.w_long <= Properties::REFLECTIONORDER)
+        /*if (argv[1].a_w.w_long >= 0 && argv[1].a_w.w_long <= Properties::REFLECTIONORDER)
             x->maxReflOrder = (int) argv[1].a_w.w_long;
         else if (globWarningFlag) 
             post("requested reflection order could not be set. Set to default of 1 instead");*/
@@ -177,7 +177,7 @@ void *vimic_new(t_symbol *s, int argc, t_atom *argv)
 		if ((x->currentSensitivity= (double *) getbytes((short) x->bufSz * sizeof(double))) == NULL)
 			exit(EXIT_FAILURE);
 
-		for(n = 0; n < x->bufSz; n++){
+		for (n = 0; n < x->bufSz; n++) {
 			x->currentDelay[n] = 0.0;
 			x->delay[n] = 0.0;
 			x->sensitivity[n] = 0.0;
@@ -187,7 +187,7 @@ void *vimic_new(t_symbol *s, int argc, t_atom *argv)
 		}    
 		x->grainCounter = 0;
 
-		for(n = 0; n < x->numOfChannels; n++)
+		for (n = 0; n < x->numOfChannels; n++)
 			outlet_new((t_pxobject *)x, "signal");
 
 		x->room->renderMirrors();
@@ -217,7 +217,7 @@ void vimic_sourcePosAbs(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
 {   
     if (argc == 3)
     {
-        if(argv[0].a_type == A_FLOAT) // First variable is x coordinate
+        if (argv[0].a_type == A_FLOAT) // First variable is x coordinate
         {
             x->room->sources[0].xPosAbs(argv[0].a_w.w_float);
 
@@ -240,7 +240,7 @@ void vimic_sourcePos(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
 {
     if (argc == 3)
     {
-        if(argv[0].a_type == A_FLOAT) // First variable is x coordinate
+        if (argv[0].a_type == A_FLOAT) // First variable is x coordinate
         {
             x->room->sources[0].xPosRel(argv[0].a_w.w_float);
 
@@ -265,14 +265,14 @@ void vimic_micPos(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
     switch (argc)
     {
         case 3: 		// All mics
-            if(argv[0].a_type == A_FLOAT) // First variable is x coordinate
+            if (argv[0].a_type == A_FLOAT) // First variable is x coordinate
             {
                 x->room->mics.xPos(argv[0].a_w.w_float);
-                if(argv[1].a_type == A_FLOAT) // Second variable is y coordinate
+                if (argv[1].a_type == A_FLOAT) // Second variable is y coordinate
                 {
                     x->room->mics.yPos(argv[1].a_w.w_float);
 
-                    if(argv[2].a_type == A_FLOAT) // Third variable is z coordinate
+                    if (argv[2].a_type == A_FLOAT) // Third variable is z coordinate
                         x->room->mics.zPos(argv[2].a_w.w_float);
                 }
             }
@@ -366,10 +366,10 @@ void vimic_micGain(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
     switch (argc)
     {
         case 2:
-            if(argv[0].a_type == A_LONG)
+            if (argv[0].a_type == A_LONG)
             {
                 b = argv[0].a_w.w_long;
-                if(argv[1].a_type == A_FLOAT) // one mic with index b=argv[0]
+                if (argv[1].a_type == A_FLOAT) // one mic with index b=argv[0]
                 {
                     if (x->room->mics.validChannel(b))
                         x->room->mics[b - 1].gain(argv[1].a_w.w_float);
@@ -394,7 +394,7 @@ void vimic_roomSize(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
 {  
     if (argc == 3)
     {
-        if(argv[0].a_type == A_FLOAT) // First variable is x coordinate
+        if (argv[0].a_type == A_FLOAT) // First variable is x coordinate
         {
             x->room->width(argv[0].a_w.w_float);
 
@@ -402,7 +402,7 @@ void vimic_roomSize(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
             {
                 x->room->depth(argv[1].a_w.w_float);
 
-                if(argv[2].a_type == A_FLOAT) // Third variable is z coordinate
+                if (argv[2].a_type == A_FLOAT) // Third variable is z coordinate
                     x->room->height(argv[2].a_w.w_float);					
             }
         }
@@ -431,19 +431,19 @@ void vimic_reflGain(t_vimic *x, t_symbol *s, short argc, t_atom *argv) //TODO ch
                     //{
                     x->reflGains[b] = TTClip<float>(argv[1].a_w.w_float,0.0, 8.0);
 					
-					if (x->reflGains[2] > 0.0){
+					if (x->reflGains[2] > 0.0) {
 						x->reflOrder = 2;
 						x->numRefl = Properties::REFLECTIONS_PER_REFLECTION_ORDER[x->reflOrder];
 						x->maxReflOrder = x->reflOrder;						
 						x->maxDynRefl = x->numRefl;						
 					}
-					else if(x->reflGains[1] > 0.0){
+					else if (x->reflGains[1] > 0.0) {
 						x->reflOrder = 1;
 						x->numRefl = Properties::REFLECTIONS_PER_REFLECTION_ORDER[x->reflOrder];
 						x->maxReflOrder = x->reflOrder;						
 						x->maxDynRefl = x->numRefl;						
 					}
-					else{
+					else {
 						x->reflOrder = 0;
 						x->numRefl = Properties::REFLECTIONS_PER_REFLECTION_ORDER[x->reflOrder];
 						x->maxReflOrder = x->reflOrder;						
@@ -472,10 +472,10 @@ void vimic_dirPow(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
     switch (argc)
     {
         case 2:
-            if(argv[0].a_type == A_LONG)
+            if (argv[0].a_type == A_LONG)
             {
                 b = argv[0].a_w.w_long;
-                if(argv[1].a_type == A_LONG) // one mic with index b=argv[0]
+                if (argv[1].a_type == A_LONG) // one mic with index b=argv[0]
                 {
                     if (x->room->mics.validChannel(b))
                         x->room->mics[b - 1].dirPow(argv[1].a_w.w_long);
@@ -502,10 +502,10 @@ void vimic_disPow(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
     switch (argc)
     {   
         case 2:
-            if(argv[0].a_type == A_LONG)
+            if (argv[0].a_type == A_LONG)
             {
                 b = argv[0].a_w.w_long;
-                if(argv[1].a_type == A_FLOAT) // one mic with index b=argv[0]
+                if (argv[1].a_type == A_FLOAT) // one mic with index b=argv[0]
                 {
                     if (x->room->mics.validChannel(b))
                         x->room->mics[b - 1].distPow(argv[1].a_w.w_float);
@@ -534,10 +534,10 @@ void vimic_dbUnit(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
     switch (argc)
     {
         case 2:
-            if(argv[0].a_type == A_LONG)
+            if (argv[0].a_type == A_LONG)
             {
                 b = argv[0].a_w.w_long;
-                if(argv[1].a_type == A_FLOAT) // one mic with index b=argv[0]
+                if (argv[1].a_type == A_FLOAT) // one mic with index b=argv[0]
                 {
                     if (x->room->mics.validChannel(b))
                         x->room->mics[b - 1].dbUnit(argv[1].a_w.w_float);
@@ -642,7 +642,7 @@ void vimic_reportAll(t_vimic *x)
     post("expected speed of sound is %f at %f degrees celsius", x->speedOfSound * x->x_sr, x->temperature);
     x->room->mics.print();
     x->room->print();
-    for(m = 0; m < x->room->mics.numChannels(); m++)
+    for (m = 0; m < x->room->mics.numChannels(); m++)
     {
         for (n = 0; n < x->numRefl; n++)
         {
@@ -663,13 +663,13 @@ void vimic_report(t_vimic *x, long n)
     switch (n) 
     {
         case 0:
-            if (globReportFlag == true){ 
+            if (globReportFlag == true) { 
 				post("Report off"); //this condition prevents postings when the module is initialized.
             }
             globReportFlag = false;
             break;
         case 1:
-            if (globReportFlag == false){
+            if (globReportFlag == false) {
 				post("Report on"); //this condition prevents postings when the module is initialized.
             }
             globReportFlag = true;
@@ -821,7 +821,7 @@ void vimic_xFadeThreshold(t_vimic *x, long n) //fadelength in samples
 
 void vimic_airfilter(t_vimic *x, long n)
 {
-	for (int i = 0; i < x->numOfChannels; i++){
+	for (int i = 0; i < x->numOfChannels; i++) {
 		x->room->air[i][0].cutOff(n);
 		x->room->xfadeAir[i].cutOff(n);
 		x->room->air[i][1].cutOff(n);
@@ -1154,7 +1154,7 @@ void vimic_wallFilter(t_vimic *x, t_symbol *s, short argc, t_atom *argv)
   {
   if (argc == 1)
   {
-  if(argv[0].a_type == A_FLOAT) // First variable is Center Distance coordinate
+  if (argv[0].a_type == A_FLOAT) // First variable is Center Distance coordinate
   x->room->mics.centerDistance(argv[0].a_w.w_float);	// renders all mics
   }
   else if (globWarningFlag)
@@ -1190,7 +1190,7 @@ void vimic_bang(t_vimic *x)
     }
 
 
-    //if(x->reflOrder < 3)
+    //if (x->reflOrder < 3)
     //{   
         //critical_enter(0);
         for (m = 0; m < x->numOfChannels; m++)
@@ -1223,7 +1223,7 @@ void vimic_bang(t_vimic *x)
             //critical_exit(0);
         }
 
-        if (x->normalizeSensiFlag){   
+        if (x->normalizeSensiFlag) {   
 			//critical_enter(0);
             double invSqrtSumSensi = vimic_invSqrtSumSensi(x->sensitivity, x->bufSz);
             for (int i = 0; i < x->bufSz; i++)
@@ -1231,14 +1231,14 @@ void vimic_bang(t_vimic *x)
             //critical_exit(0);
         }
 		        
-		if (x->minimumDelayFlag){
+		if (x->minimumDelayFlag) {
 			double minDelay = vimic_findMinDelayValue(x->delay, x->bufSz);
 			for (int i = 0; i < x->bufSz; i++)
 				vimic_minimizeDelay(x->delay + i, minDelay);
 		}
 		
 		//critical_enter(0);		
-        for (m = 0; m < x->bufSz; m++){
+        for (m = 0; m < x->bufSz; m++) {
 			x->delGrain[m] = ((double) x->delay[m] - x->currentDelay[m]) * x->grainsize;  // copy old values into buffer	 
 #ifndef __INTEL_COMPILER
             TTZeroDenormal(x->delGrain[m]); // FIXME: necessary?
@@ -2555,7 +2555,7 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
                                     a = *(bp + sampPos); 
                                     cminusb = c - b;
 									
-                                    switch (reflNum){
+                                    switch (reflNum) {
                                         case 0:			// sum direct sound with reflections
                                             outs[k][n] = (*(currentSensitivity + reflOrderIndex) * (b + frac * (cminusb - 0.1666667 * (1.0 - frac) 
 																											 * ((d - a - 3.0 * cminusb) * frac + (d + 2.0 * a - 3.0 * b))))) + reflSamps;
@@ -2608,11 +2608,11 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
 						for (int n=0 ; n < sampleframes; n++) {							 
 							reflSamps = 0.0;                   
 							sampPos = n + Properties::DELAYSIZE;
-                            for (int reflNum = numOfRefl - 1; reflNum >= Properties::DIRECT; --reflNum){
+                            for (int reflNum = numOfRefl - 1; reflNum >= Properties::DIRECT; --reflNum) {
 								reflOrderIndex = reflNum + numOfReflTimesK; 
                                 idelay = *(currentDelay + reflOrderIndex) +1.5; //was - 0.5; but I think that we cause a general delay of 2 samples due to the interpolation, so we have to respect that in the static method too, otherwise we will have small jumps of 2 samples back & forth
 								
-                                switch (reflNum){
+                                switch (reflNum) {
                                     case 0:
                                         outs[k][n] = *(currentSensitivity + reflOrderIndex) * *(bp+ sampPos - idelay) + reflSamps; 
                                         break;
@@ -2656,12 +2656,12 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
 	                    numOfReflTimesK = numOfRefl * k;
 						for (int n=0 ; n < sampleframes; n++) {					
 							frontSamps = rearSamps = floorSamps = ceilSamps = reflSamps = filterInputSamp = 0.0;
-                            for (int reflNum = maxDynRefl - 1; reflNum >=  0; --reflNum){ // TM: if x->maxDynRefl is always same as x->numRefl, why is it necessary?                            
+                            for (int reflNum = maxDynRefl - 1; reflNum >=  0; --reflNum) { // TM: if x->maxDynRefl is always same as x->numRefl, why is it necessary?                            
                                 reflOrderIndex = reflNum + numOfReflTimesK;
                                 *(currentDelay + reflOrderIndex) += *(delGrain + reflOrderIndex);	 // TM: Changed
                                 *(currentSensitivity + reflOrderIndex) += *(sensiGrain + reflOrderIndex);
 								
-                                if (*(sensitivity + reflOrderIndex) != 0.0){ 
+                                if (*(sensitivity + reflOrderIndex) != 0.0) { 
                                     idelay = 0.5 + *(currentDelay + reflOrderIndex);
                                     frac = *(currentDelay + reflOrderIndex) - (double) idelay;	// fractional part of delay value
                                     sampPos = Properties::DELAYSIZE - idelay + n;
@@ -2844,11 +2844,11 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
 			}
             else // steady state, non-fractional delay, constant values
             {
-				for (int k = 0; k < numChannels; ++k){
+				for (int k = 0; k < numChannels; ++k) {
 					memset(outs[k], 0, sizeof(double)*sampleframes);
                     if (micGainNonZero[k]) {
 						numOfReflTimesK =  numOfRefl * k;
-						for (int n=0 ; n < sampleframes; n++){
+						for (int n=0 ; n < sampleframes; n++) {
 							frontSamps = rearSamps = floorSamps = ceilSamps = reflSamps = filterInputSamp = 0.0;
                             for (int reflNum = numOfRefl - 1; reflNum >= 0; --reflNum)
                             {   
@@ -3352,7 +3352,7 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
             if (GrainCounter < renderInterval) {
 				for (int k = 0; k < numChannels; k++) {
 					memset(outs[k], 0, sizeof(double)*sampleframes);					
-					if (micGainNonZero[k]){
+					if (micGainNonZero[k]) {
 						reflOrderIndex = numOfRefl * k;
 						for (int n=0 ; n < sampleframes; n++) {
 							*(currentSensitivity + reflOrderIndex) += *(sensiGrain + reflOrderIndex);
@@ -3360,7 +3360,7 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
 						}
 					}				
                 }				
-                for (int reflNum = 0 ; reflNum < numChannels * numOfRefl ; ++reflNum){
+                for (int reflNum = 0 ; reflNum < numChannels * numOfRefl ; ++reflNum) {
 					//We need to update the Sensi and Delay vector so that in case for a new bang, the correct grains can be calculated  
                     x->currentSensitivity[reflNum] = *(currentSensitivity + reflNum);
 				} 
@@ -3368,7 +3368,7 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
             else {
 				for (int k = 0; k < numChannels; k++) {
 					memset(outs[k], 0, sizeof(double)*sampleframes);					
-					if (micGainNonZero[k]){
+					if (micGainNonZero[k]) {
 						reflOrderIndex = numOfRefl * k;						
 						for (int n=0 ; n < sampleframes; n++) {			                        
 							outs[k][n] = *(bp + Properties::DELAYSIZE + n) * *(currentSensitivity + reflOrderIndex);
@@ -3494,7 +3494,7 @@ void vimic_perform64(t_vimic *x, t_object *dsp64, double **ins, long numins, dou
 			
 		case Properties::NONE: // no audio
             bp += sampleframes;
-			for (int k = 0; k < numChannels; k++){
+			for (int k = 0; k < numChannels; k++) {
 				memset(outs[k], 0, sizeof(double) * sampleframes);            
 			}
 			bp += sampleframes;
@@ -3523,7 +3523,7 @@ void vimic_dsp64(t_vimic *x, t_object *dsp64, short *count, double samplerate, l
         x->invSpeedOfSound = 1.0 / x->speedOfSound;
     }	
 
-    if (x->blocksize != (int)maxvectorsize){
+    if (x->blocksize != (int)maxvectorsize) {
 		x->blocksize = (int)maxvectorsize;        
         x->grainsize = 1.0 / (x->blocksize * x->renderInterval);
 	}

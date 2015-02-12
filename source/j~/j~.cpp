@@ -1,12 +1,12 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief jamoma~ : creates an MSP external that is able to wrap any Jamoma class
+ * @brief j~ : creates an MSP external that is able to wrap any Jamoma class
  *
  * @details
  *
- * @authors Tim Place
+ * @authors Tim Place, Trond Lossius
  *
  * @copyright © 2012 by Timothy Place @n
  * This code is licensed under the terms of the "New BSD License" @n
@@ -18,19 +18,19 @@
 #include "TTDSP.h"
 
 // Prototypes for methods
-ObjectPtr	jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv);
-ObjectPtr	wrappedClass_new(SymbolPtr name, AtomCount argc, AtomPtr argv);
+t_object*	jamoma_new(t_symbol *s, long argc, t_atom* argv);
+t_object*	wrappedClass_new(t_symbol *name, long argc, t_atom* argv);
 void		wrappedClass_free(WrappedInstancePtr x);
 
 // Globals
-static ClassPtr		s_jamoma_class;
+static t_class*		s_jamoma_class;
 static t_hashtab*	s_jamoma_class_hash = NULL;
 
 /************************************************************************************/
 // Define a Max class that does essentially nothing but let users type the name into an object box.
 // The class we actually use will be defined in the new method.
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	s_jamoma_class = class_new("j~", (method)jamoma_new, (method)wrappedClass_free, sizeof(WrappedInstance), (method)0L, A_GIMME, 0);
 	class_register(CLASS_BOX, s_jamoma_class);
@@ -45,12 +45,12 @@ int TTCLASSWRAPPERMAX_EXPORT main(void)
 // Then we wrap that class as a Max class.
 // Finally, we proceed to then instantiate the new Max class instead of the jamoma~ Max class.
 
-ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
+t_object* jamoma_new(t_symbol *s, long argc, t_atom* argv)
 {
 	int				attrstart = attr_args_offset(argc, argv);
 	int				i = 0;
 	int				channelCount = 2;
-	SymbolPtr		className = gensym("gain");
+	t_symbol		*className = gensym("gain");
 	WrappedClassPtr	classWrapper = NULL;
 	char			maxClassName[256];
 
@@ -74,7 +74,7 @@ ObjectPtr jamoma_new(SymbolPtr s, AtomCount argc, AtomPtr argv)
 
 	if (!classWrapper) {
 		wrapTTClassAsMaxClass(className->s_name, maxClassName, &classWrapper);
-		hashtab_store(s_jamoma_class_hash, className, ObjectPtr(classWrapper));
+		hashtab_store(s_jamoma_class_hash, className, (t_object*)(classWrapper));
 	}
 
 	return wrappedClass_new(gensym(maxClassName), argc-1, argv+1);

@@ -1,7 +1,7 @@
 /**
  @file
  
- @ingroup implementationMax
+ @ingroup implementationMaxExternals
  
  @brief Compute convex hulls in 2 dimensions.
 

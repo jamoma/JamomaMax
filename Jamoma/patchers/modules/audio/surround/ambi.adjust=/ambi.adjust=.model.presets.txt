@@ -1,0 +1,24 @@
+
+
+- preset "default"
+# "edit a comment"
+l/gain 0.000000
+m/gain 0.000000
+n/gain 0.000000
+v/gain 0.000000
+k/gain 0.000000
+u/gain 0.000000
+r/gain 0.000000
+w/gain 0.000000
+o/gain 0.000000
+p/gain 0.000000
+q/gain 0.000000
+t/gain 0.000000
+x/gain 0.000000
+s/gain 0.000000
+y/gain 0.000000
+z/gain 0.000000
+meter 1
+order 3
+ 
+

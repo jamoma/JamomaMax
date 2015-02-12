@@ -1,0 +1,236 @@
+
+- preset "test1"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName degrade~.model
+modelsIDs degrade~.1 degrade~.2 degrade~.3
+degrade~.3/samplerateRatio 0.724410
+degrade~.1/samplerateRatio 0.496063
+degrade~.2/samplerateRatio 0.000000
+degrade~.3/bitdepth 4
+degrade~.1/bitdepth 14
+degrade~.2/bitdepth 3
+degrade~.3/audio/bypass 1
+degrade~.1/audio/bypass 0
+degrade~.2/audio/bypass 0
+degrade~.1/audio/gain 100.000000
+degrade~.2/audio/gain 100.000000
+degrade~.3/audio/gain 65.000000
+degrade~.3/audio/mix 42.000000
+degrade~.1/audio/mix 100.000000
+degrade~.2/audio/mix 100.000000
+degrade~.3/audio/mute 0
+degrade~.1/audio/mute 0
+degrade~.2/audio/mute 0
+# 
+# ###########################################
+
+- preset "test2"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName degrade~.model
+modelsIDs degrade~.1 degrade~.2 degrade~.3 degrade~.4 degrade~.5 degrade~.6 degrade~.7
+degrade~.3/samplerateRatio 0.724410
+degrade~.1/samplerateRatio 0.496063
+degrade~.2/samplerateRatio 0.000000
+degrade~.5/samplerateRatio 1.000000
+degrade~.7/samplerateRatio 0.755906
+degrade~.4/samplerateRatio 1.000000
+degrade~.6/samplerateRatio 1.000000
+degrade~.3/bitdepth 4
+degrade~.1/bitdepth 14
+degrade~.2/bitdepth 3
+degrade~.5/bitdepth 10
+degrade~.7/bitdepth 3
+degrade~.4/bitdepth 24
+degrade~.6/bitdepth 24
+degrade~.3/audio/bypass 1
+degrade~.5/audio/bypass 1
+degrade~.7/audio/bypass 1
+degrade~.1/audio/bypass 0
+degrade~.2/audio/bypass 0
+degrade~.6/audio/bypass 0
+degrade~.4/audio/bypass 0
+degrade~.1/audio/gain 100.000000
+degrade~.7/audio/gain 0.000000
+degrade~.2/audio/gain 100.000000
+degrade~.6/audio/gain 100.000000
+degrade~.3/audio/gain 65.000000
+degrade~.5/audio/gain 100.000000
+degrade~.4/audio/gain 100.000000
+degrade~.3/audio/mix 42.000000
+degrade~.1/audio/mix 100.000000
+degrade~.7/audio/mix 100.000000
+degrade~.2/audio/mix 100.000000
+degrade~.6/audio/mix 100.000000
+degrade~.5/audio/mix 0.000000
+degrade~.4/audio/mix 100.000000
+degrade~.3/audio/mute 0
+degrade~.7/audio/mute 1
+degrade~.1/audio/mute 0
+degrade~.2/audio/mute 0
+degrade~.6/audio/mute 0
+degrade~.5/audio/mute 0
+degrade~.4/audio/mute 1
+# 
+# ###########################################
+
+- preset "delay~ test"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName delay~.model
+modelsIDs delay~.1 delay~.2 delay~.3 delay~.4
+delay~.1/delay/maxSize 999841
+delay~.2/delay/maxSize 500
+delay~.4/delay/maxSize 999987
+delay~.3/delay/maxSize 1000000
+delay~.3/audio/bypass 1
+delay~.2/audio/bypass 0
+delay~.1/audio/bypass 0
+delay~.4/audio/bypass 0
+delay~.3/audio/gain 100.000000
+delay~.2/audio/gain 100.000000
+delay~.1/audio/gain 100.000000
+delay~.4/audio/gain 100.000000
+delay~.1/delay/left 24
+delay~.4/delay/left 5
+delay~.3/delay/left 57
+delay~.2/delay/left 3
+delay~.3/audio/mix 100.000000
+delay~.2/audio/mix 73.000000
+delay~.1/audio/mix 100.000000
+delay~.4/audio/mix 16.000000
+delay~.3/audio/mute 0
+delay~.2/audio/mute 1
+delay~.1/audio/mute 0
+delay~.4/audio/mute 1
+delay~.4/delay/right 9
+delay~.1/delay/right 16
+delay~.3/delay/right 156
+delay~.2/delay/right 22
+# 
+
+- preset "mapper test1"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName mapper.model
+modelsIDs mapper.1 mapper.2 mapper.3 mapper.4
+mapper.4/function linear
+mapper.2/function power
+mapper.3/function linear
+mapper.1/function freehand
+mapper.3/function/parameters.1 none
+mapper.1/function/parameters.1 curveList 0.000000 0.000000 exponential base 1.000000 0.119028 0.242611 exponential base 1.000000 0.445222 0.139163 exponential base 0.057630 0.613262 0.678571 exponential base 0.114113 0.810956 0.533251 exponential base 12.070166 1.000000 1.000000 exponential base 1.000000
+mapper.2/function/parameters.1 powerValue -1.000000
+mapper.4/function/parameters.1 none
+mapper.2/function/parameters.2 symmetry none
+mapper.2/output/going.up/action.1 none
+mapper.3/output/going.up/action.1 none
+mapper.1/input/going.down/action.1 none
+mapper.3/input/going.down/action.1 none
+mapper.4/input/going.up/action.1 none
+mapper.1/output/going.down/action.1 none
+mapper.2/input/going.down/action.1 none
+mapper.2/input/going.up/action.1 none
+mapper.3/input/going.up/action.1 none
+mapper.3/output/going.down/action.1 none
+mapper.4/input/going.down/action.1 none
+mapper.2/output/going.down/action.1 none
+mapper.4/output/going.down/action.1 none
+mapper.1/input/going.up/action.1 none
+mapper.1/output/going.up/action.1 none
+mapper.4/output/going.up/action.1 none
+mapper.1/output/going.down/action.2 none
+mapper.4/output/going.up/action.2 none
+mapper.1/input/going.down/action.2 none
+mapper.1/input/going.up/action.2 none
+mapper.2/output/going.up/action.2 none
+mapper.2/input/going.down/action.2 none
+mapper.2/input/going.up/action.2 none
+mapper.1/output/going.up/action.2 none
+mapper.3/output/going.down/action.2 none
+mapper.4/input/going.up/action.2 none
+mapper.3/input/going.down/action.2 none
+mapper.2/output/going.down/action.2 none
+mapper.4/input/going.down/action.2 none
+mapper.3/input/going.up/action.2 none
+mapper.4/output/going.down/action.2 none
+mapper.3/output/going.up/action.2 none
+mapper.2/output/going.up/action.3 none
+mapper.3/input/going.down/action.3 none
+mapper.1/input/going.up/action.3 none
+mapper.4/output/going.down/action.3 none
+mapper.4/output/going.up/action.3 none
+mapper.2/input/going.down/action.3 none
+mapper.3/output/going.down/action.3 none
+mapper.2/input/going.up/action.3 none
+mapper.1/output/going.up/action.3 none
+mapper.1/input/going.down/action.3 none
+mapper.4/input/going.up/action.3 none
+mapper.1/output/going.down/action.3 none
+mapper.3/input/going.up/action.3 none
+mapper.2/output/going.down/action.3 none
+mapper.4/input/going.down/action.3 none
+mapper.3/output/going.up/action.3 none
+mapper.2/data/active 1
+mapper.3/data/active 1
+mapper.4/data/active 1
+mapper.1/data/active 1
+mapper.2/data/bypass 0
+mapper.3/data/bypass 0
+mapper.4/data/bypass 0
+mapper.1/data/bypass 0
+mapper.4/input/index 0
+mapper.2/input/index 0
+mapper.1/input/index 0
+mapper.3/input/index 0
+mapper.4/input /mouse/delta/angle
+mapper.1/input /mouse/position/y
+mapper.3/input /mouse/button
+mapper.2/input /mouse/position/x
+mapper.4/output/max 100.000000
+mapper.4/input/max 3.140000
+mapper.2/output/max 24
+mapper.1/input/max 1.000000
+mapper.3/output/max 100.000000
+mapper.3/input/max 1.000000
+mapper.1/output/max 1.000000
+mapper.2/input/max 1.000000
+mapper.4/input/min -3.140000
+mapper.2/input/min 0.000000
+mapper.3/output/min 0.000000
+mapper.4/output/min 0.000000
+mapper.2/output/min 1
+mapper.3/input/min 0
+mapper.1/output/min 0.000000
+mapper.1/input/min 0.000000
+mapper.2/output /degrade~/bitdepth
+mapper.4/output /degrade~/audio/mix
+mapper.3/output /degrade~/audio/gain
+mapper.1/output /degrade~/samplerateRatio
+mapper.4/rampTime 0
+mapper.1/rampTime 0
+mapper.2/rampTime 0
+mapper.3/rampTime 1001
+mapper.2/input/threshold.down 0.000000
+mapper.4/output/threshold.down 0.000000
+mapper.1/input/threshold.down 0.000000
+mapper.1/output/threshold.down 0.000000
+mapper.3/input/threshold.down 0.000000
+mapper.4/input/threshold.down 0.000000
+mapper.2/output/threshold.down 1.000000
+mapper.3/output/threshold.down 0.000000
+mapper.2/input/threshold.up 1.000000
+mapper.1/input/threshold.up 1.000000
+mapper.3/input/threshold.up 1.000000
+mapper.4/output/threshold.up 1.000000
+mapper.4/input/threshold.up 1.000000
+mapper.2/output/threshold.up 1.000000
+mapper.1/output/threshold.up 1.000000
+mapper.3/output/threshold.up 1.000000
+# 
+# ###########################################

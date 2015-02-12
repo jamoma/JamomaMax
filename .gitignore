@@ -42,3 +42,11 @@ project.xcworkspace
 *.dll
 
 *.mxo
+*.sdf
+*.vcxproj
+
+JamomaMaxVersion.h
+
+# théo needs to hide a j.leapmotion external (which is based on Jamoma script support so it is placed into the Implementation/Max folder on his machine)
+source/j.leapmotion/
+

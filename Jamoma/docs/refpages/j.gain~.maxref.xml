@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			gain
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<!-- <inletlist>
@@ -113,7 +116,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.gain≈"/>
+		<seealso name="j.gain="/>
 		<seealso name="gain~"/>
 	</seealsolist>
 </c74object>

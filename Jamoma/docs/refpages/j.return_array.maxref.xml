@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.parameter_array" module="" category="Jamoma">
+	<digest>
+		Declare an array of output nodes in the Jamoma namespace
+	</digest>
+	<description>
+		Declare an output node in the Jamoma namespace
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			mvc
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+				set the value of the selected instance(s)
+			</digest>
+			<description>
+				Value to propagate in Jamoma namespace
+			</description>
+		</inlet>
+		<inlet id="1" type="INLET_TYPE">
+			<digest>
+				index (use * to bind all instances)
+			</digest>
+			<description>
+				index (use * to bind all instances)
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				direct: values
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				Node name array
+			</digest>
+			<description>
+				Node name array
+			</description>
+		</objarg>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="bang">
+			<arglist />
+			<digest>
+				Value to output
+			</digest>
+			<description>
+				Value to output
+			</description>
+		</method>
+		<method name="int">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				Value to output
+			</digest>
+			<description>
+				Value to output
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="ARG_NAME_0" type="float" optional="0" />
+			</arglist>
+			<digest>
+				Value to output
+			</digest>
+			<description>
+				Value to output
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Value to output
+			</digest>
+			<description>
+				Value to output
+			</description>
+		</method>
+		<method name="anything">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Value to output
+			</digest>
+			<description>
+				Value to output
+			</description>
+		</method>
+		<method name="+">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Increment and output last received value
+			</digest>
+			<description>
+				Increment and output last received value
+			</description>
+		</method>
+		<method name="-">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Decrement and output last received value
+			</digest>
+			<description>
+				Decrement and output last received value
+			</description>
+		</method>
+		<method name="address">
+			<arglist>
+				<arg name="ARG_NAME_0" type="symbol" optional="0" />
+			</arglist>
+			<digest>
+				Nodes array addresses
+			</digest>
+			<description>
+				Nodes array addresses
+			</description>
+		</method>
+		<method name="array">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Dispatch list of values to instance of the return_array
+			</digest>
+			<description>
+				Dispatch list of values to instance of the return_array
+			</description>
+		</method>
+		<method name="array/select">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Set value of a particular address
+			</digest>
+			<description>
+				Set value of a particular address
+			</description>
+		</method>
+		<method name="array/resize">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				Change the size of the array of nodes
+			</digest>
+			<description>
+				Change the size of the array of nodes
+			</description>
+		</method>
+		<method name="dec">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Decrement and output last received value
+			</digest>
+			<description>
+				Decrement and output last received value
+			</description>
+		</method>
+		<method name="dump">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Dump return_array attributes value
+			</digest>
+			<description>
+				Dump return_array attributes value
+			</description>
+		</method>
+		<method name="inc">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Increment and output last received value
+			</digest>
+			<description>
+				Increment and output last received value
+			</description>
+		</method>
+		<method name="init">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Reset the selected j.return instances to their default state
+			</digest>
+			<description>
+				Reset the selected j.return instances to their default state
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="active" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable or disable returns array
+			</digest>
+			<description>
+				Enable or disable returns array
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Dataspace of the returns
+			</digest>
+			<description>
+				Dataspace of the returns (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
+			</description>
+		</attribute>
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Dataspace unit of the return
+			</digest>
+			<description>
+				Dataspace unit of the return
+			</description>
+		</attribute>
+		<attribute name="description" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Node description
+			</digest>
+			<description>
+				Node description
+			</description>
+		</attribute>
+		<attribute name="format" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Values output format
+			</digest>
+			<description>
+				Specify whether parameters values will be output one by one or all as a list
+			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
+					<enumlist>
+						<enum name="single">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+						<enum name="array">
+							<digest>
+								TEXT_HERE
+							</digest>
+							<description>
+								TEXT_HERE
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+			</attributelist>
+		</attribute>
+		<attribute name="priority" get="1" set="1" type="int" size="1">
+			<digest>
+				Priorities of the returns
+			</digest>
+			<description>
+				Priorities of the returns
+			</description>
+		</attribute>
+		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set the scheduler driving the ramp
+			</digest>
+			<description>
+				Set the scheduler driving the ramp: none, max
+			</description>
+		</attribute>
+		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Function to be used for ramping
+			</digest>
+			<description>
+				Function to be used for ramping (cosine, crossFadeIn, crossFadeOut, exponential, freehand, linear, logarithm, lowpass, power, smoothPolynomial, tanh, bartlett, blackman, blackmanHarris, expodec, gauss, hamming, hanning, kaiser, nuttall, rectangular, rosenbergGlottalPulse, trapezoid, tukey, welch)
+			</description>
+		</attribute>
+		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
+			<digest>
+				Parameters of the selected function used for ramping
+			</digest>
+			<description>
+				Parameters of the selected function used for ramping
+			</description>
+		</attribute>
+		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
+			<digest>
+				Ramp status
+			</digest>
+			<description>
+				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
+			</description>
+		</attribute>
+		<attribute name="range" get="1" set="1" type="atom" size="1">
+			<digest>
+				value range
+			</digest>
+			<description>
+				value range
+			</description>
+		</attribute>
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set how values exceeding range will be clipped
+			</digest>
+			<description>
+				Set how values exceeding range will be clipped (none, low, high, wrap, fold)
+			</description>
+		</attribute>
+		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
+			<digest>
+				Filtering of value repetitions
+			</digest>
+			<description>
+				Set whether to filter out value repetitions or not
+			</description>
+		</attribute>
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
+			<digest>
+				Some tags associated to the parameter
+			</digest>
+			<description>
+				Some tags associated to the parameter
+			</description>
+		</attribute>
+		<attribute name="type" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Type of the parameter value
+			</digest>
+			<description>
+				Type of the parameter value
+			</description>
+		</attribute>
+		<attribute name="value" get="1" set="1" type="int" size="1">
+			<digest>
+				Last returns value
+			</digest>
+			<description>
+				Last returns value
+			</description>
+		</attribute>
+		<!-- <attribute name="default" get="1" set="1" type="int" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
+			<digest>
+				Size of the incrementation/decrementation
+			</digest>
+			<description>
+				Size the j.parameter's value will be incremented/decremented
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.return">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+	</seealsolist>
+</c74object>

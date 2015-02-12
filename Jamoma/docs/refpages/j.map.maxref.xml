@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			scale
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
@@ -70,7 +73,7 @@
 	<methodlist>
 		<method name="int">
 			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
+				<arg name="input value" type="int" optional="0" />
 			</arglist>
 			<digest>
 				Value to be mapped
@@ -81,7 +84,7 @@
 		</method>
 		<method name="float">
 			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
+				<arg name="input value" type="float" optional="0" />
 			</arglist>
 			<digest>
 				Value to be mapped
@@ -92,7 +95,7 @@
 		</method>
 		<method name="list">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="input value" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Values to be mapped
@@ -103,7 +106,7 @@
 		</method>
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="input value" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Value to be mapped			
@@ -114,13 +117,13 @@
 		</method>
 		<method name="dump">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="Dump" type="list" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Dump j.map's current state
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump j.map's current state
 			</description>
 		</method>
 		<method name="reset">
@@ -137,13 +140,24 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable j.map
 			</digest>
 			<description>
-				TEXT_HERE
+				Enable j.map mapping
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="clipmode" get="1" set="1" type="int" size="1">
+			<digest>
+				Clipmode for values exceeding the specified range
+			</digest>
+			<description>
+				How to deal with values outside the specified range
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="none low high both" />
 			</attributelist>
 		</attribute>
 		<attribute name="function" get="1" set="1" type="symbol" size="1">
@@ -184,6 +198,14 @@
 			</digest>
 			<description>
 				Address of a j.parameter or j.return to be used for mapping to another j.parameter or j.message
+			</description>
+		</attribute>
+		<attribute name="input/index" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Pick an item from source parameter
+			</digest>
+			<description>
+				Pick an item from source parameter, if it is of type array (default 0 = all)
 			</description>
 		</attribute>
 		<attribute name="input/max" get="1" set="1" type="float" size="1">

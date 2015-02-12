@@ -1,18 +1,20 @@
-/** 
- * \file j.push.cpp
- * Simple physical modelling: Push an object about within a confined space.
- * Can be used for e.g. trajectories.
+/** @file
  *
- * Previously named tl.push
- * By Trond Lossius, Copyright 2011
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.push : Simple physical modelling: Push an object about within a confined space.
+ *
+ * @details Can be used for e.g. trajectories.
+ *
+ * @authors Trond Lossius
+ *
+ * @copyright © 2011 by Trond Lossius @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
-	
 
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 #include "TTDSP.h"	// use the Jamoma DSP clipping functions
 
 
@@ -226,7 +228,7 @@ void push_bang(t_push *x)
 	float position, velocity, vicinity, repel;
 	float rangeLow, rangeHigh;
 	t_atom *a = NULL;
-	a = (AtomPtr)sysmem_newptr(sizeof(Atom) * x->attrDimensions);
+	a = (t_atom*)sysmem_newptr(sizeof(Atom) * x->attrDimensions);
 	
 	for (i=0; i<x->attrDimensions; i++) {
 		// Determine range

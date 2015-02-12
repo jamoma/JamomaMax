@@ -1,0 +1,5 @@
+- preset "default"
+  audio/bypass 0
+  audio/gain 100.000000
+  audio/mix 100.000000
+  audio/mute 0

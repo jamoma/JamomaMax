@@ -1,0 +1,145 @@
+var ns = {
+  "Grapholine": {
+    "appName": "Grapholine",
+    "appVersion": "0.1",
+    "creatorName": "fr.blueyeti",
+      "rotation2": {
+        "type": "integer",
+        "valueDefault": "0",
+        "rangeBounds": "0 1",
+        "valueStepsize": "0.01",
+        "description": "rotation",
+        "readonly": "0"
+      },
+      "mine": {
+        "type": "integer",
+        "valueDefault": "1",
+        "rangeBounds": "0 8",
+        "valueStepsize": "1",
+        "description": "mine",
+        "readonly": "0"
+      },
+      "cat1" : {
+        "palette": {
+          "type": "integer",
+          "valueDefault": "1",
+          "rangeBounds": "0 192",
+          "valueStepsize": "1",
+          "description": "palette",
+          "readonly": "0"
+        },
+        "rotation": {
+          "type": "integer",
+          "valueDefault": "0",
+          "rangeBounds": "0 1",
+          "valueStepsize": "0.01",
+          "description": "rotation",
+          "readonly": "0"
+        }
+      },"cat2" : {
+        "palette": {
+          "type": "integer",
+          "valueDefault": "1",
+          "rangeBounds": "0 192",
+          "valueStepsize": "1",
+          "description": "palette",
+          "readonly": "0"
+        },
+        "rotation": {
+          "type": "integer",
+          "valueDefault": "0",
+          "rangeBounds": "0 1",
+          "valueStepsize": "0.01",
+          "description": "rotation",
+          "readonly": "0"
+        }
+      },"cat3" : {
+        "palette": {
+          "type": "integer",
+          "valueDefault": "1",
+          "rangeBounds": "0 192",
+          "valueStepsize": "1",
+          "description": "palette",
+          "readonly": "0"
+        },
+        "rotation": {
+          "type": "integer",
+          "valueDefault": "0",
+          "rangeBounds": "0 1",
+          "valueStepsize": "0.01",
+          "description": "rotation",
+          "readonly": "0"
+        },"cat4" : {
+        "palette": {
+          "type": "integer",
+          "valueDefault": "1",
+          "rangeBounds": "0 192",
+          "valueStepsize": "1",
+          "description": "palette",
+          "readonly": "0"
+        },
+        "rotation": {
+          "type": "integer",
+          "valueDefault": "0",
+          "rangeBounds": "0 1",
+          "valueStepsize": "0.01",
+          "description": "rotation",
+          "readonly": "0"
+        }
+      }
+      },"cat5" : {
+        "palette": {
+          "type": "integer",
+          "valueDefault": "1",
+          "rangeBounds": "0 192",
+          "valueStepsize": "1",
+          "description": "palette",
+          "readonly": "0"
+        },
+        "rotation": {
+          "type": "integer",
+          "valueDefault": "0",
+          "rangeBounds": "0 1",
+          "valueStepsize": "0.01",
+          "description": "rotation",
+          "readonly": "0"
+        }
+      },
+      "alpha": {
+        "type": "integer",
+        "valueDefault": "1",
+        "rangeBounds": "0 1",
+        "valueStepsize": "0.01",
+        "description": "alpha",
+        "readonly": "0"
+      },
+      "size": {
+        "type": "integer",
+        "valueDefault": "0",
+        "rangeBounds": "0 1",
+        "valueStepsize": "0.01",
+        "description": "size",
+        "readonly": "0"
+      },
+      "lum": {
+        "type": "integer",
+        "valueDefault": "1",
+        "rangeBounds": "0 1",
+        "valueStepsize": "0.01",
+        "description": "luminosité",
+        "readonly": "0"
+      },
+      "autorot": {
+        "type": "boolean",
+        "valueDefault": "0",
+        "description": "autorot",
+        "readonly": "0"
+      },
+      "rec": {
+        "type": "boolean",
+        "valueDefault": "0",
+        "description": "record",
+        "readonly": "0"
+      }
+    }
+}

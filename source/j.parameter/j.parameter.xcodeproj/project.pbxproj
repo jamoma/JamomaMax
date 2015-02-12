@@ -9,6 +9,8 @@
 /* Begin PBXFileReference section */
 		4604196A175F43F00005BCF6 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		4604196B175F43F00005BCF6 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		461B799B1A2E3F370091FD86 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		469BD9EF180B569900A023B3 /* j.parameter.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.parameter.yml; sourceTree = "<group>"; };
 		D289EADC150F62E200FC7F7E /* j.parameter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.parameter.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -16,6 +18,8 @@
 		08FB7794FE84155DC02AAC07 /* j.parameter */ = {
 			isa = PBXGroup;
 			children = (
+				469BD9EF180B569900A023B3 /* j.parameter.yml */,
+				461B799B1A2E3F370091FD86 /* Makefile */,
 				D289EADC150F62E200FC7F7E /* j.parameter.cpp */,
 				4604196B175F43F00005BCF6 /* TTModularClassWrapperMax.h */,
 				4604196A175F43F00005BCF6 /* TTModularClassWrapperMax.cpp */,
@@ -45,7 +49,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.parameter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -96,7 +100,6 @@
 		1DEB919408733D9F0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -107,7 +110,6 @@
 		1DEB919508733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;

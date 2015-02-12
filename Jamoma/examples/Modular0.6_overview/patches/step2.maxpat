@@ -3,12 +3,12 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 6,
-			"minor" : 0,
-			"revision" : 8
+			"minor" : 1,
+			"revision" : 7,
+			"architecture" : "x86"
 		}
 ,
 		"rect" : [ 308.0, 44.0, 1005.0, 476.0 ],
-		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -172,7 +172,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 577.0, 56.0, 111.0, 18.0 ],
-					"text" : "repetitions/allow $1",
+					"text" : "repetitions/filter $1",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -187,7 +187,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 599.0, 18.0, 228.0, 33.0 ],
+					"patching_rect" : [ 494.5, 121.0, 228.0, 33.0 ],
 					"text" : "If you click on inlet of a jcom external you'll see all his attributes and messages"
 				}
 
@@ -233,7 +233,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 591.0, 77.0, 97.0, 18.0 ],
-					"text" : "repetitions/allow",
+					"text" : "repetitions/filter",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -246,7 +246,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 577.0, 19.0, 20.0, 20.0 ]
+					"patching_rect" : [ 577.0, 36.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -308,7 +308,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 763.0, 152.0, 225.0, 60.0 ],
-					"text" : "j.parameter rate @type decimal @range/bounds -2. 2. @value/default 1. @description \"movie playback rate\" @ramp/drive Max"
+					"text" : "j.parameter rate @type decimal @range -2. 2. @default 1. @description \"movie playback rate\" @ramp/drive max"
 				}
 
 			}
@@ -321,7 +321,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 507.0, 121.0, 35.0, 20.0 ],
+					"patching_rect" : [ 506.5, 77.0, 35.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 28.0, 30.0, 35.0, 20.0 ],
 					"text" : "play"
@@ -423,7 +423,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 484.0, 121.0, 20.0, 20.0 ],
+					"patching_rect" : [ 483.5, 77.0, 20.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 8.0, 30.0, 20.0, 20.0 ]
 				}
@@ -584,8 +584,8 @@
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 484.0, 413.0, 178.0, 33.0 ],
 					"text" : "j.return fps @type decimal @description \"current fps\""
 				}
@@ -886,7 +886,7 @@
 					"destination" : [ "obj-38", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 586.5, 147.5, 493.5, 147.5 ],
+					"midpoints" : [ 586.5, 118.5, 493.5, 118.5 ],
 					"source" : [ "obj-39", 0 ]
 				}
 
@@ -943,7 +943,7 @@
 					"destination" : [ "obj-38", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 600.5, 147.0, 493.5, 147.0 ],
+					"midpoints" : [ 600.5, 117.0, 493.5, 117.0 ],
 					"source" : [ "obj-45", 0 ]
 				}
 
@@ -1037,7 +1037,7 @@
 					"destination" : [ "obj-38", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 615.5, 147.5, 493.5, 147.5 ],
+					"midpoints" : [ 615.5, 118.5, 493.5, 118.5 ],
 					"source" : [ "obj-8", 0 ]
 				}
 

@@ -16,7 +16,6 @@ includes:
 
 libraries:
   - FOUNDATION
-  - MODULAR  
   - C74
 
 prefix: ../c74support/max-includes/macho-prefix.pch

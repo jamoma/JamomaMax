@@ -1,0 +1,54 @@
+#################################
+- preset "default"
+# "edit a comment"
+#################################
+
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+mode FastMode
+position 1.000000
+shape EqualPowerFade
+ 
+
+#################################
+- preset "left"
+# "edit a comment"
+#################################
+
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+mode FastMode
+position 1.000000
+shape EqualPowerFade
+ 
+
+#################################
+- preset "right"
+# "edit a comment"
+#################################
+
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+mode FastMode
+position 2.000000
+shape EqualPowerFade
+ 
+
+#################################
+- preset "50-50"
+# "edit a comment"
+#################################
+
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+mode FastMode
+position 1.500000
+shape EqualPowerFade

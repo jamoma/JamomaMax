@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.6'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset name='default'>
+    <command address="random/stepSize">0.2</command>
+    <command address="random/mode">random</command>
+    <command address="interpolate">1</command>
+    <command address="interpolate/stepSize">0.05</command>
+  </preset>
+</jamoma>

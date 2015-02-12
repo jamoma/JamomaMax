@@ -131,7 +131,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.thru.maxpat",
+				"name" : "thru.maxpat",
 				"type" : "JSON",
 				"implicit" : 1
 			}

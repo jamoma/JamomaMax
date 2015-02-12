@@ -1,0 +1,186 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+cache_mode vertexarray
+dim 20 20
+gridmode 0
+rad_minor 0.250000
+shape sphere
+GL/context default
+GL/alpha 1.000000
+GL/anchor 0.000000 0.000000 0.000000
+GL/anim UID
+GL/antialias 0
+GL/automatic 1
+GL/aux_alpha 1.000000
+GL/aux_color 1.000000 1.000000 1.000000
+GL/axes 0
+GL/color 1.000000 1.000000 1.000000
+GL/cull_face 0
+GL/enable 1
+GL/filterclass default
+GL/inherit_all 0
+GL/inherit_texture 0
+GL/layer 0
+GL/line_width 1.000000
+GL/matrixoutput 0
+GL/point_size 1.000000
+GL/poly_mode 0 0
+GL/position 0.000000 0.000000 0.000000
+GL/rotate 0.000000 0.000000 0.000000 1.000000
+GL/scale 1.000000 1.000000 1.000000
+GL/shader none
+GL/smooth_shading 0
+GL/tex_map 0
+GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+GL/texture none
+GL/transform_reset 0
+GL/viewalign 0
+GL/blend/enable 0
+GL/blend/mode 6 7
+GL/color/inherit 0
+GL/depth/clear 0
+GL/depth/enable 1
+GL/depth/inherit 0
+GL/depth/write 1
+GL/fog/amount 0.000000
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+GL/light/enable 0
+GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+GL/material/automatic 1
+GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+GL/material/emission 0.000000 0.000000 0.000000 0.000000
+GL/material/inherit 0
+GL/material/matfile none
+GL/material/name none
+GL/material/shininess 10.000000
+GL/material/specular 0.000000 0.000000 0.000000 0.000000
+# 
+
+- preset "EnlightedSphere"
+- description "something about this preset"
+# ###########################################
+# 
+cache_mode vertexarray
+dim 20 20
+gridmode 0
+rad_minor 0.250000
+shape sphere
+GL/context default
+GL/alpha 1.000000
+GL/anchor 0.000000 0.000000 0.000000
+GL/anim UID
+GL/antialias 0
+GL/automatic 1
+GL/aux_alpha 1.000000
+GL/aux_color 1.000000 1.000000 1.000000
+GL/axes 0
+GL/color 1.000000 1.000000 1.000000
+GL/cull_face 0
+GL/enable 1
+GL/filterclass default
+GL/inherit_all 0
+GL/inherit_texture 0
+GL/layer 0
+GL/line_width 1.000000
+GL/matrixoutput 0
+GL/point_size 1.000000
+GL/poly_mode 0 0
+GL/position 0.000000 0.000000 0.000000
+GL/rotate 0.000000 0.000000 0.000000 1.000000
+GL/scale 0.500000 0.500000 0.500000
+GL/shader none
+GL/smooth_shading 0
+GL/tex_map 0
+GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+GL/texture none
+GL/transform_reset 0
+GL/viewalign 0
+GL/blend/enable 1
+GL/blend/mode 6 7
+GL/color/inherit 0
+GL/depth/clear 0
+GL/depth/enable 1
+GL/depth/inherit 0
+GL/depth/write 1
+GL/fog/amount 0.000000
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+GL/light/enable 1
+GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+GL/material/automatic 1
+GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+GL/material/emission 0.000000 0.000000 0.000000 0.000000
+GL/material/inherit 0
+GL/material/matfile none
+GL/material/name none
+GL/material/shininess 10.000000
+GL/material/specular 0.000000 0.000000 0.000000 0.000000
+# 
+# ###########################################
+
+- preset "Lozenge of love"
+- description "something about this preset"
+# ###########################################
+# 
+cache_mode vertexarray
+dim 19.000000 23.000000
+displaylist 1
+gridmode 0
+rad_minor 0.250000
+shape plane
+GL/context default
+GL/alpha 1.000000
+GL/anchor 0.000000 0.000000 0.000000
+GL/anim UID
+GL/antialias 0
+GL/automatic 1
+GL/aux_alpha 1.000000
+GL/aux_color 1.000000 1.000000 1.000000
+GL/axes 0
+GL/color 1.000000 0.680000 1.000000
+GL/cull_face 0
+GL/enable 1
+GL/filterclass default
+GL/inherit_all 0
+GL/inherit_texture 0
+GL/layer 0
+GL/line_width 1.000000
+GL/matrixoutput 0
+GL/point_size 1.000000
+GL/poly_mode 0 0
+GL/position 0.000000 0.000000 0.000000
+GL/rotate 45.000000 0.000000 0.000000 1.000000
+GL/scale 0.500000 0.500000 0.500000
+GL/shader none
+GL/smooth_shading 0
+GL/tex_map 0
+GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+GL/texture none
+GL/transform_reset 0
+GL/viewalign 0
+GL/blend/enable 0
+GL/blend/mode 6 7
+GL/color/inherit 0
+GL/depth/clear 0
+GL/depth/enable 0
+GL/depth/inherit 0
+GL/depth/write 1
+GL/fog/amount 0.000000
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+GL/light/enable 0
+GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+GL/material/automatic 1
+GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+GL/material/emission 0.000000 0.000000 0.000000 0.000000
+GL/material/inherit 0
+GL/material/matfile none
+GL/material/name none
+GL/material/shininess 10.000000
+GL/material/specular 0.000000 0.000000 0.000000 0.000000
+# 
+# ###########################################

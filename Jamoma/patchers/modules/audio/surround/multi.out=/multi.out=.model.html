@@ -1,0 +1,410 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+<title> jmod.sur.multi.out~ </title>
+<style type="text/css">
+body {	margin: 0px;	font-family: Arial, Helvetica, sans-serif;}h1 {	font-size: 24px;	font-weight:100;	padding-top: 1em;	margin: 0;}h2 {	font-size: 18px;	font-weight:200;	margin: 0;	color: #555;	text-transform: lowercase;}h3 {	color: #888;	border-bottom: 1px solid #333;	font-size: 18px;	font-weight:100;	margin-top: 20px;	margin-bottom: 10px;	margin-left: 2%;	margin-right: 2%;}h4{	color: #333;	font-size: 14px;	font-weight: bold;	margin-bottom: 0px;	margin-left: 2%;	margin-right: 2%;}h6 {	font-size: 12px;	font-weight:100;	line-height: 1.2;	margin-right: 2%;	margin-left: 2%;}p {	font-size: 12px;	font-weight:100;	margin: 5px 2%;	padding-bottom: 1em;}ul{	margin-top:0;	padding-top:0;}li {	font-size: 12px;	font-weight:100;	margin-top: 0;	margin-left: 10px;	padding: 0em 0em 0.3em;}img {	padding: 10px 10px 0px 0px;}#jmod_header{	display: block;	margin: 0 0 40px 0;}#jmod_header img{	float: left;}.objectname {	font-size: 24px;	font-weight: bold;}.moduleName {	font-size: 2em;	background-color: #c5c5c5;	text-align: right;	vertical-align: top;	font-weight: bold;}.moduleDescription {	font-size: 1em;	background-color: #000000;	color: #c5c5c5;	text-align: right;	vertical-align: top;}.tableHeading2 {	background-color: #eee;	text-align: left;	vertical-align: top;	font-weight:bold;	font-size: 12px;}table {	border: 0px;	width: 96%;	margin-top: 10px;	margin-bottom: 10px;	margin-left: 2%;	font-size: 14px;}
+.instructionName {	font-family: 'Courier New', Courier, mono;	background-color: #edd;	vertical-align: top;}.instructionType {	font-family: 'Times New Roman', Times, serif;	background-color: #eee;	vertical-align: top;}.instructionDataspace {	font-family: 'Times New Roman', Times, serif;	background-color: #eed;	vertical-align: top;}.instructionDataspaceUnit {font-family: 'Times New Roman', Times, serif;background-color: #eee;vertical-align: top; } .instructionRangeBounds {	font-family: 'Times New Roman', Times, serif;	background-color: #eed;	vertical-align: top;}.instructionRangeClipmode {	font-family: 'Times New Roman', Times, serif;	background-color: #eee;	vertical-align: top;}.instructionRampDrive {	font-family: 'Times New Roman', Times, serif;	background-color: #eed;	vertical-align: top;}.instructionRampFunction {	font-family: 'Times New Roman', Times, serif;	background-color: #eee;	vertical-align: top;}.instructionRepetitionsFilter {	font-family: 'Times New Roman', Times, serif;	background-color: #eed;	vertical-align: top;}.instructionEnable {	font-family: 'Times New Roman', Times, serif;	background-color: #eee;	vertical-align: top;}.instructionDescription {	font-family: 'Times New Roman', Times, serif;	background-color: #eee;	vertical-align: top;}td {	padding-right: 5px;	padding-left: 5px;}ul {	list-style-type: disc;}.patchimage {	clear: both;}.comment {	color: #6666FF;}.smallTable {	width: 400px;	border: none;}caption {	font-size: 11px;	font-style: italic;}.filepath {	font-family: 'Courier New', Courier, mono;}.instruction {	font-family: 'Courier New', Courier, mono;}
+</style>
+	</head>
+
+<body>
+	<div id="jmod_header">
+	<img src="../../../documentation/graphics/jmodular.icon.png" onError="this.src='../images/jmodular.icon.png';" width="128" height="128">
+	<h1> jmod.sur.multi.out~ </h1>
+	<h2> Unpack up to 32 mono signals from a multicable. </h2>
+	<h6><a href="../../../documentation/html/index.html">Table of Contents</a> | <a href="../../../documentation/html/modules.html">Index of Modules</a> | <a href="../../../documentation/html/credits.html">Credits</a> | <a href="http://pledgie.com/campaigns/5615">Donate</a> | <a href="http://www.jamoma.org/">Jamoma.org</a></h6>
+	</div>
+
+	<h3> Configuration </h3>
+	<p> Module Type: <code> control </code> <br>
+	Algorithm Type: <code> default </code> </p>
+	<p>Interface Size: <code> 300x35 pixels </code> </p>
+	<p>Number of signal inlets: <code> 0 </code> <br/>
+Number of signal outlets: <code> 0 </code> </p>
+	<h3> Parameters </h3>
+	<table>
+		<tr class="tableHeading2">
+			<td> /name </td>
+			<td> /type </td>
+			<td> /range </td>
+			<td> /clipmode </td>
+			<td> /ramp/drive </td>
+			<td> /ramp/function </td>
+			<td> /dataspace </td>
+			<td> /unit </td>
+			<td> /repetitions/filter </td>
+			<td> /description </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> channel_offset </td>
+			<td class ="instructionType"> integer </td>
+			<td class ="instructionRangeBounds"> 0 64 </td>
+			<td class ="instructionRangeClipmode"> low </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Set channel offset for signals. Only take effect the next time audio is started. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/freeze </td>
+			<td class ="instructionType"> boolean </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Turn off the updating of user interface elements when parameters change.  This may be done to conserve CPU resources. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/highlight </td>
+			<td class ="instructionType"> string </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Highlight the module with a color tint such as red, green, or similar. </td>
+		<tr>
+	</table>
+
+	<p>&nbsp;</p>
+
+	<h3> Messages </h3>
+	<table>
+		<tr class="tableHeading2">
+			<td> /name </td>
+			<td> /type </td>
+			<td> /range </td>
+			<td> /clipmode </td>
+			<td> /ramp/drive </td>
+			<td> /ramp/function </td>
+			<td> /dataspace </td>
+			<td> /unit </td>
+			<td> /repetitions/filter </td>
+			<td> /description </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> documentation/generate </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Generate a html documentation page for this module and save it to disk. The argument 'tex' creates a Latex document. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> init </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Initialize a module completely to the original state. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/clear </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Clears all presets, providing a blank slate for saving new presets. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/copy </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Create a new preset (2nd argument) by copying the contents of another preset (1st argument) </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/default </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Open the default preset file and recall the first preset in that file. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/dump </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Dump all preset names. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/interpolate </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Interpolate between two named presets (argument 1 and 2) using a ratio (float in the range [0.0, 1.0]) specified as the third argument. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/mix </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Mix list of pairs of (preset name, mix value) using a ratio (float). </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/post </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Post all presets to the Max window. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/read </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Open an xml-preset file and recall the first preset in that file.  An optional argument defines the file to open. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/recall </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Recall a preset by number - you can also choose presets from the module menu. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/store </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Store a preset by number in memory.  All presets present in memory will be written to disk when you send a /preset/write message to the module. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/storecurrent </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Store on the last recalled or stored preset </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/storenext </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Store a preset in the next preset slot.  Handy so that you do not need to specify a preset number manually. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/write </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Write an xml-preset file to disk.  An optional argument defines the file to open. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> preset/writeagain </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Write on same xml-preset file. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/color/border </td>
+			<td class ="instructionType"> decimalArray </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> both </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> The border color of the module in the format RGBA where values range. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/color/contentBackground </td>
+			<td class ="instructionType"> decimalArray </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> both </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> The background color of the module in the format RGBA where values range. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/color/toolbarBackground </td>
+			<td class ="instructionType"> decimalArray </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> both </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> The background color of the module's toolbar in the format RGBA where values range. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/color/toolbarText </td>
+			<td class ="instructionType"> decimalArray </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> both </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> The color of the module's toolbar text in the format RGBA where values range. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/internals </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Attempts to open the internal algorithm for viewing.  This works for most modules.  Some modules may choose to cloak the algorithms - preventing this message from functioning. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/refresh </td>
+			<td class ="instructionType"> none </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Update displayed values for module to reflect current state. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/script </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> Low-level module hacking.  Any arguments arguments to this message will be interpreted as patcher scripting for the top-level patcher of the module. </td>
+		<tr>
+		<tr>
+			<td class="instructionName"> view/size </td>
+			<td class ="instructionType"> generic </td>
+			<td class ="instructionRangeBounds"> 0 1 </td>
+			<td class ="instructionRangeClipmode"> none </td>
+			<td class ="instructionRampDrive"> none </td>
+			<td class ="instructionRampFunction"> linear </td>
+			<td class ="instructionDataspace"> none </td>
+			<td class ="instructionDataspaceUnit"> none </td>
+			<td class ="instructionRepetitionsFilter"> 1 </td>
+			<td class ="instructionDescription"> The size of the module's UI: [Width Height] </td>
+		<tr>
+	</table>
+
+	<p>&nbsp;</p>
+
+	<h3> Return </h3>
+	<table>
+		<tr class="tableHeading2">
+			<td> /name </td>
+			<td> /type </td>
+			<td> /range </td>
+			<td> /clipmode </td>
+			<td> /ramp/drive </td>
+			<td> /ramp/function </td>
+			<td> /dataspace </td>
+			<td> /unit </td>
+			<td> /repetitions/filter </td>
+			<td> /enable </td>
+			<td> /description </td>
+		<tr>
+	</table>
+
+	<p>&nbsp;</p>
+
+	<h3> About Jamoma </h3>
+	<p> Jamoma is a system for creating and exchanging structured Max patches. 
+	It consists of both a set of guidelines and an implementation of those guidelines. 
+	For more information please visit <a href="http://jamoma.org/">jamoma.org</a>. </p> 
+</body>
+</html>

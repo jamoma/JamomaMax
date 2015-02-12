@@ -1,0 +1,62 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+GL/context default
+data/active 1
+GL/alpha 1.000000
+GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+GL/fog/amount 0.000000
+GL/anchor 0.000000 0.000000 0.000000
+GL/anim UID
+GL/antialias 0
+GL/material/automatic 1
+GL/automatic 1
+GL/aux_alpha 1.000000
+GL/aux_color 1.000000 1.000000 1.000000
+GL/axes 0
+brightness 1.000000
+data/bypass 0
+GL/depth/clear 0
+GL/color 1.000000 1.000000 1.000000
+contrast 1.000000
+GL/cull_face 0
+GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+GL/material/emission 0.000000 0.000000 0.000000 0.000000
+GL/blend/enable 0
+GL/light/enable 0
+GL/depth/enable 1
+GL/enable 1
+GL/filterclass default
+GL/depth/inherit 0
+GL/material/inherit 0
+GL/color/inherit 0
+GL/inherit_all 0
+GL/inherit_texture 0
+GL/layer 0
+GL/line_width 1.000000
+GL/material/matfile none
+GL/matrixoutput 0
+GL/blend/mode 6 7
+GL/material/name none
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+GL/point_size 1.000000
+GL/poly_mode 0 0
+GL/position 0.000000 0.000000 0.000000
+GL/rotate 0.000000 0.000000 0.000000 1.000000
+saturation 1.000000
+GL/scale 1.000000 1.000000 1.000000
+GL/shader none
+GL/material/shininess 10.000000
+GL/smooth_shading 0
+GL/material/specular 0.000000 0.000000 0.000000 0.000000
+GL/tex_map 0
+GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+GL/texture none
+GL/transform_reset 0
+GL/viewalign 0
+GL/depth/write 1
+# 
+# ###########################################

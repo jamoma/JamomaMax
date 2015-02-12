@@ -1,13 +1,20 @@
-/**
- * \file j.stats.cpp
- * External for Jamoma: calculate running statistical values
- * By Trond Lossius, Copyright � 2001-06
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.stats : Calculate running statistical values
+ *
+ * @details
+ *
+ * @authors Trond Lossius, Nils Peters
+ *
+ * @copyright © 2001-06 by Trond Lossius @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+
+#include "JamomaForMax.h"
 
 typedef struct _stats{			// Data structure for this object 
 	struct	object ob;			// Must always be the first field; used by Max

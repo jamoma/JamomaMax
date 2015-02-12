@@ -1,13 +1,21 @@
-/* 
- * j.ui
- * External for Jamoma: provide standard user interface component for modules
- * By Tim Place, Copyright © 2007
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.ui : Provide standard user interface component for modules
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2007 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
+
 #include "j.ui.h"
+#include "TTUiInfo.h"
 
 // class variables
 static t_class		*s_ui_class = NULL;
@@ -41,6 +49,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	
 	jamoma_init();
 	common_symbols_init();
+    
+    TTUiInfo::registerClass();
 	
 	c = class_new("j.ui",
 				  (method)ui_new,
@@ -64,21 +74,12 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_mouseleave,						"mouseleave",						A_CANT, 0);
 	class_addmethod(c, (method)ui_oksize,							"oksize",							A_CANT, 0);
     
-    class_addmethod(c, (method)ui_edit,                             "dblclick",                         A_CANT, 0);
+    class_addmethod(c, (method)ui_edit_state,                       "dblclick",                         A_CANT, 0);
     class_addmethod(c, (method)ui_edclose,                          "edclose",                          A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_modelParamExplorer_callback,		"return_modelParamExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelMessExplorer_callback,		"return_modelMessExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelRetExplorer_callback,		"return_modelRetExploration",		A_CANT, 0);
-	
-	class_addmethod(c, (method)ui_view_panel_return,				"return_view_panel",				A_CANT, 0);
-	
-	class_addmethod(c, (method)ui_return_color_contentBackground,	"return_color_contentBackground",	A_CANT, 0);
-	class_addmethod(c, (method)ui_return_color_toolbarBackground,	"return_color_toolbarBackground",	A_CANT, 0);
-	class_addmethod(c, (method)ui_return_color_toolbarText,			"return_color_toolbarText",			A_CANT, 0);
-	class_addmethod(c, (method)ui_return_color_border,				"return_color_border",				A_CANT, 0);
-	class_addmethod(c, (method)ui_return_ui_size,					"return_ui_size",					A_CANT, 0);
-	class_addmethod(c, (method)ui_return_ui_freeze,					"return_ui_freeze",					A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_model_address,				"return_model_address",				A_CANT, 0);
 	
@@ -86,43 +87,44 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
     
     class_addmethod(c, (method)ui_return_model_content,             "return_model_content",             A_CANT, 0);
 	
-	class_addmethod(c, (method)ui_return_metersdefeated,			"return_metersdefeated",			A_CANT, 0);
 	class_addmethod(c, (method)ui_return_mute,						"return_mute",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_bypass,					"return_bypass",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_mix,						"return_mix",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_gain,						"return_gain",						A_CANT, 0);
 	class_addmethod(c, (method)ui_return_freeze,					"return_freeze",					A_CANT, 0);
-	class_addmethod(c, (method)ui_return_preview,					"return_preview",					A_CANT, 0);
+	class_addmethod(c, (method)ui_return_active,					"return_active",					A_CANT, 0);
 	class_addmethod(c, (method)ui_return_preset_names,				"return_preset_names",				A_CANT, 0);
 	
-	class_addmethod(c, (method)ui_return_signal,					"return_signal",					A_CANT, 0);
+	CLASS_ATTR_DEFAULT(c,                                           "patching_rect",            0,      "0. 0. 300. 70.");
+	CLASS_ATTR_DEFAULT(c,					                        "fontname",                 0,      JAMOMA_DEFAULT_FONT);
+	CLASS_ATTR_DEFAULT(c,					                        "fontsize",                 0,      "11");
 	
-	CLASS_ATTR_DEFAULT(c,					"patching_rect",	0, "0. 0. 300. 70.");
-	CLASS_ATTR_DEFAULT(c,					"fontname",			0, JAMOMA_DEFAULT_FONT);
-	CLASS_ATTR_DEFAULT(c,					"fontsize",			0, "11");
+	CLASS_STICKY_ATTR(c,					                        "category",                 0,      "Color");
 	
-	CLASS_STICKY_ATTR(c,					"category",			0, "Color");
+	CLASS_ATTR_RGBA(c,						                        "bgcolor",                  0,      t_ui,	bgcolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "bgcolor",                  0,      "0.93 0.93 0.93 1.0");
+	CLASS_ATTR_STYLE(c,						                        "bgcolor",                  0,      "rgba");
 	
-	CLASS_ATTR_RGBA(c,						"bgcolor",			0,	t_ui,	bgcolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"bgcolor",			0,	"0.93 0.93 0.93 1.0");
-	CLASS_ATTR_STYLE(c,						"bgcolor",			0,	"rgba");
+	CLASS_ATTR_RGBA(c,						                        "bordercolor",              0,      t_ui,	bordercolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "bordercolor",              0,      "0.6 0.6 0.6 1.0");
+	CLASS_ATTR_STYLE(c,						                        "bordercolor",              0,      "rgba");
 	
-	CLASS_ATTR_RGBA(c,						"bordercolor",		0,	t_ui,	bordercolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"bordercolor",		0,	"0.6 0.6 0.6 1.0");
-	CLASS_ATTR_STYLE(c,						"bordercolor",		0,	"rgba");
+	CLASS_ATTR_RGBA(c,						                        "headercolor",              0,      t_ui,	headercolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "headercolor",              0,      "0.82 0.82 0.82 1.0");
+	CLASS_ATTR_STYLE(c,						                        "headercolor",              0,      "rgba");
 	
-	CLASS_ATTR_RGBA(c,						"headercolor",		0,	t_ui,	headercolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"headercolor",		0,	"0.82 0.82 0.82 1.0");
-	CLASS_ATTR_STYLE(c,						"headercolor",		0,	"rgba");
+	CLASS_ATTR_RGBA(c,						                        "textcolor",                0,      t_ui,	textcolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "textcolor",                0,      "0. 0. 0. 1.0");
+	CLASS_ATTR_STYLE(c,						                        "textcolor",                0,      "rgba");
+    
+    CLASS_ATTR_RGBA(c,						                        "highlightcolor",           0,      t_ui,	highlightcolor);
+	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	                        "highlightcolor",           0,      "0. 0. 0. 1.0");
+	CLASS_ATTR_STYLE(c,						                        "highlightcolor",           0,      "rgba");
 	
-	CLASS_ATTR_RGBA(c,						"textcolor",		0,	t_ui,	textcolor);
-	CLASS_ATTR_DEFAULTNAME_SAVE_PAINT(c,	"textcolor",		0,	"0. 0. 0. 1.0");
-	CLASS_ATTR_STYLE(c,						"textcolor",		0,	"rgba");
+	CLASS_STICKY_ATTR_CLEAR(c,				                        "category");
+	CLASS_STICKY_ATTR(c,					                        "category",                 0,      "Jamoma");
 	
-	CLASS_STICKY_ATTR_CLEAR(c,				"category");
-	CLASS_STICKY_ATTR(c,					"category",			0, "Jamoma");
-	
-	CLASS_STICKY_ATTR_CLEAR(c,				"category");
+	CLASS_STICKY_ATTR_CLEAR(c,				                        "category");
 	
 	class_register(CLASS_BOX, c);
 	s_ui_class = c;
@@ -139,7 +141,8 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 	if (!(d=object_dictionaryarg(argc, argv)))
 		return NULL;	
 	
-	if (x = (t_ui*)object_alloc(s_ui_class)) {
+    x = (t_ui*)object_alloc(s_ui_class);
+	if (x) {
 		flags = 0 
 		| JBOX_DRAWFIRSTIN
 		| JBOX_NODRAWBOX
@@ -155,9 +158,10 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->box.b_firstin = (t_object *)x;
 		
 		// Make two outlets
-		x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
+		x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 1);
 		x->outlets[panel_out] = outlet_new(x, NULL);						// outlet to open panel
-		x->outlets[preview_out] = outlet_new(x, NULL);						// outlet to output preview signal
+
+        x->uiInfo = NULL;
 		
 		x->menu_items = NULL;
 		x->refmenu_items = NULL;
@@ -182,8 +186,8 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
         x->patcherClass = kTTSymEmpty;
         x->patcherName = kTTSymEmpty;
 		
+        x->highlight = false;
 		x->hover = false;
-		x->selectAll = false;
 		
 		x->has_preset = false;
 		x->has_model = false;
@@ -192,40 +196,39 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		x->has_gain = false;
 		x->has_bypass = false;
 		x->has_mix = false;
-		x->has_preview = false;
+		x->has_active = false;
 		x->has_freeze = false;
 		
-		x->sel_mute = true;
-		x->sel_gain = true;
-		x->sel_bypass = true;
-		x->sel_mix = true;
-		x->sel_preview = true;
-		x->sel_freeze = true;
-		
-		x->modelOutput = NULL;
-		x->previewSignal = NULL;
+		x->highlight_mute = false;
+		x->highlight_gain = false;
+		x->highlight_bypass = false;
+		x->highlight_mix = false;
+		x->highlight_active = false;
+		x->highlight_freeze = false;
         
         x->text = NULL;
         x->textEditor = NULL;
         x->textHandler = NULL;
         x->state = NULL;
-		
+        
+        x->patcher_panel = NULL;
+        
 		attr_dictionary_process(x, d); 	// handle attribute args
 		
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)ui_data_create_all, NULL, 0, 0);
+		defer_low((t_object*)x, (method)ui_register_info, NULL, 0, 0);
 		
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)ui_build, NULL, 0, 0);
-		
-		// The following must be deferred because we have to interrogate our box,
+		defer_low((t_object*)x, (method)ui_build, NULL, 0, 0);
+        
+        // The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((ObjectPtr)x, (method)ui_view_panel_attach, NULL, 0, 0);
+		defer_low((t_object*)x, (method)ui_view_panel_attach, NULL, 0, 0);
 	}
 	return x;
 }
@@ -242,26 +245,13 @@ void ui_free(t_ui *x)
 	x->refmenu_qelem = NULL;
 	object_free(x->refmenu_items);
 	
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->uiSubscriber));
-    
-    if (x->textHandler)
-        TTObjectBaseRelease(TTObjectBaseHandle(&x->textHandler));
-    
-    if (x->state)
-        TTObjectBaseRelease(TTObjectBaseHandle(&x->state));
+    if (x->preset_names)
+		sysmem_freeptr(x->preset_names);
 	
-	if (x->previewSignal && x->modelOutput) {
-		if (x->modelOutput->valid) {
-			TTAttributePtr	anAttribute = NULL;
-			x->modelOutput->findAttribute(TTSymbol("signal"), &anAttribute);
-			anAttribute->unregisterObserverForNotifications(*(x->previewSignal));
-			TTObjectBaseRelease(TTObjectBaseHandle(&x->previewSignal));
-		}
-	}
-	
-	ui_data_destroy_all(x);
+    ui_receiver_destroy_all(x);
+    
+	ui_unregister_info(x);
 	ui_viewer_destroy_all(x);
-	ui_receiver_destroy_all(x);
 }
 
 
@@ -287,14 +277,14 @@ t_max_err ui_notify(t_ui *x, t_symbol *s, t_symbol *msg, void *sender, void *dat
 	return jbox_notify((t_jbox*)x, s, msg, sender, data);
 }
 
-void ui_subscribe(t_ui *x, SymbolPtr address)
+void ui_subscribe(t_ui *x, t_symbol *address)
 {
-	TTAddress adrs = TTAddress(address->s_name);
+	TTAddress       adrs = TTAddress(address->s_name);
 	TTValue			v, args;
 	TTAttributePtr	anAttribute;
-	TTObjectBasePtr	aReceiver;
+	TTObject        aReceiver;
 	TTErr			err;
-
+    
 	if ((x->modelAddress == kTTAdrsEmpty && adrs != kTTAdrsEmpty) || adrs != x->modelAddress) {
 		
 		x->modelAddress = adrs;
@@ -309,74 +299,63 @@ void ui_subscribe(t_ui *x, SymbolPtr address)
 		x->has_gain = false;
 		x->has_bypass = false;
 		x->has_mix = false;
-		x->has_preview = false;
+		x->has_active = false;
 		x->has_freeze = false;
-		
-		// reset output object and preview signal
-		if (x->previewSignal && x->modelOutput) {
-			if (x->modelOutput->valid) {
-				err = x->modelOutput->findAttribute(kTTSym_signal, &anAttribute);
-				if (!err) {
-					anAttribute->unregisterObserverForNotifications(*(x->previewSignal));
-					TTObjectBaseRelease(TTObjectBaseHandle(&x->previewSignal));
-					x->previewSignal = NULL;
-				}
-			}
-		}
-		x->modelOutput = NULL;
+        
+        if (x->preset_names) {
+            sysmem_freeptr(x->preset_names);
+            x->preset_names = NULL;
+        }
 		
         if (x->hash_receivers->lookup(kTTSym_initialized, v))
             
             // observe model initialisation to explore (the method also get the value)
-            ui_receiver_create(x, &aReceiver, gensym("return_model_init"), kTTSym_initialized, x->modelAddress, NO, YES);
+            ui_receiver_create(x, aReceiver, gensym("return_model_init"), kTTSym_initialized, x->modelAddress, NO, YES);
         
         else {
             
             // update the model address and get the initialized state
             aReceiver = v[0];
-            
-            aReceiver->setAttributeValue(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
-            aReceiver->sendMessage(kTTSym_Get);
+            aReceiver.set(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
         }
         
         // create internal TTPreset to handle model's state
-        if (!x->state)
-            TTObjectBaseInstantiate(kTTSym_Preset, TTObjectBaseHandle(&x->state), args);
+        if (!x->state.valid()) {
+            x->state = TTObject(kTTSym_Preset);
+            x->state.set(kTTSym_Flatten, YES);
+        }
         
         // create internal TTTextHandler to edit model's state via the Max text editor
-        if (!x->textHandler) {
-            
-            TTObjectBaseInstantiate(kTTSym_TextHandler, TTObjectBaseHandle(&x->textHandler), args);
-            
-            args = TTValue(x->state);
-            x->textHandler->setAttributeValue(kTTSym_object, args);
+        if (!x->textHandler.valid()) {
+            x->textHandler = TTObject(kTTSym_TextHandler);
+            x->textHandler.set(kTTSym_object, x->state);
         }
         
         // set the model address
-        x->state->setAttributeValue(kTTSym_address, x->modelAddress);
+        x->state.set(kTTSym_address, x->modelAddress);
 	}
 	
 	// The following must be deferred because 
 	// we have to wait each component of the model are registered
-	defer_low((ObjectPtr)x, (method)ui_build, NULL, 0, 0);
+	defer_low((t_object*)x, (method)ui_build, NULL, 0, 0);
 }
 
 void ui_build(t_ui *x)
 {
 	TTValue			v, n, p, args;
-	SymbolPtr		hierarchy, moduleHierarchy;
-	ObjectPtr		box, textfield;
-    ObjectPtr       modulePatcher, moduleBox;
+	t_symbol		*hierarchy, *moduleHierarchy;
+	t_object        *box, *textfield;
+    t_object        *modulePatcher, *moduleBox;
 	t_rect			boxRect;
 	t_rect			uiRect;
 	
 	// Examine the context to resize the view, set textfield, ...
     
-    x->patcherPtr = jamoma_patcher_get((ObjectPtr)x);
+    x->patcherPtr = jamoma_patcher_get((t_object*)x);
 	hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
 	
 	box = object_attr_getobj(x->patcherPtr, gensym("box"));
-	object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
+	object_attr_get_rect((t_object*)x, _sym_presentation_rect, &uiRect);
 	
 	if (hierarchy == _sym_bpatcher) {
         
@@ -398,15 +377,19 @@ void ui_build(t_ui *x)
         
         if (moduleHierarchy == _sym_bpatcher) {
             
-            // resize the module bpatcher
-            object_attr_get_rect(moduleBox, _sym_patching_rect, &boxRect);
-            boxRect.width = uiRect.width;
-            boxRect.height = uiRect.height;
-            object_attr_set_rect(moduleBox, _sym_patching_rect, &boxRect);
-            object_attr_get_rect(moduleBox, _sym_presentation_rect, &boxRect);
-            boxRect.width = uiRect.width;
-            boxRect.height = uiRect.height;
-            object_attr_set_rect(moduleBox, _sym_presentation_rect, &boxRect);
+            // is there no j.ui object inside the module bpatcher
+            if (!jamoma_patcher_get_ui(modulePatcher)) {
+                
+                // resize the module bpatcher
+                object_attr_get_rect(moduleBox, _sym_patching_rect, &boxRect);
+                boxRect.width = uiRect.width;
+                boxRect.height = uiRect.height;
+                object_attr_set_rect(moduleBox, _sym_patching_rect, &boxRect);
+                object_attr_get_rect(moduleBox, _sym_presentation_rect, &boxRect);
+                boxRect.width = uiRect.width;
+                boxRect.height = uiRect.height;
+                object_attr_set_rect(moduleBox, _sym_presentation_rect, &boxRect);
+            }
         }
 	}
 	else if (hierarchy == _sym_subpatcher) {
@@ -438,20 +421,20 @@ void ui_build(t_ui *x)
 	jbox_redraw(&x->box);
 }
 
-ObjectPtr ui_get_model_object(t_ui *x)
+t_object *ui_get_model_object(t_ui *x)
 {
     TTNodePtr   patcherNode;
-    ObjectPtr   obj;
-    ObjectPtr   modelObject = NULL;
-	SymbolPtr   _sym_jclass, _sym_jmodel = gensym("j.model");
+    t_object    *obj;
+    t_object    *modelObject = NULL;
+	t_symbol    *_sym_jclass, *_sym_jmodel = gensym("j.model");
 
     // get model patcher
-	if (!JamomaDirectory->getTTNode(x->modelAddress, &patcherNode)) {
+	if (!accessApplicationLocalDirectory->getTTNode(x->modelAddress, &patcherNode)) {
 	
         if (patcherNode->getContext()) {
     
             // find the j.model object inside the model patcher
-            obj = object_attr_getobj((ObjectPtr)patcherNode->getContext(), _sym_firstobject);
+            obj = object_attr_getobj((t_object*)patcherNode->getContext(), _sym_firstobject);
     
             while (obj) {
                 
@@ -474,14 +457,47 @@ ObjectPtr ui_get_model_object(t_ui *x)
 
 void ui_paint(t_ui *x, t_object *view)
 {
+    TTSymbol    highlight = kTTSym_none;
+    TTValue     v;
 	t_rect 		rect;
 	t_jgraphics *g;
 	double 		border_thickness = 0.5;
 	double 		cornersize = 12.0;
 	double		middle;
+    t_jrgba		headercolor;
+    t_jrgba		bgcolor;
+	t_jrgba		bordercolor;
 	
 	g = (t_jgraphics*) patcherview_get_jgraphics(view);
 	jbox_get_rect_for_view((t_object*) &x->box, view, &rect);
+    
+    // process highlight
+    if (x->uiInfo.valid()) {
+        x->uiInfo.get("highlight", v);
+        highlight = v[0];
+    }
+
+    if (highlight == kTTSym_none) {
+		headercolor = x->headercolor;
+		bgcolor		= x->bgcolor;
+		bordercolor = x->bordercolor;
+	}
+	else {
+		headercolor.red = 0.8*x->headercolor.red + 0.2*x->highlightcolor.red;
+		headercolor.green = 0.8*x->headercolor.green + 0.2*x->highlightcolor.green;
+		headercolor.blue = 0.8*x->headercolor.blue + 0.2*x->highlightcolor.blue;
+		headercolor.alpha = x->headercolor.alpha;
+		
+		bgcolor.red = 0.8*x->bgcolor.red + 0.2*x->highlightcolor.red;
+		bgcolor.green = 0.8*x->bgcolor.green + 0.2*x->highlightcolor.green;
+		bgcolor.blue = 0.8*x->bgcolor.blue + 0.2*x->highlightcolor.blue;
+		bgcolor.alpha = x->bgcolor.alpha;
+		
+		bordercolor.red = 0.8*x->bordercolor.red + 0.2*x->highlightcolor.red;
+		bordercolor.green = 0.8*x->bordercolor.green + 0.2*x->highlightcolor.green;
+		bordercolor.blue = 0.8*x->bordercolor.blue + 0.2*x->highlightcolor.blue;
+		bordercolor.alpha = x->bordercolor.alpha;
+	}
 	
 	// clear the background
 	jgraphics_rectangle_rounded(g,  border_thickness, 
@@ -489,7 +505,7 @@ void ui_paint(t_ui *x, t_object *view)
 								rect.width - ((border_thickness) * 2.0), 
 								rect.height - ((border_thickness) * 2.0), 
 								cornersize, cornersize); 
-	jgraphics_set_source_jrgba(g,	&x->bgcolor);
+	jgraphics_set_source_jrgba(g, &bgcolor);
 	jgraphics_fill(g);
 	
 	// draw the titlebar
@@ -498,7 +514,7 @@ void ui_paint(t_ui *x, t_object *view)
 								rect.width - (border_thickness * 2.0 + 1.0), 
 								18.0, 
 								cornersize, cornersize); 
-	jgraphics_set_source_jrgba(g,	&x->headercolor);
+	jgraphics_set_source_jrgba(g, &headercolor);
 	jgraphics_fill(g);
 	
 	jgraphics_rectangle_fill_fast(g, border_thickness, 
@@ -512,7 +528,7 @@ void ui_paint(t_ui *x, t_object *view)
 								rect.width - (border_thickness * 2.0), 
 								rect.height - (border_thickness * 2.0), 
 								cornersize, cornersize); 
-	jgraphics_set_source_jrgba(g,	&x->bordercolor);
+	jgraphics_set_source_jrgba(g, &bordercolor);
 	jgraphics_set_line_width(g, 1.0);
 	jgraphics_stroke(g);
 	
@@ -551,7 +567,7 @@ void ui_paint(t_ui *x, t_object *view)
 			right_side -= 16.0;
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -565,7 +581,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_gain)
+		if (x->highlight && x->highlight_gain)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -600,7 +616,7 @@ void ui_paint(t_ui *x, t_object *view)
 			right_side -= 16.0;
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -614,7 +630,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_mix)
+		if (x->highlight && x->highlight_mix)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -645,7 +661,7 @@ void ui_paint(t_ui *x, t_object *view)
 			right_side -= 16.0;
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -662,7 +678,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_mute)
+		if (x->highlight && x->highlight_mute)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -688,7 +704,7 @@ void ui_paint(t_ui *x, t_object *view)
 		
 		if (x->has_freeze)
 			right_side -= 16.0;
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -705,7 +721,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_bypass)
+		if (x->highlight && x->highlight_bypass)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -728,7 +744,7 @@ void ui_paint(t_ui *x, t_object *view)
 	if (x->has_freeze) {
 		long right_side = rect.width - 16.0;
 		
-		if (x->has_preview)
+		if (x->has_active)
 			right_side -= 16.0;
 		if (x->has_panel)
 			right_side -= 16.0;
@@ -745,7 +761,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_freeze)
+		if (x->highlight && x->highlight_freeze)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -764,26 +780,26 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_show_text(g, "f");
 	}
 	
-	// draw the preview button
-	if (x->has_preview) {
+	// draw the active button
+	if (x->has_active) {
 		long right_side = rect.width - 16.0;
 		
 		if (x->has_panel)
 			right_side -= 16.0;
 		
-		if (x->is_previewing)
+		if (x->is_active)
 			jgraphics_set_source_jrgba(g, &s_color_green_button);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_background_button);
 		
-		x->rect_preview.x = right_side;
-		x->rect_preview.width = 13.0;
+		x->rect_active.x = right_side;
+		x->rect_active.width = 13.0;
 		
 		jgraphics_set_line_width(g, 1.5);
 		jgraphics_arc(g, right_side+6.5, 9.5, 6.5, 0., JGRAPHICS_2PI);
 		jgraphics_fill(g);
 		
-		if (x->selection && x->sel_preview)
+		if (x->highlight && x->highlight_active)
 			jgraphics_set_source_jrgba(g, &s_color_selected);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_border_button);
@@ -791,7 +807,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_stroke(g);
 		
 		// p
-		if (x->is_previewing)
+		if (x->is_active)
 			jgraphics_set_source_jrgba(g, &s_color_text_button_on);
 		else
 			jgraphics_set_source_jrgba(g, &s_color_text_button_off);
@@ -799,7 +815,7 @@ void ui_paint(t_ui *x, t_object *view)
 		jgraphics_move_to(g, right_side + 4.0, 12.0);
 		jgraphics_select_font_face(g, JAMOMA_BUTTON_FONT, JGRAPHICS_FONT_SLANT_NORMAL, JGRAPHICS_FONT_WEIGHT_BOLD);
 		jgraphics_set_font_size(g, 7.0);
-		jgraphics_show_text(g, "p");
+		jgraphics_show_text(g, "a");
 	}
 	
 	// draw the panel button
@@ -840,7 +856,7 @@ void ui_paint_address(t_ui *x, t_object *textfield)
         double r,t,l,b;
         t_rect uiRect;
         
-        object_attr_get_rect((ObjectPtr)x, _sym_presentation_rect, &uiRect);
+        object_attr_get_rect((t_object*)x, _sym_presentation_rect, &uiRect);
         textfield_get_textmargins(textfield, &r, &t, &l, &b);
         
         TTUInt32 maxLetter = (uiRect.width - l - r) / 6; // assuming a letter is 6 pixels max
@@ -865,9 +881,10 @@ void ui_paint_address(t_ui *x, t_object *textfield)
 
 void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 {
-	ObjectPtr	obj;
-	SymbolPtr	objclass;
+	t_object	*obj;
+	t_symbol	*objclass;
 	t_rect		rect;
+	TTValue		none;
 	
 	// usually we don't want mousedragdelta -- we turn it on below as necessary
 	jbox_set_mousedragdelta((t_object *)x, 0);
@@ -880,7 +897,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		// if the control key is pressed
 		if (modifiers & eShiftKey) {
 
-			obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
+			obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
 			while (obj) {
 				objclass = object_attr_getsym(obj, _sym_maxclass);
 				if (objclass == gensym("j.remote")) {
@@ -889,14 +906,14 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
                     // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
                     // so in j.remote : that function should change its prototype,
                     // and then the arguments to object_method should change too object_method() is much more picky now
-                    //> object_method(object_attr_getobj(obj, _sym_object), gensym("mousedown"), patcherview, px, modifiers);
+                    object_method(object_attr_getobj(obj, _sym_object), gensym("mousedown"), patcherview, px.x, px.y, modifiers);
 					
 				}
 				obj = object_attr_getobj(obj, _sym_nextobject);
 			}
 			
 			// update the mouse position to display
-			//ui_mousemove(x, patcherview, px, modifiers);
+			ui_mousemove(x, patcherview, px, modifiers);
 		}
 		
 		return;
@@ -905,9 +922,9 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	if (px.x > 18 && px.y < 20.0) {//(rect.width - 112)) {
 		// we check the gain and mix knobs first because they are continuous datas and should run as fast as possible
 		if (x->has_gain && px.x >= x->rect_gain.x && px.x <= (x->rect_gain.x + x->rect_gain.width)) {
-			if (x->selection) {
-				x->sel_gain = !x->sel_gain;
-				ui_viewer_highlight(x, TTSymbol("*.*/gain"), x->sel_gain);
+			if (x->highlight) {
+				x->highlight_gain = !x->highlight_gain;
+				ui_viewer_highlight(x, TTSymbol("audio/gain"), x->highlight_gain);
 			}
 			else {
 				x->gainDragging = true;
@@ -917,9 +934,9 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 			}
 		}
 		else if (x->has_mix && px.x >= x->rect_mix.x && px.x <= (x->rect_mix.x + x->rect_mix.width)) {
-			if (x->selection) {
-				x->sel_mix = !x->sel_mix;
-				ui_viewer_highlight(x, TTSymbol("*.*/mix"), x->sel_mix);
+			if (x->highlight) {
+				x->highlight_mix = !x->highlight_mix;
+				ui_viewer_highlight(x, TTSymbol("audio/mix"), x->highlight_mix);
 			}
 			else {
 				x->mixDragging = true;
@@ -929,36 +946,36 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 			}
 		}
 		else if (x->has_panel && px.x >= x->rect_panel.x && px.x <= (x->rect_panel.x + x->rect_panel.width))
-			ui_data_send(x, TTSymbol("panel"), kTTValNONE);
+			x->uiInfo.send("Panel");
 		
-		else if (x->has_preview && px.x >= x->rect_preview.x && px.x <= (x->rect_preview.x + x->rect_preview.width)) {
-			if (x->selection) {
-				x->sel_preview = !x->sel_preview;
-				ui_viewer_highlight(x, TTSymbol("*.*/preview"), x->sel_preview);
+		else if (x->has_active && px.x >= x->rect_active.x && px.x <= (x->rect_active.x + x->rect_active.width)) {
+			if (x->highlight) {
+				x->highlight_active = !x->highlight_active;
+				ui_viewer_highlight(x, TTSymbol("data/active"), x->highlight_active);
 			}
 			else
-				ui_viewer_send(x, TTSymbol("*.*/preview"), TTValue(!x->is_previewing));
+				ui_viewer_send(x, TTSymbol("data/active"), TTValue(!x->is_active));
 		}
 		else if (x->has_freeze && px.x >= x->rect_freeze.x && px.x <= (x->rect_freeze.x + x->rect_freeze.width)) {
-			if (x->selection) {
-				x->sel_freeze = !x->sel_freeze;
-				ui_viewer_highlight(x, TTSymbol("*.*/freeze"), x->sel_freeze);
+			if (x->highlight) {
+				x->highlight_freeze = !x->highlight_freeze;
+				ui_viewer_highlight(x, TTSymbol("data/freeze"), x->highlight_freeze);
 			}
 			else
-				ui_viewer_send(x, TTSymbol("*.*/freeze"), TTValue(!x->is_frozen));
+				ui_viewer_send(x, TTSymbol("data/freeze"), TTValue(!x->is_frozen));
 		}
 		else if (x->has_bypass && px.x >= x->rect_bypass.x && px.x <= (x->rect_bypass.x + x->rect_bypass.width)) {
-			if (x->selection) {
-				x->sel_bypass = !x->sel_bypass;
-				ui_viewer_highlight(x, TTSymbol("*.*/bypass"), x->sel_bypass);
+			if (x->highlight) {
+				x->highlight_bypass = !x->highlight_bypass;
+				ui_viewer_highlight(x, TTSymbol("*.*/bypass"), x->highlight_bypass);
 			}
 			else
 				ui_viewer_send(x, TTSymbol("*.*/bypass"), TTValue(!x->is_bypassed));
 		}
 		else if (x->has_mute && px.x >= x->rect_mute.x && px.x <= (x->rect_mute.x + x->rect_mute.width)) {
-			if (x->selection) {
-				x->sel_mute = !x->sel_mute;
-				ui_viewer_highlight(x, TTSymbol("*.*/mute"), x->sel_mute);
+			if (x->highlight) {
+				x->highlight_mute = !x->highlight_mute;
+				ui_viewer_highlight(x, TTSymbol("*.*/mute"), x->highlight_mute);
 			}
 			else
 				ui_viewer_send(x, TTSymbol("*.*/mute"), TTValue(!x->is_muted));
@@ -974,7 +991,7 @@ void ui_mousedown(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 // mousedragdelta sends the amount the mouse moved in t_pt
 void ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {
-	ObjectPtr	textfield = jbox_get_textfield((t_object*) x);
+	t_object*	textfield = jbox_get_textfield((t_object*) x);
 	t_rect		rect;
 	char		str[5];
 	double		factor = 1.0;	// factor determines how much precision (vs. immediacy) you have when dragging the knob
@@ -990,7 +1007,7 @@ void ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 	if (x->mixDragging) {
 		x->anchorValue = x->anchorValue - (pt.y * factor);
 		TTLimit(x->anchorValue, 0.0f, 100.0f);
-		ui_viewer_send(x, TTSymbol("*.*/mix"), TTValue(x->anchorValue));
+		ui_viewer_send(x, TTSymbol("audio/mix"), TTValue(x->anchorValue));
 		
 		snprintf(str, sizeof(str), "%f", x->mix);
 		object_method(textfield, gensym("settext"), str);
@@ -998,7 +1015,7 @@ void ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 	else if (x->gainDragging) {
 		x->anchorValue = x->anchorValue - (pt.y * factor);
 		TTLimit(x->anchorValue, 0.0f, 127.0f);
-		ui_viewer_send(x, TTSymbol("*.*/gain"), TTValue(x->anchorValue));
+		ui_viewer_send(x, TTSymbol("audio/gain"), TTValue(x->anchorValue));
 		
 		snprintf(str, sizeof(str), "%f", x->gain);
 		object_method(textfield, gensym("settext"), str);
@@ -1011,7 +1028,7 @@ void ui_mouseup(t_ui *x, t_object *patcherview)
 	x->gainDragging = false;
     
     // Set the textfield to display the address after dragging widget
-	ObjectPtr textfield = jbox_get_textfield((t_object*) x);
+	t_object *textfield = jbox_get_textfield((t_object*) x);
 	if (textfield)
         ui_paint_address(x, textfield);
 	
@@ -1020,32 +1037,30 @@ void ui_mouseup(t_ui *x, t_object *patcherview)
 
 void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {
-	SymbolPtr	objclass;
-	ObjectPtr	obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
-	Atom		selected_color[4];
+	t_symbol    *objclass;
+	t_object    *obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
+
+	// théo - we decide to mute this feature in june 2014 Albi workshop
+    return;
 	
 	// if the control key is pressed
 	if (modifiers & eShiftKey) {
 		
-		x->selection = true;
+		x->highlight = true;
 		
 		// Is the mouse wasn't hover the j.ui panel
 		if (!x->hover) {
 			x->hover = true;
-			atom_setfloat(&selected_color[0], 0.62);
-			atom_setfloat(&selected_color[1], 0.);
-			atom_setfloat(&selected_color[2], 0.36);
-			atom_setfloat(&selected_color[3], 0.70);
-			object_attr_setvalueof(x, gensym("bordercolor"), 4, selected_color);
+            x->uiInfo.set("highlight", TTSymbol("jamoma"));
 		}
 	}
 	else {
 		
-		x->selection = false;
+		x->highlight = false;
 		
 		if (x->hover) {
 			x->hover = false;
-			object_attr_setcolor((ObjectPtr)x, gensym("bordercolor"), &x->memo_bordercolor);
+			x->uiInfo.set("highlight", kTTSym_none);
 		}
 	}
 	
@@ -1057,7 +1072,7 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
             // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
             // so in j.remote : that function should change its prototype,
             // and then the arguments to object_method should change too object_method() is much more picky now
-			//> object_method(object_attr_getobj(obj, _sym_object), gensym("mousemove"), patcherview, pt, modifiers);
+			object_method(object_attr_getobj(obj, _sym_object), gensym("mousemove"), patcherview, pt.x, pt.y, modifiers);
 
 		}
 		obj = object_attr_getobj(obj, _sym_nextobject);
@@ -1066,14 +1081,21 @@ void ui_mousemove(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 
 void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 {	
-	SymbolPtr objclass;
-	ObjectPtr obj = object_attr_getobj(jamoma_patcher_get((ObjectPtr)x), _sym_firstobject);
+	t_symbol *objclass;
+	t_object *obj = object_attr_getobj(jamoma_patcher_get((t_object*)x), _sym_firstobject);
+
+	// théo - we decide to mute this feature in june 2014 Albi workshop
+    return;
 	
 	// Is the mouse leave outside the j.ui (not hover an ui object)
 	if (	pt.x <= x->box.b_presentation_rect.x || pt.x >= (x->box.b_presentation_rect.x + x->box.b_presentation_rect.width)
 		||	pt.y <= x->box.b_presentation_rect.y || pt.y >= (x->box.b_presentation_rect.y + x->box.b_presentation_rect.height)) {
+        
+        x->highlight = false;
 		x->hover = false;
-		object_attr_setcolor((ObjectPtr)x, gensym("bordercolor"), &x->memo_bordercolor);
+        
+        if (x->uiInfo.valid())
+            x->uiInfo.set("highlight", kTTSym_none);
 	}
 
 	while (obj) {
@@ -1084,7 +1106,7 @@ void ui_mouseleave(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
             // instead we should pass two doubles (one for the x coordinate and one for the y coordinate)
             // so in j.remote : that function should change its prototype,
             // and then the arguments to object_method should change too object_method() is much more picky now
-			//> object_method(object_attr_getobj(obj, _sym_object), gensym("mouseleave"), patcherview, pt, modifiers*x->hover); // * hover allows to return to a normal display
+			object_method(object_attr_getobj(obj, _sym_object), gensym("mouseleave"), patcherview, pt.x, pt.y, modifiers*x->hover); // * hover allows to return to a normal display
 			
 		}
 		obj = object_attr_getobj(obj, _sym_nextobject);
@@ -1154,59 +1176,67 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 void ui_menu_qfn(t_ui *x)
 {
 	t_symobject *item = (t_symobject *)linklist_getindex(x->menu_items, x->menu_selection);
+    t_atom      a;
     
     // get model object
-    ObjectPtr modelObject = ui_get_model_object(x);
+    t_object *modelObject = ui_get_model_object(x);
     if (!modelObject)
         return;
     
-    // TODO : use the model object to directly send message to the Max object
+    if (item->sym == gensym("Open Model Reference Page"))
+        object_method(modelObject, _sym_anything, gensym("model:reference/open"), 0, NULL);
+	
+	else if (item->sym == gensym("Open Model Help Patch"))
+        object_method(modelObject, _sym_anything, gensym("model:help/open"), 0, NULL);
+	
+	else if (item->sym == gensym("Open Model Internal"))
+        object_method(modelObject, _sym_anything, gensym("model:internal/open"), 0, NULL);
+    
+    else if (item->sym == gensym("Edit Current State"))
+		ui_edit_state(x);
+    
+	else if (item->sym == gensym("Load Presets File"))
+		object_method(modelObject, gensym("preset:read"), 0, NULL);
+    
+    else if (item->sym == gensym("Save Presets File"))
+		object_method(modelObject, gensym("preset:write/again"), 0, NULL);
+    
+	else if (item->sym == gensym("Save Presets File As"))
+		object_method(modelObject, gensym("preset:write"), 0, NULL);
+
+	else if (item->sym == gensym("Edit Presets File"))
+		object_method(modelObject, gensym("preset:edit"), 0, NULL);
+	
+	else if (item->sym == gensym("Create New Preset")) {
+    
+		long    result;
+        char    *text;
+        char    buf[512];
         
-	if (item->sym == gensym("Defeat Signal Meters")) {
-		if (x->is_metersdefeated)
-			ui_viewer_send(x, TTSymbol("audio/meters/freeze"), NO);
-		else
-			ui_viewer_send(x, TTSymbol("audio/meters/freeze"), YES);
-	}
-	else if (item->sym == gensym("Disable UI Updates")) {
-		if (x->ui_freeze)
-			ui_data_send(x, TTSymbol("freeze"), NO);
-		else
-			ui_data_send(x, TTSymbol("freeze"), YES);
-	}
-	
-	else if (item->sym == gensym("Load Settings..."))
-		defer(x, (method)ui_preset_doread, NULL, 0, 0L);
-	
-	else if (item->sym == gensym("Save Settings..."))
-		defer(x, (method)ui_preset_dowrite, NULL, 0, 0L);
-	
-	else if (item->sym == gensym("Restore Default Settings"))
-		ui_viewer_send(x, TTSymbol("preset:recall"), kTTVal1);
-	
-	else if (item->sym == gensym("Store Current Preset"))
-		ui_viewer_send(x, TTSymbol("preset:store"), kTTValNONE);
-	
-	else if (item->sym == gensym("Store as Next Preset"))
-		ui_preset_store_next(x);
+        strcpy(buf, "Château de Preset");
+        
+        result = jdialog_showtext("Provide a name for this Preset", buf, 0, &text);
+        if (result != 1)
+            return;
+        
+        atom_setsym(&a, gensym(text));
+        object_method(modelObject, _sym_anything, gensym("preset:new"), 1, &a);
+    }
+    
+    else if (item->sym == gensym("Update Current Preset"))
+		object_method(modelObject, _sym_anything, gensym("preset:update"), 0, NULL);
+    
+    else if (item->sym == gensym("Delete Current Preset"))
+		object_method(modelObject, _sym_anything, gensym("preset:delete"), 0, NULL);
 	
 	else if (item->sym == gensym("Open Preset Interface"))
 		ui_preset_interface(x);
-	
-	else if (item->sym == gensym("Edit Current State as Text"))
-		ui_edit(x);
-	
-	else if (item->sym == gensym("Open Model Internal"))
-		ui_viewer_send(x, TTSymbol("model/open"), kTTValNONE);
-	
-	else if (item->sym == gensym("Open Model Help Patch"))
-		ui_viewer_send(x, TTSymbol("model/help"), kTTValNONE);
-	
-	else if (item->sym == gensym("Open Model Reference Page"))
-		ui_viewer_send(x, TTSymbol("model/reference"), kTTValNONE);
-	
-	else	// assume the menu item is a preset name
-		ui_viewer_send(x, TTSymbol("preset:recall"), TTSymbol(item->sym->s_name));
+
+	else {  // assume the menu item is a preset name
+        
+        atom_setsym(&a, item->sym);
+        object_method(modelObject, _sym_anything, gensym("preset:recall"), 1, &a);
+    }
 }
 
 void ui_menu_build(t_ui *x)
@@ -1218,53 +1248,46 @@ void ui_menu_build(t_ui *x)
 		return;
 	
 	linklist_clear(x->menu_items);
-	item = (t_symobject *)symobject_new(gensym("Disable UI Updates"));
-	linklist_append(x->menu_items, item);	
-	item = (t_symobject *)symobject_new(gensym("-"));
-	linklist_append(x->menu_items, item);
-	
-	if (x->has_meters) {
-		item = (t_symobject *)symobject_new(gensym("Defeat Signal Meters"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Clear Signal Meters"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("-"));
-		linklist_append(x->menu_items, item);
-	}
-	
-	if (x->has_preset) {
-		item = (t_symobject *)symobject_new(gensym("Load Settings..."));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Save Settings..."));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Restore Default Settings"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Store Current Preset"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Store as Next Preset"));
-		linklist_append(x->menu_items, item);
-		item = (t_symobject *)symobject_new(gensym("Open Preset Interface"));
-	}
-	
-	linklist_append(x->menu_items, item);
-	
-	item = (t_symobject *)symobject_new(gensym("-"));
-	if (x->has_model) {
+    
+    // append model operations
+    if (x->has_model) {
         
-        linklist_append(x->menu_items, item);
-        item = (t_symobject *)symobject_new(gensym("Edit Current State as Text"));
-		linklist_append(x->menu_items, item);
 		item = (t_symobject *)symobject_new(gensym("Open Model Reference Page"));
 		linklist_append(x->menu_items, item);
 		item = (t_symobject *)symobject_new(gensym("Open Model Help Patch"));
 		linklist_append(x->menu_items, item);
 		item = (t_symobject *)symobject_new(gensym("Open Model Internal"));
+        linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Edit Current State"));
+        linklist_append(x->menu_items, item);
 	}
 	
-	linklist_append(x->menu_items, item);	
+    // append preset operations
+	if (x->has_preset) {
+        
+        item = (t_symobject *)symobject_new(gensym("-"));
+        linklist_append(x->menu_items, item);
+        
+		item = (t_symobject *)symobject_new(gensym("Load Presets File"));
+		linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Save Presets File"));
+        linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Save Presets File As"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Edit Presets File"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Create New Preset"));
+        linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Update Current Preset"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Delete Current Preset"));
+		linklist_append(x->menu_items, item);
+		item = (t_symobject *)symobject_new(gensym("Open Preset Interface"));
+	}
 	
 	// append preset name list
 	if (x->preset_names) {
+        
 		item = (t_symobject *)symobject_new(gensym("-"));
 		linklist_append(x->menu_items, item);
 		
@@ -1362,14 +1385,14 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((ObjectPtr)x, &x->modelParamExplorer, gensym("return_modelParamExploration"));
+	ui_explorer_create((t_object*)x, x->modelParamExplorer, gensym("return_modelParamExploration"));
 	
 	filters = TTValue(kTTSym_parameter);
 	filters.append(TTSymbol("noGenericTag"));
-	x->modelParamExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelParamExplorer.set("filterList", filters);
 	
-	x->modelParamExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelParamExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelParamExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelParamExplorer.send("Explore");
 	
 	// Look for User-Defined Messages into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1378,14 +1401,14 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((ObjectPtr)x, &x->modelMessExplorer, gensym("return_modelMessExploration"));
+	ui_explorer_create((t_object*)x, x->modelMessExplorer, gensym("return_modelMessExploration"));
 	
 	filters = TTValue(kTTSym_message);
 	filters.append(TTSymbol("noGenericTag"));
-	x->modelMessExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelMessExplorer.set("filterList", filters);
 	
-	x->modelMessExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelMessExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelMessExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelMessExplorer.send("Explore");
 	
 	// Look for User-Defined Returns into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1394,14 +1417,14 @@ void ui_refmenu_build(t_ui *x)
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
 	
-	ui_explorer_create((ObjectPtr)x, &x->modelRetExplorer, gensym("return_modelRetExploration"));
+	ui_explorer_create((t_object*)x, x->modelRetExplorer, gensym("return_modelRetExploration"));
 	
 	filters = TTValue(kTTSym_return);
 	filters.append(TTSymbol("noGenericTag"));
-	x->modelRetExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelRetExplorer.set("filterList", filters);
 	
-	x->modelRetExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelRetExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelRetExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelRetExplorer.send("Explore");
 
 	// Look for Generic Parameters into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1412,10 +1435,10 @@ void ui_refmenu_build(t_ui *x)
 	
 	filters = TTValue(kTTSym_parameter);
 	filters.append(TTSymbol("genericTag"));
-	x->modelParamExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelParamExplorer.set("filterList", filters);
 	
-	x->modelParamExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelParamExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelParamExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelParamExplorer.send("Explore");
 	
 	// Look for Generic Messages into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1426,10 +1449,10 @@ void ui_refmenu_build(t_ui *x)
 	
 	filters = TTValue(kTTSym_message);
 	filters.append(TTSymbol("genericTag"));
-	x->modelMessExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelMessExplorer.set("filterList", filters);
 	
-	x->modelMessExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelMessExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelMessExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelMessExplorer.send("Explore");
 	
 	// Look for Generic Returns into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1440,14 +1463,14 @@ void ui_refmenu_build(t_ui *x)
 	
 	filters = TTValue(kTTSym_return);
 	filters.append(TTSymbol("genericTag"));
-	x->modelRetExplorer->setAttributeValue(TTSymbol("filterList"), filters);
+	x->modelRetExplorer.set("filterList", filters);
 	
-	x->modelRetExplorer->setAttributeValue(kTTSym_address, x->modelAddress);
-	x->modelRetExplorer->sendMessage(TTSymbol("Explore"));
+	x->modelRetExplorer.set(kTTSym_address, x->modelAddress);
+	x->modelRetExplorer.send("Explore");
 	
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->modelParamExplorer));
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->modelMessExplorer));
-	TTObjectBaseRelease(TTObjectBaseHandle(&x->modelRetExplorer));
+	x->modelParamExplorer = TTObject();
+    x->modelMessExplorer = TTObject();
+    x->modelRetExplorer = TTObject();
 }
 
 void* ui_oksize(t_ui *x, t_rect *rect)
@@ -1486,11 +1509,11 @@ void* ui_oksize(t_ui *x, t_rect *rect)
 	return (void *)1;
 }
 
-void ui_edit(t_ui *x)
+void ui_edit_state(t_ui *x)
 {
     TTString    *buffer;
     char        title[MAX_FILENAME_CHARS];
-    TTValue     args;
+    TTValue     none;
     TTSymbol    name;
     
     // only one editor can be open in the same time
@@ -1500,11 +1523,10 @@ void ui_edit(t_ui *x)
         buffer = new TTString();
         
         // Store the preset
-        x->state->sendMessage(TTSymbol("Store"));
+        x->state.send("Store");
         
         critical_enter(0);
-        args = TTValue((TTPtr)buffer);
-        x->textHandler->sendMessage(kTTSym_Write, args, kTTValNONE);
+        x->textHandler.send(kTTSym_Write, (TTPtr)buffer, none);
         critical_exit(0);
         
         // pass the buffer to the editor
@@ -1525,23 +1547,21 @@ void ui_edclose(t_ui *x, char **text, long size)
     x->text = new TTString(*text);
     x->textEditor = NULL;
     
-    defer_low((ObjectPtr)x, (method)ui_doedit, NULL, 0, NULL);
+    defer_low((t_object*)x, (method)ui_doedit, NULL, 0, NULL);
 }
 
 void ui_doedit(t_ui *x)
 {
-    TTValue args;
+    TTValue none;
     
     critical_enter(0);
-    args = TTValue((TTPtr)x->text);
-    x->textHandler->sendMessage(kTTSym_Read, args, kTTValNONE);
+    x->textHandler.send(kTTSym_Read, (TTPtr)x->text, none);
     critical_exit(0);
     
     // recall the preset
-    x->state->sendMessage(kTTSym_Recall, kTTValNONE, kTTValNONE);
+    x->state.send(kTTSym_Recall);
     
     delete x->text;
     x->text = NULL;
     x->textEditor = NULL;
 }
-

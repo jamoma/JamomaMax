@@ -1,20 +1,27 @@
-/*
- * j.snapshot
- * External for Jamoma: capture, recall, transform, and manipulate global snapshots
- * By Timothy Place, Copyright 2009
+/** @file
  *
- * License: This code is licensed under the terms of the GNU LGPL
- * http://www.gnu.org/licenses/lgpl.html
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.snapshot : Capture, recall, transform, and manipulate global snapshots
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2009 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "Jamoma.h"
 
 class SnapshotParameterValue {
 public:
     TTFloat64   value;
-    ObjectPtr   parameter;
+    (t_object*)   parameter;
 
-    SnapshotParameterValue(TTFloat64& f, ObjectPtr o):
+    SnapshotParameterValue(TTFloat64& f, (t_object*) o):
         value(f),
         parameter(o)
     {;}
@@ -44,23 +51,23 @@ typedef TTModSnapshot* TTModSnapshotPtr;
 
 
 // Prototypes
-TTPtr       TTModSnapshotNew    (SymbolPtr name, AtomCount argc, AtomPtr argv);
+TTPtr       TTModSnapshotNew    (SymbolPtr name, long argc, t_atom* argv);
 void        TTModSnapshotFree   (TTModSnapshotPtr self);
-MaxErr      TTModSnapshotNotify (TTModSnapshotPtr self, SymbolPtr s, SymbolPtr msg, void *sender, void *data);
+t_max_err      TTModSnapshotNotify (TTModSnapshotPtr self, SymbolPtr s, SymbolPtr msg, void *sender, void *data);
 void        TTModSnapshotAssist (TTModSnapshotPtr self, void *b, long m, long a, char *s);
 void        TTModSnapshotDump   (TTModSnapshotPtr self);
-void        TTModSnapshotStore  (TTModSnapshotPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
-void        TTModSnapshotRecall (TTModSnapshotPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv);
+void        TTModSnapshotStore  (TTModSnapshotPtr self, SymbolPtr s, long argc, t_atom* argv);
+void        TTModSnapshotRecall (TTModSnapshotPtr self, SymbolPtr s, long argc, t_atom* argv);
 
 
 // Shared
-static ClassPtr sMaxClass;
+static t_class* sMaxClass;
 
 
 // Class Definition
 int JAMOMA_EXPORT_MAXOBJ main(void)
 {
-    ClassPtr c = class_new("j.snapshot",
+    t_class* c = class_new("j.snapshot",
                            (method)TTModSnapshotNew,
                            (method)TTModSnapshotFree,
                             sizeof(TTModSnapshot),
@@ -88,7 +95,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 #pragma mark Life Cycle
 #endif 0
 
-TTPtr TTModSnapshotNew(SymbolPtr name, AtomCount argc, AtomPtr argv)
+TTPtr TTModSnapshotNew(SymbolPtr name, long argc, t_atom* argv)
 {
     TTModSnapshotPtr self = (TTModSnapshotPtr)object_alloc(sMaxClass);
 
@@ -120,7 +127,7 @@ void TTModSnapshotFree(TTModSnapshotPtr self)
 #pragma mark Methods
 #endif 0
 
-MaxErr TTModSnapshotNotify(TTModSnapshotPtr self, SymbolPtr s, SymbolPtr msg, TTPtr sender, TTPtr data)
+t_max_err TTModSnapshotNotify(TTModSnapshotPtr self, SymbolPtr s, SymbolPtr msg, TTPtr sender, TTPtr data)
 {
     object_post(SELF, "notification : %s", msg->s_name);
     return MAX_ERR_NONE;
@@ -146,7 +153,7 @@ void TTModSnapshotDump(TTModSnapshotPtr self)
 }
 
 
-void TTModSnapshotStore(TTModSnapshotPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+void TTModSnapshotStore(TTModSnapshotPtr self, SymbolPtr s, long argc, t_atom* argv)
 {
     TTNodePtr   rootNode = self->tree->getRoot();
     TTValue     moduleNodes;
@@ -221,7 +228,7 @@ void TTModSnapshotStore(TTModSnapshotPtr self, SymbolPtr s, AtomCount argc, Atom
 							if (parameter->getObject()) {
 								childType = parameter->getObject()->getName();
 							if (childType == TTSymbol("Data")) {   // FIXME: this name sucks for the type.
-								ObjectPtr maxObject = (ObjectPtr)parameter->getObject();
+								ObjectPtr maxObject = (t_object*)parameter->getObject();
 								SymbolPtr maxType = object_attr_getsym(maxObject, SymbolGen("type"));
 								
 								// we're ignoring non-int, non-float params for the time being
@@ -266,7 +273,7 @@ void TTModSnapshotStore(TTModSnapshotPtr self, SymbolPtr s, AtomCount argc, Atom
 										// then make sure it is actually a parameter
 										childType2 = parameter2->getType();
 										if (childType2 == TTSymbol("subscribe_parameter")) {   // FIXME: this name sucks for the type.
-											ObjectPtr maxObject = (ObjectPtr)parameter2->getObject();
+											ObjectPtr maxObject = (t_object*)parameter2->getObject();
 											SymbolPtr maxType = object_attr_getsym(maxObject, SymbolGen("type"));
 											
 											// we're ignoring non-int, non-float params for the time being
@@ -297,7 +304,7 @@ void TTModSnapshotRecallOne(const SnapshotParameterValue& spv)
 }
 
 
-void TTModSnapshotRecall(TTModSnapshotPtr self, SymbolPtr s, AtomCount argc, AtomPtr argv)
+void TTModSnapshotRecall(TTModSnapshotPtr self, SymbolPtr s, long argc, t_atom* argv)
 {
     if (!argc || !argv)
         return;

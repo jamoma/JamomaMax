@@ -9,6 +9,7 @@
 /* Begin PBXFileReference section */
 		464D3E8516E5346600C33214 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
 		464D3E8616E5346600C33214 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		469BD9F6180B57E000A023B3 /* j.remote.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.remote.yml; sourceTree = "<group>"; };
 		D289EC03150FD14300FC7F7E /* j.remote.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = j.remote.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -16,6 +17,7 @@
 		08FB7794FE84155DC02AAC07 /* j.remote */ = {
 			isa = PBXGroup;
 			children = (
+				469BD9F6180B57E000A023B3 /* j.remote.yml */,
 				D289EC03150FD14300FC7F7E /* j.remote.cpp */,
 				464D3E8616E5346600C33214 /* TTModularClassWrapperMax.h */,
 				464D3E8516E5346600C33214 /* TTModularClassWrapperMax.cpp */,
@@ -45,7 +47,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.remote" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -96,14 +98,13 @@
 		1DEB919408733D9F0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
 		1DEB919508733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 			};
 			name = Release;
 		};

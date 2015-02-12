@@ -18,6 +18,9 @@
 		<metadata name="tag">
 			filter
 		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
@@ -209,7 +212,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="onepole~">
-		</seealso>
+		<seealso name="onepole~"/>
 	</seealsolist>
 </c74object>

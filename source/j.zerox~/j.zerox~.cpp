@@ -1,11 +1,18 @@
-/* 
- * tt.zerox~
- * External for Jamoma: zero-crossing counter
- * By Tim Place, Copyright © 2006
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief j.zerox~ : wraps the #TTZerocrossing class as a Jamoma external for MSP
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2006 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
+
 
 #include "TTClassWrapperMax.h"
 #include "ext.h"						// Max Header
@@ -42,7 +49,7 @@ static t_class *s_zerox_class;
 
 /************************************************************************************/
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	long attrflags = 0;
 	t_class *c;
@@ -76,7 +83,7 @@ void *zerox_new(t_symbol *msg, long argc, t_atom *argv)
 {
 	t_zerox*	x = (t_zerox*)object_alloc(s_zerox_class);
 	
-	if(x){
+	if (x) {
 		object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x, NULL));	// dumpout
 		dsp_setup((t_pxobject *)x, 1);				// Create Object and 1 Inlet (last argument)
 		outlet_new((t_pxobject *)x, "signal");		// Create a signal Outlet
@@ -108,10 +115,10 @@ void zerox_free(t_zerox *x)
 // Method for Assistance Messages
 void zerox_assist(t_zerox *x, void *b, long msg, long arg, char *dst)
 {
-	if(msg==1) 			// Inlet
+	if (msg==1) 			// Inlet
 		strcpy(dst, "(signal) Input");
-	else if(msg==2){ 	// Outlet
-		switch(arg){
+	else if (msg==2) { 	// Outlet
+		switch(arg) {
 			case 0: strcpy(dst, "(signal) number of zero crossings"); break;
 			case 1: strcpy(dst, "(signal) trigger"); break;
 			case 2: strcpy(dst, "dumpout"); break;
@@ -138,7 +145,7 @@ t_int *zerox_perform(t_int *w)
     t_float *out2 = (t_float *)(w[4]);	// Output
 	TTUInt16	vs = x->signalIn->getVectorSizeAsInt();
 
-	if(!x->obj.z_disabled){								// if we are not muted...
+	if (!x->obj.z_disabled) {								// if we are not muted...
 		x->signalIn->setVector(0, vs, (t_float *)in);
 		x->zeroxUnit->process(x->signalIn, x->signalOut);
 		x->signalOut->getVector(0, vs, (t_float *)out1);

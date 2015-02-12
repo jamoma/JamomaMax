@@ -1,0 +1,140 @@
+
+- preset "default"
+# "edit a comment"
+data/active 1
+color/alpha 1.000000
+light/ambient 0.000000 0.000000 0.000000 0.000000
+fog/amount 0.000000
+antialias 0
+automatic 1
+light/automatic 1
+data/bypass 0
+depth/clear 0
+videoplane/client_storage 1
+videoplane/colormode argb
+context default
+light/diffuse 0.000000 0.000000 0.000000 0.000000
+videoplane/dim 20 20
+videoplane/displaylist 0
+light/emission 0.000000 0.000000 0.000000 0.000000
+enable 1
+blend/enable 0
+light/enable 0
+depth/enable 1
+videoplane/gridmode 0
+depth/inherit 0
+color/inherit 0
+material/inherit 0
+videoplane/interpolate 1
+layer 0
+blend/mode 6 7
+videoplane/nudge 0.010000
+videoplane/texture/offset 0.000000 0.000000
+fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+position 0.000000 0.000000 0.000000
+color 1.000000 1.000000 1.000000
+rotate 0.000000 0.000000 0.000000 1.000000
+videoplane/texture/scale 1.000000 1.000000
+scale 1.000000 1.000000 1.000000
+material/shininess 10.000000
+light/specular 0.000000 0.000000 0.000000 0.000000
+rend
+
+- preset "blend/add"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 1 1
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+- preset "blend/multiply"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 2 1
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+- preset "blend/screen"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 4 1
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+- preset "blend/exclusion"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 4 5
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+- preset "blend/colorblend"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 3 4
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+- preset "blend/alphablend"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 6 7
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+- preset "blend/coloradd"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 3 1
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+- preset "blend/alphaadd"
+- description "something about this preset"
+# ###########################################
+# 
+
+GL/blend/enable 1
+GL/blend/mode 6 1
+GL/depth/enable 0
+# 
+# ###########################################
+
+
+
+

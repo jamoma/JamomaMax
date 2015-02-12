@@ -2,16 +2,16 @@
 <jamoma version="0.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jamoma.org/ file:jamoma.xsd">
  <!--Conversion table-->
  <conversionTable>
-  <entry App="value/default" TT="valueDefault"/>
-  <entry App="value/stepsize" TT="valueStepsize"/>
-  <entry App="range/clipmode" TT="rangeClipmode"/>
+  <entry App="default" TT="valueDefault"/>
+  <entry App="stepsize" TT="valueStepsize"/>
+  <entry App="clipmode" TT="rangeClipmode"/>
   <entry App="ramp/drive" TT="rampDrive"/>
-  <entry App="repetitions/allow" TT="repetitionsAllow"/>
+  <entry App="repetitions/filter" TT="repetitionsFilter"/>
   <entry App="ramp/function" TT="rampFunction"/>
   <entry App="ramp/function/parameters" TT="rampFunctionParameters"/>
-  <entry App="range/bounds" TT="rangeBounds"/>
+  <entry App="range" TT="rangeBounds"/>
   <entry App="ramp/status" TT="rampStatus"/>
-  <entry App="dataspace/unit" TT="dataspaceUnit"/>
+  <entry App="unit" TT="dataspaceUnit"/>
   <entry App="j.parameter" TT="Data service parameter"/>
   <entry App="j.return" TT="Data service return"/>
   <entry App="activity/in" TT="activityIn"/>
@@ -19,21 +19,32 @@
 
   <entry App="clear" TT="Clear"/>
   <entry App="copy" TT="Copy"/>
+  <entry App="color/contentBackground" TT="ColorContentBackground"/>
+  <entry App="color/toolbarBackground" TT="ColorToolbarBackground"/>
+  <entry App="color/toolbarText" TT="ColorToolbarText"/>
+  <entry App="color/border" TT="ColorBorder"/>
   <entry App="dec" TT="Dec"/>
+  <entry App="delete" TT="Delete"/>
   <entry App="namespace/build" TT="DirectoryBuild"/>
+  <entry App="namespace/clear" TT="DirectoryClear"/>
   <entry App="namespace/observe" TT="DirectoryObserve"/>
+  <entry App="help/open" TT="HelpOpen"/>
   <entry App="inc" TT="Inc"/>
   <entry App="init" TT="Init"/>
+  <entry App="internal/open" TT="InternalOpen"/>
   <entry App="interpolate" TT="Interpolate"/>
   <entry App="mix" TT="Mix"/>
   <entry App="move" TT="Move"/>
   <entry App="new" TT="New"/>
+  <entry App="panel" TT="Panel"/>
   <entry App="recall" TT="Recall"/>
+  <entry App="reference/open" TT="ReferenceOpen"/>
+  <entry App="reference/write" TT="ReferenceWrite"/>
   <entry App="refresh" TT="Refresh"/>
   <entry App="remove" TT="Remove"/>
   <entry App="rename" TT="Rename"/>
   <entry App="reset" TT="Reset"/>
   <entry App="send" TT="Send"/>
-  <entry App="store" TT="Store"/>
+  <entry App="update" TT="Update"/>
  </conversionTable>
 </jamoma>

@@ -1,0 +1,41 @@
+
+- preset "default"
+- description "default preset"
+# ###########################################
+# 
+data/active 1
+
+data/bypass 0
+edgeblend/fade/top 0.030000
+edgeblend/fade/bottom 0.030000
+edgeblend/fade/right 0.030000
+edgeblend/fade/left 0.030000
+edgeblend/invert 0
+color/alpha 1.000000
+light/ambient 0.000000 0.000000 0.000000 0.000000
+fog/amount 0.000000
+antialias 0
+automatic 1
+light/automatic 1
+depth/clear 0
+context default
+light/diffuse 0.000000 0.000000 0.000000 0.000000
+light/emission 0.000000 0.000000 0.000000 0.000000
+light/enable 0
+enable 1
+blend/enable 0
+depth/enable 1
+depth/inherit 0
+color/inherit 0
+material/inherit 0
+layer 0
+blend/mode 6 7
+fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+position 0.000000 0.000000 0.000000
+color 1.000000 1.000000 1.000000
+rotate 0.000000 0.000000 0.000000 1.000000
+scale 1.000000 1.000000 1.000000
+material/shininess 10.000000
+light/specular 0.000000 0.000000 0.000000 0.000000
+
+

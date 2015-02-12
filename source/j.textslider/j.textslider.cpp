@@ -1,16 +1,18 @@
-/** 
-	\file j.textslider.cpp
-	A slider displaying text and value
-	By Trond Lossius, Copyright � 2008
-	Inspired by a GUI widget from radiaL by jhno
-	
-	License: This code is licensed under the terms of the GNU LGPL
-	http://www.gnu.org/licenses/lgpl.html 
-  */
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.textslider : A slider displaying text and value
+ *
+ * @details Inspired by a GUI widget from radiaL by jhno
+ *
+ * @authors Trond Lossius, Nils Peters
+ *
+ * @copyright © 2008 by Trond Lossius @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
+ */
 
-
-// TODO: Integrate Dataspace Lib and Function Lib.
-// Would like to add 2nd inlet and outlet for communiting units to/from umenu
 
 #include "ext.h"
 #include "ext_obex.h"
@@ -18,7 +20,7 @@
 #include "ext_common.h"
 #include "jpatcher_api.h"	// jpatcher_api.h must come before z_dsp.h (in Jamoma.h)
 #include "jgraphics.h"
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 #include "TTFoundation.h"
 
 // Constants
@@ -662,17 +664,15 @@ void textslider_paint(t_textslider *x, t_object *view)
 	
 	if (x->attrRange[0] == x->attrRange[1])
 		value = 0.5;
-	else{
+	else {
 		value = (x->attrValue - x->attrRange[0])/x->attrRangeDelta;
 		TTLimit(value, 0.0, 1.0);   
 	}
 	double			position;
-
-	// TODO: Rounded corners
 	
 	g = (t_jgraphics*) patcherview_get_jgraphics(view);		// obtain graphics context
 	jbox_get_rect_for_view((t_object *)x, view, &rect);		// this is the box rectangle -- but we draw relative to 0 0, and thus only care about width & height
-	position = ((rect.width-3)*value)+1;					// -3: one pixel for each border and -1 for counting to N-1 
+	position = ((rect.width-3)*value)+1;					// -5: one pixels for each border and -1 for counting to N-1
 
 	// Draw passive part of slider
 	 
@@ -684,7 +684,7 @@ void textslider_paint(t_textslider *x, t_object *view)
 	// Draw frame
 	jgraphics_rectangle(g, 0., 0., rect.width, rect.height);
 	jgraphics_set_source_jrgba(g, &x->attrBorderColor); 
-	jgraphics_set_line_width(g, 1.0);
+	jgraphics_set_line_width(g, 2.0);
 	jgraphics_stroke(g);
 	
 	if (value > 0.)
@@ -695,7 +695,7 @@ void textslider_paint(t_textslider *x, t_object *view)
 		
 		// Draw slider knob
 		jgraphics_set_source_jrgba(g, &x->attrKnobColor);
-		jgraphics_line_draw_fast(g, position, 1.0, position, rect.height-1.0, 1.0);
+		jgraphics_line_draw_fast(g, position, 1.0, position, rect.height-2.0, 2.0);
 	}
 	
 }

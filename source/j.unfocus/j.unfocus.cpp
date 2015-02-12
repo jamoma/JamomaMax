@@ -1,11 +1,20 @@
-/**
- \file j.unfocus.cpp
- Remove the focus from any specific object in a patcher
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.unfocus : Remove the focus from any specific object in a patcher
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2009 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
+ * http://creativecommons.org/licenses/BSD/
+ */
 
- Copyright (c) 2009 by Timothy Place
-*/
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 
 // Data Structure for this object
@@ -21,7 +30,7 @@ void unfocus_bang(t_unfocus *x);
 
 
 // Class Statics
-static ClassPtr	sUnfocusClass;
+static t_class*	sUnfocusClass;
 
 
 /************************************************************************************/
@@ -79,8 +88,8 @@ void unfocus_assist(t_unfocus *x, void *b, long msg, long arg, char *dst)
 // METHOD: bang
 void unfocus_bang(t_unfocus *x)
 {
-	ObjectPtr	patcher = NULL;
-	ObjectPtr	patcherview = NULL;
+	t_object*	patcher = NULL;
+	t_object*	patcherview = NULL;
 	
 	object_obex_lookup(x, gensym("#P"), &patcher);
 	if (patcher)

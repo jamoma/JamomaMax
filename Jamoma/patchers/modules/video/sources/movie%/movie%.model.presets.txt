@@ -1,0 +1,25 @@
+
+- preset "default"
+- description "the default preset"
+# ###########################################
+# 
+data/active 1
+data/bypass 0
+framemotor 1
+framemotor/fps 25
+colormode argb
+loop/mode loop
+loop/points 0 240
+loop/report 0
+rate 1
+unique 1
+dim 640 480
+adapt 0
+output_texture 0
+vol 1
+highquality 1
+singlefield 1
+deinterlace 1
+path countdown.mov
+# 
+# ###########################################

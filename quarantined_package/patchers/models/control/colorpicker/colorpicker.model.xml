@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.6'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset name='default'>
+    <command address="color.1">0.000000 100.000000 50.000000 </command>
+    <command address="color.10">270.000000 100.000000 50.000000 </command>
+    <command address="color.11">300.000000 100.000000 50.000000 </command>
+    <command address="color.12">330.000000 100.000000 50.000000 </command>
+    <command address="color.2">120.000000 100.000000 50.000000 </command>
+    <command address="color.3">240.000000 100.000000 50.000000 </command>
+    <command address="color.4">90.000000 100.000000 50.000000 </command>
+    <command address="color.5">120.000000 100.000000 50.000000 </command>
+    <command address="color.6">150.000000 100.000000 50.000000 </command>
+    <command address="color.7">180.000000 100.000000 50.000000 </command>
+    <command address="color.8">210.000000 100.000000 50.000000 </command>
+    <command address="color.9">240.000000 100.000000 50.000000 </command>
+    <command address="numberOfColors">3</command>
+    <command address="view/freeze">0</command>
+
+  </preset>
+</jamoma>

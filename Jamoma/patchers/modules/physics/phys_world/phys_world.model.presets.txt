@@ -1,0 +1,23 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+data/active 1
+automatic 1
+data/bypass 0
+collisions 0
+collisions_mode simple
+context my_context
+debug 1
+dynamics 1
+fixedtimestep 60
+gravity 0 -9.800000 0
+maxsubsteps 1
+picker 1
+raytest_mode closest
+worldbox 1
+worldbox_scale 5 5 5
+worldname my_context-world
+# 
+# ###########################################

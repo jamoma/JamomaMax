@@ -1,10 +1,10 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternalsDSP
  *
- * @brief j.average≈ : Signal average analysis object for Jamoma AudioGraph.
+ * @brief j.average~ : wrapping the #TTAverage class as an MSP external
  *
- * @details This wraps the Jamoma DSP class #TTAverage as a Jamoma AudioGraph external for Max.
+ * @details
  *
  * @authors Tim Place, Trond Lossius
  *
@@ -16,7 +16,7 @@
 
 #include "TTClassWrapperMax.h"
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	WrappedClassOptionsPtr	options = new WrappedClassOptions;
 	WrappedClassPtr			c = NULL;

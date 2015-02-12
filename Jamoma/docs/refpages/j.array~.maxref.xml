@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			Jamoma
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -201,8 +201,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="bogus"/>
 	</seealsolist>
 </c74object>

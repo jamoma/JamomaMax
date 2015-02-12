@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.push" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Apply force to an object
 	</digest>
 	<description>
-		TEXT_HERE
+		Push an object around by applying force to it
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -16,7 +16,7 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			TEXT_HERE
+			Jamoma
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -189,8 +189,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="jit.phys.ghost"/>
 	</seealsolist>
 </c74object>

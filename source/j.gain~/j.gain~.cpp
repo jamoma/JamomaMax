@@ -1,9 +1,15 @@
-/* 
- * j.gain~
- * Multichannel gain control
- * Timothy Place, Copyright © 2005
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief j.gain~ : wraps the #TTGain class as a a Jamoma external for MSP
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2005 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
@@ -20,8 +26,8 @@
 // Data Structure for this object
 typedef struct _gain {
 	t_pxobject 		obj;
-	TTAudioObject*	xfade;				// crossfade object from the ttblue library
-	TTAudioObject*	gain;				// gain control object the ttblue library
+	TTAudioObject*	xfade;				// crossfade object from the Jamoma DSP library
+	TTAudioObject*	gain;				// gain control object the Jamoma DSP library
 	TTAudio*		signalIn;
 	TTAudio*		signalOut;
 	TTAudio*		signalTemp;
@@ -50,7 +56,7 @@ static t_class*	s_gain_class;
 /************************************************************************************/
 // Define our class
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c;
 	
@@ -92,16 +98,16 @@ void* gain_new(t_symbol* s, long argc, t_atom* argv)
 	short	i;
 	t_gain*	x = (t_gain*)object_alloc(s_gain_class);
 
-	if(x){
+	if (x) {
 		x->numChannels = 1;
-		if(attrstart && argv){
+		if (attrstart && argv) {
 			int argument = atom_getlong(argv);
 			x->numChannels = TTClip(argument, 1, MAX_NUM_CHANNELS);
 		}
 
 		dsp_setup((t_pxobject*)x, x->numChannels * 2);			// Create Object and Inlets
 		x->obj.z_misc = Z_NO_INPLACE;							// ESSENTIAL!   		
-		for(i=0; i < x->numChannels; i++)
+		for (i=0; i < x->numChannels; i++)
 			outlet_new((t_pxobject*)x, "signal");				// Create a signal Outlet
 		
 		x->xfade		= new TTAudioObject("crossfade", x->numChannels);
@@ -141,9 +147,9 @@ void gain_assist(t_gain *x, void *b, long msg, long arg, char *dst)
 	if (msg==1) { 	// Inlets
 		if (arg == 0)
 			snprintf(dst, 256, "(signal) raw audio (ch. %ld), control messages", arg+1);
-		else if(arg < x->numChannels)
+		else if (arg < x->numChannels)
 			snprintf(dst, 256, "(signal) raw audio (ch. %ld)", arg+1);
-		else if(arg >= x->numChannels)
+		else if (arg >= x->numChannels)
 			snprintf(dst, 256, "(signal) wet audio (ch. %ld)", arg-x->numChannels+1);
 	}
 	else if (msg==2) // Outlets		
@@ -165,7 +171,7 @@ t_max_err attr_set_gain(t_gain *x, void *attr, long argc, t_atom *argv)
 t_max_err attr_set_mix(t_gain *x, void *attr, long argc, t_atom *argv)
 {
 	x->attrMix = atom_getfloat(argv);
-	if(x->attrBypass == 0)
+	if (x->attrBypass == 0)
 		x->xfade->set("position", x->attrMix * 0.01);
 	return MAX_ERR_NONE;
 }
@@ -175,7 +181,7 @@ t_max_err attr_set_mix(t_gain *x, void *attr, long argc, t_atom *argv)
 t_max_err attr_set_bypass(t_gain *x, void *attr, long argc, t_atom *argv)
 {
 	x->attrBypass = atom_getlong(argv);
-	if(x->attrBypass == 0)
+	if (x->attrBypass == 0)
 		x->xfade->set("position", x->attrMix * 0.01);
 	else
 		x->xfade->set("position", 0.0);

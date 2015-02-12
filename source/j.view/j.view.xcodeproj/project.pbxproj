@@ -9,6 +9,10 @@
 /* Begin PBXFileReference section */
 		4606969A17CD0184000AF37B /* j.model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = j.model.h; path = ../j.model/j.model.h; sourceTree = "<group>"; };
 		463284A717D5ED1C008A11EC /* j.view.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.view.yml; sourceTree = "<group>"; };
+		4658A083187B06080061265E /* TTModelInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModelInfo.cpp; path = ../j.model/TTModelInfo.cpp; sourceTree = "<group>"; };
+		4658A084187B06080061265E /* TTModelInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModelInfo.h; path = ../j.model/TTModelInfo.h; sourceTree = "<group>"; };
+		4685D8A817E35A4600C79093 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		4685D8A917E35A4600C79093 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
 		D289EC34150FD2DB00FC7F7E /* j.model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = j.model.cpp; path = ../j.model/j.model.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -19,6 +23,10 @@
 				463284A717D5ED1C008A11EC /* j.view.yml */,
 				4606969A17CD0184000AF37B /* j.model.h */,
 				D289EC34150FD2DB00FC7F7E /* j.model.cpp */,
+				4658A084187B06080061265E /* TTModelInfo.h */,
+				4658A083187B06080061265E /* TTModelInfo.cpp */,
+				4685D8A917E35A4600C79093 /* TTModularClassWrapperMax.h */,
+				4685D8A817E35A4600C79093 /* TTModularClassWrapperMax.cpp */,
 			);
 			name = j.view;
 			sourceTree = "<group>";
@@ -45,7 +53,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "j.view" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -70,10 +78,6 @@
 		1DEB919008733D9F0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					"$(ARCHS_STANDARD_64_BIT)",
-				);
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUGGING_SYMBOLS = YES;
@@ -89,10 +93,6 @@
 		1DEB919108733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					"$(ARCHS_STANDARD_64_BIT)",
-				);
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				OTHER_CFLAGS = "";
@@ -104,7 +104,6 @@
 		1DEB919408733D9F0010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -115,7 +114,6 @@
 		1DEB919508733D9F0010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = macosx;

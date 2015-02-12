@@ -1,0 +1,31 @@
+defines:
+  - JAMOMA_EXPORTS
+  - TTSCORE_IMPORT
+
+sources:
+  - source/JamomaForMax.cpp
+  - source/JamomaModularForMax.cpp
+  - source/JamomaObject.cpp
+  - source/JamomaSymbols.cpp
+  - ../source/c74support/max-includes/common/commonsyms.cpp
+
+includes:
+  - includes
+  - ../../../Core/Foundation/library/includes
+  - ../../../Core/DSP/library/includes
+  - ../../../Core/Modular/library/includes
+  - ../../../Core/Modular/library/PeerObject
+  - ../../../Core/Modular/library/ProtocolLib
+  - ../../../Core/Modular/library/SchedulerLib
+  - ../../../Core/Score/library/includes
+  - C74-INCLUDES
+
+libraries:
+  - FOUNDATION
+  - DSP
+  - MODULAR
+  - SCORE
+  - C74
+
+frameworks:
+  - Carbon

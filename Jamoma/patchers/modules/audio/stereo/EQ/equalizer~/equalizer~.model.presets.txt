@@ -1,0 +1,1130 @@
+###########################################################################
+- preset "default"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type lowshelf
+filter.1/frequency 75
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.00000
+
+filter.2/type peaknotch
+filter.2/frequency 300
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 1000.000000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type highshelf
+filter.4/frequency 5000
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 1.000000
+
+
+###########################################################################
+- preset "basic_11_band"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type peaknotch
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 1.000000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 0.000000
+filter.7/octave_bandwidth 1.000000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 0.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.000000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.000000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+
+###########################################################################
+- preset "basic_11_band_cymbals"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type peaknotch
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain -6.400000
+filter.3/octave_bandwidth 1.390000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain -2.500000
+filter.4/octave_bandwidth 2.000000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 0.000000
+filter.7/octave_bandwidth 1.000000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 0.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.000000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 1.700000
+filter.10/octave_bandwidth 1.010000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 2.900000
+filter.11/octave_bandwidth 1.390000
+
+
+
+###########################################################################
+- preset "basic_11_kick"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type peaknotch
+filter.1/frequency 50
+filter.1/gain 2.000000
+filter.1/octave_bandwidth 1.010000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain -6.100000
+filter.4/octave_bandwidth 1.010000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 1.500000
+filter.7/octave_bandwidth 0.710000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 0.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 2.000000
+filter.9/octave_bandwidth 0.710000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.000000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+
+###########################################################################
+- preset "basic_11_rock_bass"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type lowshelf
+filter.1/frequency 50
+filter.1/gain -6.100000
+filter.1/octave_bandwidth 1.450000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 2.900000
+filter.2/octave_bandwidth 1.200000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain -3.000000
+filter.3/octave_bandwidth 1.300000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain 1.700000
+filter.4/octave_bandwidth 1.300000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 1.500000
+filter.5/octave_bandwidth 1.010000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 2.900000
+filter.6/octave_bandwidth 1.010000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 1.500000
+filter.7/octave_bandwidth 1.010000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 0.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.000000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.000000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+
+###########################################################################
+- preset "basic_11_rock_snare"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type peaknotch
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.160000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 4.000000
+filter.3/octave_bandwidth 1.010000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 1.000000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain -2.800000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 2.900000
+filter.7/octave_bandwidth 0.590000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 0.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 4.000000
+filter.9/octave_bandwidth 0.600000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.000000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+
+###########################################################################
+- preset "basic_11_band_toms"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type peaknotch
+filter.1/frequency 50
+filter.1/gain 2.900000
+filter.1/octave_bandwidth 1.010000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain -3.600000
+filter.4/octave_bandwidth 1.010000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 0.000000
+filter.7/octave_bandwidth 1.000000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 2.900000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.000000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.000000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+
+###########################################################################
+- preset "basic_100_hpf"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 100
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.00000
+
+filter.2/type peaknotch
+filter.2/frequency 315
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 0.500000
+
+filter.3/type peaknotch
+filter.3/frequency 640.000000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type highshelf
+filter.4/frequency 12000
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 2.000000
+
+
+
+
+###########################################################################
+- preset "basic_150_hpf"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 150
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.00000
+
+filter.2/type peaknotch
+filter.2/frequency 315
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 0.500000
+
+filter.3/type peaknotch
+filter.3/frequency 640.000000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type highshelf
+filter.4/frequency 12000
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 2.000000
+
+
+
+###########################################################################
+- preset "intimate_female_voice"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 80.000000
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.000000
+
+filter.2/type peaknotch
+filter.2/frequency 420.000000
+filter.2/gain 1.800000
+filter.2/octave_bandwidth 1.8000000
+
+filter.3/type peaknotch
+filter.3/frequency 1150.00000
+filter.3/gain -3.400000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type peaknotch
+filter.4/frequency 2545.000000
+filter.4/gain 3.300000
+filter.4/octave_bandwidth 0.790000
+
+
+
+###########################################################################
+- preset "move_to_the_back"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 150
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.00000
+
+filter.2/type peaknotch
+filter.2/frequency 315
+filter.2/gain -6.000000
+filter.2/octave_bandwidth 0.500000
+
+filter.3/type peaknotch
+filter.3/frequency 2545.700000
+filter.3/gain -3.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type lowpass
+filter.4/frequency 8083.900000
+filter.4/gain -3.600000
+filter.4/octave_bandwidth 3.260000
+
+
+
+###########################################################################
+- preset "mud_free"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 80
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.000000
+
+filter.2/type peaknotch
+filter.2/frequency 315.
+filter.2/gain -6.000000
+filter.2/octave_bandwidth 0.500000
+
+filter.3/type peaknotch
+filter.3/frequency 640.00000
+filter.3/gain -3.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type peaknotch
+filter.4/frequency 6126.3
+filter.4/gain 1.500000
+filter.4/octave_bandwidth 2.000000
+
+
+
+###########################################################################
+- preset "track_default"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 80
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.000000
+
+filter.2/type peaknotch
+filter.2/frequency 315.
+filter.2/gain -6.000000
+filter.2/octave_bandwidth 0.500000
+
+filter.3/type peaknotch
+filter.3/frequency 640.00000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type peaknotch
+filter.4/frequency 12000.000000
+filter.4/gain 1.500000
+filter.4/octave_bandwidth 2.000000
+
+
+
+###########################################################################
+- preset "basic_11_band_fender_or_mesa"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type peaknotch
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain -8.900000
+filter.2/octave_bandwidth 1.010000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 2.000000
+filter.3/octave_bandwidth 1.010000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 1.000000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain -3.000000
+filter.5/octave_bandwidth 1.390000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.390000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain -2.600000
+filter.7/octave_bandwidth 1.000000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 1.500000
+filter.8/octave_bandwidth 1.380000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.010000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.000000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+###########################################################################
+- preset "basic_11_marshall"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type peaknotch
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 2.300000
+filter.2/octave_bandwidth 1.010000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.010000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain -3.000000
+filter.4/octave_bandwidth 1.000000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.390000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain -1.900000
+filter.6/octave_bandwidth 1.390000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 0.700000
+filter.7/octave_bandwidth 1.380000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain -1.700000
+filter.8/octave_bandwidth 0.690000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.000000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.000000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+
+###########################################################################
+- preset "wide_male_vocal"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 120.30000
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.00000
+
+filter.2/type peaknotch
+filter.2/frequency 646.100000
+filter.2/gain 1.600000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 1352.000000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type peaknotch
+filter.4/frequency 4290.800000
+filter.4/gain 1.700000
+filter.4/octave_bandwidth 0.790000
+
+
+
+###########################################################################
+- preset "basic_11_band_full_vocals"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 2.900000
+filter.3/octave_bandwidth 1.910000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 1.910000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 0.000000
+filter.7/octave_bandwidth 1.380000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 0.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.000000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 2.600000
+filter.10/octave_bandwidth 1.380000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.000000
+
+
+
+###########################################################################
+- preset "basic_11_band_clear_vocals"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain -3.000000
+filter.3/octave_bandwidth 1.910000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain -0.500000
+filter.4/octave_bandwidth 1.910000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain 0.000000
+filter.7/octave_bandwidth 1.380000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain 2.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 1.000000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain 0.000000
+filter.10/octave_bandwidth 1.380000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 2.000000
+filter.11/octave_bandwidth 1.490000
+
+
+
+###########################################################################
+- preset "basic_11_band_background_vocals_1"
+# ""edit a comment""
+###########################################################################
+
+bands 11
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 50
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 1.000000
+
+filter.2/type peaknotch
+filter.2/frequency 100
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 1.000000
+
+filter.3/type peaknotch
+filter.3/frequency 200
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.910000
+
+filter.4/type peaknotch
+filter.4/frequency 400
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 1.910000
+
+filter.5/type peaknotch
+filter.5/frequency 800
+filter.5/gain 0.000000
+filter.5/octave_bandwidth 1.000000
+
+filter.6/type peaknotch
+filter.6/frequency 1500
+filter.6/gain 0.000000
+filter.6/octave_bandwidth 1.000000
+
+filter.7/type peaknotch
+filter.7/frequency 3000
+filter.7/gain -3.000000
+filter.7/octave_bandwidth 1.380000
+
+filter.8/type peaknotch
+filter.8/frequency 5000
+filter.8/gain -3.000000
+filter.8/octave_bandwidth 1.000000
+
+filter.9/type peaknotch
+filter.9/frequency 7000
+filter.9/gain 0.000000
+filter.9/octave_bandwidth 2.770000
+
+filter.10/type peaknotch
+filter.10/frequency 10000
+filter.10/gain -3.000000
+filter.10/octave_bandwidth 1.380000
+
+filter.11/type peaknotch
+filter.11/frequency 15000
+filter.11/gain 0.000000
+filter.11/octave_bandwidth 1.490000
+
+
+
+###########################################################################
+- preset "close_mic_acoustic"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 150
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.00000
+
+filter.2/type peaknotch
+filter.2/frequency 300
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 2.000000
+
+filter.3/type peaknotch
+filter.3/frequency 630.100000
+filter.3/gain -3.000000
+filter.3/octave_bandwidth 2.000000
+
+filter.4/type peaknotch
+filter.4/frequency 6126.3
+filter.4/gain 2.000000
+filter.4/octave_bandwidth 2.000000
+
+
+
+###########################################################################
+- preset "electro_drums_smooth"
+# ""edit a comment""
+###########################################################################
+
+bands 5
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type lowshelf
+filter.1/frequency 30.40000
+filter.1/gain -12.400000
+filter.1/octave_bandwidth 2.000000
+
+filter.2/type peaknotch
+filter.2/frequency 98.80000
+filter.2/gain 0.700000
+filter.2/octave_bandwidth 2.000000
+
+filter.3/type peaknotch
+filter.3/frequency 242.400000
+filter.3/gain -3.000000
+filter.3/octave_bandwidth 0.800000
+
+filter.4/type peaknotch
+filter.4/frequency 2063.3
+filter.4/gain -0.200000
+filter.4/octave_bandwidth 2.000000
+
+filter.5/type highshelf
+filter.5/frequency 5693.700000
+filter.5/gain -0.300000
+filter.5/octave_bandwidth 2.000000
+
+
+
+###########################################################################
+- preset "pads_low_cut"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 200.400000
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.00000
+
+filter.2/type peaknotch
+filter.2/frequency 300.000000
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 2.000000
+
+filter.3/type peaknotch
+filter.3/frequency 935.100000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 0.600000
+
+filter.4/type highshelf
+filter.4/frequency 7379.9
+filter.4/gain -2.500000
+filter.4/octave_bandwidth 2.000000
+
+
+
+###########################################################################
+- preset "bass_lopass"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type highpass
+filter.1/frequency 30.800000
+filter.1/gain 0.000000
+filter.1/octave_bandwidth 2.000000
+
+filter.2/type peaknotch
+filter.2/frequency 300.
+filter.2/gain 0.000000
+filter.2/octave_bandwidth 2.000000
+
+filter.3/type peaknotch
+filter.3/frequency 935.10000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 1.000000
+
+filter.4/type lowpass
+filter.4/frequency 607.800000
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 2.000000
+
+
+
+###########################################################################
+- preset "notch_50Hz"
+# ""edit a comment""
+###########################################################################
+
+bands 4
+audio/gain 100.000000
+audio/mix 100.000000
+
+filter.1/type lowshelf
+filter.1/frequency 20.700000
+filter.1/gain -2.500000
+filter.1/octave_bandwidth 2.00000
+
+filter.2/type bandstop
+filter.2/frequency 55.8
+filter.2/gain 0.700000
+filter.2/octave_bandwidth 2.000000
+
+filter.3/type peaknotch
+filter.3/frequency 1000.000000
+filter.3/gain 0.000000
+filter.3/octave_bandwidth 2.000000
+
+filter.4/type highshelf
+filter.4/frequency 5000
+filter.4/gain 0.000000
+filter.4/octave_bandwidth 2.000000

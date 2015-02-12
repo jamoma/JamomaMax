@@ -1,13 +1,20 @@
-/** 
- * \file j.savebang.cpp
- * External for Jamoma: send a bang when a user saves the patcher
- * by Tim Place, Copyright © 2009
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternals
+ *
+ * @brief j.savebang : Send a bang when a user saves the patcher
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2009 by Tim Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "Jamoma.h"
+
+#include "JamomaForMax.h"
 
 
 typedef struct _savebang{

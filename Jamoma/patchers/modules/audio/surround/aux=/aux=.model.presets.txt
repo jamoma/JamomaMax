@@ -1,0 +1,12 @@
+
+
+- preset "default"
+# "edit a comment"
+aux.1/active 0
+aux.2/active 0
+aux.3/active 0
+aux.1/gain -70.000000
+aux.2/gain -70.000000
+aux.3/gain -70.000000
+ 
+

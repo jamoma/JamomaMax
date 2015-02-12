@@ -1,11 +1,15 @@
-/* 
- *	tt.filter~
- *	External object for Max/MSP
- *	Wannabe Max wrapper (external) for all filter units in ttblue
- *	Example project for TTBlue
- *	Copyright © 2008 by Timothy Place & Trond Lossius
- * 
- * License: This code is licensed under the terms of the "New BSD License"
+/** @file
+ *
+ * @ingroup implementationMaxExternalsDSP
+ *
+ * @brief j.filter~ : wraps the #TTFilter class as a a Jamoma external for MSP
+ *
+ * @details
+ *
+ * @authors Tim Place, Trond Lossius
+ *
+ * @copyright © 2008 by Timothy Place @n
+ * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
 
@@ -16,7 +20,7 @@
 #include "commonsyms.h"					// Common symbols used by the Max 4.5 API
 #include "ext_obex.h"					// Max Object Extensions (attributes) Header
 
-#include "TTDSP.h"						// TTBlue Interfaces...
+#include "TTDSP.h"						// Jamoma Interfaces...
 
 #define DEFAULT_F 1000
 #define DEFAULT_Q 18
@@ -25,9 +29,9 @@
 /** Data structure for the tt.filter~ object. */
 typedef struct _filter	{
     t_pxobject 				obj;						///< REQUIRED: The MSP 'base class'
-	TTAudioObjectBasePtr	filter;						///< The TTBlue filter unit used
-	TTAudioSignalPtr		audioIn;					///< The TTBlue audio signal object that is used for filter input
-	TTAudioSignalPtr		audioOut;					///< The TTBlue audio signal object that us used for filter output
+	TTAudioObjectBasePtr	filter;						///< The Jamoma DSP filter unit used
+	TTAudioSignalPtr		audioIn;					///< The Jamoma audio signal object that is used for filter input
+	TTAudioSignalPtr		audioOut;					///< The Jamoma audio signal object that us used for filter output
 	TTUInt16				maxNumChannels;				///< The maximum number of audio channels permitted
 	TTUInt16				numChannels;				///< The actual number of audio channels used
 	TTUInt16				vs;							///< The vector size (number of samples per processing block)
@@ -96,7 +100,7 @@ t_class *filter_class;				// Required. Global pointing to this class
 /************************************************************************************/
 // Main() Function
 
-int TTCLASSWRAPPERMAX_EXPORT main(void)
+int C74_EXPORT main(void)
 {
 	t_class *c;
 	
@@ -148,7 +152,7 @@ void* filter_new(t_symbol *msg, short argc, t_atom *argv)
 	short		i;
    
     x = (t_filter *)object_alloc(filter_class);
-    if(x){
+    if (x) {
 		// Setting default attribute values
 		x->attrBypass = 0;
 		x->attrFrequency = DEFAULT_F;
@@ -156,7 +160,7 @@ void* filter_new(t_symbol *msg, short argc, t_atom *argv)
 		x->attrMode = _sym_nothing;
 		
 		x->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
-		if(attrstart && argv)
+		if (attrstart && argv)
 			x->maxNumChannels = atom_getlong(argv);
 
 		x->sr = sr;
@@ -170,7 +174,7 @@ void* filter_new(t_symbol *msg, short argc, t_atom *argv)
 
     	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout	
 	    dsp_setup((t_pxobject *)x, x->maxNumChannels + 2);		// inlets: signals + freq + q
-		for(i=0; i < x->maxNumChannels; i++)
+		for (i=0; i < x->maxNumChannels; i++)
 			outlet_new((t_pxobject *)x, "signal");				// outlets
 		
 		x->obj.z_misc = Z_NO_INPLACE;
@@ -194,19 +198,19 @@ void filter_free(t_filter *x)
 // Method for Assistance Messages
 void filter_assist(t_filter *x, void *b, long msg, long arg, char *dst)
 { 
-	if(msg==1){ 	// Inlets		
-		if(arg == x->maxNumChannels)
+	if (msg==1) { 	// Inlets		
+		if (arg == x->maxNumChannels)
 			strcpy(dst, "(signal) Frequency");
-		else if(arg == x->maxNumChannels+1)
+		else if (arg == x->maxNumChannels+1)
 			strcpy(dst, "(signal) Q-value");
-		else if(arg == 0)
+		else if (arg == 0)
 			strcpy(dst, "(signal) input 1, control messages");
-		else if(arg < x->maxNumChannels)
+		else if (arg < x->maxNumChannels)
 			snprintf(dst, 256, "(signal) input %ld", arg+1);
 		}
 				
-	else if(msg==2) {// Outlets		
-		if(arg == x->maxNumChannels)
+	else if (msg==2) {// Outlets		
+		if (arg == x->maxNumChannels)
 			strcpy(dst, "dumpout");					
 		else 
 			snprintf(dst, 256, "(signal) Filtered output %ld", arg+1);  
@@ -230,9 +234,9 @@ void filter_gettypes(t_filter *x)
 	atom_setsym(a, _sym_append);
 	
 	TTGetRegisteredClassNamesForTags(v, TT("filter"));
-	for(TTUInt16 i=0; i<v.size(); i++){
+	for (TTUInt16 i=0; i<v.size(); i++) {
 		TTSymbol classname;
-		v.get(i, classname);
+		classname = v[i];
 		atom_setsym(a+1, gensym((char*)classname.c_str()));
 		object_obex_dumpout(x, gensym("types"), 2, a);
 	}
@@ -241,7 +245,7 @@ void filter_gettypes(t_filter *x)
 
 t_max_err filter_setBypass(t_filter *x, void *attr, long argc, t_atom *argv)
 {
-	if(argc){
+	if (argc) {
 		x->attrBypass = atom_getlong(argv);
 		x->filter->setAttributeValue(kTTSym_bypass, (TTBoolean)x->attrBypass);
 	}
@@ -250,7 +254,7 @@ t_max_err filter_setBypass(t_filter *x, void *attr, long argc, t_atom *argv)
 
 t_max_err filter_setFrequency(t_filter *x, void *attr, long argc, t_atom *argv)
 {
-	if(argc){
+	if (argc) {
 		x->attrFrequency = atom_getfloat(argv);
 		x->filter->setAttributeValue(TT("frequency"), x->attrFrequency);
 	}
@@ -261,10 +265,10 @@ t_max_err filter_setQ(t_filter *x, void *attr, long argc, t_atom *argv)
 {
 	TTErr err = kTTErrNone;
 	
-	if(argc){
+	if (argc) {
 		x->attrQ = atom_getfloat(argv);
 		err = x->filter->setAttributeValue(TT("q"), x->attrQ);
-		if(err == kTTErrInvalidAttribute)
+		if (err == kTTErrInvalidAttribute)
 			err = x->filter->setAttributeValue(TT("resonance"), x->attrQ);
 	}
 	return MAX_ERR_NONE;
@@ -273,17 +277,17 @@ t_max_err filter_setQ(t_filter *x, void *attr, long argc, t_atom *argv)
 
 t_max_err filter_setType(t_filter *x, void *attr, long argc, t_atom *argv)
 {	
-	if(argc){
-		if(x->attrType != atom_getsym(argv)){	// if it hasn't changed, then jump to the end...
+	if (argc) {
+		if (x->attrType != atom_getsym(argv)) {	// if it hasn't changed, then jump to the end...
 			TTErr	err = kTTErrNone;
 
 			x->attrType = atom_getsym(argv);
 			TTObjectBaseInstantiate(TT(x->attrType->s_name), &x->filter, x->maxNumChannels);			
-			if(x->filter){
+			if (x->filter) {
 				// Now that we have our new filter, update it with the current state of the external:
 				x->filter->setAttributeValue(TT("frequency"), x->attrFrequency);
 				err = x->filter->setAttributeValue(TT("q"), x->attrQ);
-				if(err == kTTErrInvalidAttribute)
+				if (err == kTTErrInvalidAttribute)
 					err = x->filter->setAttributeValue(TT("resonance"), x->attrQ);
 				x->filter->setAttributeValue(TT("mode"), x->attrMode->s_name);				
 				x->filter->setAttributeValue(kTTSym_bypass, (TTBoolean)x->attrBypass);
@@ -314,15 +318,15 @@ t_int *filter_perform(t_int *w)
 	short		i, j;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioIn->setVector(i, vs, (t_float *)w[j+1]);
 	}
 
-	if(!x->obj.z_disabled)									// if we are not muted...
+	if (!x->obj.z_disabled)									// if we are not muted...
 		x->filter->process(x->audioIn, x->audioOut);		// Actual Filter process
 
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)w[j+2]);
 	}
@@ -339,20 +343,20 @@ t_int *filter_perform_freq(t_int *w)
 	t_float*	freq;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioIn->setVector(i, vs, (t_float *)w[j+1]);
 	}
 	j = (i*2) + 2;
 	freq = (t_float*)w[j];
 
-	if(!x->obj.z_disabled){
+	if (!x->obj.z_disabled) {
 		x->attrFrequency = *freq;
 		x->filter->setAttributeValue(TT("frequency"), x->attrFrequency);
 		x->filter->process(x->audioIn, x->audioOut);
 	}
 
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)w[j+2]);
 	}
@@ -369,19 +373,19 @@ t_int *filter_perform_q(t_int *w)
 	t_float*	q;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioIn->setVector(i, vs, (t_float *)w[j+1]);
 	}
 	q = (t_float*)w[(i*2) + 2];
 
-	if(!x->obj.z_disabled){
+	if (!x->obj.z_disabled) {
 		x->attrQ = *q;
 		x->filter->setAttributeValue(TT("q"), x->attrQ);
 		x->filter->process(x->audioIn, x->audioOut);
 	}
 
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)w[j+2]);
 	}
@@ -399,14 +403,14 @@ t_int *filter_perform_freq_q(t_int *w)
 	t_float*	q;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioIn->setVector(i, vs, (t_float *)w[j+1]);
 	}
 	freq = (t_float*)w[(i*2) + 2];
 	q = (t_float*)w[(i*2) + 3];
 
-	if(!x->obj.z_disabled){
+	if (!x->obj.z_disabled) {
 		x->attrFrequency = *freq;
 		x->attrQ = *q;
 		x->filter->setAttributeValue(TT("frequency"), x->attrFrequency);
@@ -414,7 +418,7 @@ t_int *filter_perform_freq_q(t_int *w)
 		x->filter->process(x->audioIn, x->audioOut);
 	}
 
-	for(i=0; i<x->numChannels; i++){
+	for (i=0; i<x->numChannels; i++) {
 		j = (i*2) + 1;
 		x->audioOut->getVector(i, vs, (t_float *)w[j+2]);
 	}
@@ -430,12 +434,12 @@ void filter_perform64(t_filter *x, t_object *dsp64, double **ins, long numins, d
 	short	i;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioIn->setVector(i, vs, ins[i]);
 		
 	x->filter->process(x->audioIn, x->audioOut);		// Actual Filter process
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioOut->getVectorCopy(i, vs, outs[i]);	
 }
 
@@ -448,7 +452,7 @@ void filter_perform64_freq(t_filter *x, t_object *dsp64, double **ins, long numi
 	TTUInt16		vs = x->audioIn->getVectorSizeAsInt();
 	TTSampleValue*	freq;
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioIn->setVector(i, vs, ins[i]);
 
 	freq = ins[i];		
@@ -456,7 +460,7 @@ void filter_perform64_freq(t_filter *x, t_object *dsp64, double **ins, long numi
 	x->filter->setAttributeValue(TT("frequency"), x->attrFrequency);
 	x->filter->process(x->audioIn, x->audioOut);
 		
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioOut->getVectorCopy(i, vs, outs[i]);	
 	
 }
@@ -469,7 +473,7 @@ void filter_perform64_q(t_filter *x, t_object *dsp64, double **ins, long numins,
 	TTSampleValue*	q;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioIn->setVector(i, vs, ins[i]);
 	
 	q = ins[i+1];	
@@ -477,7 +481,7 @@ void filter_perform64_q(t_filter *x, t_object *dsp64, double **ins, long numins,
 	x->filter->setAttributeValue(TT("q"), x->attrQ);
 	x->filter->process(x->audioIn, x->audioOut);
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioOut->getVectorCopy(i, vs, outs[i]);	
 }
 
@@ -489,7 +493,7 @@ void filter_perform64_freq_q(t_filter *x, t_object *dsp64, double **ins, long nu
 	TTSampleValue*	q;
 	TTUInt16	vs = x->audioIn->getVectorSizeAsInt();
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioIn->setVector(i, vs, ins[i]);
 	
 	freq = ins[i];
@@ -501,7 +505,7 @@ void filter_perform64_freq_q(t_filter *x, t_object *dsp64, double **ins, long nu
 	x->filter->process(x->audioIn, x->audioOut);
 	
 	
-	for(i=0; i<x->numChannels; i++)
+	for (i=0; i<x->numChannels; i++)
 		x->audioOut->getVectorCopy(i, vs, outs[i]);		
 }
 
@@ -522,11 +526,11 @@ void filter_dsp(t_filter *x, t_signal **sp, short *count)
 	
 	x->numChannels = 0;
 	x->vs = 0;
-	for(i=0; i < x->maxNumChannels; i++){
+	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i + 2;
-		if(count[i] && count[j]){
+		if (count[i] && count[j]) {
 			x->numChannels++;
-			if(sp[i]->s_n > x->vs)
+			if (sp[i]->s_n > x->vs)
 				x->vs = sp[i]->s_n;
 				
 			audioVectors[k] = sp[i]->s_vec;
@@ -535,12 +539,12 @@ void filter_dsp(t_filter *x, t_signal **sp, short *count)
 			k++;
 		}
 	}
-	if(count[x->maxNumChannels]){					// frequency inlet
+	if (count[x->maxNumChannels]) {					// frequency inlet
 		audioVectors[k] = sp[x->maxNumChannels]->s_vec;
 		k++;
 		hasFreq = true;
 	}
-	if(count[x->maxNumChannels+1]){					// q inlet
+	if (count[x->maxNumChannels+1]) {					// q inlet
 		audioVectors[k] = sp[x->maxNumChannels+1]->s_vec;
 		k++;
 		hasQ = true;
@@ -556,11 +560,11 @@ void filter_dsp(t_filter *x, t_signal **sp, short *count)
 	x->sr = sp[0]->s_sr;	
 	x->filter->setAttributeValue(kTTSym_sampleRate, sp[0]->s_sr);
 	
-	if(hasFreq && hasQ)
+	if (hasFreq && hasQ)
 		dsp_addv(filter_perform_freq_q, k, audioVectors);
-	else if(hasFreq)
+	else if (hasFreq)
 		dsp_addv(filter_perform_freq, k, audioVectors);
-	else if(hasQ)
+	else if (hasQ)
 		dsp_addv(filter_perform_q, k, audioVectors);
 	else
 		dsp_addv(filter_perform, k, audioVectors);
@@ -577,16 +581,16 @@ void filter_dsp64(t_filter *x, t_object *dsp64, short *count, double samplerate,
 	x->numChannels = 0;
 	x->vs = maxvectorsize;
 	
-	for(i=0; i < x->maxNumChannels; i++){
+	for (i=0; i < x->maxNumChannels; i++) {
 		j = x->maxNumChannels + i + 2;
-		if(count[i] && count[j])
+		if (count[i] && count[j])
 			x->numChannels++;		
 	}
 	
-	if(count[x->maxNumChannels])					// frequency inlet
+	if (count[x->maxNumChannels])					// frequency inlet
 		hasFreq = true;
 	
-	if(count[x->maxNumChannels+1])					// q inlet
+	if (count[x->maxNumChannels+1])					// q inlet
 		hasQ = true;	
 	
 	x->audioIn->setAttributeValue(kTTSym_numChannels, x->numChannels);
@@ -599,11 +603,11 @@ void filter_dsp64(t_filter *x, t_object *dsp64, short *count, double samplerate,
 	x->sr = samplerate;	
 	x->filter->setAttributeValue(kTTSym_sampleRate, samplerate);
 	
-	if(hasFreq && hasQ)
+	if (hasFreq && hasQ)
 		object_method(dsp64, gensym("dsp_add64"), x, filter_perform64_freq_q, 0, NULL);
-	else if(hasFreq)
+	else if (hasFreq)
 		object_method(dsp64, gensym("dsp_add64"), x, filter_perform64_freq, 0, NULL);
-	else if(hasQ)
+	else if (hasQ)
 		object_method(dsp64, gensym("dsp_add64"), x, filter_perform64_q, 0, NULL);
 	else
 		object_method(dsp64, gensym("dsp_add64"), x, filter_perform64, 0, NULL);	

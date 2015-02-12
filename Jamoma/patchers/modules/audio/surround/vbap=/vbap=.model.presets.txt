@@ -1,0 +1,11 @@
+
+
+- preset "default"
+# "edit a comment"
+audio/gain 100.000000
+audio/mute 0
+dimensions 2
+numSources 1
+numSpeakers 8
+ 
+

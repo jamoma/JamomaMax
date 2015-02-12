@@ -1,8 +1,8 @@
 /** @file
  *
- * @ingroup implementationMax
+ * @ingroup implementationMaxExternals
  *
- * @brief External for Jamoma: j.delta - Calculate 1st/2nd order differences and velocity.
+ * @brief j.delta - External for Jamoma: j.delta - Calculate 1st/2nd order differences and velocity.
  *
  * @details This object replaces tl.delta, tl.delta2 and tl.velocity from the tl.objects distribution.
  *
@@ -84,7 +84,7 @@
 	MAXREF--->
 */
 
-#include "Jamoma.h"
+#include "JamomaForMax.h"
 
 #define nonzero(x)				((x > 0) ? x : 1.)
 
@@ -106,7 +106,7 @@ void delta_bang(t_delta *x);
 void delta_int(t_delta *x, long n);
 void delta_float(t_delta *x, double f);
 void delta_clear(t_delta *x);
-void delta_set(t_delta *x, Symbol *s, long ac, Atom *setval);
+void delta_set(t_delta *x, Symbol *s, long ac, t_atom *setval);
 void delta_assist(t_delta *x, void *b, long msg, long arg, char *dst);
 
 // Globals

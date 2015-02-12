@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='iso-8859-1' standalone='yes' ?>
+
+<jamoma version='0.6'
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xsi:schemaLocation='http://jamoma.org/ file:jamoma.xsd'
+>
+  <preset name='default'>
+    <command address="port">0</command>
+    <command address="view/freeze">0</command>
+  </preset>
+  <preset number='2' name='Max0'>
+    <command address="port">4000</command>
+    <command address="service_name">Max</command>
+    <command address="view/freeze">0</command>
+  </preset>
+  <preset number='3' name='Bob1'>
+    <command address="port">4001</command>
+    <command address="service_name">Bob</command>
+    <command address="view/freeze">0</command>
+  </preset>
+  <preset number='4' name='Joe0'>
+    <command address="port">4000</command>
+    <command address="service_name">Joe</command>
+    <command address="view/freeze">0</command>
+  </preset>
+  <preset number='5' name='Bill1'>
+    <command address="port">4001</command>
+    <command address="service_name">Bill</command>
+    <command address="view/freeze">0</command>
+  </preset>
+  <preset number='6' name='Joe2'>
+    <command address="port">4002</command>
+    <command address="service_name">Joe</command>
+    <command address="view/freeze">0</command>
+  </preset>
+</jamoma>
