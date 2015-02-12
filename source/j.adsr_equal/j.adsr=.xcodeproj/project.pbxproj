@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		465094B31A8CB5C400492298 /* j.adsr_equal.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.adsr_equal.yml; sourceTree = "<group>"; };
 		A746B20B192E7C8F0074DE9E /* j.adsr.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.adsr.cpp; sourceTree = "<group>"; };
-		A746B20C192E7C8F0074DE9E /* j.adsr=.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = "j.adsr=.yml"; sourceTree = "<group>"; };
 		A746B20D192E7C8F0074DE9E /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -16,7 +16,7 @@
 		A746B200192E7C740074DE9E = {
 			isa = PBXGroup;
 			children = (
-				A746B20C192E7C8F0074DE9E /* j.adsr=.yml */,
+				465094B31A8CB5C400492298 /* j.adsr_equal.yml */,
 				A746B20D192E7C8F0074DE9E /* Makefile */,
 				A746B20B192E7C8F0074DE9E /* j.adsr.cpp */,
 			);
