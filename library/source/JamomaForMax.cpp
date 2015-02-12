@@ -67,8 +67,13 @@ void jamoma_init(void)
 		if (maxversion() >= 0x0600)
 			max6 = true;
         
-		// Init the Modular library
+		// Initialize the Modular library
         TTModularInit();
+        
+#ifdef TTSCORE_IMPORT
+        // Initialize the Score framework
+        TTScoreInit();
+#endif
         
         // prepare a symbol for Jamoma
         kTTSym_Jamoma = TTSymbol(JAMOMA);
