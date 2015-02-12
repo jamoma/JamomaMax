@@ -6,74 +6,69 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXFileReference section */
-		46147FE616D0EAA7005D50AD /* j.cue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.cue.cpp; sourceTree = "<group>"; };
-		46534A7316E21A0E00F61ED0 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TTModularClassWrapperMax.cpp; path = ../classwrapper/TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
-		46534A7416E21A0E00F61ED0 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTModularClassWrapperMax.h; path = ../classwrapper/TTModularClassWrapperMax.h; sourceTree = "<group>"; };
-		469BD9D8180B4B8500A023B3 /* j.cue.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.cue.yml; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
 /* Begin PBXGroup section */
-		46147FD616D0EA75005D50AD = {
+		46F4EF221A8CA86000AD45C5 = {
 			isa = PBXGroup;
 			children = (
-				469BD9D8180B4B8500A023B3 /* j.cue.yml */,
-				46147FE616D0EAA7005D50AD /* j.cue.cpp */,
-				46534A7416E21A0E00F61ED0 /* TTModularClassWrapperMax.h */,
-				46534A7316E21A0E00F61ED0 /* TTModularClassWrapperMax.cpp */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
-		46147FDD16D0EA75005D50AD /* j.cue */ = {
+		46F4EF271A8CA86000AD45C5 /* j.state */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "$(ACTION) $(Configuration)";
-			buildConfigurationList = 46147FE016D0EA75005D50AD /* Build configuration list for PBXLegacyTarget "j.cue" */;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 46F4EF2A1A8CA86000AD45C5 /* Build configuration list for PBXLegacyTarget "j.state" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
-			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = j.cue;
+			name = j.state;
 			passBuildSettingsInEnvironment = 1;
-			productName = j.cue;
+			productName = j.state;
 		};
 /* End PBXLegacyTarget section */
 
 /* Begin PBXProject section */
-		46147FD816D0EA75005D50AD /* Project object */ = {
+		46F4EF231A8CA86000AD45C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Jamoma;
 			};
-			buildConfigurationList = 46147FDB16D0EA75005D50AD /* Build configuration list for PBXProject "j.cue" */;
+			buildConfigurationList = 46F4EF261A8CA86000AD45C5 /* Build configuration list for PBXProject "j.state" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 46147FD616D0EA75005D50AD;
+			mainGroup = 46F4EF221A8CA86000AD45C5;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				46147FDD16D0EA75005D50AD /* j.cue */,
+				46F4EF271A8CA86000AD45C5 /* j.state */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
-		46147FDE16D0EA75005D50AD /* Debug */ = {
+		46F4EF281A8CA86000AD45C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -86,8 +81,10 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -95,28 +92,38 @@
 			};
 			name = Debug;
 		};
-		46147FDF16D0EA75005D50AD /* Release */ = {
+		46F4EF291A8CA86000AD45C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		46147FE116D0EA75005D50AD /* Debug */ = {
+		46F4EF2B1A8CA86000AD45C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUGGING_SYMBOLS = YES;
@@ -128,7 +135,7 @@
 			};
 			name = Debug;
 		};
-		46147FE216D0EA75005D50AD /* Release */ = {
+		46F4EF2C1A8CA86000AD45C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_CFLAGS = "";
@@ -140,25 +147,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46147FDB16D0EA75005D50AD /* Build configuration list for PBXProject "j.cue" */ = {
+		46F4EF261A8CA86000AD45C5 /* Build configuration list for PBXProject "j.state" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46147FDE16D0EA75005D50AD /* Debug */,
-				46147FDF16D0EA75005D50AD /* Release */,
+				46F4EF281A8CA86000AD45C5 /* Debug */,
+				46F4EF291A8CA86000AD45C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46147FE016D0EA75005D50AD /* Build configuration list for PBXLegacyTarget "j.cue" */ = {
+		46F4EF2A1A8CA86000AD45C5 /* Build configuration list for PBXLegacyTarget "j.state" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46147FE116D0EA75005D50AD /* Debug */,
-				46147FE216D0EA75005D50AD /* Release */,
+				46F4EF2B1A8CA86000AD45C5 /* Debug */,
+				46F4EF2C1A8CA86000AD45C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 46147FD816D0EA75005D50AD /* Project object */;
+	rootObject = 46F4EF231A8CA86000AD45C5 /* Project object */;
 }
