@@ -2,7 +2,7 @@
  * 
  * @ingroup implementationMaxExternals
  *
- * @brief j.cue - store and recall the state of several models
+ * @brief j.state - store and recall the state of several models
  *
  * @details
  *
@@ -19,8 +19,8 @@
 
 // This is used to store extra data
 typedef struct extra {
-	TTObject	*toEdit;				// the object to edit (a cue or all the cuelist)
-	TTSymbol	cueName;			// the name of the edited cue
+	TTObject	*toEdit;				// the object to edit (a state or all the statelist)
+	TTSymbol	stateName;			// the name of the edited state
 	TTString	*text;				// the text of the editor to read after edclose
 	t_object*	textEditor;			// the text editor window
 } t_extra;
@@ -30,84 +30,84 @@ typedef struct extra {
 #define dump_out 1
 
 // Definitions
-void		WrapTTCueManagerClass(WrappedClassPtr c);
-void		WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv);
-void		WrappedCueManageClass_free(TTPtr self);
+void		WrapTTStateManagerClass(WrappedClassPtr c);
+void		WrappedStateManagerClass_new(TTPtr self, long argc, t_atom *argv);
+void		WrappedStateManageClass_free(TTPtr self);
 
-void		cue_assist(TTPtr self, void *b, long msg, long arg, char *dst);
+void		state_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
-void		cue_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		cue_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		cue_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
-void		cue_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		cue_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		cue_read_again(TTPtr self);
-void		cue_doread_again(TTPtr self);
+void		state_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_read_again(TTPtr self);
+void		state_doread_again(TTPtr self);
 
-void		cue_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void		cue_write_again(TTPtr self);
-void		cue_dowrite_again(TTPtr self);
+void		state_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		state_write_again(TTPtr self);
+void		state_dowrite_again(TTPtr self);
 
-void		cue_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
+void		state_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
-void		cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
-void		cue_edclose(TTPtr self, char **text, long size);
-void		cue_doedit(TTPtr self);
+void		state_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
+void		state_edclose(TTPtr self, char **text, long size);
+void		state_doedit(TTPtr self);
 
-void		cue_subscribe(TTPtr self);
+void		state_subscribe(TTPtr self);
 
-void		cue_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
+void		state_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 
-t_max_err	cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av);
-t_max_err	cue_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av);
+t_max_err	state_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av);
+t_max_err	state_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av);
 
 int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
-	spec->_wrap = &WrapTTCueManagerClass;
-	spec->_new = &WrappedCueManagerClass_new;
-	spec->_free = &WrappedCueManageClass_free;
+	spec->_wrap = &WrapTTStateManagerClass;
+	spec->_new = &WrappedStateManagerClass_new;
+	spec->_free = &WrappedStateManageClass_free;
 	spec->_any = NULL;
 	
-	return wrapTTModularClassAsMaxClass(kTTSym_CueManager, "j.cue", NULL, spec);
+	return wrapTTModularClassAsMaxClass(kTTSym_StateManager, "j.state", NULL, spec);
 }
 
-void WrapTTCueManagerClass(WrappedClassPtr c)
+void WrapTTStateManagerClass(WrappedClassPtr c)
 {
-	class_addmethod(c->maxClass, (method)cue_assist,				"assist",				A_CANT, 0L);
+	class_addmethod(c->maxClass, (method)state_assist,                  "assist",				A_CANT, 0L);
     
-    class_addmethod(c->maxClass, (method)cue_return_model_address,  "return_model_address", A_CANT, 0);
+    class_addmethod(c->maxClass, (method)state_return_model_address,    "return_model_address", A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)cue_return_value,			"return_value",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)state_return_value,			"return_value",			A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)cue_return_names,			"return_names",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)state_return_names,			"return_names",			A_CANT, 0);
     
-	class_addmethod(c->maxClass, (method)cue_read,					"cue_read",				A_CANT, 0);
-	class_addmethod(c->maxClass, (method)cue_write,					"cue_write",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)state_read,					"state_read",			A_CANT, 0);
+	class_addmethod(c->maxClass, (method)state_write,					"state_write",			A_CANT, 0);
 	
-	class_addmethod(c->maxClass, (method)cue_edit,					"dblclick",				A_CANT, 0);
-	class_addmethod(c->maxClass, (method)cue_edclose,				"edclose",				A_CANT, 0);
+	class_addmethod(c->maxClass, (method)state_edit,					"dblclick",				A_CANT, 0);
+	class_addmethod(c->maxClass, (method)state_edclose,                 "edclose",				A_CANT, 0);
     
-    class_addmethod(c->maxClass, (method)cue_get,					"get",					A_GIMME, 0);
-	class_addmethod(c->maxClass, (method)cue_set,					"set",                  A_GIMME, 0);
+    class_addmethod(c->maxClass, (method)state_get,                     "get",					A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)state_set,                     "set",                  A_GIMME, 0);
 	
-	class_addmethod(c->maxClass, (method)cue_read,					"read",					A_GIMME, 0);
-	class_addmethod(c->maxClass, (method)cue_write,					"write",				A_GIMME, 0);
-	class_addmethod(c->maxClass, (method)cue_edit,					"edit",					A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)state_read,					"read",					A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)state_write,					"write",				A_GIMME, 0);
+	class_addmethod(c->maxClass, (method)state_edit,					"edit",					A_GIMME, 0);
 	
-	class_addmethod(c->maxClass, (method)cue_read_again,			"read/again",			0);
-	class_addmethod(c->maxClass, (method)cue_write_again,			"write/again",			0);
+	class_addmethod(c->maxClass, (method)state_read_again,              "read/again",			0);
+	class_addmethod(c->maxClass, (method)state_write_again,             "write/again",			0);
     
     CLASS_ATTR_LONG(c->maxClass,		"relative",	0,		WrappedModularInstance,	index);	// use index member to store relative
-	CLASS_ATTR_ACCESSORS(c->maxClass,	"relative",	cue_get_relative,	cue_set_relative);
+	CLASS_ATTR_ACCESSORS(c->maxClass,	"relative",	state_get_relative,	state_set_relative);
 	CLASS_ATTR_STYLE(c->maxClass,		"relative",	0,		"onoff");
 }
 
-void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
+void WrappedStateManagerClass_new(TTPtr self, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	t_symbol*					name;
@@ -115,10 +115,10 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 	TTObject					aTextHandler;
  	long						attrstart = attr_args_offset(argc, argv);			// support normal arguments
 	
-	// create the cue manager
-	jamoma_cueManager_create((t_object*)x, x->wrappedObject);
+	// create the state manager
+	jamoma_stateManager_create((t_object*)x, x->wrappedObject);
     
-    // read first argument to know if the cue binds a namespace
+    // read first argument to know if the state binds a namespace
 	if (attrstart && argv) {
 		
 		if (atom_gettype(argv) == A_SYM) {
@@ -145,7 +145,7 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
     EXTRA->toEdit = new TTObject();
 	*EXTRA->toEdit = x->wrappedObject;
-	EXTRA->cueName = kTTSymEmpty;
+	EXTRA->stateName = kTTSymEmpty;
 	EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
 	
@@ -153,13 +153,13 @@ void WrappedCueManagerClass_new(TTPtr self, long argc, t_atom *argv)
 	attr_args_process(x, argc, argv);
 }
 
-void WrappedCueManageClass_free(TTPtr self)
+void WrappedStateManageClass_free(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     
     delete EXTRA->toEdit;
     
-    // the texthanler have to forget the cue manager object
+    // the texthanler have to forget the state manager object
     TTValue o;
     x->internals->lookup(kTTSym_TextHandler, o);
     TTObject empty, aTextHandler = o[0];
@@ -168,7 +168,7 @@ void WrappedCueManageClass_free(TTPtr self)
 	free(EXTRA);
 }
 
-void cue_subscribe(TTPtr self)
+void state_subscribe(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue						v;
@@ -210,11 +210,11 @@ void cue_subscribe(TTPtr self)
 		// The following must be deferred because we have to interrogate our box,
 		// and our box is not yet valid until we have finished instantiating the object.
 		// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-		defer_low((t_object*)x, (method)cue_subscribe, NULL, 0, 0);
+		defer_low((t_object*)x, (method)state_subscribe, NULL, 0, 0);
 	}
 }
 
-void cue_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
+void state_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTAddress   absoluteAddress;
@@ -228,14 +228,14 @@ void cue_return_model_address(TTPtr self, t_symbol *msg, long argc, const t_atom
 }
 
 // Method for Assistance Messages
-void cue_assist(TTPtr self, void *b, long msg, long arg, char *dst)
+void state_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 {
 	if (msg==1)			// Inlets
 		strcpy(dst, "");		
 	else {							// Outlets
 		switch(arg) {
 			case line_out:
-				strcpy(dst, "cue output");
+				strcpy(dst, "state output");
 				break;
 			case dump_out:
 				strcpy(dst, "dumpout");
@@ -244,7 +244,7 @@ void cue_assist(TTPtr self, void *b, long msg, long arg, char *dst)
  	}
 }
 
-void cue_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -255,19 +255,19 @@ void cue_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		outlet_anything(x->outlets[line_out], msg, argc, argv);
 }
 
-void cue_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_return_names(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	outlet_anything(x->outlets[dump_out], gensym("names"), argc, argv);
 }
 
-void cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTHashPtr   allCues;
+    TTHashPtr   allStates;
 	TTValue     v;
 	TTSymbol    name, attribute;
-    TTObject	cue;
+    TTObject	state;
     long        ac = 0;
 	t_atom      *av = NULL;
     
@@ -278,17 +278,17 @@ void cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             attribute = TTSymbol((char*)atom_getsym(argv)->s_name);
             name = TTSymbol((char*)atom_getsym(argv+1)->s_name);
             
-            // get cue object table
-            x->wrappedObject.get("cues", v);
-            allCues = TTHashPtr((TTPtr)v[0]);
+            // get state object table
+            x->wrappedObject.get("states", v);
+            allStates = TTHashPtr((TTPtr)v[0]);
             
-            if (allCues) {
+            if (allStates) {
                 
-                // get cue
-                if (!allCues->lookup(name, v)) {
+                // get state
+                if (!allStates->lookup(name, v)) {
                     
-                    cue = v[0];
-                    if (!cue.get(attribute, v)) {
+                    state = v[0];
+                    if (!state.get(attribute, v)) {
                         
                         v.prepend(name);
                         jamoma_ttvalue_to_Atom(v, &ac, &av);
@@ -299,19 +299,19 @@ void cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                         object_error((t_object*)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((t_object*)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+                    object_error((t_object*)x, "%s state does'nt exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
 }
 
-void cue_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-    TTHashPtr   allCues;
+    TTHashPtr   allStates;
 	TTValue     v;
 	TTSymbol    name, attribute;
-    TTObject	cue;
+    TTObject	state;
     
     if (argc >= 2) {
         
@@ -320,36 +320,36 @@ void cue_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             attribute = TTSymbol((char*)atom_getsym(argv)->s_name);
             name = TTSymbol((char*)atom_getsym(argv+1)->s_name);
             
-            // get cue object table
-            x->wrappedObject.get("cues", v);
-            allCues = TTHashPtr((TTPtr)v[0]);
+            // get state object table
+            x->wrappedObject.get("states", v);
+            allStates = TTHashPtr((TTPtr)v[0]);
             
-            if (allCues) {
+            if (allStates) {
                 
-                // get cue
-                if (!allCues->lookup(name, v)) {
+                // get state
+                if (!allStates->lookup(name, v)) {
                     
-                    cue = v[0];
+                    state = v[0];
                     
                     // prepare value to set
                     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc-2, argv+2);
                     
-                    if (cue.set(attribute, v))
+                    if (state.set(attribute, v))
                         object_error((t_object*)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((t_object*)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+                    object_error((t_object*)x, "%s state does'nt exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
 }
 
-void cue_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
-	defer(self, (method)cue_doread, msg, argc, argv);
+	defer(self, (method)state_doread, msg, argc, argv);
 }
 
-void cue_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
@@ -382,12 +382,12 @@ void cue_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	}
 }
 
-void cue_read_again(TTPtr self)
+void state_read_again(TTPtr self)
 {
-	defer(self, (method)cue_doread_again, NULL, 0, NULL);
+	defer(self, (method)state_doread_again, NULL, 0, NULL);
 }
 
-void cue_doread_again(TTPtr self)
+void state_doread_again(TTPtr self)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue		o, v, none;
@@ -416,12 +416,12 @@ void cue_doread_again(TTPtr self)
 	}
 }
 
-void cue_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
-	defer(self, (method)cue_dowrite, msg, argc, argv);
+	defer(self, (method)state_dowrite, msg, argc, argv);
 }
 
-void cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void state_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	char 			filename[MAX_FILENAME_CHARS];
@@ -433,7 +433,7 @@ void cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	if (x->wrappedObject.valid()) {
 		
 		// Default TEXT File Name
-		snprintf(filename, MAX_FILENAME_CHARS, "untitled.cues.txt");
+		snprintf(filename, MAX_FILENAME_CHARS, "untitled.states.txt");
 		
 		fullpath = jamoma_file_write((t_object*)x, argc, argv, filename);
 		v.append(fullpath);
@@ -457,12 +457,12 @@ void cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	}
 }
 
-void cue_write_again(TTPtr self)
+void state_write_again(TTPtr self)
 {
-	defer(self, (method)cue_dowrite_again, NULL, 0, NULL);
+	defer(self, (method)state_dowrite_again, NULL, 0, NULL);
 }
 
-void cue_dowrite_again(TTPtr self)
+void state_dowrite_again(TTPtr self)
 {	
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			o, v, none;
@@ -491,7 +491,7 @@ void cue_dowrite_again(TTPtr self)
 	}
 }
 
-void cue_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
+void state_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			v, none;
@@ -528,21 +528,21 @@ void cue_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 	}
 }
 
-void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
+void state_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTString			*buffer;
 	char				title[MAX_FILENAME_CHARS];
 	TTObject            aTextHandler;
-	TTHashPtr			allCues;
+	TTHashPtr			allStates;
 	TTValue				v, o, none;
 	TTSymbol			name = kTTSymEmpty;
     t_atom				a;
 	TTErr				tterr;
 	
-	// choose object to edit : default the cuelist
+	// choose object to edit : default the statelist
 	*EXTRA->toEdit = x->wrappedObject;
-	EXTRA->cueName = kTTSymEmpty;
+	EXTRA->stateName = kTTSymEmpty;
 	
 	if (argc && argv)
     {
@@ -550,7 +550,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
         {
             TTUInt32 index = atom_getlong(argv);
 			
-			// get cues names
+			// get states names
 			x->wrappedObject.get("names", v);
 			
 			if (index > 0 && index <= v.size())
@@ -566,18 +566,18 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		
 		if (name != kTTSymEmpty)
         {
-			// get cue object table
-			x->wrappedObject.get("cues", v);
-			allCues = TTHashPtr((TTPtr)v[0]);
+			// get state object table
+			x->wrappedObject.get("states", v);
+			allStates = TTHashPtr((TTPtr)v[0]);
 			
-			if (allCues)
+			if (allStates)
             {
-				// get cue to edit
-				if (!allCues->lookup(name, v))
+				// get state to edit
+				if (!allStates->lookup(name, v))
                 {
-					// edit a cue
+					// edit a state
 					*EXTRA->toEdit = v[0];
-					EXTRA->cueName = name;
+					EXTRA->stateName = name;
 				}
 				else
                 {
@@ -612,7 +612,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		object_method(EXTRA->textEditor, _sym_settext, buffer->c_str(), _sym_utf_8);
 		object_attr_setchar(EXTRA->textEditor, gensym("scratch"), 1);
 		
-		snprintf(title, MAX_FILENAME_CHARS, "cuelist editor");
+		snprintf(title, MAX_FILENAME_CHARS, "statelist editor");
 		object_attr_setsym(EXTRA->textEditor, _sym_title, gensym(title));
         
         // output a flag
@@ -625,17 +625,17 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 	}
 }
 
-void cue_edclose(TTPtr self, char **text, long size)
+void state_edclose(TTPtr self, char **text, long size)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
 	EXTRA->text = new TTString(*text);
 	EXTRA->textEditor = NULL;
 	
-	defer_low((t_object*)x, (method)cue_doedit, NULL, 0, NULL);
+	defer_low((t_object*)x, (method)state_doedit, NULL, 0, NULL);
 }
 
-void cue_doedit(TTPtr self)
+void state_doedit(TTPtr self)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObject    aTextHandler;
@@ -666,10 +666,10 @@ void cue_doedit(TTPtr self)
 	EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
 	*EXTRA->toEdit = x->wrappedObject;
-	EXTRA->cueName = kTTSymEmpty;
+	EXTRA->stateName = kTTSymEmpty;
 }
 
-t_max_err cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av)
+t_max_err state_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -689,7 +689,7 @@ t_max_err cue_get_relative(TTPtr self, TTPtr attr, long *ac, t_atom **av)
 	return MAX_ERR_NONE;
 }
 
-t_max_err cue_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av)
+t_max_err state_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	
@@ -700,7 +700,7 @@ t_max_err cue_set_relative(TTPtr self, TTPtr attr, long ac, const t_atom *av)
 			// The following must be deferred because we have to interrogate our box,
 			// and our box is not yet valid until we have finished instantiating the object.
 			// Trying to use a loadbang method instead is also not fully successful (as of Max 5.0.6)
-			defer_low((t_object*)x, (method)cue_subscribe, NULL, 0, 0);
+			defer_low((t_object*)x, (method)state_subscribe, NULL, 0, 0);
 		}
 		
 	} else {

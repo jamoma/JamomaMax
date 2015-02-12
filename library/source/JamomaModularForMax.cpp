@@ -392,8 +392,8 @@ TTErr jamoma_presetManager_create(t_object *x, TTObject& returnedPresetManager)
 	return kTTErrNone;
 }
 
-/**	Create a cue manager object */
-TTErr jamoma_cueManager_create(t_object *x, TTObject& returnedCueManager)
+/**	Create a state manager object */
+TTErr jamoma_stateManager_create(t_object *x, TTObject& returnedstateManager)
 {
 	TTObject returnLineCallback;
 	
@@ -402,7 +402,7 @@ TTErr jamoma_cueManager_create(t_object *x, TTObject& returnedCueManager)
 	returnLineCallback.set(kTTSym_baton, TTPtr(x));
 	returnLineCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	
-	returnedCueManager = TTObject(kTTSym_CueManager, returnLineCallback);
+	returnedstateManager = TTObject(kTTSym_stateManager, returnLineCallback);
 	return kTTErrNone;
 }
 
