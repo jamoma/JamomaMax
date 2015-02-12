@@ -6,10 +6,34 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		465094A21A8CA99800492298 /* j.state.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = j.state.cpp; sourceTree = "<group>"; };
+		465094A81A8CA99D00492298 /* TTClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TTClassWrapperMax.cpp; sourceTree = "<group>"; };
+		465094AA1A8CA99D00492298 /* TTClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTClassWrapperMax.h; sourceTree = "<group>"; };
+		465094AC1A8CA99D00492298 /* TTModularClassWrapperMax.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TTModularClassWrapperMax.cpp; sourceTree = "<group>"; };
+		465094AE1A8CA99D00492298 /* TTModularClassWrapperMax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTModularClassWrapperMax.h; sourceTree = "<group>"; };
+		465094B21A8CA9BD00492298 /* j.state.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = j.state.yml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
+		465094A31A8CA99D00492298 /* classwrapper */ = {
+			isa = PBXGroup;
+			children = (
+				465094A81A8CA99D00492298 /* TTClassWrapperMax.cpp */,
+				465094AA1A8CA99D00492298 /* TTClassWrapperMax.h */,
+				465094AC1A8CA99D00492298 /* TTModularClassWrapperMax.cpp */,
+				465094AE1A8CA99D00492298 /* TTModularClassWrapperMax.h */,
+			);
+			name = classwrapper;
+			path = ../classwrapper;
+			sourceTree = "<group>";
+		};
 		46F4EF221A8CA86000AD45C5 = {
 			isa = PBXGroup;
 			children = (
+				465094B21A8CA9BD00492298 /* j.state.yml */,
+				465094A21A8CA99800492298 /* j.state.cpp */,
+				465094A31A8CA99D00492298 /* classwrapper */,
 			);
 			sourceTree = "<group>";
 		};
@@ -18,11 +42,12 @@
 /* Begin PBXLegacyTarget section */
 		46F4EF271A8CA86000AD45C5 /* j.state */ = {
 			isa = PBXLegacyTarget;
-			buildArgumentsString = "$(ACTION)";
+			buildArgumentsString = "$(ACTION) $(Configuration)";
 			buildConfigurationList = 46F4EF2A1A8CA86000AD45C5 /* Build configuration list for PBXLegacyTarget "j.state" */;
 			buildPhases = (
 			);
 			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
 			dependencies = (
 			);
 			name = j.state;
@@ -163,6 +188,7 @@
 				46F4EF2C1A8CA86000AD45C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
