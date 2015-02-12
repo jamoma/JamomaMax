@@ -380,7 +380,7 @@ void JAMOMA_EXPORT jamoma_callback_return_signal_audio(const TTValue& baton, con
 /** Convenient method to get the patcher easily.
  @param obj
  */
-t_object *JAMOMA_EXPORT jamoma_patcher_get(t_object *obj);
+t_object JAMOMA_EXPORT *jamoma_patcher_get(t_object *obj);
 
 
 /** Convenient method to get the patcher argument easily.
@@ -396,7 +396,7 @@ void JAMOMA_EXPORT jamoma_patcher_get_args(t_object *patcher, long *argc, t_atom
  @param patcher
  @return
  */
-t_symbol *JAMOMA_EXPORT jamoma_patcher_get_hierarchy(t_object *patcher);
+t_symbol JAMOMA_EXPORT *jamoma_patcher_get_hierarchy(t_object *patcher);
 
 
 /** Get the context from the upper jcom model|view in the patcher or from patcher's name.
@@ -508,7 +508,7 @@ void JAMOMA_EXPORT jamoma_ttvalue_from_Atom(TTValue& v, t_symbol *msg, long argc
  @param TTName
  @return
  */
-t_symbol *JAMOMA_EXPORT jamoma_TTName_To_MaxName(TTSymbol TTName);
+t_symbol JAMOMA_EXPORT *jamoma_TTName_To_MaxName(TTSymbol TTName);
 
 
 /** Load an external for internal use. Returns true if successful.
@@ -559,7 +559,7 @@ void JAMOMA_EXPORT jamoma_edit_filename(TTString format, TTSymbol className, t_s
  @param address
  @return
  */
-t_symbol *JAMOMA_EXPORT jamoma_parse_dieze(t_object *x, t_symbol *address);
+t_symbol JAMOMA_EXPORT *jamoma_parse_dieze(t_object *x, t_symbol *address);
 
 
 

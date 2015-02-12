@@ -137,6 +137,133 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
 	return kTTErrGeneric;
 }
 
+/** Get the hierarchy of the patcher : bpatcher, subpatcher or top level one*/
+t_symbol *jamoma_patcher_get_hierarchy(t_object *patcher)
+{
+	t_object *box = object_attr_getobj(patcher, _sym_box);
+	t_symbol *objclass = NULL;
+
+	if (box)
+		objclass = object_classname(box);
+
+	if (objclass == _sym_bpatcher)
+		return objclass;
+
+	else if (objclass == _sym_newobj)
+		return _sym_subpatcher;
+
+	else {
+
+		if (object_attr_getobj(patcher, _sym_parentpatcher)) // a real topmost patcher shouldn't have parent
+			return gensym("poly"); // poly case
+
+		return _sym_topmost;
+
+	}
+}
+
+/** Convenient method to get the patcher easily */
+t_object *jamoma_patcher_get(t_object *obj)
+{
+	t_object *patcher = NULL;
+	object_obex_lookup(obj, SymbolGen("#P"), &patcher);
+
+	// If obj is in a bpatcher, the patcher is NULL
+	if (!patcher){
+		patcher = object_attr_getobj(obj, _sym_parentpatcher);
+	}
+
+	return patcher;
+}
+
+/** Parse #N inside address and replace them by parent patcher arguments if there are */
+t_symbol *jamoma_parse_dieze(t_object *x, t_symbol *address)
+{
+	TTString	diezeStr, argsStr, addressStr = address->s_name;
+	t_symbol	*hierarchy;
+	t_object	*patcher = jamoma_patcher_get(x);
+	/* TODO : use a TTRegex for this parsing
+	char		dieze[5];
+	char		args[64];
+	size_t		found = 0;
+	long		i, sd, sa;
+	*/
+	long		i;
+	long        ac = 0;
+	t_atom      *av = NULL;
+
+	// If x is in a bpatcher, the patcher is NULL
+	if (!patcher){
+		patcher = object_attr_getobj(x, _sym_parentpatcher);
+	}
+
+	if (patcher) {
+
+		hierarchy = jamoma_patcher_get_hierarchy(patcher);
+
+		// Try to get the patcher arguments
+		jamoma_patcher_get_args(patcher, &ac, &av);
+		if (hierarchy == _sym_subpatcher) {
+
+			// remove first 'p' or 'patcher'
+			if (ac > 0 && av) {
+				if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
+					ac--;
+					av++;
+				}
+			}
+
+			av++;
+			ac--;
+		}
+
+		// if there are arguments
+		if (ac > 0 && av) {
+
+			i = 1;
+
+			//object_post(x, "in jamoma_parse_dieze : TODO : use a TTRegex for this parsing");
+			/* TODO : use a TTRegex for this parsing
+			do {
+
+			// prepare to parse #i
+			snprintf(dieze, sizeof(dieze), "#%li", i);
+			found = addressStr.find(dieze);
+
+			// if #i found
+			if (found != string::npos) {
+
+			// get av+i atom
+			if (i-1 < ac) {
+
+			if (atom_gettype(av+i-1) == A_LONG)
+			snprintf(args, sizeof(args), "%li", atom_getlong(av+i-1));
+			else if (atom_gettype(av+i-1) == A_SYM)
+			snprintf(args, sizeof(args), "%s", atom_getsym(av+i-1)->s_name);
+			else {
+			i++;
+			continue;
+			}
+
+			diezeStr = dieze;
+			argsStr	= args;
+			sd = diezeStr.size();
+			sa = argsStr.size();
+			addressStr.replace(found, sd, args, sa);
+			}
+			}
+			i++;
+
+			} while (i-1 < ac); // while there are argument
+			*/
+
+			return gensym((char*)addressStr.data());
+		}
+	}
+
+	return address;
+}
+
 void jamoma_subscriber_get_patcher_list(t_object *x, TTList& aContextListToFill)
 {
 	TTValue		v;
@@ -1081,20 +1208,6 @@ TTBoolean jamoma_extern_load(t_symbol *objectname, long argc, t_atom *argv, t_ob
 	return true;
 }
 
-/** Convenient method to get the patcher easily */
-t_object *jamoma_patcher_get(t_object *obj)
-{
-	t_object *patcher = NULL;
-	object_obex_lookup(obj, SymbolGen("#P"), &patcher);
-	
-	// If obj is in a bpatcher, the patcher is NULL
-	if (!patcher){
-		patcher = object_attr_getobj(obj, _sym_parentpatcher);
-	}
-	
-	return patcher;
-}
-
 // Don't pass memory in for this function!  It will allocate what it needs
 // -- then the caller is responsible for freeing
 void jamoma_patcher_get_args(t_object *patcher, long *argc, t_atom **argv)
@@ -1123,31 +1236,6 @@ void jamoma_patcher_get_args(t_object *patcher, long *argc, t_atom **argv)
 	else {
 		*argc = 0;
 		*argv = NULL;
-	}
-}
-
-/** Get the hierarchy of the patcher : bpatcher, subpatcher or top level one*/
-t_symbol *jamoma_patcher_get_hierarchy(t_object *patcher)
-{
-	t_object *box = object_attr_getobj(patcher, _sym_box);
-	t_symbol *objclass = NULL;
-	
-	if (box)
-		objclass = object_classname(box);
-	
-	if (objclass == _sym_bpatcher)
-		return objclass;
-	
-	else if (objclass == _sym_newobj)
-		return _sym_subpatcher;
-	
-	else {
-		
-		if(object_attr_getobj(patcher, _sym_parentpatcher)) // a real topmost patcher shouldn't have parent
-		   return gensym("poly"); // poly case
-		
-		return _sym_topmost;
-		
 	}
 }
 
@@ -1769,94 +1857,6 @@ void jamoma_edit_filename(TTString format, TTSymbol className, t_symbol **return
 	snprintf(s_str, len, format.c_str(), className.c_str());
 	*returnedFileName = gensym(s_str);
 	free(s_str);
-}
-
-/** Parse #N inside address and replace them by parent patcher arguments if there are */
-t_symbol *jamoma_parse_dieze(t_object *x, t_symbol *address)
-{
-	TTString	diezeStr, argsStr, addressStr = address->s_name;
-	t_symbol	*hierarchy;
-	t_object	*patcher  = jamoma_patcher_get(x);
-    /* TODO : use a TTRegex for this parsing
-	char		dieze[5];
-	char		args[64];
-	size_t		found = 0;
-	long		i, sd, sa;
-     */
-    long		i;
-	long        ac = 0;
-	t_atom      *av = NULL;
-	
-	// If x is in a bpatcher, the patcher is NULL
-	if (!patcher){
-		patcher = object_attr_getobj(x, _sym_parentpatcher);
-	}
-	
-	if (patcher) {
-		
-		hierarchy = jamoma_patcher_get_hierarchy(patcher);
-		
-		// Try to get the patcher arguments
-		jamoma_patcher_get_args(patcher, &ac, &av);
-		if (hierarchy == _sym_subpatcher) {
-            
-            // remove first 'p' or 'patcher'
-            if (ac > 0 && av) {
-                if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
-                    ac--;
-                    av++;
-                }
-            }
-            
-			av++;
-			ac--;
-		}
-		
-		// if there are arguments
-		if (ac > 0 && av) {
-			
-			i = 1;
-			
-			//object_post(x, "in jamoma_parse_dieze : TODO : use a TTRegex for this parsing");
-			/* TODO : use a TTRegex for this parsing
-			do {
-				
-				// prepare to parse #i
-				snprintf(dieze, sizeof(dieze), "#%li", i);
-				found = addressStr.find(dieze);
-				
-				// if #i found
-				if (found != string::npos) {
-					
-					// get av+i atom
-					if (i-1 < ac) {
-						
-						if (atom_gettype(av+i-1) == A_LONG)
-							snprintf(args, sizeof(args), "%li", atom_getlong(av+i-1));
-						else if (atom_gettype(av+i-1) == A_SYM)
-							snprintf(args, sizeof(args), "%s", atom_getsym(av+i-1)->s_name);
-						else {
-							i++;
-							continue;
-						}
-						
-						diezeStr = dieze;
-						argsStr	= args;
-						sd = diezeStr.size();
-						sa = argsStr.size();
-						addressStr.replace(found, sd, args, sa);
-					}
-				}
-				i++;
-				
-			} while (i-1 < ac); // while there are argument
-			 */
-			
-			return gensym((char*)addressStr.data());
-		}
-	}
-	
-	return address;
 }
 
 

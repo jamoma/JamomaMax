@@ -114,14 +114,14 @@ else
     
     cleanAndBuildExternal glibdir, "j.in"
     cleanAndBuildExternal glibdir, "j.in~"
-    cleanAndBuildExternal glibdir, "j.in="
+    cleanAndBuildExternal glibdir, "j.in_equal"
     
     cleanAndBuildExternal glibdir, "j.message"
     cleanAndBuildExternal glibdir, "j.parameter"
     
     cleanAndBuildExternal glibdir, "j.out"
     cleanAndBuildExternal glibdir, "j.out~"
-    cleanAndBuildExternal glibdir, "j.out="
+    cleanAndBuildExternal glibdir, "j.out_equal"
     
     cleanAndBuildExternal glibdir, "j.message_array"
     cleanAndBuildExternal glibdir, "j.parameter_array"

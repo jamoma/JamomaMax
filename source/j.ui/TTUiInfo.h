@@ -21,7 +21,7 @@
 
 /** A base class for j.ui info
  */
-class TTMODULAR_EXPORT TTUiInfo : public TTObjectBase
+class TTUiInfo : public TTObjectBase
 {
 	TTCLASS_SETUP(TTUiInfo)
     
