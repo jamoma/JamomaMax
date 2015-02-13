@@ -502,25 +502,11 @@ TTErr jamoma_receiver_create_audio(t_object *x, TTObject& returnedReceiver)
 	return kTTErrNone;
 }
 
-// Method to deal with TTPresetManager
+// Method to deal with TTStateManager
 ///////////////////////////////////////////////////////////////////////
 
-/**	Create a preset manager object */
-TTErr jamoma_presetManager_create(t_object *x, TTObject& returnedPresetManager)
-{
-    TTObject returnLineCallback;
-	
-	// prepare arguments
-	returnLineCallback = TTObject("callback");
-	returnLineCallback.set(kTTSym_baton, TTPtr(x));
-	returnLineCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
-	
-	returnedPresetManager = TTObject(kTTSym_PresetManager, returnLineCallback);
-	return kTTErrNone;
-}
-
 /**	Create a state manager object */
-TTErr jamoma_stateManager_create(t_object *x, TTObject& returnedstateManager)
+TTErr jamoma_stateManager_create(t_object *x, TTObject& returnedStateManager)
 {
 	TTObject returnLineCallback;
 	
@@ -529,7 +515,7 @@ TTErr jamoma_stateManager_create(t_object *x, TTObject& returnedstateManager)
 	returnLineCallback.set(kTTSym_baton, TTPtr(x));
 	returnLineCallback.set(kTTSym_function, TTPtr(&jamoma_callback_return_value));
 	
-	returnedstateManager = TTObject(kTTSym_stateManager, returnLineCallback);
+	returnedStateManager = TTObject(kTTSym_StateManager, returnLineCallback);
 	return kTTErrNone;
 }
 

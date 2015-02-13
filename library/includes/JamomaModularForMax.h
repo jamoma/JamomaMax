@@ -184,23 +184,15 @@ TTErr JAMOMA_EXPORT jamoma_receiver_create_audio(t_object *x, TTObject& returned
 
 
 
-// Method to deal with TTPresetManager and TTstateManager
+// Method to deal with TTStateManager
 ///////////////////////////////////////////////////////////////////////
 
-/**	Create a #TTPresetManager object. 
+/**	Create a #TTStateManager object.
  @param x
- @param returnedPresetManager
+ @param returnedStateManager
  @return						#TTErr error message if the method does not execute as expected.
  */
-TTErr JAMOMA_EXPORT jamoma_presetManager_create(t_object *x, TTObject& returnedPresetManager);
-
-
-/**	Create a #TTstateManager object.
- @param x
- @param returnedstateManager
- @return						#TTErr error message if the method does not execute as expected.
- */
-TTErr JAMOMA_EXPORT jamoma_stateManager_create(t_object *x, TTObject& returnedstateManager);
+TTErr JAMOMA_EXPORT jamoma_stateManager_create(t_object *x, TTObject& returnedStateManager);
 
 
 
