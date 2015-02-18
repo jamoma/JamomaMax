@@ -1,5 +1,6 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
 
-add_subdirectory(library)
-add_subdirectory(source)
-
+if((APPLE AND NOT IOS) OR WIN32)
+	add_subdirectory(library)
+	add_subdirectory(source)
+endif()

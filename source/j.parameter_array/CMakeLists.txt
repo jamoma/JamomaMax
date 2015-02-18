@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
 project(j.parameter_array)
 
 add_definitions(-DARRAY_EXTERNAL)

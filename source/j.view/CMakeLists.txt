@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
 project(j.view)
 
 add_definitions(-DJCOM_VIEW)
