@@ -79,7 +79,88 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Graph/library/includes"
 if(APPLE)
 	include_directories("${FILE_H_DIR}")
 endif()
-add_library(${PROJECT_NAME} SHARED ${PROJECT_SRCS})
+
+## Setup of the library ##
+
+# Dynamic
+add_library(${PROJECT_NAME}
+			SHARED
+			${PROJECT_SRCS} ${PROJECT_HDRS})
+
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+# Version
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY VERSION ${Jamoma_VERSION})
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY SOVERSION ${Jamoma_SOVERSION})
+set_property(TARGET ${PROJECT_NAME} APPEND
+			 PROPERTY COMPATIBLE_INTERFACE_STRING Jamoma_MAJOR_VERSION)
+
+# TODO replace with target_include_directories
+if(APPLE)
+	set_property(TARGET ${PROJECT_NAME} APPEND
+				 PROPERTY INTERFACE_INCLUDE_DIRECTORIES
+					$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/includes>
+					$<INSTALL_INTERFACE:include>)
+else()
+	set_property(TARGET ${PROJECT_NAME} APPEND
+				 PROPERTY INTERFACE_INCLUDE_DIRECTORIES
+					$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/includes>
+					$<INSTALL_INTERFACE:include/jamoma>)
+endif()
+
+install(TARGETS ${PROJECT_NAME}
+		EXPORT ${PROJECT_NAME}Targets
+		LIBRARY DESTINATION lib
+		ARCHIVE DESTINATION lib
+		RUNTIME DESTINATION bin
+		COMPONENT Devel)
+
+# TODO make a single variable for the include folder.
+if(APPLE)
+	install(FILES ${PROJECT_HDRS} DESTINATION "include" COMPONENT Devel)
+else()
+	install(FILES ${PROJECT_HDRS} DESTINATION "include/jamoma" COMPONENT Devel)
+endif()
+
+export(EXPORT ${PROJECT_NAME}Targets
+	   FILE "${CMAKE_CURRENT_BINARY_DIR}/Jamoma/${PROJECT_NAME}Targets.cmake"
+	   NAMESPACE Jamoma::)
+
+install(EXPORT ${PROJECT_NAME}Targets
+		FILE Jamoma${PROJECT_NAME}Targets.cmake
+		NAMESPACE Jamoma::
+		DESTINATION ${ConfigPackageLocation}
+		COMPONENT Devel)
+
+# Static
+if(APPLE AND STATIC_TESTING)
+	# i386
+	add_library(${PROJECT_NAME}-i386-static
+				STATIC
+				${PROJECT_SRCS} ${PROJECT_HDRS})
+	set_property(TARGET ${PROJECT_NAME}-i386-static
+				 PROPERTY OSX_ARCHITECTURES i386)
+	setupJamomaLibraryProperties(${PROJECT_NAME}-i386-static)
+			
+	# x86_64	
+	add_library(${PROJECT_NAME}-x86_64-static
+				STATIC
+				${PROJECT_SRCS} ${PROJECT_HDRS})
+				
+	set_property(TARGET ${PROJECT_NAME}-x86_64-static
+				 PROPERTY OSX_ARCHITECTURES x86_64)
+	setupJamomaLibraryProperties(${PROJECT_NAME}-x86_64-static)
+endif()
+
+install(TARGETS ${PROJECT_NAME}
+		DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/support"
+		COMPONENT JamomaMax)
+
+
+## 
+
 
 addAppleFramework(Carbon)
 if(APPLE)
@@ -105,9 +186,6 @@ endif()
 
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
-
-### Output ###
-setOutput()
 
 ### Tests ###
 addTestTarget()

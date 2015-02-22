@@ -33,9 +33,6 @@ else()
 	target_link_libraries(${PROJECT_NAME} ${MaxAudio_LIB})
 	target_link_libraries(${PROJECT_NAME} ${Jitter_LIB})
 	
-	### Output ###
-	setOutput()
-	
 	### Tests ###
 	addTestTarget()
 

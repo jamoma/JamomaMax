@@ -18,7 +18,19 @@ endif()
 
 addMaxsupport()
 
-add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${PROJECT_SRCS})
+add_library(${PROJECT_NAME} MODULE ${PROJECT_SRCS})
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY BUNDLE True)
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_LIST_DIR}/MaxExternal-Info.plist")
+
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY BUNDLE_EXTENSION "mxo")
+
+
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+
 
 # Since XCode does not like tildas in project names, if
 # a project_name ends by _tilda, we replace it with '~' in the
@@ -28,6 +40,8 @@ if("${PROJECT_NAME}" MATCHES ".*_tilda")
 	set_target_properties(${PROJECT_NAME}
 						  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
 endif()
+
+# TODO same of _equal
 
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
@@ -50,7 +64,23 @@ if(APPLE)
 endif()
 
 ### Output ###
-setOutput()
+if(APPLE)
+	set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+	set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX "")
+elseif(WIN32)
+	set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".mxe")
+endif()
+
+if("${PROJECT_NAME}" STREQUAL "j.loader")
+	install(TARGETS ${PROJECT_NAME} 
+			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/extensions"
+			COMPONENT JamomaMax)
+else()
+	install(TARGETS ${PROJECT_NAME} 
+			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/externals"
+			COMPONENT JamomaMax)
+endif()
+
 
 ### Tests ###
 addTestTarget()
