@@ -7,8 +7,7 @@ project(j.receive_tilda)
 
 set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/../j.receive/j.receive.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/../classwrapper/TTModularClassWrapperMax.cpp
 )
 
+set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMax>)
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
