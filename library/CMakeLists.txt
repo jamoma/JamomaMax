@@ -161,8 +161,6 @@ install(TARGETS ${PROJECT_NAME}
 
 ## 
 
-
-addAppleFramework(Carbon)
 if(APPLE)
 	message("Linking with: ${OSX_FRAMEWORKS}")
 	target_link_libraries(${PROJECT_NAME} ${OSX_FRAMEWORKS})
@@ -187,5 +185,5 @@ endif()
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
 
-### Tests ###
+### Tests ###
 addTestTarget()

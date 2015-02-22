@@ -31,6 +31,7 @@ endif()
 
 # TODO same of _equal
 
+# Todo link at a smaller granularity
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
 target_link_libraries(${PROJECT_NAME} JamomaMax)
