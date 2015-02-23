@@ -8,4 +8,10 @@ set(PROJECT_SRCS
 )
 
 set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMax>)
+
+add_definitions(-DAUDIO_EXTERNAL -DJ_OUT_TILDE)
+
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
+
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "j.out~")
+

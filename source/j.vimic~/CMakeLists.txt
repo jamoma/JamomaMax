@@ -18,8 +18,7 @@ set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/Room.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/Source.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/ViMic_Engine.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/common/commonsyms.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/../classwrapper/TTClassWrapperMax.cpp
 )
 
+set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTClassWrapperMax>)
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
