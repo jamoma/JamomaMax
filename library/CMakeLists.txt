@@ -82,6 +82,7 @@ endif()
 
 ## Setup of the library ##
 
+addMaxsupport()
 # Dynamic
 add_library(${PROJECT_NAME}
 			SHARED
@@ -171,14 +172,12 @@ if(APPLE)
 	target_link_libraries(${PROJECT_NAME} ${CARBON_LIB})
 endif()
 
-addMaxsupport()
 target_link_libraries(${PROJECT_NAME} ${MaxAPI_LIB})
 target_link_libraries(${PROJECT_NAME} ${MaxAudio_LIB})
 target_link_libraries(${PROJECT_NAME} ${Jitter_LIB})
 if(WIN32)
 	if(CMAKE_BUILD_TYPE STREQUAL "Release")
-		target_link_libraries(${PROJECT_NAME} ${MaxCRT_LIB})
-		target_link_libraries(${PROJECT_NAME} ${MaxCRT_P_LIB})
+		target_link_libraries(${PROJECT_NAME} msvcrt)
 	endif()
 endif()
 
