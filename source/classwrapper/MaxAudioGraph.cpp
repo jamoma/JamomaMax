@@ -204,7 +204,7 @@ t_max_err MaxAudioGraphWrappedClass_attrGet(WrappedInstancePtr self, t_object* a
 	if (!(*argv)) // otherwise use memory passed in
 		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom) * v.size());
 
-	for (i=0; i<v.size(); i++) {
+	for (i=0; i < (TTInt32) v.size(); i++) {
 		if (v[i].type() == kTypeFloat32 || v[i].type() == kTypeFloat64) {
 			TTFloat64	value = v[i];
 			atom_setfloat(*argv+i, value);

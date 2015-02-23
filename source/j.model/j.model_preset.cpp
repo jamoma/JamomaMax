@@ -334,7 +334,7 @@ void model_preset_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 			// get presets names
 			EXTRA->presetManager->get("names", v);
 			
-			if (atom_getlong(argv) <= v.size())
+			if (atom_getlong(argv) <= (TTInt32) v.size())
 				name = v[atom_getlong(argv)-1];
 			
 			else {

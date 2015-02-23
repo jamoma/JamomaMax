@@ -188,7 +188,7 @@ void unit_getDataspaces(t_unit *self)
 	object_obex_dumpout(self, gensym("DataspacesMenu"), 1, a);
 	
 	self->dataspace->sendMessage(TT("getAvailableDataspaces"), v, v);	
-	for (int i=0; i < v.size(); i++) {
+	for (TTUInt32 i=0; i < v.size(); i++) {
 		TTSymbol name = v[i];
 		
 		atom_setsym(a+0, gensym("append"));
@@ -207,7 +207,7 @@ void unit_getUnits(t_unit *self)
 	object_obex_dumpout(self, gensym("UnitMenu"), 1, a);
 	
 	self->dataspace->sendMessage(TT("getAvailableUnits"), v, v);	
-	for (int i=0; i < v.size(); i++) {
+	for (TTUInt32 i=0; i < v.size(); i++) {
 		TTSymbol name = v[i];
 		
 		atom_setsym(a+0, gensym("append"));

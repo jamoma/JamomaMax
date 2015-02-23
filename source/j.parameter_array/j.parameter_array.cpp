@@ -530,12 +530,13 @@ void data_array(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 	if (!x->internals->isEmpty()) {
 		
 		// is the incoming data size is a multiple of the array size ?
+		// TODO why not mod ?
         d = argc / x->arraySize;
         if ((d * x->arraySize) == argc) {
             
             memoCursor = x->cursor;
             
-            for (i = 1; i <= x->arraySize; i++) {
+			for (i = 1; i <= (TTInt32) x->arraySize; i++) {
                 
                 jamoma_edit_numeric_instance(x->arrayFormatInteger, &instanceAddress, i);
                 x->cursor = TTSymbol(instanceAddress->s_name);

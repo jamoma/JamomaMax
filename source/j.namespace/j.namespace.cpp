@@ -392,7 +392,7 @@ void nmspc_return_selection(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		outlet_anything(x->outlets[data_out], gensym("clearchecks"), 0, NULL);
 		
 		// update check item
-		for (i = 0; i < argc; i++) {
+		for (i = 0; i < (TTUInt32) argc; i++) {
 			state = atom_getlong(argv+i);
 			atom_setlong(u, i);
 			atom_setlong(u+1, state);
@@ -404,7 +404,7 @@ void nmspc_return_selection(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	else if (x->msg == gensym("jit.cellblock")) {
 		
 		// update background color
-		for (i = 0; i < argc; i++) {
+		for (i = 0; i < (TTUInt32) argc; i++) {
 			
 			atom_setlong(j, 0);
 			atom_setlong(j+1, i);

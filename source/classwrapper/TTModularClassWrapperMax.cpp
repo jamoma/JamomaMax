@@ -149,7 +149,7 @@ void wrappedModularClass_unregister(WrappedModularInstancePtr x)
             
             x->iterateInternals = YES;
             
-            for (int i = 0; i < keys.size(); i++) {
+			for (int i = 0; i < (TTInt32) keys.size(); i++) {
                 
                 name = keys[i];
                 err = x->internals->lookup(name, v);
@@ -1152,11 +1152,11 @@ void copy_msg_argc_argv(TTPtr self, t_symbol *msg, long argc, const t_atom *argv
         
 		if (copyMsg) {
 			atom_setsym(&x->argv[0], msg);
-			for (i = 1; i < x->argc; i++)
+			for (i = 1; i <  (TTUInt32) x->argc; i++)
 				x->argv[i] = argv[i-1];
 		}
 		else
-			for (i = 0; i < x->argc; i++)
+			for (i = 0; i < (TTUInt32) x->argc; i++)
 				x->argv[i] = argv[i];
 	}
 }
