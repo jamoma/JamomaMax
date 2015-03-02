@@ -22,12 +22,15 @@
 // This is used to store extra data
 typedef struct extra
 {
-    TTObject    *applicationManager;// TTModularApplicationManager object
-    TTObject    *xmlHandler;        // read/write .score file format
-    TTObject    *textHandler;       // read/write from/to text editor
-	TTString	*text;				// the text of the editor to read after edclose
-	t_object*	textEditor;			// the text editor window
-    TTPtr       filewatcher;		// a .score filewatcher
+    TTObject    *applicationManager;        // TTModularApplicationManager object
+    TTObject    *eventStatusCallback;       // a callback to report event status
+    TTObject    *processStartedCallback;    // a callback to report event status
+    TTObject    *processEndedCallback;      // a callback to report event status
+    TTObject    *xmlHandler;                // read/write .score file format
+    TTObject    *textHandler;               // read/write from/to text editor
+	TTString	*text;                      // the text of the editor to read after edclose
+	t_object*	textEditor;                 // the text editor window
+    TTPtr       filewatcher;                // a .score filewatcher
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
 
@@ -137,6 +140,13 @@ void	score_edclose(TTPtr self, char **text, long size);
  */
 void	score_doedit(TTPtr self);
 
+
+void score_eventStatusCallback(const TTValue& baton, const TTValue& value);
+void score_processStartedCallback(const TTValue& baton, const TTValue& value);
+void score_processEndedCallback(const TTValue& baton, const TTValue& value);
+
+void score_doreport(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+
 int C74_EXPORT main(void)
 {
 	ModularSpec *spec = new ModularSpec;
@@ -180,6 +190,22 @@ void WrappedScoreClass_new(TTPtr self, long argc, t_atom *argv)
 	// prepare extra data
 	x->extra = (t_extra*)malloc(sizeof(t_extra));
     EXTRA->applicationManager = new TTObject(TTModularApplicationManager);
+    
+    EXTRA->eventStatusCallback = new TTObject("callback");
+    EXTRA->eventStatusCallback->set("baton", TTPtr(self));
+    EXTRA->eventStatusCallback->set("function", TTPtr(&score_eventStatusCallback));
+    EXTRA->eventStatusCallback->set("notification", TTSymbol("EventStatusChanged"));
+    
+    EXTRA->processStartedCallback = new TTObject("callback");
+    EXTRA->processStartedCallback->set("baton", TTPtr(self));
+    EXTRA->processStartedCallback->set("function", TTPtr(&score_processEndedCallback));
+    EXTRA->processStartedCallback->set("notification", TTSymbol("ProcessEnded"));
+    
+    EXTRA->processEndedCallback = new TTObject("callback");
+    EXTRA->processEndedCallback->set("baton", TTPtr(self));
+    EXTRA->processEndedCallback->set("function", TTPtr(&score_processStartedCallback));
+    EXTRA->processEndedCallback->set("notification", TTSymbol("ProcessStarted"));
+    
     EXTRA->xmlHandler = new TTObject(kTTSym_XmlHandler);
 	EXTRA->textHandler = new TTObject(kTTSym_TextHandler);
 	EXTRA->text = NULL;
@@ -275,6 +301,32 @@ void score_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 		
 		EXTRA->filewatcher = filewatcher_new((t_object*)x, outvol, (char*)filepath);
 		filewatcher_start(EXTRA->filewatcher);
+        
+        // prepare report machnism
+        TTValue objects;
+        
+        // for all time events
+        x->wrappedObject.get("timeEvents", objects);
+        for (TTUInt32 i = 0 ; i < objects.size() ; i++)
+        {
+            // observe the "EventReadyChanged" notification
+            TTObject timeEvent = objects[i];
+            timeEvent.registerObserverForNotifications(*EXTRA->eventStatusCallback);
+        }
+        
+        // for all time processes
+        x->wrappedObject.get("timeProcesses", objects);
+        for (TTUInt32 i = 0 ; i < objects.size() ; i++)
+        {
+            // observe the "processStarted" and processEnded notification
+            TTObject timeProcess = objects[i];
+            timeProcess.registerObserverForNotifications(*EXTRA->processStartedCallback);
+            timeProcess.registerObserverForNotifications(*EXTRA->processEndedCallback);
+        }
+        
+        // for the main scenario
+        x->wrappedObject.registerObserverForNotifications(*EXTRA->processStartedCallback);
+        x->wrappedObject.registerObserverForNotifications(*EXTRA->processEndedCallback);
 	}
 }
 
@@ -496,5 +548,89 @@ void score_doedit(TTPtr self)
 	delete EXTRA->text;
 	EXTRA->text = NULL;
 	EXTRA->textEditor = NULL;
+}
+
+void score_eventStatusCallback(const TTValue& baton, const TTValue& value)
+{
+    TTObject    event;
+    TTValue     v;
+    TTSymbol    name, status;
+    t_atom      report[2];
+	
+	// unpack baton (self)
+    WrappedModularInstancePtr x = (WrappedModularInstancePtr)((TTPtr)baton[0]);
+	
+	// Unpack data (event)
+	event = value[0];
+    
+    // get name
+    event.get("name", v);
+    name = v[0];
+    
+    // get status
+    event.get("status", v);
+    status = v[0];
+    
+    // return a simple status symbol
+    if (status == kTTSym_eventWaiting) status = TTSymbol("waiting");
+    else if (status == kTTSym_eventPending) status = TTSymbol("pending");
+    else if (status == kTTSym_eventHappened) status = TTSymbol("happened");
+    else if (status == kTTSym_eventDisposed) status = TTSymbol("disposed");
+    
+    // prepare report for event status : <name status>
+    atom_setsym(report, gensym((char*)name.c_str()));
+    atom_setsym(report+1, gensym((char*)status.c_str()));
+    defer_low((t_object*)x, (method)score_doreport, gensym("event"), 2, report);
+}
+
+void score_processStartedCallback(const TTValue& baton, const TTValue& value)
+{
+    TTObject    process;
+    TTValue     v;
+    TTSymbol    name;
+    t_atom      report[2];
+	
+	// unpack baton (self)
+    WrappedModularInstancePtr x = (WrappedModularInstancePtr)((TTPtr)baton[0]);
+	
+	// Unpack data (process)
+	process = value[0];
+    
+    // get name
+    process.get("name", v);
+    name = v[0];
+    
+    // prepare report for event status : <name status>
+    atom_setsym(report, gensym((char*)name.c_str()));
+    atom_setsym(report+1, gensym("started"));
+    defer_low((t_object*)x, (method)score_doreport, gensym("process"), 2, report);
+}
+
+void score_processEndedCallback(const TTValue& baton, const TTValue& value)
+{
+    TTObject    process;
+    TTValue     v;
+    TTSymbol    name;
+    t_atom      report[2];
+	
+	// unpack baton (self)
+    WrappedModularInstancePtr x = (WrappedModularInstancePtr)((TTPtr)baton[0]);
+	
+	// Unpack data (process)
+	process = value[0];
+    
+    // get name
+    process.get("name", v);
+    name = v[0];
+    
+    // prepare report for event status : <name status>
+    atom_setsym(report, gensym((char*)name.c_str()));
+    atom_setsym(report+1, gensym("ended"));
+    defer_low((t_object*)x, (method)score_doreport, gensym("process"), 2, report);
+}
+
+void score_doreport(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+{
+    object_obex_dumpout(self, msg, argc, argv);
 }
 
