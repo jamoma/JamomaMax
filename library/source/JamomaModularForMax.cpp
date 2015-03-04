@@ -1306,7 +1306,7 @@ void jamoma_patcher_get_class(t_object *patcher, TTSymbol context, TTSymbol& ret
 	t_symbol	*patcherName, *hierarchy;
 	t_object	*upperPatcher;
 	TTString	s_toParse;
-	TTStringIter begin, end;
+	TTString::iterator begin, end;
     TTBoolean   intoHelp = NO;
 	
 	// extract class from the file name
@@ -1784,8 +1784,8 @@ TTUInt32 jamoma_parse_bracket(t_symbol *s, TTString& si_format, TTString& ss_for
 	TTString	s_number;
 	TTString	s_before;
 	TTString	s_after;
-	TTStringIter begin, end;
-	TTStringIter beginNumber, endNumber;
+	TTString::iterator begin, end;
+	TTString::iterator beginNumber, endNumber;
 	
 	begin = s_toParse.begin();
 	end = s_toParse.end();
