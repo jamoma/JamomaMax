@@ -864,9 +864,9 @@ void ui_paint_address(t_ui *x, t_object *textfield)
         if (strlen(x->modelAddress.c_str()) >= maxLetter) {
             
             TTString        croppedAddress;
-            TTString        modelAddress = x->modelAddress.string();
-            TTStringIter    begin = modelAddress.begin();
-            TTStringIter    end = modelAddress.end();
+            auto			modelAddress = x->modelAddress.string();
+            auto			begin = modelAddress.begin();
+            auto			end = modelAddress.end();
             
             croppedAddress = TTString(begin, begin+(maxLetter/2)-1);
             croppedAddress += "..";
