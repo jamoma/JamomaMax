@@ -13,8 +13,8 @@ inlets = 1;
 outlets = 1;
 
 // the following two variables are updated via the build script
-MODULAR_VERSION = "dummy";
-MODULAR_REV = "dummy";
+JAMOMA_MAX_VERSION = "dummy";
+JAMOMA_MAX_REV = "dummy";
 
 function bang()
 {
