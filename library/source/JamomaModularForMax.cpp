@@ -409,12 +409,11 @@ TTErr jamoma_data_command(TTObject& aData, t_symbol *msg, long argc, const t_ato
 {
 	TTValue v, none;
 	
-	if (aData.valid()) {
-		
+	if (aData.valid())
+    {
 		jamoma_ttvalue_from_Atom(v, msg, argc, argv);
 		
-		aData.send(kTTSym_Command, v, none);
-		return kTTErrNone;
+		return aData.send(kTTSym_Command, v, none);
 	}
 	
 	return kTTErrGeneric;
