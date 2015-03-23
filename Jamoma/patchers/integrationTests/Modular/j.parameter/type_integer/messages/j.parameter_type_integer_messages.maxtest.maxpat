@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
-			"architecture" : "x64",
+			"revision" : 3,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -113,12 +113,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -341,10 +341,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "bang", "nothing" ],
+					"outlettype" : [ "bang", "int" ],
 					"patching_rect" : [ 1185.0, 299.001862, 189.0, 22.0 ],
 					"style" : "",
-					"text" : "t b nothing"
+					"text" : "t b 0"
 				}
 
 			}
@@ -360,8 +360,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -588,10 +588,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "foo", "nothing" ],
+					"outlettype" : [ "foo", "int" ],
 					"patching_rect" : [ 1185.0, 114.001862, 189.0, 22.0 ],
 					"style" : "",
-					"text" : "t foo nothing"
+					"text" : "t foo 0"
 				}
 
 			}
@@ -622,8 +622,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -869,8 +869,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1116,8 +1116,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1372,8 +1372,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1663,8 +1663,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1932,8 +1932,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2188,8 +2188,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2444,8 +2444,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"revision" : 3,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -3306,14 +3306,14 @@
 		"dependency_cache" : [ 			{
 				"name" : "test.string.equals.maxpat",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "test.string.equals.js",
 				"bootpath" : "~/Documents/Max/Packages/testpackage/misc",
-				"patcherrelativepath" : "../../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
+				"patcherrelativepath" : "../../../../../../../../../../../../Documents/Max/Packages/testpackage/misc",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

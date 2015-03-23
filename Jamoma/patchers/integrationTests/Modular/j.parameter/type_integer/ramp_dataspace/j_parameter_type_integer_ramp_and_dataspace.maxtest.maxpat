@@ -38,13 +38,40 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"patching_rect" : [ 679.0, 401.0, 29.5, 22.0 ],
+					"style" : "",
+					"text" : "i"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 679.0, 361.0, 169.0, 35.0 ],
+					"style" : "",
+					"text" : "j.unit @dataspace gain @input db @output midigain"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"hidden" : 1,
 					"id" : "obj-48",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 954.5, 448.0, 29.5, 22.0 ],
+					"patching_rect" : [ 954.5, 488.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "set"
 				}
@@ -58,7 +85,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 954.5, 423.0, 69.0, 22.0 ],
+					"patching_rect" : [ 954.5, 463.0, 69.0, 22.0 ],
 					"style" : "",
 					"text" : "j.savebang"
 				}
@@ -67,12 +94,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-50",
-					"linecount" : 10,
+					"linecount" : 12,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 883.5, 499.5, 85.0, 143.0 ],
+					"patching_rect" : [ 884.5, 539.5, 27.0, 169.0 ],
 					"style" : ""
 				}
 
@@ -85,7 +112,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 769.5, 447.0, 29.5, 22.0 ],
+					"patching_rect" : [ 769.5, 487.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "set"
 				}
@@ -99,7 +126,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 769.5, 422.0, 69.0, 22.0 ],
+					"patching_rect" : [ 769.5, 462.0, 69.0, 22.0 ],
 					"style" : "",
 					"text" : "j.savebang"
 				}
@@ -108,12 +135,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-47",
-					"linecount" : 10,
+					"linecount" : 12,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 702.5, 499.5, 89.0, 143.0 ],
+					"patching_rect" : [ 702.5, 539.5, 27.0, 169.0 ],
 					"style" : ""
 				}
 
@@ -125,22 +152,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 864.0, 423.0, 78.0, 22.0 ],
+					"patching_rect" : [ 864.0, 463.0, 78.0, 22.0 ],
 					"style" : "default",
 					"text" : "zl group 256"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-42",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 864.0, 342.0, 41.0, 22.0 ],
-					"style" : "",
-					"text" : "atodb"
 				}
 
 			}
@@ -151,7 +165,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 864.0, 182.0, 98.0, 22.0 ],
+					"patching_rect" : [ 864.0, 195.0, 98.0, 22.0 ],
 					"style" : "default",
 					"text" : "$1, $2 ramp 200"
 				}
@@ -165,9 +179,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 864.0, 228.0, 132.0, 102.0 ],
+					"patching_rect" : [ 864.0, 249.0, 136.0, 102.0 ],
 					"style" : "",
-					"text" : "j.parameter test.3 @type decimal @ramp/drive max @ramp/function linear @dataspace gain @unit linear @repetitions/filter 0"
+					"text" : "j.parameter test.3 @type integer @ramp/drive max @ramp/function linear @dataspace gain @unit midigain @repetitions/filter 0"
 				}
 
 			}
@@ -178,22 +192,23 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 679.0, 139.0, 72.0, 22.0 ],
+					"patching_rect" : [ 679.0, 152.0, 72.0, 22.0 ],
 					"style" : "",
-					"text" : "pack 0. 0."
+					"text" : "pack 0 0"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-30",
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 679.0, 182.0, 163.0, 22.0 ],
+					"patching_rect" : [ 679.0, 195.0, 120.0, 35.0 ],
 					"style" : "default",
-					"text" : "$1 linear, $2 linear ramp 200"
+					"text" : "$1 midigain, $2 midigain ramp 200"
 				}
 
 			}
@@ -201,14 +216,13 @@
 				"box" : 				{
 					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-20",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 679.0, 684.0, 204.0, 35.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 679.0, 724.0, 204.0, 22.0 ],
 					"style" : "",
-					"text" : "test.list.equals @single_precision 1 @tolerance 10"
+					"text" : "zl.compare"
 				}
 
 			}
@@ -221,9 +235,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 679.0, 761.252563, 446.0, 49.0 ],
+					"patching_rect" : [ 679.0, 801.252563, 446.0, 49.0 ],
 					"style" : "",
-					"text" : "test.assert Jamoma/Modular/j.parameter/type_decimal/ramp_and_dataspace/overriding_unit @tags Jamoma Modular j.parameter"
+					"text" : "test.assert Jamoma/Modular/j.parameter/type_integer/ramp_and_dataspace/overriding_unit @tags Jamoma Modular j.parameter"
 				}
 
 			}
@@ -236,7 +250,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 679.0, 727.0, 24.0, 24.0 ],
+					"patching_rect" : [ 679.0, 767.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -248,7 +262,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 679.0, 423.0, 78.0, 22.0 ],
+					"patching_rect" : [ 679.0, 463.0, 78.0, 22.0 ],
 					"style" : "default",
 					"text" : "zl group 256"
 				}
@@ -262,9 +276,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 679.0, 228.0, 136.0, 102.0 ],
+					"patching_rect" : [ 679.0, 249.0, 136.0, 102.0 ],
 					"style" : "",
-					"text" : "j.parameter test.2 @type decimal @ramp/drive max @ramp/function linear @dataspace gain @unit db @repetitions/filter 0"
+					"text" : "j.parameter test.2 @type integer @ramp/drive max @ramp/function linear @dataspace gain @unit db @repetitions/filter 0"
 				}
 
 			}
@@ -274,36 +288,10 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 679.0, 75.0, 72.0, 22.0 ],
+					"outlettype" : [ "int", "int" ],
+					"patching_rect" : [ 679.0, 121.0, 72.0, 22.0 ],
 					"style" : "",
-					"text" : "t -24. 0."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 732.0, 106.0, 41.0, 22.0 ],
-					"style" : "",
-					"text" : "dbtoa"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 679.0, 106.0, 41.0, 22.0 ],
-					"style" : "",
-					"text" : "dbtoa"
+					"text" : "t 20 40"
 				}
 
 			}
@@ -315,7 +303,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 342.5, 447.0, 29.5, 22.0 ],
+					"patching_rect" : [ 342.5, 487.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "set"
 				}
@@ -329,7 +317,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 342.5, 422.0, 69.0, 22.0 ],
+					"patching_rect" : [ 342.5, 462.0, 69.0, 22.0 ],
 					"style" : "",
 					"text" : "j.savebang"
 				}
@@ -338,12 +326,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-19",
-					"linecount" : 12,
+					"linecount" : 11,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 342.5, 498.5, 33.0, 169.0 ],
+					"patching_rect" : [ 342.5, 538.5, 29.5, 156.0 ],
 					"style" : ""
 				}
 
@@ -352,14 +340,13 @@
 				"box" : 				{
 					"color" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"id" : "obj-16",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 223.0, 684.0, 88.0, 35.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 223.0, 724.0, 69.0, 22.0 ],
 					"style" : "",
-					"text" : "test.list.equals @tolerance 2"
+					"text" : "zl.compare"
 				}
 
 			}
@@ -372,9 +359,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.0, 761.252563, 427.0, 49.0 ],
+					"patching_rect" : [ 223.0, 801.252563, 427.0, 49.0 ],
 					"style" : "",
-					"text" : "test.assert Jamoma/Modular/j.parameter/type_decimal/ramp_and_dataspace/default_unit @tags Jamoma Modular j.parameter"
+					"text" : "test.assert Jamoma/Modular/j.parameter/type_integer/ramp_and_dataspace/default_unit @tags Jamoma Modular j.parameter"
 				}
 
 			}
@@ -402,7 +389,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 81.0, 761.252563, 83.0, 22.0 ],
+					"patching_rect" : [ 81.0, 801.252563, 83.0, 22.0 ],
 					"style" : "",
 					"text" : "test.terminate"
 				}
@@ -417,7 +404,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 223.0, 727.0, 24.0, 24.0 ],
+					"patching_rect" : [ 223.0, 767.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -429,7 +416,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 223.0, 453.0, 33.0, 22.0 ],
+					"patching_rect" : [ 223.0, 493.0, 33.0, 22.0 ],
 					"style" : "default",
 					"text" : "t l b"
 				}
@@ -438,14 +425,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-18",
-					"linecount" : 12,
+					"linecount" : 11,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 291.0, 498.5, 34.0, 169.0 ],
+					"patching_rect" : [ 273.0, 538.5, 29.0, 156.0 ],
 					"style" : "default",
-					"text" : "-20. -20. -18. -16. -14. -12. -10. -8. -6. -4. -2. 0."
+					"text" : "-20 -20 -18 -16 -14 -12 -10 -8 -6 -4 -2 0"
 				}
 
 			}
@@ -456,7 +443,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 223.0, 423.0, 78.0, 22.0 ],
+					"patching_rect" : [ 223.0, 463.0, 78.0, 22.0 ],
 					"style" : "default",
 					"text" : "zl group 256"
 				}
@@ -469,7 +456,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 81.0, 361.0, 34.0, 22.0 ],
+					"patching_rect" : [ 81.0, 401.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "t b b"
 				}
@@ -482,7 +469,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 81.0, 210.0, 57.0, 22.0 ],
+					"patching_rect" : [ 81.0, 250.0, 57.0, 22.0 ],
 					"style" : "default",
 					"text" : "del 1100"
 				}
@@ -508,7 +495,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 223.0, 182.0, 102.0, 22.0 ],
+					"patching_rect" : [ 223.0, 222.0, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "-20., 0. ramp 200"
 				}
@@ -522,9 +509,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 223.0, 228.0, 136.0, 102.0 ],
+					"patching_rect" : [ 223.0, 268.0, 136.0, 102.0 ],
 					"style" : "",
-					"text" : "j.parameter test.1 @type decimal @ramp/drive max @ramp/function linear @dataspace gain @unit db @repetitions/filter 0"
+					"text" : "j.parameter test.1 @type integer @ramp/drive max @ramp/function linear @dataspace gain @unit db @repetitions/filter 0"
 				}
 
 			}
@@ -612,6 +599,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -621,7 +617,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-31", 0 ],
+					"destination" : [ "obj-17", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
@@ -693,7 +689,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-26", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-29", 0 ]
@@ -747,28 +743,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-31", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-42", 0 ]
+					"source" : [ "obj-34", 0 ]
 				}
 
 			}
@@ -849,7 +827,7 @@
 					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 105.5, 407.0, 232.5, 407.0 ],
+					"midpoints" : [ 105.5, 447.0, 232.5, 447.0 ],
 					"source" : [ "obj-7", 1 ]
 				}
 
@@ -859,7 +837,7 @@
 					"destination" : [ "obj-26", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 105.5, 401.0, 688.5, 401.0 ],
+					"midpoints" : [ 105.5, 441.0, 688.5, 441.0 ],
 					"source" : [ "obj-7", 1 ]
 				}
 
@@ -869,7 +847,7 @@
 					"destination" : [ "obj-44", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 105.5, 395.0, 873.5, 395.0 ],
+					"midpoints" : [ 105.5, 435.0, 873.5, 435.0 ],
 					"source" : [ "obj-7", 1 ]
 				}
 
@@ -885,31 +863,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-31", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 1 ]
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "test.list.equals.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/integration_tests/test.list.equals",
-				"patcherrelativepath" : "../../../../../components/integration_tests/test.list.equals",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
@@ -922,15 +893,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "oscar.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pass.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
  ],
