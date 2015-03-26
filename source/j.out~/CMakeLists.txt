@@ -7,7 +7,7 @@ set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/../j.out/j.out.cpp
 )
 
-set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMax>)
+set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMaxAudio>)
 
 add_definitions(-DAUDIO_EXTERNAL -DJ_OUT_TILDE)
 

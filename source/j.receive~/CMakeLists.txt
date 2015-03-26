@@ -9,5 +9,5 @@ set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/../j.receive/j.receive.cpp
 )
 
-set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMax>)
+set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMaxAudio>)
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/CMake/MaxExternalCommon.cmake)
