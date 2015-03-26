@@ -182,7 +182,7 @@ void wrappedModularClass_free(WrappedModularInstancePtr x)
 	ModularSpec* spec = (ModularSpec*)x->wrappedClassDefinition->specificities;
     
     // call specific free method before freeing internal stuff
-	if (spec->_free)
+	if (spec && spec->_free)
 		spec->_free(x);
 	
 	wrappedModularClass_unregister(x);
