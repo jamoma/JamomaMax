@@ -28,6 +28,11 @@ add_library(TTClassWrapperMax OBJECT
 add_library(TTModularClassWrapperMax OBJECT
  			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/TTModularClassWrapperMax.cpp)
 
+add_library(TTModularClassWrapperMaxAudio OBJECT
+			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/TTModularClassWrapperMax.cpp)
+set_property(TARGET TTModularClassWrapperMaxAudio
+			 PROPERTY COMPILE_DEFINITIONS AUDIO_EXTERNAL)
+
 add_library(TTModularClassWrapperMaxArray OBJECT
  			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/TTModularClassWrapperMax.cpp)
 set_property(TARGET TTModularClassWrapperMaxArray

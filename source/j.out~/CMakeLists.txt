@@ -7,11 +7,11 @@ set(PROJECT_SRCS
   ${CMAKE_CURRENT_SOURCE_DIR}/../j.out/j.out.cpp
 )
 
-set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMax>)
+set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMaxAudio>)
 
 add_definitions(-DAUDIO_EXTERNAL -DJ_OUT_TILDE)
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/CMake/MaxExternalCommon.cmake)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "j.out~")
 

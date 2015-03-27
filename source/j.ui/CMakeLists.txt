@@ -8,4 +8,4 @@ ${CMAKE_CURRENT_SOURCE_DIR}/j.ui.presets.cpp
 ${CMAKE_CURRENT_SOURCE_DIR}/TTUiInfo.cpp
 )
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/CMake/MaxExternalCommon.cmake)

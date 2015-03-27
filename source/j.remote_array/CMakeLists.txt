@@ -8,5 +8,5 @@ ${CMAKE_CURRENT_SOURCE_DIR}/j.remote_array.cpp
 )
 
 set(PROJECT_SRCS ${PROJECT_SRCS} $<TARGET_OBJECTS:TTModularClassWrapperMaxArray>)
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/CMake/MaxExternalCommon.cmake)
 
