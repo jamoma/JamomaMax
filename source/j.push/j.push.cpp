@@ -256,11 +256,11 @@ void push_bang(t_push *x)
 			velocity = position - x->previousPosition[i];
 		}
 		else if (x->attrBoundaryMode == gensym("wrap"))
-			position = TTInfWrap(position, rangeLow, rangeHigh);
+			TTInfWrap(position, rangeLow, rangeHigh);
 		else if (x->attrBoundaryMode == ps_bounce) {
 			// Do we need to fold? The following test works because of symetry while avoiding fabs()
 			if ((position*position) >= (rangeHigh*rangeHigh)) {
-				position = TTFold(position, rangeLow, rangeHigh);
+				TTFold(position, rangeLow, rangeHigh);
 				// Invert direction of velocity
 				velocity = -velocity;
 			}
