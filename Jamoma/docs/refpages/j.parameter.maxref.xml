@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.parameter" module="" category="Jamoma">
 	<digest>
-		Declaring parameter of a patcher
+		Declare a model parameter
 	</digest>
 	<description>
-		j.parameter allows to declare a parameter within a patch or a model
+		Declares a parameter within a model or patch.
 	</description>
 	<!--METADATA-->
 	<metadatalist>
