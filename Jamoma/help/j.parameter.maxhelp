@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 49.0, 79.0, 1204.0, 883.0 ],
+		"rect" : [ 34.0, 129.0, 1192.0, 883.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -40,6 +40,7 @@
 		"showontab" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-4",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -54,7 +55,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 49.0, 105.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -83,6 +84,138 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 969.0, 540.0, 57.0, 22.0 ],
+									"style" : "",
+									"text" : "zl.slice 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 969.0, 569.5, 139.0, 22.0 ],
+									"style" : "",
+									"text" : "substitute set setsymbol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 969.0, 511.0, 197.0, 22.0 ],
+									"style" : "default",
+									"text" : "j.remote my_position:ramp/function"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-33",
+									"items" : [ "linear", ",", "-", ",", "easeInBack", ",", "easeInOutBack", ",", "easeOutBack", ",", "easeInBounce", ",", "easeInOutBounce", ",", "easeOutBounce", ",", "easeInCircular", ",", "easeInOutCircular", ",", "easeOutCircular", ",", "easeInCubic", ",", "easeInOutCubic", ",", "easeOutCubic", ",", "easeInElastic", ",", "easeInOutElastic", ",", "easeOutElastic", ",", "easeInExponential", ",", "easeInOutExponential", ",", "easeOutExponential", ",", "easeInQuadratic", ",", "easeInOutQuadratic", ",", "easeOutQuadratic", ",", "easeInQuartic", ",", "easeInOutQuartic", ",", "easeOutQuartic", ",", "easeInQuintic", ",", "easeInOutQuintic", ",", "easeOutQuintic", ",", "easeInSine", ",", "easeInOutSine", ",", "easeOutSine", ",", "-", ",", "exponential", ",", "freehand", ",", "logarithm", ",", "lowpass", ",", "power", ",", "smoothPolynomial", ",", "tanh", ",", "-", ",", "bartlett", ",", "blackman", ",", "blackmanHarris", ",", "expodec", ",", "gauss", ",", "hamming", ",", "hanning", ",", "kaiser", ",", "nuttall", ",", "rectangular", ",", "rosenbergGlottalPulse", ",", "trapezoid", ",", "tukey", ",", "welch" ],
+									"maxclass" : "umenu",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "int", "", "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 969.0, 468.0, 139.0, 22.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-32",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 752.0, 569.5, 139.0, 22.0 ],
+									"style" : "",
+									"text" : "substitute set setsymbol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 30.0,
+									"id" : "obj-12",
+									"maxclass" : "live.menu",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "float" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 752.0, 460.5, 70.0, 37.0 ],
+									"pictures" : [ "linear.svg", "easeInBack.svg", "easeInOutBack.svg", "easeOutBack.svg", "easeInBounce.svg", "easeInOutBounce.svg", "easeOutBounce.svg", "easeInCircular.svg", "easeInOutCircular.svg", "easeOutCircular.svg", "easeInCubic.svg", "easeInOutCubic.svg", "easeOutCubic.svg", "easeInElastic.svg", "easeInOutElastic.svg", "easeOutElastic.svg", "easeInExponential.svg", "easeInOutExponential.svg", "easeOutExponential.svg", "easeInQuadratic.svg", "easeInOutQuadratic.svg", "easeOutQuadratic.svg", "easeInQuartic.svg", "easeInOutQuartic.svg", "easeOutQuartic.svg", "easeInQuintic.svg", "easeInOutQuintic.svg", "easeOutQuintic.svg", "easeInSine.svg", "easeInOutSine.svg", "easeOutSine.svg", "exponential.svg", "freehand.svg", "logarithm.svg", "lowpass.svg", "power.svg", "smoothPolynomial.svg", "tanh.svg", "bartlett.svg", "blackman.svg", "blackmanHarris.svg", "expodec.svg", "gauss.svg", "hamming.svg", "hanning.svg", "kaiser.svg", "nuttall.svg", "rectangular.svg", "rosenbergGlottalPulse.svg", "trapezoid.svg", "tukey.svg", "welch.svg" ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "live.menu[2]",
+											"parameter_shortname" : "live.menu",
+											"parameter_type" : 2,
+											"parameter_enum" : [ "linear", "easeInBack", "easeInOutBack", "easeOutBack", "easeInBounce", "easeInOutBounce", "easeOutBounce", "easeInCircular", "easeInOutCircular", "easeOutCircular", "easeInCubic", "easeInOutCubic", "easeOutCubic", "easeInElastic", "easeInOutElastic", "easeOutElastic", "easeInExponential", "easeInOutExponential", "easeOutExponential", "easeInQuadratic", "easeInOutQuadratic", "easeOutQuadratic", "easeInQuartic", "easeInOutQuartic", "easeOutQuartic", "easeInQuintic", "easeInOutQuintic", "easeOutQuintic", "easeInSine", "easeInOutSine", "easeOutSine", "exponential", "freehand", "logarithm", "lowpass", "power", "smoothPolynomial", "tanh", "bartlett", "blackman", "blackmanHarris", "expodec", "gauss", "hamming", "hanning", "kaiser", "nuttall", "rectangular", "rosenbergGlottalPulse", "trapezoid", "tukey", "welch" ]
+										}
+
+									}
+,
+									"usepicture" : 1,
+									"varname" : "live.menu[1]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 752.0, 511.0, 197.0, 22.0 ],
+									"style" : "default",
+									"text" : "j.remote my_position:ramp/function"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"id" : "obj-1",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 811.0, 757.0, 240.0, 51.0 ],
+									"style" : "",
+									"text" : "Makes this subpatch a model, so that j.remote objects can subscribe to j.parameter objects."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-20",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 752.0, 771.5, 49.0, 22.0 ],
+									"style" : "",
+									"text" : "j.model"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 0,
 									"fontsize" : 14.0,
@@ -313,15 +446,12 @@
 							}
 , 							{
 								"box" : 								{
-									"bubble" : 1,
 									"bubbleside" : 2,
 									"id" : "obj-38",
-									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 792.25, 416.0, 193.0, 52.0 ],
-									"presentation_rect" : [ 987.0, 193.5, 0.0, 0.0 ],
+									"patching_rect" : [ 718.25, 417.0, 353.75, 20.0 ],
 									"style" : "",
 									"text" : "Change the ramp function for additional expressive possibilities."
 								}
@@ -336,7 +466,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 505.0, 262.5, 166.0, 51.0 ],
-									"presentation_rect" : [ 127.0, 272.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Cartesian coordinates result in movement along a straight line."
 								}
@@ -588,69 +717,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-25",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 848.0, 556.0, 131.0, 22.0 ],
-									"style" : "",
-									"text" : "prepend ramp/function"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-15",
-									"maxclass" : "live.menu",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "", "float" ],
-									"parameter_enable" : 1,
-									"patching_rect" : [ 848.0, 526.0, 116.5, 15.0 ],
-									"pictures" : [ "linear.svg", "easeInBack.svg", "easeInOutBack.svg", "easeOutBack.svg", "easeInBounce.svg", "easeInOutBounce.svg", "easeOutBounce.svg", "easeInCircular.svg", "easeInOutCircular.svg", "easeOutCircular.svg", "easeInCubic.svg", "easeInOutCubic.svg", "easeOutCubic.svg", "easeInElastic.svg", "easeInOutElastic.svg", "easeOutElastic.svg", "easeInExponential.svg", "easeInOutExponential.svg", "easeOutExponential.svg", "easeInQuadratic.svg", "easeInOutQuadratic.svg", "easeOutQuadratic.svg", "easeInQuartic.svg", "easeInOutQuartic.svg", "easeOutQuartic.svg", "easeInQuintic.svg", "easeInOutQuintic.svg", "easeOutQuintic.svg", "easeInSine.svg", "easeInOutSine.svg", "easeOutSine.svg", "exponential.svg", "freehand.svg", "logarithm.svg", "lowpass.svg", "power.svg", "smoothPolynomial.svg", "tanh.svg", "bartlett.svg", "blackman.svg", "blackmanHarris.svg", "expodec.svg", "gauss.svg", "hamming.svg", "hanning.svg", "kaiser.svg", "nuttall.svg", "rectangular.svg", "rosenbergGlottalPulse.svg", "trapezoid.svg", "tukey.svg", "welch.svg" ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_longname" : "live.menu[1]",
-											"parameter_shortname" : "live.menu",
-											"parameter_type" : 2,
-											"parameter_enum" : [ "linear", "easeInBack", "easeInOutBack", "easeOutBack", "easeInBounce", "easeInOutBounce", "easeOutBounce", "easeInCircular", "easeInOutCircular", "easeOutCircular", "easeInCubic", "easeInOutCubic", "easeOutCubic", "easeInElastic", "easeInOutElastic", "easeOutElastic", "easeInExponential", "easeInOutExponential", "easeOutExponential", "easeInQuadratic", "easeInOutQuadratic", "easeOutQuadratic", "easeInQuartic", "easeInOutQuartic", "easeOutQuartic", "easeInQuintic", "easeInOutQuintic", "easeOutQuintic", "easeInSine", "easeInOutSine", "easeOutSine", "exponential", "freehand", "logarithm", "lowpass", "power", "smoothPolynomial", "tanh", "bartlett", "blackman", "blackmanHarris", "expodec", "gauss", "hamming", "hanning", "kaiser", "nuttall", "rectangular", "rosenbergGlottalPulse", "trapezoid", "tukey", "welch" ]
-										}
-
-									}
-,
-									"varname" : "live.menu[2]"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontsize" : 24.0,
-									"id" : "obj-24",
-									"maxclass" : "live.menu",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "", "float" ],
-									"parameter_enable" : 1,
-									"patching_rect" : [ 848.0, 486.0, 81.5, 30.0 ],
-									"pictures" : [ "linear.svg", "easeInBack.svg", "easeInOutBack.svg", "easeOutBack.svg", "easeInBounce.svg", "easeInOutBounce.svg", "easeOutBounce.svg", "easeInCircular.svg", "easeInOutCircular.svg", "easeOutCircular.svg", "easeInCubic.svg", "easeInOutCubic.svg", "easeOutCubic.svg", "easeInElastic.svg", "easeInOutElastic.svg", "easeOutElastic.svg", "easeInExponential.svg", "easeInOutExponential.svg", "easeOutExponential.svg", "easeInQuadratic.svg", "easeInOutQuadratic.svg", "easeOutQuadratic.svg", "easeInQuartic.svg", "easeInOutQuartic.svg", "easeOutQuartic.svg", "easeInQuintic.svg", "easeInOutQuintic.svg", "easeOutQuintic.svg", "easeInSine.svg", "easeInOutSine.svg", "easeOutSine.svg", "exponential.svg", "freehand.svg", "logarithm.svg", "lowpass.svg", "power.svg", "smoothPolynomial.svg", "tanh.svg", "bartlett.svg", "blackman.svg", "blackmanHarris.svg", "expodec.svg", "gauss.svg", "hamming.svg", "hanning.svg", "kaiser.svg", "nuttall.svg", "rectangular.svg", "rosenbergGlottalPulse.svg", "trapezoid.svg", "tukey.svg", "welch.svg" ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_longname" : "live.menu[2]",
-											"parameter_shortname" : "live.menu",
-											"parameter_type" : 2,
-											"parameter_enum" : [ "linear", "easeInBack", "easeInOutBack", "easeOutBack", "easeInBounce", "easeInOutBounce", "easeOutBounce", "easeInCircular", "easeInOutCircular", "easeOutCircular", "easeInCubic", "easeInOutCubic", "easeOutCubic", "easeInElastic", "easeInOutElastic", "easeOutElastic", "easeInExponential", "easeInOutExponential", "easeOutExponential", "easeInQuadratic", "easeInOutQuadratic", "easeOutQuadratic", "easeInQuartic", "easeInOutQuartic", "easeOutQuartic", "easeInQuintic", "easeInOutQuintic", "easeOutQuintic", "easeInSine", "easeInOutSine", "easeOutSine", "exponential", "freehand", "logarithm", "lowpass", "power", "smoothPolynomial", "tanh", "bartlett", "blackman", "blackmanHarris", "expodec", "gauss", "hamming", "hanning", "kaiser", "nuttall", "rectangular", "rosenbergGlottalPulse", "trapezoid", "tukey", "welch" ]
-										}
-
-									}
-,
-									"usepicture" : 1,
-									"varname" : "live.menu[3]"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-22",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -722,10 +788,20 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-25", 0 ],
+									"destination" : [ "obj-33", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-15", 1 ]
+									"midpoints" : [ 978.5, 600.0, 957.5, 600.0, 957.5, 457.0, 978.5, 457.0 ],
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-12", 1 ]
 								}
 
 							}
@@ -767,28 +843,29 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-15", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-24", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-25", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-22", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-27", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 761.5, 599.5, 743.5, 599.5, 743.5, 449.5, 761.5, 449.5 ],
+									"source" : [ "obj-32", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-33", 1 ]
 								}
 
 							}
@@ -819,11 +896,37 @@
 								}
 
 							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-32", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
  ]
 					}
 ,
 					"patching_rect" : [ 410.0, 507.5, 125.0, 21.0 ],
-					"presentation_rect" : [ 410.0, 507.5, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -839,6 +942,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -853,7 +957,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -891,7 +995,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 815.0, 4.283813, 385.0, 69.0 ],
+									"patching_rect" : [ 801.0, 4.283813, 385.0, 69.0 ],
 									"style" : "",
 									"text" : "Note to Jamoma developers:\n\nIf you do changes to this patch, please remember to update the help files for j.message and j.return accordingly.",
 									"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
@@ -969,7 +1073,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 728.5, 81.0, 199.0, 20.0 ],
+									"patching_rect" : [ 728.5, 125.5, 199.0, 20.0 ],
 									"style" : "",
 									"text" : "Clipping and type"
 								}
@@ -1072,7 +1176,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 959.0, 240.0, 138.0, 37.0 ],
+									"patching_rect" : [ 959.0, 284.5, 138.0, 37.0 ],
 									"style" : "",
 									"text" : "The type of each list member is observed"
 								}
@@ -1084,7 +1188,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 728.5, 107.5, 350.0, 20.0 ],
+									"patching_rect" : [ 728.5, 152.0, 350.0, 20.0 ],
 									"style" : "",
 									"text" : "Clipping works with @type integer, decimal, array and generic.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1099,7 +1203,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 697.0, 210.0, 29.5, 22.0 ],
+									"patching_rect" : [ 697.0, 254.5, 29.5, 22.0 ],
 									"style" : "",
 									"text" : "set"
 								}
@@ -1113,7 +1217,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 697.0, 182.0, 69.0, 22.0 ],
+									"patching_rect" : [ 697.0, 226.5, 69.0, 22.0 ],
 									"style" : "",
 									"text" : "j.savebang"
 								}
@@ -1126,7 +1230,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 776.0, 247.5, 171.0, 22.0 ],
+									"patching_rect" : [ 776.0, 292.0, 171.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -1138,7 +1242,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 776.0, 158.5, 149.0, 22.0 ],
+									"patching_rect" : [ 776.0, 203.0, 149.0, 22.0 ],
 									"style" : "",
 									"text" : "0. 1. 2. 3. 4. 5. 6. 7 testing"
 								}
@@ -1147,14 +1251,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-43",
-									"linecount" : 4,
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 776.0, 183.0, 125.0, 62.0 ],
+									"patching_rect" : [ 776.0, 227.5, 162.0, 49.0 ],
 									"style" : "",
-									"text" : "j.parameter adf @type generic @range 2. 4. @clipmode both"
+									"text" : "j.parameter my_generic @type generic @range 2. 4. @clipmode both"
 								}
 
 							}
@@ -1897,7 +2001,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1927,6 +2031,468 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-8",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 81.0, 657.5, 67.0, 22.0 ],
+									"style" : "",
+									"text" : "preset:edit"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-83",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 156.0, 657.5, 113.0, 22.0 ],
+									"style" : "",
+									"text" : "preset:new default"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-5",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 32.0, 582.5, 143.0, 20.0 ],
+									"style" : "",
+									"text" : "Presets respect priorities"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 136.0, 694.0, 121.0, 37.0 ],
+									"style" : "",
+									"text" : "Makes this subpatch a model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 81.0, 701.5, 49.0, 22.0 ],
+									"style" : "",
+									"text" : "j.model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-6",
+									"maxclass" : "live.text",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 81.0, 616.5, 127.0, 22.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "live.text",
+											"parameter_shortname" : "live.text",
+											"parameter_type" : 2,
+											"parameter_mmax" : 1.0,
+											"parameter_enum" : [ "val1", "val2" ]
+										}
+
+									}
+,
+									"text" : "Create and view cue",
+									"varname" : "live.text"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-80",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 744.0, 668.0, 196.0, 37.0 ],
+									"style" : "",
+									"text" : "Dessert has no priority, and will be last."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-79",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 742.0, 626.0, 200.0, 24.0 ],
+									"style" : "",
+									"text" : "Then comes main course"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-78",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 742.0, 559.5, 200.0, 51.0 ],
+									"style" : "",
+									"text" : "Starter will be first if the dishes, but after the parameters in the left part of the patch."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-75",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 553.0, 450.5, 377.0, 87.0 ],
+									"style" : "default",
+									"text" : "All subnodes of one node will be triggered at the same time. @priority controls priority within this node level, but not relative to higher nodes.\n\nIn order to make sure that nodes fire in a specific sequence, we cna use the j.node object."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-73",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 553.0, 346.0, 377.0, 20.0 ],
+									"style" : "default",
+									"text" : "\"cake\" and \"ice_cream\" are subnodes of \"dessert\":"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-72",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 553.0, 252.75, 377.0, 20.0 ],
+									"style" : "default",
+									"text" : "\"fish\" and \"vegetarian\" are subnodes of \"main_course\"."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-71",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 553.0, 159.5, 377.0, 20.0 ],
+									"style" : "default",
+									"text" : "\"soup\" and \"salad\" are subnodes of \"starter\"."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-70",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 742.0, 372.0, 175.0, 35.0 ],
+									"style" : "",
+									"text" : "j.parameter dessert/ice_cream @priority 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-69",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 565.5, 372.0, 145.0, 35.0 ],
+									"style" : "",
+									"text" : "j.parameter dessert/cake @priority 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-68",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 742.0, 278.75, 205.0, 35.0 ],
+									"style" : "",
+									"text" : "j.parameter main_course/vegetarian @priority 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-67",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 565.5, 278.75, 167.0, 35.0 ],
+									"style" : "",
+									"text" : "j.parameter main_course/fish @priority 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-66",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 742.0, 185.5, 142.0, 35.0 ],
+									"style" : "",
+									"text" : "j.parameter starter/salad @priority 2"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-65",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 565.5, 185.5, 139.0, 35.0 ],
+									"style" : "",
+									"text" : "j.parameter starter/soup @priority 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-63",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 565.5, 675.5, 120.0, 22.0 ],
+									"style" : "default",
+									"text" : "j.node dessert"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-62",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 565.5, 620.5, 120.0, 35.0 ],
+									"style" : "default",
+									"text" : "j.node main_course @priority 12"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-61",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 565.5, 567.5, 120.0, 35.0 ],
+									"style" : "default",
+									"text" : "j.node starter @priority 11"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-60",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 553.0, 119.0, 377.0, 20.0 ],
+									"style" : "default",
+									"text" : "The addresses of the below parameters make use of subnodes."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontsize" : 12.0,
+									"id" : "obj-59",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 553.0, 92.5, 205.0, 20.0 ],
+									"style" : "",
+									"text" : "Parameter addresses with subnodes"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-55",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 201.0, 447.0, 177.0, 51.0 ],
+									"style" : "",
+									"text" : "No priority.\nTthis is the default.\nWill be the last to be set."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-54",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 201.0, 328.0, 168.0, 64.0 ],
+									"style" : "",
+									"text" : "Third priority. When several parameters have the same priority, they will fire in alphabetical order."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-53",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 201.0, 259.5, 179.0, 24.0 ],
+									"style" : "",
+									"text" : "Second priority."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"fontsize" : 12.0,
+									"id" : "obj-52",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 201.0, 185.5, 171.0, 24.0 ],
+									"style" : "",
+									"text" : "First priority, fires first."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-50",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 81.0, 455.0, 106.0, 35.0 ],
+									"style" : "default",
+									"text" : "j.parameter zzz @priority 0"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-49",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 81.0, 371.0, 107.0, 35.0 ],
+									"style" : "default",
+									"text" : "j.parameter ccc_b @priority 3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-47",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 81.0, 328.0, 107.0, 35.0 ],
+									"style" : "default",
+									"text" : "j.parameter ccc_a @priority 3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-42",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 81.0, 180.0, 106.0, 35.0 ],
+									"style" : "default",
+									"text" : "j.parameter aaa @priority 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"border" : 0,
 									"filename" : "helpname.js",
 									"id" : "obj-41",
@@ -1943,1081 +2509,65 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-48",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 810.0, 833.0, 69.0, 22.0 ],
-									"style" : "default",
-									"text" : "help j.node"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-46",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 889.5, 833.0, 53.0, 22.0 ],
-									"style" : "default",
-									"text" : "pcontrol"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-43",
-									"linecolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"maxclass" : "live.line",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 795.0, 518.0, 56.5, 18.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"hidden" : 1,
-									"id" : "obj-44",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patcher" : 									{
-										"fileversion" : 1,
-										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 3,
-											"architecture" : "x64",
-											"modernui" : 1
-										}
-,
-										"rect" : [ 25.0, 69.0, 422.0, 194.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 11.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Helvetica Neue",
-										"gridonopen" : 1,
-										"gridsize" : [ 10.0, 10.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"boxes" : [ 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-19",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 50.0, 100.0, 24.0, 20.0 ],
-													"style" : "",
-													"text" : "t b"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-16",
-													"linecount" : 3,
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 126.0, 310.0, 45.0 ],
-													"style" : "",
-													"text" : ";\rmax launchbrowser https://github.com/jamoma/JamomaMax/issues/534"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"comment" : "",
-													"id" : "obj-22",
-													"maxclass" : "inlet",
-													"numinlets" : 0,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ],
-													"style" : ""
-												}
-
-											}
- ],
-										"lines" : [ 											{
-												"patchline" : 												{
-													"destination" : [ "obj-16", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-19", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-19", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-22", 0 ]
-												}
-
-											}
- ]
-									}
-,
-									"patching_rect" : [ 791.0, 529.0, 19.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"fontname" : "Helvetica Neue",
-										"fontsize" : 11.0,
-										"globalpatchername" : "",
-										"style" : "",
-										"tags" : ""
-									}
-,
-									"style" : "default",
-									"text" : "p"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-45",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 791.0, 505.0, 70.0, 22.0 ],
-									"style" : "default",
-									"text" : "issue #534"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-40",
-									"linecount" : 3,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 755.5, 477.0, 263.0, 47.0 ],
-									"style" : "default",
-									"text" : "NB: j.namespace doesn't work as it should (recursively) to handle priority sorting... \nsee : "
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-39",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 249.0, 824.5, 351.0, 20.0 ],
-									"style" : "default",
-									"text" : "this way, we can define the priority at the “something\" node level"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-38",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 602.5, 824.5, 163.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.node something @priority 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-37",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 783.5, 346.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter something/completely/different/param @priority 2"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbleside" : 2,
-									"id" : "obj-36",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 487.0, 767.5, 413.0, 52.0 ],
-									"style" : "default",
-									"text" : "the solution to handle this kind of case is to use the j.node object, which allow to explicitly declare properties of implicitly-created nodes"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-35",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 408.0, 742.5, 552.0, 20.0 ],
-									"style" : "default",
-									"text" : "they won't even work between them, because priorities work recursively, each node level after another"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-33",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 762.5, 263.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter yet/another/node/param @priority 3"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-31",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 742.5, 263.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter some/other/node/param @priority 4"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-20",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 716.0, 701.0, 20.0 ],
-									"style" : "default",
-									"text" : "i.e.: these two parameters' priorities below won't be working within the same \"scope\" than the \"simple\" parameters' priorities above"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-18",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 689.0, 409.0, 20.0 ],
-									"style" : "default",
-									"text" : "priorities are handled only at the parameter level, not for higher-level nodes"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-16",
-									"linecount" : 3,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 382.5, 629.0, 507.0, 47.0 ],
-									"style" : "default",
-									"text" : "here, for example, a sub-node of this patcher's model is created, called \"some\"\nthen a sub-node to this node, called \"sub\", is also created, and then a third one called \"node\"\nfinally, the parameter \"param\" exists at the end of this sub-tree"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-14",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 606.0, 458.0, 20.0 ],
-									"style" : "default",
-									"text" : "It is possible to implicitly declare nodes in a j.parameter's address (by using slashes)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-12",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 635.5, 194.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter some/sub/node/param"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-11",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 96.5, 570.0, 789.0, 20.0 ],
-									"style" : "default",
-									"text" : "Working with subnodes is possible within parameters, but requires some knowledge about the way nodes work (in particular in relation to priorities)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbleside" : 3,
-									"id" : "obj-10",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 646.0, 269.0, 272.0, 37.0 ],
-									"style" : "default",
-									"text" : "create a cue and look at the order in which \nthe parameters are stored (and recalled)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-34",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 919.0, 278.0, 86.0, 22.0 ],
-									"style" : "default",
-									"text" : "store cue, edit"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-32",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 0,
-									"patcher" : 									{
-										"fileversion" : 1,
-										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 3,
-											"architecture" : "x64",
-											"modernui" : 1
-										}
-,
-										"rect" : [ 25.0, 69.0, 387.0, 155.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
-										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"boxes" : [ 											{
-												"box" : 												{
-													"id" : "obj-6",
-													"maxclass" : "button",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 63.0, 54.0, 20.0, 20.0 ],
-													"style" : ""
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-4",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 87.0, 104.0, 75.0, 20.0 ],
-													"style" : "",
-													"text" : "j.send */*/*/*"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-3",
-													"linecount" : 2,
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 98.0, 54.0, 171.0, 33.0 ],
-													"style" : "",
-													"text" : "this sets all parameters of this model to 0. once it is ready"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-18",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "int" ],
-													"patching_rect" : [ 27.0, 78.0, 24.0, 20.0 ],
-													"style" : "",
-													"text" : "t 0"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-1",
-													"maxclass" : "newobj",
-													"numinlets" : 2,
-													"numoutlets" : 2,
-													"outlettype" : [ "bang", "" ],
-													"patching_rect" : [ 27.0, 54.0, 36.0, 20.0 ],
-													"style" : "",
-													"text" : "sel 1"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-14",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 3,
-													"outlettype" : [ "", "", "" ],
-													"patching_rect" : [ 27.0, 27.0, 111.0, 20.0 ],
-													"style" : "",
-													"text" : "j.receive :initialized"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-10",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 27.0, 104.0, 51.0, 20.0 ],
-													"style" : "",
-													"text" : "j.send *"
-												}
-
-											}
- ],
-										"lines" : [ 											{
-												"patchline" : 												{
-													"destination" : [ "obj-18", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-1", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-1", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-14", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-10", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-18", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-4", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-18", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-18", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-6", 0 ]
-												}
-
-											}
- ]
-									}
-,
-									"patching_rect" : [ 646.0, 144.0, 61.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"style" : "",
-										"tags" : ""
-									}
-,
-									"style" : "default",
-									"text" : "p initStuff"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-30",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 919.0, 307.0, 100.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.cue @relative 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-28",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 509.0, 261.0, 20.0 ],
-									"style" : "default",
-									"text" : "Smaller still come first with negative values"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-29",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 529.0, 283.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter EvenMoreThanFirstPriority @priority -2"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-27",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 346.0, 364.0, 157.0, 20.0 ],
-									"style" : "default",
-									"text" : "other prioritized parameters"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-26",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 454.0, 261.0, 20.0 ],
-									"style" : "default",
-									"text" : "Negative values are recalled before @priority 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-25",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 346.0, 400.0, 165.0, 33.0 ],
-									"style" : "default",
-									"text" : "Here too further ordering is based on aphabetical order"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-24",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 351.0, 370.0, 20.0 ],
-									"style" : "default",
-									"text" : "No priority is equivalent to @priority 0 -> these are recalled after all "
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-23",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 269.0, 364.0, 20.0 ],
-									"style" : "default",
-									"text" : "For equal priorities, further ordering is based on aphabetical order"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-22",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 130.0, 164.0, 364.0, 20.0 ],
-									"style" : "default",
-									"text" : "Priorities work by ascending order (smaller values are recalled first"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-21",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 695.0, 123.0, 393.0, 33.0 ],
-									"style" : "default",
-									"text" : "NB: a j.model is used here to gather all parameters of the patcher under a certain node (here the name of this patcher: Priorities & subnodes)"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-19",
-									"linecount" : 2,
+									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 96.5, 123.0, 359.0, 33.0 ],
+									"patching_rect" : [ 32.0, 79.0, 377.0, 47.0 ],
 									"style" : "default",
-									"text" : "It is possible to sort parameters by priority: this is particularly useful when recalling values with j.cue or with presets (in j.model)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-17",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patcher" : 									{
-										"fileversion" : 1,
-										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 3,
-											"architecture" : "x64",
-											"modernui" : 1
-										}
-,
-										"rect" : [ 25.0, 69.0, 468.0, 189.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
-										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"boxes" : [ 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-1",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "clear" ],
-													"patching_rect" : [ 95.0, 52.0, 43.0, 20.0 ],
-													"style" : "",
-													"text" : "t clear"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-12",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 26.0, 50.0, 56.0, 20.0 ],
-													"style" : "",
-													"text" : "deferlow"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-11",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 26.0, 24.0, 115.0, 20.0 ],
-													"style" : "",
-													"text" : "loadmess /Priorities"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"fontname" : "Arial",
-													"fontsize" : 12.0,
-													"id" : "obj-10",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 3,
-													"outlettype" : [ "", "", "" ],
-													"patching_rect" : [ 26.0, 77.0, 408.0, 20.0 ],
-													"style" : "",
-													"text" : "j.namespace @format umenu_prefix @filter/list parameter @sort priority"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"comment" : "",
-													"id" : "obj-16",
-													"maxclass" : "outlet",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 26.0, 112.0, 25.0, 25.0 ],
-													"style" : ""
-												}
-
-											}
- ],
-										"lines" : [ 											{
-												"patchline" : 												{
-													"destination" : [ "obj-16", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-1", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-16", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-10", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-1", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-11", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-12", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-11", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-10", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-12", 0 ]
-												}
-
-											}
- ]
-									}
-,
-									"patching_rect" : [ 971.5, 420.0, 20.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"style" : "",
-										"tags" : ""
-									}
-,
-									"style" : "default",
-									"text" : "p"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-15",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 756.0, 420.0, 263.0, 33.0 ],
-									"style" : "default",
-									"text" : "Using j.namespace (see in subpatcher) \nalso allows to see how parameters are ordered:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-8",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 420.0, 152.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter NoPriorityB"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-7",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 400.0, 152.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter NoPriorityA"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-6",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 233.0, 214.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter SecondPriority @priority 2"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-5",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 477.0, 255.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter MoreThanFirstPriority @priority -1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 322.0, 205.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter SamePriority @priority 3"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 376.0, 127.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter NoPriority"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-2",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 295.0, 199.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.parameter LessPriority @priority 3"
+									"text" : "When initialising models, it might be important to set the value of the parameters in a specific sequence. This can be controlled using the @priority attribute."
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-1",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 130.0, 198.0, 197.0, 22.0 ],
+									"patching_rect" : [ 81.0, 254.0, 106.0, 35.0 ],
 									"style" : "default",
-									"text" : "j.parameter FirstPriority @priority 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-13",
-									"items" : "<empty>",
-									"maxclass" : "umenu",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "int", "", "" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 755.5, 457.5, 260.0, 22.0 ],
-									"prefix" : "/Priorities/",
-									"style" : "default"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-9",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 646.0, 123.0, 49.0, 22.0 ],
-									"style" : "default",
-									"text" : "j.model"
+									"text" : "j.parameter bbb @priority 2"
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
-									"destination" : [ "obj-13", 0 ],
-									"disabled" : 0,
-									"hidden" : 1,
-									"midpoints" : [ 981.0, 453.5, 765.0, 453.5 ],
-									"source" : [ "obj-17", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-30", 0 ],
+									"destination" : [ "obj-8", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-34", 0 ]
+									"source" : [ "obj-6", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-44", 0 ],
+									"destination" : [ "obj-83", 0 ],
 									"disabled" : 0,
-									"hidden" : 1,
-									"source" : [ "obj-45", 0 ]
+									"hidden" : 0,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-8", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-83", 0 ]
 								}
 
 							}
@@ -3040,6 +2590,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -3054,7 +2605,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3084,6 +2635,33 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"id" : "obj-2",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 117.590645, 760.0, 240.0, 51.0 ],
+									"style" : "",
+									"text" : "Makes this subpatch a model, so that j.remote objects can subscribe to j.parameter objects."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 58.590645, 774.5, 49.0, 22.0 ],
+									"style" : "",
+									"text" : "j.model"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontface" : 0,
 									"fontsize" : 14.0,
 									"hidden" : 1,
@@ -3107,7 +2685,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1049.0, 375.5, 72.0, 24.0 ],
-									"presentation_rect" : [ 887.0, 663.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "midigain"
 								}
@@ -3121,7 +2698,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1049.0, 293.5, 72.0, 24.0 ],
-									"presentation_rect" : [ 887.0, 590.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "decibel"
 								}
@@ -3135,7 +2711,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1049.0, 211.0, 72.0, 24.0 ],
-									"presentation_rect" : [ 887.0, 517.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "linear"
 								}
@@ -3148,7 +2723,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 905.0, 82.0, 150.0, 20.0 ],
-									"presentation_rect" : [ 890.0, 130.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Dataspace and j.remote"
 								}
@@ -3161,8 +2735,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 905.0, 100.5, 222.0, 47.0 ],
-									"presentation_rect" : [ 840.0, 65.0, 0.0, 0.0 ],
+									"patching_rect" : [ 905.0, 100.5, 225.0, 47.0 ],
 									"style" : "",
 									"text" : "The unit used for display and interaction can be set separately for each j.remote object associated with the parameter.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -3171,6 +2744,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"id" : "obj-73",
 									"maxclass" : "live.numbox",
 									"numinlets" : 1,
@@ -3178,7 +2752,6 @@
 									"outlettype" : [ "", "float" ],
 									"parameter_enable" : 1,
 									"patching_rect" : [ 934.0, 346.0, 49.0, 15.0 ],
-									"presentation_rect" : [ 978.5, 250.0, 0.0, 0.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_longname" : "live.numbox[18]",
@@ -3203,12 +2776,13 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 934.0, 370.0, 105.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /my_gain @unit midigain"
+									"text" : "j.remote my_gain @unit midigain"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"id" : "obj-71",
 									"maxclass" : "live.numbox",
 									"numinlets" : 1,
@@ -3216,7 +2790,6 @@
 									"outlettype" : [ "", "float" ],
 									"parameter_enable" : 1,
 									"patching_rect" : [ 929.0, 187.0, 49.0, 15.0 ],
-									"presentation_rect" : [ 975.0, 90.0, 0.0, 0.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_longname" : "live.numbox[17]",
@@ -3239,14 +2812,15 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 929.0, 211.0, 106.0, 22.0 ],
+									"patching_rect" : [ 929.0, 211.0, 110.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /my_gain"
+									"text" : "j.remote my_gain"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "none",
 									"id" : "obj-69",
 									"maxclass" : "live.numbox",
 									"numinlets" : 1,
@@ -3254,7 +2828,6 @@
 									"outlettype" : [ "", "float" ],
 									"parameter_enable" : 1,
 									"patching_rect" : [ 934.0, 264.0, 49.0, 15.0 ],
-									"presentation_rect" : [ 978.5, 167.0, 0.0, 0.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_longname" : "live.numbox[16]",
@@ -3281,7 +2854,7 @@
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 934.0, 288.0, 105.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /my_gain @unit dB"
+									"text" : "j.remote my_gain @unit dB"
 								}
 
 							}
@@ -3454,7 +3027,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 576.0, 249.0, 158.0, 24.0 ],
-									"presentation_rect" : [ 586.0, 233.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Temporarily use midigain"
 								}
@@ -3468,7 +3040,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 576.0, 176.0, 158.0, 24.0 ],
-									"presentation_rect" : [ 585.0, 166.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Temporarily use decibel"
 								}
@@ -3482,7 +3053,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 576.0, 103.0, 158.0, 24.0 ],
-									"presentation_rect" : [ 601.0, 257.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Linear gain by default"
 								}
@@ -3510,7 +3080,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 171.0, 440.5, 109.0, 51.0 ],
-									"presentation_rect" : [ 187.0, 447.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Available units for the chosen dataspace"
 								}
@@ -3533,7 +3102,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-33",
-									"items" : [ "second", ",", "bpm", ",", "Hertz", ",", "fps", ",", "s", ",", "millisecond", ",", "hz", ",", "midinote", ",", "sample", ",", "cents", ",", "ms", ",", "mel", ",", "Hz", ",", "speed", ",", "bark" ],
+									"items" : [ "fps", ",", "kn", ",", "m/s", ",", "km/h", ",", "kmph", ",", "ft/s", ",", "mi/h", ",", "mph" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -3745,7 +3314,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 39.0, 238.0, 318.0, 33.0 ],
-									"presentation_rect" : [ 36.0, 329.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Sets what unit is used by default. j.parameter output will always be according to this unit.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -3759,7 +3327,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 39.0, 220.0, 150.0, 20.0 ],
-									"presentation_rect" : [ 39.0, 305.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "@unit"
 								}
@@ -4009,7 +3576,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 486.0, 463.5, 80.5, 22.0 ],
+									"patching_rect" : [ 486.0, 463.5, 81.0, 22.0 ],
 									"style" : "default"
 								}
 
@@ -4022,7 +3589,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 486.0, 346.5, 119.0, 62.0 ],
+									"patching_rect" : [ 486.0, 346.5, 121.0, 62.0 ],
 									"style" : "default",
 									"text" : "j.parameter my_gain @type decimal @dataspace gain @unit linear"
 								}
@@ -4189,7 +3756,7 @@
 									"destination" : [ "obj-69", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 943.5, 320.0, 923.5, 320.0, 923.5, 253.0, 943.5, 253.0 ],
+									"midpoints" : [ 943.5, 328.0, 923.5, 328.0, 923.5, 253.0, 943.5, 253.0 ],
 									"source" : [ "obj-68", 0 ]
 								}
 
@@ -4274,7 +3841,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4322,6 +3889,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-34",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -4336,7 +3904,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4365,6 +3933,33 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"bubble" : 1,
+									"id" : "obj-19",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 127.0, 764.0, 240.0, 51.0 ],
+									"style" : "",
+									"text" : "Makes this subpatch a model, so that j.remote objects can subscribe to j.parameter objects."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-20",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 68.0, 778.5, 49.0, 22.0 ],
+									"style" : "",
+									"text" : "j.model"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 0,
 									"fontsize" : 14.0,
@@ -4503,9 +4098,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 659.0, 461.0, 162.0, 22.0 ],
+									"patching_rect" : [ 659.0, 461.0, 159.0, 22.0 ],
 									"style" : "default",
-									"text" : "j.remote /my_line:ramp/drive"
+									"text" : "j.remote my_line:ramp/drive"
 								}
 
 							}
@@ -4580,9 +4175,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 866.0, 169.0, 178.0, 22.0 ],
+									"patching_rect" : [ 866.0, 169.0, 175.0, 22.0 ],
 									"style" : "default",
-									"text" : "j.remote /my_line:ramp/function"
+									"text" : "j.remote my_line:ramp/function"
 								}
 
 							}
@@ -4770,9 +4365,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 659.0, 169.0, 178.0, 22.0 ],
+									"patching_rect" : [ 659.0, 169.0, 175.0, 22.0 ],
 									"style" : "default",
-									"text" : "j.remote /my_line:ramp/function"
+									"text" : "j.remote my_line:ramp/function"
 								}
 
 							}
@@ -5052,6 +4647,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-31",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -5066,7 +4662,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 34.0, 155.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5097,6 +4693,33 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"bubble" : 1,
+									"id" : "obj-4",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 862.5, 26.0, 240.0, 51.0 ],
+									"style" : "",
+									"text" : "Makes this subpatch a model, so that j.remote objects can subscribe to j.parameter objects."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 803.5, 40.5, 49.0, 22.0 ],
+									"style" : "",
+									"text" : "j.model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
 									"id" : "obj-41",
 									"linecount" : 3,
 									"maxclass" : "comment",
@@ -5116,14 +4739,15 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 588.0, 742.5, 122.0, 35.0 ],
+									"patching_rect" : [ 588.0, 742.5, 111.0, 35.0 ],
 									"style" : "default",
-									"text" : "j.remote /frequency @unit midinote"
+									"text" : "j.remote frequency @unit midinote"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "The frequency value of my patch.",
 									"id" : "obj-36",
 									"maxclass" : "nslider",
 									"numinlets" : 2,
@@ -5170,14 +4794,15 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 588.0, 166.0, 113.0, 22.0 ],
+									"patching_rect" : [ 588.0, 166.0, 110.0, 22.0 ],
 									"style" : "default",
-									"text" : "j.remote /frequency"
+									"text" : "j.remote frequency"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "The frequency value of my patch.",
 									"id" : "obj-31",
 									"maxclass" : "live.numbox",
 									"numinlets" : 1,
@@ -5208,14 +4833,15 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 588.0, 275.0, 113.0, 22.0 ],
+									"patching_rect" : [ 588.0, 275.0, 110.0, 22.0 ],
 									"style" : "default",
-									"text" : "j.remote /frequency"
+									"text" : "j.remote frequency"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "The frequency value of my patch.",
 									"id" : "obj-27",
 									"maxclass" : "live.slider",
 									"numinlets" : 1,
@@ -5271,6 +4897,7 @@
 							}
 , 							{
 								"box" : 								{
+									"annotation" : "The frequency value of my patch.",
 									"id" : "obj-6",
 									"maxclass" : "kslider",
 									"numinlets" : 2,
@@ -5291,9 +4918,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 588.0, 459.5, 122.0, 35.0 ],
+									"patching_rect" : [ 588.0, 459.5, 111.0, 35.0 ],
 									"style" : "default",
-									"text" : "j.remote /frequency @unit midinote"
+									"text" : "j.remote frequency @unit midinote"
 								}
 
 							}
@@ -5373,9 +5000,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 41.0, 123.5, 472.0, 234.0 ],
+									"patching_rect" : [ 41.0, 123.5, 485.0, 234.0 ],
 									"style" : "default",
-									"text" : "j.parameter is somewhat similar to the pattr object, while enabling a number of additional features offered by Jamoma.\n\nThe parameter is an acces point for controlling the processing of the patch. The value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.\n\nThe value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.\n\nAdditionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models."
+									"text" : "j.parameter is somewhat similar to the pattr object, while enabling a number of additional features offered by Jamoma.\n\nThe parameter is an acces point for controlling the processing of the patch. The parameter value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.\n\nThe value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.\n\nAdditionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models."
 								}
 
 							}
@@ -5512,6 +5139,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-33",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -5526,7 +5154,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5564,7 +5192,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 813.0, 4.283813, 385.0, 69.0 ],
+									"patching_rect" : [ 802.0, 4.283813, 385.0, 69.0 ],
 									"style" : "",
 									"text" : "Note to Jamoma developers:\n\nIf you do changes to this patch, please remember to update the help files for j.message and j.return accordingly.",
 									"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
@@ -5580,7 +5208,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 892.0, 171.0, 61.0, 21.0 ],
-									"presentation_rect" : [ 956.0, 171.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "none"
 								}
@@ -5595,7 +5222,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 892.0, 186.0, 272.0, 21.0 ],
-									"presentation_rect" : [ 956.0, 186.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "j.parameter does not support the \"none\" type.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -6324,6 +5950,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-74",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -6338,7 +5965,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1204.0, 857.0 ],
+						"rect" : [ 0.0, 26.0, 1192.0, 857.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -6368,6 +5995,185 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"id" : "obj-1",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 980.5, 20.0, 122.0, 35.0 ],
+									"style" : "default",
+									"text" : "Makes this subpatch a model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 925.5, 27.5, 49.0, 21.0 ],
+									"style" : "default",
+									"text" : "j.model"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-25",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 676.75, 672.0, 35.0, 21.0 ],
+									"style" : "default",
+									"text" : "bang"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-24",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 631.75, 672.0, 30.0, 21.0 ],
+									"style" : "default",
+									"text" : "init"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 616.0, 468.0, 34.0, 21.0 ],
+									"style" : "default",
+									"text" : "print"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 564.75, 672.0, 39.0, 21.0 ],
+									"style" : "default",
+									"text" : "dump"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 521.75, 672.0, 30.0, 21.0 ],
+									"style" : "default",
+									"text" : "dec"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-18",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 418.0, 670.0, 30.0, 21.0 ],
+									"style" : "default",
+									"text" : "inc"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 362.0, 670.0, 30.0, 21.0 ],
+									"style" : "default",
+									"text" : "-"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-9",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 316.0, 672.0, 30.0, 21.0 ],
+									"style" : "default",
+									"text" : "+"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 256.0, 640.0, 411.0, 19.0 ],
+									"style" : "default",
+									"text" : "- defines the  default value to which it will be set at init"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 101.0, 641.0, 100.0, 19.0 ],
+									"style" : "default",
+									"text" : "@value"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 101.0, 541.0, 100.0, 19.0 ],
+									"style" : "default",
+									"text" : "@active"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-3",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 490.0, 434.0, 93.0, 21.0 ],
+									"style" : "default",
+									"text" : "j.parameter jhgf"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"border" : 0,
 									"filename" : "helpname.js",
 									"id" : "obj-13",
@@ -6384,24 +6190,12 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-12",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 362.0, 544.0, 289.0, 19.0 ],
-									"style" : "default",
-									"text" : "- can be used with a list of symbols for the string type"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-32",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 846.0, 411.0, 31.0 ],
+									"patching_rect" : [ 666.0, 232.0, 411.0, 31.0 ],
 									"style" : "default",
 									"text" : "- keywords can be specified in the tag attribute in order to allow an easier/more powerful sorting in j.namespace and other functions"
 								}
@@ -6413,123 +6207,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 847.0, 100.0, 19.0 ],
+									"patching_rect" : [ 511.0, 233.0, 100.0, 19.0 ],
 									"style" : "default",
 									"text" : "@tag"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-30",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 804.0, 411.0, 31.0 ],
-									"style" : "default",
-									"text" : "- defines the order of priority according to which the parameter will be recalled in presets, cues, etc... lower values priorities come first - 0 comes last"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-31",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 805.0, 100.0, 19.0 ],
-									"style" : "default",
-									"text" : "@priority"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-27",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 504.0, 743.0, 89.0, 21.0 ],
-									"style" : "default",
-									"text" : "j.unit"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"hidden" : 1,
-									"id" : "obj-28",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 596.0, 754.0, 78.0, 21.0 ],
-									"style" : "default",
-									"text" : "prepend help"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"hidden" : 1,
-									"id" : "obj-29",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 596.0, 774.0, 55.0, 21.0 ],
-									"style" : "default",
-									"text" : "pcontrol"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-25",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 773.0, 411.0, 19.0 ],
-									"style" : "default",
-									"text" : "- defines the  unit  of the parameter in the chosen dataspace"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-26",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 774.0, 100.0, 19.0 ],
-									"style" : "default",
-									"text" : "@unit"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-20",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 742.0, 411.0, 19.0 ],
-									"style" : "default",
-									"text" : "- defines the  dataspace of the parameter, see "
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-22",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 743.0, 101.0, 19.0 ],
-									"style" : "default",
-									"text" : "@dataspace"
 								}
 
 							}
@@ -6539,7 +6219,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 707.0, 411.0, 19.0 ],
+									"patching_rect" : [ 256.0, 616.0, 411.0, 19.0 ],
 									"style" : "default",
 									"text" : "- defines the  default value to which it will be set at init"
 								}
@@ -6551,182 +6231,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 708.0, 100.0, 19.0 ],
+									"patching_rect" : [ 101.0, 617.0, 100.0, 19.0 ],
 									"style" : "default",
 									"text" : "@default"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-11",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 373.0, 434.0, 170.0, 19.0 ],
-									"style" : "default",
-									"text" : "help patcher for further details)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-21",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 308.0, 434.0, 65.0, 21.0 ],
-									"style" : "default",
-									"text" : "j.ramp"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"hidden" : 1,
-									"id" : "obj-23",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 493.0, 469.0, 78.0, 21.0 ],
-									"style" : "default",
-									"text" : "prepend help"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"hidden" : 1,
-									"id" : "obj-24",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 493.0, 489.0, 55.0, 21.0 ],
-									"style" : "default",
-									"text" : "pcontrol"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 278.0, 434.0, 38.0, 19.0 ],
-									"style" : "default",
-									"text" : "(see "
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-2",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 413.0, 293.0, 19.0 ],
-									"style" : "default",
-									"text" : "- what function of the FunctionLib is applied to the ramp"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 414.0, 109.0, 19.0 ],
-									"style" : "default",
-									"text" : "@ramp/function"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-1",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 287.0, 385.0, 324.0, 19.0 ],
-									"style" : "default",
-									"text" : "only integer, decimal, and array support ramping"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-5",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 313.0, 99.0, 19.0 ],
-									"style" : "default",
-									"text" : "none (bang)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-6",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 268.0, 153.0, 19.0 ],
-									"style" : "default",
-									"text" : "array (known as list in Max)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-7",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 238.0, 246.0, 19.0 ],
-									"style" : "default",
-									"text" : "decimal (a.k.a . floating point values, or float)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-8",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 223.0, 51.0, 19.0 ],
-									"style" : "default",
-									"text" : "integer"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-9",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 283.0, 177.0, 19.0 ],
-									"style" : "default",
-									"text" : "string (known as symbol in Max)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-10",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 253.0, 93.0, 19.0 ],
-									"style" : "default",
-									"text" : "boolean (0 or 1)"
 								}
 
 							}
@@ -6737,7 +6244,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 658.0, 406.0, 31.0 ],
+									"patching_rect" : [ 256.0, 567.0, 406.0, 31.0 ],
 									"style" : "default",
 									"text" : "- defines the size of the step used by the 'inc' and 'dec' messages (default is 1)"
 								}
@@ -6749,7 +6256,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 659.0, 100.0, 19.0 ],
+									"patching_rect" : [ 101.0, 568.0, 100.0, 19.0 ],
 									"style" : "default",
 									"text" : "@stepsize"
 								}
@@ -6761,45 +6268,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 689.0, 32.0, 19.0 ],
+									"patching_rect" : [ 276.0, 598.0, 32.0, 19.0 ],
 									"style" : "default",
 									"text" : "float"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-77",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 277.0, 148.5, 135.0, 19.0 ],
-									"style" : "default",
-									"text" : "- name of parameter"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-78",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 87.0, 146.0, 132.0, 19.0 ],
-									"style" : "default",
-									"text" : "Argument (mandatory):"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-82",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 88.0, 177.0, 63.0, 19.0 ],
-									"style" : "default",
-									"text" : "Attributes:"
 								}
 
 							}
@@ -6809,7 +6280,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 613.0, 351.0, 19.0 ],
+									"patching_rect" : [ 666.0, 190.0, 351.0, 19.0 ],
 									"style" : "default",
 									"text" : "- text describing the parameter for html auto-documenting modules"
 								}
@@ -6821,7 +6292,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 614.0, 100.0, 19.0 ],
+									"patching_rect" : [ 511.0, 191.0, 100.0, 19.0 ],
 									"style" : "default",
 									"text" : "@description"
 								}
@@ -6833,46 +6304,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 634.0, 39.0, 19.0 ],
+									"patching_rect" : [ 686.0, 211.0, 39.0, 19.0 ],
 									"style" : "default",
 									"text" : "(text)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-105",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 569.0, 100.0, 19.0 ],
-									"style" : "default",
-									"text" : "@clipmode"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-106",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 589.0, 124.0, 19.0 ],
-									"style" : "default",
-									"text" : "none, low, high, both"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-107",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 513.0, 289.0, 31.0 ],
-									"style" : "default",
-									"text" : "- suggested normal range of parameter (two ints or floats). Default: 0.-1."
 								}
 
 							}
@@ -6882,21 +6316,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 458.0, 200.0, 19.0 ],
+									"patching_rect" : [ 191.0, 134.0, 200.0, 19.0 ],
 									"style" : "default",
 									"text" : "- filter repetitions of the same value"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-109",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 204.0, 279.0, 19.0 ],
-									"style" : "default",
-									"text" : "- what kind of parameter is this?"
 								}
 
 							}
@@ -6906,7 +6328,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 289.0, 477.0, 63.0, 19.0 ],
+									"patching_rect" : [ 217.0, 153.0, 63.0, 19.0 ],
 									"style" : "default",
 									"text" : "0 (default)"
 								}
@@ -6918,7 +6340,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 289.0, 493.0, 19.0, 19.0 ],
+									"patching_rect" : [ 217.0, 169.0, 19.0, 19.0 ],
 									"style" : "default",
 									"text" : "1"
 								}
@@ -6930,7 +6352,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 459.0, 115.0, 19.0 ],
+									"patching_rect" : [ 36.0, 135.0, 115.0, 19.0 ],
 									"style" : "default",
 									"text" : "@repetitions/filter"
 								}
@@ -6938,136 +6360,42 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-113",
-									"maxclass" : "comment",
+									"attr" : "active",
+									"id" : "obj-4",
+									"maxclass" : "attrui",
 									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 519.0, 100.0, 19.0 ],
-									"style" : "default",
-									"text" : "@range"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-115",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 298.0, 188.0, 19.0 ],
-									"style" : "default",
-									"text" : "generic (default : any kind of data)"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-116",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 203.0, 100.0, 19.0 ],
-									"style" : "default",
-									"text" : "@type"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-117",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 364.0, 258.0, 19.0 ],
-									"style" : "default",
-									"text" : "none (default), Max"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-118",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 544.0, 82.0, 19.0 ],
-									"style" : "default",
-									"text" : "2 ints or floats"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-119",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 343.0, 278.0, 19.0 ],
-									"style" : "default",
-									"text" : "- determines if parameter can be ramped or not"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-120",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 108.0, 344.0, 109.0, 19.0 ],
-									"style" : "default",
-									"text" : "@ramp/drive"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-104",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 263.0, 568.0, 266.0, 19.0 ],
-									"style" : "default",
-									"text" : "- define range boundary restrictions. Default: none"
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 490.0, 404.0, 150.0, 21.0 ],
+									"style" : "default"
 								}
 
 							}
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-22", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-23", 0 ],
 									"disabled" : 0,
-									"hidden" : 1,
-									"midpoints" : [ 317.5, 461.0, 502.5, 461.0 ],
-									"source" : [ "obj-21", 0 ]
+									"hidden" : 0,
+									"source" : [ "obj-3", 1 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
+									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
-									"hidden" : 1,
-									"source" : [ "obj-23", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-28", 0 ],
-									"disabled" : 0,
-									"hidden" : 1,
-									"midpoints" : [ 513.5, 759.0, 605.5, 759.0 ],
-									"source" : [ "obj-27", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-29", 0 ],
-									"disabled" : 0,
-									"hidden" : 1,
-									"source" : [ "obj-28", 0 ]
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -7093,32 +6421,32 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-4::obj-15" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
-			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
-			"obj-4::obj-24" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
+			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
+			"obj-2::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
 			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
 			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
-			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
+			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
 			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
-			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
-			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
-			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
-			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
-			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
 			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
 			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
-			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
 			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
-			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
+			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
 			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
+			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
 			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
 			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
-			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ]
+			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
+			"obj-3::obj-63" : [ "live.dial", "From", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -7138,6 +6466,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
@@ -7147,26 +6479,6 @@
 			}
 , 			{
 				"name" : "j.unit.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.cue.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
