@@ -54,7 +54,7 @@
 				Node name
 			</digest>
 			<description>
-				Node name
+				Node name.  This is obligatory, and each parameter within the model must have a unique name.
 			</description>
 		</objarg>
 	</objarglist>
@@ -63,10 +63,10 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				<!-- TEXT_HERE -->
+				Outputs currently stored parameter value
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				Outputs currently stored parameter value.
 			</description>
 		</method>
 		<method name="int">
@@ -74,10 +74,10 @@
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Set and output parameter value
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				Set and output parameter value. Depending on the @type, the value might get converted to a float (<m>@type decimal</m> or <m>array</m>) value or a string (<m>@type string</m>).
 			</description>
 		</method>
 		<method name="float">
@@ -85,10 +85,10 @@
 				<arg name="ARG_NAME_0" type="float" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Set and output parameter value
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				Set and output parameter value. Depending on the @type, the value might get converted to an integer (<m>@type integer</m>) value or a string (<m>@type string</m>).
 			</description>
 		</method>
 		<method name="list">
@@ -96,43 +96,12 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Set and output parameter value
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="anything">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="+">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				Increment parameter value
-			</digest>
-			<description>
-				Increment parameter value by the value defined with the stepsize attribute
-			</description>
-		</method>
-		<method name="-">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				Decrement parameter value
-			</digest>
-			<description>
-				Decrement parameter value by the value defined with the stepsize attribute
+				Set and output parameter value. If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>string</m>, only the first list member will be used to set the value, and the type of this list member might be converted to fit the specified <m>@type</m> of the parameter.
+        If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>array</m> and ramping is enabled (as specified by <m>@ramp/funcion</m> and <m>@ramp/drive</m>), the two last list members can be used to request a ramp over time to the new value. If so, the second last list member should be the symbol <m>ramp</m> and the last list member specifies the desired ramp time in milliseconds.
+        If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>array</m> and a dataspace is used (as specifed by <m>@dataspace</m> and <m>@unit</m>), the new value can be set using alternative units. In this case the unit of new value is provided immedeately following the numerical value, as either the last list member or as thre third last list member if a ramp is also being requested. If an alternative unit is requested as well as a ramp, the ramping will happen according to the dataspace unit being used temporarily.
 			</description>
 		</method>
 		<method name="address">
@@ -140,10 +109,32 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				Set node name
+				Set/change node name
 			</digest>
 			<description>
-				Set node name
+				Set/change the name of the node. This replaces the name provided initially as an argument to the object.
+			</description>
+		</method>
+		<method name="+">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Stepwise increment the parameter value
+			</digest>
+			<description>
+				Stepwise increment the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
+			</description>
+		</method>
+		<method name="-">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Stepwise decrement the parameter value
+			</digest>
+			<description>
+				Stepwise decrement the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
 			</description>
 		</method>
 		<method name="dec">
@@ -151,10 +142,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Decrement parameter value
+				Stepwise decrement the parameter value
 			</digest>
 			<description>
-				Decrement parameter value by the value defined with the stepsize attribute
+				Stepwise decrement the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
 			</description>
 		</method>
 		<method name="dump">
@@ -162,10 +153,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Dump
+				Dump all attribute settings to rightmost outlet
 			</digest>
 			<description>
-				Dump j.parameter attributes state
+				Dump all attribute settings to rightmost outlet.
 			</description>
 		</method>
 		<method name="inc">
@@ -173,10 +164,10 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Increment parameter value
+				Stepwise increment the parameter value
 			</digest>
 			<description>
-				Increment parameter value by the value defined with the stepsize attribute
+				Stepwise increment the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
 			</description>
 		</method>
 		<method name="init">
@@ -184,10 +175,21 @@
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
 			<digest>
-				Reset the j.parameter to its default state
+				Re-initialise the parameter
 			</digest>
 			<description>
-				Reset the j.parameter to its default state
+				Re-initialise the parameter.
+			</description>
+		</method>
+    <method name="anything">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				If the symbol equals the name of a setable parameters for the current ramp function, the value for that parameter can be updated. Else the message is interpreted as a new value for <o>j.parameter</o>. Depending on the <m>@type</m> it might be converted to one or more decimals (<m>@type decimal</m> or <m>array</m>) or an integer (<m>@type integer</m>).
+			</digest>
+			<description>
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 	</methodlist>
@@ -204,20 +206,28 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>
 		</attribute>
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set how values exceeding range will be clipped
+			</digest>
+			<description>
+				Set how values exceeding range will be clipped (<m>none</m>, <m>low</m>, <m>high</m>, <m>both</m>, <m>wrap</m> or <m>fold</m>).
+			</description>
+		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Dataspace used by the parameter
 			</digest>
 			<description>
-				Dataspace used by the parameter (angle, color, distance, gain, none, orientation, position, speed, temperature, time)
+				Dataspace used by the parameter. This enables parameter values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are <m>angle</m>, <m>color</m>, <m>distance</m>, <m>gain</m>, <m>none</m>, <m>orientation</m>, <m>position</m>, <m>speed</m>, <m>temperature</m> and <m>time</m>.
 			</description>
 		</attribute>
-		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+		<attribute name="default" get="1" set="1" type="int" size="1">
 			<digest>
-				Dataspace unit used by the parameter
+				Default value
 			</digest>
 			<description>
-				Dataspace unit used by the parameter
+				Default value output by <o>j.parameter</o> on model initialization. The default value can be overridden by the default model preset.
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
@@ -225,15 +235,15 @@
 				Node description
 			</digest>
 			<description>
-				Node description
+				Description of what this node controls. The description is used when auto-documenting models.
 			</description>
 		</attribute>
 		<attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
-				Set j.parameter priority
+				Set priority
 			</digest>
 			<description>
-				Set parameter value order within a model
+				Priority controls in what order several <o>j.parameter</o> obejcts within the same model will initialsie and update in response to presets and cues.
 			</description>
 		</attribute>
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
@@ -241,7 +251,7 @@
 				Set the scheduler driving the ramp
 			</digest>
 			<description>
-				Set the scheduler driving the ramp: none, max
+				Set the scheduler driving the ramp: <m>none</m> - no ramping permitted, <m>max</m> - using the Max scheduler, and <m>system</m> - using the system clock. In Max it is recommended to use <m>max</m> rather than <m>system</m>.
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
@@ -249,15 +259,15 @@
 				Function to be used for ramping
 			</digest>
 			<description>
-				Function to be used for ramping (cosine, crossFadeIn, crossFadeOut, exponential, freehand, linear, logarithm, lowpass, power, smoothPolynomial, tanh, bartlett, blackman, blackmanHarris, expodec, gauss, hamming, hanning, kaiser, nuttall, rectangular, rosenbergGlottalPulse, trapezoid, tukey, welch)
+				Sets what easing function to use for ramping. A wide range of easing functions as well as windowing functions are available. Please refer to the help file for further details.
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				Parameters of the selected function used for ramping
+				Get list of configurable parameters for the current ramp function
 			</digest>
 			<description>
-				Parameters of the selected function used for ramping
+				Get list of configurable parameters for the current ramp function. Certain ramp functions as specified by the <m>@ramp/function</m> attribute have additional configurable parameters that can be changed dynamically to modify the shape of the ramping curve. The message <m>ramp/function/parameters</m> cause <o>j.parameter</o> to output a list of all such parameters from the rightmost outlet, prepended by the symbol <m>ramp/function/parameters</m>. Refer to the help file for <o>j.ramp</o> for an overview of what functions have additional configurable parameters.
 			</description>
 		</attribute>
 		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
@@ -265,23 +275,15 @@
 				Ramp status
 			</digest>
 			<description>
-				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
+				Ramp status. THe attribute will be set to <m>1</m> when <o>j.parameter</o> is currently performing a ramp, and changed to <m>0</m> when done.
 			</description>
 		</attribute>
 		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
-				j.parameter value range
+				The range of values
 			</digest>
 			<description>
-				j.parameter value range
-			</description>
-		</attribute>
-		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Set how values exceeding range will be clipped
-			</digest>
-			<description>
-				Set how values exceeding range will be clipped (none, low, high, wrap, fold)
+				The expected range of values for this parameter. Depending on <m>@clipmode</m> this might be a "recommended" or definitive range.
 			</description>
 		</attribute>
 		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
@@ -289,7 +291,15 @@
 				Filtering of value repetitions
 			</digest>
 			<description>
-				Set whether to filter out value repetitions or not
+				Set whether to filter out value repetitions (<m>1</m>) or not (<m>0</m>).
+			</description>
+		</attribute>
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
+			<digest>
+				Step size when incrementing or decrementing the parameter value
+      </digest>
+			<description>
+				Stepsize used when incrementing or decrementing the value using one of the messages <m>+</m>, <m>-</m>, <m>inc</m> or <m>dec</m>.
 			</description>
 		</attribute>
 		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
@@ -302,10 +312,10 @@
 		</attribute> -->
 		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
-				Some tags associated to the parameter
+				Tags associated with the parameter
 			</digest>
 			<description>
-				Some tags associated to the parameter
+				Tags associated with the parameter. This helps documenting the parameter, and is also useful when restricting namespace searches usibng <o>j.namespace</o>.
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
@@ -313,7 +323,15 @@
 				Type of the parameter value
 			</digest>
 			<description>
-				Type of the parameter value
+				Type of the parameter value. Permitted types are <m>decimal</m>, <m>integer</m>, <m>array</m>, <m>string</m>, <m>generic</m> and <m>boolean</m>.
+			</description>
+		</attribute>
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Dataspace unit used by the parameter
+			</digest>
+			<description>
+				Dataspace unit used by the parameter. The parameter will output values according to this unit.
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
@@ -324,22 +342,7 @@
 				Current parameter value
 			</description>
 		</attribute>
-		<attribute name="default" get="1" set="1" type="int" size="1">
-			<digest>
-				Default value
-			</digest>
-			<description>
-				Default value output by j.parameter on model initialization
-			</description>
-		</attribute>
-		<attribute name="stepsize" get="1" set="1" type="int" size="1">
-			<digest>
-				Size of the incrementation/decrementation
-			</digest>
-			<description>
-				Size the j.parameter's value will be incremented/decremented
-			</description>
-		</attribute>
+
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
@@ -347,10 +350,34 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.model">
+		<seealso name="j.message">
 			<!-- TEXT_HERE -->
 		</seealso>
-		<seealso name="j.message">
+		<seealso name="j.message_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.model">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.node">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.receive">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.remote">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.send">
 			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
