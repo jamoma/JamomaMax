@@ -8,8 +8,15 @@
 		Declare a model parameter
 	</digest>
 	<description>
-		Declares a parameter within a model or patch.
+		Declares a parameter within a model or patch. j.parameter is somewhat similar to the pattr object, while enabling a number of additional features offered by Jamoma.
 	</description>
+  <discussion>
+    The parameter is an acces point for controlling the processing of the patch. The parameter value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
+    <br/>
+    The value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.<br/>
+    <br/>
+    Additionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models.
+  </discussion>
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
@@ -49,7 +56,8 @@
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+    <objarg name="parameter name" optional="0" type="symbol">
+		<!-- ><objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0"> -->
 			<digest>
 				Node name
 			</digest>
@@ -71,7 +79,7 @@
 		</method>
 		<method name="int">
 			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
+        <arg name="input" optional="0" type="int" />
 			</arglist>
 			<digest>
 				Set and output parameter value
@@ -82,7 +90,7 @@
 		</method>
 		<method name="float">
 			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
+        <arg name="input" optional="0" type="float" />
 			</arglist>
 			<digest>
 				Set and output parameter value
@@ -93,7 +101,7 @@
 		</method>
 		<method name="list">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+        <arg name="input" optional="0" type="list" />
 			</arglist>
 			<digest>
 				Set and output parameter value
@@ -106,7 +114,7 @@
 		</method>
 		<method name="address">
 			<arglist>
-				<arg name="ARG_NAME_0" type="symbol" optional="0" />
+				<arg name="address" type="symbol" optional="0" />
 			</arglist>
 			<digest>
 				Set/change node name
@@ -117,7 +125,7 @@
 		</method>
 		<method name="+">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="number of steps" optional="1" type="int" />
 			</arglist>
 			<digest>
 				Stepwise increment the parameter value
@@ -128,7 +136,7 @@
 		</method>
 		<method name="-">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="number of steps" optional="1" type="int" />
 			</arglist>
 			<digest>
 				Stepwise decrement the parameter value
@@ -139,7 +147,7 @@
 		</method>
 		<method name="dec">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="number of steps" optional="1" type="int" />
 			</arglist>
 			<digest>
 				Stepwise decrement the parameter value
@@ -149,9 +157,7 @@
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist />
 			<digest>
 				Dump all attribute settings to rightmost outlet
 			</digest>
@@ -161,7 +167,7 @@
 		</method>
 		<method name="inc">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="number of steps" optional="1" type="int" />
 			</arglist>
 			<digest>
 				Stepwise increment the parameter value
@@ -171,9 +177,7 @@
 			</description>
 		</method>
 		<method name="init">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist />
 			<digest>
 				Re-initialise the parameter
 			</digest>
@@ -183,7 +187,7 @@
 		</method>
     <method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="input" optional="0" type="list" />
 			</arglist>
 			<digest>
 				If the symbol equals the name of a setable parameters for the current ramp function, the value for that parameter can be updated. Else the message is interpreted as a new value for <o>j.parameter</o>. Depending on the <m>@type</m> it might be converted to one or more decimals (<m>@type decimal</m> or <m>array</m>) or an integer (<m>@type integer</m>).
