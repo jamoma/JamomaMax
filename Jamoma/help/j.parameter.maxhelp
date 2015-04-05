@@ -2241,8 +2241,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 553.0, 450.5, 377.0, 87.0 ],
-									"style" : "default",
-									"text" : "All subnodes of one node will be triggered at the same time. @priority controls priority within this node level, but not relative to higher nodes.\n\nIn order to make sure that nodes fire in a specific sequence, we cna use the j.node object."
+									"style" : "",
+									"text" : "All subnodes of one node will be triggered at the same time. @priority controls priority within this node level, but not relative to higher nodes.\n\nIn order to make sure that nodes fire in a specific sequence, we cna use the j.node object.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -2253,8 +2254,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 553.0, 346.0, 377.0, 20.0 ],
-									"style" : "default",
-									"text" : "\"cake\" and \"ice_cream\" are subnodes of \"dessert\":"
+									"style" : "",
+									"text" : "\"cake\" and \"ice_cream\" are subnodes of \"dessert\":",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -2265,8 +2267,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 553.0, 252.75, 377.0, 20.0 ],
-									"style" : "default",
-									"text" : "\"fish\" and \"vegetarian\" are subnodes of \"main_course\"."
+									"style" : "",
+									"text" : "\"fish\" and \"vegetarian\" are subnodes of \"main_course\".",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -2277,8 +2280,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 553.0, 159.5, 377.0, 20.0 ],
-									"style" : "default",
-									"text" : "\"soup\" and \"salad\" are subnodes of \"starter\"."
+									"style" : "",
+									"text" : "\"soup\" and \"salad\" are subnodes of \"starter\".",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -2420,8 +2424,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 553.0, 119.0, 377.0, 20.0 ],
-									"style" : "default",
-									"text" : "The addresses of the below parameters make use of subnodes."
+									"style" : "",
+									"text" : "The addresses of the below parameters make use of subnodes.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -4187,8 +4192,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 668.0, 355.0, 371.0, 47.0 ],
-									"style" : "default",
-									"text" : "Use the Max scheduler (default, recommended).\nUse the OS system scheduler.\nDisables ramping, parameter will be set to target value immediately."
+									"style" : "",
+									"text" : "Use the Max scheduler (default, recommended).\nUse the OS system scheduler.\nDisables ramping, parameter will be set to target value immediately.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -4200,8 +4206,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 602.0, 355.0, 52.0, 47.0 ],
-									"style" : "default",
-									"text" : "max\nsystem\nnone"
+									"style" : "",
+									"text" : "max\nsystem\nnone",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -4212,8 +4219,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 602.0, 328.0, 437.0, 20.0 ],
-									"style" : "default",
-									"text" : "Controls what mechanism is used to drive output of new values during the ramp."
+									"style" : "",
+									"text" : "Controls what mechanism is used to drive output of new values during the ramp.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -4277,8 +4285,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 602.0, 56.0, 263.0, 33.0 ],
-									"style" : "default",
-									"text" : "A wide range of easing functions are available.\nWindowing functions can be used as well."
+									"style" : "",
+									"text" : "A wide range of easing functions are available.\nWindowing functions can be used as well.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5089,8 +5098,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 41.0, 123.5, 485.0, 234.0 ],
-									"style" : "default",
-									"text" : "j.parameter is somewhat similar to the pattr object, while enabling a number of additional features offered by Jamoma.\n\nThe parameter is an acces point for controlling the processing of the patch. The parameter value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.\n\nThe value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.\n\nAdditionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models."
+									"style" : "",
+									"text" : "j.parameter is somewhat similar to the pattr object, while enabling a number of additional features offered by Jamoma.\n\nThe parameter is an acces point for controlling the processing of the patch. The parameter value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.\n\nThe value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.\n\nAdditionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5251,7 +5261,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 51.0, 107.0, 1203.0, 859.0 ],
+						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5864,8 +5874,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 25.0, 85.0, 366.0, 47.0 ],
-									"style" : "default",
-									"text" : "The type attribute determines the kind of values that the parameter may store and output. The behaviour of other attributes such as ramping and dataspace is optimised based on type."
+									"style" : "",
+									"text" : "The type attribute determines the kind of values that the parameter may store and output. The behaviour of other attributes such as ramping and dataspace is optimised based on type.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6114,7 +6125,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
+						"rect" : [ 51.0, 107.0, 1203.0, 859.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -6358,9 +6369,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 666.0, 131.283813, 366.5, 33.0 ],
-									"style" : "default",
-									"text" : "@default sets the initial value of the paraneter. This can be overruled by model presets."
+									"patching_rect" : [ 666.0, 131.283813, 367.0, 33.0 ],
+									"style" : "",
+									"text" : "@default sets the initial value of the paraneter. This can be overruled by model presets.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6371,8 +6383,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 662.5, 102.283813, 370.0, 20.0 ],
-									"style" : "default",
-									"text" : "@value is the current parameter value  expressed as an attribute"
+									"style" : "",
+									"text" : "@value is the current parameter value  expressed as an attribute",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6635,8 +6648,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 666.0, 608.0, 424.0, 33.0 ],
-									"style" : "default",
-									"text" : "The parameter can be made temporarily inactive using the @active attribtue. When inactive its value will not be updated, and it will not produce any output."
+									"style" : "",
+									"text" : "The parameter can be made temporarily inactive using the @active attribtue. When inactive its value will not be updated, and it will not produce any output.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6677,8 +6691,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 150.5, 387.0, 370.0, 33.0 ],
-									"style" : "default",
-									"text" : "Keywords can be specified in the tag attribute in order to allow easier and more powerful sorting in j.namespace and elsewhere."
+									"style" : "",
+									"text" : "Keywords can be specified in the tag attribute in order to allow easier and more powerful sorting in j.namespace and elsewhere.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6689,8 +6704,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 57.0, 387.0, 86.0, 20.0 ],
-									"style" : "default",
-									"text" : "@tag"
+									"style" : "",
+									"text" : "@tag",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6701,8 +6717,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 150.5, 360.0, 370.0, 20.0 ],
-									"style" : "default",
-									"text" : "Text describing the parameter, used for auto-documenting models."
+									"style" : "",
+									"text" : "Text describing the parameter, used for auto-documenting models.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6713,8 +6730,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 57.0, 360.0, 86.0, 20.0 ],
-									"style" : "default",
-									"text" : "@description"
+									"style" : "",
+									"text" : "@description",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -7005,32 +7023,32 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
-			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
 			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
-			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
-			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
-			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
-			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
-			"obj-2::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
-			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
-			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
-			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
-			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
-			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
 			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
 			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
-			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
 			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
+			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
+			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
+			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
+			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
+			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
+			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
 			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
-			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ]
+			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
+			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
+			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
+			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
+			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-2::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
+			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 41.0, 80.0, 1213.0, 876.0 ],
+		"rect" : [ 41.0, 80.0, 1222.0, 902.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -55,7 +55,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1213.0, 850.0 ],
+						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1001,7 +1001,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1213.0, 850.0 ],
+						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2045,7 +2045,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1213.0, 850.0 ],
+						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3281,7 +3281,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1213.0, 850.0 ],
+						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3344,7 +3344,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1213.0, 850.0 ],
+						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3422,7 +3422,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 27.0, 109.5, 350.0, 20.0 ],
+									"patching_rect" : [ 27.0, 107.0, 350.0, 20.0 ],
 									"style" : "",
 									"text" : "Ramping works with @type integer, decimal and array.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -3566,8 +3566,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 668.0, 355.0, 371.0, 47.0 ],
-									"style" : "default",
-									"text" : "Use the Max scheduler (default, recommended).\nUse the OS system scheduler.\nDisables ramping, parameter will be set to target value immediately."
+									"style" : "",
+									"text" : "Use the Max scheduler (default, recommended).\nUse the OS system scheduler.\nDisables ramping, parameter will be set to target value immediately.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -3579,8 +3580,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 602.0, 355.0, 52.0, 47.0 ],
-									"style" : "default",
-									"text" : "max\nsystem\nnone"
+									"style" : "",
+									"text" : "max\nsystem\nnone",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -3591,8 +3593,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 602.0, 328.0, 437.0, 20.0 ],
-									"style" : "default",
-									"text" : "Controls what mechanism is used to drive output of new values during the ramp."
+									"style" : "",
+									"text" : "Controls what mechanism is used to drive output of new values during the ramp.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -3656,8 +3659,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 602.0, 56.0, 263.0, 33.0 ],
-									"style" : "default",
-									"text" : "A wide range of easing functions are available.\nWindowing functions can be used as well."
+									"style" : "",
+									"text" : "A wide range of easing functions are available.\nWindowing functions can be used as well.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -4102,7 +4106,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1213.0, 850.0 ],
+						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5019,7 +5023,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 41.0, 106.0, 1213.0, 850.0 ],
+						"rect" : [ 41.0, 106.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5263,8 +5267,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 666.0, 131.283813, 378.0, 20.0 ],
-									"style" : "default",
-									"text" : "@default sets the initial value of the message."
+									"style" : "",
+									"text" : "@default sets the initial value of the message.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5275,8 +5280,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 662.5, 102.283813, 370.0, 20.0 ],
-									"style" : "default",
-									"text" : "@value is the current message value  expressed as an attribute"
+									"style" : "",
+									"text" : "@value is the current message value  expressed as an attribute",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5539,8 +5545,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 666.0, 608.0, 437.0, 33.0 ],
-									"style" : "default",
-									"text" : "The message can be made temporarily inactive using the @active attribtue. When inactive its value will not be updated, and it will not produce any output."
+									"style" : "",
+									"text" : "The message can be made temporarily inactive using the @active attribtue. When inactive its value will not be updated, and it will not produce any output.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5581,8 +5588,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 150.5, 387.0, 370.0, 33.0 ],
-									"style" : "default",
-									"text" : "Keywords can be specified in the tag attribute in order to allow easier and more powerful sorting in j.namespace and elsewhere."
+									"style" : "",
+									"text" : "Keywords can be specified in the tag attribute in order to allow easier and more powerful sorting in j.namespace and elsewhere.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5593,8 +5601,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 57.0, 387.0, 86.0, 20.0 ],
-									"style" : "default",
-									"text" : "@tag"
+									"style" : "",
+									"text" : "@tag",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5605,8 +5614,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 150.5, 360.0, 370.0, 20.0 ],
-									"style" : "default",
-									"text" : "Text describing the message, used for auto-documenting models."
+									"style" : "",
+									"text" : "Text describing the message, used for auto-documenting models.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5617,8 +5627,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 57.0, 360.0, 86.0, 20.0 ],
-									"style" : "default",
-									"text" : "@description"
+									"style" : "",
+									"text" : "@description",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -5925,7 +5936,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1213.0, 850.0 ],
+						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -6879,8 +6890,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 41.0, 123.5, 424.0, 47.0 ],
-									"style" : "default",
-									"text" : "j.message enables messages to be sent to Jamoma models. The value of the message will not be stored as part of the state of the model. Apart from that, j.message resembles j.parameter."
+									"style" : "",
+									"text" : "j.message enables messages to be sent to Jamoma models. The value of the message will not be stored as part of the state of the model. Apart from that, j.message resembles j.parameter.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -7058,32 +7070,32 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-24::obj-6" : [ "live.text[2]", "live.text", 0 ],
-			"obj-24::obj-68" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
 			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-5::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
-			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
-			"obj-5::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
-			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
-			"obj-5::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
-			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
-			"obj-24::obj-74" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
-			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
-			"obj-5::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
-			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
-			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
 			"obj-5::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
 			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
-			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
 			"obj-5::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
+			"obj-24::obj-74" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-5::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
+			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
+			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
+			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-24::obj-6" : [ "live.text[2]", "live.text", 0 ],
+			"obj-5::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
+			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
+			"obj-5::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
 			"obj-24::obj-14" : [ "live.gain~", "gain", 0 ],
-			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ]
+			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
+			"obj-24::obj-68" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-5::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
+			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
+			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
+			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
