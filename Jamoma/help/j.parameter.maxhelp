@@ -4732,7 +4732,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
+						"rect" : [ 51.0, 107.0, 1203.0, 859.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4973,7 +4973,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "signal", "", "float", "list" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 77.0, 636.5, 27.0, 76.0 ],
+									"patching_rect" : [ 77.0, 652.5, 27.0, 76.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_longname" : "live.gain~",
@@ -5033,7 +5033,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 6.0, 5.0, 683.0, 105.0 ]
+									"patching_rect" : [ 6.0, 5.0, 683.0, 113.0 ]
 								}
 
 							}
@@ -5044,7 +5044,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 77.0, 601.5, 46.0, 22.0 ],
+									"patching_rect" : [ 77.0, 617.5, 46.0, 22.0 ],
 									"style" : "default",
 									"text" : "cycle~"
 								}
@@ -5058,7 +5058,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 77.0, 419.5, 129.0, 129.0 ],
+									"patching_rect" : [ 77.0, 435.5, 129.0, 129.0 ],
 									"style" : "default",
 									"text" : "j.parameter frequency @type decimal @range 65 1000 @clipmode both @dataspace time @unit hz @description \"The frequency value of my patch.\"",
 									"varname" : "my_float[1]"
@@ -5071,7 +5071,7 @@
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
-									"patching_rect" : [ 77.0, 732.5, 45.0, 45.0 ],
+									"patching_rect" : [ 77.0, 748.5, 45.0, 45.0 ],
 									"style" : "default"
 								}
 
@@ -5084,7 +5084,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 222.5, 391.5, 202.0, 185.0 ],
+									"patching_rect" : [ 222.5, 407.5, 202.0, 185.0 ],
 									"style" : "default",
 									"text" : "A parameter named \"frequency\" controls the oscilator.\n\nThe parameter stores a single decimal value. \n\nThe range of possible values is restricted to between 20 and 10000 Hz.\n\nThis parameter uses the \"time\" dataspace to maintain the state of a frequency expressd as Hz."
 								}
@@ -5097,7 +5097,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 41.0, 123.5, 485.0, 234.0 ],
+									"patching_rect" : [ 41.0, 145.5, 485.0, 234.0 ],
 									"style" : "",
 									"text" : "j.parameter is somewhat similar to the pattr object, while enabling a number of additional features offered by Jamoma.\n\nThe parameter is an acces point for controlling the processing of the patch. The parameter value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.\n\nThe value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.\n\nAdditionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -6125,7 +6125,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 51.0, 107.0, 1203.0, 859.0 ],
+						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -7023,32 +7023,32 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
-			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
-			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
-			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
-			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
-			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
-			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
-			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
-			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
-			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
-			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
-			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
-			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
-			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
-			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
-			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
-			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
-			"obj-2::obj-6" : [ "live.text", "live.text", 0 ],
 			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
+			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
+			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
+			"obj-2::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
 			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
+			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
+			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
+			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
+			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
+			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
+			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
 			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
-			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ]
+			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
+			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
+			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
+			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
+			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

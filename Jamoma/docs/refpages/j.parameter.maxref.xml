@@ -107,8 +107,10 @@
 				Set and output parameter value
 			</digest>
 			<description>
-				Set and output parameter value. If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>string</m>, only the first list member will be used to set the value, and the type of this list member might be converted to fit the specified <m>@type</m> of the parameter.
-        If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>array</m> and ramping is enabled (as specified by <m>@ramp/funcion</m> and <m>@ramp/drive</m>), the two last list members can be used to request a ramp over time to the new value. If so, the second last list member should be the symbol <m>ramp</m> and the last list member specifies the desired ramp time in milliseconds.
+				Set and output parameter value. If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>string</m>, only the first list member will be used to set the value, and the type of this list member might be converted to fit the specified <m>@type</m> of the parameter.<br/>
+        <br/>
+        If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>array</m> and ramping is enabled (as specified by <m>@ramp/funcion</m> and <m>@ramp/drive</m>), the two last list members can be used to request a ramp over time to the new value. If so, the second last list member should be the symbol <m>ramp</m> and the last list member specifies the desired ramp time in milliseconds.<br/>
+        <br/>
         If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>array</m> and a dataspace is used (as specifed by <m>@dataspace</m> and <m>@unit</m>), the new value can be set using alternative units. In this case the unit of new value is provided immedeately following the numerical value, as either the last list member or as thre third last list member if a ramp is also being requested. If an alternative unit is requested as well as a ramp, the ramping will happen according to the dataspace unit being used temporarily.
 			</description>
 		</method>
@@ -131,7 +133,7 @@
 				Stepwise increment the parameter value
 			</digest>
 			<description>
-				Stepwise increment the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
+				Stepwise increment the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
 			</description>
 		</method>
 		<method name="-">
@@ -142,7 +144,7 @@
 				Stepwise decrement the parameter value
 			</digest>
 			<description>
-				Stepwise decrement the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
+				Stepwise decrement the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
 			</description>
 		</method>
 		<method name="dec">
@@ -153,7 +155,7 @@
 				Stepwise decrement the parameter value
 			</digest>
 			<description>
-				Stepwise decrement the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
+				Stepwise decrement the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
 			</description>
 		</method>
 		<method name="dump">
@@ -173,7 +175,7 @@
 				Stepwise increment the parameter value
 			</digest>
 			<description>
-				Stepwise increment the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An intenger argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
+				Stepwise increment the parameter value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
 			</description>
 		</method>
 		<method name="init">
@@ -215,7 +217,7 @@
 				Set how values exceeding range will be clipped
 			</digest>
 			<description>
-				Set how values exceeding range will be clipped (<m>none</m>, <m>low</m>, <m>high</m>, <m>both</m>, <m>wrap</m> or <m>fold</m>).
+				Set how values exceeding range will be clipped. Available clipmodes are <m>none</m>, <m>low</m>, <m>high</m>, <m>both</m>, <m>wrap</m> and <m>fold</m>.
 			</description>
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
@@ -223,7 +225,7 @@
 				Dataspace used by the parameter
 			</digest>
 			<description>
-				Dataspace used by the parameter. This enables parameter values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are <m>angle</m>, <m>color</m>, <m>distance</m>, <m>gain</m>, <m>none</m>, <m>orientation</m>, <m>position</m>, <m>speed</m>, <m>temperature</m> and <m>time</m>.
+				Dataspace used by the parameter. This enables parameter values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are <m>angle</m>, <m>color</m>, <m>distance</m>, <m>gain</m>, <m>none</m>, <m>orientation</m>, <m>position</m>, <m>speed</m>, <m>temperature</m> and <m>time</m>. The default dataspace is <m>none</m>.
 			</description>
 		</attribute>
 		<attribute name="default" get="1" set="1" type="int" size="1">
@@ -247,7 +249,7 @@
 				Set priority
 			</digest>
 			<description>
-				Priority controls in what order several <o>j.parameter</o> obejcts within the same model will initialsie and update in response to presets and cues.
+				Priority controls in what order several <o>j.parameter</o> obejcts within the same model will initialise and update in response to presets and cues.
 			</description>
 		</attribute>
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
@@ -266,7 +268,7 @@
 				Sets what easing function to use for ramping. A wide range of easing functions as well as windowing functions are available. Please refer to the help file for further details.
 			</description>
 		</attribute>
-		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
+		<attribute name="ramp/function/parameters" get="1" set="0" type="atom" size="1">
 			<digest>
 				Get list of configurable parameters for the current ramp function
 			</digest>
@@ -274,7 +276,7 @@
 				Get list of configurable parameters for the current ramp function. Certain ramp functions as specified by the <m>@ramp/function</m> attribute have additional configurable parameters that can be changed dynamically to modify the shape of the ramping curve. The message <m>ramp/function/parameters</m> cause <o>j.parameter</o> to output a list of all such parameters from the rightmost outlet, prepended by the symbol <m>ramp/function/parameters</m>. Refer to the help file for <o>j.ramp</o> for an overview of what functions have additional configurable parameters.
 			</description>
 		</attribute>
-		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
+		<attribute name="ramp/status" get="1" set="0" type="int" size="1">
 			<digest>
 				Ramp status
 			</digest>
@@ -287,7 +289,7 @@
 				The range of values
 			</digest>
 			<description>
-				The expected range of values for this parameter. Depending on <m>@clipmode</m> this might be a "recommended" or definitive range.
+				The expected range of values for this parameter. Depending on <m>@clipmode</m> this might be a recommended or definitive range.
 			</description>
 		</attribute>
 		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">

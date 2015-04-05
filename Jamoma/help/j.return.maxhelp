@@ -4046,7 +4046,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 50.0, 105.0, 1226.0, 846.0 ],
+						"rect" : [ 0.0, 26.0, 1226.0, 846.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5875,7 +5875,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1226.0, 846.0 ],
+						"rect" : [ 50.0, 105.0, 1226.0, 846.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5905,12 +5905,25 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 805.5, 530.0, 67.0, 20.0 ],
+									"presentation_rect" : [ 807.5, 530.0, 0.0, 0.0 ],
+									"style" : "",
+									"text" : "The model"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
-									"patching_rect" : [ 181.5, 223.0, 42.0, 22.0 ],
+									"patching_rect" : [ 100.5, 334.0, 42.0, 22.0 ],
 									"style" : "",
 									"text" : "active"
 								}
@@ -5923,7 +5936,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 181.5, 769.0, 103.0, 35.0 ],
+									"patching_rect" : [ 849.0, 656.0, 103.0, 35.0 ],
 									"style" : "",
 									"text" : "print from_model @popup 1"
 								}
@@ -5937,7 +5950,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 270.0, 690.5, 240.0, 51.0 ],
+									"patching_rect" : [ 937.5, 577.5, 240.0, 51.0 ],
 									"style" : "",
 									"text" : "Makes this subpatch a model, so that j.remote objects can subscribe to j.parameter objects."
 								}
@@ -5962,7 +5975,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 397.0, 449.5, 221.0, 24.0 ],
+									"patching_rect" : [ 316.0, 560.5, 221.0, 24.0 ],
 									"style" : "",
 									"text" : "It also counts from 0 to 9 repeteadly."
 								}
@@ -5976,7 +5989,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 480.0, 357.5, 207.0, 37.0 ],
+									"patching_rect" : [ 399.0, 468.5, 207.0, 37.0 ],
 									"style" : "",
 									"text" : "A simple metronome model generate a series of ticks (bangs)."
 								}
@@ -5989,7 +6002,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 22.0, 134.5, 513.0, 60.0 ],
+									"patching_rect" : [ 22.0, 197.0, 513.0, 60.0 ],
 									"style" : "",
 									"text" : "j.return enables the model to generate information that can be made available to other models and views. The value of j.return will not be stored as part of the state of the model.\n\nApart from that, the behaviour of j.return resembles j.parameter.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -6004,7 +6017,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 849.0, 325.0, 50.0, 22.0 ],
+									"patching_rect" : [ 849.0, 321.0, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -6029,7 +6042,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 849.0, 233.0, 24.0, 24.0 ],
+									"patching_rect" : [ 849.0, 210.0, 24.0, 24.0 ],
 									"style" : ""
 								}
 
@@ -6054,7 +6067,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
-									"patching_rect" : [ 181.5, 369.0, 71.0, 22.0 ],
+									"patching_rect" : [ 100.5, 480.0, 71.0, 22.0 ],
 									"style" : "",
 									"text" : "counter 0 9"
 								}
@@ -6072,7 +6085,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 22.0, 18.0, 399.0, 102.0 ]
+									"patching_rect" : [ 22.0, 18.0, 590.0, 132.0 ]
 								}
 
 							}
@@ -6088,7 +6101,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 181.5, 437.0, 202.0, 62.0 ],
+									"patching_rect" : [ 100.5, 548.0, 202.0, 62.0 ],
 									"style" : "",
 									"text" : "j.return my_counter @type integer @active 1 @range 0 10 @clipmode wrap @repetitions/filter 1 @description \"Count from 0 to 9\""
 								}
@@ -6106,7 +6119,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 335.0, 338.0, 126.0, 76.0 ],
+									"patching_rect" : [ 254.0, 449.0, 126.0, 76.0 ],
 									"style" : "",
 									"text" : "j.return my_tick @type none @description \"Send bang out of the model\""
 								}
@@ -6122,7 +6135,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 181.5, 261.0, 65.0, 22.0 ],
+									"patching_rect" : [ 100.5, 372.0, 65.0, 22.0 ],
 									"style" : "",
 									"text" : "metro 500"
 								}
@@ -6137,7 +6150,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 181.5, 705.0, 72.0, 22.0 ],
+									"patching_rect" : [ 849.0, 592.0, 72.0, 22.0 ],
 									"style" : "",
 									"text" : "j.model",
 									"varname" : "j.hub"
@@ -6290,28 +6303,28 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-6::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
-			"obj-5::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
-			"obj-6::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-5::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-6::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
-			"obj-5::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
-			"obj-5::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
-			"obj-5::obj-63" : [ "live.dial", "From", 0 ],
-			"obj-5::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
-			"obj-6::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
-			"obj-5::obj-64" : [ "live.dial[1]", "To", 0 ],
-			"obj-6::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
-			"obj-5::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
-			"obj-5::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
-			"obj-6::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
-			"obj-5::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
-			"obj-5::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
 			"obj-5::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-5::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-6::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
+			"obj-5::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
+			"obj-5::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-6::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
+			"obj-5::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-5::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
 			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-5::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
+			"obj-6::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
+			"obj-6::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
+			"obj-5::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
+			"obj-6::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
+			"obj-5::obj-64" : [ "live.dial[1]", "To", 0 ],
+			"obj-5::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
 			"obj-5::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
-			"obj-5::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ]
+			"obj-5::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
+			"obj-5::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-6::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
+			"obj-5::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
