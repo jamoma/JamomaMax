@@ -55,7 +55,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 60.0, 122.0, 1055.0, 710.0 ],
+						"rect" : [ 0.0, 26.0, 1055.0, 710.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -104,8 +104,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 788.0, 427.5, 212.0, 131.0 ],
-									"presentation_rect" : [ 754.0, 304.5, 0.0, 0.0 ],
+									"patching_rect" : [ 788.0, 427.5, 214.0, 131.0 ],
 									"style" : "",
 									"text" : "If other objects need to be inserted between j.remote and the GUI widget, the third outlet of j.remote can be connected to the widget.\n\nIt will ensure that the parameter description is automatically added to the @annotation of the GUI object"
 								}
@@ -739,6 +738,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -959,7 +959,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1055.0, 710.0 ],
+						"rect" : [ 60.0, 122.0, 1055.0, 710.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1077,9 +1077,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 337.0, 551.0, 71.0, 20.0 ],
+									"patching_rect" : [ 337.0, 551.0, 80.0, 20.0 ],
 									"style" : "",
-									"text" : "demo_view",
+									"text" : "demo_model",
 									"textcolor" : [ 0.093121, 0.536852, 0.511438, 1.0 ]
 								}
 
@@ -1091,9 +1091,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 118.0, 551.0, 578.0, 33.0 ],
+									"patching_rect" : [ 118.0, 551.0, 583.0, 33.0 ],
 									"style" : "",
-									"text" : "The address of the model instance (here demo_view) helps establishing a global name for the parameter: /demo_model/bird. This way the parameter can also be accesed outside of models and views.",
+									"text" : "The address of the model instance (here demo_model) helps establishing a global name for the parameter: /demo_model/bird. This way the parameter can also be accesed outside of models and views.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -1178,7 +1178,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 524.0, 136.0, 429.0, 283.0 ],
+										"rect" : [ 584.0, 232.0, 429.0, 283.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1211,9 +1211,9 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 319.0, 51.0, 71.0, 20.0 ],
+													"patching_rect" : [ 319.0, 51.0, 80.0, 20.0 ],
 													"style" : "",
-													"text" : "demo_view",
+													"text" : "demo_model",
 													"textcolor" : [ 0.113339, 0.606332, 0.609597, 1.0 ]
 												}
 
@@ -1227,7 +1227,7 @@
 													"numoutlets" : 0,
 													"patching_rect" : [ 30.0, 51.0, 392.0, 33.0 ],
 													"style" : "",
-													"text" : "This is a view, embedded in a bpatcher. It binds to the demo_view model, as specified by the argument to the bpatcher."
+													"text" : "This is a view, embedded in a bpatcher. It binds to the demo_model model, as specified by the argument to the bpatcher."
 												}
 
 											}
@@ -1411,7 +1411,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 80.0, 136.0, 429.0, 283.0 ],
+										"rect" : [ 140.0, 232.0, 429.0, 283.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1444,9 +1444,9 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 42.0, 64.0, 71.0, 20.0 ],
+													"patching_rect" : [ 42.0, 64.0, 80.0, 20.0 ],
 													"style" : "",
-													"text" : "demo_view",
+													"text" : "demo_model",
 													"textcolor" : [ 0.113339, 0.606332, 0.609597, 1.0 ]
 												}
 
@@ -1460,7 +1460,7 @@
 													"numoutlets" : 0,
 													"patching_rect" : [ 30.0, 51.0, 345.0, 33.0 ],
 													"style" : "",
-													"text" : "The model instance, provided as an argument to this bpatcher, is demo_view."
+													"text" : "The model instance, provided as an argument to this bpatcher, is demo_model."
 												}
 
 											}
@@ -1761,7 +1761,8 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 793.666687, 454.0, 70.0, 22.0 ],
-									"style" : ""
+									"style" : "",
+									"text" : "0."
 								}
 
 							}
@@ -1773,7 +1774,8 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 771.0, 425.0, 70.0, 22.0 ],
-									"style" : ""
+									"style" : "",
+									"text" : "set 0."
 								}
 
 							}

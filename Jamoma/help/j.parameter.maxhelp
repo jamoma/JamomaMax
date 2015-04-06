@@ -4732,7 +4732,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 51.0, 107.0, 1203.0, 859.0 ],
+						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5068,6 +5068,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-21",
+									"local" : 1,
 									"maxclass" : "ezdac~",
 									"numinlets" : 2,
 									"numoutlets" : 0,
@@ -6125,7 +6126,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
+						"rect" : [ 51.0, 107.0, 1203.0, 859.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -7023,32 +7024,32 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
-			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
-			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
-			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
-			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
 			"obj-2::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
+			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
+			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
+			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
+			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
 			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
 			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
 			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
-			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
-			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
-			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
 			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
-			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
-			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
 			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
+			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
+			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
 			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
-			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
 			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
-			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ]
+			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
+			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
+			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
+			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
+			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
+			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
