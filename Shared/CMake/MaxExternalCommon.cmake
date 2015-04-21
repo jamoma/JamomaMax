@@ -9,8 +9,6 @@ addMaxsupport()
 add_library(${PROJECT_NAME} MODULE ${PROJECT_SRCS})
 set_property(TARGET ${PROJECT_NAME}
 			 PROPERTY BUNDLE True)
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_LIST_DIR}/MaxExternal-Info.plist")
 
 set_property(TARGET ${PROJECT_NAME}
 			 PROPERTY BUNDLE_EXTENSION "mxo")
@@ -36,8 +34,10 @@ else()
         set_target_properties(${PROJECT_NAME}
                                                   PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
 endif()
+configure_file("${CMAKE_CURRENT_LIST_DIR}/MaxExternal-Info.plist.in" "${PROJECT_BINARY_DIR}/Info.plist" @ONLY)
 
-# TODO same of _equal
+set_property(TARGET ${PROJECT_NAME}
+                         PROPERTY MACOSX_BUNDLE_INFO_PLIST "${PROJECT_BINARY_DIR}/Info.plist")
 
 # Todo link at a smaller granularity
 target_link_libraries(${PROJECT_NAME} Foundation)
