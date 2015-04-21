@@ -27,6 +27,14 @@ if("${PROJECT_NAME}" MATCHES ".*_tilda")
 	string(REGEX REPLACE "_tilda" "~" JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
 	set_target_properties(${PROJECT_NAME}
 						  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
+elseif("${PROJECT_NAME}" MATCHES ".*_equal")
+        string(REGEX REPLACE "_equal" "=" JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
+        set_target_properties(${PROJECT_NAME}
+                                                  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
+else()
+        set(JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
+        set_target_properties(${PROJECT_NAME}
+                                                  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
 endif()
 
 # TODO same of _equal
@@ -64,12 +72,21 @@ if("${PROJECT_NAME}" STREQUAL "j.loader")
 	install(TARGETS ${PROJECT_NAME} 
 			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/extensions"
 			COMPONENT JamomaMax)
+if(APPLE)
+        install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../PkgInfo
+                DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/extensions/${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}.mxo/Contents"
+                COMPONENT JamomaMax)
+endif(APPLE)
 else()
 	install(TARGETS ${PROJECT_NAME} 
 			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/externals"
 			COMPONENT JamomaMax)
+if(APPLE)
+        install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../PkgInfo
+                DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/externals/${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}.mxo/Contents"
+                COMPONENT JamomaMax)
+endif(APPLE)
 endif()
-
 
 ### Tests ###
 addTestTarget()
