@@ -110,12 +110,12 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
                 // warn the user that it should provide unique name
                 
                 // if no name has been provided
-                if (patcherArg == kTTAdrsEmpty && patcherContext == kTTSym_model)
-                    object_warn(patcher, "No name provided to %s %s. Using %s.", patcherClass.c_str(), patcherContext.c_str(), newContextAddress.getNameInstance().c_str());
+                if (patcherArg == kTTAdrsEmpty && patcherContext == kTTSym_model && jamoma_patcher_get_hierarchy(x) != gensym("poly"))
+                        object_warn(patcher, "No name provided to %s %s. Using %s.", patcherClass.c_str(), patcherContext.c_str(), newContextAddress.getNameInstance().c_str());
 
                 // if a duplicate name.instance was passed in argument
-                else
-                    object_warn(patcher, "Duplicate name provided to %s %s (%s). Using %s.", patcherClass.c_str(), patcherContext.c_str(), patcherArg.c_str(), newContextAddress.getNameInstance().c_str());
+                else if ( jamoma_patcher_get_hierarchy(x) != gensym("poly") )
+                        object_warn(patcher, "Duplicate name provided to %s %s (%s). Using %s.", patcherClass.c_str(), patcherContext.c_str(), patcherArg.c_str(), newContextAddress.getNameInstance().c_str());
 
 			}
             
