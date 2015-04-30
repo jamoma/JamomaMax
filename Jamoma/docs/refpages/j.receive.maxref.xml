@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.receive" module="" category="Jamoma">
 	<digest>
-		value or signal observer
+		Value or signal observer
 	</digest>
 	<description>
-		listening value from parameter or return and signal from out using their address
+		Subscribe to a model parameter or some other parameter node, and output new value whenever the value of the node change.
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -25,14 +25,7 @@
 			<digest>
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</inlet>
-		<inlet id="1" type="INLET_TYPE">
-			<digest>
-			</digest>
-			<description>
-				TEXT_HERE
+				Set address of node to listen to
 			</description>
 		</inlet>
 	</inletlist>
@@ -40,18 +33,18 @@
 	<outletlist>
 		<outlet id="0" type="OUTLET_TYPE">
 			<digest>
-				data output
+				Value output
 			</digest>
 			<description>
-				TEXT_HERE
+				Value output
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
 			<digest>
-				address output
+				Address of the associated node
 			</digest>
 			<description>
-				TEXT_HERE
+				Address of the associated node
 			</description>
 		</outlet>
 		<outlet id="2" type="OUTLET_TYPE">
@@ -59,18 +52,18 @@
 				dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				dumpout
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="subscription node address" type="symbol" optional="1">
 			<digest>
-				TEXT_HERE
+				Address of associated node
 			</digest>
 			<description>
-				TEXT_HERE
+				Address of the node that the object will listen to. If no argument is provided, the object will not be subscribing to any node initially.
 			</description>
 		</objarg>
 	</objarglist>
@@ -79,43 +72,19 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Ouptut current value for the associated node.
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</method>
-		<method name="anything">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
-		<method name="address">
-			<arglist>
-				<arg name="ARG_NAME_0" type="symbol" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
+				Ouptut current value for the associated node.
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist />
 			<digest>
-				TEXT_HERE
+				Get state of associated node
 			</digest>
 			<description>
-				TEXT_HERE
+				The message <m>dumb</m> will output the current value of all attributes for the associated node.
 			</description>
 		</method>
 	</methodlist>
@@ -123,10 +92,10 @@
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Enable the return object
 			</digest>
 			<description>
-				TEXT_HERE
+				When the <o>j.return</o> object is active, it will output new values whenever the value of the associated node changes. If <o>j.return</o> is not active, values will only be output when requested by a <m>bang</m>.
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
@@ -134,10 +103,10 @@
 		</attribute>
 		<attribute name="address" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Address on associated node
 			</digest>
 			<description>
-				TEXT_HERE
+				This sets the address of the associated node that the object will listen to. The address can be <em>absolute</em> and take the form of an OSC address, or <em>relative</em>, in which case the relative address is appended to the address of the <o>j.model</o> or <o>j.view</o> object in the model or view that this <o>j.return</o> object is part of.
 			</description>
 		</attribute>
 	</attributelist>
@@ -147,8 +116,38 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
+		<seealso name="j.message">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.message_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.model">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.node">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.remote">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.send">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.view">
+			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
 </c74object>
