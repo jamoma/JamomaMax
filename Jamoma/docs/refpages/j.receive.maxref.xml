@@ -103,7 +103,7 @@
 		</attribute>
 		<attribute name="address" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Address on associated node
+				Address of associated node
 			</digest>
 			<description>
 				This sets the address of the associated node that the object will listen to. The address can be <em>absolute</em> and take the form of an OSC address, or <em>relative</em>, in which case the relative address is appended to the address of the <o>j.model</o> or <o>j.view</o> object in the model or view that this <o>j.return</o> object is part of.
@@ -134,7 +134,10 @@
 		<seealso name="j.parameter_array">
 			<!-- TEXT_HERE -->
 		</seealso>
-		<seealso name="j.remote">
+		<seealso name="j.receive~">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.remote">
 			<!-- TEXT_HERE -->
 		</seealso>
 		<seealso name="j.return">

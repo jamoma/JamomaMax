@@ -116,7 +116,7 @@
 				Target node address
 			</digest>
 			<description>
-				The message <m>address</m> followed by an absolute or relative address set the target address
+				The message <m>address</m> followed by an absolute or relative address set the target address.
 			</description>
 		</method>
 		<method name="dump">
@@ -185,6 +185,9 @@
 			<!-- TEXT_HERE -->
 		</seealso>
 		<seealso name="j.return_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.send~">
 			<!-- TEXT_HERE -->
 		</seealso>
 		<seealso name="j.view">
