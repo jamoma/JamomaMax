@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.send" module="" category="Jamoma">
 	<digest>
-		value or signal sender
+		Send value to node
 	</digest>
 	<description>
-		sending value to parameter or message and signal to in using their address
+		Send values remotely to a <o>j.parameter</o> or some other model node.
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -31,13 +31,6 @@
 				Value to send
 			</description>
 		</inlet>
-		<!-- <inlet id="1" type="INLET_TYPE">
-			<digest>
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</inlet> -->
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
@@ -51,12 +44,12 @@
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="target node address" type="symbol" optional="1">
 			<digest>
 				Target node
 			</digest>
 			<description>
-				Address of the target node (ie. parameter)
+				Address of the target node (ie. <o>j.parameter</o>) that <o>j.send</o> will forward messages to. 
 			</description>
 		</objarg>
 	</objarglist>
@@ -65,54 +58,54 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				<!-- TEXT_HERE -->
+				Forwarded to the associated node
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				A <m>bang</m> is forwarded to the associated node, and the node will respond in the same way as if it received a <m>bang</m> directy.
 			</description>
 		</method>
 		<method name="int">
 			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
+				<arg name="number" type="int" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Forwarded to the associated node
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				An integer is forwarded to the associated node, and the node will respond in the same way as if it received an <m>int</m> directy.
 			</description>
 		</method>
 		<method name="float">
 			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
+				<arg name="number" type="float" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Forwarded to the associated node
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				A decimal nunber is forwarded to the associated node, and the node will respond in the same way as if it received a <m>float</m> directy.
 			</description>
 		</method>
 		<method name="list">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="list" type="list" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Forwarded to the associated node
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				A list is forwarded to the associated node, and the node will respond in the same way as if it received the list directy.
 			</description>
 		</method>
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="list" type="list" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Forwarded to the associated node
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				The message is forwarded to the associated node, and the node will respond in the same way as if it received the message directy.
 			</description>
 		</method>
 		<method name="address">
@@ -123,18 +116,16 @@
 				Target node address
 			</digest>
 			<description>
-				The message 'address' followed by an absolute or relative address set the target address
+				The message <m>address</m> followed by an absolute or relative address set the target address
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist />
 			<digest>
 				Dumpout
 			</digest>
 			<description>
-				Dump object attributes value
+				Dump object attributes value.
 			</description>
 		</method>
 		<method name="symbol">
@@ -142,10 +133,10 @@
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Forwarded to the associated node
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				The symbol is forwarded to the associated node, and the node will respond in the same way as if it received the symbol directy.
 			</description>
 		</method>
 	</methodlist>
@@ -156,7 +147,7 @@
 				Target node address
 			</digest>
 			<description>
-				The message 'address' followed by an absolute or relative address set the target address
+				This sets the address of the associated node that the object will bind to and forward values to. The address can be <em>absolute</em> and take the form of an OSC address, or <em>relative</em>, in which case the relative address is appended to the address of the <o>j.model</o> or <o>j.view</o> object in the model or view that this <o>j.send</o> object is part of.
 			</description>
 		</attribute>
 	</attributelist>
@@ -166,13 +157,37 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.remote">
+		<seealso name="j.message">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.message_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.model">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.node">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
 			<!-- TEXT_HERE -->
 		</seealso>
 		<seealso name="j.receive">
 			<!-- TEXT_HERE -->
 		</seealso>
-		<seealso name="send">
+		<seealso name="j.remote">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.view">
 			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>
