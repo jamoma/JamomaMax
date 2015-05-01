@@ -135,6 +135,9 @@
 		<seealso name="j.receive">
 			<!-- TEXT_HERE -->
 		</seealso>
+		<seealso name="j.receive~">
+			<!-- TEXT_HERE -->
+		</seealso>
 		<seealso name="j.remote">
 			<!-- TEXT_HERE -->
 		</seealso>
