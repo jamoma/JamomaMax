@@ -336,7 +336,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 686.0, 245.0, 130.0, 22.0 ],
+									"patching_rect" : [ 691.0, 275.0, 130.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -372,7 +372,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 686.0, 207.0, 100.0, 22.0 ],
+									"patching_rect" : [ 691.0, 237.0, 100.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -403,7 +403,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 304.0, 311.0, 493.0, 209.0 ],
+										"rect" : [ 309.0, 341.0, 493.0, 209.0 ],
 										"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -571,7 +571,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 31.0, 181.0, 493.0, 209.0 ],
+									"patching_rect" : [ 36.0, 211.0, 493.0, 209.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -587,7 +587,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 807.0, 194.5, 144.0, 47.0 ],
+									"patching_rect" : [ 812.0, 224.5, 144.0, 47.0 ],
 									"style" : "",
 									"text" : "Change destination dynamically",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -601,7 +601,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 593.0, 362.0, 217.0, 22.0 ],
+									"patching_rect" : [ 598.0, 392.0, 217.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -625,7 +625,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 593.0, 207.0, 54.0, 22.0 ],
+									"patching_rect" : [ 598.0, 237.0, 54.0, 22.0 ],
 									"style" : "",
 									"text" : "cycle~ 1"
 								}
@@ -638,7 +638,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 593.0, 280.0, 180.0, 22.0 ],
+									"patching_rect" : [ 598.0, 310.0, 180.0, 22.0 ],
 									"style" : "",
 									"text" : "j.send~ /audio_model/audio/in.L"
 								}
@@ -656,7 +656,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 6.0, 13.0, 455.0, 98.0 ],
+									"patching_rect" : [ 6.0, 13.0, 542.0, 114.0 ],
 									"varname" : "maxhelpui"
 								}
 
@@ -685,7 +685,7 @@
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 806.5, 351.0, 602.5, 351.0 ],
+									"midpoints" : [ 811.5, 381.0, 607.5, 381.0 ],
 									"source" : [ "obj-14", 1 ]
 								}
 
