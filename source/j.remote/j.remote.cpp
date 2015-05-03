@@ -183,7 +183,7 @@ void WrappedViewerClass_new(TTPtr self, long argc, t_atom *argv)
 void remote_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 {
 	if (msg==1) 						// Inlet
-		strcpy(dst, "input");
+		strcpy(dst, "input: forwarded to node");
 	else {								// Outlets
 		switch(arg) {
 			case set_out:
