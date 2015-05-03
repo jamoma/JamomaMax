@@ -353,13 +353,13 @@ void send_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom *arg
 void send_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 {
 	if (msg==1)			// Inlets
-		strcpy(dst, "");		
-	else {							// Outlets
-		switch(arg) {
-				strcpy(dst, "dumpout");
-				break;
-		}
- 	}
+#ifdef JCOM_SEND_TILDE
+		strcpy(dst, "signal: Forwarded to node, address of node");
+#else
+		strcpy(dst, "value(s): Forwarded to node, address of node");
+#endif
+	else							// Dump outlet
+		strcpy(dst, "dumpout");
 }
 
 #ifndef JCOM_SEND_TILDE
@@ -529,7 +529,7 @@ t_int *send_perform(t_int *w)
 						
 						// DATA case : send the mean value of the sample
 						else if (anObject.name() == kTTSym_Data)
-							anObject.send(kTTSym_Command, v, none);
+							anObject.send(kTTSym_Command, v);
 						
 					}
 				}
@@ -595,7 +595,7 @@ void send_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, doub
 						
 						// DATA case : send the mean value of the sample
 						else if (anObject.name() == kTTSym_Data)
-							anObject.send(kTTSym_Command, v, none);
+							anObject.send(kTTSym_Command, v);
 					}
 				}
 			}
