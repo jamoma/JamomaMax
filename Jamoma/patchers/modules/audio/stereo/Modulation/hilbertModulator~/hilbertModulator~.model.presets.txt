@@ -2,11 +2,11 @@
 
 - preset "default"
 # "edit a comment"
-lowerSideband/active 0
+lower_sideband/active 0
 audio/bypass 0
 audio/gain 100.000000
 audio/mix 100.000000
-modulatingFrequency 20.000000
+modulating_requency 20.000000
 audio/mute 0
  
 
