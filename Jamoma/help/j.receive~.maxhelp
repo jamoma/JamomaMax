@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 273.0, 236.0, 898.0, 597.0 ],
+		"rect" : [ 100.0, 100.0, 898.0, 597.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -116,7 +116,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 273.0, 262.0, 898.0, 571.0 ],
+						"rect" : [ 100.0, 126.0, 898.0, 571.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -227,7 +227,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 299.0, 436.0, 461.0, 236.0 ],
+										"rect" : [ 126.0, 300.0, 461.0, 236.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -472,9 +472,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "", "" ],
-									"patching_rect" : [ 570.0, 372.0, 154.0, 22.0 ],
+									"patching_rect" : [ 570.0, 372.0, 200.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive~ /audio/model/foo"
+									"text" : "j.receive~ /audio_model/audio/out.L"
 								}
 
 							}

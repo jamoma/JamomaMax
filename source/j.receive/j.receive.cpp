@@ -341,14 +341,18 @@ void receive_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 void receive_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 {
 	if (msg==1)			// Inlets
-		strcpy(dst, "");		
+		strcpy(dst, "address of node");
 	else {							// Outlets
 		switch(arg) {
+			case data_out:
+#ifdef JCOM_RECEIVE_TILDE
+				strcpy(dst, "(signal) node value");
+#else
+				strcpy(dst, "node value");
+#endif
+				break;
 			case address_out:
 				strcpy(dst, "address output");
-				break;
-			case data_out:
-				strcpy(dst, "data output");
 				break;
 			case dump_out:
 				strcpy(dst, "dumpout");
