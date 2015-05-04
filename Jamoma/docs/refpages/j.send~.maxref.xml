@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.send" module="" category="Jamoma">
 	<digest>
-		value or signal sender
+		Send audio signal remotely to model
 	</digest>
 	<description>
-		sending value to parameter or message and signal to in using their address
+		Pass audio signals remotely to a model. Signals can be passed to <o>j.in~</o> or <o>j.out~</o> objects in the model, or used to update the value of <o>j.parameter</o>.
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -24,20 +24,13 @@
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
+		<inlet id="0" type="signal/float">
 			<digest>
 			</digest>
 			<description>
-				Value or signal to send
+				Signal to send, or set associated node address
 			</description>
 		</inlet>
-		<!-- <inlet id="1" type="INLET_TYPE">
-			<digest>
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</inlet> -->
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
@@ -51,70 +44,19 @@
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="target node address" type="symbol" optional="1">
 			<digest>
-				Target node
+				Address of target node
 			</digest>
 			<description>
-				Address of the target node (ie. parameter)
+				The address of the target node that audio signals will be sent to. This can be the addressa of a <o>j.parameter</o>, <o>j.in~</o> or <o>j.out~</o> object.<br />
+        <br />
+        If no address is provided, the object will not send audio.
 			</description>
 		</objarg>
 	</objarglist>
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="bang">
-			<arglist />
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="int">
-			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="float">
-			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="list">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="anything">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
 		<method name="address">
 			<arglist>
 				<arg name="ARG_NAME_0" type="symbol" optional="0" />
@@ -123,40 +65,40 @@
 				Target node address
 			</digest>
 			<description>
-				The message 'address' followed by an absolute or relative address set the target address
+				The message <m>address</m> followed by an absolute or relative address set the target address that audio signals will be sent to.
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist />
 			<digest>
 				Dumpout
 			</digest>
 			<description>
-				Dump object attributes value
+				Outputs the absolute address of the current target node.
 			</description>
 		</method>
-		<method name="symbol">
-			<arglist>
-				<arg name="ARG_NAME_0" type="symbol" optional="0" />
-			</arglist>
+		<method name="signal">
+			<arglist />
 			<digest>
-				<!-- TEXT_HERE -->
+				Audio signal to forward
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				The audio signal will be forwarded to the target node.<br/>
+        <br/>
+        If the target node is a <o>j.in~</o> or <o>j.out~</o> object, the audio signal will be available for audio processing in the patch.<br/>
+        <br/>
+        If the target node is a <o>j.parameter</o> object, the value of the parameter will be continuously updated (at control rate) as the audio signal change.
 			</description>
 		</method>
 	</methodlist>
 	<!--ATTRIBUTES-->
-	<attributelist>
+	<attributelist>@
 		<attribute name="address" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Target node address
+				Address of associated node
 			</digest>
 			<description>
-				The message 'address' followed by an absolute or relative address set the target address
+				This sets the address of the associated node that the object will send audio signals to. The address can be <em>absolute</em> and take the form of an OSC address, or <em>relative</em>, in which case the relative address is appended to the address of the <o>j.model</o> or <o>j.view</o> object in the model or view that this <o>j.send</o> object is part of.
 			</description>
 		</attribute>
 	</attributelist>
@@ -166,10 +108,49 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name="j.in~">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.message">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.message_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.model">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.node">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.out~">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.receive">
+			<!-- TEXT_HERE -->
+		</seealso>
 		<seealso name="j.receive~">
 			<!-- TEXT_HERE -->
 		</seealso>
-		<seealso name="send~">
+		<seealso name="j.remote">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.send">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.view">
 			<!-- TEXT_HERE -->
 		</seealso>
 	</seealsolist>

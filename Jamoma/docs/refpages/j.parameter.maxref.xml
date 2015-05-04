@@ -57,7 +57,6 @@
 	<!--ARGUMENTS-->
 	<objarglist>
     <objarg name="parameter name" optional="0" type="symbol">
-		<!-- ><objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0"> -->
 			<digest>
 				Node name
 			</digest>
