@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1363.0, 451.0 ],
+		"rect" : [ 34.0, 79.0, 1185.0, 437.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,7 +43,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 481.5, 186.5, 68.0, 22.0 ],
+					"patching_rect" : [ 296.5, 162.5, 68.0, 22.0 ],
 					"style" : "",
 					"text" : "route none"
 				}
@@ -56,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1019.0, 156.0, 68.0, 22.0 ],
+					"patching_rect" : [ 834.0, 132.0, 68.0, 22.0 ],
 					"style" : "",
 					"text" : "route none"
 				}
@@ -69,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1153.0, 186.5, 104.0, 22.0 ],
+					"patching_rect" : [ 968.0, 162.5, 104.0, 22.0 ],
 					"style" : "",
 					"text" : "output_texture $1"
 				}
@@ -83,7 +83,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1153.0, 84.0, 178.0, 89.0 ],
+					"patching_rect" : [ 968.0, 60.0, 178.0, 89.0 ],
 					"style" : "",
 					"text" : "j.parameter output_texture @type boolean @description \"Flag determining whether camera image is passed out as a Jitter matrix or an OpenGL texture.\""
 				}
@@ -1114,7 +1114,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 369.5, 84.0, 96.0, 22.0 ],
+					"patching_rect" : [ 184.5, 60.0, 96.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1313,7 +1313,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 293.5, 84.0, 59.0, 22.0 ],
+					"patching_rect" : [ 108.5, 60.0, 59.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1334,7 +1334,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 243.5, 401.5, 25.0, 25.0 ],
+					"patching_rect" : [ 977.5, 377.5, 25.0, 25.0 ],
 					"style" : "default"
 				}
 
@@ -1346,7 +1346,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1068.0, 186.5, 54.0, 22.0 ],
+					"patching_rect" : [ 883.0, 162.5, 54.0, 22.0 ],
 					"style" : "default",
 					"text" : "input $1"
 				}
@@ -1360,7 +1360,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 211.0, 46.0, 25.0, 25.0 ],
+					"patching_rect" : [ 26.0, 22.0, 25.0, 25.0 ],
 					"style" : "default"
 				}
 
@@ -1372,7 +1372,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 211.0, 98.0, 36.0, 22.0 ],
+					"patching_rect" : [ 26.0, 60.0, 36.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.in 1"
 				}
@@ -1385,7 +1385,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 211.0, 322.0, 131.0, 22.0 ],
+					"patching_rect" : [ 26.0, 298.0, 131.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.out 1 @type jit_matrix",
 					"varname" : "thru1[1]"
@@ -1400,7 +1400,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.5, 236.0, 173.0, 35.0 ],
+					"patching_rect" : [ 977.5, 298.0, 173.0, 35.0 ],
 					"style" : "default",
 					"text" : "j.model @description \"Multiple source video player\""
 				}
@@ -1414,7 +1414,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 888.5, 84.0, 118.0, 76.0 ],
+					"patching_rect" : [ 703.5, 60.0, 118.0, 76.0 ],
 					"style" : "default",
 					"text" : "j.parameter dim @type array @description \"Resolution of captured image\"",
 					"varname" : "camera/size"
@@ -1429,7 +1429,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 481.5, 84.0, 129.0, 89.0 ],
+					"patching_rect" : [ 296.5, 60.0, 129.0, 89.0 ],
 					"style" : "default",
 					"text" : "j.parameter status @description \"Status of the camera grabber\" @repetitions/filter 1 @type string",
 					"varname" : "j.parameter[6]"
@@ -1444,7 +1444,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 624.5, 84.0, 110.0, 76.0 ],
+					"patching_rect" : [ 439.5, 60.0, 110.0, 76.0 ],
 					"style" : "default",
 					"text" : "j.message direct @description \"Direct access to the embedded jit.grab object\"",
 					"varname" : "j.parameter[5]"
@@ -1459,7 +1459,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1019.0, 84.0, 122.0, 62.0 ],
+					"patching_rect" : [ 834.0, 60.0, 122.0, 62.0 ],
 					"style" : "default",
 					"text" : "j.parameter input @type string @description \"Video Input\"",
 					"varname" : "camera/camera"
@@ -1474,7 +1474,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 744.5, 84.0, 131.0, 76.0 ],
+					"patching_rect" : [ 559.5, 60.0, 131.0, 76.0 ],
 					"style" : "default",
 					"text" : "j.message settings @description \"Open dialog for camera settings - doesn't work with Max > 0.6.1\"",
 					"varname" : "j.parameter[1]"
@@ -1488,7 +1488,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 515.5, 357.0, 108.0, 22.0 ],
+					"patching_rect" : [ 330.5, 333.0, 108.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.return inputlist",
 					"varname" : "thru2[2]"
@@ -1502,7 +1502,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 358.0, 357.0, 101.0, 22.0 ],
+					"patching_rect" : [ 173.0, 333.0, 101.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.return devicelist",
 					"varname" : "thru2[1]"
@@ -1516,7 +1516,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 211.0, 401.5, 25.0, 25.0 ],
+					"patching_rect" : [ 26.0, 377.5, 25.0, 25.0 ],
 					"style" : "default"
 				}
 
@@ -1528,7 +1528,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 888.5, 186.5, 79.0, 22.0 ],
+					"patching_rect" : [ 703.5, 162.5, 79.0, 22.0 ],
 					"style" : "default",
 					"text" : "prepend dim"
 				}
@@ -1541,7 +1541,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 358.0, 322.0, 334.0, 22.0 ],
+					"patching_rect" : [ 173.0, 298.0, 334.0, 22.0 ],
 					"style" : "default",
 					"text" : "route vdevlist inputlist"
 				}
@@ -1554,7 +1554,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 744.5, 186.5, 53.0, 22.0 ],
+					"patching_rect" : [ 559.5, 162.5, 53.0, 22.0 ],
 					"style" : "default",
 					"text" : "settings"
 				}
@@ -1567,7 +1567,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 211.0, 290.0, 155.0, 22.0 ],
+					"patching_rect" : [ 26.0, 266.0, 155.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.grab 640 480 @unique 1",
 					"varname" : "grabber"
@@ -1698,15 +1698,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 1 ]
 				}
 
 			}
