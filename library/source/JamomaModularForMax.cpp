@@ -83,7 +83,6 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
                 TTSymbol  patcherClass;
                 TTSymbol  patcherName;
                 TTAddress patcherArg;
-                TTString  newPatcherArgument;
                 long argc = 0;
                 t_atom *  argv = NULL;
                 
