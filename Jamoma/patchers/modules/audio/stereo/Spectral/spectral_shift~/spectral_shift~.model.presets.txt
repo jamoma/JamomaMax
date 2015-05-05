@@ -1,10 +1,9 @@
 
-
 - preset "default"
 # "edit a comment"
 limiter/dcblocker/active 1
 audio/bypass 0
-feedback/gain -60.00000
+feedback/gain -60.000000
 audio/gain 100.000000
 limiter/lookahead 100
 audio/mix 100.000000
@@ -17,5 +16,118 @@ frequency/scale -2.260000
 frequency/shift -344.000000
 limiter/threshold 0.000000
 feedback/time 10.000000
- 
 
+- preset "amogwai_default_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 95.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -12.000000
+frequency/shift -500.000000
+limiter/active 0
+limiter/lookahead 100
+limiter/mode exponenti60
+limiter/postamp 0.000000
+limiter/preamp 5.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 95.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale 7.000000
+frequency/shift -386.000000
+limiter/active 0
+limiter/lookahead 100
+limiter/mode exponenti60
+limiter/postamp 0.000000
+limiter/preamp 5.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 95.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -47.800000
+frequency/shift 100.000000
+limiter/active 0
+limiter/lookahead 100
+limiter/mode exponenti60
+limiter/postamp 0.000000
+limiter/preamp 5.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 95.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -24.000000
+frequency/shift 199.000000
+limiter/active 0
+limiter/lookahead 100
+limiter/mode exponenti60
+limiter/postamp 0.000000
+limiter/preamp 5.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 95.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -12.000000
+frequency/shift 50.000000
+limiter/active 0
+limiter/lookahead 100
+limiter/mode exponenti60
+limiter/postamp 0.000000
+limiter/preamp 5.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
