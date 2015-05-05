@@ -38,20 +38,6 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 459.0, 288.0, 63.0, 22.0 ],
-					"style" : "",
-					"text" : "print HHH"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "live.dial",
 					"numinlets" : 1,
@@ -170,7 +156,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 336.0, 205.0, 131.0, 35.0 ],
+					"patching_rect" : [ 336.0, 205.0, 133.0, 35.0 ],
 					"style" : "",
 					"text" : "j.remote feedback/gain @unit db",
 					"varname" : "feedback"
@@ -1132,15 +1118,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1243,9 +1220,9 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
-			"obj-3" : [ "live.dial", "Pitch shift", 0 ],
 			"obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
+			"obj-3" : [ "live.dial", "Pitch shift", 0 ],
+			"obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
 			"obj-4" : [ "live.dial[1]", "Freq shift", 0 ]
 		}
 ,
