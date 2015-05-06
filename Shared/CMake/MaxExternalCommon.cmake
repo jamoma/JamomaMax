@@ -4,18 +4,17 @@ if(APPLE)
 	include_directories("${FILE_H_DIR}")
 endif()
 
-addMaxsupport()
+addMaxSupport()
 
 add_library(${PROJECT_NAME} MODULE ${PROJECT_SRCS})
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY BUNDLE True)
-
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY BUNDLE_EXTENSION "mxo")
-
-
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+if(APPLE)
+	set_property(TARGET ${PROJECT_NAME}
+				 PROPERTY BUNDLE True)
+	set_property(TARGET ${PROJECT_NAME}
+				 PROPERTY BUNDLE_EXTENSION "mxo")
+	set_property(TARGET ${PROJECT_NAME}
+				 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+endif()
 
 
 # Since XCode does not like tildas in project names, if
@@ -63,7 +62,11 @@ if(APPLE)
 	set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 	set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX "")
 elseif(WIN32)
-	set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".mxe")
+	if(WIN64)
+		set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".mxe64")
+	else()
+		set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".mxe")
+	endif()
 endif()
 
 if("${PROJECT_NAME}" STREQUAL "j.loader")
