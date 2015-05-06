@@ -83,7 +83,6 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
                 TTSymbol  patcherClass;
                 TTSymbol  patcherName;
                 TTAddress patcherArg;
-                TTString  newPatcherArgument;
                 long argc = 0;
                 t_atom *  argv = NULL;
                 
@@ -95,13 +94,13 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
                 
                 if (patcherContext == kTTSym_model && argc == 1) {
                     
-                    if (atom_gettype(argv+1) == A_SYM)
-                        patcherArg = TTAddress(atom_getsym(argv+1)->s_name);
+                    if (atom_gettype(argv) == A_SYM)
+                        patcherArg = TTAddress(atom_getsym(argv)->s_name);
                 }
                 else if (patcherContext == kTTSym_view && argc == 2) {
                     
-                    if (atom_gettype(argv+2) == A_SYM)
-                        patcherArg = TTAddress(atom_getsym(argv+2)->s_name);
+                    if (atom_gettype(argv+1) == A_SYM)
+                        patcherArg = TTAddress(atom_getsym(argv+1)->s_name);
                 }
                 
                 // free args

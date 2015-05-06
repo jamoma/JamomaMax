@@ -4,43 +4,39 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 0,
-			"architecture" : "x86"
+			"revision" : 3,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 35.0, 323.0, 1017.0, 527.0 ],
+		"rect" : [ 142.0, 96.0, 984.0, 527.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 459.0, 288.0, 63.0, 20.0 ],
-					"text" : "print HHH"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "live.dial",
@@ -140,7 +136,7 @@
 							"parameter_mmin" : -48.0,
 							"parameter_mmax" : 48.0,
 							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.1f dB"
+							"parameter_units" : "%.1f Cents"
 						}
 
 					}
@@ -151,16 +147,18 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-13",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 336.0, 205.0, 133.0, 47.0 ],
-					"text" : "j.remote feedback/gain @dataspace gain @unit db",
+					"patching_rect" : [ 336.0, 205.0, 133.0, 35.0 ],
+					"style" : "",
+					"text" : "j.remote feedback/gain @unit db",
 					"varname" : "feedback"
 				}
 
@@ -174,7 +172,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 501.0, 205.0, 132.0, 20.0 ],
+					"patching_rect" : [ 501.0, 205.0, 132.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote feedback/time",
 					"varname" : "right"
 				}
@@ -189,7 +188,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 501.0, 77.0, 135.0, 20.0 ],
+					"patching_rect" : [ 501.0, 77.0, 135.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote frequency/shift"
 				}
 
@@ -203,7 +203,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 336.0, 76.0, 141.0, 20.0 ],
+					"patching_rect" : [ 336.0, 76.0, 141.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote frequency/scale"
 				}
 
@@ -217,7 +218,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 273.5, 299.0, 127.0, 20.0 ],
+					"patching_rect" : [ 273.5, 299.0, 127.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.R"
 				}
 
@@ -231,7 +233,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 123.5, 299.0, 125.0, 20.0 ],
+					"patching_rect" : [ 123.5, 299.0, 125.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.L"
 				}
 
@@ -266,26 +269,20 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
-							"architecture" : "x86"
+							"revision" : 3,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 218.0, 55.0, 229.0, 239.0 ],
@@ -294,25 +291,32 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 5.0, 5.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"title" : "/spectral_shift~.view",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-15",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -320,6 +324,7 @@
 									"patching_rect" : [ 145.0, 150.0, 74.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 145.0, 150.0, 74.0, 20.0 ],
+									"style" : "",
 									"text" : "ms"
 								}
 
@@ -328,7 +333,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-14",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -336,6 +340,7 @@
 									"patching_rect" : [ 145.0, 125.0, 74.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 145.0, 125.0, 74.0, 20.0 ],
+									"style" : "",
 									"text" : "samples"
 								}
 
@@ -344,7 +349,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-13",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -352,6 +356,7 @@
 									"patching_rect" : [ 145.0, 100.0, 74.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 145.0, 100.0, 74.0, 20.0 ],
+									"style" : "",
 									"text" : "dB"
 								}
 
@@ -360,7 +365,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-7",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -368,6 +372,7 @@
 									"patching_rect" : [ 145.0, 75.0, 74.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 145.0, 75.0, 74.0, 20.0 ],
+									"style" : "",
 									"text" : "dB"
 								}
 
@@ -376,7 +381,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-2",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -384,6 +388,7 @@
 									"patching_rect" : [ 145.0, 50.0, 74.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 145.0, 50.0, 74.0, 20.0 ],
+									"style" : "",
 									"text" : "dB"
 								}
 
@@ -392,7 +397,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-3",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -400,6 +404,7 @@
 									"patching_rect" : [ 25.0, 150.0, 56.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 150.0, 56.0, 20.0 ],
+									"style" : "",
 									"text" : "Release:"
 								}
 
@@ -408,7 +413,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-33",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -416,6 +420,7 @@
 									"patching_rect" : [ 25.0, 50.0, 55.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 50.0, 55.0, 20.0 ],
+									"style" : "",
 									"text" : "Preamp:"
 								}
 
@@ -425,17 +430,19 @@
 									"annotation" : "Limiter: Set release time as ms.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"format" : 6,
 									"id" : "obj-11",
 									"maxclass" : "flonum",
 									"maximum" : 10000.0,
 									"minimum" : 0.0,
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "float", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 325.0, 395.0, 39.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 100.0, 150.0, 45.0, 20.0 ],
+									"style" : "",
 									"triangle" : 0,
 									"triscale" : 0.9,
 									"varname" : "Release"
@@ -447,17 +454,19 @@
 									"annotation" : "Limiter: Preamp as dB.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"format" : 6,
 									"id" : "obj-36",
 									"maxclass" : "flonum",
 									"maximum" : 48.0,
 									"minimum" : 0.0,
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "float", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 325.0, 33.0, 36.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 100.0, 50.0, 45.0, 20.0 ],
+									"style" : "",
 									"triangle" : 0,
 									"triscale" : 0.9,
 									"varname" : "Preamp"
@@ -474,6 +483,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 325.0, 422.0, 132.0, 20.0 ],
+									"style" : "",
 									"text" : "j.remote limiter/release",
 									"varname" : "limiter/release"
 								}
@@ -489,6 +499,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 325.0, 60.0, 133.0, 20.0 ],
+									"style" : "",
 									"text" : "j.remote limiter/preamp",
 									"varname" : "limiter/preamp"
 								}
@@ -498,13 +509,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-44",
 									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 325.0, 681.0, 218.0, 47.0 ],
+									"style" : "",
 									"text" : "The option to disable the limiter is not exposed, as it might cause severe blow-up of the module."
 								}
 
@@ -513,7 +524,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-12",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -521,6 +531,7 @@
 									"patching_rect" : [ 25.0, 200.0, 72.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 200.0, 72.0, 20.0 ],
+									"style" : "",
 									"text" : "DC blocker:"
 								}
 
@@ -540,6 +551,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 100.0, 200.0, 49.0, 18.0 ],
 									"size" : 1,
+									"style" : "",
 									"values" : [ 1 ]
 								}
 
@@ -548,7 +560,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-10",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -556,6 +567,7 @@
 									"patching_rect" : [ 25.0, 125.0, 71.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 125.0, 71.0, 20.0 ],
+									"style" : "",
 									"text" : "Lookahead:"
 								}
 
@@ -564,7 +576,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-8",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -572,6 +583,7 @@
 									"patching_rect" : [ 25.0, 75.0, 60.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 75.0, 60.0, 20.0 ],
+									"style" : "",
 									"text" : "Postamp:"
 								}
 
@@ -580,7 +592,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-6",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -588,6 +599,7 @@
 									"patching_rect" : [ 25.0, 175.0, 42.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 175.0, 42.0, 20.0 ],
+									"style" : "",
 									"text" : "Mode:"
 								}
 
@@ -596,7 +608,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-5",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -604,6 +615,7 @@
 									"patching_rect" : [ 25.0, 20.0, 96.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 20.0, 96.0, 20.0 ],
+									"style" : "",
 									"text" : "Limiter details"
 								}
 
@@ -612,7 +624,6 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-4",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -620,6 +631,7 @@
 									"patching_rect" : [ 25.0, 100.0, 66.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 25.0, 100.0, 66.0, 20.0 ],
+									"style" : "",
 									"text" : "Threshold:"
 								}
 
@@ -634,6 +646,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 325.0, 617.0, 179.0, 20.0 ],
+									"style" : "",
 									"text" : "j.remote limiter/dcblocker/active",
 									"varname" : "limiter/active[1]"
 								}
@@ -641,9 +654,8 @@
 							}
 , 							{
 								"box" : 								{
+									"allowdrag" : 0,
 									"annotation" : "Limiter: Set the function to be used for calculating the scaling.",
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
 									"id" : "obj-29",
 									"items" : [ "exponential", ",", "linear" ],
 									"labelclick" : 1,
@@ -654,7 +666,8 @@
 									"parameter_enable" : 0,
 									"patching_rect" : [ 325.0, 504.5, 66.0, 20.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 100.0, 175.0, 92.0, 20.0 ]
+									"presentation_rect" : [ 100.0, 175.0, 92.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -663,15 +676,17 @@
 									"annotation" : "Limiter: Set threshold as dB.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"format" : 6,
 									"id" : "obj-32",
 									"maxclass" : "flonum",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "float", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 325.0, 200.0, 46.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 100.0, 100.0, 46.0, 20.0 ],
+									"style" : "",
 									"triangle" : 0,
 									"triscale" : 0.9
 								}
@@ -688,11 +703,12 @@
 									"minimum" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "int", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 325.0, 289.0, 46.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 100.0, 125.0, 46.0, 20.0 ],
+									"style" : "",
 									"triangle" : 0,
 									"triscale" : 0.9
 								}
@@ -708,6 +724,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 325.0, 532.5, 123.0, 20.0 ],
+									"style" : "",
 									"text" : "j.remote limiter/mode",
 									"varname" : "limiter/mode"
 								}
@@ -723,6 +740,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 325.0, 231.0, 142.0, 20.0 ],
+									"style" : "",
 									"text" : "j.remote limiter/threshold",
 									"varname" : "limiter/threshold"
 								}
@@ -738,6 +756,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 325.0, 319.0, 148.0, 20.0 ],
+									"style" : "",
 									"text" : "j.remote limiter/lookahead",
 									"varname" : "limiter/lookahead"
 								}
@@ -753,6 +772,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
 									"patching_rect" : [ 325.0, 143.0, 139.0, 20.0 ],
+									"style" : "",
 									"text" : "j.remote limiter/postamp",
 									"varname" : "limiter/postamp"
 								}
@@ -763,15 +783,17 @@
 									"annotation" : "Limiter: Postamp as dB.",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"format" : 6,
 									"id" : "obj-35",
 									"maxclass" : "flonum",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "float", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 325.0, 118.0, 46.0, 20.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 100.0, 75.0, 46.0, 20.0 ],
+									"style" : "",
 									"triangle" : 0,
 									"triscale" : 0.9
 								}
@@ -786,7 +808,8 @@
 									"patching_rect" : [ 20.0, 15.0, 175.0, 25.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 20.0, 15.0, 175.0, 25.0 ],
-									"rounded" : 15
+									"rounded" : 15,
+									"style" : ""
 								}
 
 							}
@@ -798,7 +821,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 515.0, 10.0, 25.0, 25.0 ]
+									"patching_rect" : [ 515.0, 10.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -1002,22 +1026,17 @@
  ]
 					}
 ,
-					"patching_rect" : [ 0.0, 80.0, 133.0, 20.0 ],
+					"patching_rect" : [ 0.0, 80.0, 133.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
-					"text" : "p \"spectral_shift Panel\"",
-					"viewvisibility" : 0
+					"style" : "",
+					"text" : "p \"spectral_shift Panel\""
 				}
 
 			}
@@ -1030,7 +1049,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 15.0, 205.0, 288.0, 20.0 ],
+					"patching_rect" : [ 15.0, 205.0, 288.0, 22.0 ],
+					"style" : "",
 					"text" : "j.view @description \"Spectral shifting with feedback\""
 				}
 
@@ -1042,7 +1062,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 330.0, 25.0, 25.0 ]
+					"patching_rect" : [ 15.0, 330.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -1054,12 +1075,16 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 145.0, 25.0, 25.0 ]
+					"patching_rect" : [ 15.0, 145.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"fontface" : 0,
+					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-1",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -1087,15 +1112,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 345.5, 261.0, 330.5, 261.0, 330.5, 135.0, 345.5, 135.0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"source" : [ "obj-13", 0 ]
 				}
 
@@ -1205,9 +1221,9 @@
  ],
 		"parameters" : 		{
 			"obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
-			"obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
 			"obj-3" : [ "live.dial", "Pitch shift", 0 ],
-			"obj-6" : [ "live.dial[2]", "Feedback gain", 0 ]
+			"obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
+			"obj-4" : [ "live.dial[1]", "Freq shift", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -1226,7 +1242,8 @@
 				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

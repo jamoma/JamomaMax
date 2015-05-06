@@ -12,6 +12,7 @@ include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/Modular
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/SchedulerLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/ProtocolLib")
 include_directories("${PROJECT_SOURCE_DIR}/../../../Core/DSP/library/includes")
+include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Score/library/includes")
 include_directories("${PROJECT_SOURCE_DIR}/classwrapper")
 
 include_directories("c74support/max-includes")
