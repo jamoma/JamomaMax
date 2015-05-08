@@ -506,22 +506,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"formantcorrection" : [ 0 ],
-													"formant" : [ 1.0 ],
-													"basictuning" : [ 440 ],
-													"speed" : [ 1.0 ],
 													"pitchcorrection" : [ 0 ],
-													"slurtime" : [ 0.0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"pitchshiftcent" : [ 0 ],
-													"followglobaltempo" : [ 0 ],
 													"timestretch" : [ 0 ],
-													"play" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
+													"formant" : [ 1.0 ],
+													"pitchshiftcent" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
 													"mode" : [ "basic" ],
+													"play" : [ 0 ],
+													"speed" : [ 1.0 ],
+													"slurtime" : [ 0.0 ],
+													"pitchshift" : [ 1.0 ],
+													"basictuning" : [ 440 ],
+													"followglobaltempo" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"originallength" : [ 0.0, "ticks" ],
 													"quality" : [ "basic" ],
-													"originaltempo" : [ 120.0 ],
-													"originallengthms" : [ 0.0 ]
+													"originaltempo" : [ 120.0 ]
 												}
 
 											}
@@ -662,7 +662,8 @@
 													"numoutlets" : 0,
 													"patching_rect" : [ 16.0, 17.0, 374.0, 27.0 ],
 													"style" : "",
-													"text" : "A stereo audio effect"
+													"text" : "A stereo audio effect",
+													"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 												}
 
 											}
@@ -4198,7 +4199,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 201.0, 570.25, 81.0, 39.0 ],
-									"presentation_rect" : [ 218.0, 571.25, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Doesn't work",
 									"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
@@ -4217,7 +4217,7 @@
 									"patching_rect" : [ 49.0, 570.25, 46.0, 39.0 ],
 									"style" : "",
 									"text" : "Works",
-									"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
+									"textcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ]
 								}
 
 							}
@@ -4230,7 +4230,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 899.0, 453.75, 194.0, 37.0 ],
-									"presentation_rect" : [ 1092.0, 351.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Update current preset to reflect current state of model",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4270,7 +4269,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 899.0, 627.0, 153.0, 24.0 ],
-									"presentation_rect" : [ 891.0, 577.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Edit all presets",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4285,7 +4283,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 899.0, 534.5, 153.0, 24.0 ],
-									"presentation_rect" : [ 896.0, 489.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Edit default preset",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4331,13 +4328,13 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
 									"id" : "obj-97",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 846.0, 665.0, 151.0, 22.0 ],
-									"presentation_rect" : [ 843.0, 584.25, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "j.send /spectral/preset:edit"
 								}
@@ -4358,6 +4355,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
 									"id" : "obj-94",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -4377,7 +4375,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 840.0, 417.0, 172.0, 22.0 ],
-									"presentation_rect" : [ 840.0, 418.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Edit presets",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4392,7 +4389,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 544.5, 722.75, 219.0, 24.0 ],
-									"presentation_rect" : [ 903.0, 689.25, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Rename \"default\" preset to \"boring\"",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4421,7 +4417,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 544.5, 602.75, 223.0, 37.0 ],
-									"presentation_rect" : [ 903.0, 608.25, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Copy \"default\" to new preset named \"foo\", and insert at slot 2.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4449,7 +4444,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 544.5, 501.75, 187.0, 24.0 ],
-									"presentation_rect" : [ 853.0, 518.25, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Move \"default\" preset to slot 3",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4464,7 +4458,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 544.5, 463.25, 153.0, 24.0 ],
-									"presentation_rect" : [ 815.0, 482.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Move preset 1 to slot 2",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4492,7 +4485,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 422.0, 417.0, 172.0, 22.0 ],
-									"presentation_rect" : [ 424.0, 402.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Reorganise presets",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4522,7 +4514,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 409.0, 294.5, 24.0, 22.0 ],
-									"presentation_rect" : [ 412.0, 297.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "t b"
 								}
@@ -4550,7 +4541,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 846.0, 44.0, 172.0, 22.0 ],
-									"presentation_rect" : [ 848.0, 43.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Create and delete presets",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4582,7 +4572,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 919.0, 210.567627, 29.5, 22.0 ],
-									"presentation_rect" : [ 927.0, 191.567627, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "2"
 								}
@@ -4596,7 +4585,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 876.0, 210.567627, 30.0, 22.0 ],
-									"presentation_rect" : [ 881.0, 187.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "test"
 								}
@@ -4623,7 +4611,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 646.0, 293.5, 153.0, 24.0 ],
-									"presentation_rect" : [ 647.0, 271.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Name of current preset",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4638,7 +4625,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1267.0, 18.0, 77.0, 22.0 ],
-									"presentation_rect" : [ 925.0, 32.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Interpolate",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4653,7 +4639,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 422.0, 44.0, 141.0, 22.0 ],
-									"presentation_rect" : [ 422.0, 44.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Recall model presets",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4686,7 +4671,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 190.0, 199.0, 168.0, 37.0 ],
+									"patching_rect" : [ 190.0, 199.0, 171.0, 37.0 ],
 									"style" : "",
 									"text" : "The state of the model can be stored as presets.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4701,7 +4686,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 646.0, 218.0, 153.0, 24.0 ],
-									"presentation_rect" : [ 644.0, 198.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Recall preset",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4731,7 +4715,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 451.0, 328.75, 141.0, 22.0 ],
 									"style" : "",
-									"text" : "2 default"
+									"text" : "8 test"
 								}
 
 							}
@@ -4781,7 +4765,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+										"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -4810,12 +4794,38 @@
 										"subpatcher_template" : "",
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-11",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
+													"numoutlets" : 1,
+													"outlettype" : [ "clear" ],
+													"patching_rect" : [ 50.0, 162.0, 43.0, 22.0 ],
+													"style" : "",
+													"text" : "t clear"
+												}
+
+											}
+, 											{
+												"box" : 												{
+													"id" : "obj-1",
+													"maxclass" : "newobj",
+													"numinlets" : 2,
+													"numoutlets" : 2,
+													"outlettype" : [ "bang", "" ],
+													"patching_rect" : [ 50.0, 83.0, 82.0, 22.0 ],
+													"style" : "",
+													"text" : "sel bang"
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"id" : "obj-6",
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 164.0, 98.0, 22.0 ],
+													"patching_rect" : [ 113.0, 193.0, 98.0, 22.0 ],
 													"style" : "",
 													"text" : "prepend append"
 												}
@@ -4828,7 +4838,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 129.0, 27.0, 22.0 ],
+													"patching_rect" : [ 113.0, 162.0, 27.0, 22.0 ],
 													"style" : "",
 													"text" : "iter"
 												}
@@ -4841,7 +4851,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "clear" ],
-													"patching_rect" : [ 50.0, 100.0, 49.0, 22.0 ],
+													"patching_rect" : [ 113.0, 129.0, 157.0, 22.0 ],
 													"style" : "",
 													"text" : "t l clear"
 												}
@@ -4867,13 +4877,40 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 44.0, 246.0, 30.0, 30.0 ],
+													"patching_rect" : [ 50.0, 266.0, 30.0, 30.0 ],
 													"style" : ""
 												}
 
 											}
  ],
 										"lines" : [ 											{
+												"patchline" : 												{
+													"destination" : [ "obj-11", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-1", 0 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-2", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-1", 1 ]
+												}
+
+											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-9", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-11", 0 ]
+												}
+
+											}
+, 											{
 												"patchline" : 												{
 													"destination" : [ "obj-4", 0 ],
 													"disabled" : 0,
@@ -4887,6 +4924,7 @@
 													"destination" : [ "obj-9", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
+													"midpoints" : [ 260.5, 251.5, 59.5, 251.5 ],
 													"source" : [ "obj-2", 1 ]
 												}
 
@@ -4905,13 +4943,14 @@
 													"destination" : [ "obj-9", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
+													"midpoints" : [ 122.5, 243.5, 59.5, 243.5 ],
 													"source" : [ "obj-6", 0 ]
 												}
 
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-2", 0 ],
+													"destination" : [ "obj-1", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-8", 0 ]
@@ -4938,7 +4977,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-7",
-									"items" : [ "default", ",", "amogwai_default_1", ",", "amogwai_default_2", ",", "amogwai_default_3", ",", "amogwai_default_4", ",", "amogwai_default_5" ],
+									"items" : [ "default", ",", "amogwai_default_1", ",", "amogwai_default_2", ",", "amogwai_default_3", ",", "amogwai_default_4", ",", "amogwai_default_5", ",", "test" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -4951,6 +4990,16 @@
 							}
 , 							{
 								"box" : 								{
+									"bgcolor" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"bgcolor2" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
+									"bgfillcolor_angle" : 270.0,
+									"bgfillcolor_autogradient" : 0.0,
+									"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+									"bgfillcolor_color1" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
+									"bgfillcolor_color2" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
+									"bgfillcolor_proportion" : 0.39,
+									"bgfillcolor_type" : "gradient",
+									"gradient" : 1,
 									"id" : "obj-48",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -5030,6 +5079,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
 									"id" : "obj-42",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -5043,6 +5093,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
 									"id" : "obj-39",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -5061,7 +5112,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1314.5, 526.5, 183.0, 22.0 ],
+									"patching_rect" : [ 1281.5, 528.5, 183.0, 22.0 ],
 									"style" : "",
 									"text" : "spectral_shift~.model.presets.txt"
 								}
@@ -5069,18 +5120,7 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-30",
-									"maxclass" : "button",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 1282.5, 526.5, 24.0, 24.0 ],
-									"style" : ""
-								}
-
-							}
-, 							{
-								"box" : 								{
+									"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
 									"id" : "obj-18",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -5188,22 +5228,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"formantcorrection" : [ 0 ],
-													"formant" : [ 1.0 ],
-													"basictuning" : [ 440 ],
-													"speed" : [ 1.0 ],
 													"pitchcorrection" : [ 0 ],
-													"slurtime" : [ 0.0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"pitchshiftcent" : [ 0 ],
-													"followglobaltempo" : [ 0 ],
 													"timestretch" : [ 0 ],
-													"play" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
+													"formant" : [ 1.0 ],
+													"pitchshiftcent" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
 													"mode" : [ "basic" ],
+													"play" : [ 0 ],
+													"speed" : [ 1.0 ],
+													"slurtime" : [ 0.0 ],
+													"pitchshift" : [ 1.0 ],
+													"basictuning" : [ 440 ],
+													"followglobaltempo" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"originallength" : [ 0.0, "ticks" ],
 													"quality" : [ "basic" ],
-													"originaltempo" : [ 120.0 ],
-													"originallengthms" : [ 0.0 ]
+													"originaltempo" : [ 120.0 ]
 												}
 
 											}
@@ -5435,7 +5475,6 @@
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 443.5, 289.125, 154.0, 32.75 ],
-									"presentation_rect" : [ 446.5, 291.625, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "\" \"",
 									"texton" : "\" \"",
@@ -5546,15 +5585,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-18", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-30", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-46", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -5576,7 +5606,7 @@
 									"destination" : [ "obj-18", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 1324.0, 560.375, 1291.0, 560.375 ],
+									"midpoints" : [ 1291.0, 560.375, 1291.0, 560.375 ],
 									"source" : [ "obj-33", 0 ]
 								}
 
@@ -6222,7 +6252,8 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 591.5, 439.0, 252.0, 22.0 ],
 									"style" : "",
-									"text" : "Remote communication with model"
+									"text" : "Communication with model",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6249,9 +6280,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 591.5, 96.0, 229.0, 22.0 ],
+									"patching_rect" : [ 591.5, 96.0, 320.0, 22.0 ],
 									"style" : "",
-									"text" : "Remote communication with nodes"
+									"text" : "Communication with model nodes",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
 							}
@@ -6436,22 +6468,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"formantcorrection" : [ 0 ],
-													"formant" : [ 1.0 ],
-													"basictuning" : [ 440 ],
-													"speed" : [ 1.0 ],
 													"pitchcorrection" : [ 0 ],
-													"slurtime" : [ 0.0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"pitchshiftcent" : [ 0 ],
-													"followglobaltempo" : [ 0 ],
 													"timestretch" : [ 0 ],
-													"play" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
+													"formant" : [ 1.0 ],
+													"pitchshiftcent" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
 													"mode" : [ "basic" ],
+													"play" : [ 0 ],
+													"speed" : [ 1.0 ],
+													"slurtime" : [ 0.0 ],
+													"pitchshift" : [ 1.0 ],
+													"basictuning" : [ 440 ],
+													"followglobaltempo" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"originallength" : [ 0.0, "ticks" ],
 													"quality" : [ "basic" ],
-													"originaltempo" : [ 120.0 ],
-													"originallengthms" : [ 0.0 ]
+													"originaltempo" : [ 120.0 ]
 												}
 
 											}
@@ -7888,18 +7920,18 @@
 		"lines" : [  ],
 		"parameters" : 		{
 			"obj-37::obj-23" : [ "live.dial[1]", "Modulating Freq", 0 ],
-			"obj-2::obj-16" : [ "gain", "gain", 0 ],
 			"obj-2::obj-27" : [ "live.text[1]", "live.text", 0 ],
-			"obj-37::obj-40" : [ "live.dial", "Modulating Freq", 0 ],
-			"obj-2::obj-21" : [ "live.text", "live.text", 0 ],
-			"obj-39::obj-13::obj-3" : [ "live.dial[2]", "Pitch shift", 0 ],
+			"obj-39::obj-13::obj-4" : [ "live.dial[4]", "Freq shift", 0 ],
+			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
 			"obj-37::obj-39" : [ "live.text[2]", "live.text", 0 ],
 			"obj-2::obj-11" : [ "Ratio", "Ratio", 0 ],
-			"obj-2::obj-18" : [ "Dry/Wet", "Dry/Wet", 0 ],
+			"obj-2::obj-16" : [ "gain", "gain", 0 ],
+			"obj-2::obj-21" : [ "live.text", "live.text", 0 ],
+			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
+			"obj-37::obj-40" : [ "live.dial", "Modulating Freq", 0 ],
 			"obj-2::obj-13" : [ "Bitdepth", "Bitdepth", 0 ],
-			"obj-39::obj-13::obj-4" : [ "live.dial[5]", "Freq shift", 0 ],
-			"obj-39::obj-13::obj-6" : [ "live.dial[4]", "Feedback gain", 0 ],
-			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ]
+			"obj-2::obj-18" : [ "Dry/Wet", "Dry/Wet", 0 ],
+			"obj-39::obj-13::obj-3" : [ "live.dial[5]", "Pitch shift", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
