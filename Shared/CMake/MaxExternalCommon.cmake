@@ -14,6 +14,8 @@ if(APPLE)
 				 PROPERTY BUNDLE_EXTENSION "mxo")
 	set_property(TARGET ${PROJECT_NAME}
 				 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+    set_property(TARGET ${PROJECT_NAME}
+                 PROPERTY BUILD_WITH_INSTALL_RPATH TRUE)
 endif()
 
 
@@ -70,7 +72,8 @@ elseif(WIN32)
 endif()
 
 if("${PROJECT_NAME}" STREQUAL "j.loader")
-	install(TARGETS ${PROJECT_NAME} 
+    # use the install rpath when linking
+	install(TARGETS ${PROJECT_NAME}
 			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/extensions"
 			COMPONENT JamomaMax)
 else()

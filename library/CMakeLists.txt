@@ -65,6 +65,10 @@ add_library(${PROJECT_NAME}
 
 set_property(TARGET ${PROJECT_NAME}
 			 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+
+set_property(TARGET ${PROJECT_NAME}
+			 PROPERTY BUILD_WITH_INSTALL_RPATH TRUE)
+
 # Version
 set_property(TARGET ${PROJECT_NAME}
 			 PROPERTY VERSION ${Jamoma_VERSION})
