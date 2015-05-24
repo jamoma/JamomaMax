@@ -82,22 +82,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 514.0, 440.0, 191.0, 22.0 ],
+					"patching_rect" : [ 528.0, 440.0, 191.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf address %s/dsp/preset:mix"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 464.0, 585.0, 340.0, 22.0 ],
-					"style" : "",
-					"text" : "address /amogwai/dsp/preset:mix"
 				}
 
 			}
@@ -108,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 629.0, 45.0, 137.0, 22.0 ],
+					"patching_rect" : [ 528.0, 406.0, 137.0, 22.0 ],
 					"style" : "",
 					"text" : "j.receive model:address"
 				}
@@ -124,20 +111,6 @@
 					"patching_rect" : [ 771.0, 397.0, 73.0, 22.0 ],
 					"style" : "",
 					"text" : "pack 0 0."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"linecount" : 2,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 750.5, 231.0, 259.5, 35.0 ],
-					"style" : "",
-					"text" : "0.125 0.125 0.125 0.125 0.125 0.125 0.125 0.125"
 				}
 
 			}
@@ -251,7 +224,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 471.0, 366.0, 30.0, 30.0 ],
+					"patching_rect" : [ 250.0, 367.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -263,7 +236,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 350.0, 366.0, 30.0, 30.0 ],
+					"patching_rect" : [ 129.0, 367.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -275,7 +248,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 286.0, 366.0, 30.0, 30.0 ],
+					"patching_rect" : [ 65.0, 367.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -288,7 +261,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 414.0, 114.0, 30.0, 30.0 ],
+					"patching_rect" : [ 193.0, 115.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -301,7 +274,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 286.0, 114.0, 30.0, 30.0 ],
+					"patching_rect" : [ 65.0, 115.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -313,7 +286,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 471.0, 255.0, 49.0, 22.0 ],
+					"patching_rect" : [ 250.0, 256.0, 49.0, 22.0 ],
 					"style" : "",
 					"text" : "j.model"
 				}
@@ -327,7 +300,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 286.0, 219.0, 147.0, 22.0 ],
+					"patching_rect" : [ 65.0, 220.0, 147.0, 22.0 ],
 					"style" : "",
 					"text" : "spectral_shift~.model dsp"
 				}
@@ -340,22 +313,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 471.0, 219.0, 141.0, 22.0 ],
+					"patching_rect" : [ 250.0, 220.0, 141.0, 22.0 ],
 					"style" : "",
 					"text" : "hipnoscope.model hipno"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"attr" : "address",
-					"id" : "obj-17",
-					"maxclass" : "attrui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 730.0, 137.0, 280.0, 22.0 ],
-					"style" : ""
 				}
 
 			}
@@ -434,15 +394,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -480,15 +431,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-21", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-21", 0 ]
@@ -558,15 +500,6 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-19", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "hipnoscope.model.maxpat",
@@ -599,6 +532,10 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
@@ -611,19 +548,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unit.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.in~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unit.mxo",
 				"type" : "iLaX"
 			}
 , 			{

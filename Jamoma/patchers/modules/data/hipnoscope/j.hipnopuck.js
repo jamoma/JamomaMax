@@ -12,8 +12,8 @@ m.autofill = 0;
 m.relative_coords = 0;
 
 // Inlets and outlets
-inlets = 2;
-outlets = 2;
+inlets = 1;
+outlets = 1;
 
 // Geometry variables
 var width;
@@ -43,7 +43,7 @@ function paint() {
         
         var offset = 0.5*vPuckRadius;
         var lx = width *0.5 + hipnoRadius*vx - offset;
-        var ly = height*0.5 + hipnoRadius*vy - offset;
+        var ly = height*0.5 - hipnoRadius*vy - offset;
         
         // Make object transparent
 		set_source_rgba(0., 0., 0., 0.);
@@ -64,20 +64,15 @@ function paint() {
 
 function msg_float(v)
 {
-	var i = inlet;
-	
-	if (i==0)
-		list(v,vPuckAngle);
-	else
-		list(vPuckDistance,v);	
+	list(v,vy);
 }
 
 function list()
 {
 	if (arguments.length>0)
-		vPuckDistance = arguments[0];
+		vx = arguments[0];
 	if (arguments.length>1)
-		vPuckAngle = arguments[1];
+		vy = arguments[1];
     
     processlist();
 	notifyclients();
@@ -87,19 +82,16 @@ function list()
 function set()
 {
 	if (arguments.length == 1) {
-		if (inlet == 0)
-			setlist(arguments[0],vPuckAngle)
-		else
-			setlist(vPuckDistance,arguments[0]);
+        setlist(arguments[0],vy)
 	} else if (arguments.length == 2) {
 		setlist(arguments[0], arguments[1]);
 	}
 }
 
-function setlist(d, a)
+function setlist(x, y)
 {
-	vPuckDistance = d;
-	vPuckAngle = a;
+	vx = x;
+	vy = y;
 	
 	processlist();
 	notifyclients();
@@ -111,18 +103,14 @@ function processlist()
 	var width = box.rect[2] - box.rect[0];
 	var height = box.rect[3] - box.rect[1];
 	
-    // clipping
-	if (vPuckDistance<0)
-        vPuckDistance = 0;
-	else if (vPuckDistance>1)
-        vPuckDistance = 1;    
+    // Clip to unit circle
+    var temp = Math.sqrt(vx*vx+vy*vy);
     
-	var aa = vPuckAngle * degreesToRadians;
+    if (temp<=1)
+        temp = 1;
 	
-    // Using navigational coordinates: angle = 0 to the North, positive to the East
-	vx =  Math.sin(aa) * vPuckDistance;
-	vy = -Math.cos(aa) * vPuckDistance;
-    
+    vx = vx/temp;
+    vy = vy/temp;    
 }
 processlist.local = 1; //private
 
@@ -180,9 +168,8 @@ function ondrag(x,y)
     if (a>180.)
         a -= 360;
     
-    list(d, a);
+    list(x, y);
     
-    outlet(1,vPuckAngle);
-    outlet(0,vPuckDistance);
+    outlet(0,vx,vy);
 }
 ondrag.local = 1; //private 
