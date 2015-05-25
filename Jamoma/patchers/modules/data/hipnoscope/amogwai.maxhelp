@@ -52,7 +52,7 @@
 					"clipheight" : 70.0,
 					"data" : 					{
 						"clips" : [ 							{
-								"filename" : "AudioDisk:/Audio/iTunes/iTuned Music/Music/Brian Eno & Harold Budd/The Pearl/04 Against the Sky.m4a",
+								"filename" : "duduk.aif",
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
@@ -264,6 +264,12 @@
 				"name" : "spectral_shift~.view.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "duduk.aif",
+				"bootpath" : "C74:/media/msp",
+				"type" : "AIFF",
 				"implicit" : 1
 			}
 , 			{
