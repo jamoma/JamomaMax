@@ -116,27 +116,3 @@ function onclick(x,y)
     
 }
 onclick.local = 1; //private
-
-/*
-function ondrag(x,y)
-{
-	calculateGeometry();
-    
-    // Clamp to size of GUI
-
-	x =  (x-0.5*width)/hipnoRadius;
-	y = -(y-0.5*height)/hipnoRadius;
-    
-	var d = Math.sqrt(x*x + y*y);
-    var a = radiansToDegrees * Math.atan2(y, x);
-    // Convert from math to navigational coordinate system
-    a = -(a-90);
-    if (a>180.)
-        a -= 360;
-    
-    list(x, y);
-    
-    outlet(0,vx,vy);
-}
-ondrag.local = 1; //private 
-*/

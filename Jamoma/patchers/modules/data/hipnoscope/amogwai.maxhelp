@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 71.0, 161.0, 944.0, 695.0 ],
+		"rect" : [ 445.0, 123.0, 944.0, 695.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,32 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 602.0, 405.0, 50.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 602.0, 440.0, 181.0, 22.0 ],
+					"style" : "",
+					"text" : "j.remote /amogwai/preset_offset"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
@@ -56,22 +82,22 @@
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
-									"followglobaltempo" : [ 0 ],
-									"originallengthms" : [ 0.0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"quality" : [ "basic" ],
-									"originaltempo" : [ 120.0 ],
 									"pitchcorrection" : [ 0 ],
-									"speed" : [ 1.0 ],
-									"timestretch" : [ 0 ],
-									"basictuning" : [ 440 ],
+									"pitchshiftcent" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
 									"formantcorrection" : [ 0 ],
 									"mode" : [ "basic" ],
-									"pitchshift" : [ 1.0 ],
-									"pitchshiftcent" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"timestretch" : [ 0 ],
 									"formant" : [ 1.0 ],
-									"slurtime" : [ 0.0 ],
-									"play" : [ 0 ]
+									"play" : [ 0 ],
+									"speed" : [ 1.0 ],
+									"originaltempo" : [ 120.0 ],
+									"pitchshift" : [ 1.0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"basictuning" : [ 440 ],
+									"slurtime" : [ 0.0 ]
 								}
 
 							}
@@ -168,6 +194,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 611.5, 472.0, 579.5, 472.0, 579.5, 394.0, 611.5, 394.0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -184,13 +220,22 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
+			"obj-8::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
+			"obj-6::obj-31::obj-29" : [ "live.menu", "live.menu", 0 ],
 			"obj-8::obj-3" : [ "live.dial", "Pitch shift", 0 ],
 			"obj-8::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-8::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
 			"obj-8::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
-			"obj-6::obj-31::obj-29" : [ "live.menu", "live.menu", 0 ],
 			"obj-6::obj-10" : [ "live.text", "live.text", 0 ]
 		}
 ,
