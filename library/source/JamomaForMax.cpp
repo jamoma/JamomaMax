@@ -135,33 +135,28 @@ void jamoma_init(void)
 		// Add Jamoma Key Commands
 		
 		// J -- Jamoma: a new object box with "j." in it
-		atom_setsym(a+0, SymbolGen("J"));
+		atom_setsym(a+0, SymbolGen("k"));
 		atom_setsym(a+1, SymbolGen("patcher"));
 		atom_setsym(a+2, SymbolGen("inserttextobj"));
 		atom_setsym(a+3, SymbolGen("j."));
 		object_method_typed(max, SymbolGen("definecommand"), 4, a, NULL);
 				
-		// M -- Module: a new object box with ".model" in it
-		atom_setsym(a+0, SymbolGen("M"));
-		atom_setsym(a+1, SymbolGen("patcher"));
-		atom_setsym(a+2, SymbolGen("inserttextobj"));
-		atom_setsym(a+3, SymbolGen(".model"));
-		object_method_typed(max, SymbolGen("definecommand"), 4, a, NULL);
-        		
-		// I -- Input: a new audio input module
-		object_method_parse(max, SymbolGen("definecommand"), (char*)"I patcher insertobj bpatcher @name input~.module.maxpat @args input~", NULL);
-				
-		// O -- Output: a new audio output module	
-		object_method_parse(max, SymbolGen("definecommand"), (char*)"O patcher insertobj bpatcher @name output~.module.maxpat @args output~", NULL);
+//		// M -- Module: a new object box with ".model" in it
+//		atom_setsym(a+0, SymbolGen("M"));
+//		atom_setsym(a+1, SymbolGen("patcher"));
+//		atom_setsym(a+2, SymbolGen("inserttextobj"));
+//		atom_setsym(a+3, SymbolGen(".model"));
+//		object_method_typed(max, SymbolGen("definecommand"), 4, a, NULL);
+//        
 		
-		// B -- BPatcher: a new module in a bpatcher
-		object_method_parse(max, SymbolGen("definecommand"), (char*)"B patcher inserttextobj \"bpatcher @name .module @args myModule\"", NULL);		
+//		// B -- BPatcher: a new module in a bpatcher
+//		object_method_parse(max, SymbolGen("definecommand"), (char*)"B patcher inserttextobj \"bpatcher @name .module @args myModule\"", NULL);		
 
-		// D -- Demo: a new module in a bpatcher, but with the args reverse which is handy for super-fast demos when you don't care about the OSC name
-		object_method_parse(max, SymbolGen("definecommand"), (char*)"D patcher inserttextobj \"bpatcher @name .module\"", NULL);		
+//		// D -- Demo: a new module in a bpatcher, but with the args reverse which is handy for super-fast demos when you don't care about the OSC name
+//		object_method_parse(max, SymbolGen("definecommand"), (char*)"D patcher inserttextobj \"bpatcher @name .module\"", NULL);		
 
-		// X -- Continuous Mapper module
-		object_method_parse(max, SymbolGen("definecommand"), (char*)"X patcher insertobj bpatcher @name mapper.module.maxpat @args mapper", NULL);
+//		// X -- Continuous Mapper module
+//		object_method_parse(max, SymbolGen("definecommand"), (char*)"X patcher insertobj bpatcher @name mapper.module.maxpat @args mapper", NULL);
 				
 		// now the jamoma object
 		{
