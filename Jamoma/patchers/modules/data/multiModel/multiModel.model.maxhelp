@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 569.0, 496.0 ],
+		"rect" : [ 37.0, 77.0, 569.0, 496.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -174,50 +174,54 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
 			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-4::obj-13" : [ "live.text[2]", "live.text", 0 ]
+			"obj-4::obj-30::obj-93::obj-82::obj-50" : [ "live.text[21]", "live.text[1]", 0 ],
+			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-4::obj-30::obj-93::obj-82::obj-54" : [ "live.text[20]", "live.text[1]", 0 ],
+			"obj-4::obj-30::obj-93::obj-8" : [ "live.text[19]", "live.text", 0 ],
+			"obj-4::obj-13" : [ "live.text[2]", "live.text", 0 ],
+			"obj-4::obj-30::obj-93::obj-21" : [ "live.text[18]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "mouse.module.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -229,9 +233,9 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "delay~.model.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Delay/delay~",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Delay/delay~",
+				"name" : "mapper.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper",
+				"patcherrelativepath" : "../mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -243,10 +247,37 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "delay~.view.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Delay/delay~",
-				"patcherrelativepath" : "../../../../../../../../../Max 7/Packages/Jamoma/patchers/modules/audio/stereo/Delay/delay~",
+				"name" : "mapper.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper",
+				"patcherrelativepath" : "../mapper",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.function_generic.maxpat",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper/function_options",
+				"patcherrelativepath" : "../mapper/function_options",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.namespacebrowser.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespacebrowser",
+				"patcherrelativepath" : "../../../components/data/namespacebrowser",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.get_onscreen_position.js",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
+				"patcherrelativepath" : "../../../../javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -290,7 +321,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -298,7 +329,27 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.parameter_array.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote_array.mxo",
 				"type" : "iLaX"
 			}
  ],
