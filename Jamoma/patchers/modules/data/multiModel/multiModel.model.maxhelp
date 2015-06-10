@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 37.0, 77.0, 569.0, 496.0 ],
+		"rect" : [ 100.0, 100.0, 569.0, 496.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -59,9 +59,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 93.0, 133.0, 126.0, 22.0 ],
+					"patching_rect" : [ 93.0, 133.0, 146.0, 22.0 ],
 					"style" : "",
-					"text" : "preset \"mapper test1\""
+					"text" : "preset \"4 mappers demo\""
 				}
 
 			}
@@ -260,7 +260,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.function_generic.maxpat",
+				"name" : "j.function_freehand.maxpat",
 				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper/function_options",
 				"patcherrelativepath" : "../mapper/function_options",
 				"type" : "JSON",
