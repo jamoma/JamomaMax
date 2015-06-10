@@ -368,7 +368,7 @@
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
-		<example img="j._external_template.png" />
+		<example img="./images/j._external_template.png" caption="My description"/>
 	</examplelist>
 	<!--SEEALSO-->
 	<!--Items listed here appear in the ? menu in maxhelps -->
