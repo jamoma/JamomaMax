@@ -5,31 +5,19 @@
 <chapter name="Jamoma Tutorials: Table of Contents">
 
 <h1>Jamoma Tutorials - Table of Contents</h1>
-<h2>Tutorials</h2>
 <ul>
-<li><link type="tutorial" module="jamoma" name="jamomachapter01">Jamoma Tutorial 1</link> A template for Jamoma tutorial</li>
+<li><link type="tutorial" module="jamoma" name="generalpresentation">Jamoma 0.6 overview</link> General presentation of Jamoma 0.6 features</li>
+</ul>
+
+<h2>Basics</h2>
+<ul>
+<li><link type="tutorial" module="jamoma" name="makeajamomamodel">Make a Jamoma model patcher</link> How to turn a patchers into a Jamoma model patcher</li>
+<li><link type="tutorial" module="jamoma" name="usingmodelswithinapatcher">Using models within your patcher</link> How to instanciate and communicate to your models</li>
+<li><link type="tutorial" module="jamoma" name="makeamodelview">Make a model view patcher</link> How to a patcher view for your model</li>
+</ul>
+<h2>Advanced model features</h2>
+<ul>
+<li><link type="tutorial" module="jamoma" name="makeajamomamodel">Make a Jamoma model patcher</link> How to turn a patchers into a Jamoma model patcher</li>
+<li><link type="tutorial" module="jamoma" name="usingmodelswithinapatcher">Using models within your patcher</link> How to instanciate and communicate to your models</li>
 </ul>
 </chapter>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

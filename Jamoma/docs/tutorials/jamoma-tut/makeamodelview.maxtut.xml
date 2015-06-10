@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Make a model view patcher"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="How to make a view patcher" patch="01_sfplay.model.maxpat"/>
+
+<previous name="usingmodelswithinapatcher">Using models within your patcher</previous>
+<!-- <next name="jitterchapter02">Create a Matrix</next> -->
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Jamoma model's view</h1>
+<h2>Make a Jamoma view patcher</h2>
+
+<illustration><img src="images/00_sfplay.model.png"/>A view patcher anatomy</illustration>
+
+<h2>Dynamic binding</h2>
+
+<illustration><img src="images/00_sfplay.model.png"/>Setting bounded model on the fly</illustration>
+
+
+
+<h2>Summary</h2>
+<p>A Jamoma view allows to make a patcher that remotely binds to a model. Typically, this is used to make a generic or dedicated GUI for a model</p>
+<seealsolist>
+	<seealso name="j.view">Declare patcher as a model view</seealso>
+	<seealso name="j.remote">Binding to Jamoma model's parameters</seealso>
+	<seealso name="j.model"/>
+</seealsolist>
+</chapter>

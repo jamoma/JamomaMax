@@ -4,6 +4,7 @@
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j._external_template" module="" category="Jamoma">
+	<setdocpatch name="j._external_template" patch="j._external_template.maxpat"/>
 	<digest>
 		External temaplte refpage
 	</digest>
@@ -372,6 +373,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<!--Items listed here appear in the ? menu in maxhelps -->
+	<setdocpatch name="02jCreateAMatrix" patch="02jCreateAMatrix.maxpat"/>
 	<seealsolist>
 		<seealso name="j.model"/>
 		<seealso name="jamoma-example" type="vignette">Link to a specific Jamoma example</seealso>
