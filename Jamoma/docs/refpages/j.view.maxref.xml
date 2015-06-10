@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.view" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		Declare a patcher as a remote view of a Jamoma model patcher
 	</digest>
 	<description>
-		TEXT_HERE
+		j.view is used to declare a patcher as a view binding to a model patcher. It handles all commodities so that j.remotes can bind to j.parameters in a model
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -17,6 +17,12 @@
 		</metadata>
 		<metadata name="tag">
 			Jamoma
+		</metadata>
+		<metadata name="tag">
+			modular
+		</metadata>
+		<metadata name="tag">
+			mvc
 		</metadata>
 	</metadatalist>
 	<!--INLETS-->
@@ -170,8 +176,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.model"/>
+		<seealso
 	</seealsolist>
 </c74object>
