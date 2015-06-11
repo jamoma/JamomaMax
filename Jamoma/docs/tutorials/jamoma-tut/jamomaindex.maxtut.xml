@@ -2,6 +2,7 @@
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
 <chapter name="Jamoma Tutorials: Table of Contents">
 	<h1>Jamoma Tutorials - Table of Contents</h1>
+	<h2>Topics</h2>
 	<ul>
 		<li><link type="tutorial" module="jamoma" name="generalpresentation">Jamoma 0.6 overview</link> General presentation of Jamoma 0.6 features</li>
 	</ul>

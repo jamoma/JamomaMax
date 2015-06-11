@@ -4,8 +4,6 @@
 <chapter name="Jamoma 0.6 overview"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
 <setdocpatch name="Make a Jamoma model patcher" patch="01_sfplay.model.maxpat"/>
 
-<!-- <previous name="jitterchapter00b_whatareattributes">Editing Jitter object parameters</previous> -->
-
 <next name="makeajamomamodel">Make a Jamoma model patcher</next>
 
 <parent name="jamomaindex">Jamoma Tutorials</parent>
