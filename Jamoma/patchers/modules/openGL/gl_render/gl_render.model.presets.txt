@@ -19,7 +19,7 @@ GL/axes 0
 data/bypass 0
 GL/depth/clear 0
 GL/color 1.000000 1.000000 1.000000
-GL/context default
+GL/context my_context
 GL/cull_face 0
 light/diffuse 1.000000 1.000000 1.000000 1.000000
 GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
@@ -49,14 +49,14 @@ GL/line_width 1.000000
 camera/lookat 0.000000 0.000000 0.000000
 GL/material/matfile none
 GL/matrixoutput 0
-GL/blend/mode 6 7
+GL/blend/mode 6.000000 7.000000
 GL/material/name none
 near_clip 0.100000
 GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
 point_atten 1.000000 0.000000 0.100000
 point_fade 60.000000
 GL/point_size 1.000000
-GL/poly_mode 0 0
+GL/poly_mode 0.000000 0.000000
 GL/position 0.000000 0.000000 0.000000
 camera/position 0.000000 0.000000 2.000000
 light/position 1.000000 1.000000 1.000000 0.000000

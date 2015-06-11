@@ -2,7 +2,7 @@
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
 <chapter name="Make a model view patcher"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
-<setdocpatch name="How to make a view patcher" patch="01_sfplay.model.maxpat"/>
+<setdocpatch name="How to make a view patcher" patch="basic_view.maxpat"/>
 
 <previous name="usingmodelswithinapatcher">Using models within your patcher</previous>
 <next name="parameterattributes">Attributes and methods specification</next>
@@ -13,12 +13,9 @@
 <h1>Make a model view patcher</h1>
 <h2>Make a Jamoma view patcher</h2>
 
-<illustration><img src="images/00_sfplay.model.png"/>A view patcher anatomy</illustration>
+<illustration><img src="images/basic_view.png"/>A view patcher anatomy</illustration>
 
 <h2>Dynamic binding</h2>
-
-<illustration><img src="images/00_sfplay.model.png"/>Setting bounded model on the fly</illustration>
-
 
 
 <h2>Summary</h2>
