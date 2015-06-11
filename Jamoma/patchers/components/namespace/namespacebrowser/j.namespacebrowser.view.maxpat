@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
-			"architecture" : "x86",
+			"revision" : 3,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -99,8 +99,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x86",
+							"revision" : 3,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -575,9 +575,6 @@
 , 			{
 				"box" : 				{
 					"border" : 1.0,
-					"fontface" : 0,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"hint" : "none",
 					"id" : "obj-8",
 					"keymode" : 1,
@@ -588,11 +585,10 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 574.0, 496.0, 163.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 18.0, 0.0, 1262.0, 20.0 ],
-					"style" : "",
+					"presentation_rect" : [ 18.0, -1.0, 1262.0, 20.0 ],
+					"style" : "default",
 					"tabmode" : 0,
 					"text" : "none",
-					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"varname" : "textEdit"
 				}
 
@@ -1294,7 +1290,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/javascript",
 				"patcherrelativepath" : "../../../../javascript",
 				"type" : "TEXT",
 				"implicit" : 1
