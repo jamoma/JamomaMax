@@ -27,7 +27,7 @@
 		"toptoolbarpinned" : 2,
 		"righttoolbarpinned" : 2,
 		"bottomtoolbarpinned" : 2,
-		"toolbars_unpinned_last_save" : 15,
+		"toolbars_unpinned_last_save" : 14,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 0,
 		"enablehscroll" : 1,
@@ -40,7 +40,6 @@
 		"subpatcher_template" : "Default",
 		"boxes" : [ 			{
 				"box" : 				{
-					"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 					"id" : "obj-22",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -67,7 +66,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 					"id" : "obj-19",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -81,7 +79,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 					"id" : "obj-18",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -108,7 +105,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -122,7 +118,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -136,15 +131,14 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 50.0, 146.0, 181.0, 22.0 ],
+					"patching_rect" : [ 50.0, 146.0, 97.0, 22.0 ],
 					"style" : "default",
-					"text" : "j.parameter play @type boolean"
+					"text" : "j.parameter play"
 				}
 
 			}
@@ -175,7 +169,6 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,

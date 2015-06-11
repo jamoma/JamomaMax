@@ -372,6 +372,12 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name="j.parameter"/>
+		<seealso name="j.message"/>
+		<seealso name="j.return"/>
 		<seealso name="j.view"/>
+		<seealso name="parameterattributes" module="jamoma" type="tutorial"></seealso>
+		<seealso name="signalinputsandoutputs" module="jamoma" type="tutorial"></seealso>
+		<seealso name="makeamodelview" module="jamoma" type="tutorial"></seealso>
 	</seealsolist>
 </c74object>
