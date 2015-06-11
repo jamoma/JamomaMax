@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
-<chapter name="Using models within your patcher"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<chapter name="Namespace exploration and queries"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
 <setdocpatch name="Using models within your patcher" patch="01_sfplay.model.maxpat"/>
 
-<previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
+<previous name="amenities">Overriding features</previous>
 
-<!-- <next name="jitterchapter02">Create a Matrix</next> -->
+<next name="applicationscommunication">Remote application communication</next>
 
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
@@ -21,7 +21,7 @@
 
 
 <h2>Summary</h2>
-<p>Jamoma models can be instantiated within a patcher just as regular Max abstractions.</p>
+<p>This tutorial shows some strategies to navigate or organize the namespace of your main patcher application. As the model number grows in your main patcher, navigation within the full Jamoma namespace can be complex. This shows some features provided by j.namespace for example to help circumvent queries, filter in models you want to work with, etc.</p>
 <seealsolist>
 	<seealso name="j.send">Addressing model's parameters and messages</seealso>
 	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>

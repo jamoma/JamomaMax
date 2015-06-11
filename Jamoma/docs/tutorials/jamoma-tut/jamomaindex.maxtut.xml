@@ -16,15 +16,13 @@
 		<li><link type="tutorial" module="jamoma" name="parameterattributes">Attributes and methods specification</link> - How to fine tune your model services</li>
 		<li><link type="tutorial" module="jamoma" name="signalinputsandoutputs">Model inputs and outputs</link> - How to manage inputs and outpus in your models</li>
 		<li><link type="tutorial" module="jamoma" name="modelpresets">Model presets</link> - How to set and recall model presets</li>
-		<li><link type="tutorial" module="jamoma" name="parameterpriorities">Parameters priorities</link> - How to manage parameters value priorities</li>
-		<li><link type="tutorial" module="jamoma" name="modelpresets">Working with units</link> - How to setup and use Jamoma units</li>
+		<li><link type="tutorial" module="jamoma" name="workingwithunits">Working with units</link> - How to setup and use Jamoma units</li>
 		<li><link type="tutorial" module="jamoma" name="rampfeatures">Ramping</link> - How to set up and use ramp features</li>
 	</ul>
 	<h2>Architecturing patchers</h2>
 	<ul>
 		<li><link type="tutorial" module="jamoma" name="amenities">Overriding features</link> - How to override model settings</li>
 		<li><link type="tutorial" module="jamoma" name="namespaceexploration">Namespace exploration and queries</link> - How to manage models in Jamoma namespace</li>
-		<li><link type="tutorial" module="jamoma" name="distantviews">Remote control</link> - How to use model and views on distant computers</li>
 		<li><link type="tutorial" module="jamoma" name="applicationscommunication">Remote application communication</link> - How to use Jamoma with distant applications</li>
 	</ul>
 </chapter>

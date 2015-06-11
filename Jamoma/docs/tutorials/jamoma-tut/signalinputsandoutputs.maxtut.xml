@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
-<chapter name="How to manage inputs and outpus in your models"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<chapter name="Model inputs and outputs"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
 <setdocpatch name="Using models within your patcher" patch="01_sfplay.model.maxpat"/>
 
-<previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
+<previous name="parameterattributes">Attributes and methods specification</previous>
 
-<!-- <next name="jitterchapter02">Create a Matrix</next> -->
+<next name="modelpresets">Model presets</next>
 
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
@@ -21,7 +21,7 @@
 
 
 <h2>Summary</h2>
-<p>Jamoma models can be instantiated within a patcher just as regular Max abstractions.</p>
+<p>This tutorial goes through the features provided by the combination of j.model and j.in/j.out. This shows how they can help to bypass, mix data or audio signals.</p>
 <seealsolist>
 	<seealso name="j.send">Addressing model's parameters and messages</seealso>
 	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>

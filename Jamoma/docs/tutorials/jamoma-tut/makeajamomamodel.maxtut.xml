@@ -4,9 +4,9 @@
 <chapter name="Make a Jamoma model"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
 <setdocpatch name="Make a Jamoma model patcher" patch="01_sfplay.model.maxpat"/>
 
-<!-- <previous name="jitterchapter00b_whatareattributes">Editing Jitter object parameters</previous> -->
+<previous name="generalpresentation">Jamoma 0.6 overview</previous>
 
-<!-- <next name="jitterchapter02">Create a Matrix</next> -->
+<next name="usingmodelswithinapatcher">Using models within your patcher</next>
 
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
@@ -19,7 +19,7 @@
 <illustration><img src="images/01_sfplay.model.png"/>A Jamoma-based soundfile player model</illustration>
 
 <h2>Summary</h2>
-<p>Jamoma objects communicate the information about blablabla</p>
+<p>This tutorial goes through the basics of making a Jamoma model patcher. This show how to take a ready made abstraction or patcher dedicated to audio or video processing for instance and see how core services can be architectured using Jamoma parameters, messages and returns</p>
 <seealsolist>
 	<seealso name="j.model">Declare a patcher as a model</seealso>
 	<seealso name="j.parameter">Declare services as a Jamoma parameter</seealso>

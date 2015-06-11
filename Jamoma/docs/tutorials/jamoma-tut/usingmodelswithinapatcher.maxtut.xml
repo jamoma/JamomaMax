@@ -6,7 +6,7 @@
 
 <previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
 
-<!-- <next name="jitterchapter02">Create a Matrix</next> -->
+<next name="makeamodelview">Make a model view patcher</next>
 
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
@@ -21,7 +21,7 @@
 
 
 <h2>Summary</h2>
-<p>Jamoma models can be instantiated within a patcher just as regular Max abstractions.</p>
+<p>This tutorial goes through the basic usage of model in your patcher. This exemplify how to instantiate your model and how to address its features within your patch.</p>
 <seealsolist>
 	<seealso name="j.send">Addressing model's parameters and messages</seealso>
 	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>

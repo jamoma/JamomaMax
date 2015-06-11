@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
-<chapter name="Using models within your patcher"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<chapter name="Ramping"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
 <setdocpatch name="Using models within your patcher" patch="01_sfplay.model.maxpat"/>
 
-<previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
+<previous name="workingwithunits">Working with units</previous>
 
-<!-- <next name="jitterchapter02">Create a Matrix</next> -->
+<next name="amenities">Overriding features</next>
 
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
@@ -21,7 +21,7 @@
 
 
 <h2>Summary</h2>
-<p>Jamoma models can be instantiated within a patcher just as regular Max abstractions.</p>
+<p>This tutorial goes through the features provided by Jamoma ramp management feature. This explains how to define ramp functions for some parameters when doing interpolation or ramping to new values.</p>
 <seealsolist>
 	<seealso name="j.send">Addressing model's parameters and messages</seealso>
 	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>
