@@ -177,5 +177,8 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="j.model"/>
+		<seealso name="j.ui"/>
+		<seealso name="j.remote"/>
+		<seealso name="j.remote_array"/>
 	</seealsolist>
 </c74object>
