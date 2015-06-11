@@ -11,19 +11,16 @@
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
 
-<h1>Using models within your patcher</h1>
-<h2>Instantiating a Jamoma model</h2>
+<h1>Remote application communication</h1>
+<h2>Declaring patcher as a Jamoma application</h2>
 
-<h2>Send and receive values to models</h2>
+<h2>Listening to distant parameters</h2>
 
 <illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
 
 <h2>Summary</h2>
 <p>This tutorial goes through the features provided by Jamoma for Max framework to use your Jamoma patcher with distant applications. This illustrate how Jamoma allows to run models and views on distant or local Max instances.</p>
 <seealsolist>
-	<seealso name="j.send">Addressing model's parameters and messages</seealso>
-	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>
-	<seealso name="j.remote">Binding to Jamoma model's parameters</seealso>
-	<seealso name="j.namespace">Declare a patcher as a model</seealso>
+	<seealso name="j.modular"></seealso>
 </seealsolist>
 </chapter>

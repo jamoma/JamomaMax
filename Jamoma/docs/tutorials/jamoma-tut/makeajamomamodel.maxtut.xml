@@ -11,19 +11,20 @@
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
 <h1>Make a Jamoma model</h1>
-
+<h2>What is a Jamoma model ?</h2>
 
 <illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
 
+<h2>Declaring services</h2>
 
 <illustration><img src="images/01_sfplay.model.png"/>A Jamoma-based soundfile player model</illustration>
 
 <h2>Summary</h2>
 <p>This tutorial goes through the basics of making a Jamoma model patcher. This show how to take a ready made abstraction or patcher dedicated to audio or video processing for instance and see how core services can be architectured using Jamoma parameters, messages and returns</p>
 <seealsolist>
-	<seealso name="j.model">Declare a patcher as a model</seealso>
-	<seealso name="j.parameter">Declare services as a Jamoma parameter</seealso>
-	<seealso name="j.message">Declare method as a Jamoma message</seealso>
-	<seealso name="j.return">Declare patcher output as a Jamoma return</seealso>
+	<seealso name="j.model"></seealso>
+	<seealso name="j.parameter"></seealso>
+	<seealso name="j.message"></seealso>
+	<seealso name="j.return"></seealso>
 </seealsolist>
 </chapter>

@@ -23,9 +23,8 @@
 <h2>Summary</h2>
 <p>This tutorial goes through the basic usage of model in your patcher. This exemplify how to instantiate your model and how to address its features within your patch.</p>
 <seealsolist>
-	<seealso name="j.send">Addressing model's parameters and messages</seealso>
-	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>
-	<seealso name="j.remote">Binding to Jamoma model's parameters</seealso>
-	<seealso name="j.namespace">Declare a patcher as a model</seealso>
+	<seealso name="j.send"></seealso>
+	<seealso name="j.receive"></seealso>
+	<seealso name="j.remote"></seealso>
 </seealsolist>
 </chapter>

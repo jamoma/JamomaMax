@@ -11,10 +11,10 @@
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
 
-<h1>Using models within your patcher</h1>
-<h2>Instantiating a Jamoma model</h2>
+<h1>Working with units</h1>
+<h2>Defining units</h2>
 
-<h2>Send and receive values to models</h2>
+<h2>converting units</h2>
 
 <illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
 
@@ -23,9 +23,8 @@
 <h2>Summary</h2>
 <p>This tutorial goes through the features provided by Jamoma unit management framework. This explains how to declare units and convert units from your patcher or from your views.</p>
 <seealsolist>
-	<seealso name="j.send">Addressing model's parameters and messages</seealso>
-	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>
-	<seealso name="j.remote">Binding to Jamoma model's parameters</seealso>
-	<seealso name="j.namespace">Declare a patcher as a model</seealso>
+	<seealso name="j.parameter"></seealso>
+	<seealso name="j.unit"></seealso>
+	<seealso name="j.remote"></seealso>
 </seealsolist>
 </chapter>

@@ -11,21 +11,17 @@
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
 
-<h1>Using models within your patcher</h1>
-<h2>Instantiating a Jamoma model</h2>
-
-<h2>Send and receive values to models</h2>
+<h1>Namespace exploration and queries</h1>
+<h2>Navigating through your patcher namespace</h2>
 
 <illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
 
-
+<h2>Working with namespace selection</h2>
 
 <h2>Summary</h2>
 <p>This tutorial shows some strategies to navigate or organize the namespace of your main patcher application. As the model number grows in your main patcher, navigation within the full Jamoma namespace can be complex. This shows some features provided by j.namespace for example to help circumvent queries, filter in models you want to work with, etc.</p>
 <seealsolist>
-	<seealso name="j.send">Addressing model's parameters and messages</seealso>
-	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>
-	<seealso name="j.remote">Binding to Jamoma model's parameters</seealso>
-	<seealso name="j.namespace">Declare a patcher as a model</seealso>
+	<seealso name="j.namespace"></seealso>
+	<seealso name="j.modular"></seealso>
 </seealsolist>
 </chapter>

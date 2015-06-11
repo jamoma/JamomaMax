@@ -11,10 +11,10 @@
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
 
-<h1>Using models within your patcher</h1>
-<h2>Instantiating a Jamoma model</h2>
+<h1>Ramping</h1>
+<h2>Defining functions</h2>
 
-<h2>Send and receive values to models</h2>
+<h2>Interpolation and ramps</h2>
 
 <illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
 
@@ -23,9 +23,7 @@
 <h2>Summary</h2>
 <p>This tutorial goes through the features provided by Jamoma ramp management feature. This explains how to define ramp functions for some parameters when doing interpolation or ramping to new values.</p>
 <seealsolist>
-	<seealso name="j.send">Addressing model's parameters and messages</seealso>
-	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>
-	<seealso name="j.remote">Binding to Jamoma model's parameters</seealso>
-	<seealso name="j.namespace">Declare a patcher as a model</seealso>
+	<seealso name="j.parameter"></seealso>
+	<seealso name="j.ramp"></seealso>
 </seealsolist>
 </chapter>

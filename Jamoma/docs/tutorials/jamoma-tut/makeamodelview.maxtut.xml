@@ -10,7 +10,7 @@
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
 
-<h1>Jamoma model's view</h1>
+<h1>Make a model view patcher</h1>
 <h2>Make a Jamoma view patcher</h2>
 
 <illustration><img src="images/00_sfplay.model.png"/>A view patcher anatomy</illustration>

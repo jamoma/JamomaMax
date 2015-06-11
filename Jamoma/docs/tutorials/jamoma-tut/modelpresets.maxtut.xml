@@ -11,10 +11,10 @@
 <parent name="jamomaindex">Jamoma Tutorials</parent>
 
 
-<h1>Using models within your patcher</h1>
-<h2>Instantiating a Jamoma model</h2>
+<h1>Model presets</h1>
+<h2>Store and recall model's state</h2>
 
-<h2>Send and receive values to models</h2>
+<h2>Defining parameter value recall order</h2>
 
 <illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
 
