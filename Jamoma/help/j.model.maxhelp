@@ -994,7 +994,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 247.0, 158.0, 335.0, 55.0 ],
+									"patching_rect" : [ 246.0, 158.0, 335.0, 55.0 ],
 									"style" : "",
 									"text" : "A model contains some media processing algorithm. In this simple example, it's a metronome.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
@@ -3026,22 +3026,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originallengthms" : [ 0.0 ],
-													"followglobaltempo" : [ 0 ],
-													"formant" : [ 1.0 ],
-													"pitchshift" : [ 1.0 ],
-													"pitchcorrection" : [ 0 ],
-													"play" : [ 0 ],
-													"quality" : [ "basic" ],
-													"speed" : [ 1.0 ],
 													"formantcorrection" : [ 0 ],
-													"slurtime" : [ 0.0 ],
-													"mode" : [ "basic" ],
-													"basictuning" : [ 440 ],
+													"originaltempo" : [ 120.0 ],
+													"originallengthms" : [ 0.0 ],
+													"pitchcorrection" : [ 0 ],
 													"pitchshiftcent" : [ 0 ],
-													"timestretch" : [ 0 ],
 													"originallength" : [ 0.0, "ticks" ],
-													"originaltempo" : [ 120.0 ]
+													"formant" : [ 1.0 ],
+													"slurtime" : [ 0.0 ],
+													"speed" : [ 1.0 ],
+													"mode" : [ "basic" ],
+													"followglobaltempo" : [ 0 ],
+													"play" : [ 0 ],
+													"timestretch" : [ 0 ],
+													"pitchshift" : [ 1.0 ],
+													"basictuning" : [ 440 ],
+													"quality" : [ "basic" ]
 												}
 
 											}
@@ -4092,9 +4092,9 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
 			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
 			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
+			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
 			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ]
 		}
 ,
@@ -4107,49 +4107,49 @@
 , 			{
 				"name" : "spectral_shift~.model.maxpat",
 				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.spectral_shift_voice~.maxpat",
 				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
 				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
 				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "spectral_shift~.view.maxpat",
 				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
 				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
 				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
