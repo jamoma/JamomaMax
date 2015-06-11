@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 3,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 139.0, 135.0, 1493.0, 847.0 ],
+		"rect" : [ 56.0, 85.0, 1165.0, 754.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -20,7 +20,7 @@
 		"gridsnaponopen" : 1,
 		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
+		"toolbarvisible" : 0,
 		"lefttoolbarpinned" : 0,
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
@@ -51,11 +51,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1493.0, 821.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 728.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -453,7 +453,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 3,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -606,7 +606,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 3,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -868,11 +868,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1493.0, 821.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 728.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -933,11 +933,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 139.0, 161.0, 1493.0, 821.0 ],
+						"rect" : [ 56.0, 111.0, 1165.0, 728.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -948,7 +948,7 @@
 						"gridsnaponopen" : 1,
 						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
-						"toolbarvisible" : 1,
+						"toolbarvisible" : 0,
 						"lefttoolbarpinned" : 0,
 						"toptoolbarpinned" : 0,
 						"righttoolbarpinned" : 0,
@@ -966,6 +966,24 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbleside" : 0,
+									"fontsize" : 13.0,
+									"id" : "obj-1",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 253.0, 662.0, 335.0, 55.0 ],
+									"style" : "",
+									"text" : "bpatcher's first argument sets model's name\n(here it's called 'metronome')",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+									"textjustification" : 1
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"bubble" : 1,
 									"bubbleside" : 2,
@@ -994,7 +1012,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 247.0, 158.0, 335.0, 55.0 ],
+									"patching_rect" : [ 247.0, 176.0, 335.0, 55.0 ],
 									"style" : "",
 									"text" : "A model contains some media processing algorithm. In this simple example, it's a metronome.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
@@ -1107,11 +1125,11 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 3,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 161.0, 399.0, 786.0, 417.0 ],
+										"rect" : [ 78.0, 349.0, 786.0, 417.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1502,11 +1520,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1493.0, 821.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 728.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1662,7 +1680,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 3,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1955,11 +1973,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1493.0, 821.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 728.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2559,7 +2577,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 3,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -3026,22 +3044,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originallengthms" : [ 0.0 ],
 													"followglobaltempo" : [ 0 ],
-													"formant" : [ 1.0 ],
-													"pitchshift" : [ 1.0 ],
-													"pitchcorrection" : [ 0 ],
-													"play" : [ 0 ],
-													"quality" : [ "basic" ],
-													"speed" : [ 1.0 ],
-													"formantcorrection" : [ 0 ],
-													"slurtime" : [ 0.0 ],
-													"mode" : [ "basic" ],
-													"basictuning" : [ 440 ],
-													"pitchshiftcent" : [ 0 ],
-													"timestretch" : [ 0 ],
 													"originallength" : [ 0.0, "ticks" ],
-													"originaltempo" : [ 120.0 ]
+													"basictuning" : [ 440 ],
+													"originallengthms" : [ 0.0 ],
+													"timestretch" : [ 0 ],
+													"play" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"pitchshift" : [ 1.0 ],
+													"mode" : [ "basic" ],
+													"speed" : [ 1.0 ],
+													"pitchcorrection" : [ 0 ],
+													"originaltempo" : [ 120.0 ],
+													"quality" : [ "basic" ],
+													"pitchshiftcent" : [ 0 ],
+													"slurtime" : [ 0.0 ],
+													"formant" : [ 1.0 ]
 												}
 
 											}
@@ -3621,11 +3639,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 3,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1493.0, 821.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 728.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4092,10 +4110,10 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
 			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
-			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ]
+			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
+			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
+			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -4106,50 +4124,50 @@
 			}
 , 			{
 				"name" : "spectral_shift~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.spectral_shift_voice~.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "spectral_shift~.view.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../../@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"patcherrelativepath" : "../patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
