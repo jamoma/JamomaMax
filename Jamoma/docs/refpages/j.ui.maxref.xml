@@ -5,10 +5,10 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.ui" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		A GUI widget providing access to some model embedded features
 	</digest>
 	<description>
-		TEXT_HERE
+		j.ui brings a nice GUI widget for your model's views and provides somes accesses to preset management, model in/out features.
 	</description>
 	<!--METADATA-->
 	<metadatalist>
