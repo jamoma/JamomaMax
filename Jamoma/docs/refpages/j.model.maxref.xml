@@ -76,7 +76,7 @@
 		</method> -->
 		<method name="preset:store">
 			<arglist>
-				<arg name="" type="list" optional="1" />
+				<arg name="Name of preset to store" type="list" optional="1" />
 			</arglist>
 			<digest>
 				Store state of the model as preset
@@ -87,7 +87,7 @@
 		</method>
 		<method name="preset">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Name of preset to recall" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Recall state of a model
@@ -97,7 +97,7 @@
 		</method>
 		<method name="preset:remove">
 			<arglist>
-				<arg name="" type="list" optional="1" />
+				<arg name="Name of preset to remove" type="list" optional="1" />
 			</arglist>
 			<digest>
 				Remove a preset from the list of presets
@@ -108,7 +108,7 @@
 		</method>
 		<method name="preset:edit">
 			<arglist>
-				<arg name="" type="list" optional="1" />
+				<arg name="Name of preset to edit" type="list" optional="1" />
 			</arglist>
 			<digest>
 				Edit a preset in j.model text window
@@ -118,9 +118,7 @@
 			</description>
 		</method>
 		<method name="preset:clear">
-			<arglist>
-				<arg name="" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Clear j.model's current list of presets
 			</digest>
@@ -130,7 +128,7 @@
 		</method>
 		<method name="preset:read">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Name of preset file to read" type="list" optional="1" />
 			</arglist>
 			<digest>
 				Read a list of presets from file
@@ -139,9 +137,9 @@
 				The 'preset:read' message followed by a file name in Max searchpath will read list of preset previously saved. With no argument, 'preset:read' will bring a popup window to select the file to load
 			</description>
 		</method>
-		<method name="preset:read">
+		<method name="preset:write">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Name of preset file to write" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Write a list of presets as a text file
@@ -150,10 +148,17 @@
 				The 'preset:write' message followed by a file name will write j.model's current list of preset in a text file. With no argument, 'preset:write' will bring a popup window to set where to write the file on disk
 			</description>
 		</method>
+		<method name="preset:write/again">
+			<arglist/>
+			<digest>
+				Save to disk previously saved preset file
+			</digest>
+			<description>
+				The 'preset:write/again' will save j.model's current list of preset in the opened text file 
+			</description>
+		</method>
 		<method name="preset:names">
-			<arglist>
-				<arg name="" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Get the current list of presets
 			</digest>
@@ -163,7 +168,7 @@
 		</method>
 		<method name="preset:move">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Name of presets to move" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Move a preset from one index to another
@@ -174,7 +179,7 @@
 		</method>
 		<method name="preset:copy">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Name of the preset to copy and new name" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Copy a preset to another index
@@ -185,7 +190,7 @@
 		</method>
 		<method name="preset:rename">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Previous and new preset name" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Rename a preset
@@ -196,7 +201,7 @@
 		</method>
 		<method name="preset:interpolate">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Presets name and interpolation value" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Interpolate between two presets
@@ -207,7 +212,7 @@
 		</method>
 		<method name="preset:mix">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Preset name and weight value pairs" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Interpolate between multiple presets
@@ -218,7 +223,7 @@
 		</method>
 		<method name="alias/remove">
 			<arglist>
-				<arg name="" type="list" optional="0" />
+				<arg name="Name of the alias to remove" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Remove the OSC alias of the model
@@ -236,20 +241,16 @@
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Dump all attributes' values out the rightmost outlet			
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump all attributes' values out the rightmost outlet
 			</description>
 		</method>
 		<method name="init">
-			<arglist>
-				<arg name="" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Initialize this model
 			</digest>
@@ -376,7 +377,7 @@
 		<seealso name="j.message"/>
 		<seealso name="j.return"/>
 		<seealso name="j.view"/>
-		<seealso name="parameterattributes" module="jamoma" type="tutorial"></seealso>
+		<seealso name="parameterattributes" module="jamoma" type="tutorial">Parameter attributes</seealso>
 		<seealso name="signalinputsandoutputs" module="jamoma" type="tutorial"></seealso>
 		<seealso name="makeamodelview" module="jamoma" type="tutorial"></seealso>
 	</seealsolist>
