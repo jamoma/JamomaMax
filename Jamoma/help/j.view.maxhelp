@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 277.0, 185.0, 1154.0, 795.0 ],
+		"rect" : [ 251.0, 173.0, 1154.0, 795.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -103,6 +103,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
 					"fontname" : "Arial",
@@ -121,7 +122,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1154.0, 769.0 ],
+						"rect" : [ 38.0, 79.0, 1057.0, 769.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -148,7 +149,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"showontab" : 1,
+						"showontab" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -424,6 +425,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -438,7 +440,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 277.0, 211.0, 1154.0, 769.0 ],
+						"rect" : [ 251.0, 199.0, 1154.0, 769.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -533,7 +535,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 615.0, 752.0, 258.0, 158.0 ],
+										"rect" : [ 589.0, 740.0, 258.0, 158.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -720,7 +722,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 336.0, 527.0, 252.0, 128.0 ],
+										"rect" : [ 310.0, 521.0, 252.0, 128.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -858,7 +860,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 59.0, 316.0, 252.0, 128.0 ],
+									"patching_rect" : [ 59.0, 322.0, 252.0, 128.0 ],
 									"viewvisibility" : 1
 								}
 
@@ -889,7 +891,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 336.0, 752.0, 258.0, 158.0 ],
+										"rect" : [ 310.0, 740.0, 258.0, 158.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1022,175 +1024,6 @@
 ,
 									"patching_rect" : [ 59.0, 541.0, 258.0, 158.0 ],
 									"viewvisibility" : 1
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-6",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 728.0, 312.0, 351.0, 20.0 ],
-									"style" : "",
-									"text" : "- priorize your view to make a hierachy between other view"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-24",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 614.0, 312.0, 100.0, 20.0 ],
-									"style" : "",
-									"text" : "@priority"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-9",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 733.0, 403.0, 348.0, 20.0 ],
-									"style" : "",
-									"text" : "- Leftmost inlet of view is connected to left inlet of j.view."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-10",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 733.0, 434.0, 348.0, 20.0 ],
-									"style" : "",
-									"text" : "- Left outlet of j.view connected to leftmost outlet of view."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-11",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 617.0, 434.0, 52.0, 20.0 ],
-									"style" : "",
-									"text" : "Outlets:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-12",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 617.0, 403.0, 43.0, 20.0 ],
-									"style" : "",
-									"text" : "Inlets:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 14.0,
-									"id" : "obj-13",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 594.0, 375.0, 183.0, 22.0 ],
-									"style" : "",
-									"text" : "Standard connections:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 14.0,
-									"id" : "obj-17",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 593.0, 185.0, 89.0, 22.0 ],
-									"style" : "",
-									"text" : "Attributes:"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-22",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 728.0, 269.0, 363.0, 20.0 ],
-									"style" : "",
-									"text" : "- text describing the parameter for html auto-documenting modules"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-23",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 614.0, 269.0, 100.0, 20.0 ],
-									"style" : "",
-									"text" : "@description"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-29",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 728.0, 226.0, 326.0, 33.0 ],
-									"style" : "",
-									"text" : "- what kind of view is this? Possible values : control, audio, audio.ambisonic,  video"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-32",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 613.0, 226.0, 100.0, 20.0 ],
-									"style" : "",
-									"text" : "@type"
 								}
 
 							}
