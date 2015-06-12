@@ -2,7 +2,7 @@
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
 <chapter name="Model inputs and outputs"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
-<setdocpatch name="Model inputs and outputs patcher" patch="jinjout~.maxpat"/>
+<setdocpatch name="Model inputs and outputs patcher" patch="signalinputsandoutputs01.maxpat"/>
 
 <previous name="parameterattributes">Attributes and methods specification</previous>
 
@@ -14,7 +14,7 @@
 <h1>Model inputs and outputs</h1>
 <h2>Control signal ins and outs</h2>
 
-<illustration><img src="images/jinjout~.png"/>A simple soundfile player</illustration>
+<illustration><img src="images/signalinputsandoutputs01.png"/>A simple soundfile player</illustration>
 
 <h2>Audio signal ins and outs</h2>
 

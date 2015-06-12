@@ -13,11 +13,11 @@
 <h1>Make a Jamoma model</h1>
 <h2>What is a Jamoma model ?</h2>
 
-<illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
+<illustration><img src="images/makeajamomamodel01.png"/>A simple soundfile player</illustration>
 
 <h2>Declaring services</h2>
 
-<illustration><img src="images/01_sfplay.model.png"/>A Jamoma-based soundfile player model</illustration>
+<illustration><img src="images/makeajamomamodel02.png"/>A Jamoma-based soundfile player model</illustration>
 
 <h2>Summary</h2>
 <p>This tutorial goes through the basics of making a Jamoma model patcher. This show how to take a ready made abstraction or patcher dedicated to audio or video processing for instance and see how core services can be architectured using Jamoma parameters, messages and returns</p>

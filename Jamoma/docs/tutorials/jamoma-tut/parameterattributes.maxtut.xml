@@ -2,7 +2,7 @@
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
 <chapter name="Attributes and methods specification"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
-<setdocpatch name="Using models within your patcher" patch="01_sfplay.model.maxpat"/>
+<setdocpatch name="Attributes and methods specification patcher" patch="parameterattributes01.maxpat"/>
 
 <previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
 
@@ -14,7 +14,7 @@
 <h1>Attributes and methods specification</h1>
 <h2>Managing value behaviour</h2>
 
-<illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
+<illustration><img src="images/parameterattributes01.png"/>A simple soundfile player</illustration>
 
 <h2>Documenting your model</h2>
 

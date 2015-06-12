@@ -2,7 +2,7 @@
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
 <chapter name="Using models within your patcher"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
-<setdocpatch name="Using models within your patcher" patch="usingmodels.maxpat"/>
+<setdocpatch name="Using models within your patcher" patch="usingmodelswithinapatcher01.maxpat"/>
 
 <previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
 
@@ -16,7 +16,7 @@
 
 <h2>Send and receive values to models</h2>
 
-<illustration><img src="images/usingmodels.png"/>Model instantiated as abstraction</illustration>
+<illustration><img src="images/usingmodelswithinapatcher01.png"/>Model instantiated as abstraction</illustration>
 
 
 

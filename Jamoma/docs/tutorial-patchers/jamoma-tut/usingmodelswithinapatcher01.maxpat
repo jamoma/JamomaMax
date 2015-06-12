@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 3,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 41.0, 106.0, 1241.0, 591.0 ],
+		"rect" : [ 147.0, 214.0, 1228.0, 591.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -44,7 +44,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1001.5, 38.0, 209.0, 74.0 ],
-					"presentation_rect" : [ 1051.0, 130.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "j.remote binds to a parameter value. It is useful when designing user interfaces, as the model (the media processing algorithm) and the view (the interface) can be separated."
 				}
@@ -60,7 +59,6 @@
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 285.333313, 469.5, 50.0, 22.0 ],
-					"presentation_rect" : [ 294.333313, 549.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -75,7 +73,6 @@
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 237.666626, 469.5, 41.0, 22.0 ],
-					"presentation_rect" : [ 234.666626, 549.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -89,7 +86,6 @@
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 190.0, 469.5, 24.0, 24.0 ],
-					"presentation_rect" : [ 187.0, 549.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -116,7 +112,6 @@
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 641.0, 162.0, 24.0, 24.0 ],
-					"presentation_rect" : [ 681.0, 514.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -129,7 +124,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 641.0, 193.0, 50.0, 22.0 ],
-					"presentation_rect" : [ 681.0, 545.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "play $1"
 				}
@@ -557,13 +551,14 @@
 				"box" : 				{
 					"annotation" : "none",
 					"id" : "obj-35",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 59.0, 332.5, 150.0, 22.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 59.0, 326.0, 150.0, 35.0 ],
 					"style" : "",
-					"text" : "01_sfplay.model myPlayer"
+					"text" : "mySFplayer.model myPlayer"
 				}
 
 			}
@@ -814,34 +809,11 @@
  ],
 		"parameters" : 		{
 			"obj-54" : [ "live.dial[3]", "speed", 0 ],
-			"obj-29" : [ "live.dial[2]", "speed", 0 ],
-			"obj-13" : [ "live.gain~", "live.gain~", 0 ]
+			"obj-13" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-29" : [ "live.dial[2]", "speed", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "01_sfplay.model.maxpat",
-				"bootpath" : "~/Dropbox/Jamoma_Test/Tutorials_temp/1-Basics/1 Make a Jamoma model patcher/patchers",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}

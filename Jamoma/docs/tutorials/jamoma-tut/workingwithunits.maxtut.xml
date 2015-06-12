@@ -2,7 +2,7 @@
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
 <chapter name="Working with units"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
-<setdocpatch name="Using models within your patcher" patch="01_sfplay.model.maxpat"/>
+<setdocpatch name="Working with units patcher" patch="workingwithunits01.maxpat"/>
 
 <previous name="modelpresets">Model presets</previous>
 
@@ -16,7 +16,7 @@
 
 <h2>converting units</h2>
 
-<illustration><img src="images/00_sfplay.model.png"/>A simple soundfile player</illustration>
+<illustration><img src="images/workingwithunits01.png"/>A simple soundfile player</illustration>
 
 
 
