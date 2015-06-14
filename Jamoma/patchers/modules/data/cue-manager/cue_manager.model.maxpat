@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
-			"architecture" : "x86",
+			"revision" : 3,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 51.0, 424.0, 328.0, 230.0 ],
+		"rect" : [ 195.0, 454.0, 328.0, 230.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -51,8 +51,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x86",
+							"revision" : 3,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -478,8 +478,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x86",
+							"revision" : 3,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1116,8 +1116,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x86",
+							"revision" : 3,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1180,8 +1180,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x86",
+											"revision" : 3,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -1425,8 +1425,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x86",
+											"revision" : 3,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -1649,8 +1649,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x86",
+											"revision" : 3,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -1837,8 +1837,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x86",
+											"revision" : 3,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2057,8 +2057,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x86",
+											"revision" : 3,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2371,8 +2371,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x86",
+											"revision" : 3,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2783,8 +2783,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x86",
+							"revision" : 3,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -2981,8 +2981,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x86",
+							"revision" : 3,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -3182,8 +3182,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x86",
+											"revision" : 3,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -3467,6 +3467,7 @@
 , 							{
 								"box" : 								{
 									"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-32",
@@ -3474,9 +3475,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 12.0, 120.198486, 154.0, 22.0 ],
+									"patching_rect" : [ 12.0, 121.929199, 166.0, 22.0 ],
 									"style" : "",
-									"text" : "j.return cuelist @type array"
+									"text" : "j.return cuelist @type generic"
 								}
 
 							}
@@ -3771,41 +3772,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.cue.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
