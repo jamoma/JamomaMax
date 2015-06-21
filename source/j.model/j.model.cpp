@@ -252,6 +252,8 @@ void model_subscribe(TTPtr self)
 			av = NULL;
 			
 			// If x is in a bpatcher, the patcher is NULL
+      // AV : aPatcher can't be NULL since it's checked in the if statement above
+      // TODO fixme
 			if (!aPatcher)
 				aPatcher = object_attr_getobj(x, _sym_parentpatcher);
 			

@@ -1285,6 +1285,8 @@ void jamoma_patcher_get_context(t_object **patcher, TTSymbol& returnedContext)
 			
 			// if the context is still NULL and there is a j.model|view at this level
 			// the default case would be to set it as a model patcher by default
+			// AV : this is never reach since found is FALSE as it's check in the if statement above
+			// TODO : fixme
 			if (returnedContext == kTTSymEmpty && found)
 				returnedContext = kTTSym_model;
 			// keep the upperPatcher if no j.model|view around
