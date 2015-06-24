@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 118.0, 117.0, 1502.0, 827.0 ],
+		"rect" : [ 285.0, 117.0, 1174.0, 827.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -55,7 +55,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1502.0, 801.0 ],
+						"rect" : [ 0.0, 26.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -872,7 +872,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1502.0, 801.0 ],
+						"rect" : [ 0.0, 26.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,
@@ -937,7 +937,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 118.0, 143.0, 1502.0, 801.0 ],
+						"rect" : [ 285.0, 143.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1129,7 +1129,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 137.0, 356.0, 786.0, 444.0 ],
+										"rect" : [ 304.0, 356.0, 786.0, 444.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1235,7 +1235,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 561.0, 205.5, 162.0, 64.0 ],
+													"patching_rect" : [ 561.0, 205.5, 164.0, 64.0 ],
 													"style" : "",
 													"text" : "Declares this bpatcher as a model, and provides many of the services that the model offer.",
 													"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1524,7 +1524,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1502.0, 801.0 ],
+						"rect" : [ 0.0, 26.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1977,7 +1977,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1502.0, 801.0 ],
+						"rect" : [ 0.0, 26.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2788,7 +2788,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 451.0, 328.75, 141.0, 22.0 ],
 									"style" : "",
-									"text" : "5 amogwai_default_3"
+									"text" : "2 default"
 								}
 
 							}
@@ -3183,22 +3183,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"pitchcorrection" : [ 0 ],
-													"mode" : [ "basic" ],
-													"pitchshiftcent" : [ 0 ],
-													"play" : [ 0 ],
-													"formant" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"formantcorrection" : [ 0 ],
-													"originallengthms" : [ 0.0 ],
-													"basictuning" : [ 440 ],
-													"timestretch" : [ 0 ],
 													"slurtime" : [ 0.0 ],
-													"originaltempo" : [ 120.0 ],
+													"basictuning" : [ 440 ],
+													"play" : [ 0 ],
+													"mode" : [ "basic" ],
 													"pitchshift" : [ 1.0 ],
-													"quality" : [ "basic" ],
-													"followglobaltempo" : [ 0 ]
+													"formantcorrection" : [ 0 ],
+													"originallength" : [ 0.0, "ticks" ],
+													"followglobaltempo" : [ 0 ],
+													"pitchcorrection" : [ 0 ],
+													"pitchshiftcent" : [ 0 ],
+													"originaltempo" : [ 120.0 ],
+													"speed" : [ 1.0 ],
+													"originallengthms" : [ 0.0 ],
+													"formant" : [ 1.0 ],
+													"timestretch" : [ 0 ],
+													"quality" : [ "basic" ]
 												}
 
 											}
@@ -3728,7 +3728,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1502.0, 801.0 ],
+						"rect" : [ 0.0, 26.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4195,10 +4195,10 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
 			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
-			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ]
+			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
+			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
+			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
