@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="HUMAN_FRIENDLY_VIGNETTE_TITLE" package="Jamoma">
+	
+	<!-- SOME METADATAS -->
+	<metadatalist>
+		<metadata name="author">Jamoma</metadata>
+		
+		<!-- AS MANY TAGS AS NEEDED -->
+		<metadata name="tag">template</metadata>
+	</metadatalist>
+	<h1>
+	HUMAN_FRIENDLY_VIGNETTE_TITLE
+	</h1>
+	<p>
+			Some text
+	</p>
+	<br/>
+	<h2>
+		Formatting
+	</h2>
+	<p>
+				object names links are created using an <b>o</b> tag. ie. <o>j.model</o> is used to declare a subpatcher as a model in Jamoma namespace.<br/><br/>
+				
+				object attributes links are created using an <b>at</b> tag. ie. <o>j.model</o> <at>amenities</at> attribute is used to filter out uneeded features.<br/><br/>
+				
+				object messages links are created using an <b>m</b> tag. ie. <o>j.model</o> <m>preset:new</m> message is used to create a new preset.<br/><br/>
+				
+				patchers are linked from a doc page using the <b>openfilelink</b> tag. ie. See <openfilelink filename="input~.model.maxpat">
+input~ model patcher</openfilelink> to see how to use <o>j.in~</o> and <o>j.out~</o> features.<br/><br/>
+
+images are linked using the <b>img</b> tag. Images must be stored in the relative images folder.<br/><br/>
+			</p>
+			
+			
+	<!-- BLUEBOX IS USED TO EMPHASIS A SECTION IN THE DOC. THESE USUALLY ARE STEP BY STEP INSTRUCTIONS -->
+	<bluebox>
+		<h2>Instantiating a model</h2>
+		
+		<p>ie. You can instantiate a model in your main patcher just like any regular Max <link type="vignette" module="core" name="abstractions"> abstraction</link></p>
+		<ul>
+			<li>Press <i>n</i> key to create an object
+				</li>
+			<li>Start typing your model name and select it from the autocompletion list</li>
+		</ul>
+	</bluebox>
+	
+	<!-- SEE ALSO SECTION -->
+	<seealsolist>
+		
+		<!-- LINK TO Jamoma vignette -->
+		<seealso name="vignette_path_without_dotmaxvig.xml_extension" type="vignette" module="modular"/>
+		
+		<!-- LINK TO Jamoma tutorial -->
+		<seealso name="tutorial_path_without_dotmaxtut.xml_extension" type="tutorial" module="Jamoma"/>
+		
+		<!-- LINK TO Jamoma external or patcher -->
+		<seealso name="j.ui"/>
+	</seealsolist>
+</vignette>
