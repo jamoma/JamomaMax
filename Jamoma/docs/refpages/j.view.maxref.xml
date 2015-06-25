@@ -22,23 +22,20 @@
 			modular
 		</metadata>
 		<metadata name="tag">
-			mvc
+			gui
+		</metadata>
+		<metadata name="tag">
+			view
 		</metadata>
 	</metadatalist>
+	<!-- <img="images/j.view.png" /> -->
 	<!--INLETS-->
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
-			<digest>
+		<inlet id="0" type="list">
+			<digest>Messages to be sent to the view or to the Jamoma model j.view is binding to
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</inlet>
-		<inlet id="1" type="INLET_TYPE">
-			<digest>
-			</digest>
-			<description>
-				TEXT_HERE
+				Messages to be sent to the view or to the Jamoma model j.view is binding to
 			</description>
 		</inlet>
 	</inletlist>
@@ -49,7 +46,7 @@
 				view feeback
 			</digest>
 			<description>
-				TEXT_HERE
+				Echo values sent to the Jamoma model j.view currently binds to
 			</description>
 		</outlet>
 		<outlet id="1" type="OUTLET_TYPE">
@@ -57,12 +54,12 @@
 				dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dump out outlet
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
-	<objarglist>
+	<!-- <objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -71,40 +68,43 @@
 				TEXT_HERE
 			</description>
 		</objarg>
-	</objarglist>
+	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="parameter name" type="atom" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				j.parameters' name and value to be sent
 			</digest>
 			<description>
-				TEXT_HERE
+				j.parameters' name and value to be sent
 			</description>
 		</method>
 		<method name="alias/remove">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="alias name to remove" type="symbol" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Remove alias name previously set to the view
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</method>
-		<method name="(mouse)">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
+				Remove alias name previously set to the view
 			</description>
 		</method>
 		<method name="dump">
+			<!-- <arglist>
+				<arg name="ARG_NAME_0" type="none" optional="0" />
+			</arglist> -->
+			<digest>
+				Dump the view internal state out the right-most outlet
+			</digest>
+			<description>
+				Dump the view internal state (address, description, tags, j.parameters it binds to) out the right-most outlet
+			</description>
+		</method>
+		<!-- <method name="init">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -114,71 +114,60 @@
 			<description>
 				TEXT_HERE
 			</description>
-		</method>
-		<method name="init">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</method>
+		</method> -->
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
-		<attribute name="activity" get="1" set="1" type="atom" size="1">
+		<attribute name="activity" get="1" set="0" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Read-only attribute to listen to the view activity
 			</digest>
 			<description>
-				TEXT_HERE
+				Read-only attribute to listen to the view activity
 			</description>
 		</attribute>
 		<attribute name="alias" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set an alias name to the view
 			</digest>
 			<description>
-				TEXT_HERE
+				Set an alias name to the view
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Set a text description to the view
 			</digest>
 			<description>
-				TEXT_HERE
+				Set a text description to the view
 			</description>
 		</attribute>
-		<attribute name="priority" get="1" set="1" type="int" size="1">
+		<!-- <attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
-		</attribute>
+		</attribute> -->
 		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
-				TEXT_HERE
+				Some tags associated with this Jamoma model view			
 			</digest>
 			<description>
-				TEXT_HERE
+				Some tags associated with this Jamoma model view. This can be useful for browsing purpose for example
 			</description>
 		</attribute>
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="j.view maxhelp patcher" img="./images/j.view.png" />
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="j.model"/>
 		<seealso name="j.ui"/>
 		<seealso name="j.remote"/>
-		<seealso name="j.remote_array"/>
+		<seealso name="makeamodelview" module="jamoma" type="tutorial">test text</seealso>
 	</seealsolist>
 </c74object>
