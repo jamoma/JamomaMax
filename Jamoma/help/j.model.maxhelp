@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 285.0, 117.0, 1174.0, 827.0 ],
+		"rect" : [ 100.0, 100.0, 1174.0, 827.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -23,7 +23,7 @@
 		"toolbarvisible" : 0,
 		"lefttoolbarpinned" : 0,
 		"toptoolbarpinned" : 0,
-		"righttoolbarpinned" : 0,
+		"righttoolbarpinned" : 2,
 		"bottomtoolbarpinned" : 0,
 		"toolbars_unpinned_last_save" : 0,
 		"tallnewobj" : 0,
@@ -937,7 +937,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 285.0, 143.0, 1174.0, 801.0 ],
+						"rect" : [ 100.0, 126.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -951,7 +951,7 @@
 						"toolbarvisible" : 0,
 						"lefttoolbarpinned" : 0,
 						"toptoolbarpinned" : 0,
-						"righttoolbarpinned" : 0,
+						"righttoolbarpinned" : 2,
 						"bottomtoolbarpinned" : 0,
 						"toolbars_unpinned_last_save" : 0,
 						"tallnewobj" : 0,
@@ -1129,7 +1129,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 304.0, 356.0, 786.0, 444.0 ],
+										"rect" : [ 119.0, 339.0, 786.0, 444.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -3183,22 +3183,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"slurtime" : [ 0.0 ],
-													"basictuning" : [ 440 ],
-													"play" : [ 0 ],
-													"mode" : [ "basic" ],
-													"pitchshift" : [ 1.0 ],
 													"formantcorrection" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"speed" : [ 1.0 ],
+													"play" : [ 0 ],
+													"pitchshiftcent" : [ 0 ],
+													"mode" : [ "basic" ],
+													"slurtime" : [ 0.0 ],
 													"originallength" : [ 0.0, "ticks" ],
 													"followglobaltempo" : [ 0 ],
-													"pitchcorrection" : [ 0 ],
-													"pitchshiftcent" : [ 0 ],
-													"originaltempo" : [ 120.0 ],
-													"speed" : [ 1.0 ],
-													"originallengthms" : [ 0.0 ],
 													"formant" : [ 1.0 ],
-													"timestretch" : [ 0 ],
-													"quality" : [ "basic" ]
+													"pitchshift" : [ 1.0 ],
+													"originaltempo" : [ 120.0 ],
+													"quality" : [ "basic" ],
+													"basictuning" : [ 440 ],
+													"pitchcorrection" : [ 0 ],
+													"timestretch" : [ 0 ]
 												}
 
 											}
@@ -4195,10 +4195,10 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
 			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
-			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ]
+			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
+			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
+			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
