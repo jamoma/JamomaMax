@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
-<vignette name="Remotely opening view panel" package="Jamoma">
+<vignette name="How to: Remotely open view panel" package="Jamoma">
 	<h1>
 	Remotely opening view panel
 	</h1>
