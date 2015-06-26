@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 339.0, 186.0, 634.0, 753.0 ],
+		"rect" : [ 526.0, 55.0, 634.0, 753.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -116,7 +116,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 339.0, 212.0, 634.0, 727.0 ],
+						"rect" : [ 526.0, 81.0, 634.0, 727.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -156,7 +156,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 64.0, 169.0, 175.0, 48.0 ],
-									"presentation_rect" : [ 73.0, 133.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Manually reset models to their init state",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -217,7 +216,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 236.0, 373.0, 175.0, 118.0 ],
+									"patching_rect" : [ 236.0, 369.0, 175.0, 118.0 ],
 									"style" : "",
 									"text" : "j.initialized provides a deferlowed notification of a model initialization.\n\nOne can also provide as argument an optional delay time.",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
