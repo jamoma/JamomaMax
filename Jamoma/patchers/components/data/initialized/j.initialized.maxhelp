@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 357.0, 97.0, 634.0, 753.0 ],
+		"rect" : [ 339.0, 186.0, 634.0, 753.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -25,7 +25,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 14,
+		"toolbars_unpinned_last_save" : 15,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -116,7 +116,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 357.0, 123.0, 634.0, 727.0 ],
+						"rect" : [ 339.0, 212.0, 634.0, 727.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -146,6 +146,38 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 12.0,
+									"id" : "obj-9",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 64.0, 169.0, 175.0, 48.0 ],
+									"presentation_rect" : [ 73.0, 133.0, 0.0, 0.0 ],
+									"style" : "",
+									"text" : "Manually reset models to their init state",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 24.0, 182.0, 29.5, 22.0 ],
+									"style" : "",
+									"text" : "init"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"border" : 0,
 									"filename" : "helpdetails.js",
 									"id" : "obj-19",
@@ -168,7 +200,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "signal", "" ],
-									"patching_rect" : [ 24.0, 286.0, 146.0, 22.0 ],
+									"patching_rect" : [ 24.0, 316.0, 146.0, 22.0 ],
 									"style" : "default",
 									"text" : "degrade~.model audioFX"
 								}
@@ -185,7 +217,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 236.0, 335.0, 175.0, 118.0 ],
+									"patching_rect" : [ 236.0, 373.0, 175.0, 118.0 ],
 									"style" : "",
 									"text" : "j.initialized provides a deferlowed notification of a model initialization.\n\nOne can also provide as argument an optional delay time.",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -200,7 +232,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 24.0, 185.0, 88.0, 22.0 ],
+									"patching_rect" : [ 24.0, 347.0, 88.0, 22.0 ],
 									"prototypename" : "Jamoma.light",
 									"style" : "",
 									"text" : "Some models",
@@ -229,7 +261,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 245.0, 132.0, 22.0 ],
+									"patching_rect" : [ 24.0, 275.0, 132.0, 22.0 ],
 									"style" : "default",
 									"text" : "mouse.model mouse.1"
 								}
@@ -266,7 +298,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 24.0, 504.0, 211.0, 20.0 ],
+									"patching_rect" : [ 24.0, 542.0, 211.0, 20.0 ],
 									"style" : "default",
 									"text" : "Wildcards can be used in notifications"
 								}
@@ -280,7 +312,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 215.0, 122.0, 22.0 ],
+									"patching_rect" : [ 24.0, 245.0, 122.0, 22.0 ],
 									"style" : "default",
 									"text" : "mouse.model mouse"
 								}
@@ -292,7 +324,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 24.0, 552.0, 116.0, 22.0 ],
+									"patching_rect" : [ 24.0, 590.0, 116.0, 22.0 ],
 									"style" : "default",
 									"text" : "print ALL @popup 1"
 								}
@@ -300,12 +332,13 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.630241, 0.279723, 0.4515, 1.0 ],
 									"id" : "obj-11",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 526.0, 77.0, 22.0 ],
+									"patching_rect" : [ 24.0, 564.0, 77.0, 22.0 ],
 									"style" : "",
 									"text" : "j.initialized /*"
 								}
@@ -317,7 +350,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 24.0, 410.0, 192.0, 22.0 ],
+									"patching_rect" : [ 24.0, 448.0, 192.0, 22.0 ],
 									"style" : "default",
 									"text" : "print /mouse_Initialized @popup 1"
 								}
@@ -325,12 +358,13 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.630241, 0.279723, 0.4515, 1.0 ],
 									"id" : "obj-4",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 379.0, 139.0, 22.0 ],
+									"patching_rect" : [ 24.0, 417.0, 139.0, 22.0 ],
 									"style" : "",
 									"text" : "j.initialized /mouse 1000"
 								}
@@ -361,6 +395,33 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-7", 0 ]
 								}
 
 							}
