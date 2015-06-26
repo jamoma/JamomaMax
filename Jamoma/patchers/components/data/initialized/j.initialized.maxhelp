@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 4,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 438.0, 94.0, 634.0, 753.0 ],
+		"rect" : [ 357.0, 97.0, 634.0, 753.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,7 +50,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -112,11 +112,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 438.0, 120.0, 634.0, 727.0 ],
+						"rect" : [ 357.0, 123.0, 634.0, 727.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -229,9 +229,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 245.0, 135.0, 22.0 ],
+									"patching_rect" : [ 24.0, 245.0, 132.0, 22.0 ],
 									"style" : "default",
-									"text" : "mouse.model /mouse.1"
+									"text" : "mouse.model mouse.1"
 								}
 
 							}
@@ -280,9 +280,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 24.0, 214.0, 125.0, 22.0 ],
+									"patching_rect" : [ 24.0, 215.0, 122.0, 22.0 ],
 									"style" : "default",
-									"text" : "mouse.model /mouse"
+									"text" : "mouse.model mouse"
 								}
 
 							}
