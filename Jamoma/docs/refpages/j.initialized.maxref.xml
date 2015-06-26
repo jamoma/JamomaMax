@@ -52,7 +52,7 @@
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="Jamoma model name" type="symbol" optional="0">
+		<objarg id="0" name="Address" type="symbol" optional="0">
 			<digest>
 				Jamoma model name to listen to initialization state
 			</digest>
@@ -60,7 +60,7 @@
 				Jamoma model name to listen to initialization state
 			</description>
 		</objarg>
-		<objarg id="0" name="Delay time" type="int" optional="1">
+		<objarg id="0" name="Time" type="int" optional="1">
 			<digest>
 				Optional delay time before sending notification bang
 			</digest>
