@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="Build Max patches using MVC principles" package="Jamoma">
+	
+	<!-- SOME METADATAS -->
+	<metadatalist>
+		<metadata name="author">Jamoma</metadata>
+		<metadata name="author">Julien Rabin</metadata>
+		<metadata name="tag">mvc</metadata>
+		<metadata name="tag">modular</metadata>
+	</metadatalist>
+	<h1>
+		Build Max patches using MVC principles
+	</h1>
+	<p>
+		Jamoma 0.6 enables MVC separation in Max through custom externals and patching guidelines for de- velopers. This page gives an overview of the MVC approach and how it is done using the Jamoma modular implementation for Max.
+		<br/>
+		<br/>
+		This page sums up parts of an extensive presentation paper <i><a href="http://jamoma.org/publications/">Model-View-Controller separation in Max using Jamoma</a></i>, written by <a href="http://www.trondlossius.no/bio">T. Lossius</a>, T. de la Hogue, <a href="http://www.baltazars.org">P. Baltazar</a>, <a href="http://74objects.com/">T. Place</a>, <a href="http://www.nathanwolek.com/about/">N. Wolek</a> and J. Rabin for the 2014 joint 40th International Computer Music Conference and 11th Sound and Music Computing Conference in Athens.
+	</p>
+	<br/>
+	<h2>
+		Concept of MVC separation
+	</h2>
+	<p>
+		<a href="http://heim.ifi.uio.no/⇠trygver/ themes/mvc/mvc-index.html">Model-View-Controller (MVC)</a> is an architecture pattern for developing interactive computer applications that breaks the application’s design into three distinct elements: 
+		<ul>
+			<li>A <i>model</i> represents a collection of data together with the methods necessary to process these data.</li> 
+			<li>The <i>view</i> provides an interface for monitoring and interacting with the model.</li>
+			<li>The <i>controller</i> is the link between the model and view, and negotiates information between them.</li>
+		</ul>
+		MVC enforces a clear separation between processes, their states, and how these are being represented to the user. This separation results in each concept being expressed in just one place, which in turn makes the code easier to write and maintain. The architecture also makes it possible to have multiple views for the same model. In this way, views can be customised and adapted dynamically based on the needs of the user at any one time, without these changes affecting the model itself. Furthermore, this separation permits the developer to completely overhaul the look and feel of the application simply by reworking the views, without requiring any changes to the models.</p>
+			
+	<h2>
+		MVC in Max using Jamoma
+	</h2>
+	<p>
+		Jamoma 0.6 for Max employs an object-oriented programming approach along side a client-server architecture in order to provide MVC separation. 
+		<ul><li>The <i>model</i> is a Max patcher that wraps a high-level entity such as a media generator or signal processor with an accompanying set of functional services</li>
+		<li>The <i>view</i> is implemented as a separate Max patcher to provide an interface for monitoring and controlling the services of one or many models, most commonly by means of a GUI.</li>
+	</ul>
+	</p>
+	
+	<bluebox>
+		<p>Jamoma does not require Max developers to develop a third patcher to act as a <i>controller</i> for models and views. Instead, controller responsibilities are mostly integrated into the various j.* externals provided by the Jamoma Modular framework.</p>
+	</bluebox>
+	<img src="images/mvc_using_jamoma.png" caption="Jamoma-based patcher">A Jamoma-based patcher</img>
+	<p>Implementing Max patchers with MVC separation using Jamoma helps address a number of real life problems experienced when working on larger applications and artistic projects in Max. Separating models, controllers and views has proven to be useful in many other programming contexts, but has previously been difficult to achieve in Max because of challenges in implementing the controller layer. Because Jamoma provides a ready-made controller layer for Max, it frees the developer to concentrate on the development of models and views.</p>
+
+</vignette>
