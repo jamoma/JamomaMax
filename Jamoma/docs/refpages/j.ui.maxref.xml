@@ -50,10 +50,21 @@
 	<methodlist>
 		<method name="(mouse)">
 			<digest>
-				Access embeded features provided by the model patcher the view currently binds to
+				Access embedded features provided by the model patcher the view currently binds to
 			</digest>
 			<description>
-				Access embeded features provided by the model patcher the view is binding to. Depending on the type of your model (audio or control), these include audio gain, mix (wet/dry), mute, bypass or mute and active control. j.ui can also provide an open button when a secondary panel view is built in your view
+				Access embedded features provided by the model patcher the view is binding to. Depending on the type of your model (audio or control), j.ui will automatically display the widgets corresponding to the available internal parameters. Models including a combination of j.in~ and/or j.out~ provide in j.ui (from left to right):
+				<ul>
+					<li>audio gain widget</li>
+					<li>wet/dry widget</li>
+					<li>mute widget</li>
+					<li>bypass widget</li>
+				</ul><br/>Models including a combination of j.in and/or j.out provide in j.ui (from left to right):
+				<ul>
+					<li>mute widget</li>
+					<li>bypass widget</li>
+				</ul>
+				j.ui also provides an open button when a secondary panel view is built in your view.
 			</description>
 		</method>
 	</methodlist>
