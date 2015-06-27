@@ -55,16 +55,16 @@
 			<description>
 				Access embedded features provided by the model patcher the view is binding to. Depending on the type of your model (audio or control), j.ui will automatically display the widgets corresponding to the available internal parameters. Models including a combination of j.in~ and/or j.out~ provide in j.ui (from left to right):
 				<ul>
-					<li>audio gain widget</li>
-					<li>wet/dry widget</li>
-					<li>mute widget</li>
-					<li>bypass widget</li>
+					<li>audio gain widget<img src="images/jui-gain.png"/></li>
+					<li>wet/dry widget<img src="images/jui-mix.png"/></li>
+					<li>mute widget<img src="images/jui-mute.png"/></li>
+					<li>bypass widget<img src="images/jui-bypass.png"/></li>
 				</ul><br/>Models including a combination of j.in and/or j.out provide in j.ui (from left to right):
 				<ul>
-					<li>mute widget</li>
-					<li>bypass widget</li>
+					<li>bypass widget<img src="images/jui-bypass.png"/></li>
+					<li>active widget<img src="images/jui-active.png"/></li>
 				</ul>
-				j.ui also provides an open button when a secondary panel view is built in your view.
+				j.ui also provides an open button when a secondary panel view is built in your view. <img src="images/jui-plus.png"/>
 			</description>
 		</method>
 	</methodlist>
