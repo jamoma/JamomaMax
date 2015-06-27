@@ -8,7 +8,7 @@
 		A GUI widget providing access to some model embedded features
 	</digest>
 	<description>
-		j.ui brings a nice GUI widget for your model's views and provides somes accesses to preset management, model in/out features.
+		j.ui brings a nice GUI widget for your model's views and provides some accesses to preset management, model in/out features.
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -19,31 +19,16 @@
 			Jamoma
 		</metadata>
 		<metadata name="tag">
-			Jamoma
+			mvc
 		</metadata>
 		<metadata name="tag">
-			Jamoma
+			gui
 		</metadata>
 		<metadata name="tag">
-			Jamoma
+			widget
 		</metadata>
 		<metadata name="tag">
-			Jamoma
-		</metadata>
-		<metadata name="tag">
-			Jamoma
-		</metadata>
-		<metadata name="tag">
-			Jamoma
-				</metadata>
-		<metadata name="tag">
-			Jamoma
-				</metadata>
-		<metadata name="tag">
-			Jamoma
-		</metadata>
-		<metadata name="tag">
-			Jamoma
+			view
 		</metadata>
 	</metadatalist>
 
@@ -51,7 +36,7 @@
 	<!--INLETS-->
 	<!--OUTLETS-->
 	<!--ARGUMENTS-->
-	<objarglist>
+	<!-- <objarglist>
 		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
 			<digest>
 				TEXT_HERE
@@ -60,15 +45,15 @@
 				TEXT_HERE
 			</description>
 		</objarg>
-	</objarglist>
+	</objarglist> -->
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="(mouse)">
 			<digest>
-				TEXT_HERE
+				Access embeded features provided by the model patcher the view currently binds to
 			</digest>
 			<description>
-				TEXT_HERE
+				Access embeded features provided by the model patcher the view is binding to. Depending on the type of your model (audio or control), these include audio gain, mix (wet/dry), mute, bypass or mute and active control. j.ui can also provide an open button when a secondary panel view is built in your view
 			</description>
 		</method>
 	</methodlist>
@@ -76,10 +61,10 @@
 	<attributelist>
 		<attribute name="bgcolor" get="1" set="1" type="float" size="4">
 			<digest>
-				TEXT_HERE
+				Background color
 			</digest>
 			<description>
-				TEXT_HERE
+				Background color. Note that j.ui is not yet compatible with Max 7 styling features
 			</description>
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
@@ -91,10 +76,10 @@
 		</attribute>
 		<attribute name="bordercolor" get="1" set="1" type="float" size="4">
 			<digest>
-				TEXT_HERE
+				Border color
 			</digest>
 			<description>
-				TEXT_HERE
+				Border color. Note that j.ui is not yet compatible with Max 7 styling features
 			</description>
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
@@ -106,10 +91,10 @@
 		</attribute>
 		<attribute name="headercolor" get="1" set="1" type="float" size="4">
 			<digest>
-				TEXT_HERE
+				Header color
 			</digest>
 			<description>
-				TEXT_HERE
+				Header color. Note that j.ui is not yet compatible with Max 7 styling features
 			</description>
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
@@ -121,10 +106,10 @@
 		</attribute>
 		<attribute name="textcolor" get="1" set="1" type="float" size="4">
 			<digest>
-				TEXT_HERE
+				Text color
 			</digest>
 			<description>
-				TEXT_HERE
+				Text color. Note that j.ui is not yet compatible with Max 7 styling features
 			</description>
 			<attributelist>
 				<attribute name="category" get="1" set="1" type="atom" size="1" value="Color" />
@@ -141,8 +126,8 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.view"/>
+		<seealso name="j.model"/>
+		<seealso name="makeamodelview" module="jamoma" type="tutorial">test text</seealso>
 	</seealsolist>
 </c74object>
