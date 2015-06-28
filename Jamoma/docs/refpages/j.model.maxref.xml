@@ -95,7 +95,7 @@
 			<description>
 				The 'preset' followed by a preset name will put a model in a state previously saved. When the preset message is followed by an integer, 'preset' message will recalled the preset stored at this index			</description>
 		</method>
-		<method name="preset:remove">
+		<method name="preset:delete">
 			<arglist>
 				<arg name="Name of preset to remove" type="list" optional="1" />
 			</arglist>
@@ -237,7 +237,7 @@
 				Opens a text editor with all current values of all parameters of the model
 			</digest>
 			<description>
-				Opens a text editor with all current values of all parameters of the model
+				Double-click object opens a text editor with all current values of all parameters of the model
 			</description>
 		</method>
 		<method name="dump">
