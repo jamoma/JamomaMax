@@ -53,18 +53,40 @@
 				Access embedded features provided by the model patcher the view currently binds to
 			</digest>
 			<description>
-				Access embedded features provided by the model patcher the view is binding to. Depending on the type of your model (audio or control), j.ui will automatically display the widgets corresponding to the available internal parameters. Models including a combination of j.in~ and/or j.out~ provide in j.ui (from left to right):
+				Access embedded features provided by the model patcher the view is binding to. <br/><br/>
 				<ul>
-					<li>audio gain widget<img src="images/jui-gain.png"/></li>
-					<li>wet/dry widget<img src="images/jui-mix.png"/></li>
-					<li>mute widget<img src="images/jui-mute.png"/></li>
-					<li>bypass widget<img src="images/jui-bypass.png"/></li>
+					<li><img src="images/jui-address.png"/><i>model address</i>: clicking the model address the view currently binds to brings a dropdown menu listing all parameters, messages and returns registered under the model address node</li>
+					<li><img src="images/jui-dropdown.png"/><i>menu widget</i>: clicking the menu arrow brings a dropdown menu giving access to preset management commands and other utilities:<ul>
+					<li><i>Open Model Reference Page</i>: selecting item sends the <m>model:reference/open</m> message</li>
+					<li><i>Open Model Help Patch</i>: selecting item sends the <m>model:help/open</m> message</li>
+					<li><i>Open Model Internal</i>: selecting item sends the <m>model:internal/open</m> message</li>
+					<li><i>Edit Current State</i>: selecting item sends the <m>preset:edit</m> message</li><br/>
+					<li><i>Load Presets File</i>: selecting item sends the <m>preset:read</m> message</li>
+					<li><i>Save Presets File</i>: selecting item sends the <m>preset:write/again</m> message</li>
+					<li><i>Save Presets File As</i>: selecting item sends the <m>preset:write</m> message</li>
+					<li><i>Edit Presets File</i>: selecting item sends the <m>preset:edit</m> message</li>
+					<li><i>Create New Preset</i>: selecting item sends the <m>preset:new</m> message</li>
+					<li><i>Update Current Preset</i>: selecting item sends the <m>preset:update</m> message</li>
+					<li><i>Delete Preset</i>: selecting item sends the <m>preset:delete</m> message</li>
+					<br/>
+					<li><i>(preset name)</i>: selecting a preset name sends the <m>preset:recall (preset name)</m> message</li>
+				</ul>
+			</li>
+			</ul>
+				Depending on the type of your model (audio or control), j.ui will automatically display the widgets corresponding to the available internal parameters. Models including a combination of j.in~ and/or j.out~ provide in j.ui (from left to right):
+				<ul>
+					<li><img src="images/jui-gain.png"/><i>audio gain widget</i>: dragging the knob sets the model's internal <at>audio/gain</at> parameter</li>
+					<li><img src="images/jui-mix.png"/><i>mix widget</i>: dragging the knob sets the model's internal <at>audio/mix</at> (wet/dry) parameter</li>
+					<li><img src="images/jui-mute.png"/><i>mute widget</i>: clicking the button toggles on or off the model's internal <at>audio/mute</at> parameter (default off)</li>
+					<li><img src="images/jui-bypass.png"/><i>bypass widget</i>: clicking the button toggles on or off the model's internal <at>audio/bypass</at> parameter (default off)</li>
 				</ul><br/>Models including a combination of j.in and/or j.out provide in j.ui (from left to right):
 				<ul>
-					<li>bypass widget<img src="images/jui-bypass.png"/></li>
-					<li>active widget<img src="images/jui-active.png"/></li>
+					<li><img src="images/jui-bypass.png"/><i>bypass widget</i>: clicking the button toggles on or off the model's internal <at>data/bypass</at> parameter (default off)</li>
+					<li><img src="images/jui-active.png"/><i>active widget</i>: clicking the button toggles on or off the model's internal <at>data/active</at> parameter (default on)</li>
 				</ul>
-				j.ui also provides an open button when a secondary panel view is built in your view. <img src="images/jui-plus.png"/>
+				j.ui also provides an <i>+</i> button when a secondary panel view is built in your view. 
+				<ul><li><img src="images/jui-plus.png"/><i>plus widget</i>: clicking the button opens panel window</li>
+			</ul>
 			</description>
 		</method>
 	</methodlist>
