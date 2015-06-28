@@ -74,7 +74,7 @@
 				TEXT_HERE
 			</description>
 		</method> -->
-		<method name="preset:store">
+		<method name="preset:new">
 			<arglist>
 				<arg name="Name of preset to store" type="list" optional="1" />
 			</arglist>
@@ -82,7 +82,7 @@
 				Store state of the model as preset
 			</digest>
 			<description>
-				Store current state of a model as a preset. First argument to the preset:store will save state under a particular name. An optionnal second argument will set a position in the list of presets. With no argument, preset:store will override the last recalled state
+				Store current state of a model as a preset. First argument to the <m>preset:new</m> message will save state under a particular name. An optionnal second argument will set a position in the list of presets. With no argument, <m>preset:new</m> will override the last recalled state
 			</description>
 		</method>
 		<method name="preset">
