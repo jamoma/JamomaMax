@@ -5,7 +5,12 @@
 	<!-- SOME METADATAS -->
 	<metadatalist>
 		<metadata name="author">Jamoma</metadata>
+		<metadata name="author">Pascal Baltazar</metadata>
+		<metadata name="author">Théo De La Hogue</metadata>
+		<metadata name="author">Trond Lossius</metadata>
+		<metadata name="author">Timothy Place</metadata>
 		<metadata name="author">Julien Rabin</metadata>
+		<metadata name="author">Nathan Wolek</metadata>
 		<metadata name="tag">mvc</metadata>
 		<metadata name="tag">modular</metadata>
 	</metadatalist>
