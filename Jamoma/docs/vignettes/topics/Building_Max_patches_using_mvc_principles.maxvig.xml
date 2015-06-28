@@ -36,13 +36,13 @@
 	</h2>
 	<p>
 		Jamoma 0.6 for Max employs an object-oriented programming approach along side a client-server architecture in order to provide MVC separation. 
-		<ul><li>The <i>model</i> is a Max patcher that wraps a high-level entity such as a media generator or signal processor with an accompanying set of functional services</li>
-		<li>The <i>view</i> is implemented as a separate Max patcher to provide an interface for monitoring and controlling the services of one or many models, most commonly by means of a GUI.</li>
+		<ul><li>The <i>model</i> is a Max patcher that wraps a high-level entity such as a media generator or signal processor with an accompanying set of functional services declared by the mean of <o>j.model</o>, <o>j.parameter</o>, <o>j.message</o> and <o>j.return</o> externals</li>
+		<li>The <i>view</i> is implemented as a separate Max patcher based on <o>j.view</o> and <o>j.remote</o> providing an interface for monitoring and controlling the services of one or many models, most commonly by means of a GUI.</li>
 	</ul>
 	</p>
 	
 	<bluebox>
-		<p>Jamoma does not require Max developers to develop a third patcher to act as a <i>controller</i> for models and views. Instead, controller responsibilities are mostly integrated into the various j.* externals provided by the Jamoma Modular framework.</p>
+		<p>Jamoma does not require Max developers to develop a third patcher to act as a <i>controller</i> for models and views. Instead, controller responsibilities are mostly integrated into the various j.* externals mentioned above provided by the Jamoma Modular framework.</p>
 	</bluebox>
 	<img src="images/mvc_using_jamoma.png" caption="Jamoma-based patcher">A Jamoma-based patcher</img>
 	<p>Implementing Max patchers with MVC separation using Jamoma helps address a number of real life problems experienced when working on larger applications and artistic projects in Max. Separating models, controllers and views has proven to be useful in many other programming contexts, but has previously been difficult to achieve in Max because of challenges in implementing the controller layer. Because Jamoma provides a ready-made controller layer for Max, it frees the developer to concentrate on the development of models and views.</p>
