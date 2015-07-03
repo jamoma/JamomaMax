@@ -345,14 +345,6 @@
 				Stepsize used when incrementing or decrementing the value using one of the messages <m>+</m>, <m>-</m>, <m>inc</m> or <m>dec</m>.
 			</description>
 		</attribute>
-		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</attribute> -->
 		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
 				Tags associated with the parameters
@@ -426,6 +418,14 @@ Stored and output value will be an integer number (<i>int</i>). Other values get
 				Current parameters value
 			</description>
 		</attribute>
+		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
