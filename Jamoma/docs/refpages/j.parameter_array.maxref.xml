@@ -5,11 +5,19 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.parameter_array" module="" category="Jamoma">
 	<digest>
-		Handling array of parameters in Jamoma model
+		Declare an array of model parameters
 	</digest>
 	<description>
-		j.parameter_array creates an arrtay of parameters in a Jamoma model
+		j.parameter_array declares an array of parameters within a model or patch. Its wraps j.parameter features in a handy external, allowing to manage dynamical sets of parameters of a same kind more easily.
 	</description>
+    <discussion>
+      The parameter is an acces point for controlling the processing of the patch. The parameter value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
+      <br/>
+      The value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.<br/>
+      <br/>
+      Additionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models.
+    </discussion>
+	
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
@@ -21,10 +29,19 @@
 		<metadata name="tag">
 			Jamoma
 		</metadata>
+		<metadata name="tag">
+			mvc
+		</metadata>
+		<metadata name="tag">
+			modular
+		</metadata>
+		<metadata name="tag">
+			array
+		</metadata>
 	</metadatalist>
 	<!--INLETS-->
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
+		<inlet id="0" type="any">
 			<digest>
 				Value of the selected instance(s)
 			</digest>
@@ -32,9 +49,9 @@
 				Value of the selected instance(s)
 			</description>
 		</inlet>
-		<inlet id="1" type="INLET_TYPE">
+		<inlet id="1" type="int">
 			<digest>
-				index
+				Index
 			</digest>
 			<description>
 				Index of the instance to send value to. (1 to max number of instance. * will send value to all instances)
@@ -43,23 +60,39 @@
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
-		<outlet id="0" type="OUTLET_TYPE">
+		<outlet id="0" type="any">
 			<digest>
-				direct: values
+				Selected instance parameter's value
 			</digest>
 			<description>
-				TEXT_HERE
+				Parameter's value. When <at>format</at> attribute is set to <i>single</i> (default) output will be the selected instance parameter's value. When <at>format</at> is set to <i>array</i>, output will be a list of all parameters' value.
+			</description>
+		</outlet>
+		<outlet id="1" type="int">
+			<digest>
+				Last updated instance number
+			</digest>
+			<description>
+				Last updated instance number			
+			</description>
+		</outlet>
+		<outlet id="2" type="none">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Dumpout
 			</description>
 		</outlet>
 	</outletlist>
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="name" type="symbol" optional="0">
 			<digest>
-				OSC name defining an array of parameters in the namespace using a bracket-based syntaxe: my/message.[2]
+				Nodes array name
 			</digest>
 			<description>
-				OSC name defining an array of parameters in the namespace using a bracket-based syntaxe: my/message.[2]
+				Nodes array name defined using a bracket-based syntaxe: my/message.[2]
 			</description>
 		</objarg>
 	</objarglist>
@@ -68,71 +101,35 @@
 		<method name="bang">
 			<arglist />
 			<digest>
-				<!-- TEXT_HERE -->
+				Outputs currently stored parameter value
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="int">
-			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="float">
-			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
-			</description>
-		</method>
-		<method name="list">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
-			<digest>
-				<!-- TEXT_HERE -->
-			</digest>
-			<description>
-				<!-- TEXT_HERE -->
+				Outputs currently stored parameter value
 			</description>
 		</method>
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="value" type="list" optional="0" />
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Store and output current parameter's value.
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				Store and output current parameter's value.
 			</description>
 		</method>
 		<method name="+">
-			<arglist>
+			<!-- <arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			</arglist> -->
 			<digest>
-				Increment the value by the amount defined by the @stepsize attribute
+				Increment the selected instance parameter's value by the amount defined by the <at>@stepsize</at> attribute
 			</digest>
 			<description>
-				Increment the value by the amount defined by the @stepsize attribute
+				Increment the selected instance parameter's value by the amount defined by the <at>@stepsize</at> attribute
 			</description>
 		</method>
 		<method name="-">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
 			<digest>
 				Decrement the value by the amount defined by the @stepsize attribute
 			</digest>
@@ -142,7 +139,7 @@
 		</method>
 		<method name="address">
 			<arglist>
-				<arg name="ARG_NAME_0" type="symbol" optional="0" />
+				<arg name="name" type="symbol" optional="0" />
 			</arglist>
 			<digest>
 				Define an array of parameters in the namespace. Ex: 'address my/message.[5]'
@@ -153,7 +150,7 @@
 		</method>
 		<method name="array">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="value" type="list" optional="0" />
 			</arglist>
 			<digest>
 				Dispatch a list of values to instances of the parameters
@@ -164,7 +161,7 @@
 		</method>
 		<method name="array/select">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="instance" type="int" optional="0" />
 			</arglist>
 			<digest>
 				This message select which instance to address
@@ -175,7 +172,7 @@
 		</method>
 		<method name="array/resize">
 			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
+				<arg name="length" type="int" optional="0" />
 			</arglist>
 			<digest>
 				Change the number of instances
@@ -185,20 +182,18 @@
 			</description>
 		</method>
 		<method name="dec">
-			<arglist>
+			<!-- <arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			</arglist> -->
 			<digest>
-				Decrement the value by the amount defined by the @stepsize attribute
+				Decrement the value by the amount defined by the <at>stepsize</at> attribute
 			</digest>
 			<description>
-				Decrement the value by the amount defined by the @stepsize attribute
+				Decrement the value by the amount defined by the <at>stepsize</at> attribute
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Dump
 			</digest>
@@ -207,25 +202,21 @@
 			</description>
 		</method>
 		<method name="inc">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
-				Increment the value by the amount defined by the @stepsize attribute
+				Increment the value by the amount defined by the <at>stepsize</at> attribute
 			</digest>
 			<description>
-				Increment the value by the amount defined by the @stepsize attribute
+				Increment the value by the amount defined by the <at>stepsize</at> attribute
 			</description>
 		</method>
 		<method name="init">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
-				Reset the selected j.parameter instance to its default state
+				Reset the selected j.parameter instance to its default value
 			</digest>
 			<description>
-				Reset the selected j.parameter instance to its default state
+				Reset the selected j.parameter instance to its default value
 			</description>
 		</method>
 	</methodlist>
@@ -242,28 +233,36 @@
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>
 		</attribute>
-		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Dataspace used for unit conversion
+				Set how values exceeding range will be clipped
 			</digest>
 			<description>
-				Set the dataspace used internally by parameters for unit conversion. For example, for a gain dataspace with a unit dB, one can set the value from a remote using midi value
+				Set how values exceeding range will be clipped. Available clipmodes are <m>none</m>, <m>low</m>, <m>high</m>, <m>both</m>, <m>wrap</m> and <m>fold</m>.
 			</description>
 		</attribute>
-		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				The dataspace unit used for remote communication
+				Dataspace used by the parameter
 			</digest>
 			<description>
-				The dataspace unit used for remote communication. Available values depend on the dataspace attribute value. See j.unit help patch for more information.
+				Dataspace used by the parameter. This enables parameter values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are <m>angle</m>, <m>color</m>, <m>distance</m>, <m>gain</m>, <m>none</m>, <m>orientation</m>, <m>position</m>, <m>speed</m>, <m>temperature</m> and <m>time</m>. The default dataspace is <m>none</m>.
+			</description>
+		</attribute>
+		<attribute name="default" get="1" set="1" type="int" size="1">
+			<digest>
+				Defaults value
+			</digest>
+			<description>
+				Defaults value output by <o>j.parameter_array</o> on model initialization. The defaults value can be overridden by the default model preset.
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Short info about the parameters
+				Node description
 			</digest>
 			<description>
-				Short info about the parameters. Used for auto-documentation of the model
+				Description of what this node controls. The description is used when auto-documenting models.
 			</description>
 		</attribute>
 		<attribute name="format" get="1" set="1" type="symbol" size="1">
@@ -271,25 +270,25 @@
 				Format of the values output: single or array
 			</digest>
 			<description>
-				Format of the values output: single or array
+				Format of the values output. When set to <i>single</i> (default), output will be the selected instance parameter's value. When set to <i>array</i>, output will be a list of all instances parameter's value.
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
 					<enumlist>
 						<enum name="single">
 							<digest>
-								TEXT_HERE
+								Output the selected instance parameter's value
 							</digest>
 							<description>
-								TEXT_HERE
+								Output the selected instance parameter's value
 							</description>
 						</enum>
 						<enum name="array">
 							<digest>
-								TEXT_HERE
+								Output the all instances parameter's value as a list
 							</digest>
 							<description>
-								TEXT_HERE
+								Output the all instances parameter's value as a list
 							</description>
 						</enum>
 					</enumlist>
@@ -299,66 +298,58 @@
 		</attribute>
 		<attribute name="priority" get="1" set="1" type="int" size="1">
 			<digest>
-				Priority of the parameter instances
+				Set priority
 			</digest>
 			<description>
-				Define priority in which parameters value will be recalled when initialization for example
+				Priority controls in what order several <o>j.parameter</o> obejcts within the same model will initialise and update in response to presets and cues.
 			</description>
 		</attribute>
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
+				Set the scheduler driving the ramp
 			</digest>
 			<description>
-				Determines the mechanism used to drive ramping to new message values. Options are: none, Max
+				Set the scheduler driving the ramp: <m>none</m> - no ramping permitted, <m>max</m> - using the Max scheduler, and <m>system</m> - using the system clock. In Max it is recommended to use <m>max</m> rather than <m>system</m>.
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Function used for ramping
+				Function to be used for ramping
 			</digest>
 			<description>
-				The mapping function determining the curve of the ramping to new message value
+				Sets what easing function to use for ramping. A wide range of easing functions as well as windowing functions are available. Please refer to the help file for further details.
 			</description>
 		</attribute>
-		<attribute name="ramp/function/parameters" get="1" set="1" type="atom" size="1">
+		<attribute name="ramp/function/parameters" get="1" set="0" type="atom" size="1">
 			<digest>
-				Optional parameters for the chosen ramping function
+				Get list of configurable parameters for the current ramp function
 			</digest>
 			<description>
-				Optional parameters for the chosen ramping function
-			</description>
-		</attribute>
-		<attribute name="ramp/status" get="1" set="1" type="int" size="1">
-			<digest>
-				Ramp status
-			</digest>
-			<description>
-				Ramp status. THe attribute will be set to 1 when ramping or to 0 when done
+				Get list of configurable parameters for the current ramp function. Certain ramp functions as specified by the <m>@ramp/function</m> attribute have additional configurable parameters that can be changed dynamically to modify the shape of the ramping curve. The message <m>ramp/function/parameters</m> cause <o>j.parameter</o> to output a list of all such parameters from the rightmost outlet, prepended by the symbol <m>ramp/function/parameters</m>. Refer to the help file for <o>j.ramp</o> for an overview of what functions have additional configurable parameters.
 			</description>
 		</attribute>
 		<attribute name="range" get="1" set="1" type="atom" size="1">
 			<digest>
-				Lower and upper value oundaries
+				The range of values
 			</digest>
 			<description>
-				Lower and upper boundaries defining the range of possible message values
-			</description>
-		</attribute>
-		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Define clipping behaviour at the boundaries of the message range
-			</digest>
-			<description>
-				Define clipping behaviour at the boundaries of the message range. Options are: none, low, high, wrap, fold
+				The expected range of values for this parameter. Depending on <m>@clipmode</m> this might be a recommended or definitive range.
 			</description>
 		</attribute>
 		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
 			<digest>
-				Filtering out repeting values
+				Filtering of value repetitions
 			</digest>
 			<description>
-				Determines whether repeated values will be filtered: when this attribute is enabled, repetitions are filtered out (like [change] object in Max)
+				Set whether to filter out value repetitions (<m>1</m>) or not (<m>0</m>).
+			</description>
+		</attribute>
+		<attribute name="stepsize" get="1" set="1" type="int" size="1">
+			<digest>
+				Step size when incrementing or decrementing the parameter value
+      </digest>
+			<description>
+				Stepsize used when incrementing or decrementing the value using one of the messages <m>+</m>, <m>-</m>, <m>inc</m> or <m>dec</m>.
 			</description>
 		</attribute>
 		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
@@ -371,19 +362,69 @@
 		</attribute> -->
 		<attribute name="tags" get="1" set="1" type="atom" size="1">
 			<digest>
-				Some optional tags
+				Tags associated with the parameters
 			</digest>
 			<description>
-				Some optional tags
+				Tags associated with the parameters. This helps documenting the parameters, and is also useful when restricting namespace searches using <o>j.namespace</o>.
 			</description>
 		</attribute>
-		<attribute name="type" get="1" set="1" type="symbol" size="1">
+		<attribute name="type" get="1" set="1" type="symbol" size="6">
 			<digest>
-				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
+				Datatype of the parameters
 			</digest>
 			<description>
-				Datatype of the parameter. Options are: decimal, integer, boolean, string, array, generic
+				Datatype of the parameters (decimal, integer, boolean, string, array, generic)
 			</description>
+			<enumlist>
+				<enum name="generic">
+					<digest>
+						Define a value of any kind
+					</digest>
+					<description>
+						Stored and output value will be of any kind (including lists combining integers, decimals and symbols)
+					</description>
+				</enum>
+				<enum name="boolean">
+					<digest>
+						Define a 0 or 1 value
+					</digest>
+					<description>
+						Stored and output value will be either 0 or 1
+					</description>
+				</enum>
+				<enum name="integer">
+					<digest>
+						Define an integer (<i>int</i>) value
+					</digest>
+					<description>
+Stored and output value will be an integer number (<i>int</i>). Other values get converted to integer					</description>
+				</enum>
+				<enum name="decimal">
+					<digest>
+						Define a decimal (<i>float</i>) value
+					</digest>
+					<description>
+						Stored and output value will be a decimal number (<i>float</i>)
+					</description>
+				</enum>
+				<enum name="array">
+					<digest>
+						Define an array of decimal (<i>float</i>) value
+					</digest>
+					<description>
+						Stored and output value will be a list of decimal numbers (<i>float</i>)
+					</description>
+				</enum>
+				<enum name="string">
+					<digest>
+						Define a string (<i>symbol</i>) value
+					</digest>
+					<description>
+						Stored and output value will be a string (<i>symbol</i>)
+					</description>
+				</enum>
+			</enumlist>
+
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
@@ -393,22 +434,6 @@
 				Current parameters value
 			</description>
 		</attribute>
-		<attribute name="default" get="1" set="1" type="int" size="1">
-			<digest>
-				Default parameters value
-			</digest>
-			<description>
-				Default parameters value. This value will be recall on initialization of the model
-			</description>
-		</attribute>
-		<attribute name="stepsize" get="1" set="1" type="int" size="1">
-			<digest>
-				increment/decrement amount
-			</digest>
-			<description>
-				Step by which the current value is being increased/decreased when a 'inc' or 'dec' message is received
-			</description>
-		</attribute>
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
@@ -416,11 +441,9 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.parameter">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.parameter_array">
-			<!-- TEXT_HERE -->
-		</seealso>
+		<seealso name="j.parameter"/>
+		<seealso name="j.message_array"/>
+		<seealso name="j.return_array"/>
+		<seealso name="j.remote_array"/>
 	</seealsolist>
 </c74object>
