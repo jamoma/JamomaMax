@@ -187,7 +187,7 @@
 				Dump
 			</digest>
 			<description>
-				Dum all attributes values
+				Dump all attributes values
 			</description>
 		</method>
 		<method name="inc">
