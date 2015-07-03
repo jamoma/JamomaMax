@@ -10,13 +10,13 @@
 	<description>
 		Enables messages to be sent to Jamoma models. The value of the message will not be stored as part of the state of the model. Apart from that, <o>j.message</o> resembles <o>j.parameter</o>. 
 	</description>
-  <discussion>    
-    <o>j.message</o> is an access point for sending messages to a model. The message value can be updated immediately, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
-    <br/>
-    User interfaces can control messages remotely. Mappings enable one message to dynamically control the value of another message. Cues can send messages to models as well.<br/>
-    <br/>
-    Additionally the message enables inter-application communication. The message is provided with a unique global OSC address, and messages can be declared on the network in order for other applications, such as i-score, to inspect and control models.
-  </discussion>
+    <discussion>    
+      <o>j.message</o> is an access point to receive messages within a model. The message value can be updated immediately from parent patcher, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
+      <br/>
+      User interfaces can control messages remotely. Mappings enable one message to dynamically control the value of another message. Cues can send messages to models as well.<br/>
+      <br/>
+      Additionally the message enables inter-application communication. The message is provided with a unique global OSC address, and messages can be declared on the network in order for other applications, such as i-score, to inspect and control models.
+    </discussion>
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
