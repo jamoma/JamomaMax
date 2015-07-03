@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 273.0, 101.0, 1156.0, 894.0 ],
+		"rect" : [ 100.0, 100.0, 1156.0, 894.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -57,7 +57,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 273.0, 127.0, 1156.0, 868.0 ],
+						"rect" : [ 100.0, 126.0, 1156.0, 868.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -489,7 +489,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 247.5, 609.5, 117.0, 67.0 ],
 									"style" : "",
-									"text" : "Addressed parameter value",
+									"text" : "Addressed returned value",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
