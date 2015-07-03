@@ -85,7 +85,7 @@
 				Output nodes array name
 			</digest>
 			<description>
-				Output nodes array name defined using a bracket-based syntaxe: my/message.[2]
+				Output nodes array name defined using a bracket-based syntaxe: buffer.[2]/read/done
 			</description>
 		</objarg>
 	</objarglist>
@@ -133,10 +133,10 @@
 				<arg name="name" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
-				Define an array of returns in the namespace. Ex: 'address buffer.[5]read/done'
+				Define an array of returns in the namespace. Ex: 'address buffer.[5]/read/done'
 			</digest>
 			<description>
-				The address message followed by an osc name containing a number of instances placed in bracket declares an array of returns in the namespace. Ex: 'address buffer.[5]read/done'
+				The address message followed by an osc name containing a number of instances placed in bracket declares an array of returns in the namespace. Ex: 'address buffer.[5]/read/done'
 			</description>
 		</method>
 		<method name="array">
