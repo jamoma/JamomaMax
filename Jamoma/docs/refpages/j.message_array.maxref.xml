@@ -9,7 +9,7 @@
 		j.message_array declares an array of input nodes in a Jamoma model. It wraps j.message features enabling models to receive control datas that can be sent from other Jamoma nodes. The message value will not be stored as part of the state of the model.
 	</description>
     <discussion>    
-      <o>j.message</o> is an acces point for sending messages to a model. The message value can be updated immediately, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
+      <o>j.message</o> is an access point for sending messages to a model. The message value can be updated immediately, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
       <br/>
       User interfaces can control messages remotely. Mappings enable one message to dynamically control the value of another message. Cues can send messages to models as well.<br/>
       <br/>
