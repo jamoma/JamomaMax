@@ -320,7 +320,7 @@
 				Tags associated with the parameter
 			</digest>
 			<description>
-				Tags associated with the parameter. This helps documenting the parameter, and is also useful when restricting namespace searches usibng <o>j.namespace</o>.
+				Tags associated with the parameter. This helps documenting the parameter, and is also useful when restricting namespace searches using <o>j.namespace</o>.
 			</description>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
