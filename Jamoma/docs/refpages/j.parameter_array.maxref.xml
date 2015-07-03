@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.parameter_array" module="" category="Jamoma">
 	<digest>
@@ -10,14 +8,13 @@
 	<description>
 		j.parameter_array declares an array of parameters within a model or patch. Its wraps j.parameter features in a handy external, allowing to manage dynamical sets of parameters of a same kind more easily.
 	</description>
-    <discussion>
+	<discussion>
       The parameter is an acces point for controlling the processing of the patch. The parameter value can be updated immediately, or by easing over time. Common types of parameters, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
       <br/>
       The value of the parameter can be stored and recalled using model presets. User interfaces can access the parameter remotely. Mappings enable one parameter dynamically control the value of another parameter. Cues can control all parameters in all models. When designing cues, the value can be queried for every single parameter in the patch.<br/>
       <br/>
       Additionally the parameter enables inter-application communication. The parameter is provided with a unique global OSC address. Parameters can also be declared on the network in order for other applications such as i-score to inspect and control models.
     </discussion>
-	
 	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
@@ -99,7 +96,7 @@
 	<!--MESSAGES-->
 	<methodlist>
 		<method name="bang">
-			<arglist />
+			<arglist/>
 			<digest>
 				Outputs currently stored parameter value
 			</digest>
@@ -109,7 +106,7 @@
 		</method>
 		<method name="anything">
 			<arglist>
-				<arg name="value" type="list" optional="0" />
+				<arg name="value" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				Store and output current parameter's value.
@@ -119,9 +116,7 @@
 			</description>
 		</method>
 		<method name="+">
-			<!-- <arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist> -->
+			<arglist/>
 			<digest>
 				Increment the selected instance parameter's value by the amount defined by the <at>@stepsize</at> attribute
 			</digest>
@@ -139,7 +134,7 @@
 		</method>
 		<method name="address">
 			<arglist>
-				<arg name="name" type="symbol" optional="0" />
+				<arg name="name" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
 				Define an array of parameters in the namespace. Ex: 'address my/message.[5]'
@@ -150,7 +145,7 @@
 		</method>
 		<method name="array">
 			<arglist>
-				<arg name="value" type="list" optional="0" />
+				<arg name="value" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				Dispatch a list of values to instances of the parameters
@@ -161,7 +156,7 @@
 		</method>
 		<method name="array/select">
 			<arglist>
-				<arg name="instance" type="int" optional="0" />
+				<arg name="instance" type="int" optional="0"/>
 			</arglist>
 			<digest>
 				This message select which instance to address
@@ -172,7 +167,7 @@
 		</method>
 		<method name="array/resize">
 			<arglist>
-				<arg name="length" type="int" optional="0" />
+				<arg name="length" type="int" optional="0"/>
 			</arglist>
 			<digest>
 				Change the number of instances
@@ -182,9 +177,7 @@
 			</description>
 		</method>
 		<method name="dec">
-			<!-- <arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist> -->
+			<arglist/>
 			<digest>
 				Decrement the value by the amount defined by the <at>stepsize</at> attribute
 			</digest>
@@ -230,7 +223,7 @@
 				Enable or disable parameter instances
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
 		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
@@ -293,7 +286,7 @@
 						</enum>
 					</enumlist>
 				</attribute>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
 			</attributelist>
 		</attribute>
 		<attribute name="priority" get="1" set="1" type="int" size="1">
@@ -424,7 +417,6 @@ Stored and output value will be an integer number (<i>int</i>). Other values get
 					</description>
 				</enum>
 			</enumlist>
-
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
@@ -437,7 +429,7 @@ Stored and output value will be an integer number (<i>int</i>). Other values get
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
