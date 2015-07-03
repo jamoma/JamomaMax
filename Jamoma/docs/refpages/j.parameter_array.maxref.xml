@@ -353,13 +353,15 @@
 				Tags associated with the parameters. This helps documenting the parameters, and is also useful when restricting namespace searches using <o>j.namespace</o>.
 			</description>
 		</attribute>
-		<attribute name="type" get="1" set="1" type="symbol" size="6">
+		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
 				Datatype of the parameters
 			</digest>
 			<description>
 				Datatype of the parameters (decimal, integer, boolean, string, array, generic)
 			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="6">
 			<enumlist>
 				<enum name="generic">
 					<digest>
@@ -409,6 +411,10 @@ Stored and output value will be an integer number (<i>int</i>). Other values get
 					</description>
 				</enum>
 			</enumlist>
+		</attribute>
+		<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
+		
+	</attributelist>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
 			<digest>
