@@ -3,7 +3,7 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.message_array" module="" category="Jamoma">
 	<digest>
-		Declare an array of input nodes in the Jamoma namespace
+		Declare an array of input nodes in a Jamoma model
 	</digest>
 	<description>
 		j.message_array declares an array of input nodes in a Jamoma model. It wraps j.message features enabling models to receive control datas that can be sent from other Jamoma nodes. The message value will not be stored as part of the state of the model.
