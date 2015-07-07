@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.message_array" module="" category="Jamoma">
 	<digest>
 		Declare an array of input nodes in a Jamoma model
@@ -90,65 +89,17 @@
 			</description>
 		</objarg>
 	</objarglist>
-	<!--MESSAGES-->
+	<!--  -->
 	<methodlist>
-		<method name="bang">
-			<arglist/>
-			<digest>
-				Outputs last received value
-			</digest>
-			<description>
-				Outputs last received value
-			</description>
-		</method>
-		<method name="anything">
-			<arglist>
-				<arg name="value" type="list" optional="0"/>
-			</arglist>
-			<digest>
-				Outputs last received value.
-			</digest>
-			<description>
-				Outputs last received value.
-			</description>
-		</method>
-		<method name="+">
-			<arglist/>
-			<digest>
-				Increment the selected instance last received value by the amount defined by the <at>@stepsize</at> attribute
-			</digest>
-			<description>
-				Increment the selected instance last received value by the amount defined by the <at>@stepsize</at> attribute
-			</description>
-		</method>
-		<method name="-">
-			<digest>
-				Decrement the selected instance last received value by the amount defined by the <at>@stepsize</at> attribute
-			</digest>
-			<description>
-				Decrement the selected instance last received value by the amount defined by the <at>@stepsize</at> attribute
-			</description>
-		</method>
-		<method name="address">
-			<arglist>
-				<arg name="name" type="symbol" optional="0"/>
-			</arglist>
-			<digest>
-				Define an array of messages in the namespace. Ex: 'address buffer.[5]/clear'
-			</digest>
-			<description>
-				The address message followed by an osc name containing a number of instances placed in bracket declares an array of returns in the namespace. Ex: 'address buffer.[5]/clear'
-			</description>
-		</method>
 		<method name="array">
 			<arglist>
 				<arg name="value" type="list" optional="0"/>
 			</arglist>
 			<digest>
-				Dispatch a list of values to every instance of the messages
+				Dispatch a list of values to instances of the returns
 			</digest>
 			<description>
-				Dispatch a list of values to every instance of the messages
+				Dispatch a list of values to instances of the returns
 			</description>
 		</method>
 		<method name="array/select">
@@ -156,10 +107,10 @@
 				<arg name="instance" type="int" optional="0"/>
 			</arglist>
 			<digest>
-				Select which instance to address
+				This message select which instance to address
 			</digest>
 			<description>
-				This message selects which j.message_array's instance to address
+				This message select which j.return_array's instance to address
 			</description>
 		</method>
 		<method name="array/resize">
@@ -173,270 +124,312 @@
 				Change the number of instances
 			</description>
 		</method>
-		<method name="dec">
+		<!--Common methods are shared with j.parameter, j.message, j.return and _array version. Please copy paste any change -->
+		<method name="bang">
 			<arglist/>
 			<digest>
-				Decrement the value by the amount defined by the <at>stepsize</at> attribute
+				Output current value
 			</digest>
 			<description>
-				Decrement the selected instance last received value by the amount defined by the <at>@stepsize</at> attribute
+				A bang at leftmost inlet outputs its current value
+			</description>
+		</method>
+		<method name="int">
+			<digest>
+				Set and output value
+			</digest>
+			<description>
+				An int at leftmost inlet sets and outputs the value. Depending on the <at>@type</at> attribute, the value might get converted into a float value if the <at>@type</at> attribute is <m>decimal</m> or <m>array</m> or into a string if the <at>@type</at> attribute is <m>string</m>
+			</description>
+		</method>
+		<method name="float">
+			<digest>
+				Set and output value
+			</digest>
+			<description>
+				A float at leftmost inlet sets and outputs the value. Depending on the <at>@type</at> attribute, the value might get converted into a int value if the <at>@type</at> attribute is <m>integer</m> or into a string if the <at>@type</at> attribute is <m>string</m>
+			</description>
+		</method>
+		<method name="list">
+			<!-- <arglist>
+        <arg name="input" optional="0" type="list"/>
+			<arg name="ramp" type="atom"><description>A pair blabla</description></arg>
+			<arg name="unit" type="atom"><description>A list with a unit name</description></arg>
+			</arglist> -->
+			<digest>
+				Set and output value
+			</digest>
+			<description>
+				A list at the leftmost inlet sets and outputs the value. If the <at>@type</at> is <m>decimal</m>, <m>integer</m> or <m>string</m>, only the first list member will be used to set the value, and the type of this list member might be converted to fit the specified <at>@type</at> of the parameter<br/>
+        <br/>
+        If the <at>@type</at> attribute is <m>decimal</m>, <m>integer</m> or <m>array</m> and ramping is enabled (as specified by <at>@ramp/funcion</at> and <at>@ramp/drive</at>), the two last list members can be used to request a ramp over time to the new value. If so, the second last list member should be the symbol <m>ramp</m> and the last list member specifies the desired ramp time in milliseconds<br/>
+        <br/>
+        If the <at>@type</at> is <m>decimal</m>, <m>integer</m> or <m>array</m> and a dataspace is used (as specified by <at>@dataspace</at> and <at>@unit</at>), the new value can be set using alternative units. In this case the unit of new value is provided immediately following the numerical value, as either the last list member or as thre third last list member if a ramp is also being requested. If an alternative unit is requested as well as a ramp, the ramping will happen according to the dataspace unit being used temporarily
+			</description>
+		</method>
+		<method name="address">
+			<arglist>
+				<arg name="address" type="symbol" optional="0"/>
+			</arglist>
+			<digest>
+				Set an array of node names
+			</digest>
+			<description>
+				The message <m>address</m> followed by a symbol containing a number of instances placed in bracket (ie. buffer.[5]/clear) sets the name of the nodes. This replaces the names provided initially as an argument to the object and allows to create nodes dynamically
+			</description>
+		</method>
+		<method name="+">
+			<arglist>
+				<arg name="number of steps" optional="1" type="int"/>
+			</arglist>
+			<digest>
+				Increment the current value
+			</digest>
+			<description>
+				The <m>+</m> message increments the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to increase the value by (default <m>1</m>)
+			</description>
+		</method>
+		<method name="-">
+			<arglist>
+				<arg name="number of steps" optional="1" type="int"/>
+			</arglist>
+			<digest>
+				Decrement the current value
+			</digest>
+			<description>
+				The <m>-</m> message decrements the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to decrease the value by (default <m>1</m>)
+			</description>
+		</method>
+		<method name="dec">
+			<arglist>
+				<arg name="number of steps" optional="1" type="int"/>
+			</arglist>
+			<digest>
+				Decrement the current value
+			</digest>
+			<description>
+				The <m>dec</m> message decrements the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to decrease the value by (default <m>1</m>)
 			</description>
 		</method>
 		<method name="dump">
 			<arglist/>
 			<digest>
-				Dump
+				Dump all attribute settings to rightmost outlet
 			</digest>
 			<description>
-				Dump all attributes values
+				The message <m>dump</m> outputs all attribute settings to rightmost outlet
 			</description>
 		</method>
 		<method name="inc">
-			<arglist/>
+			<arglist>
+				<arg name="number of steps" optional="1" type="int"/>
+			</arglist>
 			<digest>
-				Increment the value by the amount defined by the <at>stepsize</at> attribute
+				Increment the current value
 			</digest>
 			<description>
-				Increment the selected instance last received value by the amount defined by the <at>@stepsize</at> attribute
+				The <m>inc</m> message increments the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to increase the value by (default <m>1</m>)
 			</description>
 		</method>
 		<method name="init">
 			<arglist/>
 			<digest>
-				Reset the selected j.message instance to its default value
+				Reset to default value
 			</digest>
 			<description>
-				Reset the selected j.message instance to its default value
+				The message <m>init</m> sent to the leftmost inlet reset the current value to the value defined by the <at>@default</at> attribute
+			</description>
+		</method>
+		<method name="anything">
+			<arglist>
+				<arg name="input" optional="0" type="list"/>
+			</arglist>
+			<digest>
+				If the symbol equals the name of a setable parameters for the current ramp function, the value for that parameter can be updated. Else the message is interpreted as a new value for <o>j.parameter</o>. Depending on the <m>@type</m> it might be converted to one or more decimals (<m>@type decimal</m> or <m>array</m>) or an integer (<m>@type integer</m>).
+			</digest>
+			<description>
+				<!-- TEXT_HERE -->
 			</description>
 		</method>
 	</methodlist>
-	<!--ATTRIBUTES-->
-	<attributelist>
-		<attribute name="active" get="1" set="1" type="int" size="1">
-			<digest>
-				Enable or disable messages instances
-			</digest>
-			<description>
-				Enable or disable messages instances
-			</description>
-			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
-			</attributelist>
-		</attribute>
-		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Set how values exceeding range will be clipped
-			</digest>
-			<description>
-				Set how values exceeding range will be clipped. Available clipmodes are <m>none</m>, <m>low</m>, <m>high</m>, <m>both</m>, <m>wrap</m> and <m>fold</m>.
-			</description>
-		</attribute>
-		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Dataspace used by the messages
-			</digest>
-			<description>
-				Dataspace used by the messages. This enables received values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are <m>angle</m>, <m>color</m>, <m>distance</m>, <m>gain</m>, <m>none</m>, <m>orientation</m>, <m>position</m>, <m>speed</m>, <m>temperature</m> and <m>time</m>. The default dataspace is <m>none</m>.
-			</description>
-		</attribute>
-		<attribute name="default" get="1" set="1" type="int" size="1">
-			<digest>
-				Defaults value
-			</digest>
-			<description>
-				Defaults value of <o>j.message_array</o>. 
-			</description>
-		</attribute>
-		<attribute name="description" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Input node description
-			</digest>
-			<description>
-				Description of what this input node receives. The description is used when auto-documenting models.
-			</description>
-		</attribute>
-		<attribute name="format" get="1" set="1" type="symbol" size="1">
-			<digest>
+<?xml version="1.0"?>
+<attributelist>
+	<attribute name="format" get="1" set="1" type="symbol" size="1">
+		<digest>
 				Format of the values output: single or array
 			</digest>
-			<description>
+		<description>
 				Format of the output values. When set to <i>single</i> (default), output will be the selected instance received value. When set to <i>array</i>, output will be a list of all instances received value.
 			</description>
-			<attributelist>
-				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
-					<enumlist>
-						<enum name="single">
-							<digest>
+		<attributelist>
+			<attribute name="enumvals" get="1" set="1" type="atom" size="2">
+				<enumlist>
+					<enum name="single">
+						<digest>
 								Output the selected instance messages value
 							</digest>
-							<description>
+						<description>
 								Output the selected instance messages value
 							</description>
-						</enum>
-						<enum name="array">
-							<digest>
+					</enum>
+					<enum name="array">
+						<digest>
 								Output the all instances messages value as a list
 							</digest>
-							<description>
+						<description>
 								Output the all instances messages value as a list
 							</description>
-						</enum>
-					</enumlist>
-				</attribute>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
-			</attributelist>
-		</attribute>
-		<!-- <attribute name="priority" get="1" set="1" type="int" size="1">
-			<digest>
+					</enum>
+				</enumlist>
+			</attribute>
+			<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
+		</attributelist>
+	</attribute>
+	<!--Common attributes are shared with j.parameter, j.message, j.return and _array version. Please copy paste any change -->
+	<attribute name="active" get="1" set="1" type="int" size="1">
+		<digest>
+				Enable node
+			</digest>
+		<description>
+				The <at>@active</at> attribute allows to enable (default: 1) or disable a node
+			</description>
+		<attributelist>
+			<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
+		</attributelist>
+	</attribute>
+	<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
+		<digest>
+				Set how values exceeding range will be clipped
+			</digest>
+		<description>
+				The <at>@clipmode</at> attribute defines how values exceeding range will be clipped. Available clipmodes are:
+				<ul><li><m>none</m>: when set tot none (default), exceeding values will be left untouched</li><li><m>low</m>: when set to <m>low</m>, values exceeding the lower bound will be clipped. Values exceeding the upper bound will be left untouched</li><li><m>high</m>: when set to <m>high</m>, values exceeding the upper bound will be clipped. Values exceeding the lower bound will be left untouched</li><li><m>both</m>: when set to <m>both</m>, values exceeding lower or upper bounds will be clipped</li><li><m>wrap</m>: when set to <m>wrap</m>, values exceeding lower or upper bound will wrap around the opposite bound</li><li><m>fold</m>: when set to <m>fold</m>, values exceeding lower or upper bound will fold back within the defined range</li></ul>
+			</description>
+	</attribute>
+	<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
+		<digest>
+				Dataspace used by this node
+			</digest>
+		<description>
+				The <at>@dataspace</at> attribute defines a <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> used by this node. This enables values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
+				<ul><li>none (default)</li><li><m>angle</m></li><li><m>color</m></li><li><m>distance</m></li><li><m>gain</m></li><li><m>orientation</m></li><li><m>position</m></li><li><m>speed</m></li><li><m>temperature</m></li><li><m>time</m></li></ul>
+			</description>
+	</attribute>
+	<attribute name="default" get="1" set="1" type="int" size="1">
+		<digest>
+				Default value
+			</digest>
+		<description>
+				The <at>@default</at> attribute sets the value to output at the leftmost outlet on model initialization. The default value can be overridden by the default model preset
+			</description>
+	</attribute>
+	<attribute name="description" get="1" set="1" type="symbol" size="1">
+		<digest>
+				Node description
+			</digest>
+		<description>
+				The <at>@description</at> attribute allows to associate a comment describing what this node controls. The description is used when auto-documenting models.
+			</description>
+	</attribute>
+	<attribute name="priority" get="1" set="1" type="int" size="1">
+		<digest>
 				Set priority
 			</digest>
-			<description>
-				Priority controls in what order several <o>j.parameter</o> obejcts within the same model will initialise and update in response to presets and cues.
+		<description>
+				The <at>@priority</at> attribute controls in what order several values of a state of a Jamoma model will get sent on model initialization or when recalling a preset or cue
 			</description>
-		</attribute> -->
-		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Set the scheduler driving the ramp
+	</attribute>
+	<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
+		<digest>
+				Scheduler driving the ramp
 			</digest>
-			<description>
-				Set the scheduler driving the ramp: <m>none</m> - no ramping permitted, <m>max</m> - using the Max scheduler, and <m>system</m> - using the system clock. In Max it is recommended to use <m>max</m> rather than <m>system</m>.
+		<description>
+				The <at>@ramp/drive</at> attribute defines the scheduler driving the ramp. Available options are:
+				<ul><li><m>none</m> (default):  no ramping permitted</li><li><m>max</m>: using the Max scheduler</li><li><m>system</m>: using the system clock</li></ul><i>Note that in Max, it is recommended to use <m>max</m> rather than <m>system</m></i>.
 			</description>
-		</attribute>
-		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Function to be used for ramping
+	</attribute>
+	<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
+		<digest>
+				Ramp function
 			</digest>
-			<description>
-				Sets what easing function to use for ramping. A wide range of easing functions as well as windowing functions are available. Please refer to the help file for further details.
+		<description>
+				The <at>@ramp/function</at> defines an easing function used for ramping. A wide range of easing functions as well as windowing functions are available. Please refer to the help file for further details
 			</description>
-		</attribute>
-		<attribute name="ramp/function/parameters" get="1" set="0" type="atom" size="1">
-			<digest>
-				Get list of configurable parameters for the current ramp function
+	</attribute>
+	<attribute name="ramp/function/parameters" get="1" set="0" type="atom" size="1">
+		<digest>
+				Configurable parameters for the current ramp function
 			</digest>
-			<description>
-				Get list of configurable parameters for the current ramp function. Certain ramp functions as specified by the <m>@ramp/function</m> attribute have additional configurable parameters that can be changed dynamically to modify the shape of the ramping curve. The message <m>ramp/function/parameters</m> cause <o>j.message_array</o> to output a list of all such parameters from the rightmost outlet, prepended by the symbol <m>ramp/function/parameters</m>. Refer to the help file for <o>j.ramp</o> for an overview of what functions have additional configurable parameters.
+		<description>
+				The <at>@ramp/function/parameters</at> is a read-only attribute listing all configurable parameters for the current ramp function. Certain ramp functions as specified by the <m>@ramp/function</m> attribute have additional configurable parameters that can be changed dynamically to modify the shape of the ramping curve. The message <m>ramp/function/parameters</m> cause <o>j.parameter</o>, <o>j.message</o> and <o>j.return</o> to output a list of all such parameters from the rightmost outlet, prepended by the symbol <m>ramp/function/parameters</m>. Refer to the help file for <o>j.ramp</o> for an overview of what functions have additional configurable parameters
 			</description>
-		</attribute>
-		<attribute name="range" get="1" set="1" type="atom" size="1">
-			<digest>
-				The range of values
+	</attribute>
+	<attribute name="ramp/status" get="1" set="0" type="int" size="1">
+		<digest>
+				Ramp status
 			</digest>
-			<description>
-				The expected range of values for this message. Depending on <m>@clipmode</m> this might be a recommended or definitive range.
+		<description>
+				The <at>@ramp/status</at> attribute is a read-only attribute that will be set to <m>1</m> when value is currently performing a ramp, and changed to <m>0</m> when done
 			</description>
-		</attribute>
-		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
-			<digest>
-				Filtering of value repetitions
+	</attribute>
+	<attribute name="range" get="1" set="1" type="list" size="2">
+		<digest>
+				Value range
 			</digest>
-			<description>
-				Set whether to filter out value repetitions (<m>1</m>) or not (<m>0</m>).
+		<description>
+				The <at>@range</at> attribute defines the expected range of possible values. Depending on the <at>@clipmode</at> attribute, this might be a recommended or definitive range.
 			</description>
-		</attribute>
-		<attribute name="stepsize" get="1" set="1" type="int" size="1">
-			<digest>
-				Step size when incrementing or decrementing the received value
+	</attribute>
+	<attribute name="repetitions/filter" get="1" set="1" type="boolean" size="1">
+		<digest>
+				Filter out value repetitions
+			</digest>
+		<description>
+				The <at>@repetitions/filter</at> attribute defines whether repetited values will be filtered out or not (default)
+			</description>
+	</attribute>
+	<attribute name="stepsize" get="1" set="1" type="int" size="1">
+		<digest>
+				Step size when incrementing or decrementing value
       </digest>
-			<description>
-				Stepsize used when incrementing or decrementing the received value using one of the messages <m>+</m>, <m>-</m>, <m>inc</m> or <m>dec</m>.
+		<description>
+				The <at>@stepsize</at> attribute defines a step value used when incrementing or decrementing the value using one of the messages <m>+</m>, <m>-</m>, <m>inc</m> or <m>dec</m>
 			</description>
-		</attribute>
-		<attribute name="tags" get="1" set="1" type="atom" size="1">
-			<digest>
-				Tags associated with the returns
+	</attribute>
+	<attribute name="tags" get="1" set="1" type="atom" size="1">
+		<digest>
+				Tags associated with this node
 			</digest>
-			<description>
-				Tags associated with the returns. This helps documenting the messages, and is also useful when restricting namespace searches using <o>j.namespace</o>.
+		<description>
+				The <at>@tags</at> attribute allows to associate a variable number of tags for this node. This helps documenting the parameter, and is also useful when restricting namespace searches using <o>j.namespace</o>.
 			</description>
-		</attribute>
-		<attribute name="type" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Datatype of the messages
+	</attribute>
+	<attribute name="type" get="1" set="1" type="symbol" size="1">
+		<digest>
+				Value type
 			</digest>
-			<description>
-				Datatype of the messages (decimal, integer, boolean, string, array, generic)
+		<description>
+				The <at>@type</at> attribute define the type of the value. Possible types are:
+				<ul><li><m>none</m> (j.message and j.return only)</li><li><m>generic</m></li><li><m>boolean</m></li><li><m>decimal</m></li><li><m>integer</m></li><li><m>array</m></li><li><m>string</m></li></ul>
 			</description>
-			<attributelist>
-				<attribute name="enumvals" get="1" set="1" type="atom" size="7">
-					<enumlist>
-						<enum name="none">
-							<digest>
-						Define a bang value
-					</digest>
-							<description>
-						Received value will be a bang
-					</description>
-						</enum>
-						<enum name="generic">
-							<digest>
-						Define a value of any kind
-					</digest>
-							<description>
-						Received value will be of any kind (including lists combining integers, decimals and symbols)
-					</description>
-						</enum>
-						<enum name="boolean">
-							<digest>
-						Define a 0 or 1 value
-					</digest>
-							<description>
-						Received value will be either 0 or 1
-					</description>
-						</enum>
-						<enum name="integer">
-							<digest>
-						Define an integer (<i>int</i>) value
-					</digest>
-							<description>
-received value will be an integer number (<i>int</i>). Other values get converted to integer					</description>
-						</enum>
-						<enum name="decimal">
-							<digest>
-						Define a decimal (<i>float</i>) value
-					</digest>
-							<description>
-						Received value will be a decimal number (<i>float</i>)
-					</description>
-						</enum>
-						<enum name="array">
-							<digest>
-						Define an array of decimal (<i>float</i>) value
-					</digest>
-							<description>
-						Received value will be a list of decimal numbers (<i>float</i>)
-					</description>
-						</enum>
-						<enum name="string">
-							<digest>
-						Define a string (<i>symbol</i>) value
-					</digest>
-							<description>
-						Received value will be a string (<i>symbol</i>)
-					</description>
-						</enum>
-					</enumlist>
-				</attribute>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
-			</attributelist>
-		</attribute>
-		<attribute name="value" get="1" set="1" type="int" size="1">
-			<digest>
-				Last received value
+	</attribute>
+	<attribute name="unit" get="1" set="1" type="symbol" size="1">
+		<digest>
+				unit used by the node
 			</digest>
-			<description>
-				Last received value
+		<description>
+				The <at>@unit</at> attribute defines the <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> unit used by this node. Values will get output according to this unit
 			</description>
-		</attribute>
-		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
-			<digest>
-				TEXT_HERE
+	</attribute>
+	<attribute name="value" get="1" set="1" type="int" size="1">
+		<digest>
+				Current value
 			</digest>
-			<description>
-				TEXT_HERE
+		<description>
+				Current node value
 			</description>
-		</attribute> -->
-	</attributelist>
+	</attribute>
+</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
 		<example caption="" img=""/>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.message" module="" category="Jamoma">
 	<digest>
@@ -10,14 +8,12 @@
 	<description>
 		Enables messages to be sent to Jamoma models. The value of the message will not be stored as part of the state of the model. Apart from that, <o>j.message</o> resembles <o>j.parameter</o>. 
 	</description>
-    <discussion>    
-      <o>j.message</o> is an access point to receive messages within a model. The message value can be updated immediately from parent patcher, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
+	<discussion><o>j.message</o> is an access point to receive messages within a model. The message value can be updated immediately from parent patcher, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
       <br/>
       User interfaces can control messages remotely. Mappings enable one message to dynamically control the value of another message. Cues can send messages to models as well.<br/>
       <br/>
       Additionally the message enables inter-application communication. The message is provided with a unique global OSC address, and messages can be declared on the network in order for other applications, such as i-score, to inspect and control models.
     </discussion>
-	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -32,7 +28,6 @@
 			Jamoma
 		</metadata>
 	</metadatalist>
-	<!--INLETS-->
 	<inletlist>
 		<inlet id="0" type="any">
 			<digest>
@@ -43,7 +38,6 @@
 			</description>
 		</inlet>
 	</inletlist>
-	<!--OUTLETS-->
 	<outletlist>
 		<outlet id="0" type="any">
 			<digest>
@@ -54,164 +48,157 @@
 			</description>
 		</outlet>
 	</outletlist>
-	<!--ARGUMENTS-->
+	<!--These are shared with j.parameter, j.message, j.return and _array version. Please copy paste any change -->
 	<objarglist>
-    <objarg name="message name" optional="0" type="symbol">
-		<!-- ><objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0"> -->
+		<objarg name="node name" optional="0" type="symbol">
 			<digest>
-				Node name
+				Name in Jamoma namespace
 			</digest>
 			<description>
-				Node name.  This is obligatory, and each message within the model must have a unique name.
+				j.parameter requires an argument defining a node name in Jamoma namespace.  This is obligatory, and each <o>j.parameter</o>, <o>j.message</o> and <o>j.return</o> within a Jamoma model must have a unique name
 			</description>
 		</objarg>
 	</objarglist>
-	<!--MESSAGES-->
+	<!--These are shared with j.parameter, j.message, j.return and _array version. Please copy paste any change -->
 	<methodlist>
 		<method name="bang">
-			<arglist />
+			<arglist/>
 			<digest>
-				Outputs currently stored message value.
+				Output current value
 			</digest>
 			<description>
-				Outputs currently stored message value. If the <m>@type</m> is <m>none</m>, a bang will be sent out.
+				A bang at leftmost inlet outputs its current value
 			</description>
 		</method>
 		<method name="int">
-			<arglist>
-        <arg name="input" optional="0" type="int" />
-			</arglist>
 			<digest>
-				Set and output message value
+				Set and output value
 			</digest>
 			<description>
-				Set and output message value. Depending on the @type, the value might get converted to a float (<m>@type decimal</m> or <m>array</m>) value or a string (<m>@type string</m>). If the <m>@type</m> is <m>none</m>, a bang is sent out.
+				An int at leftmost inlet sets and outputs the value. Depending on the <at>@type</at> attribute, the value might get converted into a float value if the <at>@type</at> attribute is <m>decimal</m> or <m>array</m> or into a string if the <at>@type</at> attribute is <m>string</m>
 			</description>
 		</method>
 		<method name="float">
-			<arglist>
-        <arg name="input" optional="0" type="float" />
-			</arglist>
 			<digest>
-				Set and output message value
+				Set and output value
 			</digest>
 			<description>
-				Set and output message value. Depending on the @type, the value might get converted to an integer (<m>@type integer</m>) value or a string (<m>@type string</m>). If the <m>@type</m> is <m>none</m>, a bang is sent out.
+				A float at leftmost inlet sets and outputs the value. Depending on the <at>@type</at> attribute, the value might get converted into a int value if the <at>@type</at> attribute is <m>integer</m> or into a string if the <at>@type</at> attribute is <m>string</m>
 			</description>
 		</method>
 		<method name="list">
-			<arglist>
-        <arg name="input" optional="0" type="list" />
-			</arglist>
+			<!-- <arglist>
+        <arg name="input" optional="0" type="list"/>
+			<arg name="ramp" type="atom"><description>A pair blabla</description></arg>
+			<arg name="unit" type="atom"><description>A list with a unit name</description></arg>
+			</arglist> -->
 			<digest>
-				Set and output message value
+				Set and output value
 			</digest>
 			<description>
-				Set and output message value. If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>string</m>, only the first list member will be used to set the value, and the type of this list member might be converted to fit the specified <m>@type</m> of the message.<br/>
+				A list at the leftmost inlet sets and outputs the value. If the <at>@type</at> is <m>decimal</m>, <m>integer</m> or <m>string</m>, only the first list member will be used to set the value, and the type of this list member might be converted to fit the specified <at>@type</at> of the parameter<br/>
         <br/>
-        If the <m>@type</m> is <m>none</m>, a bang is sent out.<br/>
+        If the <at>@type</at> attribute is <m>decimal</m>, <m>integer</m> or <m>array</m> and ramping is enabled (as specified by <at>@ramp/funcion</at> and <at>@ramp/drive</at>), the two last list members can be used to request a ramp over time to the new value. If so, the second last list member should be the symbol <m>ramp</m> and the last list member specifies the desired ramp time in milliseconds<br/>
         <br/>
-        If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>array</m> and ramping is enabled (as specified by <m>@ramp/funcion</m> and <m>@ramp/drive</m>), the two last list members can be used to request a ramp over time to the new value. If so, the second last list member should be the symbol <m>ramp</m> and the last list member specifies the desired ramp time in milliseconds.<br/>
-        <br/>
-        If the <m>@type</m> is <m>decimal</m>, <m>integer</m> or <m>array</m> and a dataspace is used (as specifed by <m>@dataspace</m> and <m>@unit</m>), the new value can be set using alternative units. In this case the unit of new value is provided immedeately following the numerical value, as either the last list member or as the third last list member if a ramp is also being requested. If an alternative unit is requested as well as a ramp, the ramping will happen according to the dataspace unit being used temporarily.
+        If the <at>@type</at> is <m>decimal</m>, <m>integer</m> or <m>array</m> and a dataspace is used (as specified by <at>@dataspace</at> and <at>@unit</at>), the new value can be set using alternative units. In this case the unit of new value is provided immediately following the numerical value, as either the last list member or as thre third last list member if a ramp is also being requested. If an alternative unit is requested as well as a ramp, the ramping will happen according to the dataspace unit being used temporarily
 			</description>
 		</method>
 		<method name="address">
 			<arglist>
-				<arg name="address" type="symbol" optional="0" />
+				<arg name="address" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
-				Set/change node name
+				Set node name
 			</digest>
 			<description>
-				Set/change the name of the node. This replaces the name provided initially as an argument to the object.
+				The message <m>address</m> followed by a symbol sets the name of the node. This replaces the name provided initially as an argument to the object and allows to create nodes dynamically
 			</description>
 		</method>
 		<method name="+">
 			<arglist>
-				<arg name="number of steps" optional="1" type="int" />
+				<arg name="number of steps" optional="1" type="int"/>
 			</arglist>
 			<digest>
-				Stepwise increment the message value
+				Increment the current value
 			</digest>
 			<description>
-				Stepwise increment the message value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
+				The <m>+</m> message increments the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to increase the value by (default <m>1</m>)
 			</description>
 		</method>
 		<method name="-">
 			<arglist>
-				<arg name="number of steps" optional="1" type="int" />
+				<arg name="number of steps" optional="1" type="int"/>
 			</arglist>
 			<digest>
-				Stepwise decrement the message value
+				Decrement the current value
 			</digest>
 			<description>
-				Stepwise decrement the message value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
+				The <m>-</m> message decrements the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to decrease the value by (default <m>1</m>)
 			</description>
 		</method>
 		<method name="dec">
 			<arglist>
-				<arg name="number of steps" optional="1" type="int" />
+				<arg name="number of steps" optional="1" type="int"/>
 			</arglist>
 			<digest>
-				Stepwise decrement the message value
+				Decrement the current value
 			</digest>
 			<description>
-				Stepwise decrement the message value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to decrease the value by. The default is <m>1</m>.
+				The <m>dec</m> message decrements the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to decrease the value by (default <m>1</m>)
 			</description>
 		</method>
 		<method name="dump">
-			<arglist />
+			<arglist/>
 			<digest>
 				Dump all attribute settings to rightmost outlet
 			</digest>
 			<description>
-				Dump all attribute settings to rightmost outlet.
+				The message <m>dump</m> outputs all attribute settings to rightmost outlet
 			</description>
 		</method>
 		<method name="inc">
 			<arglist>
-				<arg name="number of steps" optional="1" type="int" />
+				<arg name="number of steps" optional="1" type="int"/>
 			</arglist>
 			<digest>
-				Stepwise increment the message value
+				Increment the current value
 			</digest>
 			<description>
-				Stepwise increment the message value. The step size is controlled by the <m>@stepsize</m> attribute. An integer argument to the message spesifies how many steps to increase the value by. The default is <m>1</m>.
+				The <m>inc</m> message increments the current value by the amount defined using the <at>@stepsize</at> attribute. An optional integer argument to the message specifies how many steps to increase the value by (default <m>1</m>)
 			</description>
 		</method>
 		<method name="init">
-			<arglist />
+			<arglist/>
 			<digest>
-				Re-initialise the message
+				Reset to default value
 			</digest>
 			<description>
-				Re-initialise the message.
+				The message <m>init</m> sent to the leftmost inlet reset the current value to the value defined by the <at>@default</at> attribute
 			</description>
 		</method>
-    <method name="anything">
+		<method name="anything">
 			<arglist>
-				<arg name="input" optional="0" type="list" />
+				<arg name="input" optional="0" type="list"/>
 			</arglist>
 			<digest>
-				If the symbol equals the name of a setable parameter for the current ramp function, the value for that parameter can be updated. Else the message is interpreted as a new value for <o>j.message</o>. Depending on the <m>@type</m> it might be converted to one or more decimals (<m>@type decimal</m> or <m>array</m>), an integer (<m>@type integer</m>) or a bang (<m>@type none</m>).
+				If the symbol equals the name of a setable parameters for the current ramp function, the value for that parameter can be updated. Else the message is interpreted as a new value for <o>j.parameter</o>. Depending on the <m>@type</m> it might be converted to one or more decimals (<m>@type decimal</m> or <m>array</m>) or an integer (<m>@type integer</m>).
 			</digest>
 			<description>
 				<!-- TEXT_HERE -->
 			</description>
 		</method>
 	</methodlist>
-	<!--ATTRIBUTES-->
+	<!--These are shared with j.parameter, j.message, j.return and _array version. Please copy paste any change -->
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
-				Enable message
+				Enable node
 			</digest>
 			<description>
-				Enable message
+				The <at>@active</at> attribute allows to enable (default: 1) or disable a node
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
 		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
@@ -219,15 +206,17 @@
 				Set how values exceeding range will be clipped
 			</digest>
 			<description>
-				Set how values exceeding range will be clipped. Available clipmodes are <m>none</m>, <m>low</m>, <m>high</m>, <m>both</m>, <m>wrap</m> and <m>fold</m>.
+				The <at>@clipmode</at> attribute defines how values exceeding range will be clipped. Available clipmodes are:
+				<ul><li><m>none</m>: when set tot none (default), exceeding values will be left untouched</li><li><m>low</m>: when set to <m>low</m>, values exceeding the lower bound will be clipped. Values exceeding the upper bound will be left untouched</li><li><m>high</m>: when set to <m>high</m>, values exceeding the upper bound will be clipped. Values exceeding the lower bound will be left untouched</li><li><m>both</m>: when set to <m>both</m>, values exceeding lower or upper bounds will be clipped</li><li><m>wrap</m>: when set to <m>wrap</m>, values exceeding lower or upper bound will wrap around the opposite bound</li><li><m>fold</m>: when set to <m>fold</m>, values exceeding lower or upper bound will fold back within the defined range</li></ul>
 			</description>
 		</attribute>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Dataspace used by the message
+				Dataspace used by this node
 			</digest>
 			<description>
-				Dataspace used by the message. This enables message values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are <m>angle</m>, <m>color</m>, <m>distance</m>, <m>gain</m>, <m>none</m>, <m>orientation</m>, <m>position</m>, <m>speed</m>, <m>temperature</m> and <m>time</m>. The default dataspace is <m>none</m>.
+				The <at>@dataspace</at> attribute defines a <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> used by this node. This enables values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
+				<ul><li>none (default)</li><li><m>angle</m></li><li><m>color</m></li><li><m>distance</m></li><li><m>gain</m></li><li><m>orientation</m></li><li><m>position</m></li><li><m>speed</m></li><li><m>temperature</m></li><li><m>time</m></li></ul>
 			</description>
 		</attribute>
 		<attribute name="default" get="1" set="1" type="int" size="1">
@@ -235,7 +224,7 @@
 				Default value
 			</digest>
 			<description>
-				Default value output by <o>j.message</o> on model initialization.
+				The <at>@default</at> attribute sets the value to output at the leftmost outlet on model initialization. The default value can be overridden by the default model preset
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
@@ -243,7 +232,7 @@
 				Node description
 			</digest>
 			<description>
-				Description of what this node controls. The description is used when auto-documenting models.
+				The <at>@description</at> attribute allows to associate a comment describing what this node controls. The description is used when auto-documenting models.
 			</description>
 		</attribute>
 		<attribute name="priority" get="1" set="1" type="int" size="1">
@@ -251,31 +240,32 @@
 				Set priority
 			</digest>
 			<description>
-				Priority controls in what order several nodes objects within the same model will initialise and update in response to presets and cues. Normally messages are not included in presets, and hence this attribute for <o>j.message</o> has limited relevance.
+				The <at>@priority</at> attribute controls in what order several values of a state of a Jamoma model will get sent on model initialization or when recalling a preset or cue
 			</description>
 		</attribute>
 		<attribute name="ramp/drive" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Set the scheduler driving the ramp
+				Scheduler driving the ramp
 			</digest>
 			<description>
-				Set the scheduler driving the ramp: <m>none</m> - no ramping permitted, <m>max</m> - using the Max scheduler, and <m>system</m> - using the system clock. In Max it is recommended to use <m>max</m> rather than <m>system</m>.
+				The <at>@ramp/drive</at> attribute defines the scheduler driving the ramp. Available options are:
+				<ul><li><m>none</m> (default):  no ramping permitted</li><li><m>max</m>: using the Max scheduler</li><li><m>system</m>: using the system clock</li></ul><i>Note that in Max, it is recommended to use <m>max</m> rather than <m>system</m></i>.
 			</description>
 		</attribute>
 		<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Function to be used for ramping
+				Ramp function
 			</digest>
 			<description>
-				Sets what easing function to use for ramping. A wide range of easing functions as well as windowing functions are available. Please refer to the help file for further details.
+				The <at>@ramp/function</at> defines an easing function used for ramping. A wide range of easing functions as well as windowing functions are available. Please refer to the help file for further details
 			</description>
 		</attribute>
 		<attribute name="ramp/function/parameters" get="1" set="0" type="atom" size="1">
 			<digest>
-				Get list of configurable parameters for the current ramp function
+				Configurable parameters for the current ramp function
 			</digest>
 			<description>
-				Get list of configurable parameters for the current ramp function. Certain ramp functions as specified by the <m>@ramp/function</m> attribute have additional configurable parameters that can be changed dynamically to modify the shape of the ramping curve. The message <m>ramp/function/parameters</m> cause <o>j.message</o> to output a list of all such parameters from the rightmost outlet, prepended by the symbol <m>ramp/function/parameters</m>. Refer to the help file for <o>j.ramp</o> for an overview of what functions have additional configurable parameters.
+				The <at>@ramp/function/parameters</at> is a read-only attribute listing all configurable parameters for the current ramp function. Certain ramp functions as specified by the <m>@ramp/function</m> attribute have additional configurable parameters that can be changed dynamically to modify the shape of the ramping curve. The message <m>ramp/function/parameters</m> cause <o>j.parameter</o>, <o>j.message</o> and <o>j.return</o> to output a list of all such parameters from the rightmost outlet, prepended by the symbol <m>ramp/function/parameters</m>. Refer to the help file for <o>j.ramp</o> for an overview of what functions have additional configurable parameters
 			</description>
 		</attribute>
 		<attribute name="ramp/status" get="1" set="0" type="int" size="1">
@@ -283,31 +273,64 @@
 				Ramp status
 			</digest>
 			<description>
-				Ramp status. THe attribute will be set to <m>1</m> when <o>j.message</o> is currently performing a ramp, and changed to <m>0</m> when done.
+				The <at>@ramp/status</at> attribute is a read-only attribute that will be set to <m>1</m> when value is currently performing a ramp, and changed to <m>0</m> when done
 			</description>
 		</attribute>
-		<attribute name="range" get="1" set="1" type="atom" size="1">
+		<attribute name="range" get="1" set="1" type="list" size="2">
 			<digest>
-				The range of values
+				Value range
 			</digest>
 			<description>
-				The expected range of values for this message. Depending on <m>@clipmode</m> this might be a recommended or definitive range.
+				The <at>@range</at> attribute defines the expected range of possible values. Depending on the <at>@clipmode</at> attribute, this might be a recommended or definitive range.
 			</description>
 		</attribute>
-		<attribute name="repetitions/filter" get="1" set="1" type="int" size="1">
+		<attribute name="repetitions/filter" get="1" set="1" type="boolean" size="1">
 			<digest>
-				Filtering of value repetitions
+				Filter out value repetitions
 			</digest>
 			<description>
-				Set whether to filter out value repetitions (<m>1</m>) or not (<m>0</m>).
+				The <at>@repetitions/filter</at> attribute defines whether repetited values will be filtered out or not (default)
 			</description>
 		</attribute>
 		<attribute name="stepsize" get="1" set="1" type="int" size="1">
 			<digest>
-				Step size when incrementing or decrementing the message value
+				Step size when incrementing or decrementing value
       </digest>
 			<description>
-				Stepsize used when incrementing or decrementing the value using one of the messages <m>+</m>, <m>-</m>, <m>inc</m> or <m>dec</m>.
+				The <at>@stepsize</at> attribute defines a step value used when incrementing or decrementing the value using one of the messages <m>+</m>, <m>-</m>, <m>inc</m> or <m>dec</m>
+			</description>
+		</attribute>
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
+			<digest>
+				Tags associated with this node
+			</digest>
+			<description>
+				The <at>@tags</at> attribute allows to associate a variable number of tags for this node. This helps documenting the parameter, and is also useful when restricting namespace searches using <o>j.namespace</o>.
+			</description>
+		</attribute>
+		<attribute name="type" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Value type
+			</digest>
+			<description>
+				The <at>@type</at> attribute define the type of the value. Possible types are:
+				<ul><li><m>none</m> (j.message and j.return only)</li><li><m>generic</m></li><li><m>boolean</m></li><li><m>decimal</m></li><li><m>integer</m></li><li><m>array</m></li><li><m>string</m></li></ul>
+			</description>
+		</attribute>
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+			<digest>
+				unit used by the node
+			</digest>
+			<description>
+				The <at>@unit</at> attribute defines the <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> unit used by this node. Values will get output according to this unit
+			</description>
+		</attribute>
+		<attribute name="value" get="1" set="1" type="int" size="1">
+			<digest>
+				Current value
+			</digest>
+			<description>
+				Current node value
 			</description>
 		</attribute>
 		<!-- <attribute name="service" get="1" set="1" type="symbol" size="1">
@@ -318,50 +341,15 @@
 				TEXT_HERE
 			</description>
 		</attribute> -->
-		<attribute name="tags" get="1" set="1" type="atom" size="1">
-			<digest>
-				Tags associated with the message
-			</digest>
-			<description>
-				Tags associated with the message. This helps documenting the message, and is also useful when restricting namespace searches usibng <o>j.namespace</o>.
-			</description>
-		</attribute>
-		<attribute name="type" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Type of the message value
-			</digest>
-			<description>
-				Type of the message value. Permitted types are <m>none</m>, <m>decimal</m>, <m>integer</m>, <m>array</m>, <m>string</m>, <m>generic</m> and <m>boolean</m>.
-			</description>
-		</attribute>
-		<attribute name="unit" get="1" set="1" type="symbol" size="1">
-			<digest>
-				Dataspace unit used by the message
-			</digest>
-			<description>
-				Dataspace unit used by the message. The message will output values according to this unit.
-			</description>
-		</attribute>
-		<attribute name="value" get="1" set="1" type="int" size="1">
-			<digest>
-				Current message value
-			</digest>
-			<description>
-				Current message value
-			</description>
-		</attribute>
-
 	</attributelist>
-	<!--EXAMPLE-->
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
-	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="j.message_array">
 			<!-- TEXT_HERE -->
 		</seealso>
-    <seealso name="j.model">
+		<seealso name="j.model">
 			<!-- TEXT_HERE -->
 		</seealso>
 		<seealso name="j.node">
