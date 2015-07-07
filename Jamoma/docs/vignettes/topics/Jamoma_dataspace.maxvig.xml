@@ -17,7 +17,7 @@
 		The Jamoma framework (that is the C++ framework behind the Jamoma for Max implementation) includes a library allowing C++ developers to define dataspaces and handle various unit conversions (ie. xyz to aed positions). The Jamoma implemantation for Max relying on these frameworks makes available these features in a number of Max objects such as <o>j.parameter</o>, <o>j.message</o>, <o>j.return</o> and <o>j.remote</o> (and their relative j.*_array versions). There is also a j.unit external specifically dedicated to unit conversion. <br/><br/>
 		These features allow a great amount of flexibility for Max developers. For example, parameters value may be addressed in a particular unit specified at the end of the sent message as <openfilelink filename="jamoma_dataspace_topic.maxpat">illustrated below</openfilelink>.
 		<br/>
-<img src="images/jamoma_dataspace_topic.png" caption="Using units with j.parameter"/></p>
+<illustration><img src="images/jamoma_dataspace_topic.png" caption="Using units with j.parameter"/></illustration></p>
 	<br/>
 	<h2>
 		Dataspace and ramps
@@ -142,4 +142,11 @@
 			</bluebox>
 		</li>
 	</ul>
+	<seealsolist>
+		<seealso name="j.unit"/>
+		<seealso name="j.parameter"/>
+		<seealso name="j.remote"/>
+		<seealso name="j.ramp"/>
+	</seealsolist>
+	
 </vignette>
