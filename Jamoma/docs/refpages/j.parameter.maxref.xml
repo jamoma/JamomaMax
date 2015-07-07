@@ -223,7 +223,7 @@
 				Dataspace used by this node
 			</digest>
 			<description>
-				The <at>@dataspace</at> attribute defines a dataspace used by this node. This enables values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
+				The <at>@dataspace</at> attribute defines a <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> used by this node. This enables values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
 				<ul>
 					<li>none (default)</li>
 					<li> <m>angle</m></li>
@@ -350,10 +350,10 @@
 		</attribute>
 		<attribute name="unit" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Dataspace unit used by the node
+				unit used by the node
 			</digest>
 			<description>
-				The <at>@unit</at> attribute defines the dataspace unit used by this node. Values will get output according to this unit
+				The <at>@unit</at> attribute defines the <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> unit used by this node. Values will get output according to this unit
 			</description>
 		</attribute>
 		<attribute name="value" get="1" set="1" type="int" size="1">
