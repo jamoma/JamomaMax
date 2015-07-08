@@ -29,19 +29,18 @@
 	<h2>
 		Available dataspaces and units
 	</h2>
-	<ul>
-		<li>
+	<techdetail>
 			<h3>Angle</h3>
-			<bluebox>
+			
 				<ul>
 					<li>radian (or <m>rad</m>)</li>
 					<li>degree (or <m>deg</m>)</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+			
+		</techdetail>
+		<techdetail>
 			<h3>Color</h3>
-			<bluebox>
+			
 				<ul>
 					<li>rgb</li>
 					<li>rgb8</li>
@@ -49,32 +48,32 @@
 					<li>hsv</li>
 					<li>cmy</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+			
+		</techdetail>
+		<techdetail>
 			<h3>Distance</h3>
-			<bluebox>
+			
 				<ul>
 					<li>meters (or <m>m</m>)</li>
 					<li>centimeters (or <m>cm</m>)</li>
 					<li>inches (or <m>''</m>)</li>
 					<li>feet (or <m>'</m>)</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+			
+		</techdetail>
+		<techdetail>
 			<h3>Gain</h3>
-			<bluebox>
+			
 				<ul>
 					<li>linear</li>
 					<li>dB (or <m>db</m>)</li>
 					<li>midigain</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+			
+		</techdetail>
+		<techdetail>
 			<h3>Orientation</h3>
-			<bluebox>
+			
 				<ul>
 					<li>quaternion (or <m>quat</m>)</li>
 					<li>euler</li>
@@ -82,11 +81,11 @@
 					<li>axis</li>
 					<li>ypr</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+			
+		</techdetail>
+		<techdetail>
 			<h3>Position</h3>
-			<bluebox>
+			
 				<ul>
 					<li>daz</li>
 					<li>cylindrical</li>
@@ -98,11 +97,10 @@
 					<li>xyz (or <m>cart3D</m>)</li>
 					<li>xy (or <m>cart2D</m>)</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+			
+		</techdetail>
+		<techdetail>
 			<h3>Speed</h3>
-			<bluebox>
 				<ul>
 					<li>fps</li>
 					<li>ft/s</li>
@@ -111,21 +109,20 @@
 					<li>mi/h (or <m>mph</m>)</li>
 					<li>km/h (or <m>kmph</m>)</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+		</techdetail>
+		<techdetail>
 			<h3>Temperature</h3>
-			<bluebox>
+			
 				<ul>
 					<li>Kelvin (or <m>K</m>)</li>
 					<li>Fahrenheit (or <m>F</m>)</li>
 					<li>Celsius (or <m>C</m>)</li>
 				</ul>
-			</bluebox>
-		</li>
-		<li>
+			
+		</techdetail>
+		<techdetail>
 			<h3>Time</h3>
-			<bluebox>
+			
 				<ul>
 					<li>sample</li>
 					<li>speed</li>
@@ -139,14 +136,13 @@
 					<li>bpm</li>
 					<li>bark</li>
 				</ul>
-			</bluebox>
-		</li>
-	</ul>
+			
+		</techdetail>
+
 	<seealsolist>
-		<seealso name="j.unit"/>
-		<seealso name="j.parameter"/>
-		<seealso name="j.remote"/>
-		<seealso name="j.ramp"/>
+		<seealso name="j.unit" type="refpage"/>
+		<seealso name="j.parameter" type="refpage"/>
+		<seealso name="j.remote" type="refpage"/>
+		<seealso name="j.ramp" type="refpage"/>
 	</seealsolist>
-	
 </vignette>
