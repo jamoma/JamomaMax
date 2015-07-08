@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
-			"architecture" : "x64",
+			"revision" : 4,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 60.0, 96.0, 1055.0, 736.0 ],
+		"rect" : [ 125.0, 208.0, 1055.0, 736.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -25,7 +25,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 15,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -50,8 +50,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 4,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -339,7 +339,7 @@
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 658.166667, 528.5, 567.5, 528.5 ],
+									"midpoints" : [ 658.166687, 528.5, 567.5, 528.5 ],
 									"source" : [ "obj-18", 2 ]
 								}
 
@@ -438,8 +438,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 4,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -892,8 +892,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 4,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -954,12 +954,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 4,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 60.0, 122.0, 1055.0, 710.0 ],
+						"rect" : [ 0.0, 26.0, 1055.0, 710.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1173,12 +1173,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
-											"architecture" : "x64",
+											"revision" : 4,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 584.0, 232.0, 429.0, 283.0 ],
+										"rect" : [ 524.0, 136.0, 429.0, 283.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1406,12 +1406,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
-											"architecture" : "x64",
+											"revision" : 4,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 140.0, 232.0, 429.0, 283.0 ],
+										"rect" : [ 80.0, 136.0, 429.0, 283.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1694,12 +1694,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 4,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1055.0, 710.0 ],
+						"rect" : [ 125.0, 234.0, 1055.0, 710.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2198,10 +2198,10 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-31::obj-26" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
 			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
 			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-5::obj-3" : [ "live.tab[14]", "live.tab[1]", 0 ]
+			"obj-5::obj-3" : [ "live.tab[14]", "live.tab[1]", 0 ],
+			"obj-31::obj-26" : [ "live.numbox[2]", "live.numbox[2]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
