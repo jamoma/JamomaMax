@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-<c74object name="j.message_array" module="" category="Jamoma">
+<c74object name="j.return_array" module="" category="Jamoma">
 	<digest>
 		Declare an array of output nodes in a Jamoma model
 	</digest>
