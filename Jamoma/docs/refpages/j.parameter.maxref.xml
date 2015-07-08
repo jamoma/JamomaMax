@@ -2,7 +2,7 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 <c74object name="j.parameter" module="" category="Jamoma">
 	<digest>
-		Declare a parameter within a Jamoma model
+		Declare a node within a Jamoma model
 	</digest>
 	<description>
 		j.parameter declares a parameter within a model or patch. j.parameter is somewhat similar to the pattr object, while enabling a number of additional features offered by Jamoma.
@@ -356,5 +356,6 @@
 		<seealso name="j.return"/>
 		<seealso name="j.return_array"/>
 		<seealso name="j.send"/>
+		<seealso name="model_initialization" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>

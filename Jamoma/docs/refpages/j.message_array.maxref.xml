@@ -5,7 +5,7 @@
 		Declare an array of input nodes in a Jamoma model
 	</digest>
 	<description>
-		j.message_array declares an array of input nodes in a Jamoma model. It wraps j.message features enabling models to receive control datas that can be sent from other Jamoma nodes. The message value will not be stored as part of the state of the model.
+		j.message_array declares an array of input nodes in a Jamoma model. It wraps <o>j.message</o> features used to receive within a Jamoma model messages sent remotely from other Jamoma externals (ie. <o>j.send</o>, <o>j.map</o>) or sent at the model inlet. Nodes' name are automatically given an instance number starting from 1.
 	</description>
     <discussion>    
       <o>j.message</o> is an access point to receive messages within a model. The message value can be updated immediately from parent patcher, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
@@ -96,10 +96,10 @@
 				<arg name="value" type="list" optional="0"/>
 			</arglist>
 			<digest>
-				Dispatch a list of values to instances of the returns
+				Dispatch a list of values to instances of the messages
 			</digest>
 			<description>
-				Dispatch a list of values to instances of the returns
+				Dispatch a list of values to instances of the messages
 			</description>
 		</method>
 		<method name="array/select">
@@ -110,7 +110,7 @@
 				This message select which instance to address
 			</digest>
 			<description>
-				This message select which j.return_array's instance to address
+				This message select which j.message_array's instance to address
 			</description>
 		</method>
 		<method name="array/resize">
@@ -252,7 +252,6 @@
 			</description>
 		</method>
 	</methodlist>
-<?xml version="1.0"?>
 <attributelist>
 	<attribute name="format" get="1" set="1" type="symbol" size="1">
 		<digest>
@@ -438,7 +437,7 @@
 	<seealsolist>
 		<seealso name="j.return"/>
 		<seealso name="j.parameter_array"/>
-		<seealso name="j.message_array"/>
+		<seealso name="j.return_array"/>
 		<seealso name="j.remote_array"/>
 	</seealsolist>
 </c74object>

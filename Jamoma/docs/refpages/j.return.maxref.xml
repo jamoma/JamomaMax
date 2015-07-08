@@ -6,7 +6,7 @@
 		Declares an output node in a Jamoma model
 	</digest>
 	<description>
-		Declares an output node in a Jamoma model, enabling models to generate control data that can be communicated to other the Jamoma nodes. The return value will not be stored as part of the state of the model. Apart from that, <o>j.return</o> resembles <o>j.parameter</o>. 
+		j.return declares an output node within a Jamoma model. It is a derived unidirectional version of j.parameter used to output from a Jamoma model messages to other Jamoma externals (ie. <o>j.receive</o>, <o>j.map</o>). Moreover, value of <o>j.return</o> will not be stored as part of the state of the model.
 	</description>
 	<discussion><o>j.return</o> is an output node that enables a model to return values. The return value can be updated immediately, or by easing over time. Common types of returns, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
     <br/>

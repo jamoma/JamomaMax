@@ -5,7 +5,7 @@
 		Declare an array of output nodes in a Jamoma model
 	</digest>
 	<description>
-		j.return_array declares an array of output nodes in a Jamoma model. It wraps j.return features enabling models to generate control datas that can be communicated to other the Jamoma nodes. The returns value will not be stored as part of the state of the model.
+		j.return_array declares an array of output nodes in a Jamoma model. It wraps j.return features used to output from a Jamoma model messages to other Jamoma externals (ie. <o>j.receive</o>, <o>j.map</o>). Nodes' name are automatically given an instance number starting from 1.
 	</description>
 	<discussion><o>j.return</o> is an output node that enables a model to return values. The return value can be updated immediately, or by easing over time. Common types of returns, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
     <br/>

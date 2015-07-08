@@ -3,10 +3,9 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.message" module="" category="Jamoma">
 	<digest>
-		Enables messages to be sent to Jamoma models.
-	</digest>
+		Declare an input node within a Jamoma model	</digest>
 	<description>
-		Enables messages to be sent to Jamoma models. The value of the message will not be stored as part of the state of the model. Apart from that, <o>j.message</o> resembles <o>j.parameter</o>. 
+		j.message declares an input node within a Jamoma model. It is a derived unidirectional version of j.parameter used to receive within a Jamoma model messages sent remotely from other Jamoma externals (ie. <o>j.send</o>, <o>j.map</o>) or sent at the model inlet. Moreover, value of <o>j.message</o> will not be stored as part of the state of the model.
 	</description>
 	<discussion><o>j.message</o> is an access point to receive messages within a model. The message value can be updated immediately from parent patcher, or by easing over time. Common types of messages, such as frequency, can be controlled using several different units (e.g. Hz, midinote or midicent) interchangeably.<br/>
       <br/>
