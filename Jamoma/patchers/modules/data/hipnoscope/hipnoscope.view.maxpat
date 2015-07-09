@@ -310,7 +310,7 @@
 , 			{
 				"box" : 				{
 					"border" : 0,
-					"filename" : "j.hipno9circles.js",
+					"filename" : "j.hipno8circles.js",
 					"id" : "obj-5",
 					"maxclass" : "jsui",
 					"numinlets" : 1,
@@ -2978,7 +2978,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.hipno9circles.js",
+				"name" : "j.hipno8circles.js",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "TEXT",
 				"implicit" : 1
