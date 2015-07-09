@@ -169,13 +169,13 @@
 		</method>
 		<method name="new">
 			<arglist>
-				<arg name="state name" type="symbol" optional="0"/>
+				<arg name="state name" type="symbol" optional="1"/>
 			</arglist>
 			<digest>
 				Store the parameters value of one or many models as a state
 			</digest>
 			<description>
-				The <m>new</m> message followed by a name (<i>symbol</i>) stores the values of one or many models as a state
+				The <m>new</m> message followed by a name (<i>symbol</i>) stores the values of one or many models as a state. Without any argument, the <m>new</m> message will erase the last stored, recalled or updated state and store the models current state instead
 			</description>
 		</method>
 		<method name="optimize">
