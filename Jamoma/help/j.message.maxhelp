@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 41.0, 80.0, 1222.0, 902.0 ],
+		"rect" : [ 100.0, 100.0, 1165.0, 902.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -25,7 +25,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 15,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -50,12 +50,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -270,7 +270,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -524,7 +524,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -996,12 +996,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2040,12 +2040,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2565,7 +2565,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2784,7 +2784,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -3276,12 +3276,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3339,12 +3339,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4101,12 +4101,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5018,12 +5018,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1222.0, 876.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -5931,12 +5931,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 41.0, 106.0, 1222.0, 876.0 ],
+						"rect" : [ 100.0, 126.0, 1165.0, 876.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -6143,7 +6143,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -6597,7 +6597,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -6884,20 +6884,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-11",
-									"linecount" : 3,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 40.0, 139.5, 424.0, 47.0 ],
-									"style" : "",
-									"text" : "j.message enables messages to be sent to Jamoma models. The value of the message will not be stored as part of the state of the model. Apart from that, j.message resembles j.parameter.",
-									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"border" : 0,
 									"filename" : "helpdetails.js",
 									"id" : "obj-17",
@@ -6908,7 +6894,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 0.0, 0.0, 618.0, 115.0 ]
+									"patching_rect" : [ 12.0, 10.0, 618.0, 137.5 ]
 								}
 
 							}
@@ -7070,32 +7056,32 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-5::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
-			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
-			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
-			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
-			"obj-24::obj-74" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-24::obj-14" : [ "live.gain~", "gain", 0 ],
-			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
 			"obj-24::obj-68" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-5::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
-			"obj-5::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
-			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
 			"obj-5::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-24::obj-6" : [ "live.text[2]", "live.text", 0 ],
 			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-5::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
 			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
-			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
-			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
-			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
+			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
 			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
 			"obj-5::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
 			"obj-5::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
-			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
 			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
-			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ]
+			"obj-5::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
+			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
+			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-24::obj-74" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
+			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
+			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
+			"obj-24::obj-14" : [ "live.gain~", "gain", 0 ],
+			"obj-5::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
+			"obj-24::obj-6" : [ "live.text[2]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
