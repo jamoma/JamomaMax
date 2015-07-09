@@ -193,12 +193,12 @@ The <m>setArray</m> message followed by a list dispatches the values to paramete
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
 			</attributelist>
 		</attribute>
-		<attribute name="address" get="1" set="1" type="symbol" size="1">
+		<attribute name="address" get="1" set="0" type="symbol" size="1">
 			<digest>
-				Distant parameters address
+				Selected instance node address
 			</digest>
 			<description>
-				Names of the distant parameters address. The address must be a symbol containing a number of instances to bind to placed between brackets such as 'address my/parameter.[5]'
+				The <at>address</at> attribute is a read-only attribute that displays the selected distant parameter instance address
 			</description>
 		</attribute>
 		<attribute name="description" get="1" set="1" type="symbol" size="1">
