@@ -186,8 +186,31 @@
 				Remove redundant values between consecutive states
 			</digest>
 			<description>
-				The <m>optimize</m> message allows to filter out and delete redundant values between consecutive states
-			</description>
+				The <m>optimize</m> message allows to filter out and delete redundant values between consecutive states. For example, assuming the following two states:<br/><br/>
+<techdetail>				<ul><li>State_1</li>
+				<ul>
+					<li>addres_A 1</li>
+					<li>address_B 2</li>
+					<li>address_C 3</li>
+					<li>address_D 4</li>
+				</ul>
+				<li>State_2</li>
+				<ul>
+					<li>address_A 1</li>
+					<li>address_B 20</li>
+					<li>address_C 3</li>
+					<li>address_E 5</li>
+				</ul>
+			</ul>
+		</techdetail>
+			<m>'optimize State_1 State_2'</m> will slim State_2 as:
+<techdetail>
+				<ul>
+				<li>address_B 20</li>
+				<li>address_D 4</li>
+				<li>address_E 5</li>
+			</ul>
+</techdetail>			</description>
 		</method>
 		<method name="order">
 			<arglist>
