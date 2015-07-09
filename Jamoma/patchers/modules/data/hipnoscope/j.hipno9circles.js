@@ -24,7 +24,7 @@ function paint() {
     	width  = box.rect[2] - box.rect[0];
     	height = box.rect[3] - box.rect[1];
         
-        distance = height/8.8;
+        distance = height/7.8;
         var diameter = 0.8*distance-strokeWidth;
     
         if (distance>width)
@@ -69,8 +69,8 @@ function paint() {
         drawCircle(lx,ly,diameter,1.,0.,1.);
         
         // Black
-        ly += distance;
-        drawCircle(lx,ly,diameter,0.,0.,0.);
+        //ly += distance;
+        //drawCircle(lx,ly,diameter,0.,0.,0.);
 
         // 0 6 4 1 5 2 7 3 8
 	}
@@ -107,10 +107,10 @@ onresize.local = 1; //private
 function onclick(x,y)
 {
 	height = box.rect[3] - box.rect[1];
-    var button = Math.floor(y*8.8/height);
+    var button = Math.floor(y*7.8/height);
     
-    var buttonSequence = [0, 6, 4, 1, 5, 2, 7, 3, 8];
-    var interpolate = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
+    var buttonSequence = [0, 6, 4, 1, 5, 2, 7, 3];
+    var interpolate = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0];
     interpolate[buttonSequence[button]] = 1.0;
     outlet(0, interpolate);
     

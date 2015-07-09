@@ -9,14 +9,14 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 445.0, 123.0, 944.0, 695.0 ],
+		"rect" : [ 101.0, 81.0, 961.0, 684.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
 		"gridonopen" : 1,
-		"gridsize" : [ 15.0, 15.0 ],
+		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 1,
 		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
@@ -38,123 +38,23 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 602.0, 405.0, 50.0, 22.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 602.0, 440.0, 181.0, 22.0 ],
-					"style" : "",
-					"text" : "j.remote /amogwai/preset_offset"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "ezdac~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 70.0, 430.0, 45.0, 45.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"clipheight" : 70.0,
-					"data" : 					{
-						"clips" : [ 							{
-								"filename" : "duduk.aif",
-								"filekind" : "audiofile",
-								"loop" : 1,
-								"content_state" : 								{
-									"pitchcorrection" : [ 0 ],
-									"pitchshiftcent" : [ 0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"formantcorrection" : [ 0 ],
-									"mode" : [ "basic" ],
-									"followglobaltempo" : [ 0 ],
-									"timestretch" : [ 0 ],
-									"formant" : [ 1.0 ],
-									"play" : [ 0 ],
-									"speed" : [ 1.0 ],
-									"originaltempo" : [ 120.0 ],
-									"pitchshift" : [ 1.0 ],
-									"originallengthms" : [ 0.0 ],
-									"quality" : [ "basic" ],
-									"basictuning" : [ 440 ],
-									"slurtime" : [ 0.0 ]
-								}
-
-							}
- ]
-					}
-,
-					"id" : "obj-3",
-					"maxclass" : "playlist~",
-					"numinlets" : 1,
-					"numoutlets" : 5,
-					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"patching_rect" : [ 70.0, 282.0, 450.0, 71.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "Spectral shifting with feedback",
-					"args" : [ "amogwai/dsp" ],
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-8",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "spectral_shift~.view.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 70.0, 130.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "none",
-					"args" : [ "amogwai/hipno", 250 ],
+					"args" : [ "#1" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
-					"id" : "obj-6",
+					"id" : "obj-1",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "hipnoscope.view.maxpat",
+					"name" : "amogwai~.view.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 426.0, 22.0, 297.0, 254.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 450.0, 595.0 ],
+					"patching_rect" : [ 0.0, 0.0, 600.0, 280.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 600.0, 280.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -162,85 +62,136 @@
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"id" : "obj-1",
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-56",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 70.0, 388.0, 146.0, 22.0 ],
+					"patching_rect" : [ 76.0, 465.0, 118.0, 22.0 ],
 					"style" : "",
-					"text" : "amogwai.model amogwai"
+					"text" : "amogwai~.model #1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-49",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 76.0, 521.0, 25.0, 25.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-48",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 76.0, 401.0, 25.0, 25.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-44",
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 175.0, 401.0, 25.0, 25.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-43",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 175.0, 521.0, 25.0, 25.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "",
+					"id" : "obj-42",
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 125.5, 521.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 1 ],
+					"destination" : [ "obj-56", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
+					"source" : [ "obj-44", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-56", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
+					"source" : [ "obj-48", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-42", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 611.5, 472.0, 579.5, 472.0, 579.5, 394.0, 611.5, 394.0 ],
-					"source" : [ "obj-2", 0 ]
+					"source" : [ "obj-56", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
+					"destination" : [ "obj-43", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-3", 1 ]
+					"source" : [ "obj-56", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-49", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
+					"source" : [ "obj-56", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-8::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
-			"obj-6::obj-31::obj-29" : [ "live.menu", "live.menu", 0 ],
-			"obj-8::obj-3" : [ "live.dial", "Pitch shift", 0 ],
-			"obj-8::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-8::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
-			"obj-6::obj-10" : [ "live.text", "live.text", 0 ]
+			"obj-1::obj-6::obj-31::obj-29" : [ "live.menu", "live.menu", 0 ],
+			"obj-1::obj-6::obj-10" : [ "live.text", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "amogwai.model.maxpat",
+				"name" : "amogwai~.model.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "JSON",
 				"implicit" : 1
@@ -276,6 +227,12 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "amogwai~.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "hipnoscope.view.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "JSON",
@@ -303,18 +260,6 @@
 				"name" : "j.hipno9circles.js",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "spectral_shift~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "duduk.aif",
-				"bootpath" : "C74:/media/msp",
-				"type" : "AIFF",
 				"implicit" : 1
 			}
 , 			{
@@ -362,6 +307,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
@@ -378,11 +327,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.ui.mxo",
+				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
+				"name" : "j.textslider.mxo",
 				"type" : "iLaX"
 			}
  ],
