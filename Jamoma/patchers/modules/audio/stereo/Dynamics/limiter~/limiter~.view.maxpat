@@ -4,29 +4,38 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 0,
-			"architecture" : "x86"
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 19.0, 45.0, 1233.0, 490.0 ],
+		"rect" : [ 34.0, 79.0, 1162.0, 490.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -37,6 +46,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 841.0, 211.0, 89.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote active"
 				}
 
@@ -108,6 +118,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 991.0, 242.5, 83.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote clear"
 				}
 
@@ -122,6 +133,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 672.0, 211.0, 143.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote dcblocker/active"
 				}
 
@@ -136,6 +148,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 511.0, 240.0, 139.0, 20.0 ],
+					"style" : "",
 					"text" : "substitute set setsymbol"
 				}
 
@@ -184,7 +197,8 @@
 							"parameter_mmin" : -48.0,
 							"parameter_mmax" : 6.0,
 							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.1f dB"
+							"parameter_units" : "%.1f dB",
+							"parameter_steps" : 541
 						}
 
 					}
@@ -212,7 +226,8 @@
 							"parameter_mmin" : -6.0,
 							"parameter_mmax" : 48.0,
 							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.1f dB"
+							"parameter_units" : "%.1f dB",
+							"parameter_steps" : 421
 						}
 
 					}
@@ -237,8 +252,9 @@
 							"parameter_longname" : "Release",
 							"parameter_shortname" : "Release",
 							"parameter_type" : 0,
-							"parameter_mmax" : 500.0,
-							"parameter_unitstyle" : 2
+							"parameter_mmax" : 1000.0,
+							"parameter_unitstyle" : 2,
+							"parameter_steps" : 1001
 						}
 
 					}
@@ -265,7 +281,8 @@
 							"parameter_type" : 0,
 							"parameter_mmax" : 256.0,
 							"parameter_unitstyle" : 9,
-							"parameter_units" : "%ld samples"
+							"parameter_units" : "%ld samples",
+							"parameter_steps" : 257
 						}
 
 					}
@@ -318,10 +335,11 @@
 							"parameter_longname" : "Preamp",
 							"parameter_shortname" : "Preamp",
 							"parameter_type" : 0,
-							"parameter_mmin" : -6.0,
+							"parameter_mmin" : -36.0,
 							"parameter_mmax" : 48.0,
 							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.1f dB"
+							"parameter_units" : "%.1f dB",
+							"parameter_steps" : 841
 						}
 
 					}
@@ -340,6 +358,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 181.0, 288.0, 127.0, 20.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.R"
 				}
 
@@ -354,6 +373,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
 					"patching_rect" : [ 26.0, 288.0, 125.0, 20.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.L"
 				}
 
@@ -396,6 +416,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 23.0, 169.0, 63.0, 20.0 ],
+					"style" : "",
 					"text" : "j.view"
 				}
 
@@ -410,6 +431,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 511.0, 211.0, 110.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote mode",
 					"varname" : "mode"
 				}
@@ -425,6 +447,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 906.0, 33.5, 119.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote release",
 					"varname" : "release"
 				}
@@ -440,6 +463,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 754.0, 33.5, 135.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote lookahead",
 					"varname" : "lookahead"
 				}
@@ -455,6 +479,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 609.0, 33.5, 129.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote threshold",
 					"varname" : "threshold"
 				}
@@ -470,6 +495,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 472.0, 33.5, 126.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote postamp",
 					"varname" : "postamp"
 				}
@@ -485,6 +511,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 333.0, 33.5, 121.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote preamp",
 					"varname" : "preamp"
 				}
@@ -498,7 +525,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 23.0, 130.0, 26.0, 26.0 ]
+					"patching_rect" : [ 23.0, 130.0, 26.0, 26.0 ],
+					"style" : ""
 				}
 
 			}
@@ -509,12 +537,16 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 204.0, 26.0, 26.0 ]
+					"patching_rect" : [ 23.0, 204.0, 26.0, 26.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"fontface" : 0,
+					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-46",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -808,15 +840,15 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-13" : [ "Release", "Release", 0 ],
-			"obj-45" : [ "live.text[2]", "live.text", 0 ]
+			"obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-5" : [ "Preamp", "Preamp", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -835,7 +867,8 @@
 				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
