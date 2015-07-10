@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 931.0, 721.0 ],
+		"rect" : [ 34.0, 79.0, 748.0, 783.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,140 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-17",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 277.5, 691.0, 222.0, 24.0 ],
+					"presentation_rect" : [ 280.5, 692.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "Helper when converting old patchers",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 110.0, 176.0, 299.0, 33.0 ],
+					"style" : "",
+					"text" : "Example: See help file for amogwai~.model"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-15",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 424.5, 161.0, 128.0, 22.0 ],
+					"style" : "",
+					"text" : "help amogwai~.model"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 424.5, 193.0, 53.0, 22.0 ],
+					"style" : "",
+					"text" : "pcontrol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 14.0,
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 14.0, 82.0, 348.0, 22.0 ],
+					"style" : "",
+					"text" : "2D interface for interpolation between presets or cues.",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-21",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "hipnoscope.model" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 6.0, 5.0, 516.0, 64.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 277.5, 630.0, 127.0, 24.0 ],
+					"presentation_rect" : [ 273.0, 470.5, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "The model",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-7",
+					"linecount" : 7,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 424.5, 351.5, 247.0, 104.0 ],
+					"presentation_rect" : [ 425.0, 256.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "The view.\n\nThe view bpatcher takes two arguments:\n\n1. Name of the associated model\n2. Diameter of the hipnoscope circle in\n    pixels",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubblepoint" : 0.06,
+					"bubbleside" : 0,
+					"id" : "obj-6",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 331.5, 530.0, 295.0, 39.0 ],
+					"style" : "",
+					"text" : "Hipnoscope can be configured from this inspector.",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -47,7 +181,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -109,7 +243,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -387,7 +521,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -953,7 +1087,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 563.0, 35.0, 149.0, 22.0 ],
+					"patching_rect" : [ 110.0, 691.0, 149.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -970,7 +1104,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"args" : [ "hipnotest" ],
+					"args" : [ "hipnotest", 250 ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -980,52 +1114,12 @@
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "hipnoscope.view.maxpat",
-					"numinlets" : 0,
+					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 45.5, 35.0, 450.0, 595.0 ],
+					"patching_rect" : [ 119.0, 279.0, 290.0, 249.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 450.0, 595.0 ],
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 563.0, 546.0, 109.0, 22.0 ],
-					"style" : "",
-					"text" : "j.remote /hipnotest"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 563.0, 469.0, 101.0, 22.0 ],
-					"style" : "",
-					"text" : "blob.8/width.x $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"format" : 6,
-					"id" : "obj-6",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 563.0, 435.0, 50.0, 22.0 ],
-					"style" : ""
 				}
 
 			}
@@ -1036,34 +1130,51 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 45.5, 655.0, 160.0, 22.0 ],
+					"patching_rect" : [ 110.0, 630.0, 160.0, 22.0 ],
 					"style" : "",
 					"text" : "hipnoscope.model hipnotest"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"angle" : 270.0,
+					"grad1" : [ 0.560317, 0.570942, 0.601066, 1.0 ],
+					"grad2" : [ 0.636487, 0.648652, 0.683149, 1.0 ],
+					"id" : "obj-3",
+					"maxclass" : "panel",
+					"mode" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 110.0, 270.0, 299.0, 267.0 ],
+					"proportion" : 0.39,
+					"rounded" : 0,
+					"style" : ""
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
+					"hidden" : 1,
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
+					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
+					"hidden" : 1,
+					"source" : [ "obj-16", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-4::obj-31::obj-29" : [ "live.menu", "live.menu", 0 ]
+			"obj-4::obj-10" : [ "live.text", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -1076,6 +1187,54 @@
 				"name" : "hipnoscope.view.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "red.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "orange.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "yellow.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "green.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "aqua.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "blue.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "purple.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "magenta.png",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
@@ -1097,6 +1256,22 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.hipno8circles.js",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
@@ -1109,22 +1284,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unit.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
@@ -1133,15 +1292,19 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ],

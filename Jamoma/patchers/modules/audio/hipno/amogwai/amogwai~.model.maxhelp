@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 94.0, 1155.0, 887.0 ],
+		"rect" : [ 100.0, 100.0, 1155.0, 887.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -62,9 +62,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 55.0, 560.0, 232.0, 24.0 ],
-					"presentation_rect" : [ 380.0, 702.0, 0.0, 0.0 ],
 					"style" : "",
-					"text" : "The model"
+					"text" : "The model",
+					"textcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ]
 				}
 
 			}
@@ -79,9 +79,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 792.5, 113.0, 208.0, 42.0 ],
-					"presentation_rect" : [ 525.0, 105.0, 0.0, 0.0 ],
 					"style" : "",
-					"text" : "Separate views for each of the nested models"
+					"text" : "Separate views for each of the nested models",
+					"textcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ]
 				}
 
 			}
@@ -96,7 +96,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 55.0, 113.0, 232.0, 24.0 ],
 					"style" : "",
-					"text" : "View for the combined model"
+					"text" : "View for the combined model",
+					"textcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ]
 				}
 
 			}
@@ -112,7 +113,8 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 55.0, 154.0, 210.0, 39.0 ],
 					"style" : "",
-					"text" : "Select presets from the pop-up menu"
+					"text" : "Select presets from the pop-up menu",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 				}
 
 			}
@@ -124,9 +126,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 234.0, 670.0, 156.0, 37.0 ],
+					"patching_rect" : [ 234.0, 670.0, 157.0, 37.0 ],
 					"style" : "",
-					"text" : "Combines a DSP model and a hipnoscope."
+					"text" : "Combines a DSP model and a hipnoscope.",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 				}
 
 			}
@@ -268,21 +271,21 @@
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
-									"pitchshift" : [ 1.0 ],
-									"speed" : [ 1.0 ],
-									"pitchcorrection" : [ 0 ],
-									"play" : [ 0 ],
 									"timestretch" : [ 0 ],
-									"followglobaltempo" : [ 0 ],
-									"formantcorrection" : [ 0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"quality" : [ "basic" ],
-									"formant" : [ 1.0 ],
 									"slurtime" : [ 0.0 ],
-									"originallengthms" : [ 0.0 ],
-									"basictuning" : [ 440 ],
-									"mode" : [ "basic" ],
+									"pitchshift" : [ 1.0 ],
+									"originallength" : [ 0.0, "ticks" ],
 									"originaltempo" : [ 120.0 ],
+									"play" : [ 0 ],
+									"followglobaltempo" : [ 0 ],
+									"originallengthms" : [ 0.0 ],
+									"quality" : [ "basic" ],
+									"pitchcorrection" : [ 0 ],
+									"mode" : [ "basic" ],
+									"formant" : [ 1.0 ],
+									"speed" : [ 1.0 ],
+									"formantcorrection" : [ 0 ],
+									"basictuning" : [ 440 ],
 									"pitchshiftcent" : [ 0 ]
 								}
 
@@ -346,7 +349,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 754.5, 93.0, 376.0, 768.0 ],
-					"presentation_rect" : [ 228.0, 73.0, 0.0, 0.0 ],
 					"proportion" : 0.39,
 					"rounded" : 0,
 					"style" : ""
@@ -366,7 +368,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 20.0, 541.0, 699.0, 320.0 ],
-					"presentation_rect" : [ 24.0, 440.0, 0.0, 0.0 ],
 					"proportion" : 0.39,
 					"rounded" : 0,
 					"style" : ""
@@ -449,32 +450,32 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-5::obj-15" : [ "Frequency offset", "Frequency offset", 0 ],
-			"obj-5::obj-4" : [ "Pitch shift (semintones)", "Pitch shift (semintones)", 0 ],
-			"obj-12::obj-45" : [ "live.text[4]", "live.text", 0 ],
-			"obj-8::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
-			"obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-8::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
-			"obj-8::obj-3" : [ "live.dial", "Pitch shift", 0 ],
-			"obj-11" : [ "Gain", "Gain", 0 ],
-			"obj-5::obj-28" : [ "Mix", "Mix", 0 ],
-			"obj-9::obj-10" : [ "live.text[1]", "live.text", 0 ],
-			"obj-12::obj-42" : [ "live.text[2]", "live.text", 0 ],
-			"obj-12::obj-13" : [ "Release", "Release", 0 ],
-			"obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-5::obj-6::obj-10" : [ "live.text", "live.text", 0 ],
-			"obj-5::obj-23" : [ "Feedback delay time", "Feedback delay time", 0 ],
-			"obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-8::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-12::obj-6" : [ "live.text[3]", "live.text", 0 ],
+			"obj-5::obj-28" : [ "Mix", "Mix", 0 ],
+			"obj-8::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
+			"obj-5::obj-23" : [ "Feedback delay time", "Feedback delay time", 0 ],
+			"obj-5::obj-17" : [ "Feedback level", "Feedback level", 0 ],
+			"obj-5::obj-15" : [ "Frequency offset", "Frequency offset", 0 ],
+			"obj-8::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ],
+			"obj-12::obj-42" : [ "live.text[2]", "live.text", 0 ],
 			"obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-5::obj-17" : [ "Feedback level", "Feedback level", 0 ]
+			"obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-12::obj-6" : [ "live.text[3]", "live.text", 0 ],
+			"obj-12::obj-13" : [ "Release", "Release", 0 ],
+			"obj-12::obj-45" : [ "live.text[4]", "live.text", 0 ],
+			"obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-5::obj-6::obj-10" : [ "live.text", "live.text", 0 ],
+			"obj-8::obj-3" : [ "live.dial", "Pitch shift", 0 ],
+			"obj-9::obj-10" : [ "live.text[1]", "live.text", 0 ],
+			"obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-5::obj-4" : [ "Pitch shift (semintones)", "Pitch shift (semintones)", 0 ],
+			"obj-11" : [ "Gain", "Gain", 0 ],
+			"obj-12::obj-5" : [ "Preamp", "Preamp", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "amogwai~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/hipno/amogwai",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -516,7 +517,7 @@
 			}
 , 			{
 				"name" : "amogwai~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/hipno/amogwai",
 				"type" : "JSON",
 				"implicit" : 1
 			}
