@@ -3,7 +3,7 @@
 			"box" : 			{
 				"maxclass" : "comment",
 				"prototypename" : "Jamoma.light",
-				"text" : "Without any argument, the 'store', 'recall' and 'update' message will work from the last stored, recalled or updated cue.\n\nie. Sending 'store' to j.cue will erase the lastly stored or recalled cue and store the new content of the models or modules.",
+				"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
 				"linecount" : 10,
 				"frgb" : 0.0,
 				"fontsize" : 12.0,
@@ -11,7 +11,7 @@
 				"patching_rect" : [ 20.0, 433.0, 184.0, 141.0 ],
 				"numoutlets" : 0,
 				"id" : "obj-49",
-				"fontname" : "Arial",
+				"fontname" : "Lato Regular",
 				"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 			}
 

@@ -2,7 +2,7 @@
 	"boxes" : [ 		{
 			"box" : 			{
 				"maxclass" : "comment",
-				"text" : "Double click j.cue object to open a text window displaying the stored namespace and corresponding values. \n\nAlternatively, you can use the 'edit' message to display only specific cue.",
+				"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				"linecount" : 9,
 				"frgb" : 0.0,
 				"bubble" : 1,
@@ -11,7 +11,7 @@
 				"patching_rect" : [ 390.5, 462.0, 172.0, 146.0 ],
 				"numoutlets" : 0,
 				"id" : "obj-56",
-				"fontname" : "Helvetica Neue",
+				"fontname" : "Lato Regular",
 				"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
 				"bubbletextmargin" : 10
 			}
