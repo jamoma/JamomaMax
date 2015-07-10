@@ -1,5 +1,4 @@
 
-
 - preset "default"
 # "edit a comment"
 audio/bypass 0
@@ -7,21 +6,1674 @@ audio/gain 100.000000
 audio/mix 100.000000
 audio/mute 0
 invert 0
-limiter~/active 1
-limiter~/audio/bypass 0
-limiter~/audio/gain 100.000000
-limiter~/audio/mix 100.000000
-limiter~/audio/mute 0
-limiter~/dcblocker/active 1
-limiter~/lookahead 10
-limiter~/mode exponential
-limiter~/postamp 6.000000
-limiter~/preamp 6.000000
-limiter~/release 300.000000
-limiter~/threshold -6.000000
+limiter/active 1
+limiter/audio/bypass 0
+limiter/audio/gain 100.000000
+limiter/audio/mix 100.000000
+limiter/audio/mute 0
+limiter/dcblocker/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 1000.000000
+limiter/threshold 0.000000
 response/attack 0.069620
 response/decay 0.563291
-threshold -9.00000
+threshold -9.000000
 
- 
+- preset "Default_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold 7.846164
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -2.013960
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.508148
+response/decay 0.508148
+# 
+# ###########################################
 
+- preset "Default_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold 7.846164
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -8.727300
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.767109
+response/decay 0.767109
+# 
+# ###########################################
+
+- preset "Default_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -3.692286
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -15.021000
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.577195
+response/decay 0.577195
+# 
+# ###########################################
+
+- preset "Default_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -22.615410
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 2.181840
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.470502
+response/decay 0.470502
+# 
+# ###########################################
+
+- preset "Default_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -24.923100
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -19.216800
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.892783
+response/decay 0.892783
+# 
+# ###########################################
+
+- preset "Default_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold 7.384626
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -36.000000
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.392473
+response/decay 0.392473
+# 
+# ###########################################
+
+- preset "Default_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -16.100022
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -19.216800
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.653009
+response/decay 0.653009
+# 
+# ###########################################
+
+- preset "Default_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold 0.000018
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -36.000000
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -22.615410
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 3.021000
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -6.923052
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 10.153860
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.105612
+response/decay 0.105612
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -16.000032
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 0.083940
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.003259
+response/decay 0.003259
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -7.629648
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 9.596820
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.117127
+response/decay 0.117127
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -19.846182
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 3.860160
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 1.000000
+response/decay 1.000000
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -7.999974
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 7.000020
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000447
+response/decay 0.000447
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -9.692280
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.594380
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.002531
+response/decay 0.002531
+# 
+# ###########################################
+
+- preset "Barking_Flange_Tube_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -19.384644
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 1.342680
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 1.000000
+response/decay 1.000000
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -14.769198
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.174800
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 1.000000
+response/decay 1.000000
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -2.769210
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -9.566460
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.821405
+response/decay 0.821405
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -6.461514
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.594380
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.046944
+response/decay 0.046944
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -20.769258
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -6.209760
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.692334
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.382640
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.322611
+response/decay 0.322611
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -6.923052
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 10.993020
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -11.538432
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -3.272700
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.005825
+response/decay 0.005825
+# 
+# ###########################################
+
+- preset "Cricket_Choir_Percussion_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold 10.615392
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.174800
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.709696
+response/decay 0.709696
+# 
+# ###########################################
+
+- preset "Murk_Indices_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -18.960000
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -14.400000
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.586276
+response/decay 0.586276
+# 
+# ###########################################
+
+- preset "Murk_Indices_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -13.680000
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -14.400000
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.586276
+response/decay 0.586276
+# 
+# ###########################################
+
+- preset "Murk_Indices_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -31.143864
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 0.723300
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.338570
+response/decay 0.338570
+# 
+# ###########################################
+
+- preset "Murk_Indices_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -26.307714
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 1.525320
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.455376
+response/decay 0.455376
+# 
+# ###########################################
+
+- preset "Murk_Indices_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -22.615410
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 10.127640
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.106181
+response/decay 0.106181
+# 
+# ###########################################
+
+- preset "Murk_Indices_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -30.923094
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -6.209760
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.002745
+response/decay 0.002745
+# 
+# ###########################################
+
+- preset "Murk_Indices_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -34.615398
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 2.210460
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Murk_Indices_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -26.142582
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -7.468560
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.470502
+response/decay 0.470502
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.510768
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 1.525320
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000050
+response/decay 0.000050
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -20.519844
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.360440
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.036033
+response/decay 0.036033
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.224724
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 3.495900
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.010801
+response/decay 0.010801
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.344052
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 3.573300
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.010961
+response/decay 0.010961
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -20.769258
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.594380
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.048240
+response/decay 0.048240
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -6.962256
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 10.127640
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.106181
+response/decay 0.106181
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -19.838922
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -0.755220
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Platonic_Radio_4_Pads_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.350586
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 3.572520
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.010918
+response/decay 0.010918
+# 
+# ###########################################
+
+- preset "Sheener_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -18.517932
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -1.992660
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.373044
+response/decay 0.373044
+# 
+# ###########################################
+
+- preset "Sheener_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -3.692286
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -2.433540
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.563610
+response/decay 0.563610
+# 
+# ###########################################
+
+- preset "Sheener_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -23.423778
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -3.657840
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.242596
+response/decay 0.242596
+# 
+# ###########################################
+
+- preset "Sheener_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -4.153824
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.797220
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Sheener_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold 0.923094
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.140480
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 1.000000
+response/decay 1.000000
+# 
+# ###########################################
+
+- preset "Sheener_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold 8.307702
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.111860
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.954789
+response/decay 0.954789
+# 
+# ###########################################
+
+- preset "Sheener_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold 0.000018
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.111860
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.794626
+response/decay 0.794626
+# 
+# ###########################################
+
+- preset "Sheener_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -10.615356
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.110240
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.510768
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 1.525320
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000050
+response/decay 0.000050
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.295542
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 3.541980
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.010915
+response/decay 0.010915
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -6.962256
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 10.127640
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.106181
+response/decay 0.106181
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -34.615398
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 2.210460
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -2.769210
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.111860
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.424419
+response/decay 0.424419
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -6.962256
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 10.127640
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.106181
+response/decay 0.106181
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -21.053652
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 0.988500
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.029795
+response/decay 0.029795
+# 
+# ###########################################
+
+- preset "Sodden_Whispers_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -21.350586
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 3.572520
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.010918
+response/decay 0.010918
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -12.428904
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 0.770280
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.329184
+response/decay 0.329184
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -15.692274
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 8.475540
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.855020
+response/decay 0.855020
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -17.026068
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -3.653280
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.145025
+response/decay 0.145025
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -22.615410
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.119660
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.080761
+response/decay 0.080761
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -19.053786
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -5.865960
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.085099
+response/decay 0.085099
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -30.000018
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -8.719680
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.001650
+response/decay 0.001650
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -17.018874
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -3.652200
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.145652
+response/decay 0.145652
+# 
+# ###########################################
+
+- preset "Trapped_Gaps_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -16.936770
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -3.658260
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.163699
+response/decay 0.163699
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_1"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -10.611198
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.108380
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000745
+response/decay 0.000745
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_2"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -3.692286
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 9.734280
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.563610
+response/decay 0.563610
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_3"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold -17.265120
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -3.874020
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.133786
+response/decay 0.133786
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_4"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -19.846182
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.140480
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 1.000000
+response/decay 1.000000
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_5"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold 0.923094
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.140480
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 1.000000
+response/decay 1.000000
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_6"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -21.692334
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -8.727300
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.000000
+response/decay 0.000000
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_7"
+- description "something about this preset"
+# ###########################################
+# 
+invert 1
+threshold 0.000018
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.111860
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.794626
+response/decay 0.794626
+# 
+# ###########################################
+
+- preset "Angry_Hornet_Suburbs_8"
+- description "something about this preset"
+# ###########################################
+# 
+invert 0
+threshold -11.076894
+audio/bypass 0
+audio/gain 100.000000
+audio/mix 100.000000
+audio/mute 0
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp -4.110240
+limiter/release 1000.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+response/attack 0.991120
+response/decay 0.991120
+# 
+# ###########################################

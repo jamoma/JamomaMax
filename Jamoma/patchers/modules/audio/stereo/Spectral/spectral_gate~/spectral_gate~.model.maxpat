@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -170,7 +170,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 10.0, 12.5, 138.0, 129.0 ],
+					"patching_rect" : [ 10.0, 12.5, 140.0, 129.0 ],
 					"style" : "",
 					"text" : "j.parameter threshold @type decimal @range -48. 18. @clipmode none @ramp/drive max @ramp/function linear @description \"Sets the threshold below which a bin of the spectrum is attenuated..\""
 				}
@@ -277,12 +277,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 50.0, 94.0, 695.0, 343.0 ],
+						"rect" : [ 50.0, 94.0, 768.0, 561.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -314,12 +314,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-2",
-									"linecount" : 2,
+									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 95.0, 150.0, 502.0, 19.0 ],
+									"patching_rect" : [ 94.0, 231.0, 174.0, 62.0 ],
 									"style" : "",
 									"text" : "j.map @function exponential @input/min 0. @input/max 1. @output/min 1. @output/max 10000."
 								}
@@ -335,7 +335,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 250.0, 80.0, 160.0, 19.0 ],
+									"patching_rect" : [ 386.0, 60.0, 160.0, 35.0 ],
 									"style" : "",
 									"text" : "loadmess parameter base 10."
 								}
@@ -346,12 +346,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1",
-									"linecount" : 2,
+									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 140.0, 125.0, 502.0, 19.0 ],
+									"patching_rect" : [ 278.0, 231.0, 174.0, 62.0 ],
 									"style" : "",
 									"text" : "j.map @function exponential @input/min 0. @input/max 1. @output/min 1. @output/max 10000."
 								}
@@ -367,7 +367,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 185.0, 108.0, 19.0 ],
+									"patching_rect" : [ 49.5, 311.0, 108.0, 35.0 ],
 									"style" : "",
 									"text" : "pak slide 100. 100."
 								}
@@ -381,7 +381,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 94.0, 40.0, 25.0, 25.0 ],
+									"patching_rect" : [ 94.0, 40.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -394,7 +394,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 139.0, 40.0, 25.0, 25.0 ],
+									"patching_rect" : [ 278.0, 40.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -406,7 +406,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 224.0, 25.0, 25.0 ],
+									"patching_rect" : [ 49.5, 363.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -462,7 +462,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 259.5, 109.0, 149.5, 109.0 ],
+									"midpoints" : [ 395.5, 174.0, 287.5, 174.0 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -472,7 +472,7 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 259.5, 107.0, 104.5, 107.0 ],
+									"midpoints" : [ 395.5, 167.0, 103.5, 167.0 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -552,7 +552,7 @@
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 596.5, 293.0, 339.5, 22.0 ],
 					"style" : "",
-					"text" : "limiter~.model limiter"
+					"text" : "limiter~.model limiter @amenities none"
 				}
 
 			}
