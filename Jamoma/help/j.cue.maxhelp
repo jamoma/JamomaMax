@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 4,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 79.0, 234.0, 1530.0, 757.0 ],
+		"rect" : [ 79.0, 204.0, 1530.0, 757.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -53,7 +53,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -416,7 +416,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -462,7 +462,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 4,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -620,7 +620,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 4,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -758,7 +758,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 4,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1562,11 +1562,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1530.0, 731.0 ],
+						"rect" : [ 79.0, 230.0, 1530.0, 731.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -1648,13 +1648,13 @@
 									"fontname" : "Lato Regular",
 									"fontsize" : 12.0,
 									"id" : "obj-48",
-									"linecount" : 3,
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 639.5, 564.0, 160.0, 50.0 ],
+									"patching_rect" : [ 623.5, 564.0, 160.0, 35.0 ],
 									"style" : "",
-									"text" : "Edits done in text editor are automatically stored in stsate",
+									"text" : "Edits done in text editor are automatically stored in state",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
 
@@ -1750,7 +1750,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 510.0, 654.5, 190.0, 22.0 ],
 									"style" : "",
-									"text" : "editor closed"
+									"text" : "copy"
 								}
 
 							}
@@ -1942,9 +1942,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 885.0, 463.0, 169.0, 22.0 ],
+									"patching_rect" : [ 885.0, 463.0, 197.0, 22.0 ],
 									"style" : "",
-									"text" : "copy InitCopy InitCopyCopy 1"
+									"text" : "copy OutroCopy OutroCopyCopy 1"
 								}
 
 							}
@@ -1976,9 +1976,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 885.0, 439.0, 102.0, 22.0 ],
+									"patching_rect" : [ 885.0, 439.0, 131.0, 22.0 ],
 									"style" : "",
-									"text" : "copy init InitCopy"
+									"text" : "copy Outro OutroCopy"
 								}
 
 							}
@@ -2021,9 +2021,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 885.0, 363.0, 137.0, 22.0 ],
+									"patching_rect" : [ 885.0, 363.0, 112.0, 22.0 ],
 									"style" : "",
-									"text" : "move \"Act I - Scene I\" 1"
+									"text" : "move scene_one 1"
 								}
 
 							}
@@ -2054,7 +2054,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 90.5, 244.0, 85.0, 78.0 ],
+									"patching_rect" : [ 90.5, 244.0, 88.0, 78.0 ],
 									"style" : "",
 									"text" : "Delete all states stored in j.cue",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -2513,7 +2513,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2785,7 +2785,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 4,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -3182,7 +3182,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 4,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -4006,7 +4006,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -4706,11 +4706,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 79.0, 260.0, 1530.0, 731.0 ],
+						"rect" : [ 0.0, 26.0, 1530.0, 731.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -4752,7 +4752,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 630.0, 193.0, 118.0, 78.0 ],
-									"presentation_rect" : [ 571.5, 184.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Open j.cue text editor and see what your states look like",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -5154,7 +5153,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -5605,7 +5604,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -5646,7 +5645,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 471.5, 655.0, 127.0, 22.0 ],
+									"patching_rect" : [ 471.5, 651.0, 127.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess prefix recall"
 								}
@@ -5662,7 +5661,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 346.5, 655.0, 100.0, 22.0 ],
+									"patching_rect" : [ 346.5, 651.0, 100.0, 22.0 ],
 									"prefix" : "recall",
 									"prefix_mode" : 1,
 									"style" : ""
@@ -5682,7 +5681,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 4,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -5989,7 +5988,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 346.5, 629.0, 121.0, 22.0 ],
+									"patching_rect" : [ 346.5, 625.0, 121.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -6118,7 +6117,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 119.0, 186.5, 134.0, 121.0 ],
+									"patching_rect" : [ 119.0, 186.5, 136.0, 121.0 ],
 									"style" : "",
 									"text" : "Change settings of the attached demo models and store their current parameters value as a new named state",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -6134,7 +6133,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 279.5, 600.0, 93.0, 22.0 ],
+									"patching_rect" : [ 279.5, 596.0, 93.0, 22.0 ],
 									"style" : "",
 									"text" : "print @popup 1"
 								}
@@ -6160,11 +6159,11 @@
 									"fontname" : "Lato Regular",
 									"fontsize" : 12.0,
 									"id" : "obj-72",
-									"linecount" : 3,
+									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 413.5, 554.0, 176.0, 50.0 ],
+									"patching_rect" : [ 565.0, 570.5, 167.0, 64.0 ],
 									"prototypename" : "Jamoma.light",
 									"style" : "",
 									"text" : "Note that j.cue's content is not saved within the patch. Be sure to save its content as a file.",
@@ -6183,7 +6182,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 397.5, 396.0, 187.0, 150.0 ],
+									"patching_rect" : [ 545.0, 417.5, 187.0, 150.0 ],
 									"style" : "",
 									"text" : "Once you're happy with the collection of states stored in j.cue, you can save them to disk as a text file.\n\nThe text file containing all states can then be loaded back using the 'read' message.",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -6204,7 +6203,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 362.5, 459.0, 24.0, 24.0 ],
+									"patching_rect" : [ 517.5, 480.5, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "3",
@@ -6225,7 +6224,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 312.5, 459.0, 36.0, 22.0 ],
+									"patching_rect" : [ 466.5, 481.5, 36.0, 22.0 ],
 									"style" : "",
 									"text" : "write"
 								}
@@ -6240,7 +6239,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 312.5, 490.5, 35.0, 22.0 ],
+									"patching_rect" : [ 466.5, 505.5, 35.0, 22.0 ],
 									"style" : "",
 									"text" : "read"
 								}
@@ -6369,7 +6368,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 279.5, 561.0, 86.0, 22.0 ],
+									"patching_rect" : [ 279.5, 557.0, 86.0, 22.0 ],
 									"style" : "",
 									"text" : "j.cue"
 								}
@@ -6422,7 +6421,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 289.0, 304.5, 289.0, 304.5 ],
+									"midpoints" : [ 289.0, 401.5, 289.0, 401.5 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -6461,7 +6460,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 458.0, 687.0, 273.5, 687.0, 273.5, 550.0, 289.0, 550.0 ],
+									"midpoints" : [ 458.0, 683.0, 273.5, 683.0, 273.5, 546.0, 289.0, 546.0 ],
 									"source" : [ "obj-15", 1 ]
 								}
 
@@ -6471,7 +6470,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 396.5, 687.0, 273.75, 687.0, 273.75, 550.0, 289.0, 550.0 ],
+									"midpoints" : [ 396.5, 683.0, 273.75, 683.0, 273.75, 546.0, 289.0, 546.0 ],
 									"source" : [ "obj-18", 1 ]
 								}
 
@@ -6499,7 +6498,7 @@
 								"patchline" : 								{
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
-									"hidden" : 0,
+									"hidden" : 1,
 									"midpoints" : [ 289.0, 317.0, 289.0, 317.0 ],
 									"source" : [ "obj-45", 0 ]
 								}
@@ -6548,7 +6547,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 322.0, 527.25, 289.0, 527.25 ],
+									"midpoints" : [ 476.0, 523.25, 289.0, 523.25 ],
 									"source" : [ "obj-67", 0 ]
 								}
 
@@ -6558,7 +6557,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 322.0, 528.5, 289.0, 528.5 ],
+									"midpoints" : [ 476.0, 547.5, 289.0, 547.5 ],
 									"source" : [ "obj-68", 0 ]
 								}
 
@@ -6595,7 +6594,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -6691,25 +6690,25 @@
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
