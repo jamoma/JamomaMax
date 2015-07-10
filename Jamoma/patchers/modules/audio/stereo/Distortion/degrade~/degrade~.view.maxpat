@@ -161,7 +161,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 169.0, 144.0, 154.0, 20.0 ],
-					"text" : "j.remote samplerateRatio"
+					"text" : "j.remote samplerate_ratio"
 				}
 
 			}

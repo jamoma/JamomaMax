@@ -66,7 +66,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 13.0, 68.5, 129.0, 87.0 ],
-					"text" : "j.parameter monitoredModel @type string @description \"Name of the model that is to be monitored.\""
+					"text" : "j.parameter monitored_model @type string @description \"Name of the model that is to be monitored.\""
 				}
 
 			}

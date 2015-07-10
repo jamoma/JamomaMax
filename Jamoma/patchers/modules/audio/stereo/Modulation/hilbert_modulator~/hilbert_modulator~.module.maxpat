@@ -40,7 +40,7 @@
 					"id" : "obj-2",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "hilbertModulator~.view.maxpat",
+					"name" : "hilbert_modulator~.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -127,7 +127,7 @@
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 35.0, 193.0, 183.0, 20.0 ],
-					"text" : "hilbertModulator~.model #1",
+					"text" : "hilbert_modulator~.model #1",
 					"viewvisibility" : 0
 				}
 
@@ -180,16 +180,16 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "hilbertModulator~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbertModulator~",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbertModulator~",
+				"name" : "hilbert_modulator~.model.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbert_modulator~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbert_modulator~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "hilbertModulator~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbertModulator~",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbertModulator~",
+				"name" : "hilbert_modulator~.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbert_modulator~",
+				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbert_modulator~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

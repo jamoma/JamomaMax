@@ -108,7 +108,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 951.0, 22.0, 151.0, 154.0 ],
-					"text" : "j.parameter delay/maxSize @type integer @ramp/drive none @repetitions/filter 1 @range 0 1000000 @clipmode low @dataspace time @unit sample @priority 1 @description \"Maximum delay size in samples.\"",
+					"text" : "j.parameter delay/max_size @type integer @ramp/drive none @repetitions/filter 1 @range 0 1000000 @clipmode low @dataspace time @unit sample @priority 1 @description \"Maximum delay size in samples.\"",
 					"varname" : "delay/right[1]"
 				}
 
