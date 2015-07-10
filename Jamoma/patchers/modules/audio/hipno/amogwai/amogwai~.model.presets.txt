@@ -1,0 +1,83 @@
+- preset "default"
+- description "something about this preset"
+# ###########################################
+preset_offset 0
+hipnoscope/preset colour_wheel_2
+hipnoscope/puck_position -0.516949 0.008475
+
+- preset "Barking_Ring"
+- description "something about this preset"
+# ###########################################
+preset_offset 1
+hipnoscope/preset twist_lock_1
+hipnoscope/puck_position -0.372881 -0.686441
+
+- preset "Effervescent_Horn_Queues"
+- description "something about this preset"
+# ###########################################
+preset_offset 2
+hipnoscope/preset mitosis_vertical
+hipnoscope/puck_position -0.347458 0.008475
+
+- preset "Globe_of_Smeary_Echoes"
+- description "something about this preset"
+# ###########################################
+preset_offset 3
+hipnoscope/preset clockwise_colour_wheel
+hipnoscope/puck_position 0.491525 -0.508475
+
+- preset "Scratching_Ranges"
+- description "something about this preset"
+# ###########################################
+preset_offset 4
+hipnoscope/preset red_green_horisontal
+hipnoscope/puck_position 0.050847 -0.000000
+
+- preset "Shakin'_Remora"
+- description "something about this preset"
+# ###########################################
+preset_offset 5
+hipnoscope/preset 5_color_compass
+hipnoscope/puck_position -0.796610 0.025424
+
+- preset "Slap_Labyrinth"
+- description "something about this preset"
+# ###########################################
+preset_offset 6
+hipnoscope/preset lattice_snapshot
+hipnoscope/puck_position 0.864407 0.194915
+
+- preset "Swamp_Taxonomy"
+- description "something about this preset"
+# ###########################################
+preset_offset 7
+hipnoscope/preset hex_ring
+hipnoscope/puck_position 0.593220 0.618644
+
+- preset "The_Queasy_Cruise"
+- description "something about this preset"
+# ###########################################
+preset_offset 8
+hipnoscope/preset fog_ball
+hipnoscope/puck_position 0.413168 0.910655
+
+- preset "Try_The_Corners"
+- description "something about this preset"
+# ###########################################
+preset_offset 9
+hipnoscope/preset fog_ball
+hipnoscope/puck_position 0.525424 -0.525424
+
+- preset "Midnight!"
+- description "something about this preset"
+# ###########################################
+preset_offset 10
+hipnoscope/preset hex_ring
+hipnoscope/puck_position -0.525424 -0.483051
+
+- preset "Watch_out_for_Gizmo..."
+- description "something about this preset"
+# ###########################################
+preset_offset 11
+hipnoscope/preset colour_wheel_2
+hipnoscope/puck_position -0.508475 -0.016949
