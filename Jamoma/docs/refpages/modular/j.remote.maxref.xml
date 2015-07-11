@@ -232,43 +232,13 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name="j.parameter"/>
 		<seealso name="j.message"/>
-		<seealso name="j.message_array">
-			<!-- TEXT_HERE -->
-		</seealso>
-    <seealso name="j.model">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.node">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.parameter">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.parameter_array">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.receive">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.receive~">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.return">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.return_array">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.send">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.send~">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="j.view">
-			<!-- TEXT_HERE -->
-		</seealso>
+		<seealso name="j.return"/>
+		<seealso name="j.receive"/>
+		<seealso name="j.send"/>
+		<seealso name="j.remote_array"/>
+		<seealso name="j.view"/>
 		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>
