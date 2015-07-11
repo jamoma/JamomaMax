@@ -4,8 +4,9 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 0,
-			"architecture" : "x86"
+			"revision" : 4,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 58.0, 136.0, 644.0, 520.0 ],
@@ -15,19 +16,27 @@
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -37,7 +46,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 377.0, 351.0, 139.0, 20.0 ],
+					"patching_rect" : [ 377.0, 351.0, 139.0, 22.0 ],
+					"style" : "",
 					"text" : "substitute set setsymbol"
 				}
 
@@ -51,7 +61,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 377.0, 246.0, 139.0, 20.0 ],
+					"patching_rect" : [ 377.0, 246.0, 139.0, 22.0 ],
+					"style" : "",
 					"text" : "substitute set setsymbol"
 				}
 
@@ -115,7 +126,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 377.0, 405.0, 106.0, 20.0 ],
+					"patching_rect" : [ 377.0, 405.0, 106.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote mode",
 					"varname" : "mode[1]"
 				}
@@ -130,7 +142,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 377.0, 298.0, 108.0, 20.0 ],
+					"patching_rect" : [ 377.0, 298.0, 108.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote shape",
 					"varname" : "shape[1]"
 				}
@@ -145,7 +158,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 141.0, 456.0, 42.0, 20.0 ],
+					"patching_rect" : [ 141.0, 456.0, 42.0, 22.0 ],
+					"style" : "",
 					"text" : "* 0.02"
 				}
 
@@ -159,7 +173,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 141.0, 351.0, 74.0, 20.0 ],
+					"patching_rect" : [ 141.0, 351.0, 74.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend set"
 				}
 
@@ -173,7 +188,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 141.0, 294.0, 57.0, 20.0 ],
+					"patching_rect" : [ 141.0, 294.0, 57.0, 22.0 ],
+					"style" : "",
 					"text" : "route set"
 				}
 
@@ -187,7 +203,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 141.0, 323.0, 35.0, 20.0 ],
+					"patching_rect" : [ 141.0, 323.0, 35.0, 22.0 ],
+					"style" : "",
 					"text" : "* 50."
 				}
 
@@ -234,7 +251,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 141.0, 264.0, 119.0, 20.0 ],
+					"patching_rect" : [ 141.0, 264.0, 119.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote position",
 					"varname" : "position[1]"
 				}
@@ -249,7 +267,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 23.0, 147.0, 61.0, 20.0 ],
+					"patching_rect" : [ 23.0, 147.0, 61.0, 22.0 ],
+					"style" : "",
 					"text" : "j.view"
 				}
 
@@ -263,7 +282,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 462.5, 3.0, 134.0, 20.0 ],
+					"patching_rect" : [ 462.5, 3.0, 134.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.R1"
 				}
 
@@ -277,7 +297,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 308.0, 3.0, 132.0, 20.0 ],
+					"patching_rect" : [ 308.0, 3.0, 132.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.L1"
 				}
 
@@ -315,7 +336,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 184.0, 25.0, 25.0 ]
+					"patching_rect" : [ 23.0, 184.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -327,14 +349,17 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 23.0, 112.0, 25.0, 25.0 ]
+					"patching_rect" : [ 23.0, 112.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bordercolor" : [ 0.0, 0.0, 0.0, 0.0 ],
-					"id" : "obj-34",
+					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"fontface" : 0,
+					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
+					"id" : "obj-6",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -514,8 +539,8 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-21" : [ "live.menu", "Shape", 0 ],
 			"obj-10" : [ "Crossfade", "Crossfade", 0 ],
+			"obj-21" : [ "live.menu", "Shape", 0 ],
 			"obj-22" : [ "live.menu[1]", "Shape", 0 ]
 		}
 ,
@@ -535,7 +560,8 @@
 				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

@@ -129,7 +129,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 123.0, 198.0, 158.0, 20.0 ],
-					"text" : "j.remote delay/maxSize",
+					"text" : "j.remote delay/max_size",
 					"varname" : "delay/right[1]"
 				}
 

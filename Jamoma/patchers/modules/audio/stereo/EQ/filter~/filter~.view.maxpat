@@ -4,30 +4,39 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 0,
-			"architecture" : "x86"
+			"revision" : 4,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 82.0, 215.0, 712.0, 760.0 ],
+		"rect" : [ 703.0, 160.0, 493.0, 760.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"appearance" : 2,
@@ -65,24 +74,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 528.75, 432.0, 130.5, 33.0 ],
+					"patching_rect" : [ 528.75, 432.0, 130.5, 35.0 ],
+					"style" : "",
 					"text" : "j.remote frequency @unit midinote",
 					"varname" : "cf[3]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 524.5, 519.0, 110.0, 20.0 ],
-					"text" : "j.remote frequency",
-					"varname" : "cf[2]"
 				}
 
 			}
@@ -123,7 +118,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 524.5, 625.0, 83.0, 20.0 ],
+					"patching_rect" : [ 524.5, 625.0, 83.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote clear"
 				}
 
@@ -137,7 +133,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 524.5, 120.0, 139.0, 20.0 ],
+					"patching_rect" : [ 524.5, 120.0, 139.0, 22.0 ],
+					"style" : "",
 					"text" : "substitute set setsymbol"
 				}
 
@@ -218,7 +215,8 @@
 							"parameter_type" : 0,
 							"parameter_mmin" : 20.0,
 							"parameter_mmax" : 20000.0,
-							"parameter_unitstyle" : 3
+							"parameter_unitstyle" : 3,
+							"parameter_steps" : 20000
 						}
 
 					}
@@ -256,15 +254,14 @@
 				"box" : 				{
 					"autoout" : 1,
 					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
-					"bordercolor" : [ 0.094118, 0.113725, 0.137255, 0.0 ],
-					"bwidthcolor" : [ 0.301961, 0.337255, 0.403922, 0.0 ],
 					"curvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
-					"fgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 8.0,
-					"hbwidthcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"hcurvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
 					"id" : "obj-31",
+					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
+					"logmarkers" : [ 0.0, 100.0, 1000.0, 10000.0 ],
 					"markercolor" : [ 0.301961, 0.337255, 0.403922, 1.0 ],
 					"maxclass" : "filtergraph~",
 					"nfilters" : 1,
@@ -279,6 +276,7 @@
 					"prototypename" : "M4L.black",
 					"range" : [ 0.041667, 24.0 ],
 					"setfilter" : [ 0, 6, 1, 1, 0, 103.504562, 0.097812, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"style" : "",
 					"textcolor" : [ 0.666667, 0.698039, 0.717647, 1.0 ],
 					"varname" : "FilterGraph"
 				}
@@ -286,45 +284,31 @@
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 117.5, 317.0, 119.0, 20.0 ],
-					"text" : "j.q2octavebandwidth",
-					"viewvisibility" : 0
+					"patching_rect" : [ 117.5, 317.0, 119.0, 22.0 ],
+					"style" : "",
+					"text" : "j.q2octavebandwidth"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-8",
-					"lockeddragscroll" : 0,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 117.5, 376.0, 119.0, 20.0 ],
-					"text" : "j.octavebandwidth2q",
-					"viewvisibility" : 0
+					"patching_rect" : [ 117.5, 376.0, 119.0, 22.0 ],
+					"style" : "",
+					"text" : "j.octavebandwidth2q"
 				}
 
 			}
@@ -337,7 +321,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 464.5, 22.0, 125.0, 20.0 ],
+					"patching_rect" : [ 464.5, 22.0, 125.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.2"
 				}
 
@@ -351,7 +336,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 331.0, 22.0, 125.0, 20.0 ],
+					"patching_rect" : [ 331.0, 22.0, 125.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.1"
 				}
 
@@ -393,7 +379,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 144.0, 175.0, 80.0, 20.0 ],
+					"patching_rect" : [ 144.0, 175.0, 80.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive type",
 					"varname" : "filtertype[2]"
 				}
@@ -408,7 +395,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 524.5, 173.0, 80.0, 20.0 ],
+					"patching_rect" : [ 524.5, 173.0, 80.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote type",
 					"varname" : "filtertype[1]"
 				}
@@ -416,16 +404,17 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-1",
-					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 83.333336, 438.0, 131.0, 47.0 ],
-					"text" : "j.remote gain @dataspace gain @unit linear",
+					"patching_rect" : [ 62.0, 437.5, 147.0, 22.0 ],
+					"style" : "",
+					"text" : "j.remote gain @unit linear",
 					"varname" : "filtergain[1]"
 				}
 
@@ -439,7 +428,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 117.5, 348.0, 154.0, 20.0 ],
+					"patching_rect" : [ 117.5, 348.0, 154.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote octave_bandwidth",
 					"varname" : "q[1]"
 				}
@@ -454,7 +444,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 49.166664, 508.0, 110.0, 20.0 ],
+					"patching_rect" : [ 38.5, 510.0, 110.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote frequency",
 					"varname" : "cf[1]"
 				}
@@ -469,7 +460,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 15.0, 175.0, 111.0, 20.0 ],
+					"patching_rect" : [ 15.0, 175.0, 111.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive filtergraph"
 				}
 
@@ -483,7 +475,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 524.5, 348.0, 83.0, 20.0 ],
+					"patching_rect" : [ 524.5, 348.0, 83.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote gain",
 					"varname" : "filtergain"
 				}
@@ -498,7 +491,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 524.5, 273.0, 154.0, 20.0 ],
+					"patching_rect" : [ 524.5, 273.0, 154.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote octave_bandwidth",
 					"varname" : "q"
 				}
@@ -513,7 +507,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 406.75, 464.0, 110.0, 20.0 ],
+					"patching_rect" : [ 406.75, 464.0, 110.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote frequency",
 					"varname" : "cf"
 				}
@@ -526,7 +521,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 35.0, 707.0, 25.0, 25.0 ]
+					"patching_rect" : [ 35.0, 707.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -538,7 +534,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 625.0, 25.0, 25.0 ]
+					"patching_rect" : [ 35.0, 625.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -546,13 +543,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-41",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 102.0, 667.0, 256.0, 47.0 ],
+					"style" : "",
 					"text" : "Conversion from freq, gain and q to biquad coefficients has to take place inside the poly~ (.alg) in case the poly is up- or downsampled."
 				}
 
@@ -566,7 +563,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 35.0, 667.0, 41.0, 20.0 ],
+					"patching_rect" : [ 35.0, 667.0, 41.0, 22.0 ],
+					"style" : "",
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -574,6 +572,9 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"fontface" : 0,
+					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-44",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -592,7 +593,7 @@
 					"destination" : [ "obj-31", 6 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 130.166672, 500.0, 268.523804, 500.0, 268.523804, 240.0, 145.357147, 240.0 ],
+					"midpoints" : [ 114.166667, 500.0, 268.523804, 500.0, 268.523804, 240.0, 145.357143, 240.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -751,7 +752,7 @@
 					"destination" : [ "obj-31", 5 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 89.0, 539.0, 284.964294, 539.0, 284.964294, 232.0, 125.214287, 232.0 ],
+					"midpoints" : [ 78.333333, 539.0, 284.964294, 539.0, 284.964294, 232.0, 125.214286, 232.0 ],
 					"source" : [ "obj-3", 1 ]
 				}
 
@@ -850,25 +851,23 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-7" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-15" : [ "live.menu", "live.menu", 0 ],
 			"obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-15" : [ "live.menu", "live.menu", 0 ],
+			"obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-7" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-22" : [ "live.text", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "j.octavebandwidth2q.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.q2octavebandwidth.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../../../../../../../../../../../ntations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -892,7 +891,8 @@
 				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
