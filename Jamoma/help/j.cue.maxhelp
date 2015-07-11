@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"revision" : 4,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 30.0, 154.0, 1610.0, 765.0 ],
+		"rect" : [ 177.0, 167.0, 1610.0, 765.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -51,8 +51,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -97,8 +97,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -255,8 +255,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -393,8 +393,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -1197,8 +1197,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -2164,12 +2164,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1610.0, 739.0 ],
+						"rect" : [ 177.0, 193.0, 1610.0, 739.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -2202,6 +2202,114 @@
 						"title" : "Namespace selection",
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"bubbleside" : 3,
+									"bubbletextmargin" : 10,
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-12",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1241.5, 249.5, 104.0, 49.0 ],
+									"presentation_rect" : [ 1218.5, 241.5, 0.0, 0.0 ],
+									"style" : "",
+									"text" : "Start from a full selection",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-11",
+									"linecount" : 5,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1007.0, 121.5, 554.0, 78.0 ],
+									"presentation_rect" : [ 1009.0, 121.5, 0.0, 0.0 ],
+									"style" : "",
+									"text" : "You can use j.namespace in combination with j.cue to fine-tune namespace selection using j.namespace advanced filters options.\n\nWhen linked to j.cue, you can then send a filter pattern to j.namespace that will apply to j.cue current namespace selection",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-9",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 1348.0, 402.0, 24.0, 24.0 ],
+									"presentation_rect" : [ 1347.0, 403.5, 0.0, 0.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "4",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-8",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 976.0, 263.0, 24.0, 24.0 ],
+									"presentation_rect" : [ 980.0, 218.5, 0.0, 0.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "3",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1389.0, 263.0, 114.0, 22.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 1389.0, 148.5, 127.0, 22.0 ],
+									"style" : "",
+									"text" : "namespace/select /"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 									"fontface" : 1,
@@ -2214,7 +2322,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1349.0, 285.0, 24.0, 24.0 ],
+									"patching_rect" : [ 1348.0, 333.5, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "2",
@@ -2235,7 +2343,7 @@
 									"mode" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 863.0, 287.0, 16.0, 15.0 ],
+									"patching_rect" : [ 868.0, 333.0, 10.0, 14.0 ],
 									"proportion" : 0.39,
 									"shape" : 3,
 									"style" : ""
@@ -2251,7 +2359,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 884.5, 283.0, 98.0, 64.0 ],
+									"patching_rect" : [ 884.5, 329.0, 98.0, 64.0 ],
 									"prototypename" : "Jamoma.light",
 									"style" : "",
 									"text" : "See j.namespace maxhelp for full description of filtering options",
@@ -2266,7 +2374,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1390.0, 383.0, 103.0, 22.0 ],
+									"patching_rect" : [ 1389.0, 500.0, 103.0, 22.0 ],
 									"style" : "",
 									"text" : "namespace none"
 								}
@@ -2284,7 +2392,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1220.5, 197.5, 126.0, 64.0 ],
+									"patching_rect" : [ 1219.5, 314.5, 126.0, 64.0 ],
 									"style" : "",
 									"text" : "Make j.cue bind to a named j.namespace",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -2305,7 +2413,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1349.0, 217.5, 24.0, 24.0 ],
+									"patching_rect" : [ 1348.0, 262.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "1",
@@ -2329,7 +2437,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 884.5, 190.5, 111.0, 78.0 ],
+									"patching_rect" : [ 863.0, 236.5, 111.0, 78.0 ],
 									"style" : "",
 									"text" : "Filter in only addresses containing 'gain'",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -2492,7 +2600,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 483.0, 455.0, 24.0, 24.0 ],
+									"patching_rect" : [ 483.0, 475.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "5",
@@ -2559,7 +2667,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 519.0, 449.5, 208.0, 35.0 ],
+									"patching_rect" : [ 519.0, 469.5, 208.0, 35.0 ],
 									"presentation" : 1,
 									"presentation_linecount" : 2,
 									"presentation_rect" : [ 517.0, 363.0, 216.0, 35.0 ],
@@ -2688,7 +2796,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1390.0, 217.5, 167.0, 22.0 ],
+									"patching_rect" : [ 1389.0, 334.5, 167.0, 22.0 ],
 									"style" : "",
 									"text" : "namespace namespace_filter"
 								}
@@ -2702,7 +2810,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1390.0, 279.5, 100.0, 35.0 ],
+									"patching_rect" : [ 1389.0, 396.5, 100.0, 35.0 ],
 									"style" : "",
 									"text" : "new gains_only, edit gains_only"
 								}
@@ -2716,7 +2824,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1007.0, 353.5, 162.0, 22.0 ],
+									"patching_rect" : [ 1007.0, 399.5, 162.0, 22.0 ],
 									"style" : "",
 									"text" : "loadmess refer selection_list"
 								}
@@ -2729,7 +2837,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 1007.0, 354.0, 101.0, 22.0 ],
+									"patching_rect" : [ 1007.0, 400.0, 101.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 0
 									}
@@ -2756,7 +2864,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
-									"patching_rect" : [ 1007.0, 378.75, 146.0, 203.75 ],
+									"patching_rect" : [ 1007.0, 424.75, 146.0, 203.75 ],
 									"rows" : 6,
 									"savemode" : 1,
 									"vscroll" : 0
@@ -2771,7 +2879,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1007.0, 205.0, 151.0, 49.0 ],
+									"patching_rect" : [ 1007.0, 249.5, 151.0, 49.0 ],
 									"style" : "",
 									"text" : "filter/set filtering_gains_addresses part gain mode restrict, /"
 								}
@@ -2785,7 +2893,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1007.0, 285.0, 126.0, 62.0 ],
+									"patching_rect" : [ 1007.0, 331.0, 126.0, 62.0 ],
 									"style" : "default",
 									"text" : "j.namespace namespace_filter @filter/list parameter @format coll"
 								}
@@ -2842,7 +2950,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1421.0, 408.75, 113.0, 47.0 ],
+									"patching_rect" : [ 1420.0, 525.75, 113.0, 47.0 ],
 									"style" : "",
 									"text" : "delete j.cue/j.namespace binding",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -2993,6 +3101,16 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1398.5, 682.0, 528.5, 682.0 ],
+									"source" : [ "obj-4", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-47", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
 									"source" : [ "obj-40", 0 ]
 								}
 
@@ -3002,7 +3120,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 1399.5, 507.75, 528.5, 507.75 ],
+									"midpoints" : [ 1398.5, 507.75, 528.5, 507.75 ],
 									"source" : [ "obj-48", 0 ]
 								}
 
@@ -3021,7 +3139,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 1399.5, 678.25, 528.5, 678.25 ],
+									"midpoints" : [ 1398.5, 682.25, 528.5, 682.25 ],
 									"source" : [ "obj-51", 0 ]
 								}
 
@@ -3076,7 +3194,7 @@
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 1399.5, 547.5, 528.5, 547.5 ],
+									"midpoints" : [ 1398.5, 547.5, 528.5, 547.5 ],
 									"source" : [ "obj-86", 0 ]
 								}
 
@@ -3112,8 +3230,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -3911,8 +4029,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -4070,8 +4188,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -4823,12 +4941,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 1168.0, 43.0, 505.0, 182.0 ],
+						"rect" : [ 1920.0, 45.0, 505.0, 182.0 ],
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"editing_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"bglocked" : 0,
@@ -5295,12 +5413,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 30.0, 180.0, 1610.0, 739.0 ],
+						"rect" : [ 0.0, 26.0, 1610.0, 739.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -5372,8 +5490,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -6285,8 +6403,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -6359,15 +6477,15 @@
  ],
 		"parameters" : 		{
 			"obj-76::obj-8::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-76::obj-4::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-76::obj-4::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-76::obj-8::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-76::obj-4::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-76::obj-4::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
 			"obj-76::obj-4::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-76::obj-4::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
 			"obj-76::obj-4::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-76::obj-4::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-76::obj-4::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-76::obj-4::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
-			"obj-76::obj-4::obj-5::obj-45" : [ "live.text", "live.text", 0 ]
+			"obj-76::obj-8::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-76::obj-4::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -6509,7 +6627,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"autosave" : 0
+		"embedsnapshot" : 0
 	}
 
 }
