@@ -38,47 +38,62 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"activeslidercolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
-					"appearance" : 2,
-					"fontsize" : 12.0,
-					"id" : "obj-28",
-					"maxclass" : "live.numbox",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 303.0, 584.535339, 160.5, 17.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 95.5, 224.0, 147.5, 17.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_longname" : "Mix",
-							"parameter_shortname" : "Mix",
-							"parameter_type" : 0,
-							"parameter_mmax" : 100.0,
-							"parameter_unitstyle" : 5,
-							"parameter_units" : "%.2f Semitones",
-							"parameter_steps" : 1001
-						}
-
-					}
-,
-					"varname" : "live.numbox[4]"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-27",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 185.5, 584.535339, 71.0, 20.0 ],
+					"patching_rect" : [ 20.5, 224.75, 71.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.5, 224.0, 71.0, 20.0 ],
+					"presentation_rect" : [ 20.5, 226.5, 71.0, 20.0 ],
 					"style" : "",
-					"text" : "Mix"
+					"text" : "Invert"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"automation" : "Invert Off",
+					"automationon" : "Invert On",
+					"id" : "obj-12",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 303.0, 582.0, 160.5, 17.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 95.5, 228.0, 147.5, 17.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "Invert",
+							"parameter_shortname" : "Invert",
+							"parameter_type" : 2,
+							"parameter_mmax" : 1.0,
+							"parameter_enum" : [ "Invert Off", "Invert On" ]
+						}
+
+					}
+,
+					"text" : "Invert Off",
+					"texton" : "Invert On",
+					"varname" : "live.text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-64",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 476.0, 582.0, 109.0, 22.0 ],
+					"style" : "",
+					"text" : "j.remote dsp/invert"
 				}
 
 			}
@@ -86,16 +101,14 @@
 				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-24",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 185.5, 519.151489, 71.0, 33.0 ],
+					"patching_rect" : [ 185.5, 519.151489, 71.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 20.5, 179.75, 71.0, 33.0 ],
+					"presentation_rect" : [ 20.5, 184.875, 71.0, 20.0 ],
 					"style" : "",
-					"text" : "Feedback delay time"
+					"text" : "Preamp"
 				}
 
 			}
@@ -112,16 +125,17 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 303.0, 527.151489, 160.5, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 95.5, 187.75, 147.5, 17.0 ],
+					"presentation_rect" : [ 95.5, 186.375, 147.5, 17.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "Feedback delay time",
 							"parameter_shortname" : "Feedback delay time",
 							"parameter_type" : 0,
-							"parameter_mmax" : 200.0,
-							"parameter_unitstyle" : 2,
-							"parameter_units" : "%.2f Semitones",
-							"parameter_steps" : 2001
+							"parameter_mmin" : -36.0,
+							"parameter_mmax" : 24.0,
+							"parameter_unitstyle" : 9,
+							"parameter_units" : "%.1f dB",
+							"parameter_steps" : 601
 						}
 
 					}
@@ -143,15 +157,14 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 303.0, 469.76767, 160.5, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 95.5, 143.5, 147.5, 17.0 ],
+					"presentation_rect" : [ 95.5, 144.75, 147.5, 17.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "Feedback level",
-							"parameter_shortname" : "Feedback level",
+							"parameter_longname" : "Decay",
+							"parameter_shortname" : "Decay",
 							"parameter_type" : 0,
-							"parameter_mmin" : -60.0,
-							"parameter_mmax" : 6.0,
-							"parameter_unitstyle" : 4,
+							"parameter_mmax" : 1.0,
+							"parameter_unitstyle" : 1,
 							"parameter_units" : "%.2f Semitones",
 							"parameter_steps" : 661
 						}
@@ -166,16 +179,14 @@
 				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-16",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 185.5, 469.76767, 71.0, 33.0 ],
+					"patching_rect" : [ 185.5, 469.76767, 71.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 20.5, 135.5, 71.0, 33.0 ],
+					"presentation_rect" : [ 20.5, 143.25, 71.0, 20.0 ],
 					"style" : "",
-					"text" : "Feedback level"
+					"text" : "Decay"
 				}
 
 			}
@@ -192,17 +203,16 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 297.5, 413.88382, 160.5, 17.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 95.5, 99.25, 147.5, 17.0 ],
+					"presentation_rect" : [ 95.5, 103.125, 147.5, 17.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "Frequency offset",
-							"parameter_shortname" : "Frequency offset",
+							"parameter_longname" : "Attack",
+							"parameter_shortname" : "Attack",
 							"parameter_type" : 0,
-							"parameter_mmin" : -500.0,
-							"parameter_mmax" : 500.0,
-							"parameter_unitstyle" : 3,
+							"parameter_mmax" : 1.0,
+							"parameter_unitstyle" : 1,
 							"parameter_units" : "%.2f Semitones",
-							"parameter_steps" : 1001
+							"parameter_steps" : 101
 						}
 
 					}
@@ -215,16 +225,14 @@
 				"box" : 				{
 					"fontface" : 1,
 					"id" : "obj-11",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 185.5, 413.88382, 73.0, 33.0 ],
+					"patching_rect" : [ 185.5, 413.88382, 73.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 20.5, 91.25, 73.0, 33.0 ],
+					"presentation_rect" : [ 20.5, 101.625, 73.0, 20.0 ],
 					"style" : "",
-					"text" : "Frequency offset"
+					"text" : "Attack"
 				}
 
 			}
@@ -239,7 +247,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 20.5, 60.0, 71.0, 20.0 ],
 					"style" : "",
-					"text" : "Pitch shift"
+					"text" : "Threshold"
 				}
 
 			}
@@ -263,10 +271,10 @@
 							"parameter_shortname" : "Pitch shift (semintones)",
 							"parameter_type" : 0,
 							"parameter_mmin" : -48.0,
-							"parameter_mmax" : 48.0,
+							"parameter_mmax" : 18.0,
 							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.2f Semitones",
-							"parameter_steps" : 9601
+							"parameter_units" : "%.1f dB",
+							"parameter_steps" : 541
 						}
 
 					}
@@ -336,30 +344,14 @@
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-12",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 476.0, 582.535339, 131.0, 22.0 ],
-					"style" : "",
-					"text" : "j.remote dsp/audio/mix"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 476.0, 469.76767, 206.0, 22.0 ],
+					"patching_rect" : [ 476.0, 469.76767, 165.0, 22.0 ],
 					"style" : "",
-					"text" : "j.remote dsp/feedback/gain @unit db",
+					"text" : "j.remote dsp/response/decay",
 					"varname" : "feedback"
 				}
 
@@ -374,9 +366,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 476.0, 526.151489, 155.0, 22.0 ],
+					"patching_rect" : [ 476.0, 526.151489, 156.0, 22.0 ],
 					"style" : "",
-					"text" : "j.remote dsp/feedback/time",
+					"text" : "j.remote dsp/limiter/preamp",
 					"varname" : "right"
 				}
 
@@ -391,9 +383,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 476.0, 412.38382, 158.0, 22.0 ],
+					"patching_rect" : [ 476.0, 412.38382, 165.0, 22.0 ],
 					"style" : "",
-					"text" : "j.remote dsp/frequency/shift"
+					"text" : "j.remote dsp/response/attack"
 				}
 
 			}
@@ -407,9 +399,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 476.0, 355.0, 164.0, 22.0 ],
+					"patching_rect" : [ 476.0, 355.0, 129.0, 22.0 ],
 					"style" : "",
-					"text" : "j.remote dsp/frequency/scale"
+					"text" : "j.remote dsp/threshold"
 				}
 
 			}
@@ -595,7 +587,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
+					"destination" : [ "obj-64", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-12", 0 ]
@@ -686,15 +678,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-28", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -708,6 +691,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-51", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-64", 0 ]
 				}
 
 			}
@@ -742,9 +734,9 @@
 		"parameters" : 		{
 			"obj-4" : [ "Pitch shift (semintones)", "Pitch shift (semintones)", 0 ],
 			"obj-23" : [ "Feedback delay time", "Feedback delay time", 0 ],
-			"obj-15" : [ "Frequency offset", "Frequency offset", 0 ],
-			"obj-28" : [ "Mix", "Mix", 0 ],
-			"obj-17" : [ "Feedback level", "Feedback level", 0 ],
+			"obj-17" : [ "Decay", "Decay", 0 ],
+			"obj-12" : [ "Invert", "Invert", 0 ],
+			"obj-15" : [ "Attack", "Attack", 0 ],
 			"obj-6::obj-10" : [ "live.text", "live.text", 0 ]
 		}
 ,

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,48 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "live.dial",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 692.0, 55.0, 44.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 171.0, 20.5, 44.0, 47.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "Preamp[1]",
+							"parameter_shortname" : "Preamp",
+							"parameter_type" : 0,
+							"parameter_mmin" : -36.0,
+							"parameter_mmax" : 24.0,
+							"parameter_unitstyle" : 4,
+							"parameter_steps" : 601
+						}
+
+					}
+,
+					"varname" : "live.dial[3]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 692.0, 111.0, 91.0, 35.0 ],
+					"style" : "",
+					"text" : "j.remote limiter/preamp"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
@@ -50,7 +92,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -146,12 +188,12 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 717.0, 56.0, 87.0, 47.0 ],
+					"patching_rect" : [ 560.0, 55.0, 87.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 111.666664, 20.5, 56.0, 47.0 ],
+					"presentation_rect" : [ 115.0, 20.5, 56.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.dial[2]",
+							"parameter_longname" : "Decay",
 							"parameter_shortname" : "Decay",
 							"parameter_type" : 0,
 							"parameter_mmax" : 1.0,
@@ -172,12 +214,12 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 538.0, 56.0, 87.0, 47.0 ],
+					"patching_rect" : [ 433.0, 55.0, 87.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 57.333332, 20.5, 56.0, 47.0 ],
+					"presentation_rect" : [ 59.0, 20.5, 56.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.dial[1]",
+							"parameter_longname" : "Attack",
 							"parameter_shortname" : "Attack",
 							"parameter_type" : 0,
 							"parameter_mmax" : 1.0,
@@ -198,12 +240,12 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 381.0, 56.0, 52.0, 47.0 ],
+					"patching_rect" : [ 343.0, 55.0, 52.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 20.5, 56.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.dial",
+							"parameter_longname" : "Threshold[1]",
 							"parameter_shortname" : "Threshold",
 							"parameter_type" : 0,
 							"parameter_mmin" : -48.0,
@@ -221,6 +263,7 @@
 , 			{
 				"box" : 				{
 					"automation" : "Invert Off",
+					"automationon" : "Invert On",
 					"id" : "obj-4",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
@@ -229,14 +272,14 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 538.0, 194.0, 83.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 177.0, 36.5, 84.0, 15.0 ],
+					"presentation_rect" : [ 215.5, 36.5, 59.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.text",
-							"parameter_shortname" : "live.text",
+							"parameter_longname" : "Invert",
+							"parameter_shortname" : "Invert",
 							"parameter_type" : 2,
 							"parameter_mmax" : 1.0,
-							"parameter_enum" : [ "Invert Off", "val2" ]
+							"parameter_enum" : [ "Invert Off", "Invert On" ]
 						}
 
 					}
@@ -325,11 +368,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-63",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 717.0, 112.0, 165.0, 22.0 ],
+					"patching_rect" : [ 560.0, 111.0, 100.0, 35.0 ],
 					"style" : "",
 					"text" : "j.remote response/decay"
 				}
@@ -340,11 +384,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-62",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 538.0, 112.0, 165.0, 22.0 ],
+					"patching_rect" : [ 433.0, 111.0, 100.0, 35.0 ],
 					"style" : "",
 					"text" : "j.remote response/attack"
 				}
@@ -355,11 +400,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-61",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 381.0, 112.0, 129.0, 22.0 ],
+					"patching_rect" : [ 343.0, 111.0, 64.0, 35.0 ],
 					"style" : "",
 					"text" : "j.remote threshold"
 				}
@@ -502,6 +548,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 701.5, 156.0, 681.5, 156.0, 681.5, 44.0, 701.5, 44.0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -523,7 +579,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 390.5, 141.0, 373.5, 141.0, 373.5, 46.0, 390.5, 46.0 ],
+					"midpoints" : [ 352.5, 153.0, 335.5, 153.0, 335.5, 45.0, 352.5, 45.0 ],
 					"source" : [ "obj-61", 0 ]
 				}
 
@@ -533,7 +589,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 547.5, 141.0, 529.5, 141.0, 529.5, 46.0, 547.5, 46.0 ],
+					"midpoints" : [ 442.5, 154.0, 424.5, 154.0, 424.5, 45.0, 442.5, 45.0 ],
 					"source" : [ "obj-62", 0 ]
 				}
 
@@ -543,7 +599,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 726.5, 141.0, 708.5, 141.0, 708.5, 46.0, 726.5, 46.0 ],
+					"midpoints" : [ 569.5, 154.0, 551.5, 154.0, 551.5, 45.0, 569.5, 45.0 ],
 					"source" : [ "obj-63", 0 ]
 				}
 
@@ -567,21 +623,31 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
-			"obj-16::obj-2::obj-45" : [ "live.text[2]", "live.text", 0 ],
-			"obj-16::obj-2::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-4" : [ "live.text", "live.text", 0 ],
+			"obj-16::obj-2::obj-13" : [ "Release", "Release", 0 ],
+			"obj-3" : [ "Decay", "Decay", 0 ],
 			"obj-16::obj-2::obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-1" : [ "live.dial", "Threshold", 0 ],
 			"obj-16::obj-2::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-16::obj-2::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-1" : [ "Threshold[1]", "Threshold", 0 ],
+			"obj-4" : [ "Invert", "Invert", 0 ],
 			"obj-16::obj-2::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-16::obj-2::obj-27" : [ "Threshold", "Threshold", 0 ],
 			"obj-16::obj-2::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-16::obj-2::obj-6" : [ "live.text[3]", "live.text", 0 ],
-			"obj-2" : [ "live.dial[1]", "Attack", 0 ],
-			"obj-3" : [ "live.dial[2]", "Decay", 0 ],
 			"obj-16::obj-2::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-16::obj-2::obj-13" : [ "Release", "Release", 0 ]
+			"obj-2" : [ "Attack", "Attack", 0 ],
+			"obj-16::obj-2::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-7" : [ "Preamp[1]", "Preamp", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

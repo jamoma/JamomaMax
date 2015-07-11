@@ -638,7 +638,7 @@ blob.8/width.y 0.400000
 # 
 # ###########################################
 
-- preset "donut_shapshot_ring"
+- preset "donut_snapshot_ring"
 - description "something about this preset"
 # ###########################################
 # 

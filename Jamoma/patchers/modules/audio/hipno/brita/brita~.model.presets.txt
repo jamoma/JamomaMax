@@ -1,0 +1,62 @@
+- preset "default"
+- description "something about this preset"
+# ###########################################
+preset_offset 0
+hipnoscope/preset original_refault
+hipnoscope/puck_position -0.118644 0.211864
+
+- preset "Barking_Flange_Tube"
+- description "something about this preset"
+# ###########################################
+preset_offset 1
+hipnoscope/preset rainbow_propellor
+hipnoscope/puck_position 0.000000 0.000000
+
+- preset "Cricket_Choir_Percussion"
+- description "something about this preset"
+# ###########################################
+preset_offset 2
+hipnoscope/preset aluminum_tree
+hipnoscope/puck_position 0.347458 0.025424
+
+- preset "Murk_Indicies"
+- description "something about this preset"
+# ###########################################
+preset_offset 3
+hipnoscope/preset aluminum_tree
+hipnoscope/puck_position 0.415254 -0.474576
+
+- preset "Platonic_Radio_4_Pads"
+- description "something about this preset"
+# ###########################################
+preset_offset 4
+hipnoscope/preset donut_snapshot_ring
+hipnoscope/puck_position -0.194915 0.703390
+
+- preset "Sheener"
+- description "something about this preset"
+# ###########################################
+preset_offset 5
+hipnoscope/preset mitosis_vertical
+hipnoscope/puck_position 0.296610 0.500000
+
+- preset "Sudden_Whispers"
+- description "something about this preset"
+# ###########################################
+preset_offset 6
+hipnoscope/preset disco_myopia
+hipnoscope/puck_position 0.559322 0.355932
+
+- preset "Trapped_Gaps"
+- description "something about this preset"
+# ###########################################
+preset_offset 7
+hipnoscope/preset aqua_epiphany
+hipnoscope/puck_position -0.008475 0.889831
+
+- preset "Angry_Hornet_Suburbs"
+- description "something about this preset"
+# ###########################################
+preset_offset 8
+hipnoscope/preset lattice_snapshot
+hipnoscope/puck_position 0.610169 0.186441
