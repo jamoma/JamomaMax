@@ -185,29 +185,9 @@
 			</digest>
 			<description>
 				The <m>optimize</m> message allows to filter out and delete redundant values between consecutive states. For example, assuming the following two states:<br/><br/>
-<techdetail>				<ul><li>State_1</li>
-				<ul>
-					<li>address_A 1</li>
-					<li>address_B 2</li>
-					<li>address_C 3</li>
-					<li>address_D 4</li>
-				</ul>
-				<li>State_2</li>
-				<ul>
-					<li>address_A 1</li>
-					<li>address_B 20</li>
-					<li>address_C 3</li>
-					<li>address_E 5</li>
-				</ul>
-			</ul>
-		</techdetail>
+<techdetail><ul><li>State_1</li><ul><li>address_A 1</li><li>address_B 2</li><li>address_C 3</li><li>address_D 4</li></ul><li>State_2</li><ul><li>address_A 1</li><li>address_B 20</li><li>address_C 3</li><li>address_E 5</li></ul></ul></techdetail>
 			<m>'optimize State_1 State_2'</m> will slim State_2 as:
-<techdetail>
-				<ul>
-				<li>address_B 20</li>
-				<li>address_E 5</li>
-			</ul>
-</techdetail>			</description>
+<techdetail><ul><li>address_B 20</li><li>address_E 5</li></ul></techdetail>			</description>
 		</method>
 		<method name="order">
 			<arglist>
@@ -230,9 +210,7 @@
 			</digest>
 			<description>
 				The <m>get</m> message followed by a state name and an attribute name allows to query value of one of the stored state attributes. State attributes are:
-				<ul><li>description : a text description attached to a stored state</li>
-				<li>ramp : a time in milliseconds that will be use to ramp to recalled stored values</li>
-			</ul>
+				<ul><li>description : a text description attached to a stored state</li><li>ramp : a time in milliseconds that will be use to ramp to recalled stored values</li></ul>
 			</description>
 		</method>
 		<method name="output">
@@ -334,9 +312,7 @@
 			</digest>
 			<description>
 				The <m>set</m> message followed by a state name and an attribute name and value allows to define value of one of the stored state attributes. State attributes are:
-				<ul><li>description : allows to attach a text description to a stored state</li>
-				<li>ramp : allows to set a time in milliseconds that will be use to ramp to stored values</li>
-			</ul>
+				<ul><li>description : allows to attach a text description to a stored state</li><li>ramp : allows to set a time in milliseconds that will be use to ramp to stored values</li></ul>
 			</description>
 		</method>
 		<method name="update">
@@ -444,6 +420,7 @@
 	<seealsolist>
 		<seealso name="j.namespace"/>
 		<seealso name="j.model"/>
+		<seealso name="cue_manager.model"/>
 		<seealso name="pattrstorage"/>
 	</seealsolist>
 </c74object>

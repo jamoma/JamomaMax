@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 177.0, 167.0, 1610.0, 765.0 ],
+		"rect" : [ 162.0, 192.0, 1596.0, 763.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -1202,7 +1202,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1610.0, 739.0 ],
+						"rect" : [ 0.0, 26.0, 1596.0, 737.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -2169,7 +2169,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 177.0, 193.0, 1610.0, 739.0 ],
+						"rect" : [ 0.0, 26.0, 1596.0, 737.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -2202,6 +2202,90 @@
 						"title" : "Namespace selection",
 						"boxes" : [ 							{
 								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-21",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "cue_manager.model.maxhelp" ],
+									"patching_rect" : [ 120.0, 552.0, 175.0, 22.0 ],
+									"style" : "",
+									"text" : "t cue_manager.model.maxhelp"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-20",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 120.0, 581.0, 50.0, 22.0 ],
+									"style" : "",
+									"text" : "load $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-17",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 120.0, 607.0, 53.0, 22.0 ],
+									"style" : "",
+									"text" : "pcontrol"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+									"bgcolor2" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+									"bgfillcolor_angle" : 270.0,
+									"bgfillcolor_autogradient" : 0.0,
+									"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
+									"bgfillcolor_color1" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+									"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+									"bgfillcolor_proportion" : 0.39,
+									"bgfillcolor_type" : "color",
+									"fontname" : "Lato Regular",
+									"fontsize" : 14.0,
+									"gradient" : 1,
+									"id" : "obj-16",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 120.0, 468.5, 133.0, 25.0 ],
+									"style" : "",
+									"text" : "cue_manager.model",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 14.0,
+									"id" : "obj-1",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 12.0, 469.5, 258.0, 57.0 ],
+									"style" : "",
+									"text" : "You may also like cue_manager.model and its view providing a handy gui for namespace manual selection",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"bubble" : 1,
 									"bubbleside" : 3,
 									"bubbletextmargin" : 10,
@@ -2213,7 +2297,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1241.5, 249.5, 104.0, 49.0 ],
-									"presentation_rect" : [ 1218.5, 241.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Start from a full selection",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -2230,7 +2313,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1007.0, 121.5, 554.0, 78.0 ],
-									"presentation_rect" : [ 1009.0, 121.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "You can use j.namespace in combination with j.cue to fine-tune namespace selection using j.namespace advanced filters options.\n\nWhen linked to j.cue, you can then send a filter pattern to j.namespace that will apply to j.cue current namespace selection",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -2252,7 +2334,6 @@
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 1348.0, 402.0, 24.0, 24.0 ],
-									"presentation_rect" : [ 1347.0, 403.5, 0.0, 0.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "4",
@@ -2279,7 +2360,6 @@
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 976.0, 263.0, 24.0, 24.0 ],
-									"presentation_rect" : [ 980.0, 218.5, 0.0, 0.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "3",
@@ -2850,7 +2930,7 @@
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cols" : 2,
+									"cols" : 1,
 									"colwidth" : 172,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontface" : 0,
@@ -2865,7 +2945,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 1007.0, 424.75, 146.0, 203.75 ],
-									"rows" : 6,
+									"rows" : 1,
 									"savemode" : 1,
 									"vscroll" : 0
 								}
@@ -3071,6 +3151,15 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-7", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
@@ -3084,6 +3173,24 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-17", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-20", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-20", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-21", 0 ]
 								}
 
 							}
@@ -3235,7 +3342,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1610.0, 739.0 ],
+						"rect" : [ 162.0, 218.0, 1596.0, 737.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -4034,7 +4141,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1610.0, 739.0 ],
+						"rect" : [ 0.0, 26.0, 1596.0, 737.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -4946,7 +5053,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 1920.0, 45.0, 505.0, 182.0 ],
+						"rect" : [ 1404.0, 50.0, 505.0, 182.0 ],
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"editing_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"bglocked" : 0,
@@ -5272,7 +5379,7 @@
 , 							{
 								"box" : 								{
 									"angle" : 270.0,
-									"bgcolor" : [ 1.0, 1.0, 0.75, 0.0 ],
+									"bgcolor" : [ 1.0, 1.0, 0.75, 0.775 ],
 									"id" : "obj-2",
 									"maxclass" : "panel",
 									"mode" : 0,
@@ -5418,7 +5525,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1610.0, 739.0 ],
+						"rect" : [ 0.0, 26.0, 1596.0, 737.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -6408,7 +6515,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1610.0, 739.0 ],
+						"rect" : [ 0.0, 26.0, 1596.0, 737.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -6476,16 +6583,16 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-76::obj-8::obj-13" : [ "live.dial", "Sample rate", 0 ],
 			"obj-76::obj-4::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-76::obj-4::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-76::obj-4::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-76::obj-4::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-76::obj-4::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-76::obj-4::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-76::obj-4::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-76::obj-4::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-76::obj-8::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-76::obj-4::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ]
+			"obj-76::obj-8::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-76::obj-4::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-76::obj-4::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-76::obj-4::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
