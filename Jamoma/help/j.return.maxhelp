@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 249.0, 161.0, 1226.0, 872.0 ],
+		"rect" : [ 212.0, 109.0, 1226.0, 872.0 ],
 		"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -56,7 +56,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1226.0, 846.0 ],
+						"rect" : [ 212.0, 135.0, 1226.0, 846.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -86,6 +86,19 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 224.0, 386.0, 123.0, 22.0 ],
+									"style" : "",
+									"text" : "j.receive my_position"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-10",
 									"maxclass" : "message",
@@ -752,7 +765,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 387.0, 277.0, 108.0, 22.0 ],
+									"patching_rect" : [ 387.0, 247.0, 108.0, 22.0 ],
 									"style" : "",
 									"text" : "0. 0. 0. ramp 4000"
 								}
@@ -765,7 +778,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 224.0, 277.0, 151.0, 22.0 ],
+									"patching_rect" : [ 224.0, 247.0, 151.0, 22.0 ],
 									"style" : "",
 									"text" : "720. 0. 0.7 aed ramp 4000"
 								}
@@ -780,7 +793,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 224.0, 344.0, 130.0, 62.0 ],
+									"patching_rect" : [ 224.0, 289.0, 130.0, 62.0 ],
 									"style" : "",
 									"text" : "j.return my_position @type array @dataspace position @unit xyz"
 								}
@@ -847,15 +860,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-53", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-2", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -915,6 +919,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-34", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-53", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -2061,7 +2074,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 249.0, 187.0, 1226.0, 846.0 ],
+						"rect" : [ 0.0, 26.0, 1226.0, 846.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
