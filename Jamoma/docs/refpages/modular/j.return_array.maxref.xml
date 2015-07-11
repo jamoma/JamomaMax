@@ -432,5 +432,6 @@
 		<seealso name="j.return"/>
 		<seealso name="j.parameter_array"/>
 		<seealso name="j.message_array"/>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>

@@ -375,5 +375,6 @@
 		<seealso name="j.send">
 			<!-- TEXT_HERE -->
 		</seealso>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>

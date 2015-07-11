@@ -232,9 +232,7 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.message">
-			<!-- TEXT_HERE -->
-		</seealso>
+		<seealso name="j.message"/>
 		<seealso name="j.message_array">
 			<!-- TEXT_HERE -->
 		</seealso>
@@ -271,5 +269,6 @@
 		<seealso name="j.view">
 			<!-- TEXT_HERE -->
 		</seealso>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>

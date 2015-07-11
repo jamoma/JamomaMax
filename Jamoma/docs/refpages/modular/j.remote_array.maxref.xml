@@ -294,5 +294,6 @@ The <m>setArray</m> message followed by a list dispatches the values to paramete
 		<seealso name="j.remote"/>
 		<seealso name="j.parameter_array"/>
 		<seealso name="j.view"/>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>

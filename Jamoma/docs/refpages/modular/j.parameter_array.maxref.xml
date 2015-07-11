@@ -443,5 +443,6 @@ Stored and output value will be an integer number (<i>int</i>). Other values get
 		<seealso name="j.message_array"/>
 		<seealso name="j.return_array"/>
 		<seealso name="j.remote_array"/>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>
