@@ -247,41 +247,39 @@
 				The <m>output</m> message followed by a state name (<i>symbol</i>) or index (<i>int</i>) outputs the specified state's content out of j.cue leftmost outlet. A symbol used as an optional second argument to the <m>output</m> message may be used to restrict the content output to a node address in the state only. The address may be model address or a parameter address.<br/><br/>Without argument, the <m>output</m> message outputs the last stored or recalled state
 			</description>
 		</method>
-		<!-- NAMESPACE MESSAGES ARE CURRENTLY BROKEN
 		<method name="namespace/select">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
+				<arg name="nodes addresses" type="list" optional="0"/>
 			</arglist>
 			<digest>
-				Select an address within an indentified namespace
+				Add nodes to j.cue current addresses selection
 			</digest>
 			<description>
-				When using j.cue along with j.namespace, the message 'namespace/select' will select one or many addresses specified as argument in the namespace 
+				The <m>namespace/select</m> message adds some nodes to j.cue current addresses selection. Addresses may be the root of Jamoma namespace (/), model addresses or parameters full address. By default, j.cue will select all addresses under the root (/)
 			</description>
 		</method>
 		<method name="namespace/unselect">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
+				<arg name="nodes addresses" type="list" optional="0"/>
 			</arglist>
 			<digest>
-				Unselect an address within an indentified namespace
+				Remove nodes to j.cue current addresses selection
 			</digest>
 			<description>
-				When using j.cue along with j.namespace, the message 'namespace/unselect' will unselect one or many addresses specified as argument in the namespace
+				The <m>namespace/unselect</m> message removes some nodes from j.cue current addresses selection. Addresses may be the root of Jamoma namespace (/), model addresses or parameters full address. By default, j.cue will select all addresses under the root (/)
 			</description>
 		</method>
 		<method name="namespace/grab">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
+				<arg name="state name" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
 				Select the namespace of an existing cue
 			</digest>
 			<description>
-				When using j.cue along with j.namespace, the message 'namespace/grab' will select addresses in an existing cue specified as argument
-			</description>
+				The <m>namespace/grab</m> message grabs the addresses selection from a named state defined as argument to the message
+</description>
 		</method>
-		-->
 		<method name="read">
 			<arglist>
 				<arg name="file path" type="symbol" optional="1"/>
@@ -427,7 +425,7 @@
 				Bind to a specific j.namespace selection
 			</digest>
 			<description>
-				The <at>namespace</at> attribute followed by a j.namespace's named selection (<i>symbol</i>) will set j.cue to use this namespace selection. This allows to use j.namespace filtering features to select nodes address to store value of in a j.cue state
+				The <at>namespace</at> attribute followed by a j.namespace's named selection (<i>symbol</i>) will set j.cue to use this namespace selection. This allows to use j.namespace filtering features to select nodes addresses to store value of in a j.cue state
 			</description>
 		</attribute>
 		<!-- WE SHOULD GET RID OF RELATIVE ATTR SINCE IT ALMOST DUPLICATES @ADDRESS-->
