@@ -222,6 +222,21 @@
 				The <m>order</m> message followed by list of states name reorders states in j.cue in the order defined by the list
 			</description>
 		</method>
+		<method name="get">
+			<arglist>
+				<arg name="state name" type="list" optional="0"/>
+				<arg name="attribute name" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Get stored state attributes (ie. description &amp; ramp)
+			</digest>
+			<description>
+				The <m>get</m> message followed by a state name and an attribute name allows to query value of one of the stored state attributes. State attributes are:
+				<ul><li>description : a text description attached to a stored state</li>
+				<li>ramp : a time in milliseconds that will be use to ramp to recalled stored values</li>
+			</ul>
+			</description>
+		</method>
 		<method name="output">
 			<arglist>
 				<arg name="state name or index" type="atom" optional="1"/>
@@ -310,6 +325,22 @@
 			</digest>
 			<description>
 				The <m>rename</m> message followed by a state name or index renamed given state under the name given as second argument (<i>symbol</i>)
+			</description>
+		</method>
+		<method name="set">
+			<arglist>
+				<arg name="state name" type="list" optional="0"/>
+				<arg name="attribute name" type="list" optional="0"/>
+				<arg name="attribute value" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Set stored state attributes (ie. description &amp; ramp)
+			</digest>
+			<description>
+				The <m>set</m> message followed by a state name and an attribute name and value allows to define value of one of the stored state attributes. State attributes are:
+				<ul><li>description : allows to attach a text description to a stored state</li>
+				<li>ramp : allows to set a time in milliseconds that will be use to ramp to stored values</li>
+			</ul>
 			</description>
 		</method>
 		<method name="update">
