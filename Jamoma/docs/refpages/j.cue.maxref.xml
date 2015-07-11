@@ -24,7 +24,7 @@
 		</metadata>
 	</metadatalist>
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
+		<inlet id="0" type="any">
 			<digest>
 				Messages to j.cue
 			</digest>
@@ -34,7 +34,7 @@
 		</inlet>
 	</inletlist>
 	<outletlist>
-		<outlet id="0" type="atom">
+		<outlet id="0" type="any">
 			<digest>
 				State content output
 			</digest>
@@ -42,7 +42,7 @@
 				Leftmost outlet is use to output content of the state requested by the <m>output</m> message
 			</description>
 		</outlet>
-		<outlet id="1" type="OUTLET_TYPE">
+		<outlet id="1" type="any">
 			<digest>
 				Dumpout
 			</digest>
@@ -83,7 +83,7 @@
 		</method>
 		<method name="copy">
 			<arglist>
-				<arg name="source state name or index" type="atom" optional="0"/>
+				<arg name="source state name or index" type="any" optional="0"/>
 				<arg name="new state name" type="symbol" optional="0"/>
 				<arg name="state index" type="int" optional="1"/>
 			</arglist>
@@ -106,9 +106,7 @@
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
-			</arglist>
+			<arglist/>
 			<digest>
 				Dump j.cue attributes value out of j.cue rightmost output
 			</digest>
@@ -129,8 +127,8 @@
 		</method>
 		<method name="interpolate">
 			<arglist>
-				<arg name="state name or index" type="atom" optional="0"/>
-				<arg name="state name or index" type="atom" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
 				<arg name="interpolation ratio" type="float" optional="0"/>
 			</arglist>
 			<digest>
@@ -142,9 +140,9 @@
 		</method>
 		<method name="mix">
 			<arglist>
-				<arg name="state name or index" type="atom" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
 				<arg name="associated weight" type="float" optional="0"/>
-				<arg name="state name or index" type="atom" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
 				<arg name="associated weight" type="float" optional="0"/>
 				<arg name="..." type="list" optional="1"/>
 			</arglist>
@@ -157,7 +155,7 @@
 		</method>
 		<method name="move">
 			<arglist>
-				<arg name="state name or index" type="atom" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
 				<arg name="new index" type="int" optional="0"/>
 			</arglist>
 			<digest>
@@ -224,8 +222,8 @@
 		</method>
 		<method name="get">
 			<arglist>
-				<arg name="state name" type="list" optional="0"/>
-				<arg name="attribute name" type="list" optional="0"/>
+				<arg name="state name" type="symbol" optional="0"/>
+				<arg name="attribute name" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
 				Get stored state attributes (ie. description &amp; ramp)
@@ -239,7 +237,7 @@
 		</method>
 		<method name="output">
 			<arglist>
-				<arg name="state name or index" type="atom" optional="1"/>
+				<arg name="state name or index" type="any" optional="1"/>
 				<arg name="node address" type="symbol" optional="1"/>
 			</arglist>
 			<digest>
@@ -306,7 +304,7 @@
 		</method>
 		<method name="recall">
 			<arglist>
-				<arg name="state name or index" type="atom" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
 			</arglist>
 			<digest>
 				Recall the state of many models
@@ -329,9 +327,9 @@
 		</method>
 		<method name="set">
 			<arglist>
-				<arg name="state name" type="list" optional="0"/>
-				<arg name="attribute name" type="list" optional="0"/>
-				<arg name="attribute value" type="list" optional="0"/>
+				<arg name="state name" type="symbol" optional="0"/>
+				<arg name="attribute name" type="symbol" optional="0"/>
+				<arg name="attribute value" type="any" optional="0"/>
 			</arglist>
 			<digest>
 				Set stored state attributes (ie. description &amp; ramp)
@@ -392,7 +390,7 @@
 				The <at>current</at> attribute is a read-only attribute that displays the lastly stored, recalled or updated state name
 			</description>
 		</attribute>
-		<attribute name="current/description" get="1" set="1" type="atom" size="1">
+		<attribute name="current/description" get="1" set="1" type="any" size="1">
 			<digest>
 				Description of the current state
 			</digest>
@@ -416,7 +414,7 @@
 				The <at>current/ramp</at> attribute allows to get or set a ramp time length specified as milliseconds for the current state. When recalling a state with an associated ramp time, parameters value will be reached from their current patcher state over the defined amount of time
 			</description>
 		</attribute>
-		<attribute name="names" get="1" set="0" type="atom" size="1">
+		<attribute name="names" get="1" set="0" type="any" size="1">
 			<digest>
 				Get the name of the states stored in j.cue
 			</digest>
