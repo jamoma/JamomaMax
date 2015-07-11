@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 4,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -53,11 +53,12 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1156.0, 868.0 ],
+						"rect" : [ 0.0, 26.0, 1156.0, 868.0 ],
+						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -700,11 +701,12 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"rect" : [ 0.0, 26.0, 1156.0, 868.0 ],
+						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1007,7 +1009,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 286.161041, 57.567627 ]
+									"patching_rect" : [ 10.0, 10.0, 286.161011, 57.567627 ]
 								}
 
 							}
@@ -1107,11 +1109,12 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1156.0, 868.0 ],
+						"rect" : [ 100.0, 126.0, 1156.0, 868.0 ],
+						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1415,7 +1418,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 286.161041, 57.567627 ]
+									"patching_rect" : [ 10.0, 10.0, 286.161011, 57.567627 ]
 								}
 
 							}
@@ -1930,7 +1933,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -25,7 +25,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 2,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 4,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -50,7 +50,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -452,7 +452,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -493,7 +493,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 181.0, 151.0, 289.0, 20.0 ],
+													"patching_rect" : [ 181.0, 151.0, 289.0, 22.0 ],
 													"style" : "",
 													"text" : "j.parameter myParameter @type string @default foo"
 												}
@@ -513,6 +513,7 @@
 											}
 , 											{
 												"box" : 												{
+													"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-2",
@@ -520,7 +521,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 19.0, 142.0, 111.0, 20.0 ],
+													"patching_rect" : [ 19.0, 142.0, 111.0, 22.0 ],
 													"style" : "",
 													"text" : "j.model @priority 2"
 												}
@@ -605,7 +606,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -666,6 +667,7 @@
 											}
 , 											{
 												"box" : 												{
+													"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-2",
@@ -867,7 +869,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -932,12 +934,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1174.0, 801.0 ],
+						"rect" : [ 0.0, 26.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1124,12 +1126,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 119.0, 339.0, 786.0, 444.0 ],
+										"rect" : [ 19.0, 239.0, 786.0, 444.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1519,7 +1521,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1585,6 +1587,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 									"id" : "obj-10",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -1679,7 +1682,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1972,12 +1975,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1174.0, 801.0 ],
+						"rect" : [ 100.0, 126.0, 1174.0, 801.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2018,7 +2021,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2833,7 +2836,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 4,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -3050,7 +3053,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-7",
-									"items" : [ "default", ",", "amogwai_default_1", ",", "amogwai_default_2", ",", "amogwai_default_3", ",", "amogwai_default_4", ",", "amogwai_default_5" ],
+									"items" : [ "default", ",", "Default_1", ",", "Default_2", ",", "Default_3", ",", "Default_4", ",", "Default_5", ",", "Default_6", ",", "Default_7", ",", "Default_8", ",", "Barking_Ring_1", ",", "Barking_Ring_2", ",", "Barking_Ring_3", ",", "Barking_Ring_4", ",", "Barking_Ring_5", ",", "Barking_Ring_6", ",", "Barking_Ring_7", ",", "Barking_Ring_8", ",", "Effervescent_Horn_Queues_1", ",", "Effervescent_Horn_Queues_2", ",", "Effervescent_Horn_Queues_3", ",", "Effervescent_Horn_Queues_4", ",", "Effervescent_Horn_Queues_5", ",", "Effervescent_Horn_Queues_6", ",", "Effervescent_Horn_Queues_7", ",", "Effervescent_Horn_Queues_8", ",", "Globe_of_Smeary_Echoes_1", ",", "Globe_of_Smeary_Echoes_2", ",", "Globe_of_Smeary_Echoes_3", ",", "Globe_of_Smeary_Echoes_4", ",", "Globe_of_Smeary_Echoes_5", ",", "Globe_of_Smeary_Echoes_6", ",", "Globe_of_Smeary_Echoes_7", ",", "Globe_of_Smeary_Echoes_8", ",", "Scratching_Ranges_1", ",", "Scratching_Ranges_2", ",", "Scratching_Ranges_3", ",", "Scratching_Ranges_4", ",", "Scratching_Ranges_5", ",", "Scratching_Ranges_6", ",", "Scratching_Ranges_7", ",", "Scratching_Ranges_8", ",", "Shakin'_Remora_1", ",", "Shakin'_Remora_2", ",", "Shakin'_Remora_3", ",", "Shakin'_Remora_4", ",", "Shakin'_Remora_5", ",", "Shakin'_Remora_6", ",", "Shakin'_Remora_7", ",", "Shakin'_Remora_8", ",", "Slap_Labyrinth_1", ",", "Slap_Labyrinth_2", ",", "Slap_Labyrinth_3", ",", "Slap_Labyrinth_4", ",", "Slap_Labyrinth_5", ",", "Slap_Labyrinth_6", ",", "Slap_Labyrinth_7", ",", "Slap_Labyrinth_8", ",", "Swamp_Taxonomy_1", ",", "Swamp_Taxonomy_2", ",", "Swamp_Taxonomy_3", ",", "Swamp_Taxonomy_4", ",", "Swamp_Taxonomy_5", ",", "Swamp_Taxonomy_6", ",", "Swamp_Taxonomy_7", ",", "Swamp_Taxonomy_8", ",", "The_Queasy_Cruise_1", ",", "The_Queasy_Cruise_2", ",", "The_Queasy_Cruise_3", ",", "The_Queasy_Cruise_4", ",", "The_Queasy_Cruise_5", ",", "The_Queasy_Cruise_6", ",", "The_Queasy_Cruise_7", ",", "The_Queasy_Cruise_8", ",", "Try_The_Corners_1", ",", "Try_The_Corners_2", ",", "Try_The_Corners_3", ",", "Try_The_Corners_4", ",", "Try_The_Corners_5", ",", "Try_The_Corners_6", ",", "Try_The_Corners_7", ",", "Try_The_Corners_8", ",", "Midnight!_1", ",", "Midnight!_2", ",", "Midnight!_3", ",", "Midnight!_4", ",", "Midnight!_5", ",", "Midnight!_6", ",", "Midnight!_7", ",", "Midnight!_8", ",", "Watch_out_for_Gizmo..._1", ",", "Watch_out_for_Gizmo..._2", ",", "Watch_out_for_Gizmo..._3", ",", "Watch_out_for_Gizmo..._4", ",", "Watch_out_for_Gizmo..._5", ",", "Watch_out_for_Gizmo..._6", ",", "Watch_out_for_Gizmo..._7", ",", "Watch_out_for_Gizmo..._8", ",", "amogwai_default_1", ",", "amogwai_default_2", ",", "amogwai_default_3", ",", "amogwai_default_4", ",", "amogwai_default_5" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -3183,22 +3186,22 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"formantcorrection" : [ 0 ],
-													"originallengthms" : [ 0.0 ],
 													"speed" : [ 1.0 ],
-													"play" : [ 0 ],
-													"pitchshiftcent" : [ 0 ],
 													"mode" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"followglobaltempo" : [ 0 ],
-													"formant" : [ 1.0 ],
-													"pitchshift" : [ 1.0 ],
-													"originaltempo" : [ 120.0 ],
 													"quality" : [ "basic" ],
+													"originaltempo" : [ 120.0 ],
+													"originallengthms" : [ 0.0 ],
+													"formantcorrection" : [ 0 ],
+													"slurtime" : [ 0.0 ],
+													"pitchshift" : [ 1.0 ],
+													"play" : [ 0 ],
 													"basictuning" : [ 440 ],
 													"pitchcorrection" : [ 0 ],
-													"timestretch" : [ 0 ]
+													"originallength" : [ 0.0, "ticks" ],
+													"formant" : [ 1.0 ],
+													"followglobaltempo" : [ 0 ],
+													"timestretch" : [ 0 ],
+													"pitchshiftcent" : [ 0 ]
 												}
 
 											}
@@ -3723,7 +3726,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3930,6 +3933,7 @@
 							}
 , 							{
 								"box" : 								{
+									"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
 									"id" : "obj-7",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -4195,10 +4199,19 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
-			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
 			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-39::obj-13::obj-6" : [ "live.dial[2]", "Feedback gain", 0 ]
+			"obj-39::obj-13::obj-16::obj-2::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-13" : [ "Release", "Release", 0 ],
+			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
+			"obj-39::obj-13::obj-6" : [ "live.text[3]", "live.text", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -4209,50 +4222,55 @@
 			}
 , 			{
 				"name" : "spectral_shift~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.spectral_shift_voice~.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "vibes-a1.aif",
+				"bootpath" : "C74:/media/msp",
+				"type" : "AIFF",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "spectral_shift~.view.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.view.maxpat",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../patchers/modules/data/mouse",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
