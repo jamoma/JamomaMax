@@ -57,7 +57,7 @@
 				Number of output addresses
 			</digest>
 			<description>
-				j.namespace middle outlet outputs the size of the filter result that is, the number of matching nodes addresses
+				<o>j.namespace</o> middle outlet outputs the size of the filter result that is, the number of matching nodes addresses
 			</description>
 		</outlet>
 		<outlet id="2" type="any">
@@ -65,7 +65,7 @@
 				dumpout
 			</digest>
 			<description>
-				Dump out values of the various j.namespace attribute
+				Dump out values of the various <o>j.namespace</o> attributes
 			</description>
 		</outlet>
 	</outletlist>
@@ -97,7 +97,7 @@
 				Trigger filtering from this address
 			</digest>
 			<description>
-				A symbol at j.namespace inlet triggers namespace filtering from the specified address (sets the <at>address</at> attribute and trigger filtering)
+				A symbol at <o>j.namespace</o> inlet triggers namespace filtering from the specified address (sets the <at>address</at> attribute and trigger filtering)
 			</description>
 		</method>
 		<method name="dump">
@@ -117,7 +117,7 @@
 				Output named filter settings
 			</digest>
 			<description>
-				The <m>filter/info</m> message followed by a filter name (<i>symbol</i>) outputs the filter pattern out of j.namespace rightmost outlet
+				The <m>filter/info</m> message followed by a filter name (<i>symbol</i>) outputs the filter pattern out of <o>j.namespace</o> rightmost outlet
 			</description>
 		</method>
 		<method name="filter/remove">
@@ -150,51 +150,46 @@
 			<description>
 				The <m>filter/set</m> message followed by a list of item and value pairs set criteria used to filter the namespace. Available items and values are:
 				<ul><li><m>object</m> (<i>object_type</i>): the type of object to apply filter to. Available values are:<ul><li>Container (a model or a view)</li><li>Data (a parameter, message or return)</li><li>Viewer (any j.remote)</li><li>none (any empty node)</li></ul>
-				<br/>ie. <m>'object Data'</m></li><li><m>attribute</m> (<i>attribute_name</i>): the name of the object attribute to test. This can be any of the Jamoma external attributes. ie. <m>'attribute dataspace'</m></li><li>value (<i>value</i>): the value of the attribute to test. ie. <m>value position'</m></li><li>part (<i>symbol</i>): a symbol part of the address</li><li>parent (<i>parent node</i>): name of the parent node. ie. <m>'parent spat_model'</m></li><li>name (<i>node name</i>):the name of the node. ie.  <m>'name source</m></li><li>instance (<i>instance number</i>): an instance number associated with this node</li><li>mode (<i>combination mode</i>): how the filter will combine with other defined filters. Available modes are:<ul><li>include (<i>default</i>): j.namespace output will include the filter results</li><li>exclude: j.namespace output will exclude filter results</li><li>restrict: j.namespace output will be restricted to filter results</li><li>hamlet: none of the above</li></ul></li></ul>
+				<br/>ie. <m>'object Data'</m></li><li><m>attribute</m> (<i>attribute_name</i>): the name of the object attribute to test. This can be any of the Jamoma external attributes. ie. <m>'attribute dataspace'</m></li><li>value (<i>value</i>): the value of the attribute to test. ie. <m>value position'</m></li><li>part (<i>symbol</i>): a symbol part of the address</li><li>parent (<i>parent node</i>): name of the parent node. ie. <m>'parent spat_model'</m></li><li>name (<i>node name</i>):the name of the node. ie.  <m>'name source</m></li><li>instance (<i>instance number</i>): an instance number associated with this node</li><li>mode (<i>combination mode</i>): how the filter will combine with other defined filters. Available modes are:<ul><li>include (<i>default</i>): <o>j.namespace</o> output will include the filter results</li><li>exclude: <o>j.namespace</o> output will exclude filter results</li><li>restrict: <o>j.namespace</o> output will be restricted to filter results</li><li>hamlet: none of the above</li></ul></li></ul>
 			</description>
 		</method>
 		<method name="select">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
+				<arg name="node address" type="symbol" optional="0"/>
+				<arg name="selection state" type="int" optional="0"/>
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Select or unselect items in the namespace selection
 			</digest>
 			<description>
-				TEXT_HERE
+				The <m>select</m> message followed by a symbol defining a node address and a boolean value toggle selection on or off.
 			</description>
 		</method>
 		<method name="select/all">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
-			</arglist>
+			<arglist/>
 			<digest>
-				TEXT_HERE
+				Select all items
 			</digest>
 			<description>
-				TEXT_HERE
+				The select/all message toggles selection state on for all nodes in the namespace selection
 			</description>
 		</method>
 		<method name="select/none">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
-			</arglist>
+			<arglist/>
 			<digest>
-				TEXT_HERE
+				Unselect all items
 			</digest>
 			<description>
-				TEXT_HERE
+				The <m>select/none</m> message toggles off selection for all nodes in the namespace selection
 			</description>
 		</method>
 		<method name="selection/refresh">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0"/>
-			</arglist>
+			<arglist/>
 			<digest>
-				TEXT_HERE
+				Refresh selection state
 			</digest>
 			<description>
-				TEXT_HERE
+				The selection/refresh message refreshes selection list
 			</description>
 		</method>
 	</methodlist>
@@ -202,10 +197,10 @@
 	<attributelist>
 		<attribute name="address" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Namespace selection root
+				Namespace exploration root
 			</digest>
 			<description>
-				The <at>address</at> attribute sets the root of the nodes addresses set the exploration will be performed on. The address may be any node in the namespace, such as the root (/) of the Jamoma namespace (<i>default</i>), a model address or a parameter address for example. 
+				The <at>address</at> attribute sets the root of the nodes addresses the exploration will be performed on. The address may be any node in the namespace, such as the root (/) of the Jamoma namespace (<i>default</i>), a model address or a parameter address for example. 
 			</description>
 		</attribute>
 		<attribute name="depth" get="1" set="1" type="int" size="1">
@@ -218,10 +213,10 @@
 		</attribute>
 		<attribute name="filter/list" get="1" set="1" type="atom" size="1">
 			<digest>
-				Set the type of addresses to filter
+				List of defined namespace filters
 			</digest>
 			<description>
-				The filter/list attribute sets the type of addresses set to perform filtering on. Possible values are:<br/><br/>
+				The <at>filter/list</at> attribute lists the active filters used by <o>j.namespace</o> to select nodes in the namespace. These filters may be filters sent to <o>j.namespace</o> using the filter/set message and corresponding syntaxe or some internally defined filters. These filters are built into <o>j.namespace</o> and allows to filter what their name implicitely refers to:<br/><br/>
 				<ul><li>model</li><li>parameter</li><li>message</li><li>return</li><li>view</li><li>remote</li></ul>
 			</description>
 		</attribute>
@@ -239,41 +234,41 @@
 							<digest>
 								Results will be output as a list
 							</digest>
-							<description>
+							<!-- <description>
 								Results will be output as a list
-							</description>
+							</description> -->
 						</enum>
 						<enum name="umenu">
 							<digest>
 								Results will be itered and formatted to fill a umenu
 							</digest>
-							<description>
+							<!-- <description>
 								Results will be itered and formatted to fill a umenu
-							</description>
+							</description> -->
 						</enum>
 						<enum name="umenu_prefix">
 							<digest>
 								Results will be itered and formatted to fill a umenu with root added as prefix
 							</digest>
-							<description>
+							<!-- <description>
 								Results will be itered and formatted to fill a umenu with root added as prefix
-							</description>
+							</description> -->
 						</enum>
 						<enum name="jit.cellblock">
 							<digest>
 								Results will be itered and formatted to fill a jit.cellblock
 							</digest>
-							<description>
+							<!-- <description>
 								Results will be itered and formatted to fill a jit.cellblock
-							</description>
+							</description> -->
 						</enum>
 						<enum name="coll">
 							<digest>
 								Results will be itered and formatted to fill a coll
 							</digest>
-							<description>
+							<!-- <description>
 								Results will be itered and formatted to fill a coll
-							</description>
+							</description> -->
 						</enum>
 					</enumlist>
 				</attribute>
@@ -282,53 +277,53 @@
 		</attribute>
 		<attribute name="namespace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Name of j.namespace instance
+				Name of this namespace exploration
 			</digest>
 			<description>
-				The <at>namespace</at> attribute sets a name to this instance of j.namespace. This is required when using j.namespace to perform exploration in combination with other Jamoma object such as <o>j.cue</o>
+				The <at>namespace</at> attribute sets a name to this instance of j.namespace. This is required when using <o>j.namespace</o> to perform exploration in combination with other Jamoma object such as <o>j.cue</o>
 			</description>
 		</attribute>
 		<attribute name="output" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Type of nodes to output based on their relationship to the root
 			</digest>
 			<description>
-				TEXT_HERE
+				The <at>output</at> attribute sets the nodes to output based on their relationship to the exploration root
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="4">
 					<enumlist>
 						<enum name="descendants">
 							<digest>
-								TEXT_HERE
+								Ouput all nodes under the root
 							</digest>
 							<description>
-								TEXT_HERE
+								Ouput all nodes under the root
 							</description>
 						</enum>
 						<enum name="children">
 							<digest>
-								TEXT_HERE
+								Output all nodes direclty descending from root
 							</digest>
 							<description>
-								TEXT_HERE
+								Note that this does not take in account multiple instances of a node.
 							</description>
 						</enum>
 						<enum name="brothers">
 							<digest>
-								TEXT_HERE
+								Output all instances of the exploration root
 							</digest>
 							<description>
-								TEXT_HERE
+								This available only when the exploration root is notthe root of the full namespace of your application (ie.<m> /</m>)
 							</description>
 						</enum>
 						<enum name="attributes">
 							<digest>
-								TEXT_HERE
+								Output all attributes of the exploration root
 							</digest>
-							<description>
-								TEXT_HERE
-							</description>
+							<!-- <description>
+								Output all attributes of the exploration root
+							</description> -->
 						</enum>
 					</enumlist>
 				</attribute>
@@ -351,7 +346,7 @@
 				Sort result in alphabetical or priority order
 			</digest>
 			<description>
-				The sort attribute gets results from exploration filter sorted alphabetically (default) or based on their priority value
+				The <at>sort</at> attribute gets results from exploration filter sorted alphabetically (default) or based on their priority value
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
@@ -360,17 +355,17 @@
 							<digest>
 								Sort on alphabetical order
 							</digest>
-							<description>
+							<!-- <description>
 								Sort on alphabetical order
-							</description>
+							</description> -->
 						</enum>
 						<enum name="priority">
 							<digest>
 								Sort on nodes priority
 							</digest>
-							<description>
+							<!-- <description>
 								Sort on nodes priority
-							</description>
+							</description> -->
 						</enum>
 					</enumlist>
 				</attribute>
@@ -382,7 +377,7 @@
 				Listen to updates in Jamoma namespace
 			</digest>
 			<description>
-				The update attribute lets you disable the listening of nodes creation/deletion in Jamoma namespace. When set to off, j.namespace will stop outputing results as changes occur in the namespace. In that case, one must send again the address attribute in order to refresh the namespace exploration result. (default : 1)
+				The <at>update</at> attribute toggles the listening of nodes creation/deletion in Jamoma namespace. When set to off, <o>j.namespace</o> will stop outputing results as changes occur in the namespace. In that case, one must trigger again the namespace exploration to refresh result. (default : 1)
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
@@ -396,11 +391,12 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="j.cue"/>
-		<seealso name="model"/>
-		<seealso name="parameter"/>
-		<seealso name="message"/>
-		<seealso name="return"/>
+		<seealso name="j.model"/>
+		<seealso name="j.parameter"/>
+		<seealso name="j.message"/>
+		<seealso name="j.return"/>
 		<seealso name="absolute_and_relative_address" type="vignette" module="topics"/>
-		<seealso name="Build_Max_patches_using_mvc_principles" type="vignette" module="topics"/>
+		<seealso name="namespaceexploration" type="tutorial" module="jamoma"/>
+		<seealso name="Jamoma_under_the_hood" type="vignette" module="topics"/>
 	</seealsolist>
 </c74object>
