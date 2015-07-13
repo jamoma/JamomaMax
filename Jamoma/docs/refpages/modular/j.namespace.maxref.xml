@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-
-<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.namespace" module="" category="Jamoma">
 	<digest>
 		Filter Jamoma namespace
 	</digest>
 	<description>
-		j.namespace is a utility to perform advanced Jamoma namespace queries and filtering. It is useful to manage and navigate through the various addresses nodes of your Jamoma Max patch, for example when building GUI interface
+		j.namespace is a utility to perform advanced Jamoma namespace queries and filtering. It is useful to manage and navigate through the various nodes addresses of your Jamoma Max patch, for example when building dynamic GUI interface
 	</description>
-	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -53,8 +49,7 @@
 			<digest>
 				Matching addresses
 			</digest>
-			<description>
-				<o>j.namespace</o> leftmost outlet outputs the nodes addresses matching the filter appied on the namespace selection. Addresses may be output as a single list or as preformatted messages for some Max GUI objects, as defined by the format <at>attribute</at>
+			<description><o>j.namespace</o> leftmost outlet outputs the nodes addresses matching the filter appied on the namespace selection. Addresses may be output as a single list or as preformatted messages for some Max GUI objects, as defined by the format <at>attribute</at>
 			</description>
 		</outlet>
 		<outlet id="1" type="int">
@@ -74,95 +69,93 @@
 			</description>
 		</outlet>
 	</outletlist>
-	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+		<objarg id="0" name="name" type="OBJARG_TYPE" optional="1">
 			<digest>
-				TEXT_HERE
+				Namespace selection name
 			</digest>
 			<description>
-				TEXT_HERE
+				Optional argument sets a name for this namespace selection so it can be referenced from other Jamoma object (ie. <o>j.cue</o>)
 			</description>
 		</objarg>
 	</objarglist>
-	<!--MESSAGES-->
 	<methodlist>
 		<method name="bang">
-			<arglist />
+			<arglist/>
 			<digest>
-				TEXT_HERE
+				Trigger namespace filtering
 			</digest>
 			<description>
-				TEXT_HERE
+				A bang at <o>j.namespace</o> leftmost inlet triggers namespace filtering
 			</description>
 		</method>
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="address" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Trigger filtering from this address
 			</digest>
 			<description>
-				TEXT_HERE
+				A symbol at j.namespace inlet triggers namespace filtering from the specified address (sets the <at>address</at> attribute and trigger filtering)
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
-				TEXT_HERE
+				Dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				The <m>dump</m> message outputs <o>j.namespace</o> attributes value at it rightmost outlet
 			</description>
 		</method>
 		<method name="filter/info">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="filter name" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Output named filter settings
 			</digest>
 			<description>
-				TEXT_HERE
+				The <m>filter/info</m> message followed by a filter name (<i>symbol</i>) outputs the filter pattern out of j.namespace rightmost outlet
 			</description>
 		</method>
 		<method name="filter/remove">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="filter name" type="symbol" optional="0"/>
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Remove filter
 			</digest>
 			<description>
-				TEXT_HERE
+				The <m>filter/remove</m> message followed by a filter name (<i>symbol</i>) remove the filter pattern from the list of active filters
 			</description>
 		</method>
 		<method name="explore">
-			<arglist />
+			<arglist/>
 			<digest>
-				TEXT_HERE
+				Trigger namespace filtering
 			</digest>
 			<description>
-				TEXT_HERE
+				The <m>explore</m> message triggers namespace filtering
 			</description>
 		</method>
 		<method name="filter/set">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="filter rule" type="list" optional="0"/>
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Filter rule
 			</digest>
 			<description>
-				TEXT_HERE
+				The <m>filter/set</m> message followed by a list of item and value pairs set criteria used to filter the namespace. Available items and values are:
+				<ul><li><m>object</m> (<i>object_type</i>): the type of object to apply filter to. Available values are:<ul><li>Container (a model or a view)</li><li>Data (a parameter, message or return)</li><li>Viewer (any j.remote)</li><li>none (any empty node)</li></ul>
+				<br/>ie. <m>'object Data'</m></li><li><m>attribute</m> (<i>attribute_name</i>): the name of the object attribute to test. This can be any of the Jamoma external attributes. ie. <m>'attribute dataspace'</m></li><li>value (<i>value</i>): the value of the attribute to test. ie. <m>value position'</m></li><li>part (<i>symbol</i>): a symbol part of the address</li><li>parent (<i>parent node</i>): name of the parent node. ie. <m>'parent spat_model'</m></li><li>name (<i>node name</i>):the name of the node. ie.  <m>'name source</m></li><li>instance (<i>instance number</i>): an instance number associated with this node</li><li>mode (<i>combination mode</i>): how the filter will combine with other defined filters. Available modes are:<ul><li>include (<i>default</i>): j.namespace output will include the filter results</li><li>exclude: j.namespace output will exclude filter results</li><li>restrict: j.namespace output will be restricted to filter results</li><li>hamlet: none of the above</li></ul></li></ul>
 			</description>
 		</method>
 		<method name="select">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="ARG_NAME_0" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				TEXT_HERE
@@ -173,7 +166,7 @@
 		</method>
 		<method name="select/all">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="ARG_NAME_0" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				TEXT_HERE
@@ -184,7 +177,7 @@
 		</method>
 		<method name="select/none">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="ARG_NAME_0" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				TEXT_HERE
@@ -195,7 +188,7 @@
 		</method>
 		<method name="selection/refresh">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="ARG_NAME_0" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				TEXT_HERE
@@ -229,14 +222,7 @@
 			</digest>
 			<description>
 				The filter/list attribute sets the type of addresses set to perform filtering on. Possible values are:<br/><br/>
-				<ul>
-					<li>model</li>
-					<li>parameter</li>
-					<li>message</li>
-					<li>return</li>
-					<li>view</li>
-					<li>remote</li>
-				</ul>
+				<ul><li>model</li><li>parameter</li><li>message</li><li>return</li><li>view</li><li>remote</li></ul>
 			</description>
 		</attribute>
 		<attribute name="format" get="1" set="1" type="symbol" size="1">
@@ -291,7 +277,7 @@
 						</enum>
 					</enumlist>
 				</attribute>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
 			</attributelist>
 		</attribute>
 		<attribute name="namespace" get="1" set="1" type="symbol" size="1">
@@ -346,7 +332,7 @@
 						</enum>
 					</enumlist>
 				</attribute>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
 			</attributelist>
 		</attribute>
 		<attribute name="relative" get="1" set="1" type="int" size="1">
@@ -357,7 +343,7 @@
 				Deprecated
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
 		<attribute name="sort" get="1" set="1" type="symbol" size="1">
@@ -388,9 +374,8 @@
 						</enum>
 					</enumlist>
 				</attribute>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
 			</attributelist>
-
 		</attribute>
 		<attribute name="update" get="1" set="1" type="int" size="1">
 			<digest>
@@ -400,13 +385,13 @@
 				The update attribute lets you disable the listening of nodes creation/deletion in Jamoma namespace. When set to off, j.namespace will stop outputing results as changes occur in the namespace. In that case, one must send again the address attribute in order to refresh the namespace exploration result. (default : 1)
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
 	</attributelist>
 	<!--EXAMPLE-->
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
