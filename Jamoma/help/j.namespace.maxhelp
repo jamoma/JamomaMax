@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 245.0, 110.0, 1325.0, 908.0 ],
+		"rect" : [ 379.0, 70.0, 1495.0, 920.0 ],
 		"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"bglocked" : 0,
@@ -55,7 +55,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1325.0, 882.0 ],
+						"rect" : [ 0.0, 26.0, 1495.0, 894.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -145,13 +145,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-14",
-									"linecount" : 166,
+									"linecount" : 151,
 									"maxclass" : "textedit",
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "int", "", "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1153.0, 582.0, 227.0, 120.0 ],
+									"patching_rect" : [ 1153.0, 582.0, 240.0, 120.0 ],
 									"style" : "",
 									"text" : "degrade.1 degrade.1/audio degrade.1/audio/bypass degrade.1/audio/gain degrade.1/audio/in.L degrade.1/audio/in.R degrade.1/audio/mix degrade.1/audio/mute degrade.1/audio/out.L degrade.1/audio/out.R degrade.1/bitdepth degrade.1/model degrade.1/preset degrade.1/samplerate_ratio degrade.2 degrade.2/audio degrade.2/audio/bypass degrade.2/audio/gain degrade.2/audio/in.L degrade.2/audio/in.R degrade.2/audio/mix degrade.2/audio/mute degrade.2/audio/out.L degrade.2/audio/out.R degrade.2/bitdepth degrade.2/model degrade.2/preset degrade.2/samplerate_ratio eq eq/audio eq/audio/bypass eq/audio/gain eq/audio/in.L eq/audio/in.R eq/audio/mix eq/audio/mute eq/audio/out.L eq/audio/out.R eq/bands eq/filter.1 eq/filter.1/frequency eq/filter.1/gain eq/filter.1/octave_bandwidth eq/filter.1/type eq/filter.2 eq/filter.2/frequency eq/filter.2/gain eq/filter.2/octave_bandwidth eq/filter.2/type eq/filter.3 eq/filter.3/frequency eq/filter.3/gain eq/filter.3/octave_bandwidth eq/filter.3/type eq/filter.4 eq/filter.4/frequency eq/filter.4/gain eq/filter.4/octave_bandwidth eq/filter.4/type eq/filtergraph eq/model eq/preset equalizer~(view) equalizer~(view)/equalizer~(view) equalizer~(view)/equalizer~(view)/filter.1 equalizer~(view)/equalizer~(view)/filter.1/frequency.1 equalizer~(view)/equalizer~(view)/filter.1/gain.1 equalizer~(view)/equalizer~(view)/filter.1/octave_bandwidth.1 equalizer~(view)/equalizer~(view)/filter.1/type.1 equalizer~(view)/equalizer~(view)/filter_graph(view) equalizer~(view)/equalizer~(view)/filter_graph(view)/frequency equalizer~(view)/equalizer~(view)/filter_graph(view)/gain equalizer~(view)/equalizer~(view)/filter_graph(view)/model equalizer~(view)/equalizer~(view)/filter_graph(view)/octave_bandwidth equalizer~(view)/equalizer~(view)/filter_numeric(view) equalizer~(view)/equalizer~(view)/filter_numeric(view)/frequency equalizer~(view)/equalizer~(view)/filter_numeric(view)/frequency.midi_converter equalizer~(view)/equalizer~(view)/filter_numeric(view)/gain equalizer~(view)/equalizer~(view)/filter_numeric(view)/model equalizer~(view)/equalizer~(view)/filter_numeric(view)/octave_bandwidth equalizer~(view)/equalizer~(view)/filter_numeric(view)/type equalizer~(view)/equalizer~(view)/model equalizer~(view)/equalizer~(view)/ui equalizer~(view)/filter.1 equalizer~(view)/filter.1/frequency.1 equalizer~(view)/filter.1/gain.1 equalizer~(view)/filter.1/octave_bandwidth.1 equalizer~(view)/filter.1/type.1 equalizer~(view)/model equalizer~(view)/ui input input/audio input/audio/gain input/audio/mute input/audio/out.L input/audio/out.R input/balance input/balance/audio input/balance/audio/out.L input/balance/audio/out.R input/balance/mode input/balance/model input/balance/position input/balance/shape input/clicktrain input/clicktrain/rate input/file input/file/direct input/file/loop input/file/path input/file/play input/file/time input/file/time/absolute input/file/time/relative input/file/transpose input/input input/input/audio input/input/audio/active input/input/channel.L input/input/channel.R input/input/dspStatus input/input/limiter input/input/limiter/active input/input/limiter/audio input/input/limiter/audio/in.L input/input/limiter/audio/in.R input/input/limiter/audio/out.L input/input/limiter/audio/out.R input/input/limiter/clear input/input/limiter/dcblocker input/input/limiter/dcblocker/active input/input/limiter/lookahead input/input/limiter/mode input/input/limiter/model input/input/limiter/postamp input/input/limiter/preamp input/input/limiter/release input/input/limiter/threshold input/input/model input/model input/preset input/soundfile input/soundfile/report input/source input/testtone input/testtone/frequency output output/audio output/audio/active output/audio/gain output/audio/mute output/audio/out.L output/audio/out.R output/balance output/balance/audio output/balance/audio/out.L output/balance/audio/out.R output/balance/mode output/balance/model output/balance/position output/balance/shape output/ch.1 output/ch.2 output/cpu output/dspStatus output/limiter output/limiter/active output/limiter/audio output/limiter/audio/in.L output/limiter/audio/in.R output/limiter/audio/out.L output/limiter/audio/out.R output/limiter/clear output/limiter/dcblocker output/limiter/dcblocker/active output/limiter/lookahead output/limiter/mode output/limiter/model output/limiter/postamp output/limiter/preamp output/limiter/release output/limiter/threshold output/model output/preset output/record output/record/active output/record/audio output/record/audio/in.L output/record/audio/in.R output/record/file output/record/file/path output/record/file/time output/record/file/type output/record/model output/record/samptype output/saturation output/saturation/active output/saturation/audio output/saturation/audio/in.L output/saturation/audio/in.R output/saturation/audio/out.L output/saturation/audio/out.R output/saturation/depth output/saturation/mode output/saturation/model output/saturation/preamp"
 								}
@@ -207,7 +207,7 @@
 									"bgcolor" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 									"bgcolor2" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 									"bgfillcolor_angle" : 270.0,
-									"bgfillcolor_autogradient" : 0,
+									"bgfillcolor_autogradient" : 0.0,
 									"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
 									"bgfillcolor_color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 									"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -220,9 +220,8 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 628.0, 582.0, 233.0, 22.0 ],
-									"presentation_rect" : [ 748.0, 581.0, 0.0, 0.0 ],
 									"style" : "",
-									"text" : "/degrade.1",
+									"text" : "/equalizer~(view)/filter.1/frequency.1",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -238,7 +237,6 @@
 									"parameter_enable" : 0,
 									"patching_rect" : [ 628.0, 546.25, 233.0, 22.0 ],
 									"prefix" : "Macintosh HD:/",
-									"presentation_rect" : [ 748.0, 545.25, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -262,7 +260,7 @@
 									"bgcolor" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 									"bgcolor2" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 									"bgfillcolor_angle" : 270.0,
-									"bgfillcolor_autogradient" : 0,
+									"bgfillcolor_autogradient" : 0.0,
 									"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 0.0 ],
 									"bgfillcolor_color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
 									"bgfillcolor_color2" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -276,7 +274,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 378.0, 582.0, 233.0, 22.0 ],
 									"style" : "",
-									"text" : "degrade.1/audio",
+									"text" : "equalizer~(view)/filter.1/frequency.1",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -520,7 +518,6 @@
 					}
 ,
 					"patching_rect" : [ 257.0, 150.0, 106.0, 22.0 ],
-					"presentation_rect" : [ 258.0, 151.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -582,7 +579,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 1620.0, 39.0, 275.0, 325.0 ],
+						"rect" : [ 1920.0, 45.0, 275.0, 325.0 ],
 						"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"editing_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 						"bglocked" : 0,
@@ -1021,7 +1018,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1325.0, 882.0 ],
+						"rect" : [ 379.0, 96.0, 1495.0, 894.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1052,6 +1049,120 @@
 						"subpatcher_template" : "greyish",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "number",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 379.5, 545.0, 50.0, 22.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"cellmap" : [ [ 0, 0, "1" ], [ 0, 1, "2" ] ],
+									"cols" : 2,
+									"colwidth" : 200,
+									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"fontface" : 0,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"gridlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"hcellcolor" : [ 0.819608, 0.819608, 0.898039, 0.0 ],
+									"hscroll" : 0,
+									"id" : "obj-16",
+									"maxclass" : "jit.cellblock",
+									"numinlets" : 2,
+									"numoutlets" : 4,
+									"outlettype" : [ "list", "", "", "" ],
+									"patching_rect" : [ 236.0, 574.0, 214.5, 252.75 ],
+									"rows" : 2,
+									"savemode" : 1,
+									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"color" : [ 0.989256, 0.417462, 0.031845, 1.0 ],
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 236.0, 518.0, 306.0, 22.0 ],
+									"style" : "",
+									"text" : "j.namespace myFilters @address / @format jit.cellblock"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 10.0, 70.0, 325.0, 50.0 ],
+									"style" : "",
+									"text" : "While the predefined filters can help in a number of cases, j.namespace allows to set some user-defined filters with a simple yet powerful syntaxe",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontface" : 1,
+									"fontname" : "Lato Regular",
+									"fontsize" : 14.0,
+									"id" : "obj-78",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1089.0, 86.5, 116.0, 23.0 ],
+									"style" : "",
+									"text" : "Combining filters",
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"angle" : 270.0,
+									"bgcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+									"id" : "obj-79",
+									"maxclass" : "panel",
+									"mode" : 0,
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1089.0, 86.5, 116.0, 23.0 ],
+									"proportion" : 0.39,
+									"rounded" : 0,
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"hidden" : 1,
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 638.0, 680.0, 72.0, 22.0 ],
+									"style" : "",
+									"text" : "loadmess 0"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"hidden" : 1,
 									"id" : "obj-45",
@@ -1346,7 +1457,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 742.0, 763.0, 217.0, 20.0 ],
 									"style" : "",
-									"text" : "(any j.remote)"
+									"text" : "(a j.model or j.view)"
 								}
 
 							}
@@ -1370,18 +1481,27 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-2",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "bpatcher" ],
+									"jsarguments" : [ "j.namespace" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 197.0, 53.0 ]
+									"patching_rect" : [ 10.0, 10.0, 274.0, 58.0 ]
 								}
 
 							}
  ],
 						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-45", 0 ],
 									"disabled" : 0,
@@ -1396,6 +1516,24 @@
 									"disabled" : 0,
 									"hidden" : 1,
 									"source" : [ "obj-45", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-16", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-5", 1 ]
 								}
 
 							}
@@ -1438,7 +1576,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1325.0, 882.0 ],
+						"rect" : [ 0.0, 26.0, 1495.0, 894.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1508,7 +1646,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 245.0, 136.0, 1325.0, 882.0 ],
+						"rect" : [ 0.0, 26.0, 1495.0, 894.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1540,6 +1678,247 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"bubbleside" : 3,
+									"bubbletextmargin" : 10,
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-1",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 964.0, 367.0, 141.0, 78.0 ],
+									"presentation_rect" : [ 964.0, 370.0, 0.0, 0.0 ],
+									"style" : "",
+									"text" : "Choose items to filter based on their relationship to exploration root",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-26",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1193.0, 526.5, 119.0, 35.0 ],
+									"style" : "",
+									"text" : "Instances of the exploration root",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-25",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1189.0, 433.05957, 150.0, 21.0 ],
+									"style" : "",
+									"text" : "Exploration root attributes",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-24",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1189.0, 378.039734, 213.0, 21.0 ],
+									"style" : "",
+									"text" : "All direct nodes under exploration root",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-23",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1189.0, 322.55957, 180.0, 21.0 ],
+									"style" : "",
+									"text" : "All nodes under exlporation root",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-22",
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1151.0, 294.0, 5.0, 221.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-14",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 1114.0, 387.0, 24.0, 24.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "2",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-15",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 1132.0, 243.0, 24.0, 24.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "1",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1166.0, 409.0, 143.0, 22.0 ],
+									"style" : "",
+									"text" : "output attributes, explore"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1166.0, 294.0, 161.0, 22.0 ],
+									"style" : "",
+									"text" : "output descendants, explore"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-11",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 364.0, 589.0, 136.0, 35.0 ],
+									"style" : "",
+									"text" : "Number of matching addresses",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1166.0, 243.0, 133.0, 22.0 ],
+									"style" : "",
+									"text" : "filter/remove, address /"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1166.0, 354.019867, 135.0, 22.0 ],
+									"style" : "",
+									"text" : "output children, explore"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-6",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1299.0, 457.05957, 154.0, 50.0 ],
+									"style" : "",
+									"text" : "Brother is not available if the root address is the root of the whole namespace",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"linecount" : 4,
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 1166.0, 457.05957, 126.0, 62.0 ],
+									"style" : "",
+									"text" : "output brothers, filter/list model, address /degrade.1, explore"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontface" : 1,
 									"fontname" : "Lato Regular",
 									"fontsize" : 14.0,
@@ -1548,7 +1927,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1166.0, 157.5, 86.0, 23.0 ],
-									"presentation_rect" : [ 1166.0, 156.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Relationship",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
@@ -1565,7 +1943,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1166.0, 157.5, 86.0, 23.0 ],
-									"presentation_rect" : [ 1166.0, 156.5, 0.0, 0.0 ],
 									"proportion" : 0.39,
 									"rounded" : 0,
 									"style" : ""
@@ -1581,7 +1958,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 541.0, 136.0, 78.0 ],
+									"patching_rect" : [ 60.0, 584.0, 136.0, 78.0 ],
 									"style" : "",
 									"text" : "NB: Sending a node address to j.namespace will set the address attribute and trigger exploration",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -1597,8 +1974,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 911.0, 157.5, 100.0, 23.0 ],
-									"presentation_rect" : [ 913.0, 160.5, 0.0, 0.0 ],
+									"patching_rect" : [ 866.0, 157.5, 100.0, 23.0 ],
 									"style" : "",
 									"text" : "Sorting results",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
@@ -1614,8 +1990,7 @@
 									"mode" : 0,
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 911.0, 157.5, 100.0, 23.0 ],
-									"presentation_rect" : [ 913.0, 160.5, 0.0, 0.0 ],
+									"patching_rect" : [ 866.0, 157.5, 100.0, 23.0 ],
 									"proportion" : 0.39,
 									"rounded" : 0,
 									"style" : ""
@@ -1634,8 +2009,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 821.0, 237.5, 74.0, 49.0 ],
-									"presentation_rect" : [ 793.0, 370.5, 0.0, 0.0 ],
+									"patching_rect" : [ 776.0, 280.5, 74.0, 49.0 ],
 									"style" : "",
 									"text" : "Sort results",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1649,8 +2023,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 911.0, 263.0, 115.0, 22.0 ],
-									"presentation_rect" : [ 682.0, 446.5, 0.0, 0.0 ],
+									"patching_rect" : [ 866.0, 306.0, 115.0, 22.0 ],
 									"style" : "",
 									"text" : "sort priority, explore"
 								}
@@ -1663,8 +2036,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 911.0, 239.0, 135.0, 22.0 ],
-									"presentation_rect" : [ 684.0, 426.0, 0.0, 0.0 ],
+									"patching_rect" : [ 866.0, 282.0, 135.0, 22.0 ],
 									"style" : "",
 									"text" : "sort alphabetic, explore"
 								}
@@ -1682,8 +2054,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 512.0, 330.5, 91.0, 49.0 ],
-									"presentation_rect" : [ 460.0, 326.0, 0.0, 0.0 ],
+									"patching_rect" : [ 512.0, 373.5, 93.0, 49.0 ],
 									"style" : "",
 									"text" : "Explore all sub-nodes",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1702,8 +2073,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 462.0, 230.0, 141.0, 64.0 ],
-									"presentation_rect" : [ 384.0, 238.0, 0.0, 0.0 ],
+									"patching_rect" : [ 462.0, 273.0, 141.0, 64.0 ],
 									"style" : "",
 									"text" : "How deep in the namespace to explore",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1724,8 +2094,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 197.0, 453.5, 24.0, 24.0 ],
-									"presentation_rect" : [ 198.0, 456.0, 0.0, 0.0 ],
+									"patching_rect" : [ 197.0, 496.5, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "3",
@@ -1749,8 +2118,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 60.0, 426.5, 135.0, 78.0 ],
-									"presentation_rect" : [ 50.0, 436.0, 0.0, 0.0 ],
+									"patching_rect" : [ 60.0, 469.5, 135.0, 78.0 ],
 									"style" : "",
 									"text" : "Explore the namespace from the root using the above filter",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1771,8 +2139,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 197.0, 286.0, 24.0, 24.0 ],
-									"presentation_rect" : [ 199.0, 287.0, 0.0, 0.0 ],
+									"patching_rect" : [ 197.0, 329.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "2",
@@ -1796,10 +2163,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.0, 266.0, 141.0, 64.0 ],
-									"presentation_rect" : [ 51.0, 267.0, 0.0, 0.0 ],
+									"patching_rect" : [ 49.0, 309.0, 141.0, 64.0 ],
 									"style" : "",
-									"text" : "Set the root in the namespace to start exploration from",
+									"text" : "Using filters provided with j.namespace",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
@@ -1818,7 +2184,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 197.0, 200.0, 24.0, 24.0 ],
+									"patching_rect" : [ 197.0, 243.0, 24.0, 24.0 ],
 									"rounded" : 180.0,
 									"style" : "",
 									"text" : "1",
@@ -1842,7 +2208,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 49.0, 180.0, 141.0, 64.0 ],
+									"patching_rect" : [ 49.0, 223.0, 141.0, 64.0 ],
 									"style" : "",
 									"text" : "Set the root in the namespace to start exploration from",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1859,7 +2225,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 612.0, 157.5, 121.0, 23.0 ],
-									"presentation_rect" : [ 615.0, 158.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Exploration depth",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
@@ -1876,7 +2241,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 612.0, 157.5, 121.0, 23.0 ],
-									"presentation_rect" : [ 615.0, 158.5, 0.0, 0.0 ],
 									"proportion" : 0.39,
 									"rounded" : 0,
 									"style" : ""
@@ -1922,7 +2286,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 200.0, 60.0, 22.0 ],
+									"patching_rect" : [ 227.0, 243.0, 60.0, 22.0 ],
 									"style" : "",
 									"text" : "address /"
 								}
@@ -1935,7 +2299,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 454.5, 50.0, 22.0 ],
+									"patching_rect" : [ 227.0, 497.5, 50.0, 22.0 ],
 									"style" : "",
 									"text" : "explore"
 								}
@@ -1948,7 +2312,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 414.05957, 92.0, 22.0 ],
+									"patching_rect" : [ 227.0, 457.05957, 92.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list remote"
 								}
@@ -1961,7 +2325,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 390.05957, 79.0, 22.0 ],
+									"patching_rect" : [ 227.0, 433.05957, 79.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list view"
 								}
@@ -1974,7 +2338,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 359.05957, 86.0, 22.0 ],
+									"patching_rect" : [ 227.0, 402.05957, 86.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list return"
 								}
@@ -1987,7 +2351,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 335.039734, 109.0, 22.0 ],
+									"patching_rect" : [ 227.0, 378.039734, 109.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list parameter"
 								}
@@ -2000,7 +2364,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 287.0, 86.0, 22.0 ],
+									"patching_rect" : [ 227.0, 330.0, 86.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list model"
 								}
@@ -2013,7 +2377,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 227.0, 311.019867, 103.0, 22.0 ],
+									"patching_rect" : [ 227.0, 354.019867, 103.0, 22.0 ],
 									"style" : "",
 									"text" : "filter/list message"
 								}
@@ -2026,7 +2390,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 246.0, 546.0, 24.0, 24.0 ],
+									"patching_rect" : [ 246.0, 589.0, 24.0, 24.0 ],
 									"style" : ""
 								}
 
@@ -2039,7 +2403,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 312.0, 546.0, 50.0, 22.0 ],
+									"patching_rect" : [ 312.0, 589.0, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -2051,7 +2415,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 612.0, 263.0, 97.0, 22.0 ],
+									"patching_rect" : [ 612.0, 306.0, 97.0, 22.0 ],
 									"style" : "",
 									"text" : "depth 2, explore"
 								}
@@ -2064,7 +2428,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 612.0, 344.0, 97.0, 22.0 ],
+									"patching_rect" : [ 612.0, 387.0, 97.0, 22.0 ],
 									"style" : "",
 									"text" : "depth 0, explore"
 								}
@@ -2077,7 +2441,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 612.0, 239.0, 97.0, 22.0 ],
+									"patching_rect" : [ 612.0, 282.0, 97.0, 22.0 ],
 									"style" : "",
 									"text" : "depth 1, explore"
 								}
@@ -2086,7 +2450,7 @@
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "input" ], [ 0, 1, "degrade.1" ], [ 0, 2, "degrade.2" ], [ 0, 3, "eq" ], [ 0, 4, "output" ], [ 0, 5, "input/balance" ], [ 0, 6, "input/input" ], [ 0, 7, "output/balance" ], [ 0, 8, "output/limiter" ], [ 0, 9, "output/record" ], [ 0, 10, "output/saturation" ] ],
+									"cellmap" : [ [ 0, 0, "1" ], [ 0, 1, "2" ] ],
 									"cols" : 2,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -2101,8 +2465,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
-									"patching_rect" : [ 227.0, 577.25, 214.5, 252.75 ],
-									"rows" : 11,
+									"patching_rect" : [ 227.0, 626.0, 214.5, 252.75 ],
+									"rows" : 2,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -2116,7 +2480,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 227.0, 515.0, 189.0, 22.0 ],
+									"patching_rect" : [ 227.0, 558.0, 189.0, 22.0 ],
 									"style" : "",
 									"text" : "j.namespace @format jit.cellblock"
 								}
@@ -2134,7 +2498,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 624.0, 130.0 ]
+									"patching_rect" : [ 10.0, 10.0, 586.0, 129.0 ]
 								}
 
 							}
@@ -2143,8 +2507,28 @@
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 1175.5, 436.5, 236.5, 436.5 ],
+									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 1175.5, 483.0, 236.5, 483.0 ],
+									"source" : [ "obj-13", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 621.5, 500.0, 236.5, 500.0 ],
+									"midpoints" : [ 621.5, 543.0, 236.5, 543.0 ],
 									"source" : [ "obj-19", 0 ]
 								}
 
@@ -2154,7 +2538,7 @@
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 621.5, 424.0, 236.5, 424.0 ],
+									"midpoints" : [ 621.5, 467.0, 236.5, 467.0 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -2164,7 +2548,7 @@
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"midpoints" : [ 621.5, 424.0, 236.5, 424.0 ],
+									"midpoints" : [ 621.5, 467.0, 236.5, 467.0 ],
 									"source" : [ "obj-28", 0 ]
 								}
 
@@ -2254,6 +2638,16 @@
 								"patchline" : 								{
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 1175.5, 538.029785, 236.5, 538.029785 ],
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-58", 0 ]
 								}
@@ -2264,7 +2658,7 @@
 									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 920.5, 500.5, 236.5, 500.5 ],
+									"midpoints" : [ 875.5, 543.5, 236.5, 543.5 ],
 									"source" : [ "obj-61", 0 ]
 								}
 
@@ -2275,6 +2669,26 @@
 									"disabled" : 0,
 									"hidden" : 1,
 									"source" : [ "obj-62", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 1,
+									"midpoints" : [ 1175.5, 454.5, 236.5, 454.5 ],
+									"source" : [ "obj-7", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"midpoints" : [ 1175.5, 543.0, 236.5, 543.0 ],
+									"source" : [ "obj-8", 0 ]
 								}
 
 							}
@@ -2331,14 +2745,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-76::obj-8::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-76::obj-8::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-76::obj-8::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
-			"obj-76::obj-8::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-76::obj-8::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-76::obj-8::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-76::obj-8::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-76::obj-8::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-76::obj-8::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
 			"obj-76::obj-8::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
-			"obj-76::obj-8::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-76::obj-8::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ]
+			"obj-76::obj-8::obj-5::obj-45" : [ "live.text", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
