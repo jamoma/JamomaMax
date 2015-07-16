@@ -70,7 +70,7 @@
 		</outlet>
 	</outletlist>
 	<objarglist>
-		<objarg id="0" name="name" type="OBJARG_TYPE" optional="1">
+		<objarg id="0" name="name" type="symbol" optional="1">
 			<digest>
 				Namespace selection name
 			</digest>
