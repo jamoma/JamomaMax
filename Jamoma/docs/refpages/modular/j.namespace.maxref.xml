@@ -156,13 +156,13 @@
 		<method name="select">
 			<arglist>
 				<arg name="node address" type="symbol" optional="0"/>
-				<arg name="selection state" type="int" optional="1"/>
+				<arg name="selection state" type="int" optional="0"/>
 			</arglist>
 			<digest>
 				Select or unselect items in the namespace selection
 			</digest>
 			<description>
-				The <m>select</m> message followed by a symbol defining a node address and a boolean value toggle selection on or off. With no boolean value provided, the <m>select</m> message will toggle the address current selection state.<br/><br/><i>NB: select related messages need the namespace attribute to be defined</i>
+				The <m>select</m> message followed by a symbol defining a node address and a boolean value toggle selection on or off.
 			</description>
 		</method>
 		<method name="select/all">
@@ -171,7 +171,7 @@
 				Select all items
 			</digest>
 			<description>
-				The select/all message toggles selection state on for all nodes in the namespace selection<br/><br/><i>NB: select related messages need the namespace attribute to be defined</i>
+				The select/all message toggles selection state on for all nodes in the namespace selection
 			</description>
 		</method>
 		<method name="select/none">
@@ -180,7 +180,7 @@
 				Unselect all items
 			</digest>
 			<description>
-				The <m>select/none</m> message toggles off selection for all nodes in the namespace selection<br/><br/><i>NB: select related messages need the namespace attribute to be defined</i>
+				The <m>select/none</m> message toggles off selection for all nodes in the namespace selection
 			</description>
 		</method>
 		<method name="selection/refresh">
@@ -189,7 +189,7 @@
 				Refresh selection state
 			</digest>
 			<description>
-				The selection/refresh message refreshes selection list<br/><br/><i>NB: select related messages need the namespace attribute to be defined</i>
+				The selection/refresh message refreshes selection list
 			</description>
 		</method>
 	</methodlist>
@@ -280,7 +280,7 @@
 				Name of this namespace exploration
 			</digest>
 			<description>
-				The <at>namespace</at> attribute sets a name to this instance of j.namespace. This is required when using <o>j.namespace</o> to perform exploration in combination with other Jamoma object such as other instances of <o>j.namespace</o> or <o>j.cue</o>. <at>namespace</at> attribute also activate the selection state feature
+				The <at>namespace</at> attribute sets a name to this instance of j.namespace. This is required when using <o>j.namespace</o> to perform exploration in combination with other Jamoma object such as <o>j.cue</o>
 			</description>
 		</attribute>
 		<attribute name="output" get="1" set="1" type="symbol" size="1">
@@ -297,9 +297,9 @@
 							<digest>
 								Ouput all nodes under the root
 							</digest>
-							<!-- <description>
+							<description>
 								Ouput all nodes under the root
-							</description> -->
+							</description>
 						</enum>
 						<enum name="children">
 							<digest>
