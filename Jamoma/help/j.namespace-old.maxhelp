@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 4,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 77.0, 79.0, 1608.0, 937.0 ],
+		"rect" : [ 42.0, 294.0, 1608.0, 937.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -119,7 +119,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -237,14 +237,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-20",
-									"items" : [ "input_sort", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort", ",", "degrade.1", ",", "degrade.2", ",", "eq", ",", "input", ",", "output" ],
+									"items" : [ "input", ",", "input_sort", ",", "degrade.1", ",", "degrade_sort.1", ",", "degrade.2", ",", "degrade_sort.2", ",", "output_sort", ",", "eq", ",", "output" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 507.0, 294.0, 140.0, 22.0 ],
-									"prefix" : "Macintosh HD:/",
+									"prefix" : "Mac HD:/",
 									"style" : ""
 								}
 
@@ -283,7 +283,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-16",
-									"items" : [ "input_sort", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort", ",", "degrade.1", ",", "degrade.2", ",", "eq", ",", "input", ",", "output" ],
+									"items" : [ "input", ",", "input_sort", ",", "degrade.1", ",", "degrade_sort.1", ",", "degrade.2", ",", "degrade_sort.2", ",", "output_sort", ",", "eq", ",", "output" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -353,7 +353,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 114.0, 398.0, 152.0, 49.0 ],
+									"patching_rect" : [ 114.0, 398.0, 152.0, 62.0 ],
 									"style" : ""
 								}
 
@@ -603,7 +603,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -668,7 +668,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -942,12 +942,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1608.0, 911.0 ],
+						"rect" : [ 42.0, 320.0, 1608.0, 911.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1032,7 +1032,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 574.0, 392.0, 168.0, 22.0 ],
-									"prefix" : "Macintosh HD:/",
+									"prefix" : "Mac HD:/",
 									"presentation" : 1,
 									"presentation_rect" : [ 283.0, 217.0, 168.0, 22.0 ],
 									"style" : ""
@@ -1126,7 +1126,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 161.0, 392.0, 168.0, 22.0 ],
-									"prefix" : "Macintosh HD:/",
+									"prefix" : "Mac HD:/",
 									"presentation" : 1,
 									"presentation_rect" : [ 404.0, 403.0, 168.0, 22.0 ],
 									"style" : ""
@@ -1235,7 +1235,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1315,14 +1315,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-10",
-									"items" : [ "input_sort", ",", "degrade_sort.1", ",", "degrade_sort.2", ",", "output_sort", ",", "degrade.1", ",", "degrade.2", ",", "eq", ",", "input", ",", "output" ],
+									"items" : [ "input", ",", "input_sort", ",", "degrade.1", ",", "degrade_sort.1", ",", "degrade.2", ",", "degrade_sort.2", ",", "output_sort", ",", "eq", ",", "output" ],
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 397.0, 341.0, 168.0, 22.0 ],
-									"prefix" : "Macintosh HD:/",
+									"prefix" : "Mac HD:/",
 									"presentation" : 1,
 									"presentation_rect" : [ 744.0, 374.0, 168.0, 22.0 ],
 									"style" : ""
@@ -1386,7 +1386,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 172.0, 341.0, 168.0, 22.0 ],
-									"prefix" : "Macintosh HD:/",
+									"prefix" : "Mac HD:/",
 									"presentation" : 1,
 									"presentation_rect" : [ 381.0, 197.0, 168.0, 22.0 ],
 									"style" : ""
@@ -1495,7 +1495,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1932,7 +1932,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -2078,7 +2078,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -3054,12 +3054,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 77.0, 105.0, 1608.0, 911.0 ],
+						"rect" : [ 0.0, 26.0, 1608.0, 911.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3871,7 +3871,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -4542,7 +4542,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-9",
-									"items" : [ "degrade.1", ",", "degrade.1/audio", ",", "degrade.1/audio/bypass", ",", "degrade.1/audio/gain", ",", "degrade.1/audio/in.L", ",", "degrade.1/audio/in.R", ",", "degrade.1/audio/mix", ",", "degrade.1/audio/mute", ",", "degrade.1/audio/out.L", ",", "degrade.1/audio/out.R", ",", "degrade.1/bitdepth", ",", "degrade.1/model", ",", "degrade.1/preset", ",", "degrade.1/samplerate_ratio", ",", "degrade.2", ",", "degrade.2/audio", ",", "degrade.2/audio/bypass", ",", "degrade.2/audio/gain", ",", "degrade.2/audio/in.L", ",", "degrade.2/audio/in.R", ",", "degrade.2/audio/mix", ",", "degrade.2/audio/mute", ",", "degrade.2/audio/out.L", ",", "degrade.2/audio/out.R", ",", "degrade.2/bitdepth", ",", "degrade.2/model", ",", "degrade.2/preset", ",", "degrade.2/samplerate_ratio", ",", "degrade_sort.1", ",", "degrade_sort.1/audio", ",", "degrade_sort.1/audio/bypass", ",", "degrade_sort.1/audio/gain", ",", "degrade_sort.1/audio/in.L", ",", "degrade_sort.1/audio/in.R", ",", "degrade_sort.1/audio/mix", ",", "degrade_sort.1/audio/mute", ",", "degrade_sort.1/audio/out.L", ",", "degrade_sort.1/audio/out.R", ",", "degrade_sort.1/bitdepth", ",", "degrade_sort.1/model", ",", "degrade_sort.1/preset", ",", "degrade_sort.1/samplerate_ratio", ",", "degrade_sort.2", ",", "degrade_sort.2/audio", ",", "degrade_sort.2/audio/bypass", ",", "degrade_sort.2/audio/gain", ",", "degrade_sort.2/audio/in.L", ",", "degrade_sort.2/audio/in.R", ",", "degrade_sort.2/audio/mix", ",", "degrade_sort.2/audio/mute", ",", "degrade_sort.2/audio/out.L", ",", "degrade_sort.2/audio/out.R", ",", "degrade_sort.2/bitdepth", ",", "degrade_sort.2/model", ",", "degrade_sort.2/preset", ",", "degrade_sort.2/samplerate_ratio", ",", "degrade~(view)", ",", "degrade~(view).1", ",", "degrade~(view).1/bitdepth(live.dial)", ",", "degrade~(view).1/model", ",", "degrade~(view).1/samplerate_ratio(live.dial)", ",", "degrade~(view).1/ui", ",", "degrade~(view).2", ",", "degrade~(view).2/bitdepth(live.dial)", ",", "degrade~(view).2/model", ",", "degrade~(view).2/samplerate_ratio(live.dial)", ",", "degrade~(view).2/ui", ",", "degrade~(view).3", ",", "degrade~(view).3/bitdepth(live.dial)", ",", "degrade~(view).3/model", ",", "degrade~(view).3/samplerate_ratio(live.dial)", ",", "degrade~(view).3/ui", ",", "degrade~(view).4", ",", "degrade~(view).4/bitdepth(live.dial)", ",", "degrade~(view).4/model", ",", "degrade~(view).4/samplerate_ratio(live.dial)", ",", "degrade~(view).4/ui", ",", "degrade~(view)/bitdepth(live.dial)", ",", "degrade~(view)/model", ",", "degrade~(view)/samplerate_ratio(live.dial)", ",", "degrade~(view)/ui", ",", "eq", ",", "eq/audio", ",", "eq/audio/bypass", ",", "eq/audio/gain", ",", "eq/audio/in.L", ",", "eq/audio/in.R", ",", "eq/audio/mix", ",", "eq/audio/mute", ",", "eq/audio/out.L", ",", "eq/audio/out.R", ",", "eq/bands", ",", "eq/filter.1", ",", "eq/filter.1/frequency", ",", "eq/filter.1/gain", ",", "eq/filter.1/octave_bandwidth", ",", "eq/filter.1/type", ",", "eq/filter.2", ",", "eq/filter.2/frequency", ",", "eq/filter.2/gain", ",", "eq/filter.2/octave_bandwidth", ",", "eq/filter.2/type", ",", "eq/filter.3", ",", "eq/filter.3/frequency", ",", "eq/filter.3/gain", ",", "eq/filter.3/octave_bandwidth", ",", "eq/filter.3/type", ",", "eq/filter.4", ",", "eq/filter.4/frequency", ",", "eq/filter.4/gain", ",", "eq/filter.4/octave_bandwidth", ",", "eq/filter.4/type", ",", "eq/filtergraph", ",", "eq/model", ",", "eq/preset", ",", "equalizer~(view)", ",", "equalizer~(view)/equalizer~(view)", ",", "equalizer~(view)/equalizer~(view)/filter.1", ",", "equalizer~(view)/equalizer~(view)/filter.1/frequency.1", ",", "equalizer~(view)/equalizer~(view)/filter.1/gain.1", ",", "equalizer~(view)/equalizer~(view)/filter.1/octave_bandwidth.1", ",", "equalizer~(view)/equalizer~(view)/filter.1/type.1", ",", "equalizer~(view)/equalizer~(view)/filter_graph(view)", ",", "equalizer~(view)/equalizer~(view)/filter_graph(view)/frequency", ",", "equalizer~(view)/equalizer~(view)/filter_graph(view)/gain", ",", "equalizer~(view)/equalizer~(view)/filter_graph(view)/model", ",", "equalizer~(view)/equalizer~(view)/filter_graph(view)/octave_bandwidth", ",", "equalizer~(view)/equalizer~(view)/filter_numeric(view)", ",", "equalizer~(view)/equalizer~(view)/filter_numeric(view)/frequency", ",", "equalizer~(view)/equalizer~(view)/filter_numeric(view)/frequency.midi_converter", ",", "equalizer~(view)/equalizer~(view)/filter_numeric(view)/gain", ",", "equalizer~(view)/equalizer~(view)/filter_numeric(view)/model", ",", "equalizer~(view)/equalizer~(view)/filter_numeric(view)/octave_bandwidth", ",", "equalizer~(view)/equalizer~(view)/filter_numeric(view)/type", ",", "equalizer~(view)/equalizer~(view)/model", ",", "equalizer~(view)/equalizer~(view)/ui", ",", "equalizer~(view)/filter.1", ",", "equalizer~(view)/filter.1/frequency.1", ",", "equalizer~(view)/filter.1/gain.1", ",", "equalizer~(view)/filter.1/octave_bandwidth.1", ",", "equalizer~(view)/filter.1/type.1", ",", "equalizer~(view)/model", ",", "equalizer~(view)/ui", ",", "input", ",", "input/audio", ",", "input/audio/gain", ",", "input/audio/mute", ",", "input/audio/out.L", ",", "input/audio/out.R", ",", "input/balance", ",", "input/balance/audio", ",", "input/balance/audio/out.L", ",", "input/balance/audio/out.R", ",", "input/balance/mode", ",", "input/balance/model", ",", "input/balance/position", ",", "input/balance/shape", ",", "input/clicktrain", ",", "input/clicktrain/rate", ",", "input/file", ",", "input/file/direct", ",", "input/file/loop", ",", "input/file/path", ",", "input/file/play", ",", "input/file/time", ",", "input/file/time/absolute", ",", "input/file/time/relative", ",", "input/file/transpose", ",", "input/input", ",", "input/input/audio", ",", "input/input/audio/active", ",", "input/input/channel.L", ",", "input/input/channel.R", ",", "input/input/dspStatus", ",", "input/input/limiter", ",", "input/input/limiter/active", ",", "input/input/limiter/audio", ",", "input/input/limiter/audio/in.L", ",", "input/input/limiter/audio/in.R", ",", "input/input/limiter/audio/out.L", ",", "input/input/limiter/audio/out.R", ",", "input/input/limiter/clear", ",", "input/input/limiter/dcblocker", ",", "input/input/limiter/dcblocker/active", ",", "input/input/limiter/lookahead", ",", "input/input/limiter/mode", ",", "input/input/limiter/model", ",", "input/input/limiter/postamp", ",", "input/input/limiter/preamp", ",", "input/input/limiter/release", ",", "input/input/limiter/threshold", ",", "input/input/model", ",", "input/model", ",", "input/preset", ",", "input/soundfile", ",", "input/soundfile/report", ",", "input/source", ",", "input/testtone", ",", "input/testtone/frequency", ",", "input_sort", ",", "input_sort/audio", ",", "input_sort/audio/gain", ",", "input_sort/audio/mute", ",", "input_sort/audio/out.L", ",", "input_sort/audio/out.R", ",", "input_sort/balance", ",", "input_sort/balance/audio", ",", "input_sort/balance/audio/out.L", ",", "input_sort/balance/audio/out.R", ",", "input_sort/balance/mode", ",", "input_sort/balance/model", ",", "input_sort/balance/position", ",", "input_sort/balance/shape", ",", "input_sort/clicktrain", ",", "input_sort/clicktrain/rate", ",", "input_sort/file", ",", "input_sort/file/direct", ",", "input_sort/file/loop", ",", "input_sort/file/path", ",", "input_sort/file/play", ",", "input_sort/file/time", ",", "input_sort/file/time/absolute", ",", "input_sort/file/time/relative", ",", "input_sort/file/transpose", ",", "input_sort/input", ",", "input_sort/input/audio", ",", "input_sort/input/audio/active", ",", "input_sort/input/channel.L", ",", "input_sort/input/channel.R", ",", "input_sort/input/dspStatus", ",", "input_sort/input/limiter", ",", "input_sort/input/limiter/active", ",", "input_sort/input/limiter/audio", ",", "input_sort/input/limiter/audio/in.L", ",", "input_sort/input/limiter/audio/in.R", ",", "input_sort/input/limiter/audio/out.L", ",", "input_sort/input/limiter/audio/out.R", ",", "input_sort/input/limiter/clear", ",", "input_sort/input/limiter/dcblocker", ",", "input_sort/input/limiter/dcblocker/active", ",", "input_sort/input/limiter/lookahead", ",", "input_sort/input/limiter/mode", ",", "input_sort/input/limiter/model", ",", "input_sort/input/limiter/postamp", ",", "input_sort/input/limiter/preamp", ",", "input_sort/input/limiter/release", ",", "input_sort/input/limiter/threshold", ",", "input_sort/input/model", ",", "input_sort/model", ",", "input_sort/preset", ",", "input_sort/soundfile", ",", "input_sort/soundfile/report", ",", "input_sort/source", ",", "input_sort/testtone", ",", "input_sort/testtone/frequency", ",", "output", ",", "output/audio", ",", "output/audio/active", ",", "output/audio/gain", ",", "output/audio/mute", ",", "output/audio/out.L", ",", "output/audio/out.R", ",", "output/balance", ",", "output/balance/audio", ",", "output/balance/audio/out.L", ",", "output/balance/audio/out.R", ",", "output/balance/mode", ",", "output/balance/model", ",", "output/balance/position", ",", "output/balance/shape", ",", "output/ch.1", ",", "output/ch.2", ",", "output/cpu", ",", "output/dspStatus", ",", "output/limiter", ",", "output/limiter/active", ",", "output/limiter/audio", ",", "output/limiter/audio/in.L", ",", "output/limiter/audio/in.R", ",", "output/limiter/audio/out.L", ",", "output/limiter/audio/out.R", ",", "output/limiter/clear", ",", "output/limiter/dcblocker", ",", "output/limiter/dcblocker/active", ",", "output/limiter/lookahead", ",", "output/limiter/mode", ",", "output/limiter/model", ",", "output/limiter/postamp", ",", "output/limiter/preamp", ",", "output/limiter/release", ",", "output/limiter/threshold", ",", "output/model", ",", "output/preset", ",", "output/record", ",", "output/record/active", ",", "output/record/audio", ",", "output/record/audio/in.L", ",", "output/record/audio/in.R", ",", "output/record/file", ",", "output/record/file/path", ",", "output/record/file/time", ",", "output/record/file/type", ",", "output/record/model", ",", "output/record/samptype", ",", "output/saturation", ",", "output/saturation/active", ",", "output/saturation/audio", ",", "output/saturation/audio/in.L", ",", "output/saturation/audio/in.R", ",", "output/saturation/audio/out.L", ",", "output/saturation/audio/out.R", ",", "output/saturation/depth", ",", "output/saturation/mode", ",", "output/saturation/model", ",", "output/saturation/preamp", ",", "output_sort", ",", "output_sort/audio", ",", "output_sort/audio/active", ",", "output_sort/audio/gain", ",", "output_sort/audio/mute", ",", "output_sort/audio/out.L", ",", "output_sort/audio/out.R", ",", "output_sort/balance", ",", "output_sort/balance/audio", ",", "output_sort/balance/audio/out.L", ",", "output_sort/balance/audio/out.R", ",", "output_sort/balance/mode", ",", "output_sort/balance/model", ",", "output_sort/balance/position", ",", "output_sort/balance/shape", ",", "output_sort/ch.1", ",", "output_sort/ch.2", ",", "output_sort/cpu", ",", "output_sort/dspStatus", ",", "output_sort/limiter", ",", "output_sort/limiter/active", ",", "output_sort/limiter/audio", ",", "output_sort/limiter/audio/in.L", ",", "output_sort/limiter/audio/in.R", ",", "output_sort/limiter/audio/out.L", ",", "output_sort/limiter/audio/out.R", ",", "output_sort/limiter/clear", ",", "output_sort/limiter/dcblocker", ",", "output_sort/limiter/dcblocker/active", ",", "output_sort/limiter/lookahead", ",", "output_sort/limiter/mode", ",", "output_sort/limiter/model", ",", "output_sort/limiter/postamp", ",", "output_sort/limiter/preamp", ",", "output_sort/limiter/release", ",", "output_sort/limiter/threshold", ",", "output_sort/model", ",", "output_sort/preset", ",", "output_sort/record", ",", "output_sort/record/active", ",", "output_sort/record/audio", ",", "output_sort/record/audio/in.L", ",", "output_sort/record/audio/in.R", ",", "output_sort/record/file", ",", "output_sort/record/file/path", ",", "output_sort/record/file/time", ",", "output_sort/record/file/type", ",", "output_sort/record/model", ",", "output_sort/record/samptype", ",", "output_sort/saturation", ",", "output_sort/saturation/active", ",", "output_sort/saturation/audio", ",", "output_sort/saturation/audio/in.L", ",", "output_sort/saturation/audio/in.R", ",", "output_sort/saturation/audio/out.L", ",", "output_sort/saturation/audio/out.R", ",", "output_sort/saturation/depth", ",", "output_sort/saturation/mode", ",", "output_sort/saturation/model", ",", "output_sort/saturation/preamp", ",", "test" ],
+									"items" : "<empty>",
 									"maxclass" : "umenu",
 									"numinlets" : 1,
 									"numoutlets" : 3,
@@ -4641,7 +4641,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 2.0, 51.0, 623.0, 47.0 ],
+									"patching_rect" : [ 2.0, 51.0, 746.0, 47.0 ],
 									"style" : "",
 									"text" : "Filter syntax :\n\n< filterName (object o) (attribute a) (value x y z) (parent p) (name n) (instance i) (mode inclusion|exclusion) >"
 								}
@@ -5343,7 +5343,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -5440,7 +5440,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -5817,7 +5817,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -6096,7 +6096,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
+											"revision" : 4,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -6929,7 +6929,7 @@
 									"outlettype" : [ "int", "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 28.0, 325.0, 168.0, 22.0 ],
-									"prefix" : "Macintosh HD:/",
+									"prefix" : "Mac HD:/",
 									"presentation" : 1,
 									"presentation_rect" : [ 30.0, 225.0, 168.0, 22.0 ],
 									"style" : ""
@@ -7518,15 +7518,15 @@
 		"lines" : [  ],
 		"parameters" : 		{
 			"obj-2::obj-3::obj-13" : [ "live.dial[9]", "Sample rate", 0 ],
-			"obj-7::obj-14" : [ "live.dial[4]", "Bit depth", 0 ],
-			"obj-2::obj-7::obj-14" : [ "live.dial[6]", "Bit depth", 0 ],
-			"obj-3::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-7::obj-13" : [ "live.dial[5]", "Sample rate", 0 ],
-			"obj-2::obj-7::obj-13" : [ "live.dial[7]", "Sample rate", 0 ],
-			"obj-2::obj-3::obj-14" : [ "live.dial[8]", "Bit depth", 0 ],
 			"obj-6::obj-14" : [ "live.dial[2]", "Bit depth", 0 ],
+			"obj-6::obj-13" : [ "live.dial[3]", "Sample rate", 0 ],
+			"obj-2::obj-3::obj-14" : [ "live.dial[8]", "Bit depth", 0 ],
+			"obj-7::obj-14" : [ "live.dial[4]", "Bit depth", 0 ],
+			"obj-3::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-2::obj-7::obj-14" : [ "live.dial[6]", "Bit depth", 0 ],
+			"obj-7::obj-13" : [ "live.dial[5]", "Sample rate", 0 ],
 			"obj-3::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-6::obj-13" : [ "live.dial[3]", "Sample rate", 0 ]
+			"obj-2::obj-7::obj-13" : [ "live.dial[7]", "Sample rate", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -7537,25 +7537,25 @@
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -7567,37 +7567,37 @@
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -7678,7 +7678,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"autosave" : 0
+		"embedsnapshot" : 0
 	}
 
 }
