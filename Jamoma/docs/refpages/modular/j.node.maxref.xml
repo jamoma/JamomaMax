@@ -5,7 +5,7 @@
 		Declare attributes for empty nodes
 	</digest>
 	<description>
-		j.node allows to declare attributes for empty nodes in the namespace tree (that is: nodes that do not define either the root of a model or a view or a parameter, message or return)
+		j.node allows to declare attributes for empty nodes in the namespace tree (that is: nodes that do not define either the root of a model or a view or a parameter, message or return). This is particularly useful when managing priorities of parameter creating implicit nodes in a Jamoma model
 	</description>
 	<metadatalist>
 		<metadata name="author">
