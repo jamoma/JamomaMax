@@ -3,14 +3,13 @@
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
 
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.unit" module="" category="Jamoma">
+<c74object name="j.unit" module="data" category="Jamoma">
 	<digest>
-		Convert between various types of units using the dataspaceLib
+		Convert between different units
 	</digest>
 	<description>
-		<!-- TEXT_HERE -->
-	</description>
-	<!--METADATA-->
+j.unit allows to convert input values into diffent units defined by a choosen dataspace
+</description>
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -18,145 +17,129 @@
 		<metadata name="tag">
 			Jamoma
 		</metadata>
+		<metadata name="tag">
+			dataspace
+		</metadata>
+		<metadata name="tag">
+			measure
+		</metadata>
+		<metadata name="tag">
+			translate
+		</metadata>
 	</metadatalist>
-	<!--INLETS-->
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
+		<inlet id="0" type="any">
 			<digest>
+				Input values
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</inlet>
-		<inlet id="1" type="INLET_TYPE">
-			<digest>
-			</digest>
-			<description>
-				TEXT_HERE
+				Input values
 			</description>
 		</inlet>
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
-		<outlet id="0" type="OUTLET_TYPE">
+		<outlet id="0" type="any">
 			<digest>
 				y=f(x)
 			</digest>
 			<description>
-				TEXT_HERE
+				Converted values
 			</description>
 		</outlet>
-		<outlet id="1" type="OUTLET_TYPE">
+		<outlet id="1" type="any">
 			<digest>
-				dumpout
+				Dumpout
 			</digest>
 			<description>
 				TEXT_HERE
 			</description>
 		</outlet>
 	</outletlist>
-	<!--ARGUMENTS-->
-	<objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</objarg>
-	</objarglist>
-	<!--MESSAGES-->
+	<objarglist/>
 	<methodlist>
 		<method name="int">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="value to convert" type="int" optional="0" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Convert value
 			</digest>
 			<description>
-				TEXT_HERE
+				An int number at the input converts that value into the unit defined by the <at>output</at> attribute
 			</description>
 		</method>
 		<method name="float">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
 			<digest>
-				TEXT_HERE
+				Convert value
 			</digest>
 			<description>
-				TEXT_HERE
+				A float number at the input converts that value into the unit defined by the <at>output</at> attribute
 			</description>
 		</method>
 		<method name="list">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
 			<digest>
-				TEXT_HERE
+				Convert values
 			</digest>
 			<description>
-				TEXT_HERE
+				A list at the input converts that values into the unit defined by the <at>output</at> attribute
 			</description>
 		</method>
 		<method name="dataspaces.get">
 			<arglist />
 			<digest>
-				TEXT_HERE
+				Get a list of available dataspaces
 			</digest>
 			<description>
-				TEXT_HERE
+				The message <m>dataspaces.get</m> outputs a <m>DataspacesMenu</m> message followed by umenu formatted list of all dataspaces provided by the Jamoma framework's dataspaceLib
 			</description>
 		</method>
 		<method name="units.get">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="dataspace" type="symbol" optional="1" />
 			</arglist>
 			<digest>
-				TEXT_HERE
+				Get a list of available units
 			</digest>
 			<description>
-				TEXT_HERE
+				The message <m>units.get</m> outputs a <m>UnitMenu</m> message followed by umenu formatted list of all units belonging to the defined dataspace provided by the Jamoma framework's dataspaceLib. The <m>units.get</m> message can be followed by an optional argument defining a dataspace to get units from
 			</description>
 		</method>
 	</methodlist>
-	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Define a dataspace
 			</digest>
 			<description>
-				TEXT_HERE
+				The <at>dataspace</at> attribute defines the dataspace managing the units conversion
 			</description>
 		</attribute>
 		<attribute name="input" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Input value unit
 			</digest>
 			<description>
-				TEXT_HERE
+				The <at>input</at> attribute defines the unit of the incoming value
 			</description>
 		</attribute>
 		<attribute name="output" get="1" set="1" type="symbol" size="1">
 			<digest>
-				TEXT_HERE
+				Output value unit
 			</digest>
 			<description>
-				TEXT_HERE
+				The <at>output</at> attribute defines the unit to convert incoming value into
 			</description>
 		</attribute>
 	</attributelist>
-	<!--EXAMPLE-->
 	<examplelist>
 		<example caption="" img="" />
 	</examplelist>
-	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.parameter">
-				
-		</seealso>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
+		<seealso name="j.parameter" type="refpage" module="modular"/>
+		<seealso name="j.map" type="refpage" module="modular"/>
+		<seealso name="j.unit~" type="refpage" module="dsp"/>
+		<seealso name="j.unit-" type="refpage" module="audiograph"/>
 	</seealsolist>
 </c74object>
