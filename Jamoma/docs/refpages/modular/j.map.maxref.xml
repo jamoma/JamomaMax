@@ -181,7 +181,7 @@
 				Get available functions
 			</digest>
 			<description>
-				The <at>function/library</at> attribute displays a list of all available 
+				The <at>function/library</at> attribute displays a list of all available function
 			</description>
 		</attribute>
 		<attribute name="function/parameters" get="1" set="1" type="atom" size="1">
