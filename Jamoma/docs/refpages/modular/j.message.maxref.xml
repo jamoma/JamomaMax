@@ -215,7 +215,7 @@
 			</digest>
 			<description>
 				The <at>@dataspace</at> attribute defines a <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> used by this node. This enables values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
-				<ul><li>none (default)</li><li><m>angle</m></li><li><m>color</m></li><li><m>distance</m></li><li><m>gain</m></li><li><m>orientation</m></li><li><m>position</m></li><li><m>speed</m></li><li><m>temperature</m></li><li><m>time</m></li></ul>
+				<ul><li><m>none</m> (default)</li><li><m>angle</m></li><li><m>color</m></li><li><m>distance</m></li><li><m>gain</m></li><li><m>orientation</m></li><li><m>position</m></li><li><m>speed</m></li><li><m>temperature</m></li><li><m>time</m></li></ul>
 			</description>
 		</attribute>
 		<attribute name="default" get="1" set="1" type="int" size="1">
