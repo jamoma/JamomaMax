@@ -280,9 +280,9 @@
 		<example caption="" img="./images/j.map.png"/>
 	</examplelist>
 	<seealsolist>
-		<seealso name="j.function"/>
 		<seealso name="j.ramp"/>
 		<seealso name="mapper.model"/>
+		<seealso name="j.function~"/>
 		<seealso name="scale"/>
 	</seealsolist>
 </c74object>
