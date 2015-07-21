@@ -242,7 +242,7 @@
 				Dataspace used by the parameter. This enables parameter values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
 				<ul>
 					<li><m>none</m> (default)</li>
-					<li> <m>angle</m></li>
+					<li><m>angle</m></li>
 					<li><m>color</m></li>
 					<li><m>distance</m></li>
 					<li><m>gain</m></li>
