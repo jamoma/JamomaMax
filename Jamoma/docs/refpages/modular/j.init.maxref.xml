@@ -8,7 +8,7 @@
 		loadbang for Jamoma models
 	</digest>
 	<description>
-		Utility for initialization of models
+		j.init is a utility for initialization of models
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -51,7 +51,7 @@
 		</outlet>
 		<outlet id="1" type="bang">
 			<digest>
-				bang when initialization is done
+				Bang when initialization is done
 			</digest>
 			<description>
 				TEXT_HERE
