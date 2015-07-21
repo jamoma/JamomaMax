@@ -239,7 +239,20 @@
 				Dataspace used by the parameter
 			</digest>
 			<description>
-				Dataspace used by the parameter. This enables parameter values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are <m>angle</m>, <m>color</m>, <m>distance</m>, <m>gain</m>, <m>none</m>, <m>orientation</m>, <m>position</m>, <m>speed</m>, <m>temperature</m> and <m>time</m>. The default dataspace is <m>none</m>.
+				Dataspace used by the parameter. This enables parameter values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
+				<ul>
+					<li><m>none</m> (default)</li>
+					<li> <m>angle</m></li>
+					<li><m>color</m></li>
+					<li><m>distance</m></li>
+					<li><m>gain</m></li>
+					<li><m>orientation</m></li>
+					<li><m>position</m></li>
+					<li><m>speed</m></li>
+					<li><m>temperature</m></li>
+					<li><m>time</m></li>
+				</ul>
+				<br/>Note that dataspace and units conversion features are enable when <at>type</at> attribute is set to <i>interger</i>, <i>decimal</i> or <i>array</i>
 			</description>
 		</attribute>
 		<attribute name="default" get="1" set="1" type="int" size="1">
@@ -358,7 +371,7 @@
 				Datatype of the parameters
 			</digest>
 			<description>
-				Datatype of the parameters (decimal, integer, boolean, string, array, generic)
+				Datatype of the parameters (decimal, integer, boolean, string, array, generic)<br/>Note that value of type <m>integer</m>, <m>decimal</m> and <m>array</m> enable to use a <at>dataspace</at> and <at>unit</at> as well as <at>ramp</at> features.
 			</description>
 			<attributelist>
 				<attribute name="enumvals" get="1" set="1" type="atom" size="6">

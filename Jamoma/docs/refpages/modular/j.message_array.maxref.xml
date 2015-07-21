@@ -311,7 +311,7 @@
 			</digest>
 		<description>
 				The <at>@dataspace</at> attribute defines a <link type="vignette" name="Jamoma_dataspace" module="topics">dataspace</link> used by this node. This enables values to be updated using several alternative units interchangeably, such as <m>degree</m> and <m>radian</m> for the <m>angle</m> dataspace. Available dataspaces are:
-				<ul><li><m>none</m> (default)</li><li><m>angle</m></li><li><m>color</m></li><li><m>distance</m></li><li><m>gain</m></li><li><m>orientation</m></li><li><m>position</m></li><li><m>speed</m></li><li><m>temperature</m></li><li><m>time</m></li></ul>
+				<ul><li><m>none</m> (default)</li><li><m>angle</m></li><li><m>color</m></li><li><m>distance</m></li><li><m>gain</m></li><li><m>orientation</m></li><li><m>position</m></li><li><m>speed</m></li><li><m>temperature</m></li><li><m>time</m></li></ul><br/>Note that dataspace and units conversion features are enable when <at>type</at> attribute is set to <i>interger</i>, <i>decimal</i> or <i>array</i>
 			</description>
 	</attribute>
 	<attribute name="default" get="1" set="1" type="int" size="1">
@@ -408,8 +408,8 @@
 				Value type
 			</digest>
 		<description>
-				The <at>@type</at> attribute define the type of the value. Possible types are:
-				<ul><li><m>none</m> (j.message and j.return only)</li><li><m>generic</m></li><li><m>boolean</m></li><li><m>decimal</m></li><li><m>integer</m></li><li><m>array</m></li><li><m>string</m></li></ul>
+				The <at>type</at> attribute define the type of the value. Possible types are:
+				<ul><li><m>none</m> (j.message and j.return only)</li><li><m>generic</m></li><li><m>boolean</m></li><li><m>decimal</m></li><li><m>integer</m></li><li><m>array</m></li><li><m>string</m></li></ul><br/>Note that value of type <m>integer</m>, <m>decimal</m> and <m>array</m> enable to use a <at>dataspace</at> and <at>unit</at> as well as <at>ramp</at> features.
 			</description>
 	</attribute>
 	<attribute name="unit" get="1" set="1" type="symbol" size="1">
