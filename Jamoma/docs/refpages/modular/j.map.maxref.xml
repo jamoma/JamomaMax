@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-
-<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.map" module="" category="Jamoma">
+<c74object name="j.map" module="modular" category="Jamoma">
 	<digest>
-		Scaling and mapping input to output using the Jamoma function library
+		Scale and map values
 	</digest>
 	<description>
-		Scaling and mapping input to output using the Jamoma function library
+		j.map allows to scale and map values using various functions provided by the Jamoma function library. It handles continuous as well as discrete mappings. It also allows to set nodes address as input or output so you can remotely map Jamoma parameter or return values to parameter or messages
 	</description>
-	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -21,35 +17,35 @@
 		<metadata name="tag">
 			Jamoma
 		</metadata>
+		<metadata name="tag">
+			mapping
+		</metadata>
+		<metadata name="tag">
+			function
+		</metadata>
+		<metadata name="tag">
+			interaction
+		</metadata>
 	</metadatalist>
-	<!--INLETS-->
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
-			<digest>
+		<inlet id="0" type="any">
+			<digest>Input value
 			</digest>
 			<description>
-				Input value
-			</description>
-		</inlet>
-		<inlet id="1" type="INLET_TYPE">
-			<digest>
-			</digest>
-			<description>
-				Input value
+				Int, float or list values sent at <o>j.map</o> leftmost inlet will get scaled and mapped according to the defined function and options
 			</description>
 		</inlet>
 	</inletlist>
 	<!--OUTLETS-->
 	<outletlist>
-		<outlet id="0" type="OUTLET_TYPE">
+		<outlet id="0" type="any">
 			<digest>
-				Mapping output
+				Scaled and mapped value
 			</digest>
-			<description>
-				Mapping output
+			<description><o>j.map</o> leftmost outlet outputs the scaled and mapped version of the incoming value
 			</description>
 		</outlet>
-		<outlet id="1" type="OUTLET_TYPE">
+		<outlet id="1" type="any">
 			<digest>
 				Dumpout
 			</digest>
@@ -58,23 +54,10 @@
 			</description>
 		</outlet>
 	</outletlist>
-	<!--ARGUMENTS-->
-	<!-- <objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</objarg>
-	</objarglist> -->
-	<!--MESSAGES-->
+	<objarglist/>
 	<methodlist>
 		<method name="int">
-			<arglist>
-				<arg name="input value" type="int" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Value to be mapped
 			</digest>
@@ -83,9 +66,7 @@
 			</description>
 		</method>
 		<method name="float">
-			<arglist>
-				<arg name="input value" type="float" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Value to be mapped
 			</digest>
@@ -94,9 +75,7 @@
 			</description>
 		</method>
 		<method name="list">
-			<arglist>
-				<arg name="input value" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Values to be mapped
 			</digest>
@@ -105,91 +84,120 @@
 			</description>
 		</method>
 		<method name="anything">
-			<arglist>
-				<arg name="input value" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
-				Value to be mapped			
+				Value to be mapped
 				</digest>
 			<description>
-				Value to be mapped			
+				Value to be mapped
 				</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="Dump" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
-				Dump j.map's current state
+				Dumpout
 			</digest>
 			<description>
-				Dump j.map's current state
+				The <m>dumpout</m> message outputs values of the various attributes
 			</description>
 		</method>
 		<method name="reset">
-			<arglist />
+			<arglist/>
 			<digest>
-				Reset j.map to initial arguments and attributes
+				Reset j.map to initial attributes value
 			</digest>
 			<description>
-				Reset j.map to initial arguments and attributes
+				The <m>reset</m> message sets <o>j.map</o> attributes back to their value defined on initialization
 			</description>
 		</method>
 	</methodlist>
-	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="active" get="1" set="1" type="int" size="1">
 			<digest>
 				Enable j.map
 			</digest>
 			<description>
-				Enable j.map mapping
+				The <at>enable</at> attribute toggles j.map mapping on or off (default = 1)
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
-		<attribute name="clipmode" get="1" set="1" type="int" size="1">
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Clipmode for values exceeding the specified range
+				Set how values exceeding range will be clipped
 			</digest>
 			<description>
-				How to deal with values outside the specified range
+				The <at>clipmode</at> attribute defines how values exceeding range will be clipped. Available clipmodes are:
+				<ul><li><m>none</m>: when set to <m>none</m> (default), exceeding values will be left untouched</li><li><m>low</m>: when set to <m>low</m>, values exceeding the lower bound will be clipped. Values exceeding the upper bound will be left untouched</li><li><m>high</m>: when set to <m>high</m>, values exceeding the upper bound will be clipped. Values exceeding the lower bound will be left untouched</li><li><m>both</m>: when set to <m>both</m>, values exceeding lower or upper bounds will be clipped</li><!-- <li><m>wrap</m>: when set to <m>wrap</m>, values exceeding lower or upper bound will wrap around the opposite bound</li><li><m>fold</m>: when set to <m>fold</m>, values exceeding lower or upper bound will fold back within the defined range</li> --></ul>
 			</description>
-			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="none low high both" />
-			</attributelist>
+			<!-- <attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="4">
+					<enumlist>
+						<enum name="none">
+							<digest>
+								Exceeding values will be left untouched (default)
+							</digest>
+							<description>
+								Results will be output as a list
+							</description>
+						</enum>
+						<enum name="low">
+							<digest>
+								Values exceeding the lower bound will be clipped
+							</digest>
+							<description>
+								Clip values below the lower bound. Values exceeding the upper bound will be left untouched
+							</description>
+						</enum>
+						<enum name="high">
+							<digest>
+								Values exceeding the upper bound will be clipped</digest>
+							<description>
+								Clip value above the upper bound only. Values exceeding the lower bound will be left untouched							
+							</description>
+						</enum>
+						<enum name="both">
+							<digest>
+								Values exceeding lower or upper bounds will be clipped
+							</digest>
+							<description/>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
+			</attributelist> -->
 		</attribute>
 		<attribute name="function" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Set the transfert function to be used for mapping
+				Transfert function used for mapping
 			</digest>
 			<description>
-				Set the transfert function to be used for mapping
+				The <at>function</at> attribute sets the function used for mapping incoming values
 			</description>
 		</attribute>
 		<attribute name="function/library" get="1" set="1" type="atom" size="1">
 			<digest>
-				Output all available functions
+				Get available functions
 			</digest>
 			<description>
-				Output all available functions
+				The <at>function/library</at> attribute displays a list of all available function
 			</description>
 		</attribute>
 		<attribute name="function/parameters" get="1" set="1" type="atom" size="1">
 			<digest>
-				Output the parametersfor the current defined function
+				Get parameters for the current function
 			</digest>
 			<description>
-				Output the parametersfor the current defined function
+				The <at>function/parameters</at> attribute displays a list of all parameters for the function defined by the <at>function</at> attribute
 			</description>
 		</attribute>
 		<attribute name="function/samples" get="1" set="1" type="atom" size="1">
 			<digest>
-				Output a list of value as a reference for the defined function
+				Get a list of mapped sample values
 			</digest>
 			<description>
-				Output a list of value as a reference for the defined function
+				The <at>function/samples</at> attribute displays a list of some mapped sample values. This can be useful to get visual feedback of the defined curve in a gui object ie. <o>multislider</o>, <o>plot~</o>)
 			</description>
 		</attribute>
 		<attribute name="input" get="1" set="1" type="symbol" size="1">
@@ -197,15 +205,15 @@
 				Address of a j.parameter or j.return to listen to
 			</digest>
 			<description>
-				Address of a j.parameter or j.return to be used for mapping to another j.parameter or j.message
+				The <at>input</at> attribute sets an address of a j.parameter or j.return to be used for mapping to another j.parameter or j.message
 			</description>
 		</attribute>
 		<attribute name="input/index" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Pick an item from source parameter
+				Pick an item from list input
 			</digest>
 			<description>
-				Pick an item from source parameter, if it is of type array (default 0 = all)
+				When using as input a parameter or return address with <at>type</at> attribute set to <m>array</m> the <at>input/index</at> attribute selects an item to be mapped in the array. When set to 0 (default) all items from the array will get mapped
 			</description>
 		</attribute>
 		<attribute name="input/max" get="1" set="1" type="float" size="1">
@@ -213,7 +221,7 @@
 				Maximum input value
 			</digest>
 			<description>
-				Maximum input value
+				The <at>input/max</at> attribute sets the maximum input value
 			</description>
 		</attribute>
 		<attribute name="input/min" get="1" set="1" type="float" size="1">
@@ -221,7 +229,7 @@
 				Minimum input value
 			</digest>
 			<description>
-				Minimum input value
+				The <at>input/min</at> attribute sets the minimum input value
 			</description>
 		</attribute>
 		<attribute name="inverse" get="1" set="1" type="int" size="1">
@@ -229,10 +237,10 @@
 				Switch minimum and maximum values
 			</digest>
 			<description>
-				Switch minimum and maximum values
+				The <at>inverse</at> attribute switches minimum and maximum values
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
 		<attribute name="output" get="1" set="1" type="symbol" size="1">
@@ -240,8 +248,7 @@
 				Address of a j.parameter or j.message to send the value to
 			</digest>
 			<description>
-				Address of a j.parameter or j.message to be used as the destination of the mapping
-				
+				The <at>output</at> attribute sets an address of a j.parameter or j.message to be used as the destination of the mapping
 			</description>
 		</attribute>
 		<attribute name="output/max" get="1" set="1" type="float" size="1">
@@ -249,7 +256,7 @@
 				Maximum output value
 			</digest>
 			<description>
-				Maximum output value
+				The <at>output/max</at> attribute sets the maximum output value
 			</description>
 		</attribute>
 		<attribute name="output/min" get="1" set="1" type="float" size="1">
@@ -257,7 +264,7 @@
 				Minimum output value
 			</digest>
 			<description>
-				Minimum output value
+				The <at>output/min</at> attribute sets the minimum output value
 			</description>
 		</attribute>
 		<attribute name="ramp" get="1" set="1" type="int" size="1">
@@ -265,19 +272,17 @@
 				Smoothing function
 			</digest>
 			<description>
-				Smoothing function
+				The <at>ramp</at> attribute sets a smoothing function value (in milliseconds)
 			</description>
 		</attribute>
 	</attributelist>
-	<!--EXAMPLE-->
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img="./images/j.map.png"/>
 	</examplelist>
-	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.function"/>
 		<seealso name="j.ramp"/>
-		<seealso name="ezmap"/>
+		<seealso name="mapper.model"/>
+		<seealso name="j.function~"/>
 		<seealso name="scale"/>
 	</seealsolist>
 </c74object>

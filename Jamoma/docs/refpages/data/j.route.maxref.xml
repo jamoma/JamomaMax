@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-
-<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.route" module="" category="Jamoma">
 	<digest>
 		A routing object with some advanced features
 	</digest>
 	<description>
-		A routing object with some advanced features
+		j.route works somewhat like Max's route object but provides some advanced routing options
 	</description>
 	<!--METADATA-->
 	<metadatalist>
@@ -22,44 +19,34 @@
 			Jamoma
 		</metadata>
 	</metadatalist>
-	<!--INLETS-->
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
+		<inlet id="0" type="any">
 			<digest>
 				Input
 			</digest>
 			<description>
-				Input
+				Incoming message to route
 			</description>
 		</inlet>
-		<!-- <inlet id="1" type="INLET_TYPE">
-			<digest>
-				Input
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</inlet> -->
 	</inletlist>
-	<!--OUTLETS-->
 	<outletlist>
-		<outlet id="0" type="OUTLET_TYPE">
+		<outlet id="0" type="any">
 			<digest>
-				Matching Output
+				Matching output
 			</digest>
 			<description>
-				Output for message matching the string defined in searchstring attribute
+				Output for messages matching the string defined in <at>searchstring</at> attribute
 			</description>
 		</outlet>
-		<outlet id="1" type="OUTLET_TYPE">
+		<outlet id="1" type="any">
 			<digest>
-				Unmatching Output
+				Unmatching output
 			</digest>
 			<description>
-				Output for message unmatching the string defined in searchstring attribute
+				Output for messages unmatching the string defined in <at>searchstring</at> attribute
 			</description>
 		</outlet>
-		<outlet id="2" type="OUTLET_TYPE">
+		<outlet id="2" type="any">
 			<digest>
 				Dumpout
 			</digest>
@@ -68,26 +55,15 @@
 			</description>
 		</outlet>
 	</outletlist>
-	<!--ARGUMENTS-->
-	<!-- <objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</objarg>
-	</objarglist> -->
-	<!--MESSAGES-->
+	<objarglist/>
 	<methodlist>
-		<method name="bang">
+		<!-- <method name="bang">
 			<arglist />
 			<digest>
 				Value input
 			</digest>
 			<description>
-				Value input	
+				Value input
 			</description>
 		</method>
 		<method name="list">
@@ -100,10 +76,10 @@
 			<description>
 				Value input
 			</description>
-		</method>
+		</method> -->
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="messages to route" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				Value input
@@ -113,14 +89,13 @@
 			</description>
 		</method>
 	</methodlist>
-	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="partialmatch" get="1" set="1" type="int" size="1">
 			<digest>
 				Enable or disable partial match
 			</digest>
 			<description>
-				Enable or disable partial match. When enabled, input message partially matching the searchstring attribute will pass
+				The <at>partialmatch</at> attribute enables or disables partial match. When enabled, input messages partially matching the string defined at the <at>searchstring</at> attribute will pass
 			</description>
 		</attribute>
 		<attribute name="searchpositions" get="1" set="1" type="int" size="100">
@@ -128,7 +103,7 @@
 				Set position in input list to test
 			</digest>
 			<description>
-				Set position in input list to test
+				The <at>searchposition</at> attribute sets position in input list to test
 			</description>
 		</attribute>
 		<attribute name="searchstring" get="1" set="1" type="symbol" size="100">
@@ -136,21 +111,17 @@
 				String to search within the input messages
 			</digest>
 			<description>
-				String to search within the input messages
+				The <at>searchstringtring</at> attribute sets the string to search within the input messages
 			</description>
 		</attribute>
 	</attributelist>
-	<!--EXAMPLE-->
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
-	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="route">
-			<!-- TEXT_HERE -->
-		</seealso>
-		<seealso name="regexp">
-			<!-- TEXT_HERE -->
-		</seealso>
+		<seealso name="j.pass" type="refpage" module="data"/>
+		<seealso name="j.oscroute" type="refpage" module="data"/>
+		<seealso name="route"/>
+		<seealso name="regexp"/>
 	</seealsolist>
 </c74object>

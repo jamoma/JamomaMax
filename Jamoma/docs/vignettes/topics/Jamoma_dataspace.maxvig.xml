@@ -121,9 +121,9 @@
 		</ul>
 	</techdetail>
 	<seealsolist>
-		<seealso name="j.unit" type="refpage"/>
-		<seealso name="j.parameter" type="refpage"/>
-		<seealso name="j.remote" type="refpage"/>
-		<seealso name="j.ramp" type="refpage"/>
+		<seealso name="j.unit" type="refpage" module="modular"/>
+		<seealso name="j.parameter" type="refpage" module="modular"/>
+		<seealso name="j.remote" type="refpage" module="modular"/>
+		<seealso name="j.ramp" type="refpage" module="modular"/>
 	</seealsolist>
 </vignette>

@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-
-<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.ramp" module="" category="Jamoma">
+<c74object name="j.ramp" module="data" category="Jamoma">
 	<digest>
-		Ramping from a value to a value
+		Ramp from a value to a value
 	</digest>
 	<description>
-		j.ramp provides a number of features to ramp to a value
+		j.ramp allows to ramp from an origin to a destination value over a given time. It also allows to use various various functions as well as to choose amongst different ramp driving options.
 	</description>
-	<!--METADATA-->
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -25,9 +21,8 @@
 			Jamoma
 		</metadata>
 	</metadatalist>
-	<!--INLETS-->
 	<inletlist>
-		<inlet id="0" type="INLET_TYPE">
+		<inlet id="0" type="any">
 			<digest>
 				input
 			</digest>
@@ -36,9 +31,8 @@
 			</description>
 		</inlet>
 	</inletlist>
-	<!--OUTLETS-->
 	<outletlist>
-		<outlet id="0" type="OUTLET_TYPE">
+		<outlet id="0" type="any">
 			<digest>
 				ramping value
 			</digest>
@@ -46,82 +40,86 @@
 				ramping value
 			</description>
 		</outlet>
-		<outlet id="1" type="OUTLET_TYPE">
+		<outlet id="1" type="any">
 			<digest>
 				dumpout
 			</digest>
 			<description>
-				dumpout
+				Dumpout
 			</description>
 		</outlet>
 	</outletlist>
-	<!--ARGUMENTS-->
-	<!-- <objarglist>
-		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
-			<digest>
-				TEXT_HERE
-			</digest>
-			<description>
-				TEXT_HERE
-			</description>
-		</objarg>
-	</objarglist> -->
-	<!--MESSAGES-->
+	<objarglist/>
 	<methodlist>
 		<method name="bang">
-			<arglist />
+			<arglist/>
 			<digest>
 				Output new ramp value when in async mode
 			</digest>
 			<description>
-				Output new ramp value when in async mode
+				A <m>bang</m> sent at j.ramp leftmost inlet outputs new ramp value when in async mode. Note that async mode is currently not yet available
 			</description>
 		</method>
 		<method name="int">
-			<arglist>
-				<arg name="ARG_NAME_0" type="int" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Jump to value
 			</digest>
 			<description>
-				Jump to value
+				An <m>int</m> at <o>j.ramp</o> leftmost inlet jumps to that value
 			</description>
 		</method>
 		<method name="float">
-			<arglist>
-				<arg name="ARG_NAME_0" type="float" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Jump to value
 			</digest>
 			<description>
-				Jump to value
+				An <m>float</m> at <o>j.ramp</o> leftmost inlet jumps to that value
 			</description>
 		</method>
 		<method name="list">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
 				Jump to value
 			</digest>
 			<description>
-				Jump to value
+				An <m>float</m> at <o>j.ramp</o> leftmost inlet jumps to that value			</description>
+		</method>
+		<method name="drive/parameter/value">
+			<arglist>
+				<arg name="scheduler parameter name" type="symbol" optional="0"/>
+				<arg name="scheduler parameter value" type="float" optional="1"/>
+			</arglist>
+			<digest>
+				Get and set scheduler parameters value
+			</digest>
+			<description>
+				The <m>drive/parameter/value</m> message followed by a parameter name (symbol) and optional value (float) allows to get and set the scheduler parameters value
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
-				Dump attributes value
+				Dumpout
 			</digest>
 			<description>
-				Dump attributes value
+				The <m>dumpout</m> message outputs values of the various attributes
 			</description>
 		</method>
-		<method name="go">
+		<method name="function/parameter/value">
+			<arglist>
+				<arg name="function parameter name" type="symbol" optional="0"/>
+				<arg name="function parameter value" type="float" optional="1"/>
+			</arglist>
+			<digest>
+				Get and set function parameters value
+			</digest>
+			<description>
+				The <m>function/parameter/value</m> message followed by a parameter name (symbol) and optional value (float) allows to get and set the function parameters value
+			</description>
+		</method>
+		<!-- <method name="go">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -131,58 +129,99 @@
 			<description>
 				Ramp to target value in the defined amount of time
 			</description>
-		</method>
+		</method> -->
 		<method name="set">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="origin value" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				Set value (without output)
 			</digest>
 			<description>
-				Set j.ramp to value without causing output
+				The <m>set</m> message sets <o>j.ramp</o> to value without causing output
 			</description>
 		</method>
 		<method name="slide">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="slide position" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				Manually ramp to a target value
 			</digest>
 			<description>
-				Manually ramp from last output value to the value defined by the target message
+				The <m>slide</m> message allows to manually ramp from last output value to the value defined by the target message
 			</description>
 		</method>
 		<method name="stop">
-			<arglist />
+			<arglist/>
 			<digest>
 				Stop ramp
 			</digest>
 			<description>
-				Stop ramp
+				The <m>stop</m> message stops ramp
 			</description>
 		</method>
 		<method name="target">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="destination value" type="list" optional="0"/>
 			</arglist>
 			<digest>
 				Set value to be reached by ramp
 			</digest>
 			<description>
-				Set value to be reached by ramp when using the slide message
+				The <m>target</m> message sets the value to be reached by ramp when using the slide message
 			</description>
 		</method>
-	</methodlist>
-	<!--ATTRIBUTES-->
-	<attributelist>
-		<attribute name="function" get="1" set="1" type="symbol" size="1">
+		<!-- <method name="tick">
+			<arglist>
+				<arg name="WHATEVER" type="symbol" optional="0" />
+			</arglist>
 			<digest>
-				Set ramping function
+				whatever
 			</digest>
 			<description>
-				Set ramping function
+			</description>
+		</method> -->
+	</methodlist>
+	<attributelist>
+		<attribute name="drive/library" get="1" set="1" type="atom" size="1">
+			<digest>
+				Get available schedulers
+			</digest>
+			<description>
+				The <at>drive/library</at> attribute displays a list of all available scheduler to drive the ramp
+			</description>
+		</attribute>
+		<attribute name="drive/parameters" get="1" set="1" type="atom" size="1">
+			<digest>
+				Get parameters for the current scheduler
+			</digest>
+			<description>
+				The <at>drive/parameters</at> attribute displays a list of all parameters for the scheduler defined by the <at>drive</at> attribute
+			</description>
+		</attribute>
+		<attribute name="function" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Transfert function used for ramping
+			</digest>
+			<description>
+				The <at>function</at> attribute sets the function used for ramping
+			</description>
+		</attribute>
+		<attribute name="function/library" get="1" set="1" type="atom" size="1">
+			<digest>
+				Get available functions
+			</digest>
+			<description>
+				The <at>function/library</at> attribute displays a list of all available function
+			</description>
+		</attribute>
+		<attribute name="function/parameters" get="1" set="1" type="atom" size="1">
+			<digest>
+				Get parameters for the current function
+			</digest>
+			<description>
+				The <at>function/parameters</at> attribute displays a list of all parameters for the function defined by the <at>function</at> attribute
 			</description>
 		</attribute>
 		<attribute name="ramp/time" get="1" set="1" type="float" size="1">
@@ -190,15 +229,15 @@
 				Set ramping time
 			</digest>
 			<description>
-				Set ramping time
+				The <at>ramp/time</at> attribute sets the ramping time
 			</description>
 		</attribute>
-		<attribute name="running" get="1" set="1" type="atom" size="1">
+		<attribute name="running" get="1" set="1" type="boolean" size="1">
 			<digest>
 				Report ramping state
 			</digest>
 			<description>
-				Report ramping state
+				The running attribute report ramping state (boolean)
 			</description>
 		</attribute>
 		<attribute name="scheduler" get="1" set="1" type="symbol" size="1">
@@ -206,17 +245,15 @@
 				Set the scheduler running the drive
 			</digest>
 			<description>
-				Set the scheduler running the drive
+				The <at>scheduler</at> attribute sets the scheduler running the drive
 			</description>
 		</attribute>
 	</attributelist>
-	<!--EXAMPLE-->
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
-	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.parameter"/>
+		<seealso name="j.map"/>
 		<seealso name="j.ramp~"/>
 		<seealso name="slide"/>
 	</seealsolist>
