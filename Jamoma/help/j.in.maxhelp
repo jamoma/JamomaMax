@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 196.0, 83.0, 1308.0, 884.0 ],
+		"rect" : [ 100.0, 100.0, 1199.0, 884.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -56,7 +56,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1308.0, 858.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 858.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -95,7 +95,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 902.0, 540.0, 163.0, 35.0 ],
+									"patching_rect" : [ 902.0, 540.0, 164.0, 35.0 ],
 									"prototypename" : "Jamoma.light",
 									"style" : "",
 									"text" : "These are not available when @amenities is set to 'none'",
@@ -115,9 +115,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 644.0, 141.0, 184.0, 92.0 ],
+									"patching_rect" : [ 644.0, 141.0, 193.0, 92.0 ],
 									"style" : "",
-									"text" : "Explore both models and see how @amenities set to none remove nodes from the namespace and disable j.in/out feature",
+									"text" : "Explore both models and see how @amenities set to 'none' removes nodes from the namespace and disables j.in/out features",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
@@ -130,7 +130,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 847.0, 190.0, 202.0, 22.0 ],
-									"presentation_rect" : [ 844.0, 486.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "address /without_amenities, explore"
 								}
@@ -146,7 +145,6 @@
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 379.0, 627.0, 50.0, 22.0 ],
-									"presentation_rect" : [ 406.0, 677.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -161,7 +159,6 @@
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 379.0, 242.0, 50.0, 22.0 ],
-									"presentation_rect" : [ 406.0, 292.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -304,9 +301,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 270.0, 125.0, 22.0 ],
+													"patching_rect" : [ 37.0, 270.0, 141.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.out my_model_input"
+													"text" : "j.out my_model_channel"
 												}
 
 											}
@@ -342,9 +339,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 60.5, 117.0, 22.0 ],
+													"patching_rect" : [ 37.0, 60.5, 133.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.in my_model_input"
+													"text" : "j.in my_model_channel"
 												}
 
 											}
@@ -467,7 +464,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 513.0, 618.0, 150.0, 55.0 ],
-									"presentation_rect" : [ 528.0, 668.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "A model named /without_amenities",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
@@ -491,7 +487,7 @@
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "data" ], [ 0, 1, "data/in.my_model_input" ], [ 0, 2, "data/out.my_model_input" ], [ 0, 3, "model" ] ],
+									"cellmap" : [ [ 0, 0, "data" ], [ 0, 1, "data/active" ], [ 0, 2, "data/bypass" ], [ 0, 3, "data/in.my_model_channel" ], [ 0, 4, "data/out.my_model_channel" ], [ 0, 5, "model" ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -507,7 +503,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 847.0, 304.0, 218.0, 122.75 ],
-									"rows" : 4,
+									"rows" : 6,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -613,13 +609,12 @@
 									"fontname" : "Lato Regular",
 									"fontsize" : 12.0,
 									"id" : "obj-3",
-									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 8.0, 64.0, 694.0, 35.0 ],
+									"patching_rect" : [ 8.0, 64.0, 694.0, 21.0 ],
 									"style" : "",
-									"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+									"text" : "Service provided by j.in (& optional j.out combination) can be toggled on or off using @amenities attribute",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
 
@@ -790,9 +785,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 270.0, 125.0, 22.0 ],
+													"patching_rect" : [ 37.0, 270.0, 141.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.out my_model_input"
+													"text" : "j.out my_model_channel"
 												}
 
 											}
@@ -828,9 +823,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 60.5, 117.0, 22.0 ],
+													"patching_rect" : [ 37.0, 60.5, 133.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.in my_model_input"
+													"text" : "j.in my_model_channel"
 												}
 
 											}
@@ -1097,7 +1092,6 @@
 					}
 ,
 					"patching_rect" : [ 237.0, 320.0, 93.0, 20.0 ],
-					"presentation_rect" : [ 237.0, 320.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1129,7 +1123,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1308.0, 858.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 858.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1186,7 +1180,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 544.0, 690.0, 153.0, 22.0 ],
 									"style" : "",
-									"text" : "another_parameter -0.57"
+									"text" : "my_parameter 0."
 								}
 
 							}
@@ -1198,7 +1192,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 226.0, 260.0, 129.0, 22.0 ],
-									"presentation_rect" : [ 226.0, 263.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "another_parameter $1"
 								}
@@ -1214,7 +1207,6 @@
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 226.0, 227.0, 50.0, 22.0 ],
-									"presentation_rect" : [ 226.0, 230.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -1323,7 +1315,6 @@
 													"numinlets" : 1,
 													"numoutlets" : 0,
 													"patching_rect" : [ 253.0, 49.0, 25.0, 25.0 ],
-													"presentation_rect" : [ 468.0, 317.0, 0.0, 0.0 ],
 													"style" : ""
 												}
 
@@ -1338,7 +1329,6 @@
 													"outlettype" : [ "", "bang" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 253.0, 223.0, 50.0, 22.0 ],
-													"presentation_rect" : [ 254.0, 229.0, 0.0, 0.0 ],
 													"style" : ""
 												}
 
@@ -1402,9 +1392,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 270.0, 125.0, 22.0 ],
+													"patching_rect" : [ 37.0, 270.0, 141.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.out my_model_input"
+													"text" : "j.out my_model_channel"
 												}
 
 											}
@@ -1440,9 +1430,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 60.5, 117.0, 22.0 ],
+													"patching_rect" : [ 37.0, 60.5, 133.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.in my_model_input"
+													"text" : "j.in my_model_channel"
 												}
 
 											}
@@ -1632,7 +1622,6 @@
 					}
 ,
 					"patching_rect" : [ 95.0, 319.0, 129.0, 20.0 ],
-					"presentation_rect" : [ 95.0, 319.0, 0.0, 0.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1664,7 +1653,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1308.0, 858.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 858.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1728,7 +1717,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 196.0, 109.0, 1308.0, 858.0 ],
+						"rect" : [ 100.0, 126.0, 1199.0, 858.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1785,7 +1774,6 @@
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 844.0, 667.0, 50.0, 22.0 ],
-									"presentation_rect" : [ 795.0, 635.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -1819,7 +1807,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 1085.0, 630.0, 118.0, 64.0 ],
-									"presentation_rect" : [ 1049.0, 515.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Remotely send value to model inputs",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1837,7 +1824,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 844.0, 537.666626, 106.0, 23.0 ],
-									"presentation_rect" : [ 790.0, 467.666656, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Remote control",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
@@ -1873,7 +1859,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 996.0, 334.0, 118.0, 64.0 ],
-									"presentation_rect" : [ 907.0, 462.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Internally send value from j.in to paired j.out",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1908,7 +1893,6 @@
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 678.0, 676.0, 50.0, 22.0 ],
-									"presentation_rect" : [ 630.0, 644.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -1923,7 +1907,6 @@
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 102.0, 676.0, 50.0, 22.0 ],
-									"presentation_rect" : [ 54.0, 644.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -1983,7 +1966,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 298.0, 437.0, 595.0, 334.0 ],
+										"rect" : [ 202.0, 454.0, 595.0, 334.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2081,9 +2064,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 224.0, 270.0, 110.0, 22.0 ],
+													"patching_rect" : [ 224.0, 270.0, 126.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.out another_input"
+													"text" : "j.out another_channel"
 												}
 
 											}
@@ -2119,9 +2102,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 224.0, 60.5, 103.0, 22.0 ],
+													"patching_rect" : [ 224.0, 60.5, 119.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.in another_input"
+													"text" : "j.in another_channel"
 												}
 
 											}
@@ -2204,7 +2187,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 332.0, 39.5, 228.0, 64.0 ],
+													"patching_rect" : [ 351.0, 39.5, 228.0, 64.0 ],
 													"style" : "",
 													"text" : "Name of the instance input to manage (<model>/data/in.<argument>)",
 													"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -2410,9 +2393,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 270.0, 125.0, 22.0 ],
+													"patching_rect" : [ 37.0, 270.0, 141.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.out my_model_input"
+													"text" : "j.out my_model_channel"
 												}
 
 											}
@@ -2448,9 +2431,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 37.0, 60.5, 117.0, 22.0 ],
+													"patching_rect" : [ 37.0, 60.5, 133.0, 22.0 ],
 													"style" : "Jamoma_highlighted_orange",
-													"text" : "j.in my_model_input"
+													"text" : "j.in my_model_channel"
 												}
 
 											}
