@@ -181,8 +181,8 @@
 		<example caption="" img=""/>
 	</examplelist>
 	<seealsolist>
-		<seealso name="j.out" type="ref" module="modular"/>
-		<seealso name="j.in~" type="ref" module="modular"/>
-		<seealso name="j.model" type="ref" module="modular"/>
+		<seealso name="j.out" type="refpage" module="modular"/>
+		<seealso name="j.in~" type="refpage" module="modular"/>
+		<seealso name="j.model" type="refpage" module="modular"/>
 	</seealsolist>
 </c74object>
