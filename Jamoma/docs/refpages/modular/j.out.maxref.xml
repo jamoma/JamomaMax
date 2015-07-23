@@ -4,8 +4,7 @@
 	<digest>
 		Jamoma model output
 	</digest>
-	<description>
-		<o>j.out</o> is an output conduit for control signals in a Jamoma model (most often these are Jitter matrices), much like <o>j.out~</o> is for audio signals. It allows to turn on or off messages output from the model or bypass the value processing in the model when used in combination with <o>j.in</o>
+	<description><o>j.out</o> is an output conduit for control signals in a Jamoma model (most often these are Jitter matrices), much like <o>j.out~</o> is for audio signals. It allows to turn on or off messages output from the model or bypass the value processing in the model when used in combination with <o>j.in</o>
 	</description>
 	<discussion>When the model's '<at>amenities</at> attribute is set to <i>all</i> or <i>data</i>, <o>j.out</o> automatically creates a few nodes under the containing model namespace so its features can be remotely addressed. Hence it creates a <i>data/active</i> node under the Jamoma model it is created in so that messages sent from the model can be muted. When used in combination with <o>j.in</o>, it also creates a <i>data/bypass</i> node so that messages sent to the model can be muted from <o>j.in</o> outlet and directly sent to paired <o>j.out</o>. It also creates a <i>data/out.&lt;argument&gt;</i> so that values sent from the model can be listened remotely. <br/><br/>When j.in/out features are excluded from amenities (ie. <i>@amenities none</i>), these nodes are removed from the namespace and the services are disabled</discussion>
 	<metadatalist>
@@ -108,7 +107,7 @@
 		</method> -->
 		<method name="anything">
 			<arglist>
-				<arg name="value" type="any" optional="1" />
+				<arg name="value" type="any" optional="1"/>
 			</arglist>
 			<digest>
 				Value to output from the model
@@ -160,7 +159,7 @@
 				The <at>mute</at> attribute turns on or off value output. This attribute is internally linked to the model's parameter <i>data/active</i>
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
@@ -189,11 +188,11 @@
 		</attribute> -->
 	</attributelist>
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
 	<seealsolist>
-		<seealso name="j.out"/>
-		<seealso name="j.in~"/>
-		<seealso name="j.model"/>
+		<seealso name="j.out" type="ref" module="modular"/>
+		<seealso name="j.in~" type="ref" module="modular"/>
+		<seealso name="j.model" type="ref" module="modular"/>
 	</seealsolist>
 </c74object>
