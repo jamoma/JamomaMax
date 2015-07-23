@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 1199.0, 884.0 ],
+		"rect" : [ 290.0, 120.0, 1199.0, 884.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -487,7 +487,7 @@
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "data" ], [ 0, 1, "data/active" ], [ 0, 2, "data/bypass" ], [ 0, 3, "data/in.my_model_channel" ], [ 0, 4, "data/out.my_model_channel" ], [ 0, 5, "model" ] ],
+									"cellmap" : [ [ 0, 0, "bang" ], [ 0, 1, "data" ], [ 0, 2, "data/in.my_model_channel" ], [ 0, 3, "data/out.my_model_channel" ], [ 0, 4, "model" ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -503,7 +503,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 847.0, 304.0, 218.0, 122.75 ],
-									"rows" : 6,
+									"rows" : 5,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -1717,7 +1717,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1199.0, 858.0 ],
+						"rect" : [ 290.0, 146.0, 1199.0, 858.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1784,14 +1784,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-40",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 844.0, 695.666626, 197.0, 35.0 ],
+									"patching_rect" : [ 844.0, 695.666626, 230.0, 22.0 ],
 									"style" : "",
-									"text" : "j.send /myModel/data/in.another_input"
+									"text" : "j.send /myModel/data/in.another_channel"
 								}
 
 							}
@@ -1966,7 +1965,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 202.0, 454.0, 595.0, 334.0 ],
+										"rect" : [ 392.0, 474.0, 595.0, 334.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2765,14 +2764,13 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-22",
-									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 844.0, 614.666626, 197.0, 35.0 ],
+									"patching_rect" : [ 844.0, 614.666626, 245.0, 22.0 ],
 									"style" : "",
-									"text" : "j.send /myModel/data/in.my_model_input"
+									"text" : "j.send /myModel/data/in.my_model_channel"
 								}
 
 							}
@@ -2921,10 +2919,10 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
 			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
-			"obj-2::obj-4" : [ "live.text[2]", "live.text", 0 ],
-			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ]
+			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
+			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ],
+			"obj-2::obj-4" : [ "live.text[2]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
