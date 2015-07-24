@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 139.0, 173.0, 1267.0, 642.0 ],
+		"rect" : [ 13.0, 173.0, 1267.0, 642.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -167,7 +167,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -380,7 +380,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1100.0, 275.5, 126.0, 37.0 ],
+					"patching_rect" : [ 1082.0, 275.5, 126.0, 37.0 ],
 					"text" : "At -70 dB we set absolute gain to 0."
 				}
 
@@ -409,7 +409,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 50.0, 320.0, 131.0, 74.0 ],
+					"patching_rect" : [ 1100.0, 320.0, 131.0, 74.0 ],
 					"text" : "j.model @description \"Route incomming multichannel signal to three auxiliary channels.\""
 				}
 
@@ -466,7 +466,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 903.0, 314.0, 105.0, 60.0 ],
+					"patching_rect" : [ 903.0, 314.0, 103.0, 60.0 ],
 					"text" : "j.unit @dataspace gain @input db @output linear"
 				}
 
@@ -572,7 +572,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 50.0, 573.5, 25.0, 25.0 ]
+					"patching_rect" : [ 1100.0, 573.5, 25.0, 25.0 ]
 				}
 
 			}
@@ -612,18 +612,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 218.0, 82.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "",
-					"id" : "obj-1",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 50.0, 82.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -677,15 +665,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-45", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-32", 0 ],
 					"disabled" : 0,
