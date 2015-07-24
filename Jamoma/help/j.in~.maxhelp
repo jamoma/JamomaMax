@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 263.0, 121.0, 1553.0, 854.0 ],
+		"rect" : [ 78.0, 101.0, 1553.0, 854.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -25,7 +25,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 2,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -101,6 +101,7 @@
 											"parameter_longname" : "Gain[4]",
 											"parameter_shortname" : "Gain",
 											"parameter_type" : 0,
+											"parameter_mmax" : 100.0,
 											"parameter_unitstyle" : 0
 										}
 
@@ -138,7 +139,6 @@
 											"parameter_longname" : "Gain[5]",
 											"parameter_shortname" : "Gain",
 											"parameter_type" : 0,
-											"parameter_mmax" : 100.0,
 											"parameter_unitstyle" : 0
 										}
 
@@ -217,8 +217,8 @@
 							}
 , 							{
 								"box" : 								{
-									"automation" : "active",
-									"automationon" : "active",
+									"automation" : "Mute",
+									"automationon" : "Mute",
 									"id" : "obj-29",
 									"maxclass" : "live.text",
 									"numinlets" : 1,
@@ -232,13 +232,13 @@
 											"parameter_shortname" : "live.text",
 											"parameter_type" : 2,
 											"parameter_mmax" : 1.0,
-											"parameter_enum" : [ "active", "active" ]
+											"parameter_enum" : [ "Mute", "Mute" ]
 										}
 
 									}
 ,
-									"text" : "active",
-									"texton" : "active",
+									"text" : "Mute",
+									"texton" : "Mute",
 									"varname" : "live.text[3]"
 								}
 
@@ -258,6 +258,7 @@
 											"parameter_longname" : "Gain[2]",
 											"parameter_shortname" : "Gain",
 											"parameter_type" : 0,
+											"parameter_mmax" : 100.0,
 											"parameter_unitstyle" : 0
 										}
 
@@ -295,7 +296,6 @@
 											"parameter_longname" : "Gain[3]",
 											"parameter_shortname" : "Gain",
 											"parameter_type" : 0,
-											"parameter_mmax" : 100.0,
 											"parameter_unitstyle" : 0
 										}
 
@@ -374,8 +374,8 @@
 							}
 , 							{
 								"box" : 								{
-									"automation" : "active",
-									"automationon" : "active",
+									"automation" : "Mute",
+									"automationon" : "Mute",
 									"id" : "obj-27",
 									"maxclass" : "live.text",
 									"numinlets" : 1,
@@ -389,13 +389,13 @@
 											"parameter_shortname" : "live.text",
 											"parameter_type" : 2,
 											"parameter_mmax" : 1.0,
-											"parameter_enum" : [ "active", "active" ]
+											"parameter_enum" : [ "Mute", "Mute" ]
 										}
 
 									}
 ,
-									"text" : "active",
-									"texton" : "active",
+									"text" : "Mute",
+									"texton" : "Mute",
 									"varname" : "live.text"
 								}
 
@@ -490,7 +490,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1155.0, 832.0, 164.0, 35.0 ],
+									"patching_rect" : [ 1361.0, 610.0, 164.0, 35.0 ],
 									"prototypename" : "Jamoma.light",
 									"style" : "",
 									"text" : "These are not available when @amenities is set to 'none'",
@@ -512,7 +512,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 644.0, 106.0, 193.0, 92.0 ],
 									"style" : "",
-									"text" : "Explore both models and see how @amenities set to 'none' removes nodes from the namespace and disables j.in/out features",
+									"text" : "Explore both models and see how @amenities set to 'none' removes nodes from the namespace and disables j.in~/out~ features",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
@@ -795,7 +795,7 @@
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "audio" ], [ 0, 1, "audio/in.my_model_channel" ], [ 0, 2, "audio/out.my_model_channel" ], [ 0, 3, "model" ] ],
+									"cellmap" : [ [ 0, 0, "bang" ], [ 0, 1, "audio" ], [ 0, 2, "audio/in.my_model_channel" ], [ 0, 3, "audio/out.my_model_channel" ], [ 0, 4, "model" ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -811,7 +811,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 847.0, 269.0, 218.0, 148.0 ],
-									"rows" : 4,
+									"rows" : 5,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -840,7 +840,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 8.0, 64.0, 694.0, 21.0 ],
 									"style" : "",
-									"text" : "Service provided by j.in (& optional j.out combination) can be toggled on or off using @amenities attribute",
+									"text" : "Service provided by j.in~ (& optional j.out~ combination) can be toggled on or off using @amenities attribute",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
 
@@ -1078,7 +1078,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-21",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.in" ],
+									"jsarguments" : [ "j.in~" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -1470,7 +1470,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 544.0, 690.0, 153.0, 22.0 ],
 									"style" : "",
-									"text" : "my_parameter 0.127"
+									"text" : "my_parameter 0."
 								}
 
 							}
@@ -2013,7 +2013,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 263.0, 147.0, 1553.0, 828.0 ],
+						"rect" : [ 78.0, 127.0, 1553.0, 828.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -2045,6 +2045,315 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-25",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.0, 60.666656, 109.0, 21.0 ],
+									"style" : "",
+									"text" : "Provided by j.in~",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-24",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.0, 396.666656, 225.0, 21.0 ],
+									"style" : "",
+									"text" : "Provided when using j.in~ + paired j.out~",
+									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Lato Regular",
+									"fontsize" : 14.0,
+									"id" : "obj-2",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.0, 371.666656, 180.0, 23.0 ],
+									"style" : "",
+									"text" : "mix & bypass (j.out~ + j.in~)",
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-17",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 849.5, 445.0, 127.0, 49.0 ],
+									"style" : "",
+									"text" : "Control dry/wet level",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-16",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 853.0, 104.0, 133.0, 49.0 ],
+									"style" : "",
+									"text" : "Control input gain (0-100)",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-14",
+									"maxclass" : "live.dial",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "float" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 779.0, 445.0, 44.0, 47.0 ],
+									"presentation_rect" : [ 854.5, 152.0, 44.0, 47.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "Gain[1]",
+											"parameter_shortname" : "Gain",
+											"parameter_type" : 0,
+											"parameter_mmax" : 100.0,
+											"parameter_unitstyle" : 0
+										}
+
+									}
+,
+									"varname" : "live.dial[1]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 779.0, 497.0, 171.0, 22.0 ],
+									"style" : "",
+									"text" : "j.remote /myModel~/audio/mix"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-13",
+									"maxclass" : "live.dial",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "float" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 779.0, 104.0, 44.0, 47.0 ],
+									"presentation_rect" : [ 0.0, 0.0, 44.0, 47.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "Gain",
+											"parameter_shortname" : "Gain",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 0
+										}
+
+									}
+,
+									"varname" : "live.dial"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 779.0, 156.0, 175.0, 22.0 ],
+									"style" : "",
+									"text" : "j.remote /myModel~/audio/gain"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-42",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.0, 681.666626, 275.0, 21.0 ],
+									"prototypename" : "Jamoma.light",
+									"style" : "",
+									"text" : "All these parameters affect all outputs (and inputs)",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Lato Regular",
+									"fontsize" : 14.0,
+									"id" : "obj-78",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 779.0, 35.666656, 163.0, 23.0 ],
+									"style" : "",
+									"text" : "gain & mute (j.in~)",
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-20",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 976.5, 588.0, 123.0, 64.0 ],
+									"style" : "",
+									"text" : "Internally send value from j.in~ to paired j.out~",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Lato Regular",
+									"fontsize" : 12.0,
+									"id" : "obj-19",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 960.0, 241.579651, 127.0, 49.0 ],
+									"style" : "",
+									"text" : "Toggle all model inputs & outputs",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-31",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 779.0, 255.623123, 179.0, 22.0 ],
+									"style" : "",
+									"text" : "j.remote /myModel~/audio/mute"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-30",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 779.0, 609.0, 190.0, 22.0 ],
+									"style" : "",
+									"text" : "j.remote /myModel~/audio/bypass"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"automation" : "Bypass",
+									"automationon" : "Bypass",
+									"id" : "obj-3",
+									"maxclass" : "live.text",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 779.0, 581.5, 40.0, 20.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "live.text",
+											"parameter_shortname" : "live.text",
+											"parameter_type" : 2,
+											"parameter_mmax" : 1.0,
+											"parameter_enum" : [ "Mute", "Mute" ]
+										}
+
+									}
+,
+									"text" : "Bypass",
+									"texton" : "Bypass",
+									"varname" : "live.text[1]"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"automation" : "Mute",
+									"automationon" : "Mute",
+									"id" : "obj-26",
+									"maxclass" : "live.text",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 779.0, 228.123123, 40.0, 20.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "live.text[7]",
+											"parameter_shortname" : "live.text",
+											"parameter_type" : 2,
+											"parameter_mmax" : 1.0,
+											"parameter_enum" : [ "Mute", "Mute" ]
+										}
+
+									}
+,
+									"text" : "Mute",
+									"texton" : "Mute",
+									"varname" : "live.text"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"channels" : 1,
 									"id" : "obj-23",
 									"maxclass" : "live.gain~",
@@ -2053,7 +2362,7 @@
 									"orientation" : 1,
 									"outlettype" : [ "signal", "", "float", "list" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 1197.5, 317.0, 145.0, 41.0 ],
+									"patching_rect" : [ 1196.5, 112.0, 145.0, 41.0 ],
 									"presentation_rect" : [ 837.0, 618.0, 50.0, 41.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -2083,7 +2392,7 @@
 									"orientation" : 1,
 									"outlettype" : [ "signal", "", "float", "list" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 1197.5, 545.333374, 145.0, 41.0 ],
+									"patching_rect" : [ 1196.5, 348.333374, 145.0, 41.0 ],
 									"presentation_rect" : [ 0.0, 0.0, 50.0, 41.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -2100,117 +2409,6 @@
 									}
 ,
 									"varname" : "live.gain~"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbletextmargin" : 10,
-									"fontname" : "Lato Regular",
-									"fontsize" : 12.0,
-									"id" : "obj-17",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 849.5, 386.0, 127.0, 49.0 ],
-									"style" : "",
-									"text" : "Control dry/wet level",
-									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbletextmargin" : 10,
-									"fontname" : "Lato Regular",
-									"fontsize" : 12.0,
-									"id" : "obj-16",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 838.5, 284.0, 127.0, 49.0 ],
-									"style" : "",
-									"text" : "Control output gain (0-100)",
-									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-14",
-									"maxclass" : "live.dial",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "float" ],
-									"parameter_enable" : 1,
-									"patching_rect" : [ 779.0, 386.0, 44.0, 47.0 ],
-									"presentation_rect" : [ 854.5, 152.0, 44.0, 47.0 ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_longname" : "Gain[1]",
-											"parameter_shortname" : "Gain",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 0
-										}
-
-									}
-,
-									"varname" : "live.dial[1]"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-15",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 438.0, 171.0, 22.0 ],
-									"style" : "",
-									"text" : "j.remote /myModel~/audio/mix"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-13",
-									"maxclass" : "live.dial",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "float" ],
-									"parameter_enable" : 1,
-									"patching_rect" : [ 779.0, 284.0, 44.0, 47.0 ],
-									"presentation_rect" : [ 0.0, 0.0, 44.0, 47.0 ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_longname" : "Gain",
-											"parameter_shortname" : "Gain",
-											"parameter_type" : 0,
-											"parameter_mmax" : 100.0,
-											"parameter_unitstyle" : 0
-										}
-
-									}
-,
-									"varname" : "live.dial"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-12",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 336.0, 175.0, 22.0 ],
-									"style" : "",
-									"text" : "j.remote /myModel~/audio/gain"
 								}
 
 							}
@@ -2326,7 +2524,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 1197.5, 499.0, 51.0, 22.0 ],
+									"patching_rect" : [ 1196.5, 302.0, 51.0, 22.0 ],
 									"style" : "",
 									"text" : "tri~ 999"
 								}
@@ -2339,24 +2537,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 1197.5, 288.0, 68.0, 22.0 ],
+									"patching_rect" : [ 1196.5, 84.0, 68.0, 22.0 ],
 									"style" : "",
 									"text" : "cycle~ 102"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Lato Regular",
-									"fontsize" : 12.0,
-									"id" : "obj-42",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 798.5, 663.0, 265.0, 21.0 ],
-									"style" : "",
-									"text" : "These parameters affect all inputs (and outputs)",
-									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 								}
 
 							}
@@ -2371,7 +2554,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1197.5, 609.333374, 190.0, 35.0 ],
+									"patching_rect" : [ 1196.5, 412.333374, 190.0, 35.0 ],
 									"style" : "",
 									"text" : "j.send~ /myModel~/audio/in.right_channel"
 								}
@@ -2388,7 +2571,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1392.0, 294.0, 118.0, 64.0 ],
+									"patching_rect" : [ 1391.0, 97.0, 118.0, 64.0 ],
 									"style" : "",
 									"text" : "Remotely send audio to model inputs",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -2405,63 +2588,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1197.5, 232.666656, 106.0, 23.0 ],
+									"patching_rect" : [ 1196.5, 35.666656, 106.0, 23.0 ],
 									"style" : "",
 									"text" : "Remote control",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bgcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
-									"fontface" : 1,
-									"fontname" : "Lato Regular",
-									"fontsize" : 14.0,
-									"id" : "obj-78",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 779.0, 232.666656, 163.0, 23.0 ],
-									"style" : "",
-									"text" : "gain, mix, mute & bypass",
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbletextmargin" : 10,
-									"fontname" : "Lato Regular",
-									"fontsize" : 12.0,
-									"id" : "obj-20",
-									"linecount" : 3,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 987.5, 588.0, 123.0, 64.0 ],
-									"style" : "",
-									"text" : "Internally send value from j.in~ to paired j.out~",
-									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbletextmargin" : 10,
-									"fontname" : "Lato Regular",
-									"fontsize" : 12.0,
-									"id" : "obj-19",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 978.5, 496.0, 127.0, 49.0 ],
-									"style" : "",
-									"text" : "Toggle all model inputs & outputs",
-									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
 							}
@@ -2492,7 +2622,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 303.0, 435.0, 583.0, 342.0 ],
+										"rect" : [ 118.0, 415.0, 583.0, 342.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2699,7 +2829,7 @@
 													"maxclass" : "comment",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 342.0, 153.0, 218.0, 93.0 ],
+													"patching_rect" : [ 342.0, 153.0, 221.0, 93.0 ],
 													"style" : "",
 													"text" : "Argument sets the instance name to register audio input in the namespace.\n\nj.in~ and j.out~~ sharing the same name are internally linked so audio processing can be mixed, attenuatted & bypassed.",
 													"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -2928,88 +3058,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-31",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 513.0, 179.0, 22.0 ],
-									"style" : "",
-									"text" : "j.remote /myModel~/audio/mute"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-30",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 609.0, 190.0, 22.0 ],
-									"style" : "",
-									"text" : "j.remote /myModel~/audio/bypass"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"automation" : "Bypass",
-									"automationon" : "Bypass",
-									"id" : "obj-2",
-									"maxclass" : "live.text",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"parameter_enable" : 1,
-									"patching_rect" : [ 779.0, 581.5, 40.0, 20.0 ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_longname" : "live.text[1]",
-											"parameter_shortname" : "live.text",
-											"parameter_type" : 2,
-											"parameter_mmax" : 1.0,
-											"parameter_enum" : [ "Bypass", "Bypass" ]
-										}
-
-									}
-,
-									"text" : "Bypass",
-									"texton" : "Bypass",
-									"varname" : "live.text[1]"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"automation" : "active",
-									"automationon" : "active",
-									"id" : "obj-3",
-									"maxclass" : "live.text",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "", "" ],
-									"parameter_enable" : 1,
-									"patching_rect" : [ 779.0, 485.5, 40.0, 20.0 ],
-									"saved_attribute_attributes" : 									{
-										"valueof" : 										{
-											"parameter_longname" : "live.text",
-											"parameter_shortname" : "live.text",
-											"parameter_type" : 2,
-											"parameter_mmax" : 1.0,
-											"parameter_enum" : [ "active", "active" ]
-										}
-
-									}
-,
-									"text" : "active",
-									"texton" : "active",
-									"varname" : "live.text"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"bubble" : 1,
 									"bubbleside" : 0,
 									"fontsize" : 13.0,
@@ -3036,7 +3084,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1197.5, 364.0, 190.0, 35.0 ],
+									"patching_rect" : [ 1196.5, 156.0, 190.0, 35.0 ],
 									"style" : "",
 									"text" : "j.send~ /myModel~/audio/in.left_channel"
 								}
@@ -3082,7 +3130,7 @@
 									"destination" : [ "obj-13", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 788.5, 364.0, 772.0, 364.0, 772.0, 278.0, 788.5, 278.0 ],
+									"midpoints" : [ 788.5, 184.0, 772.0, 184.0, 772.0, 98.0, 788.5, 98.0 ],
 									"source" : [ "obj-12", 0 ]
 								}
 
@@ -3110,7 +3158,7 @@
 									"destination" : [ "obj-14", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 788.5, 465.0, 772.0, 465.0, 772.0, 380.0, 788.5, 380.0 ],
+									"midpoints" : [ 788.5, 524.0, 772.0, 524.0, 772.0, 439.0, 788.5, 439.0 ],
 									"source" : [ "obj-15", 0 ]
 								}
 
@@ -3121,15 +3169,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-18", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-30", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-2", 0 ]
 								}
 
 							}
@@ -3147,13 +3186,22 @@
 									"destination" : [ "obj-31", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"source" : [ "obj-26", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-30", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
 									"source" : [ "obj-3", 0 ]
 								}
 
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
+									"destination" : [ "obj-3", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"midpoints" : [ 788.5, 651.0, 771.0, 651.0, 771.0, 573.5, 788.5, 573.5 ],
@@ -3163,10 +3211,10 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 0 ],
+									"destination" : [ "obj-26", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 788.5, 554.0, 775.0, 554.0, 775.0, 478.5, 788.5, 478.5 ],
+									"midpoints" : [ 788.5, 296.623108, 780.5, 296.623108, 780.5, 221.123123, 788.5, 221.123123 ],
 									"source" : [ "obj-31", 0 ]
 								}
 
@@ -3242,20 +3290,20 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-2::obj-13" : [ "Gain[3]", "Gain", 0 ],
-			"obj-2::obj-4" : [ "Gain[4]", "Gain", 0 ],
+			"obj-2::obj-27" : [ "live.text[2]", "live.text", 0 ],
 			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
 			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
-			"obj-14::obj-13" : [ "Gain", "Gain", 0 ],
-			"obj-2::obj-29" : [ "live.text[6]", "live.text", 0 ],
+			"obj-2::obj-13" : [ "Gain[3]", "Gain", 0 ],
+			"obj-2::obj-4" : [ "Gain[4]", "Gain", 0 ],
 			"obj-2::obj-9" : [ "Gain[5]", "Gain", 0 ],
-			"obj-2::obj-28" : [ "live.text[5]", "live.text", 0 ],
-			"obj-2::obj-25" : [ "Gain[2]", "Gain", 0 ],
-			"obj-14::obj-23" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ],
 			"obj-14::obj-18" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-14::obj-26" : [ "live.text[7]", "live.text", 0 ],
+			"obj-14::obj-13" : [ "Gain", "Gain", 0 ],
+			"obj-14::obj-23" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-2::obj-29" : [ "live.text[6]", "live.text", 0 ],
 			"obj-14::obj-14" : [ "Gain[1]", "Gain", 0 ],
-			"obj-2::obj-27" : [ "live.text[2]", "live.text", 0 ]
+			"obj-2::obj-28" : [ "live.text[5]", "live.text", 0 ],
+			"obj-2::obj-25" : [ "Gain[2]", "Gain", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -3269,10 +3317,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
@@ -3282,6 +3326,10 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
