@@ -39,8 +39,8 @@ add_library(TTModularClassWrapperMaxArray OBJECT
 set_property(TARGET TTModularClassWrapperMaxArray
 			 PROPERTY COMPILE_DEFINITIONS ARRAY_EXTERNAL)
 
-include_directories("../../../Core/Graph/library/includes")
-include_directories("../../../Core/AudioGraph/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Graph/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/AudioGraph/library/includes")
 add_library(MaxAudioGraph OBJECT 
 		 	${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/MaxAudioGraph.cpp
   			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/MaxGraph.cpp)

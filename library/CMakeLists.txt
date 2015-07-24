@@ -35,12 +35,12 @@ ${CMAKE_CURRENT_SOURCE_DIR}/../source/c74support/max-includes/common/commonsyms.
 
 file(GLOB_RECURSE PROJECT_HDRS
     ${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h
-	${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Foundation/library/includes/*.h
-	${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Modular/library/includes/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Modular/library/PeerObject/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Modular/library/ProtocolLib/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}../../../Core/Modular/library/SchedulerLib/*.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/../../../Core/Graph/library/includes/*.h
+	${JAMOMA_CORE_SRC_PATH}/Foundation/library/includes/*.h
+	${JAMOMA_CORE_SRC_PATH}/Modular/library/includes/*.h
+    ${JAMOMA_CORE_SRC_PATH}/Modular/library/PeerObject/*.h
+    ${JAMOMA_CORE_SRC_PATH}/Modular/library/ProtocolLib/*.h
+    ${JAMOMA_CORE_SRC_PATH}/Modular/library/SchedulerLib/*.h
+    ${JAMOMA_CORE_SRC_PATH}/Graph/library/includes/*.h
     ${FILE_H_DIR}/Files.h
 )
 
