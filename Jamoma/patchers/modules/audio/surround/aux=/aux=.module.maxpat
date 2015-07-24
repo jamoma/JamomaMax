@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
@@ -85,26 +85,14 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Incomming multichannel signal",
-					"id" : "obj-3",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 194.0, 216.0, 25.0, 25.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "Route incomming multichannel signal to three auxiliary channels.",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 4,
-					"outlettype" : [ "", "audio.connect", "audio.connect", "audio.connect" ],
+					"outlettype" : [ "audio.connect", "audio.connect", "audio.connect", "" ],
 					"patching_rect" : [ 87.0, 261.0, 90.0, 20.0 ],
 					"text" : "aux=.model #1"
 				}
@@ -165,15 +153,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -184,14 +163,14 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "aux=.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
+				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "aux=.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
+				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

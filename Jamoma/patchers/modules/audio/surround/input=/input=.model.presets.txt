@@ -4,7 +4,6 @@
 - preset "default"
   audio/gain 100.000000
   audio/mute 0
-  countdown 0
   loop 0
   
 
