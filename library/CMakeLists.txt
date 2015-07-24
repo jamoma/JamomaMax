@@ -3,6 +3,8 @@ project(JamomaMax)
 
 add_definitions(-DJAMOMA_EXPORTS)
 
+include(${CMAKE_CURRENT_SOURCE_DIR}/../Shared/CMake/addMaxSupport.cmake)
+
 if ( APPLE )
 	#FIND_LIBRARY(CARBON_LIBRARY CarbonCore)
 	#MESSAGE(STATUS "  Found CarbonCore ${CARBON_LIBRARY}")
