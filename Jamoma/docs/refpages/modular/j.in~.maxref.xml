@@ -6,7 +6,13 @@
 	</digest>
 	<description><o>j.in~</o> is an input conduit for audio signals in a Jamoma model (much like <o>j.in</o> is for control signals). It allows to turn on or off audio signal sent to the model or bypass audio signal processing in the model when used in combination with <o>j.out~</o>. It also passes parameters or messages value changes sent to the model inlet to the addressed parameter or message
 	</description>
-	<discussion>When the model's '<at>amenities</at> attribute is set to <i>all</i> or <i>audio</i>, <o>j.in~</o> automatically creates a few nodes under the containing model namespace so its features can be remotely addressed. Hence it creates an <i>audio/mute</i> node under the Jamoma model it is created in so that audio signal sent to the model can be silenced. When used in combination with <o>j.out~</o>, it also creates an <i>audio/bypass</i> node so that audio signal sent to the model can be silenced from <o>j.in~</o> outlet and directly sent to paired <o>j.out~</o>. It also creates an <i>audio/in.&lt;argument&gt;</i> so audio signal can be accessed remotely (ie.with <o>j.send~</o> &amp; <o>j.receive~</o> ). When <o>j.in~</o> features are excluded from amenities (ie. <i>@amenities none</i>), these nodes are removed from the namespace and the services are disabled</discussion>
+	<discussion>
+		Audio input and output management provided by <o>j.in~</o> and <o>j.out~</o> are part of the services enabled by the  <link type="tutorial" name="amenities" module="jamoma">amenities</link> feature of a Jamoma model. When a model's <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> attribute is set to <b><i>all</i></b> or <b><i>audio</i></b>, several nodes are created under the model namespace so these features can be remotely accessed.<br/><br/>
+When enable, <o>j.in~</o> or <o>j.out~</o> creates an <b><i>audio/mute</i></b> node. This internal parameter allows to toggle audio signal input and output of the model.<br/><br/>
+When used in combination, paired <o>j.in~</o> and <o>j.out~</o> create an <b><i>audio/bypass</i></b> node. When set to 1, this internal parameter allows to sent audio signal coming at the model input straight to its output (that is, without passing through the whole audio processing chain of the model).<br/><br/>
+The use of <o>j.in~</o> and <o>j.out~</o> also creates <b><i>audio/in.&lt;instance name&gt;</i></b> and <b><i>audio/out.&lt;instance name&gt;</i></b> respectively, allowing to remotely send or receive audio signal to a model input or output.<br/><br/>
+When <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> is set to <b><i>none</i></b>, these features provided by <b><i>j.in~</i></b> and <b><i>j.out~</i></b> are disabled and the internal parameters are removed from the model's namespace.
+</discussion>
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -56,12 +62,12 @@
 		</outlet>
 	</outletlist>
 	<objarglist>
-		<objarg id="0" name="instance name" type="string|integer" optional="0">
+		<objarg id="0" name="instance name" type="string | integer" optional="0">
 			<digest>
-				Instance name to subscribe input in Jamoma namespace
+				Instance name to subscribe input in Jamoma model namespace
 			</digest>
 			<description>
-				An argument set to <o>j.in~</o> sets a instance name to subscribe input in Jamoma namespace. The full address of this node will be <i>&lt;model name&gt;/audio/in.&lt;argument&gt;</i>
+				An argument set to <o>j.in~</o> sets an instance name to subscribe input in the model namespace. The full address of this node will be <b><i>&lt;model name&gt;/audio/in.&lt;argument&gt;</i></b><br/><br/>It also sets the name of a <o>j.out</o> to pair with
 			</description>
 		</objarg>
 	</objarglist>
@@ -115,9 +121,10 @@
 			<digest>
 				Signal to send to the model
 			</digest>
-			<description>
+			<!-- <description>
 				When the <at>audio/mute</at> parameter is set to 0 (default), signal sent to <o>j.in~</o> inlet gets output at its outlet so it can be processed inside your model. When a j<o>.out~</o> object sharing the same instance name defined as argument is placed within the model and the internal parameter <at>audio/bypass</at> is set to 1 (default = 0), signal sent at its inlet will be sent directly to the paired <o>j.out~</o> object.<br/><br/>When an incoming symbol matches a parameter or message in the model, the attached value will get sent to the addressed parameter
-			</description>
+			</description> -->
+			<description>Incoming audio signal is output at <b><i>j.in~</i></b> leftmost outlet. When the incoming message matches a parameter or message name in the model, the value(s) attached as argument to this message are forwarded to the addressed parameter in the model.<br/><br/>When paired with a <o>j.out~</o> object whose <at>bypass</at> attribute is set to 1, audio signal coming at <o>j.in~</o> inlet is silenced from its outlet and directly sent to <o>j.out~</o></description>
 		</method>
 		<method name="dump">
 			<arglist/>
@@ -132,10 +139,10 @@
 	<attributelist>
 		<attribute name="bypass" get="1" set="1" type="int" size="1">
 			<digest>
-				Send incoming signal to paired <o>j.out~</o> and turn off output
+				Send incoming audio signal to paired <o>j.out~</o> and turn off output
 			</digest>
 			<description>
-				The <at>bypass</at> attribute turns on or off incoming signal output. When set to 0 (default), incoming signal is output at <o>j.in~</o> leftmost outlet. When set to 1, incoming signal is sent to paired <o>j.out~</o> object in the model. This attribute is internally linked to the model's parameter <i>audio/bypass</i>
+				The <at>bypass</at> attribute toggles incoming signal output. When set to 0 (default), incoming signal is output at <o>j.in~</o> leftmost outlet. When set to 1, incoming signal is sent to paired <o>j.out~</o> object in the model. This attribute is internally linked to the model's parameter <b><i>audio/bypass</i></b>
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
@@ -146,7 +153,7 @@
 				Mute incoming signal
 			</digest>
 			<description>
-				The <at>mute</at> attribute turns on or off incoming signal output. This attribute is internally linked to the model's parameter <i>audio/mute</i>
+				The <at>mute</at> attribute toggles incoming signal output. This attribute is internally linked to the model's parameter <b><i>audio/mute</i></b>
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
@@ -162,7 +169,7 @@
 		</attribute>
 	</attributelist>
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
 	<seealsolist>
 		<seealso name="j.out~"/>

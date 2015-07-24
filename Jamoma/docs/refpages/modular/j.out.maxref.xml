@@ -6,7 +6,13 @@
 	</digest>
 	<description><o>j.out</o> is an output conduit for control signals in a Jamoma model (most often these are Jitter matrices), much like <o>j.out~</o> is for audio signals. It allows to turn on or off messages output from the model or bypass the value processing in the model when used in combination with <o>j.in</o>
 	</description>
-	<discussion>When the model's '<at>amenities</at> attribute is set to <i>all</i> or <i>data</i>, <o>j.out</o> automatically creates a few nodes under the containing model namespace so its features can be remotely addressed. Hence it creates a <i>data/active</i> node under the Jamoma model it is created in so that messages sent from the model can be muted. When used in combination with <o>j.in</o>, it also creates a <i>data/bypass</i> node so that messages sent to the model can be muted from <o>j.in</o> outlet and directly sent to paired <o>j.out</o>. It also creates a <i>data/out.&lt;argument&gt;</i> so that values sent from the model can be listened remotely. <br/><br/>When j.in/out features are excluded from amenities (ie. <i>@amenities none</i>), these nodes are removed from the namespace and the services are disabled</discussion>
+	<discussion>
+		Control input and output management provided by <o>j.in</o> and <o>j.out</o> are part of the services enabled by the  <link type="tutorial" name="amenities" module="jamoma">amenities</link> feature of a Jamoma model. When a model's <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> attribute is set to <b><i>all</i></b> or <b><i>data</i></b>, several nodes are created under the model namespace so these features can be remotely accessed.<br/><br/>
+When enable, <o>j.in</o> or <o>j.out</o> creates a <b><i>data/active</i></b> node. This internal parameter allows to toggle control signal input and output of the model.<br/><br/>
+When used in combination, paired <o>j.in</o> and <o>j.out</o> create a <b><i>data/bypass</i></b> node. When set to 1, this internal parameter allows to sent control signal coming at the model input straight to its output (that is, without passing through the whole processing chain of the model).<br/><br/>
+The use of <o>j.in</o> and <o>j.out</o> also creates <b><i>data/in.&lt;argument&gt;</i></b> and <b><i>data/out.&lt;argument&gt;</i></b> respectively, allowing to remotely send or receive control signal to a model input or output.<br/><br/>
+When <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> is set to <b><i>none</i></b>, these features provided by <b><i>j.in</i></b> and <b><i>j.out</i></b> are disabled and the internal parameters are removed from the model's namespace.
+</discussion>
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -55,10 +61,10 @@
 	<objarglist>
 		<objarg id="0" name="instance name" type="string|integer" optional="0">
 			<digest>
-				Instance name to subscribe output in Jamoma namespace
+				Instance name to subscribe output in the Jamoma model namespace
 			</digest>
 			<description>
-				An argument set to <o>j.out</o> sets a instance name to subscribe output in Jamoma namespace. The full address of this node will be <i>&lt;model name&gt;/data/out.&lt;argument&gt;</i>
+				An argument to <o>j.out</o> sets an instance name to subscribe output in the model namespace. The full address of this node will be <i>&lt;model name&gt;/data/out.&lt;argument&gt;</i><br/><br/>It also sets the name of a <o>j.out</o> to pair with
 			</description>
 		</objarg>
 	</objarglist>
@@ -112,9 +118,7 @@
 			<digest>
 				Value to output from the model
 			</digest>
-			<description>
-				When the <at>data/active</at> parameter is set to 1 (default), any message sent to <o>j.out</o> inlet gets output from your model. When a j<o>.in</o> object sharing the same instance name defined as argument is placed within the model and the internal parameter <at>data/bypass</at> is set to 1 (default = 0), values sent at <o>j.in</o> inlet will be received directly by the paired <o>j.out</o> object.<br/><br/>
-			</description>
+			<description>Values coming at <i>j.out</i> inlet are output at <i>j.out</i> leftmost outlet. <br/><br/>When paired with a <o>j.in</o> object and <at>bypass</at> attribute set to 1, values coming at <o>j.in</o> inlet are silenced from its outlet and directly received by <o>j.out</o></description>
 		</method>
 		<method name="dump">
 			<arglist/>
@@ -156,7 +160,7 @@
 				Mute output
 			</digest>
 			<description>
-				The <at>mute</at> attribute turns on or off value output. This attribute is internally linked to the model's parameter <i>data/active</i>
+				The <at>mute</at> attribute toggles value output. This attribute is internally linked to the model's internal parameter <b><i>data/active</i></b>
 			</description>
 			<attributelist>
 				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
@@ -164,7 +168,7 @@
 		</attribute>
 		<attribute name="type" get="1" set="1" type="symbol" size="1">
 			<digest>
-				Set the type of the outcoming value
+				Set the type of the output
 			</digest>
 			<description>
 				The <at>type</at> attribute sets the type of the outcoming values (default = control)
