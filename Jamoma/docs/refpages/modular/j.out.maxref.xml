@@ -198,5 +198,6 @@ When <at><link type="tutorial" name="amenities" module="jamoma">amenities</link>
 		<seealso name="j.in" type="refpage" module="modular"/>
 		<seealso name="j.out~" type="refpage" module="modular"/>
 		<seealso name="j.model" type="refpage" module="modular"/>
+		<seealso name="j.ui" type="refpage" module="modular"/>
 	</seealsolist>
 </c74object>
