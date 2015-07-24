@@ -4,12 +4,14 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
-			"architecture" : "x64",
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 155.0, 213.0, 1165.0, 697.0 ],
+		"rect" : [ 100.0, 100.0, 1165.0, 697.0 ],
+		"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+		"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -20,7 +22,7 @@
 		"gridsnaponopen" : 1,
 		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
+		"toolbarvisible" : 0,
 		"lefttoolbarpinned" : 0,
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
@@ -49,8 +51,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -114,12 +116,14 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 155.0, 239.0, 1165.0, 671.0 ],
+						"rect" : [ 100.0, 126.0, 1165.0, 671.0 ],
+						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -209,12 +213,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 864.0, 420.0, 334.0, 361.0 ],
+										"rect" : [ 809.0, 307.0, 334.0, 361.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -483,12 +487,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 340.0, 560.0, 450.0, 175.0 ],
+										"rect" : [ 285.0, 447.0, 450.0, 175.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -791,12 +795,14 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
 						"rect" : [ 0.0, 26.0, 1165.0, 671.0 ],
+						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -857,8 +863,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1179,7 +1185,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 209.5, 132.0, 177.0, 76.0 ],
+									"patching_rect" : [ 209.5, 132.0, 180.0, 76.0 ],
 									"style" : "",
 									"text" : "Set the model address the view is to bind to and see how j.ui automatically display available widget",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1199,30 +1205,30 @@
 													"out_name" : [ "u020001727" ],
 													"dim" : [ 1, 1 ],
 													"output_texture" : [ 0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"autostart" : [ 1 ],
+													"texture_name" : [ "u022001725" ],
 													"drawto" : [ "" ],
+													"loopstart" : [ 0 ],
+													"looppoints" : [ 0, 0 ],
+													"srcrect" : [ 0, 0, 1, 1 ],
+													"vol" : [ 1.0 ],
+													"unique" : [ 0 ],
 													"colormode" : [ "argb" ],
+													"loopend" : [ 0 ],
+													"automatic" : [ 0 ],
+													"adapt" : [ 1 ],
 													"loopreport" : [ 0 ],
 													"time_secs" : [ 0.0 ],
+													"engine" : [ "avf" ],
+													"time" : [ 0 ],
+													"usedstrect" : [ 0 ],
+													"moviefile" : [ "" ],
 													"interp" : [ 0 ],
 													"rate" : [ 1.0 ],
-													"dstrect" : [ 0, 0, 1, 1 ],
-													"loopstart" : [ 0 ],
-													"loopend" : [ 0 ],
-													"time" : [ 0 ],
-													"moviefile" : [ "" ],
-													"looppoints" : [ 0, 0 ],
-													"engine" : [ "avf" ],
 													"framereport" : [ 0 ],
-													"autostart" : [ 1 ],
 													"position" : [ 0.0 ],
-													"adapt" : [ 1 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
-													"automatic" : [ 0 ],
-													"vol" : [ 1.0 ],
-													"usedstrect" : [ 0 ],
-													"unique" : [ 0 ],
-													"usesrcrect" : [ 0 ],
-													"texture_name" : [ "u022001725" ]
+													"usesrcrect" : [ 0 ]
 												}
 
 											}
@@ -1298,8 +1304,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1380,12 +1386,14 @@
 														"appversion" : 														{
 															"major" : 7,
 															"minor" : 0,
-															"revision" : 4,
-															"architecture" : "x64",
+															"revision" : 5,
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
-														"rect" : [ 240.0, 236.0, 640.0, 480.0 ],
+														"rect" : [ 312.0, 161.0, 640.0, 480.0 ],
+														"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+														"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 														"bglocked" : 0,
 														"openinpresentation" : 0,
 														"default_fontsize" : 12.0,
@@ -1396,7 +1404,7 @@
 														"gridsnaponopen" : 1,
 														"objectsnaponopen" : 1,
 														"statusbarvisible" : 2,
-														"toolbarvisible" : 1,
+														"toolbarvisible" : 0,
 														"lefttoolbarpinned" : 0,
 														"toptoolbarpinned" : 0,
 														"righttoolbarpinned" : 0,
@@ -1412,17 +1420,19 @@
 														"tags" : "",
 														"style" : "",
 														"subpatcher_template" : "",
-														"title" : "/Basic(view).1",
+														"title" : "/i/o_widgets(view)",
 														"boxes" : [ 															{
 																"box" : 																{
-																	"fontsize" : 24.0,
+																	"fontname" : "Lato Regular",
+																	"fontsize" : 36.0,
 																	"id" : "obj-3",
 																	"maxclass" : "comment",
 																	"numinlets" : 1,
 																	"numoutlets" : 0,
-																	"patching_rect" : [ 186.0, 208.0, 293.0, 33.0 ],
+																	"patching_rect" : [ 111.0, 184.0, 409.0, 50.0 ],
 																	"style" : "",
-																	"text" : "An optional second panel"
+																	"text" : "An optional second panel",
+																	"textcolor" : [ 0.7, 0.7, 0.7, 1.0 ]
 																}
 
 															}
@@ -1569,21 +1579,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"slurtime" : [ 0.0 ],
-													"speed" : [ 1.0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"pitchcorrection" : [ 0 ],
-													"timestretch" : [ 0 ],
 													"formant" : [ 1.0 ],
-													"play" : [ 0 ],
-													"mode" : [ "basic" ],
-													"pitchshift" : [ 1.0 ],
-													"originallengthms" : [ 0.0 ],
-													"formantcorrection" : [ 0 ],
 													"basictuning" : [ 440 ],
+													"mode" : [ "basic" ],
+													"originaltempo" : [ 120.0 ],
+													"play" : [ 0 ],
 													"followglobaltempo" : [ 0 ],
-													"quality" : [ "basic" ]
+													"slurtime" : [ 0.0 ],
+													"pitchshift" : [ 1.0 ],
+													"speed" : [ 1.0 ],
+													"pitchcorrection" : [ 0 ],
+													"originallengthms" : [ 0.0 ],
+													"quality" : [ "basic" ],
+													"timestretch" : [ 0 ],
+													"formantcorrection" : [ 0 ],
+													"originallength" : [ 0.0, "ticks" ]
 												}
 
 											}
@@ -1622,8 +1632,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1854,8 +1864,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -2186,7 +2196,7 @@
 			}
 , 			{
 				"name" : "transposer.maxpat",
-				"bootpath" : "/Users/Shared/Max 7/Examples/effects/transposer-folder/lib",
+				"bootpath" : "/Users/Shared/Max 7/examples/effects/transposer-folder/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}
