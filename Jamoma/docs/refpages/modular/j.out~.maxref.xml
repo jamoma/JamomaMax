@@ -194,7 +194,7 @@ When <at><link type="tutorial" name="amenities" module="jamoma">amenities</link>
 		<example caption="" img=""/>
 	</examplelist>
 	<seealsolist>
-		<seealso name="j.in~"/>
-		<seealso name="j.out"/>
+		<seealso name="j.in~" type="refpage" module="modular"/>
+		<seealso name="j.out" type="refpage" module="modular"/>
 	</seealsolist>
 </c74object>
