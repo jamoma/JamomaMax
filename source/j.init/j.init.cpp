@@ -106,11 +106,15 @@ void *init_new(t_symbol *s, long argc, t_atom *argv)
 void init_free(t_init *x)
 {
     // release the receiver
-    x->initReceiver.set(kTTSym_address, kTTAdrsEmpty);
-    x->initReceiver = TTObject();
+    if (x->initReceiver.valid())
+    {
+        x->initReceiver.set(kTTSym_address, kTTAdrsEmpty);
+        x->initReceiver = TTObject();
+    }
     
     // release the subscriber
-    x->subscriberObject = TTObject();
+    if (x->subscriberObject.valid())
+        x->subscriberObject = TTObject();
 }
 
 
