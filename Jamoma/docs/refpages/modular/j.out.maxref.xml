@@ -129,26 +129,26 @@
 	<attributelist>
 		<attribute name="freeze" get="1" set="1" type="int" size="1">
 			<digest>
-				(deprecated)
+				(inactive)
 			</digest>
 			<description>
-				(deprecated)
+				(inactive)
 			</description>
 		</attribute>
 		<attribute name="gain" get="1" set="1" type="int" size="1">
 			<digest>
-				(deprecated)
+				(inactive)
 			</digest>
 			<description>
-				(deprecated)
+				(inactive)
 			</description>
 		</attribute>
 		<attribute name="mix" get="1" set="1" type="int" size="1">
 			<digest>
-				(deprecated)
+				(inactive)
 			</digest>
 			<description>
-				(deprecated)
+				(inactive)
 			</description>
 		</attribute>
 		<attribute name="mute" get="1" set="1" type="int" size="1">
