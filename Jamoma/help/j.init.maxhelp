@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"revision" : 4,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 395.0, 111.0, 1108.0, 793.0 ],
+		"rect" : [ 397.0, 110.0, 1105.0, 793.0 ],
 		"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"bglocked" : 0,
@@ -53,12 +53,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1108.0, 767.0 ],
+						"rect" : [ 0.0, 26.0, 1105.0, 767.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -118,12 +118,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 4,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 395.0, 137.0, 1108.0, 767.0 ],
+						"rect" : [ 397.0, 136.0, 1105.0, 767.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -218,13 +218,13 @@
 									"fontname" : "Lato Regular",
 									"fontsize" : 12.0,
 									"id" : "obj-19",
-									"linecount" : 3,
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 792.0, 459.0, 198.0, 64.0 ],
+									"patching_rect" : [ 805.5, 451.5, 195.0, 49.0 ],
 									"style" : "",
-									"text" : "Bind to sub-model and listen to the sub-model (only) initialization process ",
+									"text" : "Bind to a sub-model and listen to its initialization process ",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
@@ -412,9 +412,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 652.0, 588.5, 155.0, 22.0 ],
+									"patching_rect" : [ 652.0, 588.5, 121.0, 22.0 ],
 									"style" : "",
-									"text" : "print OTHER_SUB_LEVEL"
+									"text" : "print LIKE_SECOND"
 								}
 
 							}
@@ -429,9 +429,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
-									"patching_rect" : [ 652.0, 472.5, 120.0, 22.0 ],
+									"patching_rect" : [ 652.0, 472.5, 141.0, 22.0 ],
 									"style" : "",
-									"text" : "j.init other_sub_level"
+									"text" : "j.init another_sub_model"
 								}
 
 							}
@@ -456,12 +456,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 455.0, 666.0, 375.0, 162.0 ],
+										"rect" : [ 457.0, 665.0, 375.0, 162.0 ],
 										"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 										"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 										"bglocked" : 0,
@@ -731,12 +731,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 455.0, 505.0, 375.0, 155.0 ],
+										"rect" : [ 457.0, 504.0, 375.0, 155.0 ],
 										"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 										"editing_bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 										"bglocked" : 0,
@@ -1068,8 +1068,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"revision" : 4,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
