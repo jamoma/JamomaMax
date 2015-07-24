@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-
 <?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
-
-<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
-<c74object name="j.in" module="" category="Jamoma">
+<c74object name="j.in" module="modular" category="Jamoma">
 	<digest>
 		Jamoma model input
 	</digest>
-	<description>
-		j.in is an input conduits for control signals in a jamoma model (most often these are Jitter matrices), much like j.in~ is for audio signals
+	<description><o>j.in</o> is an input conduit for control signals in a Jamoma model (most often these are Jitter matrices), much like <o>j.in~</o> is for audio signals. It allows to turn on or off messages sent to the model or bypass the value processing in the model when used in combination with <o>j.out</o>. It also passes parameters or messages value changes sent to the model inlet to the addressed parameter or message
 	</description>
-	<!--METADATA-->
+	<discussion>When the model's '<at>amenities</at> attribute is set to <i>all</i> or <i>data</i>, <o>j.in</o> automatically creates a few nodes under the containing model namespace so its features can be remotely addressed. Hence it creates a <i>data/active</i> node under the Jamoma model it is created in so that messages sent to the model can be muted. When used in combination with <o>j.out</o>, it also creates a <i>data/bypass</i> node so that messages sent to the model can be muted from <o>j.in</o> outlet and directly sent to paired <o>j.out</o>. It also creates a <i>data/in.&lt;argument&gt;</i> so that model incoming value can be addressed remotely. When j.in features are excluded from amenities (ie. <i>@amenities none</i>), these nodes are removed from the namespace and the services are disabled</discussion>
 	<metadatalist>
 		<metadata name="author">
 			Jamoma
@@ -21,57 +17,51 @@
 		<metadata name="tag">
 			Jamoma
 		</metadata>
+		<metadata name="tag">
+			input
+		</metadata>
+		<metadata name="tag">
+			amenities
+		</metadata>
 	</metadatalist>
-	<!--INLETS-->
-	<!-- <inletlist>
-		<inlet id="0" type="signal">
+	<inletlist>
+		<inlet id="0" type="any">
 			<digest>
-				input of the model
+				Input of the model
 			</digest>
 			<description>
-				TEXT_HERE
+				Input of the model
 			</description>
 		</inlet>
-		<inlet id="1" type="signal">
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="any">
 			<digest>
-				input of the model
+				Value sent to the model core
 			</digest>
 			<description>
-				TEXT_HERE
-			</description>
-		</inlet>
-	</inletlist> -->
-	<!--OUTLETS-->
-	<!-- <outletlist>
-		<outlet id="0" type="signal">
-			<digest>
-				connect to the algorithm
-			</digest>
-			<description>
-				TEXT_HERE
+				Value sent to the model core
 			</description>
 		</outlet>
-		<outlet id="1" type="signal">
+		<outlet id="1" type="any">
 			<digest>
-				dumpout
+				Dumpout
 			</digest>
 			<description>
-				TEXT_HERE
+				Dumpout
 			</description>
 		</outlet>
-	</outletlist> -->
-	<!--ARGUMENTS-->
+	</outletlist>
 	<objarglist>
 		<objarg id="0" name="instance name" type="string|integer" optional="0">
 			<digest>
-				Name to subscribe input in Jamoma namespace
+				Instance name to subscribe input in Jamoma namespace
 			</digest>
 			<description>
-				Name to subscribe input in Jamoma namespace
+				An argument set to <o>j.in</o> sets a instance name to subscribe input in Jamoma namespace. The full address of this node will be <i>&lt;model name&gt;/data/in.&lt;argument&gt;</i>
 			</description>
 		</objarg>
 	</objarglist>
-	<!--MESSAGES-->
 	<methodlist>
 		<!-- <method name="bang">
 			<arglist />
@@ -82,7 +72,7 @@
 				TEXT_HERE
 			</description>
 		</method> -->
-		<method name="int">
+		<!-- <method name="int">
 			<arglist>
 				<arg name="ARG_NAME_0" type="int" optional="0" />
 			</arglist>
@@ -114,62 +104,67 @@
 			<description>
 				List input
 			</description>
-		</method>
+		</method> -->
 		<method name="anything">
 			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
+				<arg name="parameter value" type="any" optional="1"/>
 			</arglist>
 			<digest>
-				<!-- TEXT_HERE -->
+				Value to send to the model
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				When the <at>data/active</at> parameter is set to 1 (default), any message sent to <o>j.in</o> inlet gets output at its outlet so the value can be processed inside your model. When a j<o>.out</o> object sharing the same instance name defined as argument is placed within the model and the internal parameter <at>data/bypass</at> is set to 1 (default = 0), values sent at its inlet will be sent directly to the paired <o>j.out</o> object.<br/><br/>When an incoming symbol matches a parameter or message in the model, the attached value will get sent to the addressed parameter
 			</description>
 		</method>
 		<method name="dump">
-			<arglist>
-				<arg name="ARG_NAME_0" type="list" optional="0" />
-			</arglist>
+			<arglist/>
 			<digest>
-				<!-- TEXT_HERE -->
+				Dump attributes value
 			</digest>
 			<description>
-				<!-- TEXT_HERE -->
+				The <m>dump</m> message outputs all attributes value out of <o>j.in</o> rightmost outlet
 			</description>
 		</method>
 	</methodlist>
-	<!--ATTRIBUTES-->
 	<attributelist>
 		<attribute name="bypass" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Send incoming value to paired <o>j.out</o> and turn off output
 			</digest>
 			<description>
-				TEXT_HERE
+				The <at>bypass</at> attribute turns on or off incoming values output. When set to 0 (default), incoming values are output at <o>j.in</o> leftmost outlet. When set to 1, incoming values are sent to paired <o>j.out</o> object in the model. This attribute is internally linked to the model's parameter <i>data/bypass</i>
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
 		<attribute name="mute" get="1" set="1" type="int" size="1">
 			<digest>
-				TEXT_HERE
+				Mute incoming values
 			</digest>
 			<description>
-				TEXT_HERE
+				The <at>mute</at> attribute turns on or off incoming value output. This attribute is internally linked to the model's parameter <i>data/active</i>
 			</description>
 			<attributelist>
-				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
 			</attributelist>
 		</attribute>
-		<attribute name="output/address" get="1" set="1" type="symbol" size="1">
+		<attribute name="type" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set the type of the incoming value
+			</digest>
+			<description>
+				The <at>type</at> attribute sets the type of the incoming values (default = control)
+			</description>
+		</attribute>
+		<!-- <attribute name="output/address" get="1" set="1" type="symbol" size="1">
 			<digest>
 				j.out address in the namespace to send data to when bypassing the model
 			</digest>
 			<description>
-				j.out address in the namespace to send data to when bypassing the model
+				The <at>output/address</at> attribute set the <o>j.out</o> address in the namespace to send data to when bypassing the model. It is automatically set from the instance name defined as argument
 			</description>
-		</attribute>
+		</attribute> -->
 		<!-- <attribute name="type" get="1" set="0" type="symbol" size="1">
 			<digest>
 				Data type
@@ -179,14 +174,15 @@
 			</description>
 		</attribute> -->
 	</attributelist>
-	<!--EXAMPLE-->
+	<illustration>
+		<img src="images/j.map.png" caption="Generic vs Decimal"/>
+	</illustration>
 	<examplelist>
-		<example caption="" img="" />
+		<example caption="" img=""/>
 	</examplelist>
-	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.out"/>
-		<seealso name="j.in~"/>
-		<seealso name="j.model"/>
+		<seealso name="j.out" type="refpage" module="modular"/>
+		<seealso name="j.in~" type="refpage" module="modular"/>
+		<seealso name="j.model" type="refpage" module="modular"/>
 	</seealsolist>
 </c74object>
