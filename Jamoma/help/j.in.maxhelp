@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 290.0, 120.0, 1199.0, 884.0 ],
+		"rect" : [ 282.0, 109.0, 1199.0, 884.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -129,9 +129,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 847.0, 190.0, 202.0, 22.0 ],
+									"patching_rect" : [ 847.0, 190.0, 217.0, 22.0 ],
 									"style" : "",
-									"text" : "address /without_amenities, explore"
+									"text" : "address /jin/without_amenities, explore"
 								}
 
 							}
@@ -166,7 +166,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "without_amenities" ],
+									"args" : [ "jin/without_amenities" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -465,7 +465,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 513.0, 618.0, 150.0, 55.0 ],
 									"style" : "",
-									"text" : "A model named /without_amenities",
+									"text" : "A model named /jin/without_amenities",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -478,16 +478,16 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 847.0, 160.0, 185.0, 22.0 ],
+									"patching_rect" : [ 847.0, 160.0, 201.0, 22.0 ],
 									"style" : "",
-									"text" : "address /with_amenities, explore"
+									"text" : "address /jin/with_amenities, explore"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "bang" ], [ 0, 1, "data" ], [ 0, 2, "data/in.my_model_channel" ], [ 0, 3, "data/out.my_model_channel" ], [ 0, 4, "model" ] ],
+									"cellmap" : [ [ 0, 0, "bang" ], [ 0, 1, "data" ], [ 0, 2, "data/active" ], [ 0, 3, "data/bypass" ], [ 0, 4, "data/in.my_model_channel" ], [ 0, 5, "data/out.my_model_channel" ], [ 0, 6, "model" ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -503,7 +503,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 847.0, 304.0, 218.0, 122.75 ],
-									"rows" : 5,
+									"rows" : 7,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -529,9 +529,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 495.0, 218.0, 22.0 ],
+									"patching_rect" : [ 847.0, 495.0, 233.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities/data/active"
+									"text" : "j.remote /jin/without_amenities/data/active"
 								}
 
 							}
@@ -542,9 +542,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 613.0, 225.0, 22.0 ],
+									"patching_rect" : [ 847.0, 613.0, 240.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities/data/bypass"
+									"text" : "j.remote /jin/without_amenities/data/bypass"
 								}
 
 							}
@@ -650,7 +650,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "with_amenities" ],
+									"args" : [ "jin/with_amenities" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -949,7 +949,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 209.0, 618.0, 150.0, 55.0 ],
 									"style" : "",
-									"text" : "A model named /with_amenities",
+									"text" : "A model named /jin/with_amenities",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -1180,7 +1180,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 544.0, 690.0, 153.0, 22.0 ],
 									"style" : "",
-									"text" : "my_parameter 0."
+									"text" : "my_parameter 0.51"
 								}
 
 							}
@@ -1717,7 +1717,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 290.0, 146.0, 1199.0, 858.0 ],
+						"rect" : [ 282.0, 135.0, 1199.0, 858.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1788,9 +1788,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 844.0, 695.666626, 230.0, 22.0 ],
+									"patching_rect" : [ 844.0, 695.666626, 245.0, 22.0 ],
 									"style" : "",
-									"text" : "j.send /myModel/data/in.another_channel"
+									"text" : "j.send /jin/myModel/data/in.another_channel"
 								}
 
 							}
@@ -1941,7 +1941,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "myModel" ],
+									"args" : [ "jin/myModel" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -1965,7 +1965,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 392.0, 474.0, 595.0, 334.0 ],
+										"rect" : [ 384.0, 463.0, 595.0, 334.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2649,9 +2649,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 844.0, 259.0, 124.0, 35.0 ],
+									"patching_rect" : [ 844.0, 259.0, 141.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel/data/active"
+									"text" : "j.remote /jin/myModel/data/active"
 								}
 
 							}
@@ -2663,9 +2663,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 844.0, 376.0, 131.0, 35.0 ],
+									"patching_rect" : [ 844.0, 376.0, 148.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel/data/bypass"
+									"text" : "j.remote /jin/myModel/data/bypass"
 								}
 
 							}
@@ -2736,7 +2736,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 296.0, 676.0, 335.0, 40.0 ],
 									"style" : "",
-									"text" : "A model embedded as bpatcher (name /myModel)",
+									"text" : "A model embedded as bpatcher (name /jin/myModel)",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -2768,9 +2768,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 844.0, 614.666626, 245.0, 22.0 ],
+									"patching_rect" : [ 844.0, 614.666626, 260.0, 22.0 ],
 									"style" : "",
-									"text" : "j.send /myModel/data/in.my_model_channel"
+									"text" : "j.send /jin/myModel/data/in.my_model_channel"
 								}
 
 							}
@@ -2920,9 +2920,9 @@
 		"lines" : [  ],
 		"parameters" : 		{
 			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
+			"obj-2::obj-4" : [ "live.text[2]", "live.text", 0 ],
 			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
-			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ],
-			"obj-2::obj-4" : [ "live.text[2]", "live.text", 0 ]
+			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

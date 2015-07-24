@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 1553.0, 854.0 ],
+		"rect" : [ 314.0, 108.0, 1553.0, 854.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -56,7 +56,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1553.0, 828.0 ],
+						"rect" : [ 314.0, 134.0, 1553.0, 828.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -118,9 +118,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 599.0, 202.0, 22.0 ],
+									"patching_rect" : [ 847.0, 599.0, 224.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /with_amenities~/audio/mix"
+									"text" : "j.remote /jout/with_amenities~/audio/mix"
 								}
 
 							}
@@ -155,9 +155,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 496.0, 206.0, 22.0 ],
+									"patching_rect" : [ 847.0, 496.0, 228.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /with_amenities~/audio/gain"
+									"text" : "j.remote /jout/with_amenities~/audio/gain"
 								}
 
 							}
@@ -168,9 +168,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 673.0, 210.0, 22.0 ],
+									"patching_rect" : [ 847.0, 673.0, 232.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /with_amenities~/audio/mute"
+									"text" : "j.remote /jout/with_amenities~/audio/mute"
 								}
 
 							}
@@ -181,9 +181,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 769.0, 221.0, 22.0 ],
+									"patching_rect" : [ 847.0, 769.0, 244.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /with_amenities~/audio/bypass"
+									"text" : "j.remote /jout/with_amenities~/audio/bypass"
 								}
 
 							}
@@ -275,9 +275,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 1117.0, 599.0, 218.0, 22.0 ],
+									"patching_rect" : [ 1117.0, 599.0, 241.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities~/audio/mix"
+									"text" : "j.remote /jout/without_amenities~/audio/mix"
 								}
 
 							}
@@ -312,9 +312,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 1117.0, 496.0, 222.0, 22.0 ],
+									"patching_rect" : [ 1117.0, 496.0, 245.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities~/audio/gain"
+									"text" : "j.remote /jout/without_amenities~/audio/gain"
 								}
 
 							}
@@ -325,9 +325,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 1117.0, 673.0, 226.0, 22.0 ],
+									"patching_rect" : [ 1117.0, 673.0, 249.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities~/audio/mute"
+									"text" : "j.remote /jout/without_amenities~/audio/mute"
 								}
 
 							}
@@ -338,9 +338,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 1117.0, 769.0, 238.0, 22.0 ],
+									"patching_rect" : [ 1117.0, 769.0, 260.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities~/audio/bypass"
+									"text" : "j.remote /jout/without_amenities~/audio/bypass"
 								}
 
 							}
@@ -524,16 +524,16 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 847.0, 155.0, 209.0, 22.0 ],
+									"patching_rect" : [ 847.0, 155.0, 232.0, 22.0 ],
 									"style" : "",
-									"text" : "address /without_amenities~, explore"
+									"text" : "address /jout/without_amenities~, explore"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "without_amenities~" ],
+									"args" : [ "jout/without_amenities~" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -557,7 +557,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 379.0, 295.0, 284.0, 342.0 ],
+										"rect" : [ 693.0, 403.0, 284.0, 342.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -773,7 +773,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 513.0, 618.0, 150.0, 55.0 ],
 									"style" : "",
-									"text" : "A model named /without_amenities~",
+									"text" : "A model named /jout/without_amenities~",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -786,16 +786,16 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 847.0, 125.0, 192.0, 22.0 ],
+									"patching_rect" : [ 847.0, 125.0, 215.0, 22.0 ],
 									"style" : "",
-									"text" : "address /with_amenities~, explore"
+									"text" : "address /jout/with_amenities~, explore"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "bang" ], [ 0, 1, "audio" ], [ 0, 2, "audio/in.my_model_channel" ], [ 0, 3, "audio/out.my_model_channel" ], [ 0, 4, "model" ] ],
+									"cellmap" : [ [ 0, 0, "audio" ], [ 0, 1, "audio/in.my_model_channel" ], [ 0, 2, "audio/out.my_model_channel" ], [ 0, 3, "model" ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -811,7 +811,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 847.0, 269.0, 218.0, 148.0 ],
-									"rows" : 5,
+									"rows" : 4,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -824,9 +824,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 847.0, 234.0, 357.0, 22.0 ],
+									"patching_rect" : [ 847.0, 234.0, 380.0, 22.0 ],
 									"style" : "",
-									"text" : "j.namespace @address /without_amenities~ @format jit.cellblock"
+									"text" : "j.namespace @address /jout/without_amenities~ @format jit.cellblock"
 								}
 
 							}
@@ -848,7 +848,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "with_amenities~" ],
+									"args" : [ "jout/with_amenities~" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -872,7 +872,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 75.0, 295.0, 284.0, 342.0 ],
+										"rect" : [ 389.0, 403.0, 284.0, 342.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1066,7 +1066,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 209.0, 618.0, 150.0, 55.0 ],
 									"style" : "",
-									"text" : "A model named /with_amenities~",
+									"text" : "A model named /jout/with_amenities~",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -1419,7 +1419,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1553.0, 828.0 ],
+						"rect" : [ 0.0, 26.0, 1553.0, 828.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1505,7 +1505,7 @@
 									"numoutlets" : 1,
 									"numpoints" : 441,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1190.5, 241.579651, 118.00975, 50.086956 ],
+									"patching_rect" : [ 1168.5, 243.579651, 118.00975, 50.086956 ],
 									"subplots" : [ 										{
 											"color" : [ 0.4, 0.4, 0.75, 1.0 ],
 											"thickness" : 1.2,
@@ -1541,9 +1541,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "", "" ],
-									"patching_rect" : [ 1190.5, 196.0, 201.0, 35.0 ],
+									"patching_rect" : [ 1168.5, 198.0, 222.0, 35.0 ],
 									"style" : "",
-									"text" : "j.receive~ /myModel~/audio/out.right_channel"
+									"text" : "j.receive~ /jout/myModel~/audio/out.right_channel"
 								}
 
 							}
@@ -1556,7 +1556,7 @@
 									"numoutlets" : 1,
 									"numpoints" : 441,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1190.5, 132.579651, 118.00975, 50.086956 ],
+									"patching_rect" : [ 1168.5, 134.579651, 118.00975, 50.086956 ],
 									"subplots" : [ 										{
 											"color" : [ 0.4, 0.4, 0.75, 1.0 ],
 											"thickness" : 1.2,
@@ -1649,9 +1649,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 497.0, 171.0, 22.0 ],
+									"patching_rect" : [ 779.0, 497.0, 194.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel~/audio/mix"
+									"text" : "j.remote /jout/myModel~/audio/mix"
 								}
 
 							}
@@ -1686,9 +1686,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 156.0, 175.0, 22.0 ],
+									"patching_rect" : [ 779.0, 155.0, 198.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel~/audio/gain"
+									"text" : "j.remote /jout/myModel~/audio/gain"
 								}
 
 							}
@@ -1824,7 +1824,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1392.0, 72.5, 134.0, 64.0 ],
+									"patching_rect" : [ 1407.5, 72.5, 134.0, 64.0 ],
 									"style" : "",
 									"text" : "Remotely receive audio from model outputs",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1841,7 +1841,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1190.5, 35.666656, 114.0, 23.0 ],
+									"patching_rect" : [ 1168.5, 35.666656, 114.0, 23.0 ],
 									"style" : "",
 									"text" : "Remote listening",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
@@ -1876,7 +1876,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 976.5, 588.0, 123.0, 64.0 ],
+									"patching_rect" : [ 996.5, 588.0, 123.0, 64.0 ],
 									"style" : "",
 									"text" : "Internally send value from j.in~ to paired j.out~",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1894,7 +1894,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 960.0, 241.579651, 127.0, 49.0 ],
+									"patching_rect" : [ 989.0, 242.123123, 127.0, 49.0 ],
 									"style" : "",
 									"text" : "Toggle all model inputs & outputs",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1904,7 +1904,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "myModel~" ],
+									"args" : [ "jout/myModel~" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -1928,7 +1928,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 140.0, 410.0, 583.0, 342.0 ],
+										"rect" : [ 40.0, 310.0, 583.0, 342.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2369,9 +2369,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 255.623123, 179.0, 22.0 ],
+									"patching_rect" : [ 779.0, 255.623123, 202.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel~/audio/mute"
+									"text" : "j.remote /jout/myModel~/audio/mute"
 								}
 
 							}
@@ -2382,9 +2382,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 609.0, 190.0, 22.0 ],
+									"patching_rect" : [ 779.0, 609.0, 213.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel~/audio/bypass"
+									"text" : "j.remote /jout/myModel~/audio/bypass"
 								}
 
 							}
@@ -2455,7 +2455,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 234.0, 637.0, 335.0, 40.0 ],
 									"style" : "",
-									"text" : "A model embedded as bpatcher (name /myModel~)",
+									"text" : "A model embedded as bpatcher (name /jout/myModel~)",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -2472,9 +2472,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "signal", "", "" ],
-									"patching_rect" : [ 1190.5, 87.0, 192.5, 35.0 ],
+									"patching_rect" : [ 1168.5, 89.0, 215.0, 35.0 ],
 									"style" : "",
-									"text" : "j.receive~ /myModel~/audio/out.left_channel"
+									"text" : "j.receive~ /jout/myModel~/audio/out.left_channel"
 								}
 
 							}
@@ -2660,18 +2660,18 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-2::obj-27" : [ "live.text[2]", "live.text", 0 ],
-			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
-			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
-			"obj-2::obj-13" : [ "Gain[3]", "Gain", 0 ],
-			"obj-2::obj-4" : [ "Gain[4]", "Gain", 0 ],
 			"obj-2::obj-9" : [ "Gain[5]", "Gain", 0 ],
-			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ],
-			"obj-14::obj-13" : [ "Gain", "Gain", 0 ],
-			"obj-14::obj-14" : [ "Gain[1]", "Gain", 0 ],
+			"obj-2::obj-13" : [ "Gain[3]", "Gain", 0 ],
 			"obj-2::obj-29" : [ "live.text[6]", "live.text", 0 ],
+			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
 			"obj-2::obj-28" : [ "live.text[5]", "live.text", 0 ],
-			"obj-2::obj-25" : [ "Gain[2]", "Gain", 0 ]
+			"obj-2::obj-4" : [ "Gain[4]", "Gain", 0 ],
+			"obj-2::obj-27" : [ "live.text[2]", "live.text", 0 ],
+			"obj-14::obj-14" : [ "Gain[1]", "Gain", 0 ],
+			"obj-2::obj-25" : [ "Gain[2]", "Gain", 0 ],
+			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
+			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ],
+			"obj-14::obj-13" : [ "Gain", "Gain", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

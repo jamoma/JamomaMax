@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 1308.0, 884.0 ],
+		"rect" : [ 312.0, 86.0, 1227.0, 884.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -56,7 +56,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1308.0, 858.0 ],
+						"rect" : [ 0.0, 26.0, 1227.0, 858.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -129,9 +129,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 847.0, 190.0, 202.0, 22.0 ],
+									"patching_rect" : [ 847.0, 190.0, 225.0, 22.0 ],
 									"style" : "",
-									"text" : "address /without_amenities, explore"
+									"text" : "address /jout/without_amenities, explore"
 								}
 
 							}
@@ -166,7 +166,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "without_amenities" ],
+									"args" : [ "jout/without_amenities" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -190,7 +190,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 479.0, 395.0, 284.0, 342.0 ],
+										"rect" : [ 379.0, 295.0, 284.0, 342.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -465,7 +465,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 513.0, 618.0, 150.0, 55.0 ],
 									"style" : "",
-									"text" : "A model named /without_amenities",
+									"text" : "A model named /jout/without_amenities",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -478,9 +478,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 847.0, 160.0, 185.0, 22.0 ],
+									"patching_rect" : [ 847.0, 160.0, 208.0, 22.0 ],
 									"style" : "",
-									"text" : "address /with_amenities, explore"
+									"text" : "address /jout/with_amenities, explore"
 								}
 
 							}
@@ -516,9 +516,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 847.0, 269.0, 350.0, 22.0 ],
+									"patching_rect" : [ 847.0, 269.0, 373.0, 22.0 ],
 									"style" : "",
-									"text" : "j.namespace @address /without_amenities @format jit.cellblock"
+									"text" : "j.namespace @address /jout/without_amenities @format jit.cellblock"
 								}
 
 							}
@@ -529,9 +529,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 495.0, 218.0, 22.0 ],
+									"patching_rect" : [ 847.0, 494.0, 241.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities/data/active"
+									"text" : "j.remote /jout/without_amenities/data/active"
 								}
 
 							}
@@ -542,9 +542,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 847.0, 613.0, 225.0, 22.0 ],
+									"patching_rect" : [ 847.0, 613.0, 247.0, 22.0 ],
 									"style" : "",
-									"text" : "j.remote /without_amenities/data/bypass"
+									"text" : "j.remote /jout/without_amenities/data/bypass"
 								}
 
 							}
@@ -650,7 +650,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "with_amenities" ],
+									"args" : [ "jout/with_amenities" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -674,7 +674,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 175.0, 395.0, 284.0, 342.0 ],
+										"rect" : [ 75.0, 295.0, 284.0, 342.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -949,7 +949,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 209.0, 618.0, 150.0, 55.0 ],
 									"style" : "",
-									"text" : "A model named /with_amenities",
+									"text" : "A model named /jout/with_amenities",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -1123,7 +1123,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1308.0, 858.0 ],
+						"rect" : [ 0.0, 26.0, 1227.0, 858.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1187,7 +1187,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1308.0, 858.0 ],
+						"rect" : [ 312.0, 112.0, 1227.0, 858.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1258,15 +1258,17 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 844.0, 695.666626, 250.0, 22.0 ],
+									"patching_rect" : [ 844.0, 695.666626, 273.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive /myModel/data/out.another_channel"
+									"text" : "j.receive /jout/myModel/data/out.another_channel"
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"bubble" : 1,
+									"bubblepoint" : 0.08,
+									"bubbleside" : 0,
 									"bubbletextmargin" : 10,
 									"fontname" : "Lato Regular",
 									"fontsize" : 12.0,
@@ -1275,7 +1277,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 1084.0, 630.0, 136.0, 64.0 ],
+									"patching_rect" : [ 987.0, 740.0, 136.0, 79.0 ],
 									"style" : "",
 									"text" : "Remotely listen to value from model outputs",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1411,7 +1413,7 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
-									"args" : [ "myModel" ],
+									"args" : [ "jout/myModel" ],
 									"bgmode" : 2,
 									"border" : 0,
 									"clickthrough" : 0,
@@ -1435,7 +1437,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 102.0, 354.0, 595.0, 334.0 ],
+										"rect" : [ 414.0, 440.0, 595.0, 334.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2119,9 +2121,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 844.0, 259.0, 124.0, 35.0 ],
+									"patching_rect" : [ 844.0, 259.0, 149.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel/data/active"
+									"text" : "j.remote /jout/myModel/data/active"
 								}
 
 							}
@@ -2133,9 +2135,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 844.0, 376.0, 131.0, 35.0 ],
+									"patching_rect" : [ 844.0, 375.0, 156.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /myModel/data/bypass"
+									"text" : "j.remote /jout/myModel/data/bypass"
 								}
 
 							}
@@ -2206,7 +2208,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 296.0, 676.0, 335.0, 40.0 ],
 									"style" : "",
-									"text" : "A model embedded as bpatcher (name /myModel)",
+									"text" : "A model embedded as bpatcher (name /jout/myModel)",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 									"textjustification" : 1
 								}
@@ -2238,9 +2240,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 844.0, 589.666626, 265.0, 22.0 ],
+									"patching_rect" : [ 844.0, 589.666626, 287.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive /myModel/data/out.my_model_channel"
+									"text" : "j.receive /jout/myModel/data/out.my_model_channel"
 								}
 
 							}
@@ -2389,9 +2391,9 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
 			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
 			"obj-2::obj-4" : [ "live.text[2]", "live.text", 0 ],
+			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
 			"obj-14::obj-2" : [ "live.text[1]", "live.text", 0 ]
 		}
 ,
