@@ -342,9 +342,9 @@
 		<digest>
 				Scheduler driving the ramp
 			</digest>
-		<description>
+			<description>
 				The <at>@ramp/drive</at> attribute defines the scheduler driving the ramp. Available options are:
-				<ul><li><m>none</m> (default):  no ramping permitted</li><li><m>max</m>: using the Max scheduler</li><li><m>system</m>: using the system clock</li></ul><i>Note that in Max, it is recommended to use <m>max</m> rather than <m>system</m></i>.
+				<ul><li><m>none</m> (default):  no ramping permitted</li><li><m>max</m>: using the Max scheduler</li><li><m>system</m>: using the system clock</li><li><m>external</m>: value is output with ramp time appended so it can be processed out of <o>j.parameter</o> (ie. using Max's <o>line~</o>)</li></ul><i>Note that in Max, it is recommended to use <m>max</m> rather than <m>system</m></i>.
 			</description>
 	</attribute>
 	<attribute name="ramp/function" get="1" set="1" type="symbol" size="1">
