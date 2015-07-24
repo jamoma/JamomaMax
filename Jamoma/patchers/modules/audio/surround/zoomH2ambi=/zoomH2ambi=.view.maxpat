@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 4.0, 44.0, 1102.0, 677.0 ],
+		"rect" : [ 4.0, 45.0, 1102.0, 677.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -51,7 +51,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 75.0, 121.0, 25.0, 25.0 ]
+					"patching_rect" : [ 31.0, 108.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -81,7 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 75.0, 288.0, 41.0, 20.0 ],
+					"patching_rect" : [ 31.0, 150.0, 41.0, 20.0 ],
 					"text" : "j.view"
 				}
 
@@ -93,7 +93,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 75.0, 606.0, 25.0, 25.0 ]
+					"patching_rect" : [ 31.0, 189.0, 25.0, 25.0 ]
 				}
 
 			}
@@ -102,13 +102,12 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-8",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 443.0, 19.0, 92.0, 33.0 ],
-					"text" : "j.remote gain/W"
+					"patching_rect" : [ 443.0, 27.0, 147.0, 20.0 ],
+					"text" : "j.remote gain/W @unit dB"
 				}
 
 			}
@@ -122,7 +121,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/zoomH2ambi=_view"
+					"text" : "/no_model_address"
 				}
 
 			}
