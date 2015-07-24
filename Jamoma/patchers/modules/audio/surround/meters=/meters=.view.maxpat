@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 9,
-			"architecture" : "x64"
+			"revision" : 10,
+			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 382.0, 44.0, 1260.0, 599.0 ],
+		"rect" : [ 20.0, 45.0, 1260.0, 599.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -129,8 +129,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 407.0, 41.5, 428.0, 20.0 ],
-					"text" : "j.remote_array audio/amplitude.[32] @format array @dataspace gain @unit db"
+					"patching_rect" : [ 407.0, 41.5, 331.0, 20.0 ],
+					"text" : "j.remote_array audio/amplitude.[32] @format array @unit db"
 				}
 
 			}
