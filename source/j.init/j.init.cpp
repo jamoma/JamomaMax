@@ -83,8 +83,8 @@ void *init_new(t_symbol *s, long argc, t_atom *argv)
 	if (attrstart && argv)
 		atom_arg_getsym(&relativeAddress, 0, attrstart, argv);
 	
-	if (x) {
-		
+	if (x)
+    {
         x->outlets = (TTHandle)sysmem_newptr(sizeof(TTPtr) * 2);
         x->outlets[end_out] = bangout(x);
 		x->outlets[start_out] = bangout(x);
@@ -141,19 +141,22 @@ void init_subscribe(t_init *x)
 	TTObject    returnAddressCallback, returnValueCallback, empty;
 	
 	// for relative address
-	if (x->address.getType() == kAddressRelative) {
-
-		if (!jamoma_subscriber_create((t_object*)x, empty, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
-            
-			// get the context address to make
-			// a receiver on the contextAddress:initialized attribute
-			x->subscriberObject.get("contextAddress", v);
-			contextAddress = v[0];
+	if (x->address.getType() == kAddressRelative)
+    {
+		if (!jamoma_subscriber_create((t_object*)x, empty, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode))
+        {
+            if (returnedNode)
+            {
+                if (returnedNode->getObject().valid())
+                {
+                    returnedNode->getAddress(contextAddress);
+                }
+            }
 		}
 		
 		// bind on the /model:address parameter (view patch) or return (model patch)
-		if (contextAddress != kTTAdrsEmpty) {
-			
+		if (contextAddress != kTTAdrsEmpty)
+        {
 			// Make a TTReceiver object
 			returnAddressCallback = TTObject("callback");
 			returnAddressCallback.set(kTTSym_baton, TTPtr(x));
@@ -175,8 +178,8 @@ void init_subscribe(t_init *x)
 		// to a notification mechanism and each time an TTObjet subscribes to the namespace
 		// using jamoma_subscriber_create we notify all the externals which have used 
 		// jamoma_subscriber_create with NULL object to bind)
-		else {
-			
+		else
+        {
 			// release the subscriber
 			x->subscriberObject = TTObject();
 			
@@ -198,8 +201,8 @@ void init_return_address(t_init *x, t_symbol *msg, long argc, t_atom *argv)
 // GO !
 void init_return_value(t_init *x, t_symbol *msg, long argc, t_atom *argv)
 {
-	if (atom_gettype(argv) == A_LONG) {
-        
+	if (atom_gettype(argv) == A_LONG)
+    {
         if (atom_getlong(argv) == 0)
             outlet_bang(x->outlets[start_out]);
         else
