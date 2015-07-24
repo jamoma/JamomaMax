@@ -1,0 +1,3 @@
+[submodule "JamomaCore"]
+	path = JamomaCore
+	url = https://github.com/jamoma/JamomaCore.git
