@@ -1,0 +1,11 @@
+language: cpp
+sudo: false
+os:
+#  -linux  
+  - osx
+install:
+- "./script/depinstall.sh"
+script:
+- "./script/build.sh"
+after_success:
+- "./script/deploy-git.sh"
