@@ -2,8 +2,8 @@
 
 set -v
 
-if [ "x${TRAVIS_BRANCH}" != "xmaster" ]; then
-  echo "We are not on master branch, don't upload build."
+if [ "x${TRAVIS_BRANCH}" != "xdev" ]; then
+  echo "We are not on dev branch, don't upload build."
   exit 0
 fi
 
