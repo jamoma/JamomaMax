@@ -29,6 +29,45 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 306.0, 391.5, 20.0, 20.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 240.0, 391.5, 57.0, 20.0 ],
+					"text" : "dac~ 1 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 240.0, 357.0, 95.0, 20.0 ],
+					"text" : "j.unpack= 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"args" : [ "@name", "input=.module", "@description", "Playback of multichannel audiofiles based on sfplay" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
@@ -62,7 +101,7 @@
 					"id" : "obj-31",
 					"maxclass" : "bpatcher",
 					"name" : "meters=.module.maxpat",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
 					"patching_rect" : [ 240.0, 199.0, 300.0, 140.0 ],
@@ -224,7 +263,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 306.0, 173.0, 234.0, 18.0 ],
-					"text" : "info/position 0.783581"
+					"text" : "info/position 0.032933"
 				}
 
 			}
@@ -239,21 +278,6 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 547.0, 231.0, 93.0, 20.0 ],
 					"text" : "metering"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-42",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "output=.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 357.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"varname" : "/output~"
 				}
 
 			}
@@ -288,6 +312,24 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
@@ -334,10 +376,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-42", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -392,62 +443,6 @@
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "output=.module.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/output=",
-				"patcherrelativepath" : "../output=",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "output=.view.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/output=",
-				"patcherrelativepath" : "../output=",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../../javascript",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter~.panel.widget.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../stereo/Dynamics/limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "output=.model.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/output=",
-				"patcherrelativepath" : "../output=",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter=.model.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/limiter=",
-				"patcherrelativepath" : "../limiter=",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../stereo/Dynamics/limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
-				"patcherrelativepath" : "../../stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -521,6 +516,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.pack=.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
@@ -537,10 +536,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.pack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
@@ -553,18 +548,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unpack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.limiter=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.stats.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
@@ -573,7 +556,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.return_array.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{

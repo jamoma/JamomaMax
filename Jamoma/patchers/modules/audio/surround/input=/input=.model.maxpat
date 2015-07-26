@@ -361,8 +361,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 841.0, 523.0, 177.0, 47.0 ],
-					"text" : "j.model j.model @description \"Playback of multichannel audiofiles based on sfplay~\"",
+					"patching_rect" : [ 841.0, 523.0, 168.0, 47.0 ],
+					"text" : "j.model @description \"Playback of multichannel audiofiles based on sfplay~\"",
 					"varname" : "j.hub[1]"
 				}
 
@@ -375,20 +375,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 841.0, 588.0, 26.0, 26.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-40",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 1016.0, 83.0, 49.0, 20.0 ],
-					"text" : "* 1000."
 				}
 
 			}
@@ -729,7 +715,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "float" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 463.0, 12.0, 28.0, 28.0 ]
 								}
 
@@ -3202,7 +3188,7 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "float" ],
+									"outlettype" : [ "" ],
 									"patching_rect" : [ 181.0, 20.0, 25.0, 25.0 ]
 								}
 
@@ -3404,8 +3390,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1016.0, 18.0, 212.0, 60.0 ],
-					"text" : "j.message start @type decimal @repetitions/filter 1 @dataspace time @unit second @description \"start time in soundfile to play in [sec]\"",
+					"patching_rect" : [ 1016.0, 18.0, 194.0, 60.0 ],
+					"text" : "j.message start @type decimal @repetitions/filter 1 @dataspace time @unit ms @description \"start time in soundfile to play in [ms]\"",
 					"varname" : "start"
 				}
 
@@ -3539,9 +3525,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 0 ],
+					"destination" : [ "obj-14", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-1005", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 1025.5, 140.5, 695.5, 140.5 ],
 					"source" : [ "obj-1005", 0 ]
 				}
 
@@ -3759,25 +3755,6 @@
 					"hidden" : 0,
 					"midpoints" : [ 632.5, 210.0, 567.5, 210.0 ],
 					"source" : [ "obj-34", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-14", 3 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-40", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-34", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 1025.5, 140.5, 695.5, 140.5 ],
-					"source" : [ "obj-40", 0 ]
 				}
 
 			}
