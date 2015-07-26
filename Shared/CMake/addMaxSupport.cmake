@@ -15,7 +15,7 @@ IF(WIN32)
 	SET(MaxAPI_LIB ${MAXSDK_PATH}/max-includes/MaxAPI.lib)
 	MARK_AS_ADVANCED (MaxAPI_LIB)
 
-	SET(MaxAudio_LIB ${MAXSDK_PATH}/max-includes/MaxAudio.lib)
+	SET(MaxAudio_LIB ${MAXSDK_PATH}/msp-includes/MaxAudio.lib)
 	MARK_AS_ADVANCED (MaxAudio_LIB)
 
 	SET(Jitter_LIB ${MAXSDK_PATH}/jit-includes/jitlib.lib)
