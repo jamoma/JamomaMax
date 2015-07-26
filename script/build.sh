@@ -22,6 +22,6 @@ else
 fi
 
 echo "Configuring with CMAKE_OPTIONS=$CMAKE_OPTIONS"
-${HOME}/bin/cmake .. ${CMAKE_OPTIONS}
+${HOME}/cmake/bin/cmake .. ${CMAKE_OPTIONS}
 echo "Now make"
 make -j 4
