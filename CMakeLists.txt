@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 project(JamomaMax)
 
+SET(JAMOMAMAX_PATH ${CMAKE_CURRENT_SOURCE_DIR})
 include(${CMAKE_CURRENT_SOURCE_DIR}/Shared/CMake/addMaxSupport.cmake)
+
+message("MaxAPI_LIB ${MaxAPI_LIB}")
+message("MaxAudio_LIB ${MaxAudio_LIB}")
+message("Jitter_LIB ${Jitter_LIB}")
 ### GetGitDescription ###
 # TODO put this in a module
 # I tried around a09620ce2717e10cc0a624c805146727996a4266
