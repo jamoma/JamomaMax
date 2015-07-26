@@ -57,7 +57,6 @@ endif()
 
 ## Setup of the library ##
 
-addMaxsupport()
 # Dynamic
 add_library(${PROJECT_NAME}
 			SHARED
@@ -150,6 +149,10 @@ if(APPLE)
 	SET(CARBON_LIB ${CARBON_LIB})
 	target_link_libraries(${PROJECT_NAME} ${CARBON_LIB})
 endif()
+
+message("MaxAPI_LIB ${MaxAPI_LIB}")
+message("MaxAudio_LIB ${MaxAudio_LIB}")
+message("Jitter_LIB ${Jitter_LIB}")
 
 target_link_libraries(${PROJECT_NAME} ${MaxAPI_LIB})
 target_link_libraries(${PROJECT_NAME} ${MaxAudio_LIB})

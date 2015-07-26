@@ -1,5 +1,5 @@
 /** @file
- * 
+ *
  * @ingroup implementationMaxExternalsGraph
  *
  * @brief j.unpack# - External object for Max/MSP to get Max values from a Jamoma Graph.
@@ -14,7 +14,7 @@
  */
 
 
-#include "maxGraph.h"
+#include "MaxGraph.h"
 #include "TTCallback.h"
 
 
@@ -45,20 +45,20 @@ static t_class* sUnpackClass;
 int C74_EXPORT main(void)
 {
 	t_class *c;
-	
-	TTGraphInit();	
+
+	TTGraphInit();
 	common_symbols_init();
-	
+
 	c = class_new("j.unpack-", (method)UnpackNew, (method)UnpackFree, sizeof(Unpack), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphConnect,		"graph.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxGraphDrop,		"graph.drop",		A_CANT, 0);
  	class_addmethod(c, (method)MaxGraphObject,		"graph.object",		A_CANT, 0);
 
-	class_addmethod(c, (method)UnpackAssist,		"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-	
+	class_addmethod(c, (method)UnpackAssist,		"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	class_register(_sym_box, c);
 	sUnpackClass = c;
 	return 0;
@@ -73,31 +73,31 @@ UnpackPtr UnpackNew(t_symbol *msg, long argc, t_atom* argv)
     UnpackPtr	self;
 	TTValue		v, none;
 	TTErr		err;
-	
+
     self = UnpackPtr(object_alloc(sUnpackClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout
 		self->graphOutlets[0] = outlet_new(self, NULL);
-		
+
 		v.resize(2);
 		v[0] = "graph.output";
 		v[1] = 1;
 		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
-		
+
 		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
-		
+
 		self->callback = new TTObject("callback");
 		self->callback->set(TT("function"), TTPtr(&UnpackGraphCallback));
 		self->callback->set(TT("baton"), TTPtr(self));
-		
+
 		// Dynamically add a message to the callback object so that it can handle the 'dictionaryReceived' notification
 		self->callback->instance()->registerMessage(TT("dictionaryReceived"), (TTMethod)&TTCallback::notify, kTTMessagePassValue);
 		// Tell the graph object that we want to watch it
 		self->graphObject->mKernel.registerObserverForNotifications(*self->callback);
-		
+
 		attr_args_process(self, argc, argv);
 	}
 	return self;
@@ -118,7 +118,7 @@ void UnpackFree(UnpackPtr self)
 void UnpackAssist(UnpackPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy (dst, "multichannel input and control messages");		
+		strcpy (dst, "multichannel input and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");
@@ -137,7 +137,7 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 	t_atom*			ap;
 	TTBoolean		firstItemASymbol = NO;
 	TTSymbol		firstItem;
-	
+
 	//arg.get(0, (TTPtr*)(&aDictionary));
 	aDictionary = (TTDictionaryPtr)(TTPtr)arg[0];
 	aDictionary->getValue(v);
@@ -155,7 +155,7 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 				v[i].type() == kTypeUInt64)
 			{
 				TTInt32 ival;
-				
+
 				ival = v[i];
 				atom_setlong(ap+i, ival);
 			}
@@ -166,7 +166,7 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 			else if (v[i].type() == kTypeSymbol)
 			{
 				TTSymbol s;
-				
+
 				s = v[i];
 				atom_setsym(ap+i, gensym((char*)s.c_str()));
 				if (i==0) {
@@ -175,7 +175,7 @@ void UnpackGraphCallback(UnpackPtr self, TTValue& arg)
 				}
 			}
 		}
-		
+
 		if (firstItemASymbol)
 			outlet_anything(self->graphOutlets[0], gensym((char*)firstItem.c_str()), ac-1, ap+1);
 		else if (ac == 1)

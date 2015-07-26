@@ -14,23 +14,23 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 int C74_EXPORT main(void)
 {
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	//	TTValue								value(0);
 	MaxAudioGraphWrappedClassPtr			c = NULL;
-	
+
 	TTAudioGraphInit();
-	
+
 	options->append(TT("generator"), YES);
-	
+
 	options->append(TT("userCanSetNumChannels"), YES);
-	
+
 	wrapAsMaxAudioGraph(TT("count"), "j.count=", &c, options);
 
 	wrapAsMaxAudioGraph(TT("count"), "count=", &c, options);
-	
+
 	return 0;
 }

@@ -14,16 +14,16 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 int C74_EXPORT main(void)
-{   
+{
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	TTValue								value(0);
 	MaxAudioGraphWrappedClassPtr			c = NULL;
-	
+
 	TTAudioGraphInit();
-	
+
 	wrapAsMaxAudioGraph(TT("delay"), "j.delay=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "interpolation", 0, "none linear cubic");
 

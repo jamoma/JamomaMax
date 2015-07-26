@@ -1,5 +1,5 @@
 /** @file
- * 
+ *
  * @ingroup implementationMaxExternalsGraph
  *
  * @brief j.midi.format# - Format MIDI message as dictionary being passed in a Jamoma Graph
@@ -14,7 +14,7 @@
  */
 
 
-#include "maxGraph.h"
+#include "MaxGraph.h"
 
 
 // Data Structure for this object
@@ -42,21 +42,21 @@ static t_class* sMidiFormatClass;
 int C74_EXPORT main(void)
 {
 	t_class* c;
-	
-	TTGraphInit();	
+
+	TTGraphInit();
 	common_symbols_init();
-	
+
 	c = class_new("j.midi.format-", (method)MidiFormatNew, (method)MidiFormatFree, sizeof(MidiFormat), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphConnect,		"graph.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxGraphDrop,		"graph.drop",		A_CANT, 0);
  	class_addmethod(c, (method)MaxGraphObject,		"graph.object",		A_CANT, 0);
 
-	class_addmethod(c, (method)MidiFormatAssist,	"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-	
+	class_addmethod(c, (method)MidiFormatAssist,	"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	class_register(_sym_box, c);
 	sMidiFormatClass = c;
 	return 0;
@@ -71,12 +71,12 @@ MidiFormatPtr MidiFormatNew(t_symbol* msg, long argc, t_atom* argv)
     MidiFormatPtr	self;
 	TTValue		v;
 	TTErr		err;
-	
+
     self = MidiFormatPtr(object_alloc(sMidiFormatClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
-		
+
 		v.resize(2);
 		v[0] = "midi.format";
 		v[1] = 1;
@@ -86,7 +86,7 @@ MidiFormatPtr MidiFormatNew(t_symbol* msg, long argc, t_atom* argv)
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
-		
+
 		attr_args_process(self, argc, argv);
 	}
 	return self;
@@ -107,7 +107,7 @@ void MidiFormatFree(MidiFormatPtr self)
 void MidiFormatAssist(MidiFormatPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy (dst, "dictionary input and control messages");		
+		strcpy (dst, "dictionary input and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");

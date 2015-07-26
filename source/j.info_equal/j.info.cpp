@@ -14,7 +14,7 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 
 // Data Structure for this object
@@ -55,20 +55,20 @@ int C74_EXPORT main(void)
 {
 	t_class* c;
 
-	TTAudioGraphInit();	
+	TTAudioGraphInit();
 	common_symbols_init();
 
 	c = class_new("j.info=", (method)InfoNew, (method)InfoFree, sizeof(Info), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)InfoBang,			"bang",					0);
 	class_addmethod(c, (method)MaxAudioGraphReset,	"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)InfoConnect,			"audio.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxAudioGraphSetup,	"audio.setup",		A_CANT, 0);
 	class_addmethod(c, (method)MaxAudioGraphDrop,	"audio.drop",		A_CANT, 0);
 	class_addmethod(c, (method)MaxAudioGraphObject,	"audio.object",		A_CANT, 0);
-	class_addmethod(c, (method)InfoAssist,			"assist",				A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",				A_CANT, 0);  
-	
+	class_addmethod(c, (method)InfoAssist,			"assist",				A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",				A_CANT, 0);
+
 	class_register(_sym_box, c);
 	sInfoClass = c;
 	return 0;
@@ -83,7 +83,7 @@ InfoPtr InfoNew(t_symbol* msg, long argc, t_atom* argv)
     InfoPtr	self;
 	TTValue	v;
 	TTErr	err;
-   
+
     self = InfoPtr(object_alloc(sInfoClass));
     if (self) {
     	object_obex_store((TTPtr)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));
@@ -91,13 +91,13 @@ InfoPtr InfoNew(t_symbol* msg, long argc, t_atom* argv)
 		self->outletVectorSize = outlet_new((t_pxobject*)self, 0);
 		self->outletSampleRate = outlet_new((t_pxobject*)self, 0);
 		self->outletSmartSignal = outlet_new((t_pxobject*)self, "audio.connect");
-		
+
 		self->qelem = qelem_new(self, (method)InfoQfn);
-		
+
 		v.resize(2);
 		v[0] = "thru";
 		v[1] = 1;		// we set it up with 1 inlet, and later modify to 2 inlets if the connection is made
-		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);		
+		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		if (!self->audioGraphObject->getUnitGenerator().valid()) {
 			object_error(SELF, "cannot load Jamoma DSP object");
 			return NULL;
@@ -123,7 +123,7 @@ void InfoFree(InfoPtr self)
 void InfoAssist(InfoPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy(dst, "multichannel audio connection and control messages");		
+		strcpy(dst, "multichannel audio connection and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel audio connection, passing the input thru to the output");
@@ -156,7 +156,7 @@ void InfoQfn(InfoPtr self)
 TTErr InfoConnect(InfoPtr self, TTAudioGraphObjectBasePtr newAudioSourceObject, long sourceOutletNumber)
 {
 	TTErr err = MaxAudioGraphConnect((t_object*)self, newAudioSourceObject, sourceOutletNumber);
-	
+
 	self->audioSourceOutlet = sourceOutletNumber;
 	InfoBang(self);
 	return err;

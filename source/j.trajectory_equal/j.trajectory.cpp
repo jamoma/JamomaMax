@@ -14,14 +14,14 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 int C74_EXPORT main(void)
 {
-	
+
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	MaxAudioGraphWrappedClassPtr			c = NULL;
-		
+
 	TTAudioGraphInit();
 	options->append(TT("generator"), YES);
 	wrapAsMaxAudioGraph(TT("trajectory"), "j.trajectory=", &c, options);

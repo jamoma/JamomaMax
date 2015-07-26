@@ -13,8 +13,8 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
- 
-#include "maxAudioGraph.h"
+
+#include "MaxAudioGraph.h"
 
 
 int C74_EXPORT main(void)
@@ -27,13 +27,13 @@ int C74_EXPORT main(void)
 	options->append(TT("userCanSetNumChannels"), NO);
 	wrapAsMaxAudioGraph(TT("audio.pick"), "j.pick=", NULL, options);
 	return wrapAsMaxAudioGraph(TT("audio.pick"), "pick=", NULL, options);
-	
-	
+
+
 		//TTAudioGraphInit();
 		//wrapAsMaxAudioGraph(TT("audio.pick"), "j.pick=", NULL);
 		//wrapAsMaxAudioGraph(TT("audio.pick"), "pick=", NULL);
 		//return 0;
-	
-	
+
+
 }
 

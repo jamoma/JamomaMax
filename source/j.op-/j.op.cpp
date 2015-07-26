@@ -1,5 +1,5 @@
 /** @file
- * 
+ *
  * @ingroup implementationMaxExternalsGraph
  *
  * @brief j.midi.op# - Wraps the #TTOperator class as a Jamoma Graph external object for Max
@@ -14,7 +14,7 @@
  */
 
 
-#include "maxGraph.h"
+#include "MaxGraph.h"
 
 
 // Data Structure for this object
@@ -46,28 +46,28 @@ static t_class* sOpClass;
 int C74_EXPORT main(void)
 {
 	t_class* c;
-	
-	TTGraphInit();	
+
+	TTGraphInit();
 	common_symbols_init();
-	
+
 	c = class_new("j.op-", (method)OpNew, (method)OpFree, sizeof(Op), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphConnect,		"graph.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxGraphDrop,		"graph.drop",		A_CANT, 0);
  	class_addmethod(c, (method)MaxGraphObject,		"graph.object",		A_CANT, 0);
 
-	class_addmethod(c, (method)OpAssist,			"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-	
+	class_addmethod(c, (method)OpAssist,			"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	CLASS_ATTR_SYM(c,		"operator",	0,		Op,	attrOperator);
 	CLASS_ATTR_ACCESSORS(c,	"operator",	NULL,	OpSetOperator);
 	CLASS_ATTR_ENUM(c,		"operator",	0,	"+ - * / % > >= == != <= < abs acos asin atan ceil cos cosh exp floor log log10 sin sinh sqrt tan tanh");
 
 	CLASS_ATTR_FLOAT(c,		"operand",	0,		Op,	attrOperand);
 	CLASS_ATTR_ACCESSORS(c,	"operand",	NULL,	OpSetOperand);
-	
+
 	class_register(_sym_box, c);
 	sOpClass = c;
 	return 0;
@@ -82,12 +82,12 @@ OpPtr OpNew(t_symbol* msg, long argc, t_atom* argv)
     OpPtr	self;
 	TTValue	v;
 	TTErr	err;
-	
+
     self = OpPtr(object_alloc(sOpClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
-		
+
 		v.resize(2);
 		v[0] = "operator";
 		v[1] = 1;
@@ -97,7 +97,7 @@ OpPtr OpNew(t_symbol* msg, long argc, t_atom* argv)
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
-		
+
 		attr_args_process(self, argc, argv);
 	}
 	return self;
@@ -118,7 +118,7 @@ void OpFree(OpPtr self)
 void OpAssist(OpPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy (dst, "multichannel input and control messages");		
+		strcpy (dst, "multichannel input and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");

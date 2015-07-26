@@ -14,7 +14,7 @@
  */
 
 
-#include "maxGraph.h"
+#include "MaxGraph.h"
 
 
 // Data Structure for this object
@@ -46,27 +46,27 @@ static t_class* sAppendClass;
 int C74_EXPORT main(void)
 {
 	t_class* c;
-	
-	TTGraphInit();	
+
+	TTGraphInit();
 	common_symbols_init();
-	
+
 	c = class_new("j.append-", (method)AppendNew, (method)AppendFree, sizeof(Append), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphConnect,		"graph.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxGraphDrop,		"graph.drop",		A_CANT, 0);
  	class_addmethod(c, (method)MaxGraphObject,		"graph.object",		A_CANT, 0);
 
-	class_addmethod(c, (method)AppendAssist,		"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-	
+	class_addmethod(c, (method)AppendAssist,		"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	CLASS_ATTR_SYM(c,		"key",		0,		Append,	attrKey);
 	CLASS_ATTR_ACCESSORS(c,	"key",		NULL,	AppendSetKey);
-	
+
 	CLASS_ATTR_FLOAT(c,		"value",	0,		Append,	attrValue);
 	CLASS_ATTR_ACCESSORS(c,	"value",	NULL,	AppendSetValue);
-	
+
 	class_register(_sym_box, c);
 	sAppendClass = c;
 	return 0;
@@ -81,12 +81,12 @@ AppendPtr AppendNew(t_symbol* msg, long argc, t_atom* argv)
     AppendPtr	self;
 	TTValue		v;
 	TTErr		err;
-	
+
     self = AppendPtr(object_alloc(sAppendClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
-		
+
 		v.resize(2);
 		v[0] = "dictionary.append";
 		v[1] = 1;
@@ -96,7 +96,7 @@ AppendPtr AppendNew(t_symbol* msg, long argc, t_atom* argv)
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
-		
+
 		attr_args_process(self, argc, argv);
 	}
 	return self;
@@ -117,7 +117,7 @@ void AppendFree(AppendPtr self)
 void AppendAssist(AppendPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy (dst, "dictionary input and control messages");		
+		strcpy (dst, "dictionary input and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");

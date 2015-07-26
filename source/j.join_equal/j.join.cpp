@@ -14,7 +14,7 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 
 int C74_EXPORT main(void)
@@ -23,7 +23,7 @@ int C74_EXPORT main(void)
 	TTValue								value(0);
 
 	TTAudioGraphInit();
-	
+
 	options->append(TT("argumentDefinesNumInlets"), value);
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels
 	wrapAsMaxAudioGraph(TT("audio.join"), "j.join=", NULL, options);
