@@ -22,9 +22,11 @@ CMAKE_OPTIONS="-DCMAKE_INSTALL_PREFIX=${TRAVIS_BUILD_DIR}/JamomaInstall"
 
 if [ "x$TRAVIS_OS_NAME" = "xosx" ]; then
   CMAKE_OPTIONS="$CMAKE_OPTIONS -DFAT_BINARY=OFF"
+else
+  CMAKE_OPTIONS="$CMAKE_OPTIONS -DCROSS_COMPILER_PATH=${HOME}/mingw-w64-install/ -DCMAKE_TOOLCHAIN_FILE=${TRAVIS_BUILD_DIR}/Shared/CMake/toolchains/mingw-w64.cmake"
 fi
 
 echo "Configuring with CMAKE_OPTIONS=$CMAKE_OPTIONS"
-/tmp/cmake/bin/cmake .. $CMAKE_OPTIONS
+${HOME}/bin/cmake .. ${CMAKE_OPTIONS}
 echo "Now make"
 make -j 4
