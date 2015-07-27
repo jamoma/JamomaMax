@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 9,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 120.0, 146.0, 625.0, 650.0 ],
@@ -14,20 +15,56 @@
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"local" : 1,
+					"maxclass" : "ezdac~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 171.0, 392.0, 45.0, 45.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-2",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "multi.out=.model" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 10.0, 10.0, 605.0, 94.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -39,31 +76,40 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 9,
-							"architecture" : "x64"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 5,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
-						"rect" : [ 25.0, 69.0, 247.0, 293.0 ],
+						"rect" : [ 34.0, 79.0, 247.0, 293.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
@@ -73,8 +119,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 158.381256, 166.0, 35.0, 18.0 ],
-									"text" : "stop"
+									"patching_rect" : [ 158.381256, 166.0, 29.5, 22.0 ],
+									"style" : "",
+									"text" : "0"
 								}
 
 							}
@@ -87,8 +134,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 166.0, 75.0, 18.0 ],
-									"text" : "startwindow"
+									"patching_rect" : [ 69.0, 166.0, 29.5, 22.0 ],
+									"style" : "",
+									"text" : "1"
 								}
 
 							}
@@ -100,7 +148,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 57.0, 25.0, 25.0 ]
+									"patching_rect" : [ 69.0, 57.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -111,7 +160,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 69.0, 206.0, 25.0, 25.0 ]
+									"patching_rect" : [ 69.0, 206.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -124,7 +174,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 69.0, 132.0, 57.0, 20.0 ],
+									"patching_rect" : [ 69.0, 132.0, 57.0, 22.0 ],
+									"style" : "",
 									"text" : "deferlow"
 								}
 
@@ -138,7 +189,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "bang" ],
-									"patching_rect" : [ 69.0, 97.0, 108.381256, 20.0 ],
+									"patching_rect" : [ 69.0, 97.0, 108.381256, 22.0 ],
+									"style" : "",
 									"text" : "t b b"
 								}
 
@@ -201,20 +253,16 @@
  ]
 					}
 ,
-					"patching_rect" : [ 171.0, 348.0, 93.0, 20.0 ],
+					"patching_rect" : [ 171.0, 348.0, 93.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p cotnrol_audio"
 				}
 
@@ -224,14 +272,15 @@
 					"bubble" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-13",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 270.381256, 339.5, 221.0, 37.0 ],
-					"text" : "Changes in channel offset only take effext the next time audio is started."
+					"style" : "",
+					"text" : "Changes in channel offset only take effext the next time audio is started.",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 				}
 
 			}
@@ -245,36 +294,30 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 155.0, 170.0, 56.100006, 33.0 ],
+					"patching_rect" : [ 155.0, 170.0, 56.100006, 35.0 ],
+					"style" : "",
 					"text" : "phasor~ 2"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-6",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "multi.out=.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 33,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "signal", "" ],
 					"patching_rect" : [ 40.0, 254.0, 150.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@name", "multi.out=.model", "@description", "Unpack up to 32 mono signals from a multicable" ],
-					"bgmode" : 1,
-					"id" : "obj-25",
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 625.0, 70.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui"
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -299,7 +342,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 222.5, 170.0, 56.0, 33.0 ],
+					"patching_rect" : [ 222.5, 170.0, 56.0, 35.0 ],
+					"style" : "",
 					"text" : "phasor~ 1"
 				}
 
@@ -313,7 +357,8 @@
 					"numinlets" : 32,
 					"numoutlets" : 2,
 					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 155.0, 215.0, 437.5, 20.0 ],
+					"patching_rect" : [ 155.0, 215.0, 437.5, 22.0 ],
+					"style" : "",
 					"text" : "j.pack= 32"
 				}
 
@@ -327,7 +372,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 40.0, 176.5, 57.0, 20.0 ],
+					"patching_rect" : [ 40.0, 176.5, 57.0, 22.0 ],
+					"style" : "",
 					"text" : "qlim 100"
 				}
 
@@ -342,9 +388,10 @@
 					"minimum" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 40.0, 151.5, 36.0, 20.0 ],
+					"patching_rect" : [ 40.0, 151.5, 36.0, 22.0 ],
+					"style" : "",
 					"triscale" : 0.9
 				}
 
@@ -358,21 +405,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 40.0, 215.0, 101.0, 18.0 ],
+					"patching_rect" : [ 40.0, 215.0, 101.0, 22.0 ],
+					"style" : "",
 					"text" : "channelOffset $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-14",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 171.0, 379.5, 38.0, 20.0 ],
-					"text" : "dac~"
 				}
 
 			}
@@ -571,7 +606,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-31", 0 ]
@@ -760,68 +795,31 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../../components/data/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "multi.out=.module.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multi.out=.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multi.out=.view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/multi.out=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.pack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -852,7 +850,8 @@
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
