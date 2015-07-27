@@ -60,7 +60,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 27",
+					"comment" : "Channel 27",
 					"id" : "obj-1",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -72,7 +72,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 32",
+					"comment" : "Channel 32",
 					"id" : "obj-2",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -84,7 +84,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 31",
+					"comment" : "Channel 31",
 					"id" : "obj-3",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -96,7 +96,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 30",
+					"comment" : "Channel 30",
 					"id" : "obj-4",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -108,7 +108,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 29",
+					"comment" : "Channel 29",
 					"id" : "obj-5",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -120,7 +120,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 28",
+					"comment" : "Channel 28",
 					"id" : "obj-6",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -132,7 +132,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 26",
+					"comment" : "Channel 26",
 					"id" : "obj-7",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -144,7 +144,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 25",
+					"comment" : "Channel 25",
 					"id" : "obj-8",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -156,7 +156,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 24",
+					"comment" : "Channel 24",
 					"id" : "obj-9",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -168,7 +168,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 23",
+					"comment" : "Channel 23",
 					"id" : "obj-10",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -180,7 +180,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 22",
+					"comment" : "Channel 22",
 					"id" : "obj-11",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -192,7 +192,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 21",
+					"comment" : "Channel 21",
 					"id" : "obj-12",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -204,7 +204,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 20",
+					"comment" : "Channel 20",
 					"id" : "obj-13",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -216,7 +216,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 19",
+					"comment" : "Channel 19",
 					"id" : "obj-14",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -228,7 +228,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 18",
+					"comment" : "Channel 18",
 					"id" : "obj-15",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -240,7 +240,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 17",
+					"comment" : "Channel 17",
 					"id" : "obj-16",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -252,7 +252,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 16",
+					"comment" : "Channel 16",
 					"id" : "obj-20",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -264,7 +264,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 15",
+					"comment" : "Channel 15",
 					"id" : "obj-21",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -276,7 +276,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 14",
+					"comment" : "Channel 14",
 					"id" : "obj-22",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -288,7 +288,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 13",
+					"comment" : "Channel 13",
 					"id" : "obj-23",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -300,7 +300,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 12",
+					"comment" : "Channel 12",
 					"id" : "obj-24",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -312,7 +312,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 11",
+					"comment" : "Channel 11",
 					"id" : "obj-25",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -324,7 +324,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 10",
+					"comment" : "Channel 10",
 					"id" : "obj-26",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -336,7 +336,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 9",
+					"comment" : "Channel 9",
 					"id" : "obj-27",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -348,7 +348,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 8",
+					"comment" : "Channel 8",
 					"id" : "obj-28",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -360,7 +360,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 7",
+					"comment" : "Channel 7",
 					"id" : "obj-29",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -372,7 +372,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 6",
+					"comment" : "Channel 6",
 					"id" : "obj-30",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -384,7 +384,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 5",
+					"comment" : "Channel 5",
 					"id" : "obj-31",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -396,7 +396,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 4",
+					"comment" : "Channel 4",
 					"id" : "obj-32",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -408,7 +408,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 3",
+					"comment" : "Channel 3",
 					"id" : "obj-33",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -420,7 +420,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 2",
+					"comment" : "Channel 2",
 					"id" : "obj-34",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
@@ -444,7 +444,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "Ch 1",
+					"comment" : "Channel 1",
 					"id" : "obj-42",
 					"maxclass" : "inlet",
 					"numinlets" : 0,
