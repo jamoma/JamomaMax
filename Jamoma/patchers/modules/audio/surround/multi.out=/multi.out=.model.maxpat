@@ -483,7 +483,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "Dumpout",
 					"id" : "obj-48",
 					"maxclass" : "outlet",
 					"numinlets" : 1,
