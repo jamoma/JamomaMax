@@ -12,13 +12,13 @@ IF(WIN32)
 	include_directories("${JAMOMAMAX_PATH}/library/includes")
 	# SET(INCLUDE_DIRECTORIES "${MAXSDK_PATH}/max-includes" "${MAXSDK_PATH}/msp-includes" "${MAXSDK_PATH}/jit-includes" "${JAMOMAMAX_PATH}/library/includes")
 
-	SET(MaxAPI_LIB ${MAXSDK_PATH}/max-includes/MaxAPI.lib)
+	SET(MaxAPI_LIB ${MAXSDK_PATH}/max-includes/x64/MaxAPI.lib)
 	MARK_AS_ADVANCED (MaxAPI_LIB)
 
-	SET(MaxAudio_LIB ${MAXSDK_PATH}/msp-includes/MaxAudio.lib)
+	SET(MaxAudio_LIB ${MAXSDK_PATH}/msp-includes/x64/MaxAudio.lib)
 	MARK_AS_ADVANCED (MaxAudio_LIB)
 
-	SET(Jitter_LIB ${MAXSDK_PATH}/jit-includes/jitlib.lib)
+	SET(Jitter_LIB ${MAXSDK_PATH}/jit-includes/x64/jitlib.lib)
 	MARK_AS_ADVANCED(Jitter_LIB)
 
 	if(CMAKE_BUILD_TYPE STREQUAL "Release")
