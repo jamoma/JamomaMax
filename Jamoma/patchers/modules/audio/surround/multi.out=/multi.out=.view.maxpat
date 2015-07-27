@@ -95,7 +95,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 312.0, 142.0, 35.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 146.5, 33.0, 35.0, 22.0 ],
+					"presentation_rect" : [ 108.5, 33.0, 35.0, 22.0 ],
 					"style" : "",
 					"triangle" : 0,
 					"triscale" : 0.9,
@@ -114,7 +114,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 14.0, 34.0, 93.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 45.5, 33.0, 93.0, 20.0 ],
+					"presentation_rect" : [ 7.5, 33.0, 93.0, 20.0 ],
 					"style" : "",
 					"text" : "Channel offset",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
@@ -147,8 +147,8 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/no_..ess"
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
+					"text" : "/no_model_address"
 				}
 
 			}
