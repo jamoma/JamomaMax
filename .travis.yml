@@ -2,11 +2,6 @@ language: cpp
 sudo: false
 os:
 - osx
-- linux
-#matrix:
-#  exclude:
-#    - os: osx
-#    - branch: feature/mingw-w64
 install:
 - "./script/depinstall.sh"
 script:
