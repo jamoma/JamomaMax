@@ -4,14 +4,12 @@ IF ( EXISTS ${JAMOMAMAX_PATH}/source/c74support/max-includes/commonsyms.h )
 	SET(MAXSDK_PATH ${CMAKE_SOURCE_DIR}/source/c74support)
 ENDIF()
 
-IF(WIN32)
-
 	include_directories("${MAXSDK_PATH}/max-includes")
 	include_directories("${MAXSDK_PATH}/msp-includes")
 	include_directories("${MAXSDK_PATH}/jit-includes")
 	include_directories("${JAMOMAMAX_PATH}/library/includes")
-	# SET(INCLUDE_DIRECTORIES "${MAXSDK_PATH}/max-includes" "${MAXSDK_PATH}/msp-includes" "${MAXSDK_PATH}/jit-includes" "${JAMOMAMAX_PATH}/library/includes")
 
+IF(WIN32)
 	SET(MaxAPI_LIB ${MAXSDK_PATH}/max-includes/x64/MaxAPI.lib)
 	MARK_AS_ADVANCED (MaxAPI_LIB)
 
