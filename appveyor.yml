@@ -1,5 +1,9 @@
 environment:
   CMAKE_PATH: c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86
+  encrypted_key:
+    secure: NBgLiSQwqyGpdaFuCaU/pY71Crm4TQ1ClOHJj4cMekk=
+  encrypted_iv:
+    secure: 8TrT2dUy4RkrNMtaXzhTqEd/SP816Ev/pYdGksosxXA=
 
 configuration: Release
 
@@ -15,8 +19,17 @@ build_script:
   - cmake -G"Visual Studio 12 2013" -DCMAKE_INSTALL_PREFIX=%CD%/JamomaInstall ..
   - msbuild JamomaMax.sln /property:Configuration=Release
   - cmake  -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
-  - cd JamomaInstall/JamomaMax
-  - compact /c /s:JamomaInstall /q JamomaMax-%APPVEYOR_REPO_TAG_NAME%-win32.zip
+  - cd JamomaInstall\JamomaMax
+  - compact /c /s:JamomaInstall /q JamomaMax-%APPVEYOR_REPO_TAG_NAME%-Windows_x86.zip
+
+on_success:
+  - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in id_rsa.enc -out %USERPROFILE%\.ssh\id_rsa -d
+  - git clone --depth=1 https://github.com/jamoma/nightly-builds.git c:\projects\nightly-builds
+  - move c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-*-Windows_x86.zip c:\projects\nightly-builds\JamomaMax\
+  - cd c:\projects\nightly-builds\JamomaMax\
+  - git commit -am "JamomaMax Windows build %APPVEYOR_REPO_TAG_NAME% %APPVEYOR_REPO_COMMIT%"
+  - git push
+
 
 artifacts:
   - name: Installer
