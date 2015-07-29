@@ -11,18 +11,22 @@ install:
   - appveyor DownloadFile "http://www.cmake.org/files/v3.3/cmake-3.3.0-rc4-win32-x86.zip"
   - 7z x cmake-3.3.0-rc4-win32-x86.zip -y > nul
 
-build_script:
+platform: x86
+
+before_build:
   - git submodule update --init
   - mkdir build
   - cd build
   - set PATH=%CMAKE_PATH%\bin
   - cmake -G"Visual Studio 12 2013" -DCMAKE_INSTALL_PREFIX=%CD%/JamomaInstall ..
-  - msbuild JamomaMax.sln /property:Configuration=Release
+
+build:
+  - project: JamomaMax.sln
+
+on_success:
   - cmake  -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
   - cd JamomaInstall\JamomaMax
   - compact /c /s:JamomaInstall /q JamomaMax-%APPVEYOR_REPO_TAG_NAME%-Windows_x86.zip
-
-on_success:
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in id_rsa.enc -out %USERPROFILE%\.ssh\id_rsa -d
   - git clone --depth=1 https://github.com/jamoma/nightly-builds.git c:\projects\nightly-builds
   - move c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-*-Windows_x86.zip c:\projects\nightly-builds\JamomaMax\
