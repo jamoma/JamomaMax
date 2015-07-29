@@ -1,0 +1,32 @@
+environment:
+  CMAKE_PATH: c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86
+
+configuration: Release
+
+install:
+  - appveyor DownloadFile "http://www.cmake.org/files/v3.3/cmake-3.3.0-rc4-win32-x86.zip"
+  - 7z x cmake-3.3.0-rc4-win32-x86.zip -y > nul
+
+build_script:
+  - git submodule update --init
+  - mkdir build
+  - cd build
+  - set PATH=%CMAKE_PATH%\bin
+  - cmake -G"Visual Studio 12 2013" -DCMAKE_INSTALL_PREFIX=%CD%/JamomaInstall ..
+  - msbuild JamomaMax.sln /property:Configuration=Release
+  - cmake  -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
+  - cd JamomaInstall/JamomaMax
+  - compact /c /s:JamomaInstall /q JamomaMax-%APPVEYOR_REPO_TAG_NAME%-win32.zip
+
+artifacts:
+  - name: Installer
+    path: JamomaMax-*-win32.zip
+
+deploy:
+  release: $(APPVEYOR_REPO_TAG_NAME)
+  provider: GitHub
+  artifact: /.*\.zip/
+  draft: false
+  prerelease: false
+  on:
+    appveyor_repo_tag: true
