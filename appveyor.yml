@@ -21,7 +21,7 @@ before_build:
   - cmake -G"Visual Studio 12 2013" -DCMAKE_INSTALL_PREFIX=%CD%/JamomaInstall ..
 
 build:
-  - project: JamomaMax.sln
+  project: JamomaMax.sln
 
 on_success:
   - cmake  -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
