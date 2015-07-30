@@ -29,7 +29,7 @@ build:
   project: C:/projects/jamomamax/build/JamomaMax.sln
 
 after_build:
-  - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
+  - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
   - cd JamomaInstall\JamomaMax
   - 7z a JamomaMax-%APPVEYOR_REPO_TAG_NAME%-%PLATFORM%.zip Jamoma > nul
   - mkdir %USERPROFILE%\.ssh
