@@ -40,6 +40,7 @@ after_build:
   - cd c:\projects\nightly-builds\JamomaMax\
   - git config --global user.email "jamoma@appveyor.com"
   - git config --global user.name "Jamoma from Appveyor"
+  - git config --global push.default simple
   - git add JamomaMax-Windows_%PLATFORM%.zip
   - git commit -m "JamomaMax Windows %PLATFORM% build %APPVEYOR_REPO_TAG_NAME% %APPVEYOR_REPO_COMMIT%"
   - git push
