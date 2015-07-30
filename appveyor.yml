@@ -38,6 +38,8 @@ after_build:
   - IF exist c:\projects\nightly-builds\JamomaMax\ ( echo "c:\projects\nightly-builds\JamomaMax\" exists ) ELSE ( mkdir c:\projects\nightly-builds\JamomaMax\ && echo "c:\projects\nightly-builds\JamomaMax\" created )
   - move /-Y c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-Windows_%PLATFORM%.zip c:\projects\nightly-builds\JamomaMax\
   - cd c:\projects\nightly-builds\JamomaMax\
+  - git config --global user.email "jamoma@appveyor.com"
+  - git config --global user.name "Jamoma from Appveyor"
   - git commit -am "JamomaMax Windows %PLATFORM% build %APPVEYOR_REPO_TAG_NAME% %APPVEYOR_REPO_COMMIT%"
   - git push
 
