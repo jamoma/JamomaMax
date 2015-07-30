@@ -26,7 +26,7 @@ build:
 on_success:
   - cmake  -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
   - cd JamomaInstall\JamomaMax
-  - compact /c /s:JamomaInstall /q JamomaMax-%APPVEYOR_REPO_TAG_NAME%-Windows_x86.zip
+  - 7z a -tzip JamomaMax-%APPVEYOR_REPO_TAG_NAME%-Windows_x86.zip Jamoma
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in id_rsa.enc -out %USERPROFILE%\.ssh\id_rsa -d
   - git clone --depth=1 https://github.com/jamoma/nightly-builds.git c:\projects\nightly-builds
   - move c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-*-Windows_x86.zip c:\projects\nightly-builds\JamomaMax\
