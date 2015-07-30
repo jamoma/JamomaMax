@@ -31,11 +31,11 @@ build:
 after_build:
   - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
   - cd JamomaInstall\JamomaMax
-  - 7z a JamomaMax-%APPVEYOR_REPO_TAG_NAME%-%PLATFORM%.zip Jamoma > nul
+  - 7z a JamomaMax-Windows_%PLATFORM%.zip Jamoma > nul
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
-  - move id_rsa %USERPROFILE%\.ssh\
+  - move /-Y id_rsa %USERPROFILE%\.ssh\
   - git clone --depth=1 https://github.com/jamoma/nightly-builds.git c:\projects\nightly-builds
-  - move c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-*-Windows_x86.zip c:\projects\nightly-builds\JamomaMax\
+  - move /-Y c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-Windows_%PLATFORM%.zip c:\projects\nightly-builds\JamomaMax\
   - cd c:\projects\nightly-builds\JamomaMax\
   - git commit -am "JamomaMax Windows %PLATFORM% build %APPVEYOR_REPO_TAG_NAME% %APPVEYOR_REPO_COMMIT%"
   - git push
