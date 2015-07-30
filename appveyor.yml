@@ -35,6 +35,7 @@ after_build:
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - move /-Y id_rsa %USERPROFILE%\.ssh\
   - git clone --depth=1 https://github.com/jamoma/nightly-builds.git c:\projects\nightly-builds
+  - IF exist c:\projects\nightly-builds\JamomaMax\ ( echo "c:\projects\nightly-builds\JamomaMax\" exists ) ELSE ( mkdir c:\projects\nightly-builds\JamomaMax\ && echo "c:\projects\nightly-builds\JamomaMax\" created )
   - move /-Y c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-Windows_%PLATFORM%.zip c:\projects\nightly-builds\JamomaMax\
   - cd c:\projects\nightly-builds\JamomaMax\
   - git commit -am "JamomaMax Windows %PLATFORM% build %APPVEYOR_REPO_TAG_NAME% %APPVEYOR_REPO_COMMIT%"
