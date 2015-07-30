@@ -54,13 +54,13 @@ else
 fi
 
 if [ "x${TRAVIS_OS_NAME}" = "xLinux" ]; then
-  ARCHIVE_NAME="JamomaPd-Windows-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="JamomaMax-Windows-mingw-${TRAVIS_TAG}.tgz"
 else
-  ARCHIVE_NAME="JamomaPd-OSX-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="JamomaMax-OSX-${TRAVIS_TAG}.tgz"
 fi
 
 cd ${TRAVIS_BUILD_DIR}/build
-cmake -DCMAKE_INSTALL_COMPONENT=JamomaPd -P cmake_install.cmake
+cmake -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
 
 cd ${TRAVIS_BUILD_DIR}/pd-package
 tar cvzf "${TRAVIS_BUILD_DIR}/${ARCHIVE_NAME}" Jamoma/
