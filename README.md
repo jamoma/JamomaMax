@@ -16,3 +16,5 @@ You can do this in the Terminal:
 1. cd to “/Users/[yourName]/Documents/Max 7/Packages"    
 2. make symlink, e.g. "ln -s /[replaceWithThePathTo]/Jamoma/Implementations/Max/Jamoma"    
 3. start Max    
+
+You will find nighlty builds of this code [here](https://github.com/jamoma/nightly-builds) for both OS X and Windows (32 and 64bit).
