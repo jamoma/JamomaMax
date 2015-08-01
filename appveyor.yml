@@ -41,9 +41,12 @@ after_build:
   - git config --global user.email "jamoma@appveyor.com"
   - git config --global user.name "Jamoma from Appveyor"
   - git config --global push.default matching
-  - git add JamomaMax-Windows_%PLATFORM%.zip
+  - git add -f JamomaMax-Windows_%PLATFORM%.zip
   - git commit -m "JamomaMax Windows %PLATFORM% build %APPVEYOR_REPO_TAG_NAME% %APPVEYOR_REPO_COMMIT%"
-  - git push origin master || echo "Git push returns : %errorlevel%"
+  - git push origin master
+  - git status
+  - git push
+  - git status
 
 artifacts:
   - name: Installer
