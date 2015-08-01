@@ -1,5 +1,5 @@
 /** @file
- * 
+ *
  * @ingroup implementationMaxExternalsGraph
  *
  * @brief j.midi.out# - Jamoma Graph external object for Max
@@ -14,7 +14,7 @@
  */
 
 
-#include "maxGraph.h"
+#include "MaxGraph.h"
 
 
 // Data Structure for this object
@@ -47,24 +47,24 @@ static t_class* sMidiOutClass;
 int C74_EXPORT main(void)
 {
 	t_class* c;
-	
-	TTGraphInit();	
+
+	TTGraphInit();
 	common_symbols_init();
-	
+
 	c = class_new("j.midi.out-", (method)MidiOutNew, (method)MidiOutFree, sizeof(MidiOut), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)MidiOutGetDeviceNames,	"getAvailableDeviceNames",	0);
 	class_addmethod(c, (method)MaxGraphReset,			"graph.reset",				A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,			"graph.setup",				A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphConnect,			"graph.connect",			A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxGraphDrop,			"graph.drop",				A_CANT, 0);
  	class_addmethod(c, (method)MaxGraphObject,			"graph.object",				A_CANT, 0);
-	class_addmethod(c, (method)MidiOutAssist,			"assist",					A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,		"dumpout",					A_CANT, 0);  
-	
+	class_addmethod(c, (method)MidiOutAssist,			"assist",					A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,		"dumpout",					A_CANT, 0);
+
 	CLASS_ATTR_SYM(c,		"device",		0,		MidiOut,	obj);
 	CLASS_ATTR_ACCESSORS(c,	"device",		MidiOutGetDevice,		MidiOutSetDevice);
-	
+
 	class_register(_sym_box, c);
 	sMidiOutClass = c;
 	return 0;
@@ -79,12 +79,12 @@ MidiOutPtr MidiOutNew(t_symbol* msg, long argc, t_atom* argv)
     MidiOutPtr	self;
 	TTValue		v;
 	TTErr		err;
-	
+
     self = MidiOutPtr(object_alloc(sMidiOutClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
-		
+
 		v.resize(2);
 		v[0] = "midi.out";
 		v[1] = 1;
@@ -94,7 +94,7 @@ MidiOutPtr MidiOutNew(t_symbol* msg, long argc, t_atom* argv)
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
-		
+
 		attr_args_process(self, argc, argv);
 	}
 	return self;
@@ -115,7 +115,7 @@ void MidiOutFree(MidiOutPtr self)
 void MidiOutAssist(MidiOutPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy (dst, "dictionary input and control messages");		
+		strcpy (dst, "dictionary input and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");
@@ -132,12 +132,12 @@ void MidiOutGetDeviceNames(MidiOutPtr self)
 	long	ac;
 	t_atom*		ap;
 	TTSymbol	name;
-	
+
 	err = self->graphObject->mKernel.send(TT("getAvailableDeviceNames"), none, v);
 	if (!err) {
 		ac = v.size();
 		ap = new t_atom[ac];
-		
+
 		for (long i=0; i<ac; i++) {
 			name = v[i];
 			atom_setsym(ap+i, gensym((char*)name.c_str()));
@@ -162,12 +162,12 @@ t_max_err MidiOutGetDevice(MidiOutPtr self, void* attr, long* argc, t_atom** arg
 {
 	TTValue		v;
 	TTSymbol	s;
-	
+
 	self->graphObject->mKernel.get(TT("device"), v);
 	s = v[0];
 	if (!s)
 		return MAX_ERR_GENERIC;
-	
+
 	*argc = 1;
 	if (!(*argv)) // otherwise use memory passed in
 		*argv = (t_atom *)sysmem_newptr(sizeof(t_atom));

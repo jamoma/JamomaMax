@@ -1,5 +1,5 @@
 /** @file
- * 
+ *
  * @ingroup implementationMaxExternalsGraph
  *
  * @brief j.pack# - External object for Max/MSP to bring Max values into a Jamoma Graph.
@@ -14,7 +14,7 @@
  */
 
 
-#include "maxGraph.h"
+#include "MaxGraph.h"
 #include "TTGraphInput.h"
 
 
@@ -58,28 +58,28 @@ static t_class* sPackClass;
 int C74_EXPORT main(void)
 {
 	t_class* c;
-	
-	TTGraphInit();	
+
+	TTGraphInit();
 	common_symbols_init();
-	
+
 	c = class_new("j.pack-", (method)PackNew, (method)PackFree, sizeof(Pack), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)PackInt,				"int",				A_LONG, 0);
 	class_addmethod(c, (method)PackFloat,			"float",			A_LONG, 0);
 	class_addmethod(c, (method)PackList,			"list",				A_GIMME, 0);
 	class_addmethod(c, (method)PackAnything,		"anything",			A_GIMME, 0);
 	class_addmethod(c, (method)PackMessage,			"message",			A_GIMME, 0);
 	class_addmethod(c, (method)PackAttribute,		"attribute",		A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphDrop,		"graph.drop",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphObject,		"graph.object",		A_CANT, 0);
 
- 	class_addmethod(c, (method)PackNotify,			"notify",			A_CANT, 0); 
- 	class_addmethod(c, (method)PackAssist,			"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-		
+ 	class_addmethod(c, (method)PackNotify,			"notify",			A_CANT, 0);
+ 	class_addmethod(c, (method)PackAssist,			"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	class_register(_sym_box, c);
 	sPackClass = c;
 	return 0;
@@ -94,12 +94,12 @@ PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
     PackPtr	self;
 	TTValue	v;
 	TTErr	err;
-	
+
     self = PackPtr(object_alloc(sPackClass));
     if (self) {
     	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
-		
+
 		v.resize(2);
 		v[0] = "graph.input";
 		v[1] = 1;
@@ -110,13 +110,13 @@ PackPtr PackNew(t_symbol* msg, long argc, t_atom* argv)
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
-		
+
 		self->graphDictionary = new TTDictionary;
 		self->graphDictionary->setSchema(TT("none"));
 		self->graphDictionary->append(TT("outlet"), 0);
-		
+
 		attr_args_process(self, argc, argv);
-		
+
 		self->qelem = qelem_new(self, (method)PackQFn);
 
 		// PackStartTracking(self);
@@ -150,22 +150,22 @@ t_max_err PackNotify(PackPtr self, t_symbol* s, t_symbol* msg, t_object* sender,
 	}
 	else {
 		if (msg == _sym_free) {
-			t_object*	sourceBox;  
+			t_object*	sourceBox;
 			t_object*	sourceObject;
 			long		sourceOutlet;
-			t_object*	destBox;     
-			t_object*	destObject;  
-			long		destInlet;		
+			t_object*	destBox;
+			t_object*	destObject;
+			long		destInlet;
 
 			#ifdef DEBUG_NOTIFICATIONS
 			object_post(SELF, "patch line deleted");
 			#endif // DEBUG_NOTIFICATIONS
-			
+
 			// get boxes and inlets
 			sourceBox = jpatchline_get_box1(sender);
 			if (!sourceBox)
 				goto out;
-			
+
 			sourceObject = jbox_get_object(sourceBox);
 			sourceOutlet = jpatchline_get_outletnum(sender);
 			destBox = jpatchline_get_box2(sender);
@@ -173,13 +173,13 @@ t_max_err PackNotify(PackPtr self, t_symbol* s, t_symbol* msg, t_object* sender,
 				goto out;
 			destObject = jbox_get_object(destBox);
 			destInlet = jpatchline_get_inletnum(sender);
-			
-			// if both boxes are graph objects 
+
+			// if both boxes are graph objects
 			if ( zgetfn(sourceObject, gensym("graph.object")) && zgetfn(destObject, gensym("graph.object")) ) {
 				#ifdef DEBUG_NOTIFICATIONS
 				object_post(SELF, "deleting graph patchline!");
 				#endif // DEBUG_NOTIFICATIONS
-				
+
 				object_method(destObject, gensym("graph.drop"), destInlet, sourceObject, sourceOutlet);
 			}
 		out:
@@ -194,7 +194,7 @@ void PackIterateResetCallback(PackPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method graphResetMethod = zgetfn(obj, gensym("graph.reset"));
-	
+
 	if (graphResetMethod)
 		err = (t_max_err)graphResetMethod(obj);
 }
@@ -204,7 +204,7 @@ void PackIterateSetupCallback(PackPtr self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method graphSetupMethod = zgetfn(obj, gensym("graph.setup"));
-	
+
 	if (graphSetupMethod)
 		err = (t_max_err)graphSetupMethod(obj);
 }
@@ -214,18 +214,18 @@ void PackAttachToPatchlinesForPatcher(PackPtr self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);
-	
+
 	while (patchline) {
 		object_attach_byptr_register(self, patchline, _sym_nobox);
 		patchline = object_attr_getobj(patchline, _sym_nextline);
 	}
-	
+
 	while (box) {
 		t_symbol*	classname = jbox_get_maxclass(box);
-		
+
 		if (classname == _sym_jpatcher) {
 			t_object*	subpatcher = jbox_get_object(box);
-			
+
 			PackAttachToPatchlinesForPatcher(self, subpatcher);
 		}
 		box = jbox_get_nextobject(box);
@@ -237,13 +237,13 @@ void PackAttachToPatchlinesForPatcher(PackPtr self, t_object* patcher)
 void PackQFn(PackPtr self)
 {
 	t_atom result;
-	
+
 	#ifdef DEBUG_NOTIFICATIONS
 	object_post(SELF, "patcher dirtied");
 	#endif // DEBUG_NOTIFICATIONS
-	
+
 	object_method(self->patcher, gensym("iterate"), (method)PackIterateSetupCallback, self, PI_DEEP, &result);
-	
+
 	// attach to all of the patch cords so we will know if one is deleted
 	// we are not trying to detach first -- hopefully this is okay and multiple attachments will be filtered (?)
 	PackAttachToPatchlinesForPatcher(self, self->patcher);
@@ -258,7 +258,7 @@ void PackStartTracking(PackPtr self)
 	t_object*	patcherview = NULL;
 	t_max_err		err;
 	t_atom		result;
-	
+
 	// first find the top-level patcher
 	err = object_obex_lookup(self, gensym("#P"), &patcher);
 	parent = patcher;
@@ -266,22 +266,22 @@ void PackStartTracking(PackPtr self)
 		patcher = parent;
 		parent = object_attr_getobj(patcher, _sym_parentpatcher);
 	}
-	
+
 	// now iterate recursively from the top-level patcher down through all of the subpatchers
 	object_method(patcher, gensym("iterate"), (method)PackIterateResetCallback, self, PI_DEEP, &result);
 	object_method(patcher, gensym("iterate"), (method)PackIterateSetupCallback, self, PI_DEEP, &result);
-	
-	
+
+
 	// now let's attach to the patcherview to get notifications about any further changes to the patch cords
 	// the patcher 'dirty' attribute is not modified for each change, but the patcherview 'dirty' attribute is
 	if (!self->patcherview) {
 		patcherview = jpatcher_get_firstview(patcher);
 		self->patcherview = patcherview;
 		self->patcher = patcher;
-		object_attach_byptr_register(self, patcherview, _sym_nobox);			
+		object_attach_byptr_register(self, patcherview, _sym_nobox);
 	}
 
-	// now we want to go a step further and attach to all of the patch cords 
+	// now we want to go a step further and attach to all of the patch cords
 	// this is how we will know if one is deleted
 	PackAttachToPatchlinesForPatcher(self, self->patcher);
 }
@@ -294,7 +294,7 @@ void PackStartTracking(PackPtr self)
 void PackAssist(PackPtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy (dst, "multichannel input and control messages");		
+		strcpy (dst, "multichannel input and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel output");
@@ -317,7 +317,7 @@ void PackInt(PackPtr self, long value)
 void PackFloat(PackPtr self, double value)
 {
 	TTValue v = value;
-	
+
 	self->graphDictionary->setSchema(TT("number"));
 	self->graphDictionary->setValue(v);
 	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
@@ -327,7 +327,7 @@ void PackFloat(PackPtr self, double value)
 void PackList(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
-	
+
 	v.resize(ac);
 	for (int i=0; i<ac; i++) {
 		switch (atom_gettype(ap+i)) {
@@ -353,7 +353,7 @@ void PackList(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 void PackAnything(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
-	
+
 	v.resize(ac+1);
 	if (ac > 0) {
 		self->graphDictionary->setSchema(TT("array"));
@@ -378,7 +378,7 @@ void PackAnything(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 		self->graphDictionary->setSchema(TT("symbol"));
 		v[0] = TT(s->s_name);
 	}
-	
+
 	self->graphDictionary->setValue(v);
 	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
@@ -387,16 +387,16 @@ void PackAnything(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 void PackMessage(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
-	
+
 	if (ac < 1)
 		return;
-	
+
 	self->graphDictionary->setSchema(TT("message"));
 	self->graphDictionary->append(TT("name"), TT(atom_getsym(ap)->s_name));
-	
+
 	v.resize(ac-1);
 	if (ac > 2) {
-		
+
 		for (int i=0; i < ac-1; i++) {
 			switch (atom_gettype(ap+i)) {
 				case A_LONG:
@@ -419,7 +419,7 @@ void PackMessage(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 		else if (atom_gettype(ap+1) == A_LONG || atom_gettype(ap+1) == A_FLOAT)
 			v[0] = atom_getfloat(ap+1);
 	}
-	
+
 	self->graphDictionary->setValue(v);
 	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }
@@ -428,16 +428,16 @@ void PackMessage(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 void PackAttribute(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 {
 	TTValue v;
-	
+
 	if (ac < 1)
 		return;
-	
+
 	self->graphDictionary->setSchema(TT("attribute"));
 	self->graphDictionary->append(TT("name"), TT(atom_getsym(ap)->s_name));
-	
+
 	v.resize(ac-1);
 	if (ac > 2) {
-		
+
 		for (int i=0; i < ac-1; i++) {
 			switch (atom_gettype(ap+i)) {
 				case A_LONG:
@@ -460,7 +460,7 @@ void PackAttribute(PackPtr self, t_symbol* s, long ac, t_atom* ap)
 		else if (atom_gettype(ap+1) == A_LONG || atom_gettype(ap+1) == A_FLOAT)
 			v[0] = atom_getfloat(ap+1);
 	}
-	
+
 	self->graphDictionary->setValue(v);
 	((TTGraphInput*)self->graphObject->mKernel.instance())->push(*self->graphDictionary);
 }

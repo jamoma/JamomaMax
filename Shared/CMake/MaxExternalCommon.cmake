@@ -4,8 +4,6 @@ if(APPLE)
 	include_directories("${FILE_H_DIR}")
 endif()
 
-addMaxSupport()
-
 add_library(${PROJECT_NAME} MODULE ${PROJECT_SRCS})
 if(APPLE)
 	set_property(TARGET ${PROJECT_NAME}
@@ -77,7 +75,7 @@ if("${PROJECT_NAME}" STREQUAL "j.loader")
 			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/extensions"
 			COMPONENT JamomaMax)
 else()
-	install(TARGETS ${PROJECT_NAME} 
+	install(TARGETS ${PROJECT_NAME}
 			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/externals"
 			COMPONENT JamomaMax)
 endif()

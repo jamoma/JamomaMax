@@ -14,16 +14,16 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 int C74_EXPORT main(void)
-{   
+{
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	TTValue								value(0);
 	MaxAudioGraphWrappedClassPtr		c = NULL;
-	
+
 	TTAudioGraphInit();
-	
+
 	wrapAsMaxAudioGraph(TT("average"), "j.average=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "absolute bipolar rms");
 

@@ -3,8 +3,6 @@ project(JamomaMax)
 
 add_definitions(-DJAMOMA_EXPORTS)
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../Shared/CMake/addMaxSupport.cmake)
-
 if ( APPLE )
 	#FIND_LIBRARY(CARBON_LIBRARY CarbonCore)
 	#MESSAGE(STATUS "  Found CarbonCore ${CARBON_LIBRARY}")
@@ -59,7 +57,6 @@ endif()
 
 ## Setup of the library ##
 
-addMaxsupport()
 # Dynamic
 add_library(${PROJECT_NAME}
 			SHARED
@@ -125,12 +122,12 @@ if(APPLE AND STATIC_TESTING)
 	set_property(TARGET ${PROJECT_NAME}-i386-static
 				 PROPERTY OSX_ARCHITECTURES i386)
 	setupJamomaLibraryProperties(${PROJECT_NAME}-i386-static)
-			
-	# x86_64	
+
+	# x86_64
 	add_library(${PROJECT_NAME}-x86_64-static
 				STATIC
 				${PROJECT_SRCS} ${PROJECT_HDRS})
-				
+
 	set_property(TARGET ${PROJECT_NAME}-x86_64-static
 				 PROPERTY OSX_ARCHITECTURES x86_64)
 	setupJamomaLibraryProperties(${PROJECT_NAME}-x86_64-static)
@@ -141,17 +138,21 @@ install(TARGETS ${PROJECT_NAME}
 		COMPONENT JamomaMax)
 
 
-## 
+##
 
 if(APPLE)
 	message("Linking with: ${OSX_FRAMEWORKS}")
 	target_link_libraries(${PROJECT_NAME} ${OSX_FRAMEWORKS})
-	
+
 	FIND_LIBRARY(CARBON_LIB Carbon)
 #	FIND_LIBRARY(CARBON_LIB CarbonCore)
 	SET(CARBON_LIB ${CARBON_LIB})
 	target_link_libraries(${PROJECT_NAME} ${CARBON_LIB})
 endif()
+
+message("MaxAPI_LIB ${MaxAPI_LIB}")
+message("MaxAudio_LIB ${MaxAudio_LIB}")
+message("Jitter_LIB ${Jitter_LIB}")
 
 target_link_libraries(${PROJECT_NAME} ${MaxAPI_LIB})
 target_link_libraries(${PROJECT_NAME} ${MaxAudio_LIB})

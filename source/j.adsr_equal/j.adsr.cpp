@@ -14,25 +14,25 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 int C74_EXPORT main(void)
 {
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	//	TTValue								value(0);
 	MaxAudioGraphWrappedClassPtr			c = NULL;
-	
+
 	TTAudioGraphInit();
-	
+
 	options->append(TT("generator"), YES);
-	
+
 	options->append(TT("userCanSetNumChannels"), YES);
-	
+
 	wrapAsMaxAudioGraph(TT("adsr"), "j.adsr=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "exponential hybrid linear");
 
 	wrapAsMaxAudioGraph(TT("adsr"), "adsr=", &c, options);
 	CLASS_ATTR_ENUM(c->maxClass, "mode", 0, "exponential hybrid linear");
-	
+
 	return 0;
 }

@@ -14,7 +14,7 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 
 int C74_EXPORT main(void)
@@ -27,6 +27,6 @@ int C74_EXPORT main(void)
 	options->append(TT("userCanSetNumChannels"), NO);
 	wrapAsMaxAudioGraph(TT("audio.offset"), "j.offset=", NULL, options);
 	return wrapAsMaxAudioGraph(TT("audio.offset"), "offset=", NULL, options);
-	
+
 }
 

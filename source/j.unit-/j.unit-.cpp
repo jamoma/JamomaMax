@@ -1,5 +1,5 @@
 /** @file
- * 
+ *
  * @ingroup implementationMaxExternalsGraph
  *
  * @brief j.unit- - Max external for Jamoma Graph that converts values from one kind of unit to another kind of unit
@@ -14,7 +14,7 @@
  */
 
 
-#include "maxGraph.h"
+#include "MaxGraph.h"
 
 
 // Data Structure for this object
@@ -50,30 +50,30 @@ static t_class* sDataspaceClass;
 int C74_EXPORT main(void)
 {
 	t_class* c;
-	
-	TTGraphInit();	
+
+	TTGraphInit();
 	common_symbols_init();
-	
+
 	c = class_new("j.unit-", (method)DataspaceNew, (method)DataspaceFree, sizeof(Dataspace), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)MaxGraphReset,		"graph.reset",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphSetup,		"graph.setup",		A_CANT, 0);
 	class_addmethod(c, (method)MaxGraphConnect,		"graph.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxGraphDrop,		"graph.drop",		A_CANT, 0);
  	class_addmethod(c, (method)MaxGraphObject,		"graph.object",		A_CANT, 0);
 
-	class_addmethod(c, (method)DataspaceAssist,		"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-	
+	class_addmethod(c, (method)DataspaceAssist,		"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	CLASS_ATTR_SYM(c,		"dataspace",	0,		Dataspace,	attrDataspace);
 	CLASS_ATTR_ACCESSORS(c,	"dataspace",	NULL,	DataspaceSetDataspace);
-	
+
 	CLASS_ATTR_SYM(c,		"input",		0,		Dataspace,	attrInput);
 	CLASS_ATTR_ACCESSORS(c,	"input",		DataspaceGetInput,	DataspaceSetInput);
-	
+
 	CLASS_ATTR_SYM(c,		"output",		0,		Dataspace,	attrOutput);
 	CLASS_ATTR_ACCESSORS(c,	"output",		DataspaceGetInput,	DataspaceSetOutput);
-	
+
 	class_register(_sym_box, c);
 	sDataspaceClass = c;
 	return 0;
@@ -88,23 +88,23 @@ DataspacePtr DataspaceNew(t_symbol* msg, long argc, t_atom* argv)
     DataspacePtr	self;
 	TTValue			v;
 	TTErr			err;
-	
+
     self = DataspacePtr(object_alloc(sDataspaceClass));
     if (self) {
-    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout	
+    	object_obex_store((void*)self, _sym_dumpout, (t_object*)outlet_new(self, NULL));	// dumpout
 		self->graphOutlets[0] = outlet_new(self, "graph.connect");
 		self->attrDataspace = _sym_none;
-		
+
 		v.resize(2);
 		v[0] = "dataspace";
 		v[1] = 1;
-		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);		
+		err = TTObjectBaseInstantiate(TT("graph.object"), (TTObjectBasePtr*)&self->graphObject, v);
 
 		if (!self->graphObject->mKernel.valid()) {
 			object_error(SELF, "cannot load Jamoma object");
 			return NULL;
 		}
-		
+
 		attr_args_process(self, argc, argv);
 	}
 	return self;
@@ -125,7 +125,7 @@ void DataspaceFree(DataspacePtr self)
 void DataspaceAssist(DataspacePtr self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy (dst, "dictionary input and control messages");		
+		strcpy (dst, "dictionary input and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "dictionary output");
@@ -161,7 +161,7 @@ t_max_err DataspaceGetInput(DataspacePtr self, void* attr, long* argc, t_atom** 
 {
 	TTValue		v;
 	TTSymbol	s;
-	
+
 	if (*argc && *argv) {
 		self->graphObject->mKernel.get(TT("inputUnit"), v);
 		s = v[0];
@@ -185,7 +185,7 @@ t_max_err DataspaceGetOutput(DataspacePtr self, void* attr, long* argc, t_atom**
 {
 	TTValue		v;
 	TTSymbol	s;
-	
+
 	if (*argc && *argv) {
 		self->graphObject->mKernel.get(TT("outputUnit"), v);
 		s = v[0];

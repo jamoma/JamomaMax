@@ -14,7 +14,7 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 int C74_EXPORT main(void)
 {
@@ -23,12 +23,12 @@ int C74_EXPORT main(void)
 	MaxAudioGraphWrappedClassPtr		c = NULL;
 
 	TTAudioGraphInit();
-    
+
 	options->append(TT("wrapperDefinesNumOutlets"), value);
 //	wrapAsMaxAudioGraph(TT("hilbert.9"), "j.hilbert=", &c, options);
 	wrapAsMaxAudioGraph(TT("hilbert.linear.33"), "j.hilbert=", &c, options);
 	wrapAsMaxAudioGraph(TT("hilbert.linear.33"), "hilbert=", &c, options);
-		
+
 	return 0;
 }
 

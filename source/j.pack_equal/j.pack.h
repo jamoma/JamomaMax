@@ -14,7 +14,7 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 /** Data Structure for the j.pack= Max object.
  */

@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 project(JamomaMax)
 
+SET(JAMOMAMAX_PATH ${CMAKE_CURRENT_SOURCE_DIR})
+include(${CMAKE_CURRENT_SOURCE_DIR}/Shared/CMake/addMaxSupport.cmake)
+SET(BUILD_JAMOMAMAX True)
 ### GetGitDescription ###
 # TODO put this in a module
 # I tried around a09620ce2717e10cc0a624c805146727996a4266
