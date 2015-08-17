@@ -103,9 +103,6 @@ void WrappedExplorerClass_new(TTPtr self, long argc, t_atom *argv)
 	
 	// create the explorer
 	jamoma_explorer_create((t_object*)x, x->wrappedObject);
-    
-    // sort by priority by default
-    x->wrappedObject.set("sort", kTTSym_priority);
 	
 	// read first argument to know if the explorer handles a namespace
 	if (attrstart && argv) {
