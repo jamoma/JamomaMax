@@ -817,7 +817,7 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 	o.attributes(v);
 	for (i = 0; i < v.size(); i++) {
 		TTAttributePtr	attr = NULL;
-		t_symbol		*maxType = _sym_long;
+		t_symbol		*maxType = _sym_atom;
 		
 		TTName = v[i];
         
