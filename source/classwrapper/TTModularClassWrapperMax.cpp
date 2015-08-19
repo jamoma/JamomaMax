@@ -902,8 +902,8 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol 
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTValue			baton, v, out;
-	TTAddress       dataAddress;
-    TTSymbol        dataName;
+	TTAddress       dataAddress, dataRelativeAddress;
+    TTNodePtr       dataNode;
     
 	returnedData = TTObject(kTTSym_Data, service);
     
@@ -917,14 +917,16 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol 
     v = TTValue(dataAddress, returnedData, context);
 	out = JamomaApplication.send("ObjectRegister", v);
 	
+    // retreive relative effective address
 	dataAddress = out[0];
-	dataName = dataAddress.getNameInstance();
+    dataNode = TTNodePtr((TTPtr)out[1]);
+    dataNode->getAddress(dataRelativeAddress, address);
     
 	// absolute registration case : set the address in second position (see in unregister method)
 	v = TTValue(returnedData, dataAddress);
-	x->internals->append(dataName, v);
+	x->internals->append(dataRelativeAddress, v);
 	
-	JamomaDebug object_post((t_object*)x, "makes internal \"%s\" %s at : %s", dataName.c_str(), service.c_str(), dataAddress.c_str());
+	/*JamomaDebug*/ object_post((t_object*)x, "makes internal \"%s\" %s at : %s", dataRelativeAddress.c_str(), service.c_str(), dataAddress.c_str());
 	
 	return kTTErrNone;
 }
