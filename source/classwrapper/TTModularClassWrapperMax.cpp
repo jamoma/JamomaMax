@@ -926,7 +926,7 @@ TTErr makeInternals_data(TTPtr self, TTAddress address, TTSymbol name, t_symbol 
 	v = TTValue(returnedData, dataAddress);
 	x->internals->append(dataRelativeAddress, v);
 	
-	/*JamomaDebug*/ object_post((t_object*)x, "makes internal \"%s\" %s at : %s", dataRelativeAddress.c_str(), service.c_str(), dataAddress.c_str());
+	JamomaDebug object_post((t_object*)x, "makes internal \"%s\" %s at : %s", dataRelativeAddress.c_str(), service.c_str(), dataAddress.c_str());
 	
 	return kTTErrNone;
 }
