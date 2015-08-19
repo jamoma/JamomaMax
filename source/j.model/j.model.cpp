@@ -161,7 +161,7 @@ void WrappedContainerClass_free(TTPtr self)
         modelAddress = EXTRA->containerAddress.appendAddress(TTAddress("model"));
         
         // remove the model node
-        JamomaApplication.send("ObjectUnregister", modelAddress, none);
+        MaxApplication.send("ObjectUnregister", modelAddress, none);
     }
     delete EXTRA->modelInfo;
     
@@ -170,7 +170,7 @@ void WrappedContainerClass_free(TTPtr self)
         presetAddress = EXTRA->containerAddress.appendAddress(TTAddress("preset"));
         
         // remove the preset node
-         JamomaApplication.send("ObjectUnregister", presetAddress, none);
+         MaxApplication.send("ObjectUnregister", presetAddress, none);
     }
     delete EXTRA->presetManager;
     
@@ -235,7 +235,7 @@ void model_subscribe(TTPtr self)
             adrs = returnedAddress.appendAddress(TTAddress("model"));
             args = TTValue(adrs, *EXTRA->modelInfo, x->patcherPtr);
             
-            if (JamomaApplication.send("ObjectRegister", args, none))
+            if (MaxApplication.send("ObjectRegister", args, none))
                 object_error((t_object*)x, "can't subscribe model object");
             
             // In model patcher : set model:address with the model address

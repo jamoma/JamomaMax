@@ -18,14 +18,13 @@
 // statics and globals
 static long                 initialized = false;			///< Global variabel indicating whether Jamoma has been initiated or not.
 static t_hashtab            *hash_modules = NULL;			///< A hashtab of all modules (j.hubs) currently instantiated
-//t_object                  *obj_jamoma_clock = NULL;		// there is only one master clock for the whole system
-//t_object                  *obj_jamoma_scheduler = NULL;	// a shared global instance of the scheduler class (there may be others too)
+
 bool                        max5 = false;					///< Is Jamoma currently running in Max 5 or newer?
 bool                        max6 = false;					///< Is Jamoma currently running in Max 6 or newer?
 
-TTSymbol					kTTSym_Jamoma;
-TTObject                    JamomaApplicationManager;
-TTObject                    JamomaApplication;
+TTSymbol					kTTSym_Max;
+TTObject                    MaxApplicationManager;
+TTObject                    MaxApplication;
 
 TTRegex*					ttRegexForJmod = NULL;
 TTRegex*					ttRegexForJcom = NULL;
@@ -51,7 +50,6 @@ void jamoma_init(void)
     short		outvol = 0;
     t_fourcc	outtype, filetype = 'TEXT';
     char        name[MAX_PATH_CHARS];
-    //char 		fullpath[MAX_PATH_CHARS];
     
 	if (!initialized) {
         
@@ -75,21 +73,21 @@ void jamoma_init(void)
         TTScoreInit();
 #endif
         
-        // prepare a symbol for Jamoma
-        kTTSym_Jamoma = TTSymbol(JAMOMA);
+        // Prepare a symbol for Max application
+        kTTSym_Max = TTSymbol("Max");
         
         // Create an application manager
-        JamomaApplicationManager = TTObject("ApplicationManager");
+        MaxApplicationManager = TTObject("ApplicationManager");
         
-        // Create a local application called "Jamoma" and get it back
-        err = JamomaApplicationManager.send("ApplicationInstantiateLocal", kTTSym_Jamoma, out);
+        // Create a local application called "Max" and get it back
+        err = MaxApplicationManager.send("ApplicationInstantiateLocal", kTTSym_Max, out);
         
         if (err) {
             TTLogError("Error : can't create Jamoma application \n");
             return;
         }
         else
-            JamomaApplication = out[0];
+            MaxApplication = out[0];
         
         // Edit the path to the JamomaConfiguration.xml file
         strncpy_zero(name, TTFoundationBinaryPath.data(), TTFoundationBinaryPath.size()-6);
@@ -101,9 +99,9 @@ void jamoma_init(void)
         if (locatefile_extended(name, &outvol, &outtype, &filetype, 1))
             return error("Jamoma not loaded : can't find %s", JamomaConfigurationFilePath.data());
         
-        // JamomaApplication have to read JamomaConfiguration.xml
+        // MaxApplication have to read JamomaConfiguration.xml
         TTObject anXmlHandler(kTTSym_XmlHandler);
-        anXmlHandler.set(kTTSym_object, JamomaApplication);
+        anXmlHandler.set(kTTSym_object, MaxApplication);
         v = TTSymbol(JamomaConfigurationFilePath);
         anXmlHandler.send(kTTSym_Read, v, out);
 

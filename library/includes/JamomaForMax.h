@@ -82,8 +82,6 @@
 #include "JamomaSymbols.h"
 #include "JamomaModularForMax.h"
 
-
-#define JAMOMA "Jamoma"
 #define JAMOMA_UNIT_HEIGHT 35.0
 #define JAMOMA_UNIT_WIDTH 150.0
 #define JAMOMA_MENU_FONT "Arial"
