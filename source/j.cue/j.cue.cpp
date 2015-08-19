@@ -52,8 +52,6 @@ void		cue_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void		cue_write_again(TTPtr self);
 void		cue_dowrite_again(TTPtr self);
 
-void		cue_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
-
 void		cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv);
 void		cue_edclose(TTPtr self, char **text, long size);
 void		cue_doedit(TTPtr self);
@@ -415,43 +413,6 @@ void cue_dowrite_again(TTPtr self)
 				object_obex_dumpout(self, _sym_write, 0, NULL);
 			else
 				object_obex_dumpout(self, _sym_error, 0, NULL);
-		}
-	}
-}
-
-void cue_dorecall(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
-{
-	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
-	TTValue			v;
-	TTNodePtr		contextNode;
-	TTObject        o;
-	TTBoolean		initialized;
-	
-	if (argc && argv) {
-		if (atom_gettype(argv) == A_SYM) {
-			
-			x->wrappedObject.send(kTTSym_Recall, TTSymbol(atom_getsym(argv)));
-		}
-		
-		// Check Context Node
-		if (x->subscriberObject.valid()) {
-			
-			x->subscriberObject.get("contextNode", v);
-			contextNode = TTNodePtr((TTPtr)v[0]);
-			
-			// If it is a none initialized Container : initialize it
-            o = contextNode->getObject();
-			if (o.valid()) {
-                
-				if (o.name() == kTTSym_Container) {
-					
-					o.get(kTTSym_initialized, v);
-					initialized = v[0];
-					
-					if (!initialized)
-						o.send(kTTSym_Init);
-				}
-            }
 		}
 	}
 }
