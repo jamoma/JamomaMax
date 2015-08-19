@@ -451,24 +451,29 @@ TTErr wrappedModularClass_sendMessage(TTPtr self, t_symbol *s, long argc, const 
     TTPtr           ptr;
 	
 	m_err = hashtab_lookup(x->wrappedClassDefinition->maxNamesToTTNames, s, (t_object**)&ptr);
-	if (!m_err) {
-		
+	if (!m_err)
+    {
 		// Is it a message of the wrapped object ?
         ttName = TTSymbol(ptr);
 		err = selectedObject->findMessage(ttName, &aMessage);
-		if (!err) {
+		if (!err)
+        {
 			// send message
-			if (argc && argv) {
-				
+			if (argc && argv)
+            {
 				jamoma_ttvalue_from_Atom(inputValue, _sym_nothing, argc, argv);
 				selectedObject->sendMessage(ttName, inputValue, outputValue);
 				
-				jamoma_ttvalue_to_Atom(outputValue, &ac, &av);
+                inputValue.append(outputValue);
+				jamoma_ttvalue_to_Atom(inputValue, &ac, &av);
 				object_obex_dumpout(self, s, ac, av);
 				sysmem_freeptr(av);
 			}
 			else
+            {
 				selectedObject->sendMessage(ttName);
+                object_obex_dumpout(self, s, ac, av);
+            }
 		}
 		
 		return err;
