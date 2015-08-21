@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 5,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 349.0, 109.0, 1228.0, 810.0 ],
+		"rect" : [ 296.0, 168.0, 1228.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -52,7 +52,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -196,7 +196,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 5,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -493,7 +493,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 5,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -706,7 +706,7 @@
 															"major" : 7,
 															"minor" : 0,
 															"revision" : 5,
-															"architecture" : "x86",
+															"architecture" : "x64",
 															"modernui" : 1
 														}
 ,
@@ -1249,6 +1249,7 @@
 							}
 , 							{
 								"box" : 								{
+									"addpoints_with_curve" : [ 0.189716, 0.693182, 0, 0.0, 0.593972, 0.159091, 0, -0.895006, 0.849291, 0.0, 0, -0.65 ],
 									"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 									"domain" : 1.0,
 									"gridcolor" : [ 0.5, 0.5, 0.5, 0.5 ],
@@ -1313,7 +1314,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 5,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -1881,7 +1882,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 5,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -1960,7 +1961,7 @@
 															"major" : 7,
 															"minor" : 0,
 															"revision" : 5,
-															"architecture" : "x86",
+															"architecture" : "x64",
 															"modernui" : 1
 														}
 ,
@@ -2467,6 +2468,7 @@
 							}
 , 							{
 								"box" : 								{
+									"addpoints_with_curve" : [ 0.0, 0.0, 0, 0.0, 0.281915, 0.573864, 0, 0.0, 0.787234, 0.289773, 0, 0.0, 1.0, 1.0, 0, 0.0 ],
 									"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 									"domain" : 1.0,
 									"gridcolor" : [ 0.5, 0.5, 0.5, 0.5 ],
@@ -2736,10 +2738,6 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -2750,6 +2748,10 @@
 										"autogradient" : 0
 									}
 ,
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -2790,7 +2792,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -2864,7 +2866,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 425.0, 624.0, 72.0, 22.0 ],
 									"style" : "",
-									"text" : "0.098963"
+									"text" : "0.321111"
 								}
 
 							}
@@ -2929,7 +2931,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 471.75, 348.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "604"
+									"text" : "1088"
 								}
 
 							}
@@ -3285,10 +3287,6 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -3299,6 +3297,10 @@
 										"autogradient" : 0
 									}
 ,
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -3339,7 +3341,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -4128,10 +4130,6 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -4142,6 +4140,10 @@
 										"autogradient" : 0
 									}
 ,
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -4182,7 +4184,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -4246,11 +4248,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 349.0, 135.0, 1228.0, 784.0 ],
+						"rect" : [ 296.0, 194.0, 1228.0, 784.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -4387,7 +4389,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 217.0, 721.0, 232.0, 22.0 ],
 									"style" : "",
-									"text" : "24.207462",
+									"text" : "100.",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
@@ -4401,6 +4403,7 @@
 									"outlettype" : [ "", "" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 297.0, 175.5, 221.0, 69.5 ],
+									"size" : 5,
 									"style" : ""
 								}
 
@@ -4478,7 +4481,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 5,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -4745,6 +4748,7 @@
 									"patching_rect" : [ 217.0, 625.5, 256.0, 89.0 ],
 									"setminmax" : [ -40.0, 150.0 ],
 									"setstyle" : 5,
+									"size" : 5,
 									"style" : ""
 								}
 
@@ -4974,10 +4978,6 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -4988,6 +4988,10 @@
 										"autogradient" : 0
 									}
 ,
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -5044,7 +5048,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -5513,10 +5517,6 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
 										"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -5527,6 +5527,10 @@
 										"autogradient" : 0
 									}
 ,
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
+									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -5557,8 +5561,8 @@
 		"lines" : [  ],
 		"parameters" : 		{
 			"obj-59::obj-25" : [ "toggle", "toggle", 0 ],
-			"obj-59::obj-179::obj-117" : [ "live.menu[5]", "live.menu", 0 ],
-			"obj-3::obj-25" : [ "toggle[1]", "toggle", 0 ]
+			"obj-3::obj-25" : [ "toggle[1]", "toggle", 0 ],
+			"obj-59::obj-179::obj-117" : [ "live.menu[5]", "live.menu", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -5569,7 +5573,7 @@
 			}
 , 			{
 				"name" : "j.function_edit.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/components/data/function_edit",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/components/widgets/function_edit",
 				"type" : "JSON",
 				"implicit" : 1
 			}
