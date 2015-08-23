@@ -130,13 +130,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.class.matrix.route.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/class.matrix.route",
-				"patcherrelativepath" : "../../../components/class.matrix.route",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.passmatrixinfo%.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/passmatrixinfo%",
 				"patcherrelativepath" : "../../../components/passmatrixinfo%",
