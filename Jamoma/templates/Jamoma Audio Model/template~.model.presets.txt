@@ -3,7 +3,7 @@
 - description "something about this preset"
 # ###########################################
 # 
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 thisParameter 1.000000
 # 

@@ -3,7 +3,7 @@
 - preset "default"
 # "edit a comment"
 
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 delay/max 10000
 delay/left 1666.666626 3809.523926 5714.285645 7857.143066 10000.000000
