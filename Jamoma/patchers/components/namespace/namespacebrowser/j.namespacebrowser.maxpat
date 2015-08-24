@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
-			"architecture" : "x64",
+			"revision" : 6,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -95,8 +95,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -174,7 +174,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::comment::hidden",
-									"varname" : "u598001853"
+									"varname" : "u232009509"
 								}
 
 							}
@@ -195,7 +195,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::menu::hidden",
-									"varname" : "u689001855"
+									"varname" : "u786009511"
 								}
 
 							}
@@ -319,7 +319,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"border" : 0,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ] ],
@@ -327,10 +327,10 @@
 					"colwidth" : 367,
 					"fgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"fontface" : 0,
-					"fontname" : "Arial",
+					"fontname" : "Lato Regular",
 					"fontsize" : 12.0,
 					"gridlinecolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"hcellcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"hcellcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 					"headercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"hidden" : 1,
 					"hscroll" : 0,
@@ -345,10 +345,10 @@
 					"presentation_rect" : [ 3.0, 21.0, 371.0, 765.0 ],
 					"rowheight" : 20,
 					"rows" : 1,
-					"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"sccolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"selmode" : 3,
-					"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
-					"stcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+					"sgcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
+					"stcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
 					"varname" : "menu"
 				}
 
@@ -385,7 +385,8 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
+					"fontface" : 3,
+					"fontname" : "Lato Heavy",
 					"fontsize" : 12.0,
 					"hidden" : 1,
 					"id" : "obj-31",
@@ -393,12 +394,12 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ -421.0, 514.5, 150.0, 33.0 ],
+					"patching_rect" : [ -421.0, 514.5, 143.0, 35.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 11.0, 0.0, 242.0, 20.0 ],
+					"presentation_rect" : [ 68.0, 0.0, 232.0, 21.0 ],
 					"style" : "",
-					"text" : "browse or type to search manually",
-					"textcolor" : [ 0.715557, 0.715557, 0.715557, 1.0 ],
+					"text" : "(Browse or type to search manually)",
+					"textcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"varname" : "comment"
 				}
 
@@ -420,19 +421,18 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"border" : 0,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ] ],
 					"cols" : 1,
 					"colwidth" : 500,
-					"fgcolor" : [ 255.0, 255.0, 255.0, 255.0 ],
+					"fgcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
 					"fontface" : 0,
-					"fontname" : "Arial",
+					"fontname" : "Lato Regular",
 					"fontsize" : 12.0,
 					"gridlinecolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"hcellcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"headercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"hcellcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 					"hscroll" : 0,
 					"id" : "obj-14",
 					"maxclass" : "jit.cellblock",
@@ -443,28 +443,29 @@
 					"patching_rect" : [ -1091.0, 231.0, 188.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 190.0, 21.0, 184.0, 765.0 ],
-					"rows" : 9,
-					"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"rows" : 4,
+					"sccolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"selmode" : 3,
-					"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
-					"stcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
+					"sgcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
+					"stcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
+					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"border" : 0,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ] ],
 					"cols" : 1,
 					"colwidth" : 500,
-					"fgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"fgcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
 					"fontface" : 0,
-					"fontname" : "Arial",
+					"fontname" : "Lato Regular",
 					"fontsize" : 12.0,
 					"gridlinecolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"hcellcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"hcellcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 					"headercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"hscroll" : 0,
 					"id" : "obj-6",
@@ -476,11 +477,12 @@
 					"patching_rect" : [ -1365.0, 231.0, 184.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 21.0, 187.0, 765.0 ],
-					"rows" : 19,
-					"sccolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"rows" : 6,
+					"sccolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"selmode" : 3,
-					"sgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
-					"stcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ]
+					"sgcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
+					"stcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
+					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 				}
 
 			}
@@ -529,8 +531,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -738,8 +740,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1334,8 +1336,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1864,8 +1866,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2078,8 +2080,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2342,9 +2344,9 @@
 					"presentation_rect" : [ 355.0, 0.0, 22.0, 20.0 ],
 					"style" : "",
 					"text" : "⨯",
-					"textcolor" : [ 0.602446, 0.602446, 0.602446, 1.0 ],
+					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
 					"textoncolor" : [ 0.673187, 0.673187, 0.673187, 1.0 ],
-					"textovercolor" : [ 0.501768, 0.501768, 0.501768, 1.0 ],
+					"textovercolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"usebgoncolor" : 1,
 					"usetextovercolor" : 1
 				}
@@ -2397,6 +2399,7 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.7, 0.7, 0.7, 1.0 ],
 					"border" : 1.0,
 					"id" : "obj-40",
 					"keymode" : 1,
@@ -2411,6 +2414,7 @@
 					"style" : "default",
 					"tabmode" : 0,
 					"text" : "none",
+					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
 					"varname" : "textedit"
 				}
 

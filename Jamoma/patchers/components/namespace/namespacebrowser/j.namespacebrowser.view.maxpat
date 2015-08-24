@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
-			"architecture" : "x64",
+			"revision" : 6,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 550.0, 79.0, 1096.0, 849.0 ],
+		"rect" : [ 1999.0, 70.0, 365.0, 26.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -99,8 +99,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -374,7 +374,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ -197.0, 497.0, 67.0, 21.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 550, 79, 1646, 928, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
 				}
@@ -574,7 +574,9 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"border" : 1.0,
+					"bordercolor" : [ 0.7, 0.7, 0.7, 1.0 ],
 					"hint" : "none",
 					"id" : "obj-8",
 					"keymode" : 1,
@@ -586,9 +588,11 @@
 					"patching_rect" : [ 574.0, 496.0, 163.0, 42.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 18.0, -1.0, 1262.0, 20.0 ],
+					"rounded" : 0.0,
 					"style" : "default",
 					"tabmode" : 0,
 					"text" : "none",
+					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
 					"varname" : "textEdit"
 				}
 
@@ -834,7 +838,7 @@
 				"box" : 				{
 					"align" : 0,
 					"annotation" : "Browse Jamoma namespace",
-					"bgcolor" : [ 0.851791, 0.851791, 0.851791, 1.0 ],
+					"bgcolor" : [ 0.7, 0.7, 0.7, 1.0 ],
 					"bgoncolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"fontsize" : 18.0,
 					"hint" : "Browse Jamoma namespace",
@@ -847,7 +851,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 13.0, 8.0, 25.0, 21.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -0.5, 0.0, 42.0, 20.0 ],
+					"presentation_rect" : [ -0.5, -1.0, 42.0, 20.0 ],
 					"rounded" : 8.0,
 					"style" : "",
 					"text" : "≣",
@@ -1287,24 +1291,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
