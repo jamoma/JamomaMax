@@ -138,6 +138,11 @@ void WrappedContainerClass_new(TTPtr self, long argc, t_atom *argv)
     
     EXTRA->attr_amenities->append(TTSymbol("all"), none);
     
+    EXTRA->dataspaceConverter = new TTObject("dataspace");
+    EXTRA->dataspaceConverter->set("dataspace", "gain");
+    EXTRA->dataspaceConverter->set("inputUnit", "dB");
+    EXTRA->dataspaceConverter->set("outputUnit", "linear");
+    
     // handle attribute args
 	attr_args_process(x, argc, argv);
 	
