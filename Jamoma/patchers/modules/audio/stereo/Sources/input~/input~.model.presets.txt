@@ -3,7 +3,7 @@
 - preset "default"
 # "edit a comment"
 source soundfile
-audio/gain 100.
+audio/gain 0.
 balance/mode FastMode
 balance/position 0.000000
 balance/shape EqualPower

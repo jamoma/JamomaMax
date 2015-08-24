@@ -2233,7 +2233,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2256,7 +2256,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2279,7 +2279,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2302,7 +2302,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2325,7 +2325,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
