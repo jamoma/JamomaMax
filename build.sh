@@ -99,8 +99,6 @@ else
 	JAMOMA_NUM_THREADS=1
 fi
 
-echo "DEBUG 1"
-
 mkdir -p build
 (
 	cd build
