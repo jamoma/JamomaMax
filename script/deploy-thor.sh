@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 set -v
 
@@ -54,9 +54,9 @@ else
 fi
 
 if [ "x${TRAVIS_OS_NAME}" = "xLinux" ]; then
-  ARCHIVE_NAME="JamomaMax-Windows-mingw-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="JamomaMax-Windows-mingw-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
 else
-  ARCHIVE_NAME="JamomaMax-OSX-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="JamomaMax-OSX-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
 fi
 
 cd ${TRAVIS_BUILD_DIR}/build
