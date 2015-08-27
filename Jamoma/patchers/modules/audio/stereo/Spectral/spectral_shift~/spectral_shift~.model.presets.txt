@@ -2,7 +2,7 @@
 - preset "default"
 # "edit a comment"
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -26,7 +26,7 @@ limiter/threshold 0.000000
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -49,7 +49,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -72,7 +72,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -95,7 +95,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -118,7 +118,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -141,7 +141,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -164,7 +164,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -187,7 +187,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 76.223800
 audio/mute 0
 feedback/gain -6.000000
@@ -210,7 +210,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 54.545500
 audio/mute 0
 feedback/gain -60.000000
@@ -233,7 +233,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 46.853100
 audio/mute 0
 feedback/gain -60.000000
@@ -256,7 +256,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 46.153800
 audio/mute 0
 feedback/gain -60.000000
@@ -279,7 +279,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 60.139900
 audio/mute 0
 feedback/gain -60.000000
@@ -302,7 +302,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 50.349700
 audio/mute 0
 feedback/gain -60.000000
@@ -325,7 +325,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 48.251700
 audio/mute 0
 feedback/gain -60.000000
@@ -348,7 +348,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 59.440600
 audio/mute 0
 feedback/gain -60.000000
@@ -371,7 +371,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 54.545500
 audio/mute 0
 feedback/gain -60.000000
@@ -394,7 +394,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 52.453300
 audio/mute 0
 feedback/gain -27.000000
@@ -417,7 +417,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 85.314700
 audio/mute 0
 feedback/gain -4.000000
@@ -440,7 +440,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 52.447600
 audio/mute 0
 feedback/gain -4.000000
@@ -463,7 +463,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 52.447600
 audio/mute 0
 feedback/gain -4.000000
@@ -486,7 +486,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 52.447600
 audio/mute 0
 feedback/gain -4.000000
@@ -509,7 +509,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 87.412600
 audio/mute 0
 feedback/gain -4.000000
@@ -532,7 +532,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 32.867100
 audio/mute 0
 feedback/gain -14.000000
@@ -555,7 +555,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 52.447600
 audio/mute 0
 feedback/gain -4.000000
@@ -578,7 +578,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 52.447600
 audio/mute 0
 feedback/gain 0.000000
@@ -601,7 +601,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 62.237800
 audio/mute 0
 feedback/gain -22.000000
@@ -624,7 +624,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 55.944100
 audio/mute 0
 feedback/gain -4.000000
@@ -647,7 +647,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 55.944100
 audio/mute 0
 feedback/gain -22.000000
@@ -670,7 +670,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 6.993000
 audio/mute 0
 feedback/gain -22.000000
@@ -693,7 +693,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 53.846200
 audio/mute 0
 feedback/gain -12.000000
@@ -716,7 +716,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 32.867100
 audio/mute 0
 feedback/gain -60.000000
@@ -739,7 +739,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 58.741300
 audio/mute 0
 feedback/gain -60.000000
@@ -762,7 +762,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -785,7 +785,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -808,7 +808,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -831,7 +831,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -854,7 +854,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -877,7 +877,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -900,7 +900,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -923,7 +923,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -946,7 +946,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 9.090900
 audio/mute 0
 feedback/gain -46.000000
@@ -969,7 +969,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 6.293700
 audio/mute 0
 feedback/gain -46.000000
@@ -992,7 +992,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 4.195800
 audio/mute 0
 feedback/gain -46.000000
@@ -1015,7 +1015,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 66.433600
 audio/mute 0
 feedback/gain 0.000000
@@ -1038,7 +1038,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 8.391600
 audio/mute 0
 feedback/gain -9.000000
@@ -1061,7 +1061,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 66.433600
 audio/mute 0
 feedback/gain -8.000000
@@ -1084,7 +1084,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 10.000000
 audio/mute 0
 feedback/gain -36.000000
@@ -1107,7 +1107,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 46.853100
 audio/mute 0
 feedback/gain -46.000000
@@ -1130,7 +1130,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 53.146900
 audio/mute 0
 feedback/gain -52.000000
@@ -1153,7 +1153,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 46.853100
 audio/mute 0
 feedback/gain -2.000000
@@ -1176,7 +1176,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 19.580400
 audio/mute 0
 feedback/gain -4.000000
@@ -1199,7 +1199,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 66.433600
 audio/mute 0
 feedback/gain 0.000000
@@ -1222,7 +1222,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 8.391600
 audio/mute 0
 feedback/gain -9.000000
@@ -1245,7 +1245,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 66.433600
 audio/mute 0
 feedback/gain -8.000000
@@ -1268,7 +1268,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 53.146900
 audio/mute 0
 feedback/gain -24.000000
@@ -1291,7 +1291,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1314,7 +1314,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1337,7 +1337,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1360,7 +1360,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -1383,7 +1383,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1406,7 +1406,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1429,7 +1429,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -15.000000
@@ -1452,7 +1452,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1475,7 +1475,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -15.000000
@@ -1498,7 +1498,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -9.000000
@@ -1521,7 +1521,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1544,7 +1544,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -1567,7 +1567,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -6.000000
@@ -1590,7 +1590,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -13.000000
@@ -1613,7 +1613,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -6.000000
@@ -1636,7 +1636,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1659,7 +1659,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1682,7 +1682,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -9.000000
@@ -1705,7 +1705,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1728,7 +1728,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -1751,7 +1751,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -6.000000
@@ -1774,7 +1774,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -13.000000
@@ -1797,7 +1797,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -6.000000
@@ -1820,7 +1820,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1843,7 +1843,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1866,7 +1866,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1889,7 +1889,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1912,7 +1912,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -1935,7 +1935,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1958,7 +1958,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -1981,7 +1981,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -15.000000
@@ -2004,7 +2004,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain 0.000000
@@ -2027,7 +2027,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -15.000000
@@ -2050,7 +2050,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2073,7 +2073,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2096,7 +2096,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2119,7 +2119,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2142,7 +2142,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2165,7 +2165,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2188,7 +2188,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2211,7 +2211,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 76.223800
 audio/mute 0
 feedback/gain -6.000000
@@ -2233,7 +2233,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2256,7 +2256,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2279,7 +2279,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2302,7 +2302,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000
@@ -2325,7 +2325,7 @@ limiter/dcblocker/active 1
 # ###########################################
 # 
 audio/bypass 0
-audio/gain 95.000000
+audio/gai -2.000000
 audio/mix 100.000000
 audio/mute 0
 feedback/gain -60.000000

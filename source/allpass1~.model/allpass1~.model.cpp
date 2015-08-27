@@ -115,7 +115,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		x->model.set(kTTSym_tags, kTTSym_model);
 		
         TTValue registration_args(x->name, x->model, context);
-        JamomaApplication.send("ObjectRegister", registration_args, none);
+        MaxApplication.send("ObjectRegister", registration_args, none);
 		
 		x->model.set("address", x->name);
 	}
@@ -130,7 +130,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		
 		TTAddress   address = x->name.appendAddress("/clear");
 		TTValue     registration_args(address, x->message_clear, context);
-        JamomaApplication.send("ObjectRegister", registration_args, none);
+        MaxApplication.send("ObjectRegister", registration_args, none);
 	}
 
 	// 4. Create the "gain" parameter (linear)
@@ -144,7 +144,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		
 		TTAddress   address = x->name.appendAddress("/coefficient");
         TTValue     registration_args(address, x->parameter_coefficient, context);
-		JamomaApplication.send("ObjectRegister", registration_args, none);
+		MaxApplication.send("ObjectRegister", registration_args, none);
 	}
 	
 	// 5. Create the "delay" parameter (milliseconds)
@@ -158,7 +158,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
 		
 		TTAddress   address = x->name.appendAddress("/delay");
         TTValue     registration_args(address, x->parameter_delay, context);
-		JamomaApplication.send("ObjectRegister", registration_args, none);
+		MaxApplication.send("ObjectRegister", registration_args, none);
 	}
 	
 	// 6. Create the Input access points
@@ -169,7 +169,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
             
             TTAddress   address = x->name.appendAddress("/in.left");
             TTValue     registration_args(address, x->in_left, context);
-            JamomaApplication.send("ObjectRegister", registration_args, none);
+            MaxApplication.send("ObjectRegister", registration_args, none);
         }
         
         // right input
@@ -178,7 +178,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
             
             TTAddress   address = x->name.appendAddress("/in.right");
             TTValue     registration_args(address, x->in_right, context);
-            JamomaApplication.send("ObjectRegister", registration_args, none);
+            MaxApplication.send("ObjectRegister", registration_args, none);
         }
 	}
 	
@@ -190,7 +190,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
             
             TTAddress   address = x->name.appendAddress("/out.left");
             TTValue     registration_args(address, x->out_left, context);
-            JamomaApplication.send("ObjectRegister", registration_args, none);
+            MaxApplication.send("ObjectRegister", registration_args, none);
         }
         
         // right output
@@ -199,7 +199,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
             
             TTAddress   address = x->name.appendAddress("/out.right");
             TTValue     registration_args(address, x->out_right, context);
-            JamomaApplication.send("ObjectRegister", registration_args, none);
+            MaxApplication.send("ObjectRegister", registration_args, none);
         }
 	}
 
@@ -210,7 +210,7 @@ void* allpassmod_new(t_symbol* s, long argc, t_atom* argv)
         
 		TTAddress   address = x->name.appendAddress("/preset");
 		TTValue     registration_args(address, x->preset, context);
-        JamomaApplication.send("ObjectRegister", registration_args, none);
+        MaxApplication.send("ObjectRegister", registration_args, none);
         
         // load a preset file and recall the first preset
         {
@@ -251,31 +251,31 @@ void allpassmod_free(t_allpassmod *x)
     TTAddress   address;
     
     address = x->name.appendAddress("/model");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
 
 	address = x->name.appendAddress("/coefficient");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
 	
 	address = x->name.appendAddress("/delay");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
 	
 	address = x->name.appendAddress("/clear");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
 	
 	address = x->name.appendAddress("/in.left");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
     
     address = x->name.appendAddress("/in.right");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
 	
 	address = x->name.appendAddress("/out.left");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
     
 	address = x->name.appendAddress("/out.right");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
 
 	address = x->name.appendAddress("/preset");
-    JamomaApplication.send("ObjectUnregister", address, none);
+    MaxApplication.send("ObjectUnregister", address, none);
 }
 
 

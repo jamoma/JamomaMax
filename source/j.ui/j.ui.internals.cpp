@@ -164,7 +164,7 @@ void ui_viewer_create(t_ui *obj, TTObject& returnedViewer, t_symbol *aCallbackMe
         
 		viewerAddress = viewAddress.appendAddress(TTAddress(name.c_str()));
 		args = TTValue(viewerAddress, returnedViewer, (TTPtr)obj->patcherPtr);
-		JamomaApplication.send("ObjectRegister", args, none);
+		MaxApplication.send("ObjectRegister", args, none);
 	}
 	else
 		viewerAddress = kTTAdrsEmpty;
@@ -194,7 +194,7 @@ void ui_viewer_destroy(t_ui *obj, TTSymbol name)
 			
 			// Unregister viewer
 			viewerAddress = v[1];
-            JamomaApplication.send("ObjectUnregister", viewerAddress, none);
+            MaxApplication.send("ObjectUnregister", viewerAddress, none);
 			obj->hash_viewers->remove(name);
 		}
 }
@@ -222,7 +222,7 @@ void ui_viewer_destroy_all(t_ui *obj)
                     
                     // Unregister viewer
                     viewerAddress = v[1];
-                    JamomaApplication.send("ObjectUnregister", viewerAddress, none);
+                    MaxApplication.send("ObjectUnregister", viewerAddress, none);
                 }
 			}
 		}

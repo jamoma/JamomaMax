@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 158.0, 106.0, 1553.0, 854.0 ],
+		"rect" : [ 36.0, 100.0, 1553.0, 854.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -796,7 +796,7 @@
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "audio" ], [ 0, 1, "audio/in.my_model_channel" ], [ 0, 2, "audio/out.my_model_channel" ], [ 0, 3, "model" ] ],
+									"cellmap" : [ [ 0, 0, "bang" ], [ 0, 1, "audio" ], [ 0, 2, "audio/in.my_model_channel" ], [ 0, 3, "audio/out.my_model_channel" ], [ 0, 4, "model" ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -812,7 +812,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 847.0, 269.0, 218.0, 148.0 ],
-									"rows" : 4,
+									"rows" : 5,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -2014,7 +2014,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 158.0, 132.0, 1553.0, 828.0 ],
+						"rect" : [ 36.0, 126.0, 1553.0, 828.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -2139,8 +2139,8 @@
 									"presentation_rect" : [ 854.5, 152.0, 44.0, 47.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_longname" : "Gain[1]",
-											"parameter_shortname" : "Gain",
+											"parameter_longname" : "Mix",
+											"parameter_shortname" : "Mix",
 											"parameter_type" : 0,
 											"parameter_mmax" : 100.0,
 											"parameter_unitstyle" : 0
@@ -2192,13 +2192,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-12",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 779.0, 156.0, 190.0, 22.0 ],
+									"patching_rect" : [ 779.0, 156.0, 207.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /jin/myModel~/audio/gain"
+									"text" : "j.remote /jin/myModel~/audio/gain @unit midigain"
 								}
 
 							}
@@ -2420,7 +2421,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 604.0, 236.0, 44.0, 22.0 ],
+									"patching_rect" : [ 605.0, 236.0, 44.0, 22.0 ],
 									"style" : "",
 									"text" : "tri~ 99"
 								}
@@ -2433,7 +2434,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "signal" ],
-									"patching_rect" : [ 40.0, 236.0, 62.0, 22.0 ],
+									"patching_rect" : [ 41.0, 236.0, 62.0, 22.0 ],
 									"style" : "",
 									"text" : "cycle~ 99"
 								}
@@ -2623,7 +2624,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 199.0, 420.0, 583.0, 342.0 ],
+										"rect" : [ 77.0, 414.0, 583.0, 342.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -2832,7 +2833,7 @@
 													"numoutlets" : 0,
 													"patching_rect" : [ 342.0, 153.0, 221.0, 93.0 ],
 													"style" : "",
-													"text" : "Argument sets the instance name to register audio input in the namespace.\n\nj.in~ and j.out~~ sharing the same name are internally linked so audio processing can be mixed, attenuatted & bypassed.",
+													"text" : "Argument sets the instance name to register audio input in the namespace.\n\nj.in~ and j.out~ sharing the same name are internally linked so audio processing can be mixed, attenuatted & bypassed.",
 													"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 												}
 
@@ -3131,7 +3132,7 @@
 									"destination" : [ "obj-13", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 788.5, 184.0, 772.0, 184.0, 772.0, 98.0, 788.5, 98.0 ],
+									"midpoints" : [ 788.5, 195.0, 772.0, 195.0, 772.0, 98.0, 788.5, 98.0 ],
 									"source" : [ "obj-12", 0 ]
 								}
 
@@ -3215,7 +3216,7 @@
 									"destination" : [ "obj-26", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 788.5, 296.623108, 780.5, 296.623108, 780.5, 221.123123, 788.5, 221.123123 ],
+									"midpoints" : [ 788.5, 286.623108, 772.5, 286.623108, 772.5, 221.123123, 788.5, 221.123123 ],
 									"source" : [ "obj-31", 0 ]
 								}
 
@@ -3291,20 +3292,20 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-14::obj-26" : [ "live.text[7]", "live.text", 0 ],
-			"obj-2::obj-9" : [ "Gain[5]", "Gain", 0 ],
-			"obj-14::obj-18" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-2::obj-13" : [ "Gain[3]", "Gain", 0 ],
-			"obj-14::obj-23" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-2::obj-29" : [ "live.text[6]", "live.text", 0 ],
-			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
 			"obj-2::obj-28" : [ "live.text[5]", "live.text", 0 ],
-			"obj-2::obj-4" : [ "Gain[4]", "Gain", 0 ],
-			"obj-2::obj-27" : [ "live.text[2]", "live.text", 0 ],
-			"obj-14::obj-14" : [ "Gain[1]", "Gain", 0 ],
+			"obj-2::obj-29" : [ "live.text[6]", "live.text", 0 ],
 			"obj-2::obj-25" : [ "Gain[2]", "Gain", 0 ],
+			"obj-2::obj-13" : [ "Gain[3]", "Gain", 0 ],
 			"obj-14::obj-3" : [ "live.text", "live.text", 0 ],
-			"obj-14::obj-13" : [ "Gain", "Gain", 0 ]
+			"obj-14::obj-23" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-14::obj-18" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-14::obj-14" : [ "Mix", "Mix", 0 ],
+			"obj-2::obj-4" : [ "Gain[4]", "Gain", 0 ],
+			"obj-14::obj-26" : [ "live.text[7]", "live.text", 0 ],
+			"obj-2::obj-2" : [ "live.text[4]", "live.text", 0 ],
+			"obj-14::obj-13" : [ "Gain", "Gain", 0 ],
+			"obj-2::obj-9" : [ "Gain[5]", "Gain", 0 ],
+			"obj-2::obj-27" : [ "live.text[2]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

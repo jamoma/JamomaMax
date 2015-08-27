@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 81.0, 129.0, 1556.0, 827.0 ],
+		"rect" : [ 9.0, 52.0, 1556.0, 827.0 ],
 		"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 		"bglocked" : 0,
@@ -1761,7 +1761,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 829.5, 159.0, 186.0, 93.0 ],
-									"presentation_rect" : [ 833.0, 81.5, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "Explore namespace of the various models in that patchers and see how services are added to the namespace",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -1776,7 +1775,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 866.0, 262.0, 113.0, 22.0 ],
-									"presentation_rect" : [ 895.0, 116.125, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "/Amenities, explore"
 								}
@@ -1790,7 +1788,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 866.0, 494.535461, 146.0, 22.0 ],
-									"presentation_rect" : [ 914.0, 301.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "/Amenities/deg.6, explore"
 								}
@@ -1804,7 +1801,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 866.0, 455.779541, 146.0, 22.0 ],
-									"presentation_rect" : [ 912.0, 273.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "/Amenities/deg.5, explore"
 								}
@@ -1818,7 +1814,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 866.0, 417.023651, 146.0, 22.0 ],
-									"presentation_rect" : [ 913.0, 233.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "/Amenities/deg.4, explore"
 								}
@@ -1832,7 +1827,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 866.0, 378.267731, 146.0, 22.0 ],
-									"presentation_rect" : [ 918.0, 186.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "/Amenities/deg.3, explore"
 								}
@@ -1846,7 +1840,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 866.0, 339.511841, 146.0, 22.0 ],
-									"presentation_rect" : [ 918.0, 151.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "/Amenities/deg.2, explore"
 								}
@@ -1938,7 +1931,7 @@
 , 							{
 								"box" : 								{
 									"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"cellmap" : [ [ 0, 0, "audio" ], [ 0, 1, "audio/in.L" ], [ 0, 2, "audio/in.R" ], [ 0, 3, "audio/out.L" ], [ 0, 4, "audio/out.R" ], [ 0, 5, "bitdepth" ], [ 0, 6, "model" ], [ 0, 7, "preset" ], [ 0, 8, "samplerate_ratio" ] ],
+									"cellmap" : [ [ 0, 0, "bang" ], [ 0, 1, "deg.1" ], [ 0, 2, "deg.1/audio" ], [ 0, 3, "deg.1/audio/bypass" ], [ 0, 4, "deg.1/audio/gain" ], [ 0, 5, "deg.1/audio/in.L" ], [ 0, 6, "deg.1/audio/in.R" ], [ 0, 7, "deg.1/audio/mix" ], [ 0, 8, "deg.1/audio/mute" ], [ 0, 9, "deg.1/audio/out.L" ], [ 0, 10, "deg.1/audio/out.R" ], [ 0, 11, "deg.1/bitdepth" ], [ 0, 12, "deg.1/model" ], [ 0, 13, "deg.1/preset" ], [ 0, 14, "deg.1/samplerate_ratio" ], [ 0, 15, "deg.2" ], [ 0, 16, "deg.2/audio" ], [ 0, 17, "deg.2/audio/in.L" ], [ 0, 18, "deg.2/audio/in.R" ], [ 0, 19, "deg.2/audio/out.L" ], [ 0, 20, "deg.2/audio/out.R" ], [ 0, 21, "deg.2/bitdepth" ], [ 0, 22, "deg.2/model" ], [ 0, 23, "deg.2/samplerate_ratio" ], [ 0, 24, "deg.3" ], [ 0, 25, "deg.3/audio" ], [ 0, 26, "deg.3/audio/in.L" ], [ 0, 27, "deg.3/audio/in.R" ], [ 0, 28, "deg.3/audio/out.L" ], [ 0, 29, "deg.3/audio/out.R" ], [ 0, 30, "deg.3/bitdepth" ], [ 0, 31, "deg.3/model" ], [ 0, 32, "deg.3/preset" ], [ 0, 33, "deg.3/samplerate_ratio" ], [ 0, 34, "deg.4" ], [ 0, 35, "deg.4/audio" ], [ 0, 36, "deg.4/audio/bypass" ], [ 0, 37, "deg.4/audio/gain" ], [ 0, 38, "deg.4/audio/in.L" ], [ 0, 39, "deg.4/audio/in.R" ], [ 0, 40, "deg.4/audio/mix" ], [ 0, 41, "deg.4/audio/mute" ], [ 0, 42, "deg.4/audio/out.L" ], [ 0, 43, "deg.4/audio/out.R" ], [ 0, 44, "deg.4/bitdepth" ], [ 0, 45, "deg.4/model" ], [ 0, 46, "deg.4/samplerate_ratio" ], [ 0, 47, "deg.5" ], [ 0, 48, "deg.5/audio" ], [ 0, 49, "deg.5/audio/in.L" ], [ 0, 50, "deg.5/audio/in.R" ], [ 0, 51, "deg.5/audio/out.L" ], [ 0, 52, "deg.5/audio/out.R" ], [ 0, 53, "deg.5/bitdepth" ], [ 0, 54, "deg.5/model" ], [ 0, 55, "deg.5/samplerate_ratio" ], [ 0, 56, "deg.6" ], [ 0, 57, "deg.6/audio" ], [ 0, 58, "deg.6/audio/in.L" ], [ 0, 59, "deg.6/audio/in.R" ], [ 0, 60, "deg.6/audio/out.L" ], [ 0, 61, "deg.6/audio/out.R" ], [ 0, 62, "deg.6/bitdepth" ], [ 0, 63, "deg.6/model" ], [ 0, 64, "deg.6/preset" ], [ 0, 65, "deg.6/samplerate_ratio" ], [ 0, 66, "model" ], [ 0, 67, "preset" ] ],
 									"cols" : 1,
 									"colwidth" : 200,
 									"fgcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -1954,7 +1947,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "list", "", "", "" ],
 									"patching_rect" : [ 1075.0, 414.125, 214.5, 252.75 ],
-									"rows" : 9,
+									"rows" : 68,
 									"savemode" : 1,
 									"stcolor" : [ 0.8, 0.8, 0.8, 1.0 ]
 								}
@@ -2273,7 +2266,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 81.0, 155.0, 1556.0, 801.0 ],
+						"rect" : [ 9.0, 78.0, 1556.0, 801.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -2304,6 +2297,51 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubblepoint" : 0.02,
+									"bubbleside" : 2,
+									"id" : "obj-9",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 59.0, 602.75, 161.0, 39.0 ],
+									"style" : "",
+									"text" : "Speak to the model directly",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-48",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 169.0, 694.25, 140.0, 22.0 ],
+									"style" : "",
+									"text" : "preset:interpolate 1 2 $1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"contdata" : 1,
+									"id" : "obj-49",
+									"maxclass" : "multislider",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"orientation" : 0,
+									"outlettype" : [ "", "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 169.0, 658.25, 131.0, 17.0 ],
+									"setminmax" : [ 0.0, 1.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-8",
 									"maxclass" : "comment",
@@ -2346,376 +2384,6 @@
 									"style" : "",
 									"text" : "Recall model presets",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"color" : [ 1.0, 0.0, 0.0, 1.0 ],
-									"id" : "obj-4",
-									"maxclass" : "newobj",
-									"numinlets" : 0,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patcher" : 									{
-										"fileversion" : 1,
-										"appversion" : 										{
-											"major" : 7,
-											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
-											"modernui" : 1
-										}
-,
-										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
-										"bglocked" : 0,
-										"openinpresentation" : 0,
-										"default_fontsize" : 12.0,
-										"default_fontface" : 0,
-										"default_fontname" : "Arial",
-										"gridonopen" : 1,
-										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 1,
-										"objectsnaponopen" : 1,
-										"statusbarvisible" : 2,
-										"toolbarvisible" : 1,
-										"lefttoolbarpinned" : 0,
-										"toptoolbarpinned" : 0,
-										"righttoolbarpinned" : 0,
-										"bottomtoolbarpinned" : 0,
-										"toolbars_unpinned_last_save" : 0,
-										"tallnewobj" : 0,
-										"boxanimatetime" : 200,
-										"enablehscroll" : 1,
-										"enablevscroll" : 1,
-										"devicewidth" : 0.0,
-										"description" : "",
-										"digest" : "",
-										"tags" : "",
-										"style" : "",
-										"subpatcher_template" : "",
-										"boxes" : [ 											{
-												"box" : 												{
-													"bgcolor" : [ 0.784314, 0.145098, 0.023529, 0.0 ],
-													"bubble" : 1,
-													"bubbleside" : 2,
-													"id" : "obj-113",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 75.0, 135.75, 81.0, 39.0 ],
-													"style" : "",
-													"text" : "Doesn't work",
-													"textcolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"bubble" : 1,
-													"id" : "obj-106",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 773.0, 192.5, 153.0, 24.0 ],
-													"style" : "",
-													"text" : "Edit all presets",
-													"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"bubble" : 1,
-													"id" : "obj-105",
-													"maxclass" : "comment",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 773.0, 100.0, 153.0, 24.0 ],
-													"style" : "",
-													"text" : "Edit default preset",
-													"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-100",
-													"maxclass" : "button",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 720.0, 192.5, 24.0, 24.0 ],
-													"style" : ""
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-													"id" : "obj-97",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 720.0, 230.5, 151.0, 22.0 ],
-													"style" : "",
-													"text" : "j.send /spectral/preset:edit"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-96",
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 720.0, 105.5, 47.0, 22.0 ],
-													"style" : "",
-													"text" : "default"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-													"id" : "obj-94",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 720.0, 135.75, 151.0, 22.0 ],
-													"style" : "",
-													"text" : "j.send /spectral/preset:edit"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"bgcolor" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-													"bgcolor2" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
-													"bgfillcolor_angle" : 270.0,
-													"bgfillcolor_autogradient" : 0.0,
-													"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
-													"bgfillcolor_color1" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-													"bgfillcolor_color2" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
-													"bgfillcolor_proportion" : 0.39,
-													"bgfillcolor_type" : "gradient",
-													"gradient" : 1,
-													"id" : "obj-48",
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 221.25, 140.0, 22.0 ],
-													"style" : "",
-													"text" : "preset:interpolate 1 2 $1"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"contdata" : 1,
-													"id" : "obj-49",
-													"maxclass" : "multislider",
-													"numinlets" : 1,
-													"numoutlets" : 2,
-													"orientation" : 0,
-													"outlettype" : [ "", "" ],
-													"parameter_enable" : 0,
-													"patching_rect" : [ 50.0, 186.75, 131.0, 17.0 ],
-													"setminmax" : [ 0.0, 1.0 ],
-													"style" : ""
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-45",
-													"maxclass" : "button",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 1049.5, 258.216187, 24.0, 24.0 ],
-													"style" : ""
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-44",
-													"maxclass" : "button",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 1050.5, 189.216187, 24.0, 24.0 ],
-													"style" : ""
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-													"id" : "obj-42",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 1049.5, 290.966187, 189.0, 22.0 ],
-													"style" : "",
-													"text" : "j.send /spectral/preset:write/again"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-													"id" : "obj-39",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 1049.5, 221.966187, 157.0, 22.0 ],
-													"style" : "",
-													"text" : "j.send /spectral/preset:write"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"id" : "obj-33",
-													"maxclass" : "message",
-													"numinlets" : 2,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 1049.5, 109.216187, 183.0, 22.0 ],
-													"style" : "",
-													"text" : "spectral_shift~.model.presets.txt"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"color" : [ 0.92549, 0.364706, 0.341176, 1.0 ],
-													"id" : "obj-18",
-													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 1049.5, 145.966187, 155.0, 22.0 ],
-													"style" : "",
-													"text" : "j.send /spectral/preset:read"
-												}
-
-											}
-, 											{
-												"box" : 												{
-													"comment" : "",
-													"id" : "obj-2",
-													"maxclass" : "outlet",
-													"numinlets" : 1,
-													"numoutlets" : 0,
-													"patching_rect" : [ 50.0, 372.966187, 30.0, 30.0 ],
-													"style" : ""
-												}
-
-											}
- ],
-										"lines" : [ 											{
-												"patchline" : 												{
-													"destination" : [ "obj-97", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-100", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-18", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"midpoints" : [ 1059.0, 141.091187, 1059.0, 141.091187 ],
-													"source" : [ "obj-33", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-39", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-44", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-42", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-45", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-2", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-48", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-48", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-49", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-94", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-96", 0 ]
-												}
-
-											}
- ]
-									}
-,
-									"patching_rect" : [ 220.0, 646.5, 99.0, 22.0 ],
-									"saved_object_attributes" : 									{
-										"description" : "",
-										"digest" : "",
-										"globalpatchername" : "",
-										"style" : "",
-										"tags" : ""
-									}
-,
-									"style" : "",
-									"text" : "p known issues"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bgcolor" : [ 0.784314, 0.145098, 0.023529, 0.0 ],
-									"bubble" : 1,
-									"bubbleside" : 2,
-									"id" : "obj-112",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 49.0, 570.25, 46.0, 39.0 ],
-									"style" : "",
-									"text" : "Works",
-									"textcolor" : [ 0.0, 0.533333, 0.168627, 1.0 ]
 								}
 
 							}
@@ -3420,7 +3088,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 49.0, 621.25, 50.0, 22.0 ],
+									"patching_rect" : [ 54.0, 655.75, 50.0, 22.0 ],
 									"style" : ""
 								}
 
@@ -3432,7 +3100,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 49.0, 655.75, 105.0, 22.0 ],
+									"patching_rect" : [ 54.0, 694.25, 105.0, 22.0 ],
 									"style" : "",
 									"text" : "frequency/shift $1"
 								}
@@ -3481,21 +3149,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"quality" : [ "basic" ],
-													"formantcorrection" : [ 0 ],
-													"pitchcorrection" : [ 0 ],
-													"mode" : [ "basic" ],
-													"slurtime" : [ 0.0 ],
-													"formant" : [ 1.0 ],
-													"originallength" : [ 0.0, "ticks" ],
-													"pitchshift" : [ 1.0 ],
-													"followglobaltempo" : [ 0 ],
-													"originaltempo" : [ 120.0 ],
 													"play" : [ 0 ],
+													"slurtime" : [ 0.0 ],
+													"originaltempo" : [ 120.0 ],
+													"formant" : [ 1.0 ],
 													"timestretch" : [ 0 ],
+													"originallength" : [ 0.0, "ticks" ],
 													"originallengthms" : [ 0.0 ],
+													"mode" : [ "basic" ],
+													"formantcorrection" : [ 0 ],
+													"pitchshift" : [ 1.0 ],
 													"basictuning" : [ 440 ],
 													"speed" : [ 1.0 ],
+													"quality" : [ "basic" ],
+													"pitchcorrection" : [ 0 ],
+													"followglobaltempo" : [ 0 ],
 													"pitchshiftcent" : [ 0 ]
 												}
 
@@ -3615,7 +3283,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 49.0, 710.25, 91.0, 22.0 ],
+									"patching_rect" : [ 54.0, 756.75, 91.0, 22.0 ],
 									"style" : "",
 									"text" : "j.send /spectral"
 								}
@@ -3886,8 +3554,17 @@
 									"destination" : [ "obj-81", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 229.5, 688.875, 58.5, 688.875 ],
-									"source" : [ "obj-4", 0 ]
+									"midpoints" : [ 178.5, 740.0, 63.5, 740.0 ],
+									"source" : [ "obj-48", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-48", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-49", 0 ]
 								}
 
 							}
@@ -3996,11 +3673,11 @@
 						"styles" : [ 							{
 								"name" : "Jamoma-subtitle",
 								"default" : 								{
+									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 14.0 ],
-									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
-									"fontname" : [ "Lato Regular" ],
-									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
+									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"fontname" : [ "Lato Regular" ]
 								}
 ,
 								"parentstyle" : "",
@@ -4086,7 +3763,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 262.0, 182.5, 127.0, 35.0 ],
-									"presentation_rect" : [ 369.0, 186.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "set an alias name",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -4105,7 +3781,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 907.5, 170.0, 186.0, 49.0 ],
-									"presentation_rect" : [ 916.5, 168.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "address nodes using their alias",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -4548,15 +4223,15 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-39::obj-13::obj-6" : [ "live.text[3]", "live.text", 0 ],
+			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
 			"obj-39::obj-13::obj-16::obj-2::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-39::obj-13::obj-16::obj-2::obj-12" : [ "Lookahead", "Lookahead", 0 ],
 			"obj-39::obj-13::obj-16::obj-2::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
 			"obj-39::obj-13::obj-7" : [ "live.dial[3]", "Feedback time", 0 ],
 			"obj-39::obj-13::obj-16::obj-2::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-39::obj-13::obj-16::obj-2::obj-12" : [ "Lookahead", "Lookahead", 0 ],
 			"obj-39::obj-13::obj-16::obj-2::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-39::obj-13::obj-4" : [ "live.dial[1]", "Freq shift", 0 ],
-			"obj-39::obj-13::obj-3" : [ "live.dial", "Pitch shift", 0 ],
+			"obj-39::obj-13::obj-6" : [ "live.text[3]", "live.text", 0 ],
 			"obj-39::obj-13::obj-16::obj-2::obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-39::obj-13::obj-16::obj-2::obj-13" : [ "Release", "Release", 0 ],
 			"obj-39::obj-13::obj-16::obj-2::obj-27" : [ "Threshold", "Threshold", 0 ],
@@ -4571,25 +4246,25 @@
 			}
 , 			{
 				"name" : "spectral_shift~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.spectral_shift_voice~.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -4601,19 +4276,19 @@
 			}
 , 			{
 				"name" : "spectral_shift~.view.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
+				"bootpath" : "~/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Spectral/spectral_shift~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

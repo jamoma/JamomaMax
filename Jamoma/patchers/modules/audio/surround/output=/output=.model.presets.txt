@@ -2,7 +2,7 @@
 
 - preset "default"
 # "edit a comment"
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mute 0
 limiter/active 1
 limiter/dcblocker/active 1

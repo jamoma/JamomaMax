@@ -38,6 +38,8 @@ typedef struct extra {
     TTHashPtr           attr_amenities;
     TTBoolean           all_amenities;
     TTBoolean           no_amenities;
+    
+    TTObject            *dataspaceConverter;///< used to convert dB gain into linear gain
 } t_extra;
 #define EXTRA ((t_extra*)x->extra)
 

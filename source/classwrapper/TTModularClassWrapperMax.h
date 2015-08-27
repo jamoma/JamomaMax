@@ -23,11 +23,6 @@
 #include "ext_common.h"
 #include "ext_hashtab.h"
 
-#ifdef UI_EXTERNAL
-#include "jpatcher_api.h"			// jpatcher_api.h must come before z_dsp.h
-#include "jgraphics.h"
-#endif
-
 #include "TTClassWrapperMax.h"
 
 #include "TTModular.h"              // Jamoma Modular API
@@ -106,16 +101,15 @@ typedef struct _modularSpecificities {
 
 /** Data Structure for this object
 */
-typedef struct _wrappedModularInstance {
+typedef struct _wrappedModularInstance 
+{
+	
 #ifdef AUDIO_EXTERNAL
 	t_pxobject								obj;						///< Max msp object header
 #else 
-#ifdef UI_EXTERNAL
-	t_jbox									box;						///< Max ui object header
-#else
     t_object								obj;						///< Max control object header
 #endif
-#endif
+
 	TTHandle								inlets;						///< an array of inlets
 	long									index;						///< index of the inlet used
 	TTHandle								outlets;					///< an array of outlet
@@ -279,14 +273,9 @@ TTErr		wrappedModularClass_sendMessage(TTPtr self, t_symbol *s, long argc, const
 */
 TTErr		wrappedModularClass_setAttribute(TTPtr self, t_symbol *s, long argc, const t_atom *argv);
 
-
 /**
 */
 void		wrappedModularClass_dump(TTPtr self);
-
-
-#ifdef UI_EXTERNAL
-void		wrappedModularClass_paint(WrappedModularInstancePtr x, t_object *view);
 
 
 /**
@@ -297,42 +286,6 @@ TTPtr		wrappedModularClass_oksize(TTPtr self, t_rect *newrect);
 /**
 */
 void		wrappedModularClass_mousedblclick(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-
-
-/**
-*/
-void		wrappedModularClass_mousedown(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-
-
-/**
-*/
-void		wrappedModularClass_mousedrag(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-
-
-/**
-*/
-void		wrappedModularClass_mouseup(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-
-
-/**
-*/
-void		wrappedModularClass_mouseenter(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-
-
-/**
-*/
-void		wrappedModularClass_mousemove(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-
-
-/**
-*/
-void		wrappedModularClass_mouseleave(TTPtr self, t_object *patcherview, t_pt pt, long modifiers);
-
-
-/**
-*/
-int			convertModifiersFromMaxToTTGraphics(int maxModifiers);
-#endif
 
 
 #ifdef ARRAY_EXTERNAL

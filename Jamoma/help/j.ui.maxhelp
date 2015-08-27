@@ -121,7 +121,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1165.0, 671.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 671.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -218,7 +218,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 809.0, 307.0, 334.0, 361.0 ],
+										"rect" : [ 709.0, 207.0, 334.0, 361.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -492,7 +492,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 285.0, 447.0, 450.0, 175.0 ],
+										"rect" : [ 185.0, 347.0, 450.0, 175.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -800,7 +800,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1165.0, 671.0 ],
+						"rect" : [ 100.0, 126.0, 1165.0, 671.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -1136,7 +1136,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 604.0, 85.25, 145.0, 33.0 ],
+									"patching_rect" : [ 848.0, 96.25, 145.0, 33.0 ],
 									"style" : "",
 									"text" : "A Jamoma video model embedded as a bpatcher",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -1152,7 +1152,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 848.0, 85.25, 143.0, 33.0 ],
+									"patching_rect" : [ 604.0, 96.25, 143.0, 33.0 ],
 									"style" : "",
 									"text" : "A Jamoma audio model embedded as a bpatcher",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -1204,31 +1204,31 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u020001727" ],
 													"dim" : [ 1, 1 ],
-													"output_texture" : [ 0 ],
-													"dstrect" : [ 0, 0, 1, 1 ],
-													"autostart" : [ 1 ],
-													"texture_name" : [ "u022001725" ],
-													"drawto" : [ "" ],
-													"loopstart" : [ 0 ],
-													"looppoints" : [ 0, 0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
 													"vol" : [ 1.0 ],
-													"unique" : [ 0 ],
-													"colormode" : [ "argb" ],
-													"loopend" : [ 0 ],
-													"automatic" : [ 0 ],
-													"adapt" : [ 1 ],
-													"loopreport" : [ 0 ],
-													"time_secs" : [ 0.0 ],
-													"engine" : [ "avf" ],
-													"time" : [ 0 ],
-													"usedstrect" : [ 0 ],
-													"moviefile" : [ "" ],
-													"interp" : [ 0 ],
 													"rate" : [ 1.0 ],
 													"framereport" : [ 0 ],
-													"position" : [ 0.0 ],
-													"usesrcrect" : [ 0 ]
+													"usesrcrect" : [ 0 ],
+													"unique" : [ 0 ],
+													"looppoints" : [ 0, 0 ],
+													"srcrect" : [ 0, 0, 1, 1 ],
+													"time" : [ 0 ],
+													"time_secs" : [ 0.0 ],
+													"engine" : [ "avf" ],
+													"loopstart" : [ 0 ],
+													"automatic" : [ 0 ],
+													"usedstrect" : [ 0 ],
+													"colormode" : [ "argb" ],
+													"loopreport" : [ 0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"output_texture" : [ 0 ],
+													"interp" : [ 0 ],
+													"adapt" : [ 1 ],
+													"moviefile" : [ "" ],
+													"loopend" : [ 0 ],
+													"texture_name" : [ "u022001725" ],
+													"autostart" : [ 1 ],
+													"drawto" : [ "" ],
+													"position" : [ 0.0 ]
 												}
 
 											}
@@ -1309,7 +1309,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 21.0, 382.0, 450.0, 175.0 ],
+										"rect" : [ 121.0, 482.0, 450.0, 175.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -1579,21 +1579,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"formant" : [ 1.0 ],
-													"basictuning" : [ 440 ],
-													"mode" : [ "basic" ],
-													"originaltempo" : [ 120.0 ],
-													"play" : [ 0 ],
-													"followglobaltempo" : [ 0 ],
 													"slurtime" : [ 0.0 ],
-													"pitchshift" : [ 1.0 ],
-													"speed" : [ 1.0 ],
-													"pitchcorrection" : [ 0 ],
 													"originallengthms" : [ 0.0 ],
-													"quality" : [ "basic" ],
-													"timestretch" : [ 0 ],
+													"followglobaltempo" : [ 0 ],
+													"originaltempo" : [ 120.0 ],
 													"formantcorrection" : [ 0 ],
-													"originallength" : [ 0.0, "ticks" ]
+													"quality" : [ "basic" ],
+													"formant" : [ 1.0 ],
+													"pitchshift" : [ 1.0 ],
+													"play" : [ 0 ],
+													"mode" : [ "basic" ],
+													"timestretch" : [ 0 ],
+													"basictuning" : [ 440 ],
+													"speed" : [ 1.0 ],
+													"originallength" : [ 0.0, "ticks" ],
+													"pitchcorrection" : [ 0 ]
 												}
 
 											}
@@ -1637,7 +1637,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 604.0, 299.0, 179.0, 203.0 ],
+										"rect" : [ 704.0, 399.0, 179.0, 203.0 ],
 										"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -1869,7 +1869,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 848.0, 299.0, 267.0, 203.0 ],
+										"rect" : [ 948.0, 399.0, 267.0, 203.0 ],
 										"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -2196,7 +2196,7 @@
 			}
 , 			{
 				"name" : "transposer.maxpat",
-				"bootpath" : "/Users/Shared/Max 7/examples/effects/transposer-folder/lib",
+				"bootpath" : "/Users/Shared/Max 7/Examples/effects/transposer-folder/lib",
 				"type" : "JSON",
 				"implicit" : 1
 			}

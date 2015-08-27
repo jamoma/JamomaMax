@@ -25,9 +25,9 @@
 #include "TTInput.h"
 #include "TTOutput.h"
 
-extern JAMOMA_EXPORT	TTSymbol			kTTSym_Jamoma;			///<
-extern JAMOMA_EXPORT	TTObject            JamomaApplicationManager;///<
-extern JAMOMA_EXPORT	TTObject            JamomaApplication;		///<
+extern JAMOMA_EXPORT	TTSymbol			kTTSym_Max;
+extern JAMOMA_EXPORT	TTObject            MaxApplicationManager;
+extern JAMOMA_EXPORT	TTObject            MaxApplication;
 
 extern JAMOMA_EXPORT	TTRegex*			ttRegexForJmod;			///< A global regex to parse jmod. (usefull to detect a 0.5 module)
 extern JAMOMA_EXPORT	TTRegex*			ttRegexForJcom;			///< A global regex to parse j.

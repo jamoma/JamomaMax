@@ -16,7 +16,7 @@ quality basic
 slurtime 2.000000
 speed 1.000000
 timestretch 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mute 0
 file/loop 0
 # 

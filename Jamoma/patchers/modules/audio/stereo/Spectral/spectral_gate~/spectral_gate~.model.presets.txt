@@ -2,13 +2,13 @@
 - preset "default"
 # "edit a comment"
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 invert 0
 limiter/active 1
 limiter/audio/bypass 0
-limiter/audio/gain 100.000000
+limiter/audio/gain 0.000000
 limiter/audio/mix 100.000000
 limiter/audio/mute 0
 limiter/dcblocker/active 1
@@ -29,7 +29,7 @@ threshold -9.000000
 invert 1
 threshold 7.846164
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -52,7 +52,7 @@ response/decay 0.508148
 invert 0
 threshold 7.846164
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -75,7 +75,7 @@ response/decay 0.767109
 invert 1
 threshold -3.692286
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -98,7 +98,7 @@ response/decay 0.577195
 invert 0
 threshold -22.615410
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -121,7 +121,7 @@ response/decay 0.470502
 invert 1
 threshold -24.923100
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -144,7 +144,7 @@ response/decay 0.892783
 invert 1
 threshold 7.384626
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -167,7 +167,7 @@ response/decay 0.392473
 invert 0
 threshold -16.100022
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -190,7 +190,7 @@ response/decay 0.653009
 invert 0
 threshold 0.000018
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -213,7 +213,7 @@ response/decay 0.000000
 invert 1
 threshold -22.615410
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -236,7 +236,7 @@ response/decay 0.000000
 invert 1
 threshold -6.923052
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -259,7 +259,7 @@ response/decay 0.105612
 invert 0
 threshold -16.000032
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -282,7 +282,7 @@ response/decay 0.003259
 invert 1
 threshold -7.629648
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -305,7 +305,7 @@ response/decay 0.117127
 invert 0
 threshold -19.846182
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -328,7 +328,7 @@ response/decay 1.000000
 invert 1
 threshold -7.999974
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -351,7 +351,7 @@ response/decay 0.000447
 invert 0
 threshold -9.692280
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -374,7 +374,7 @@ response/decay 0.002531
 invert 0
 threshold -19.384644
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -397,7 +397,7 @@ response/decay 1.000000
 invert 1
 threshold -14.769198
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -420,7 +420,7 @@ response/decay 1.000000
 invert 0
 threshold -2.769210
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -443,7 +443,7 @@ response/decay 0.821405
 invert 1
 threshold -6.461514
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -466,7 +466,7 @@ response/decay 0.046944
 invert 0
 threshold -20.769258
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -489,7 +489,7 @@ response/decay 0.000000
 invert 1
 threshold -21.692334
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -512,7 +512,7 @@ response/decay 0.322611
 invert 1
 threshold -6.923052
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -535,7 +535,7 @@ response/decay 0.000000
 invert 0
 threshold -11.538432
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -558,7 +558,7 @@ response/decay 0.005825
 invert 1
 threshold 10.615392
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -581,7 +581,7 @@ response/decay 0.709696
 invert 0
 threshold -18.960000
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -604,7 +604,7 @@ response/decay 0.586276
 invert 0
 threshold -13.680000
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -627,7 +627,7 @@ response/decay 0.586276
 invert 0
 threshold -31.143864
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -650,7 +650,7 @@ response/decay 0.338570
 invert 1
 threshold -26.307714
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -673,7 +673,7 @@ response/decay 0.455376
 invert 1
 threshold -22.615410
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -696,7 +696,7 @@ response/decay 0.106181
 invert 0
 threshold -30.923094
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -719,7 +719,7 @@ response/decay 0.002745
 invert 0
 threshold -34.615398
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -742,7 +742,7 @@ response/decay 0.000000
 invert 0
 threshold -26.142582
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -765,7 +765,7 @@ response/decay 0.470502
 invert 1
 threshold -21.510768
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -788,7 +788,7 @@ response/decay 0.000050
 invert 0
 threshold -20.519844
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -811,7 +811,7 @@ response/decay 0.036033
 invert 1
 threshold -21.224724
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -834,7 +834,7 @@ response/decay 0.010801
 invert 1
 threshold -21.344052
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -857,7 +857,7 @@ response/decay 0.010961
 invert 0
 threshold -20.769258
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -880,7 +880,7 @@ response/decay 0.048240
 invert 1
 threshold -6.962256
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -903,7 +903,7 @@ response/decay 0.106181
 invert 0
 threshold -19.838922
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -926,7 +926,7 @@ response/decay 0.000000
 invert 1
 threshold -21.350586
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -949,7 +949,7 @@ response/decay 0.010918
 invert 1
 threshold -18.517932
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -972,7 +972,7 @@ response/decay 0.373044
 invert 1
 threshold -3.692286
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -995,7 +995,7 @@ response/decay 0.563610
 invert 1
 threshold -23.423778
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1018,7 +1018,7 @@ response/decay 0.242596
 invert 1
 threshold -4.153824
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1041,7 +1041,7 @@ response/decay 0.000000
 invert 0
 threshold 0.923094
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1064,7 +1064,7 @@ response/decay 1.000000
 invert 0
 threshold 8.307702
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1087,7 +1087,7 @@ response/decay 0.954789
 invert 1
 threshold 0.000018
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1110,7 +1110,7 @@ response/decay 0.794626
 invert 0
 threshold -10.615356
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1133,7 +1133,7 @@ response/decay 0.000000
 invert 1
 threshold -21.510768
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1156,7 +1156,7 @@ response/decay 0.000050
 invert 1
 threshold -21.295542
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1179,7 +1179,7 @@ response/decay 0.010915
 invert 1
 threshold -6.962256
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1202,7 +1202,7 @@ response/decay 0.106181
 invert 0
 threshold -34.615398
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1225,7 +1225,7 @@ response/decay 0.000000
 invert 0
 threshold -2.769210
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1248,7 +1248,7 @@ response/decay 0.424419
 invert 1
 threshold -6.962256
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1271,7 +1271,7 @@ response/decay 0.106181
 invert 0
 threshold -21.053652
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1294,7 +1294,7 @@ response/decay 0.029795
 invert 1
 threshold -21.350586
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1317,7 +1317,7 @@ response/decay 0.010918
 invert 1
 threshold -12.428904
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1340,7 +1340,7 @@ response/decay 0.329184
 invert 1
 threshold -15.692274
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1363,7 +1363,7 @@ response/decay 0.855020
 invert 1
 threshold -17.026068
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1386,7 +1386,7 @@ response/decay 0.145025
 invert 0
 threshold -22.615410
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1409,7 +1409,7 @@ response/decay 0.080761
 invert 1
 threshold -19.053786
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1432,7 +1432,7 @@ response/decay 0.085099
 invert 0
 threshold -30.000018
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1455,7 +1455,7 @@ response/decay 0.001650
 invert 1
 threshold -17.018874
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1478,7 +1478,7 @@ response/decay 0.145652
 invert 1
 threshold -16.936770
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1501,7 +1501,7 @@ response/decay 0.163699
 invert 0
 threshold -10.611198
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1524,7 +1524,7 @@ response/decay 0.000745
 invert 1
 threshold -3.692286
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1547,7 +1547,7 @@ response/decay 0.563610
 invert 1
 threshold -17.265120
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1570,7 +1570,7 @@ response/decay 0.133786
 invert 0
 threshold -19.846182
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1593,7 +1593,7 @@ response/decay 1.000000
 invert 0
 threshold 0.923094
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1616,7 +1616,7 @@ response/decay 1.000000
 invert 0
 threshold -21.692334
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1639,7 +1639,7 @@ response/decay 0.000000
 invert 1
 threshold 0.000018
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
@@ -1662,7 +1662,7 @@ response/decay 0.794626
 invert 0
 threshold -11.076894
 audio/bypass 0
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 audio/mute 0
 limiter/active 1
