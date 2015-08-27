@@ -48,9 +48,9 @@ echo "ssh-keyscanned ${DEPLOYHOST}"
 if [ -e "${KEYFILE}" ]; then
  chmod 600 "${KEYFILE}"
  ssh-add "${KEYFILE}"
- error "ssh-added ${KEYFILE}"
+ echo "ssh-added ${KEYFILE}"
 else
- error "missing ${KEYFILE}"
+ echo "missing ${KEYFILE}"
 fi
 
 if [ "x${TRAVIS_OS_NAME}" = "xLinux" ]; then
