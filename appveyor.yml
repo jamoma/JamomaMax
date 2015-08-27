@@ -34,7 +34,8 @@ after_build:
   - 7z a JamomaMax-Windows_%PLATFORM%-%APPVEYOR_REPO_COMMIT:~0,7%-%APPVEYOR_REPO_TAG_NAME%.zip Jamoma > nul
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - move /Y id_rsa %USERPROFILE%\.ssh\
-  - scp c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-Windows_%PLATFORM%.zip jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+  - cd c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\
+  - scp JamomaMax-Windows_%PLATFORM%.zip jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
 
 artifacts:
   - name: Installer
