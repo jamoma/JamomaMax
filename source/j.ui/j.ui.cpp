@@ -557,7 +557,7 @@ void ui_paint(t_ui *x, t_object *view)
 	if (x->has_gain) {
 		long right_side = rect.width - 16.0;
 		float gain = x->gain;
-		TTLimit(gain, -70.0f, 6.0f);
+		TTLimit(gain, -96.0f, 6.0f);
 		
 		if (x->has_mix)
 			right_side -= 16.0;
@@ -591,14 +591,14 @@ void ui_paint(t_ui *x, t_object *view)
 		
         // interior arc
 		jgraphics_set_source_jrgba(g, &s_color_darkgreen);
-		jgraphics_arc(g, right_side+6.5, 3.0+6.5, 6.5, PI / 2, (PI/2) + TWOPI * (1.0 + (gain - 6.0) / 76.0)); // angles are in radians
+		jgraphics_arc(g, right_side+6.5, 3.0+6.5, 6.5, PI / 2, (PI/2) + TWOPI * (1.0 + (gain - 6.0) / 102.0)); // angles are in radians
 		jgraphics_line_to(g, right_side+6.5, 3.0+6.5);
 		jgraphics_close_path(g);
 		jgraphics_fill(g);	
 		
         // border arc
 		jgraphics_set_source_jrgba(g, &s_color_green_ring);
-		jgraphics_arc(g, right_side+6.5, 3.0+6.5, 6.5, PI / 2, (PI/2) + TWOPI * (1.0 + (gain - 6.0) / 76.0));
+		jgraphics_arc(g, right_side+6.5, 3.0+6.5, 6.5, PI / 2, (PI/2) + TWOPI * (1.0 + (gain - 6.0) / 102.0));
 		jgraphics_line_to(g, right_side+6.5, 3.0+6.5);
 		jgraphics_stroke(g);
 		
@@ -1016,7 +1016,7 @@ void ui_mousedragdelta(t_ui *x, t_object *patcherview, t_pt pt, long modifiers)
 	}
 	else if (x->gainDragging) {
 		x->anchorValue = x->anchorValue - (pt.y * factor);
-		TTLimit(x->anchorValue, -70.0f, 6.0f);
+		TTLimit(x->anchorValue, -96.0f, 6.0f);
 		ui_viewer_send(x, TTSymbol("audio/gain"), TTValue(x->anchorValue));
 		
 		snprintf(str, sizeof(str), "%f", x->gain);

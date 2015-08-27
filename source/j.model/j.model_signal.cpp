@@ -141,7 +141,7 @@ void model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 aData.set(kTTSym_dataspace, TTSymbol("gain"));
                 aData.set(kTTSym_dataspaceUnit, TTSymbol("dB"));
                 aData.set(kTTSym_tags, kTTSym_generic);
-                v = TTValue(-70., 6.);
+                v = TTValue(-96., 6.);
                 aData.set(kTTSym_rangeBounds, v);
                 aData.set(kTTSym_rangeClipmode, kTTSym_none);
                 v = TTValue(0.);
