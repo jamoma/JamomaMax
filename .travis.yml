@@ -7,7 +7,7 @@ install:
 script:
 - "./script/build.sh"
 after_success:
-- "./script/deploy-git.sh"
+- "./script/deploy-thor.sh"
 env:
   global:
   - secure: ftWYgyVVY2uxJyamJDnss61nY0ymLCHq4j93xitTfcB0IDA7JM4AN3gO+59T53yuCiCjndfFqF7yRijIq98WiLpVEQWmB8/GHCjjnqfU9Vr0MQdkTsLAijFY5YP4LAg8zj64APyAUB5f5JGFk39+D0OnlYuyoeN1gnnd0/BhYl4=
