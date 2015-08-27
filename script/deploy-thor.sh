@@ -63,7 +63,7 @@ cd ${TRAVIS_BUILD_DIR}/build
 cmake -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake
 
 cd ${TRAVIS_BUILD_DIR}/JamomaInstall/JamomaMax/
-tar cvzf "${TRAVIS_BUILD_DIR}/${ARCHIVE_NAME}" Jamoma/
+tar czf "${TRAVIS_BUILD_DIR}/${ARCHIVE_NAME}" Jamoma/
 
 cd ${TRAVIS_BUILD_DIR}
 scp ${ARCHIVE_NAME} ${GITDEPLOYTARGET}
