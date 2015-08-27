@@ -15,7 +15,7 @@ input~/input/channel.L 1
 input~/input/channel.R 2
 output~/saturation/depth 10.000000
 input~/testtone/frequency 1000
-input~/audio/gain 100.000000
+input~/audio/gain 0.000000
 template~/audio/gain 82.000000
 output~/audio/gain 73.250000
 input~/input/limiter/lookahead 100
@@ -64,8 +64,8 @@ input~/input/channel.R 2
 output~/saturation/depth 10.000000
 input~/testtone/frequency 1000
 input~/audio/gain 73.250000
-template~/audio/gain 100.000000
-output~/audio/gain 100.000000
+template~/audio/gain 0.000000
+output~/audio/gain 0.000000
 output~/limiter/lookahead 64
 input~/input/limiter/lookahead 100
 input~/file/loop 1

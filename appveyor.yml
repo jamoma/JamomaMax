@@ -31,19 +31,11 @@ build:
 after_build:
   - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
   - cd JamomaInstall\JamomaMax
-  - 7z a JamomaMax-Windows_%PLATFORM%.zip Jamoma > nul
+  - 7z a JamomaMax-Windows_%PLATFORM%-%APPVEYOR_REPO_COMMIT:~0,7%-%APPVEYOR_REPO_TAG_NAME%.zip Jamoma > nul
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - move /Y id_rsa %USERPROFILE%\.ssh\
-  - git clone git@github.com:jamoma/nightly-builds.git c:\projects\nightly-builds
-  - IF exist c:\projects\nightly-builds\JamomaMax\ ( echo "c:\projects\nightly-builds\JamomaMax\" exists ) ELSE ( mkdir c:\projects\nightly-builds\JamomaMax\ && echo "c:\projects\nightly-builds\JamomaMax\" created )
-  - move /Y c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\JamomaMax-Windows_%PLATFORM%.zip c:\projects\nightly-builds\JamomaMax\JamomaMax-Windows_%PLATFORM%.zip
-  - cd c:\projects\nightly-builds\JamomaMax\
-  - git config --global user.email "jamoma@appveyor.com"
-  - git config --global user.name "Jamoma from Appveyor"
-  - git config --global push.default matching
-  - git add -f JamomaMax-Windows_%PLATFORM%.zip
-  - git commit -m "JamomaMax Windows %PLATFORM% build %APPVEYOR_REPO_TAG_NAME% %APPVEYOR_REPO_COMMIT%"
-  - git push
+  - cd c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\
+  - scp JamomaMax-Windows_%PLATFORM%.zip jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
 
 artifacts:
   - name: Installer

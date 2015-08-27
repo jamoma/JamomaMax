@@ -4,7 +4,7 @@
 /mouse/active 0
 /degrade~/samplerateRatio 1.000000
 /degrade~/bitdepth 24
-/degrade~/audio/gain 100.000000
+/degrade~/audio/gain 0.000000
 /degrade~/audio/mix 0.000000
 /degrade~/audio/bypass 0
 /degrade~/audio/mute 0
@@ -15,7 +15,7 @@
 /mouse/active 1
 /degrade~/samplerateRatio 1.000000
 /degrade~/bitdepth 24
-/degrade~/audio/gain 100.000000
+/degrade~/audio/gain 0.000000
 /degrade~/audio/mix 100.000000
 /degrade~/audio/bypass 0
 /degrade~/audio/mute 0

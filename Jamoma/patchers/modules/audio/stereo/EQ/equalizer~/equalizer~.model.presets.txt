@@ -4,7 +4,7 @@
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type lowshelf
@@ -34,7 +34,7 @@ filter.4/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type peaknotch
@@ -100,7 +100,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type peaknotch
@@ -166,7 +166,7 @@ filter.11/octave_bandwidth 1.390000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type peaknotch
@@ -232,7 +232,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type lowshelf
@@ -298,7 +298,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type peaknotch
@@ -364,7 +364,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type peaknotch
@@ -430,7 +430,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -462,7 +462,7 @@ filter.4/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -493,7 +493,7 @@ filter.4/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -524,7 +524,7 @@ filter.4/octave_bandwidth 0.790000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -555,7 +555,7 @@ filter.4/octave_bandwidth 3.260000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -586,7 +586,7 @@ filter.4/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -617,7 +617,7 @@ filter.4/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type peaknotch
@@ -682,7 +682,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type peaknotch
@@ -748,7 +748,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -779,7 +779,7 @@ filter.4/octave_bandwidth 0.790000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -845,7 +845,7 @@ filter.11/octave_bandwidth 1.000000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -911,7 +911,7 @@ filter.11/octave_bandwidth 1.490000
 ###########################################################################
 
 bands 11
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -977,7 +977,7 @@ filter.11/octave_bandwidth 1.490000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -1008,7 +1008,7 @@ filter.4/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 5
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type lowshelf
@@ -1044,7 +1044,7 @@ filter.5/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -1075,7 +1075,7 @@ filter.4/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type highpass
@@ -1106,7 +1106,7 @@ filter.4/octave_bandwidth 2.000000
 ###########################################################################
 
 bands 4
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mix 100.000000
 
 filter.1/type lowshelf

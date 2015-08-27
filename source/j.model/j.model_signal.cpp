@@ -138,15 +138,17 @@ void model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 
                 makeInternals_data(x, modelAdrs, TTSymbol("audio/gain"), gensym("return_audio_gain"), x->patcherPtr, kTTSym_parameter, aData);
                 aData.set(kTTSym_type, kTTSym_decimal);
+                aData.set(kTTSym_dataspace, TTSymbol("gain"));
+                aData.set(kTTSym_dataspaceUnit, TTSymbol("dB"));
                 aData.set(kTTSym_tags, kTTSym_generic);
-                v = TTValue(0., 127.);
+                v = TTValue(-96., 6.);
                 aData.set(kTTSym_rangeBounds, v);
-                aData.set(kTTSym_rangeClipmode, kTTSym_both);
-                v = TTValue(100.);
+                aData.set(kTTSym_rangeClipmode, kTTSym_none);
+                v = TTValue(0.);
                 aData.set(kTTSym_valueDefault, v);
                 aData.set(kTTSym_rampDrive, TTSymbol("max"));
                 aData.set(kTTSym_rampFunction, TTSymbol("linear"));
-                aData.set(kTTSym_description, TTSymbol("Set gain of model's outputs (as MIDI value by default)."));
+                aData.set(kTTSym_description, TTSymbol("Set gain of model's outputs in dB."));
             }
             
             // make an internal sender to access to all out instance gain attribute
@@ -240,14 +242,16 @@ void model_signal_return_audio_gain(TTPtr self, t_symbol *msg, long argc, t_atom
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 	TTObject    aSender;
-    TTValue     v, out;
+    TTValue     v, in, out, none;
 	
-	if (!x->internals->lookup(TTSymbol("audio/out.*:gain"), v)) {
-        
+	if (!x->internals->lookup(TTSymbol("audio/out.*:gain"), v))
+    {
         aSender = v[0];
         
-        jamoma_ttvalue_from_Atom(v, msg, argc, argv);
+        jamoma_ttvalue_from_Atom(in, msg, argc, argv);
         
-        aSender.send(kTTSym_Send, v, out);
+        EXTRA->dataspaceConverter->send("convert", in, out);
+        
+        aSender.send(kTTSym_Send, out, none);
     }
 }

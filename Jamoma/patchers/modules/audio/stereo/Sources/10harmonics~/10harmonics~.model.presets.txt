@@ -3,7 +3,7 @@
 # "edit a comment"
 #################################
 
-audio/gain 100.000000
+audio/gain 0.000000
 audio/mute 0
 factor.1 1.000000
 factor.2 2.00000

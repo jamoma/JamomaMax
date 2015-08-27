@@ -10,12 +10,12 @@ CUE initialisation # (fold)
     
     # Model filter_help
     /filter_help/filtertype bandpass
-    /filter_help/audio/gain 100.
+    /filter_help/audio/gain 0.
     /filter_help/audio/mix 100.000
     /filter_help/audio/bypass 0
     /filter_help/audio/mute 0
     /filter_help/view/freeze 0
-    /filter_help/frequency 300.0
+    /filter_help/frequency 400.0
     /filter_help/q 1.472
     /filter_help/filtergain -1.780
     
@@ -23,7 +23,7 @@ CUE initialisation # (fold)
     /output_help/audio/active 0                 # Turn off the dsp
     /output_help/ch.1 1
     /output_help/ch.2 2
-    /output_help/audio/gain 0.000
+    /output_help/audio/gain -70.000
     /output_help/record/filetype aiff
     /output_help/record/samptype int24
     /output_help/saturation/depth 10.000
@@ -50,10 +50,10 @@ CUE audio_on # (fold)
     /output_help/audio/active 1                 # Turn on the DSP
 
     # Model input_help
-    /input_help/audio/gain 90.000 ramp 2000     # Ramp to this new value over 2 seconds...
+    /input_help/audio/gain -6.000 ramp 2000     # Ramp to this new value over 2 seconds...
     
     # Model filter_help
-    /filter_help/audio/gain 100.000 ramp 2000
+    /filter_help/audio/gain 0.000 ramp 2000
 
 # (end)    
 
@@ -64,7 +64,7 @@ CUE fade_in # (fold)
 ##############################
 
     # Model output_help
-    /output_help/audio/gain 90.000 ramp 2000
+    /output_help/audio/gain -5.000 ramp 2000
 
 # (end)
 
@@ -79,7 +79,7 @@ CUE sweep # (fold)
     
     WAIT 6000                                   # The wait directive pauses us for 6 seconds
     
-    /filter_help/frequency 200 ramp 3000
+    /filter_help/frequency 800 ramp 3000
 
 # (end)
 
@@ -90,15 +90,15 @@ CUE dataspaceDemo	# (fold)
 ##############################
 
 	# This makes gain changes audible on cheap laptop speakers
-	/filter_help/frequency 4000                
+	/filter_help/frequency 4000 ramp 200
 
-    # Set gain using dB unit
-	/output_help/audio/gain 0 dB
+    # Set gain using linear unit
+	/output_help/audio/gain 1. linear
 	
 	WAIT 2000
 	
-    # Set gain using the default unit (midi)
-	/output_help/audio/gain 0
+    # Set gain using the default unit (dB)
+	/output_help/audio/gain -24
 	
 	WAIT 2000
 	
@@ -127,10 +127,10 @@ CUE fade_out	# (fold)
 	# sure that the next event sets all parameters to expected final state of
 	# previous cue. This prevents errouneous state in the case that the next cue
 	# is triggered before the previous one had finished executing.
-    /filter_help/frequency 200
+    /filter_help/frequency 800 ramp 200
 
     # Model output_help
-    /output_help/audio/gain 0.000 ramp 2000    
+    /output_help/audio/gain -70.000 ramp 5000    
     
 # (end)
 
