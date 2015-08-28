@@ -102,9 +102,9 @@ mkdir -p build
 	make install
 
 	if [ "x${JAMOMA_INSTALL_JAMOMAMAX}" = "xYes" ]; then 
-		rm -rf ../Implementations/Max/Jamoma/support
-		rm -rf ../Implementations/Max/Jamoma/externals
-		rm -rf ../Implementations/Max/Jamoma/extensions
+		rm -rf ../Jamoma/support
+		rm -rf ../Jamoma/externals
+		rm -rf ../Jamoma/extensions
 		cp -rf "$PWD/JamomaInstall/jamoma/JamomaMax/Jamoma/support" ../Jamoma
 		cp -rf "$PWD/JamomaInstall/jamoma/JamomaMax/Jamoma/externals" ../Jamoma
 		cp -rf "$PWD/JamomaInstall/jamoma/JamomaMax/Jamoma/extensions" ../Jamoma
