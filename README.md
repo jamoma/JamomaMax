@@ -1,13 +1,10 @@
-
 JamomaMax
 =========
 Jamoma implementation for Max.
 
-[![Stories in Ready](https://badge.waffle.io/jamoma/jamomamax.png?label=ready&title=Ready)](https://waffle.io/jamoma/jamomamax)
-
-OS X build status : [![Build Status](https://travis-ci.org/jamoma/JamomaMax.svg?branch=dev)](https://travis-ci.org/jamoma/JamomaMax)
-
-Windows build status : [![Build status](https://ci.appveyor.com/api/projects/status/yqv0mv6yrcd41jej?svg=true)](https://ci.appveyor.com/project/avilleret/jamomamax)
+| MacOS X build status | Windows build status | Waffle Stories |
+| ------------- | ----------- | ----------- |
+| [![Build Status](https://travis-ci.org/jamoma/JamomaMax.svg?branch=dev)](https://travis-ci.org/jamoma/JamomaMax)      | [![Build status](https://ci.appveyor.com/api/projects/status/yqv0mv6yrcd41jej?svg=true)](https://ci.appveyor.com/project/avilleret/jamomamax) | [![Stories in Ready](https://badge.waffle.io/jamoma/jamomamax.png?label=ready&title=Ready)](https://waffle.io/jamoma/jamomamax) |
 
 ### Set up 
 
