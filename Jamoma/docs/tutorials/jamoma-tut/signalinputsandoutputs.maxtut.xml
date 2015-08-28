@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Model inputs and outputs"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Model inputs and outputs patcher" patch="signalinputsandoutputs01.maxpat"/>
+
+<previous name="parameterattributes">Attributes and methods specification</previous>
+
+<next name="modelpresets">Model presets</next>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Model inputs and outputs</h1>
+<h2>Control signal ins and outs</h2>
+
+<illustration><img src="images/signalinputsandoutputs01.png"/>A simple soundfile player</illustration>
+
+<h2>Audio signal ins and outs</h2>
+
+
+
+
+<h2>Summary</h2>
+<p>This tutorial goes through the features provided by the combination of j.model and j.in/j.out. This shows how they can help to bypass, mix data or audio signals.</p>
+<seealsolist>
+	<seealso name="j.in"></seealso>
+	<seealso name="j.out"></seealso>
+	<seealso name="j.in~"></seealso>
+	<seealso name="j.out~"></seealso>
+</seealsolist>
+</chapter>

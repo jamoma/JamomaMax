@@ -4,20 +4,17 @@ if(APPLE)
 	include_directories("${FILE_H_DIR}")
 endif()
 
-addMaxsupport()
-
 add_library(${PROJECT_NAME} MODULE ${PROJECT_SRCS})
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY BUNDLE True)
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_LIST_DIR}/MaxExternal-Info.plist")
-
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY BUNDLE_EXTENSION "mxo")
-
-
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+if(APPLE)
+	set_property(TARGET ${PROJECT_NAME}
+				 PROPERTY BUNDLE True)
+	set_property(TARGET ${PROJECT_NAME}
+				 PROPERTY BUNDLE_EXTENSION "mxo")
+	set_property(TARGET ${PROJECT_NAME}
+				 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+    set_property(TARGET ${PROJECT_NAME}
+                 PROPERTY BUILD_WITH_INSTALL_RPATH TRUE)
+endif()
 
 
 # Since XCode does not like tildas in project names, if
@@ -27,9 +24,19 @@ if("${PROJECT_NAME}" MATCHES ".*_tilda")
 	string(REGEX REPLACE "_tilda" "~" JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
 	set_target_properties(${PROJECT_NAME}
 						  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
+elseif("${PROJECT_NAME}" MATCHES ".*_equal")
+        string(REGEX REPLACE "_equal" "=" JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
+        set_target_properties(${PROJECT_NAME}
+                                                  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
+else()
+        set(JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
+        set_target_properties(${PROJECT_NAME}
+                                                  PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
 endif()
+configure_file("${CMAKE_CURRENT_LIST_DIR}/MaxExternal-Info.plist.in" "${PROJECT_BINARY_DIR}/Info.plist" @ONLY)
 
-# TODO same of _equal
+set_property(TARGET ${PROJECT_NAME}
+                         PROPERTY MACOSX_BUNDLE_INFO_PLIST "${PROJECT_BINARY_DIR}/Info.plist")
 
 # Todo link at a smaller granularity
 target_link_libraries(${PROJECT_NAME} Foundation)
@@ -43,10 +50,8 @@ if(APPLE)
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_MACH_O_TYPE "mh_bundle")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_WRAPPER_EXTENSION "mxo")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_GCC_PREFIX_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/macho-prefix.pch")
-		#SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_INFOPLIST_FILE "${CMAKE_CURRENT_SOURCE_DIR}/../c74support/max-includes/Info.plist")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_WARNING_CFLAGS "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_DEPLOYMENT_LOCATION "YES")
-		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_GENERATE_PKGINFO_FILE "YES")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_DSTROOT "${EXECUTABLE_OUTPUT_PATH}")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_INSTALL_PATH "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/externals")
 		SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_GCC_DYNAMIC_NO_PIC "NO")
@@ -57,19 +62,23 @@ if(APPLE)
 	set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 	set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX "")
 elseif(WIN32)
-	set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".mxe")
+	if(WIN64)
+		set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".mxe64")
+	else()
+		set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".mxe")
+	endif()
 endif()
 
 if("${PROJECT_NAME}" STREQUAL "j.loader")
-	install(TARGETS ${PROJECT_NAME} 
+    # use the install rpath when linking
+	install(TARGETS ${PROJECT_NAME}
 			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/extensions"
 			COMPONENT JamomaMax)
 else()
-	install(TARGETS ${PROJECT_NAME} 
+	install(TARGETS ${PROJECT_NAME}
 			DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/externals"
 			COMPONENT JamomaMax)
 endif()
-
 
 ### Tests ###
 addTestTarget()

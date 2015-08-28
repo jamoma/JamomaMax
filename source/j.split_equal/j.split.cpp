@@ -4,7 +4,7 @@
  *
  * @brief j.split= : wraps the #TTAudioGraphSplit class as a multichannel signal splitter for AudioGraph
  *
- * @details 
+ * @details
  *
  * @authors Timothy Place, Trond Lossius
  *
@@ -13,7 +13,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 
 int C74_EXPORT main(void)
@@ -22,7 +22,7 @@ int C74_EXPORT main(void)
 	TTValue								value(0);
 
 	TTAudioGraphInit();
-	
+
 	options->append(TT("argumentDefinesNumOutlets"), value);
 	wrapAsMaxAudioGraph(TT("audio.split"), "j.split=", NULL, options);
 	return wrapAsMaxAudioGraph(TT("audio.split"), "split=", NULL, options);

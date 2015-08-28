@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.cue" module="" category="Jamoma">
+	<digest>
+		Store and recall the state of several models	</digest>
+	<description>
+		j.cue allows to store states (current contained parameters value) of multiple models within a patch and offers various options to manage, recall or sequence these states as needed.
+	</description>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			cue
+		</metadata>
+		<metadata name="tag">
+			preset management
+		</metadata>
+		<metadata name="tag">
+			saving
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="any">
+			<digest>
+				Messages to j.cue
+			</digest>
+			<description>
+				Message input to store, recall and manage Jamoma model states
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="any">
+			<digest>
+				State content output
+			</digest>
+			<description>
+				Leftmost outlet is use to output content of the state requested by the <m>output</m> message
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Rightmost outlet is used to dump out requested attributes value
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist/>
+	<methodlist>
+		<method name="(mouse)">
+			<digest>
+				Open j.cue text editor window
+			</digest>
+			<description>
+				Double click on j.cue object brings a text editor window containing all stored states
+			</description>
+		</method>
+		<!-- <method name="append">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method> -->
+		<method name="clear">
+			<arglist/>
+			<digest>
+				Clear current states stored in j.cue
+			</digest>
+			<description>
+				The <m>clear</m> message clears all states stored in j.cue. Note that if the states list was loaded from a file, file content is not cleared until the <m>write/again</m> message is sent to j.cue
+			</description>
+		</method>
+		<method name="copy">
+			<arglist>
+				<arg name="source state name or index" type="any" optional="0"/>
+				<arg name="new state name" type="symbol" optional="0"/>
+				<arg name="state index" type="int" optional="1"/>
+			</arglist>
+			<digest>
+				Copy a state into a new state
+			</digest>
+			<description>
+				The <m>copy</m> message followed by a state name (<i>symbol</i>) or index (<i>int</i>) copies the content of a state into a new state named using <m>copy</m> second argument. An optional int used as a third argument may be used to specify a position in the list of states for the newly created state
+			</description>
+		</method>
+		<method name="delete">
+			<arglist>
+				<arg name="state name or index" type="any" optional="0"/>
+			</arglist>
+			<digest>
+				Delete a state from j.cue
+			</digest>
+			<description>
+				The <m>delete</m> message followed by a state name or index removes the specified state from j.cue's current list of states
+			</description>
+		</method>
+		<method name="dump">
+			<arglist/>
+			<digest>
+				Dump j.cue attributes value out of j.cue rightmost output
+			</digest>
+			<description>
+				The <m>dump</m> message outputs j.cue attributes value in j.cue rightmost output
+			</description>
+		</method>
+		<method name="edit">
+			<arglist>
+				<arg name="name of state to edit" type="symbol" optional="1"/>
+			</arglist>
+			<digest>
+				Open j.cue text window state editor
+			</digest>
+			<description>
+				The <m>edit</m> message opens j.cue text window displaying all currently stored states. An optional symbol may be used as argument to the <m>copy</m> message to open a single state in j.cue text editor.
+			</description>
+		</method>
+		<method name="interpolate">
+			<arglist>
+				<arg name="state name or index" type="any" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
+				<arg name="interpolation ratio" type="float" optional="0"/>
+			</arglist>
+			<digest>
+				Interpolate between two states
+			</digest>
+			<description>
+				The <m>interpolate</m> message followed by 2 states name or index and a ratio value (between 0 and 1) interpolates between both states content
+			</description>
+		</method>
+		<method name="mix">
+			<arglist>
+				<arg name="state name or index" type="any" optional="0"/>
+				<arg name="associated weight" type="float" optional="0"/>
+				<arg name="state name or index" type="any" optional="0"/>
+				<arg name="associated weight" type="float" optional="0"/>
+				<arg name="..." type="list" optional="1"/>
+			</arglist>
+			<digest>
+				Mix between two or more states
+			</digest>
+			<description>
+				The <m>mix</m> message followed by pairs of state name or index and float defining an associated weight value mixes between multiple states content
+			</description>
+		</method>
+		<method name="move">
+			<arglist>
+				<arg name="state name or index" type="any" optional="0"/>
+				<arg name="new index" type="int" optional="0"/>
+			</arglist>
+			<digest>
+				Move a state to a specified index
+			</digest>
+			<description>
+				The <m>move</m> message followed by a state name (<i>symbol</i>) or index (<i>int</i>) and a index (<i>int</i>) moves the specified state to a new position in j.cue states list
+			</description>
+		</method>
+		<method name="new">
+			<arglist>
+				<arg name="state name" type="symbol" optional="1"/>
+			</arglist>
+			<digest>
+				Store the parameters value of one or many models as a state
+			</digest>
+			<description>
+				The <m>new</m> message followed by a name (<i>symbol</i>) stores the values of one or many models as a state. Without any argument, the <m>new</m> message will erase the last stored, recalled or updated state and store the models current state instead
+			</description>
+		</method>
+		<method name="optimize">
+			<arglist>
+				<arg name="list of states name or index" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Remove redundant values between consecutive states
+			</digest>
+			<description>
+				The <m>optimize</m> message allows to filter out and delete redundant values between consecutive states. For example, assuming the following two states:<br/><br/>
+<techdetail><ul><li>State_1</li><ul><li>address_A 1</li><li>address_B 2</li><li>address_C 3</li><li>address_D 4</li></ul><li>State_2</li><ul><li>address_A 1</li><li>address_B 20</li><li>address_C 3</li><li>address_E 5</li></ul></ul></techdetail>
+			<m>'optimize State_1 State_2'</m> will slim State_2 as:
+<techdetail><ul><li>address_B 20</li><li>address_E 5</li></ul></techdetail>			</description>
+		</method>
+		<method name="order">
+			<arglist>
+				<arg name="ordered list of states name" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Order j.cue list of states
+			</digest>
+			<description>
+				The <m>order</m> message followed by list of states name reorders states in j.cue in the order defined by the list
+			</description>
+		</method>
+		<method name="get">
+			<arglist>
+				<arg name="state name" type="symbol" optional="0"/>
+				<arg name="attribute name" type="symbol" optional="0"/>
+			</arglist>
+			<digest>
+				Get stored state attributes (ie. description &amp; ramp)
+			</digest>
+			<description>
+				The <m>get</m> message followed by a state name and an attribute name allows to query value of one of the stored state attributes. State attributes are:
+				<ul><li>description : a text description attached to a stored state</li><li>ramp : a time in milliseconds that will be use to ramp to recalled stored values</li></ul>
+			</description>
+		</method>
+		<method name="output">
+			<arglist>
+				<arg name="state name or index" type="any" optional="1"/>
+				<arg name="node address" type="symbol" optional="1"/>
+			</arglist>
+			<digest>
+				Output a state content out of the left output
+			</digest>
+			<description>
+				The <m>output</m> message followed by a state name (<i>symbol</i>) or index (<i>int</i>) outputs the specified state's content out of j.cue leftmost outlet. A symbol used as an optional second argument to the <m>output</m> message may be used to restrict the content output to a node address in the state only. The address may be model address or a parameter address.<br/><br/>Without argument, the <m>output</m> message outputs the last stored or recalled state
+			</description>
+		</method>
+		<method name="namespace/select">
+			<arglist>
+				<arg name="nodes addresses" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Add nodes to j.cue current addresses selection
+			</digest>
+			<description>
+				The <m>namespace/select</m> message adds some nodes to j.cue current addresses selection. Addresses may be the root of Jamoma namespace (/), model addresses or parameters full address. By default, j.cue will select all addresses under the root (/)
+			</description>
+		</method>
+		<method name="namespace/unselect">
+			<arglist>
+				<arg name="nodes addresses" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Remove nodes to j.cue current addresses selection
+			</digest>
+			<description>
+				The <m>namespace/unselect</m> message removes some nodes from j.cue current addresses selection. Addresses may be the root of Jamoma namespace (/), model addresses or parameters full address. By default, j.cue will select all addresses under the root (/)
+			</description>
+		</method>
+		<method name="namespace/grab">
+			<arglist>
+				<arg name="state name" type="symbol" optional="0"/>
+			</arglist>
+			<digest>
+				Select the namespace of an existing cue
+			</digest>
+			<description>
+				The <m>namespace/grab</m> message grabs the addresses selection from a named state defined as argument to the message
+</description>
+		</method>
+		<method name="read">
+			<arglist>
+				<arg name="file path" type="symbol" optional="1"/>
+			</arglist>
+			<digest>
+				Read a list of states saved as a text file
+			</digest>
+			<description>
+				The <m>read</m> message followed by an optional path opens a list of states saved as a text file. Without any argument, <m>read</m> message brings a dialog window to select file on disk
+			</description>
+		</method>
+		<method name="read/again">
+			<arglist/>
+			<digest>
+				Re-read a list of states saved as a text file
+			</digest>
+			<description>
+				The <m>read/again</m> message opens previously loaded text file containing states. This will clear all unsaved changes since last opening state file
+			</description>
+		</method>
+		<method name="recall">
+			<arglist>
+				<arg name="state name or index" type="any" optional="0"/>
+			</arglist>
+			<digest>
+				Recall the state of many models
+			</digest>
+			<description>
+				The <m>recall</m> message followed by a state name or index sets models values back to a previously saved state
+			</description>
+		</method>
+		<method name="rename">
+			<arglist>
+				<arg name="state name or index" type="any" optional="0"/>
+				<arg name="new state name" type="symbol" optional="0"/>
+			</arglist>
+			<digest>
+				Rename a state
+			</digest>
+			<description>
+				The <m>rename</m> message followed by a state name or index renamed given state under the name given as second argument (<i>symbol</i>)
+			</description>
+		</method>
+		<method name="set">
+			<arglist>
+				<arg name="state name" type="symbol" optional="0"/>
+				<arg name="attribute name" type="symbol" optional="0"/>
+				<arg name="attribute value" type="any" optional="0"/>
+			</arglist>
+			<digest>
+				Set stored state attributes (ie. description &amp; ramp)
+			</digest>
+			<description>
+				The <m>set</m> message followed by a state name and an attribute name and value allows to define value of one of the stored state attributes. State attributes are:
+				<ul><li>description : allows to attach a text description to a stored state</li><li>ramp : allows to set a time in milliseconds that will be use to ramp to stored values</li></ul>
+			</description>
+		</method>
+		<method name="update">
+			<arglist>
+				<arg name="state name or index" type="any" optional="0"/>
+			</arglist>
+			<digest>
+				Update a state content
+			</digest>
+			<description>
+				The <m>update</m> message followed by a state name or index updates all nodes address in the stored state with their current value
+			</description>
+		</method>
+		<method name="write">
+			<arglist>
+				<arg name="filepath" type="symbol" optional="1"/>
+			</arglist>
+			<digest>
+				Save list of states on disk
+			</digest>
+			<description>
+				The <m>write</m> message followed by an optional file path saves j.cue current list of states as a text file. Without any argument, the <m>write</m> message will bring a dialog to select where on disk to save the file
+			</description>
+		</method>
+		<method name="write/again">
+			<arglist/>
+			<digest>
+				Save again current list of states as a text file
+			</digest>
+			<description>
+				The <m>write/again</m> message saves current list of states in the last opened text file
+			</description>
+		</method>
+	</methodlist>
+	<attributelist>
+		<attribute name="address" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Parent node in the namespace to store values
+			</digest>
+			<description>
+				The <at>address</at> attribute allows to set the parent from which sub nodes state will get stored (default = '/')
+			</description>
+		</attribute>
+		<attribute name="current" get="1" set="0" type="symbol" size="1">
+			<digest>
+				Current state in j.cue
+			</digest>
+			<description>
+				The <at>current</at> attribute is a read-only attribute that displays the lastly stored, recalled or updated state name
+			</description>
+		</attribute>
+		<attribute name="current/description" get="1" set="1" type="any" size="1">
+			<digest>
+				Description of the current state
+			</digest>
+			<description>
+				The <at>current/description</at> attribute allows to associate a text description with the current state
+			</description>
+		</attribute>
+		<attribute name="current/position" get="1" set="0" type="int" size="1">
+			<digest>
+				Position of the current state
+			</digest>
+			<description>
+				The <at>current/position</at> attribute is a read-only attribute that displays the current state position in j.cue list of states
+			</description>
+		</attribute>
+		<attribute name="current/ramp" get="1" set="1" type="int" size="1">
+			<digest>
+				Ramp time of the current state
+			</digest>
+			<description>
+				The <at>current/ramp</at> attribute allows to get or set a ramp time length specified as milliseconds for the current state. When recalling a state with an associated ramp time, parameters value will be reached from their current patcher state over the defined amount of time
+			</description>
+		</attribute>
+		<attribute name="names" get="1" set="0" type="any" size="1">
+			<digest>
+				Get the name of the states stored in j.cue
+			</digest>
+			<description>
+				The <at>names</at> attribute is a read-only attribute allowing to get the list of all states stored in j.cue
+			</description>
+		</attribute>
+		<attribute name="namespace" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Bind to a specific j.namespace selection
+			</digest>
+			<description>
+				The <at>namespace</at> attribute followed by a j.namespace's named selection (<i>symbol</i>) will set j.cue to use this namespace selection. This allows to use j.namespace filtering features to select nodes addresses to store value of in a j.cue state
+			</description>
+		</attribute>
+		<!-- WE SHOULD GET RID OF RELATIVE ATTR SINCE IT ALMOST DUPLICATES @ADDRESS-->
+		<!-- <attribute name="relative" get="1" set="1" type="boolean" size="1">
+			<digest>
+				Automatically set the address attribute to the containing model address
+			</digest>
+			<description>
+				Automatically set the address attribute to the containing model address. Note that setting the address attribute will overide the relative state
+			</description>
+		</attribute> -->
+	</attributelist>
+	<examplelist>
+		<example caption="" img=""/>
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.namespace"/>
+		<seealso name="j.model"/>
+		<seealso name="cue_manager.model"/>
+		<seealso name="pattrstorage"/>
+	</seealsolist>
+</c74object>

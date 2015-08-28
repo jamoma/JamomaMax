@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Attributes and methods specification"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Attributes and methods specification patcher" patch="parameterattributes01.maxpat"/>
+
+<previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
+
+<next name="signalinputsandoutputs">Model inputs and outputs</next>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Attributes and methods specification</h1>
+<h2>Managing value behaviour</h2>
+
+<illustration><img src="images/parameterattributes01.png"/>A simple soundfile player</illustration>
+
+<h2>Documenting your model</h2>
+
+
+
+
+<h2>Summary</h2>
+<p>Jamoma models can be instantiated within a patcher just as regular Max abstractions.</p>
+<seealsolist>
+	<seealso name="j.send">Addressing model's parameters and messages</seealso>
+	<seealso name="j.receive">Listening to model's parameters or returns values</seealso>
+	<seealso name="j.remote">Binding to Jamoma model's parameters</seealso>
+	<seealso name="j.namespace">Declare a patcher as a model</seealso>
+</seealsolist>
+</chapter>

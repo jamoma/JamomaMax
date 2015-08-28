@@ -289,11 +289,11 @@ void data_address(TTPtr self, t_symbol *address)
 void data_assist(TTPtr self, TTPtr b, long msg, long arg, char *dst)
 {
 	if (msg==1) 						// Inlet
-		strcpy(dst, "input");
+		strcpy(dst, "update value, ramp to new value, or set an attribute");
 	else {							// Outlets
 		switch(arg) {
 			case data_out:
-				strcpy(dst, "direct: values");
+				strcpy(dst, "current value when updated");
 				break;
 			case dump_out:
 				strcpy(dst, "dumpout");
@@ -333,6 +333,9 @@ void data_list(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
 
 	jamoma_data_command(x->wrappedObject, msg, argc, argv);
+    
+    // to warn attr ui for example
+    object_attr_touch((t_object*)x, _sym_value);
 }
 
 

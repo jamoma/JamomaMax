@@ -4,8 +4,9 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 0,
-			"architecture" : "x86"
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 101.0, 81.0, 985.0, 505.0 ],
@@ -15,20 +16,171 @@
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "live.dial",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 692.0, 55.0, 44.0, 47.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 171.0, 20.5, 44.0, 47.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "Preamp[1]",
+							"parameter_shortname" : "Preamp",
+							"parameter_type" : 0,
+							"parameter_mmin" : -36.0,
+							"parameter_mmax" : 24.0,
+							"parameter_unitstyle" : 4,
+							"parameter_steps" : 601
+						}
+
+					}
+,
+					"varname" : "live.dial[3]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 692.0, 111.0, 91.0, 35.0 ],
+					"style" : "",
+					"text" : "j.remote limiter/preamp"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patcher" : 					{
+						"fileversion" : 1,
+						"appversion" : 						{
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 5,
+							"architecture" : "x64",
+							"modernui" : 1
+						}
+,
+						"rect" : [ 218.0, 79.0, 300.0, 105.0 ],
+						"bglocked" : 0,
+						"openinpresentation" : 1,
+						"default_fontsize" : 12.0,
+						"default_fontface" : 0,
+						"default_fontname" : "Arial",
+						"gridonopen" : 1,
+						"gridsize" : [ 5.0, 5.0 ],
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
+						"statusbarvisible" : 2,
+						"toolbarvisible" : 0,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
+						"boxanimatetime" : 200,
+						"enablehscroll" : 0,
+						"enablevscroll" : 0,
+						"devicewidth" : 0.0,
+						"description" : "",
+						"digest" : "",
+						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
+						"title" : "/spectral_shift~(view)",
+						"boxes" : [ 							{
+								"box" : 								{
+									"annotation" : "none",
+									"args" : [ "limiter" ],
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
+									"id" : "obj-2",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "limiter~.view.maxpat",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"offset" : [ 0.0, 0.0 ],
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+									"viewvisibility" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"comment" : "",
+									"id" : "obj-1",
+									"maxclass" : "inlet",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 515.0, 10.0, 25.0, 25.0 ],
+									"style" : ""
+								}
+
+							}
+ ],
+						"lines" : [  ]
+					}
+,
+					"patching_rect" : [ 0.0, 80.0, 135.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"description" : "",
+						"digest" : "",
+						"globalpatchername" : "",
+						"style" : "",
+						"tags" : ""
+					}
+,
+					"style" : "",
+					"text" : "p \"spectral_gate Panel\""
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "live.dial",
@@ -36,12 +188,12 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 717.0, 56.0, 87.0, 47.0 ],
+					"patching_rect" : [ 560.0, 55.0, 87.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 111.666664, 20.5, 56.0, 47.0 ],
+					"presentation_rect" : [ 115.0, 20.5, 56.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.dial[2]",
+							"parameter_longname" : "Decay",
 							"parameter_shortname" : "Decay",
 							"parameter_type" : 0,
 							"parameter_mmax" : 1.0,
@@ -62,12 +214,12 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 538.0, 56.0, 87.0, 47.0 ],
+					"patching_rect" : [ 433.0, 55.0, 87.0, 47.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 57.333332, 20.5, 56.0, 47.0 ],
+					"presentation_rect" : [ 59.0, 20.5, 56.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.dial[1]",
+							"parameter_longname" : "Attack",
 							"parameter_shortname" : "Attack",
 							"parameter_type" : 0,
 							"parameter_mmax" : 1.0,
@@ -88,12 +240,12 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "float" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 381.0, 56.0, 52.0, 47.0 ],
+					"patching_rect" : [ 343.0, 55.0, 52.0, 47.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 20.5, 56.0, 47.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.dial",
+							"parameter_longname" : "Threshold[1]",
 							"parameter_shortname" : "Threshold",
 							"parameter_type" : 0,
 							"parameter_mmin" : -48.0,
@@ -111,6 +263,7 @@
 , 			{
 				"box" : 				{
 					"automation" : "Invert Off",
+					"automationon" : "Invert On",
 					"id" : "obj-4",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
@@ -119,14 +272,14 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 538.0, 194.0, 83.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 177.0, 36.5, 84.0, 15.0 ],
+					"presentation_rect" : [ 215.5, 36.5, 59.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.text",
-							"parameter_shortname" : "live.text",
+							"parameter_longname" : "Invert",
+							"parameter_shortname" : "Invert",
 							"parameter_type" : 2,
 							"parameter_mmax" : 1.0,
-							"parameter_enum" : [ "Invert Off", "val2" ]
+							"parameter_enum" : [ "Invert Off", "Invert On" ]
 						}
 
 					}
@@ -146,7 +299,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 308.0, 187.0, 127.0, 20.0 ],
+					"patching_rect" : [ 308.0, 187.0, 127.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.R"
 				}
 
@@ -160,7 +314,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "", "" ],
-					"patching_rect" : [ 162.0, 187.0, 125.0, 20.0 ],
+					"patching_rect" : [ 162.0, 187.0, 125.0, 22.0 ],
+					"style" : "",
 					"text" : "j.receive~ audio/out.L"
 				}
 
@@ -202,7 +357,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 538.0, 225.0, 109.0, 20.0 ],
+					"patching_rect" : [ 538.0, 225.0, 109.0, 22.0 ],
+					"style" : "",
 					"text" : "j.remote invert"
 				}
 
@@ -212,11 +368,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-63",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 717.0, 112.0, 165.0, 20.0 ],
+					"patching_rect" : [ 560.0, 111.0, 100.0, 35.0 ],
+					"style" : "",
 					"text" : "j.remote response/decay"
 				}
 
@@ -226,11 +384,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-62",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 538.0, 112.0, 165.0, 20.0 ],
+					"patching_rect" : [ 433.0, 111.0, 100.0, 35.0 ],
+					"style" : "",
 					"text" : "j.remote response/attack"
 				}
 
@@ -240,11 +400,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-61",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 381.0, 112.0, 129.0, 20.0 ],
+					"patching_rect" : [ 343.0, 111.0, 64.0, 35.0 ],
+					"style" : "",
 					"text" : "j.remote threshold"
 				}
 
@@ -253,19 +415,22 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-59",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 538.0, 287.0, 400.0, 33.0 ],
+					"style" : "",
 					"text" : "Credits: This module is based on the plugin Brita that was part of the now discontinued Hipno, a set of Pluggo plugins developed by Electrotap"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"fontface" : 0,
+					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-50",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -284,7 +449,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 255.0, 25.0, 25.0 ]
+					"patching_rect" : [ 25.0, 255.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -296,7 +462,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 135.0, 25.0, 25.0 ]
+					"patching_rect" : [ 25.0, 135.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -309,7 +476,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 187.0, 63.0, 20.0 ],
+					"patching_rect" : [ 25.0, 187.0, 63.0, 22.0 ],
+					"style" : "",
 					"text" : "j.view"
 				}
 
@@ -380,6 +548,25 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 701.5, 156.0, 681.5, 156.0, 681.5, 44.0, 701.5, 44.0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-50", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-19", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -392,7 +579,7 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 390.5, 141.0, 373.5, 141.0, 373.5, 46.0, 390.5, 46.0 ],
+					"midpoints" : [ 352.5, 153.0, 335.5, 153.0, 335.5, 45.0, 352.5, 45.0 ],
 					"source" : [ "obj-61", 0 ]
 				}
 
@@ -402,7 +589,7 @@
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 547.5, 141.0, 529.5, 141.0, 529.5, 46.0, 547.5, 46.0 ],
+					"midpoints" : [ 442.5, 154.0, 424.5, 154.0, 424.5, 45.0, 442.5, 45.0 ],
 					"source" : [ "obj-62", 0 ]
 				}
 
@@ -412,7 +599,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 726.5, 141.0, 708.5, 141.0, 708.5, 46.0, 726.5, 46.0 ],
+					"midpoints" : [ 569.5, 154.0, 551.5, 154.0, 551.5, 45.0, 569.5, 45.0 ],
 					"source" : [ "obj-63", 0 ]
 				}
 
@@ -436,15 +623,40 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
-			"obj-2" : [ "live.dial[1]", "Attack", 0 ],
-			"obj-4" : [ "live.text", "live.text", 0 ],
-			"obj-1" : [ "live.dial", "Threshold", 0 ],
-			"obj-3" : [ "live.dial[2]", "Decay", 0 ]
+			"obj-16::obj-2::obj-13" : [ "Release", "Release", 0 ],
+			"obj-3" : [ "Decay", "Decay", 0 ],
+			"obj-16::obj-2::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-16::obj-2::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-16::obj-2::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-1" : [ "Threshold[1]", "Threshold", 0 ],
+			"obj-4" : [ "Invert", "Invert", 0 ],
+			"obj-16::obj-2::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-16::obj-2::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-16::obj-2::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-16::obj-2::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-2" : [ "Attack", "Attack", 0 ],
+			"obj-16::obj-2::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-7" : [ "Preamp[1]", "Preamp", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "limiter~.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
@@ -460,7 +672,8 @@
 				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

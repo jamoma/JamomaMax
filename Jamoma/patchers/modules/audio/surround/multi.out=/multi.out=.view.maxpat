@@ -2,31 +2,40 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 9,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 276.0, 72.0, 1004.0, 524.0 ],
+		"rect" : [ 276.0, 79.0, 1004.0, 524.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -37,6 +46,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 13.0, 178.0, 63.0, 20.0 ],
+					"style" : "",
 					"text" : "j.view",
 					"varname" : "j.model"
 				}
@@ -50,7 +60,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.0, 113.0, 23.0, 23.0 ]
+					"patching_rect" : [ 13.0, 113.0, 23.0, 23.0 ],
+					"style" : ""
 				}
 
 			}
@@ -64,6 +75,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 312.0, 113.0, 133.0, 20.0 ],
+					"style" : "",
 					"text" : "j.remote channelOffset",
 					"varname" : "channel_offset"
 				}
@@ -79,11 +91,12 @@
 					"minimum" : -31,
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 312.0, 142.0, 35.0, 20.0 ],
+					"patching_rect" : [ 312.0, 142.0, 35.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 101.0, 34.0, 35.0, 20.0 ],
+					"presentation_rect" : [ 108.5, 33.0, 35.0, 22.0 ],
+					"style" : "",
 					"triangle" : 0,
 					"triscale" : 0.9,
 					"varname" : "Offset"
@@ -92,17 +105,19 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-46",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 14.0, 34.0, 93.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 34.0, 93.0, 20.0 ],
-					"text" : "Channel offset:"
+					"presentation_rect" : [ 7.5, 33.0, 93.0, 20.0 ],
+					"style" : "",
+					"text" : "Channel offset",
+					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 
 			}
@@ -113,14 +128,18 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 13.0, 213.0, 23.0, 23.0 ]
+					"patching_rect" : [ 13.0, 213.0, 23.0, 23.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-52",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -129,7 +148,7 @@
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/no_..ess"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -194,7 +213,8 @@
 				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j._external_template" module="jamoma" category="Jamoma">
+	<setdocpatch name="j._external_template" patch="j._external_template.maxpat"/>
+	<digest>
+		External temaplte refpage
+	</digest>
+	<description>
+		This is a refpage template when you want to document an external
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			model
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<!-- <inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</inlet>
+		<inlet id="1" type="INLET_TYPE">
+			<digest>
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</inlet>
+	</inletlist> -->
+	<!--OUTLETS-->
+	<!-- <outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				model feeback
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+		<outlet id="1" type="OUTLET_TYPE">
+			<digest>
+				dumpout
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist> -->
+	<!--ARGUMENTS-->
+	<objarglist>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<!-- <method name="anything">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method> -->
+		<method name="preset:store">
+			<arglist>
+				<arg name="" type="list" optional="1" />
+			</arglist>
+			<digest>
+				Store state of the model as preset
+			</digest>
+			<description>
+				Store current state of a model as a preset. First argument to the preset:store will save state under a particular name. An optionnal second argument will set a position in the list of presets. With no argument, preset:store will override the last recalled state
+			</description>
+		</method>
+		<method name="preset">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Recall state of a model
+			</digest>
+			<description>
+				The 'preset' followed by a preset name will put a model in a state previously saved. When the preset message is followed by an integer, 'preset' message will recalled the preset stored at this index			</description>
+		</method>
+		<method name="preset:remove">
+			<arglist>
+				<arg name="" type="list" optional="1" />
+			</arglist>
+			<digest>
+				Remove a preset from the list of presets
+			</digest>
+			<description>
+				The 'preset:remove' message followed by a preset name will remove the preset from the current model's list of presets
+			</description>
+		</method>
+		<method name="preset:edit">
+			<arglist>
+				<arg name="" type="list" optional="1" />
+			</arglist>
+			<digest>
+				Edit a preset in j.model text window
+			</digest>
+			<description>
+				The 'preset:edit' message followed by a preset name will bring up j.model text window to manually edit the preset's content. Without argument, 'preset:edit' will bring up j.model text window with all preset
+			</description>
+		</method>
+		<method name="preset:clear">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Clear j.model's current list of presets
+			</digest>
+			<description>
+				The 'preset:clear' message will clear j.model's current list of presets
+			</description>
+		</method>
+		<method name="preset:read">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Read a list of presets from file
+			</digest>
+			<description>
+				The 'preset:read' message followed by a file name in Max searchpath will read list of preset previously saved. With no argument, 'preset:read' will bring a popup window to select the file to load
+			</description>
+		</method>
+		<method name="preset:read">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Write a list of presets as a text file
+			</digest>
+			<description>
+				The 'preset:write' message followed by a file name will write j.model's current list of preset in a text file. With no argument, 'preset:write' will bring a popup window to set where to write the file on disk
+			</description>
+		</method>
+		<method name="preset:names">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Get the current list of presets
+			</digest>
+			<description>
+				The 'preset:names' message will send the current list of presets out of j.model right-most window
+			</description>
+		</method>
+		<method name="preset:move">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Move a preset from one index to another
+			</digest>
+			<description>
+				The 'preset:move' message followed by a preset name and an index will move that preset to a new index. 'preset:move' can also accepts two integers as argument defining 'index of the preset to move' - 'new index'
+			</description>
+		</method>
+		<method name="preset:copy">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Copy a preset to another index
+			</digest>
+			<description>
+				The 'preset:copy' message followed by two string will copy that preset to a new preset named as second argument. 'preset:copy' can also accepts a third optionnal argument defining an index
+			</description>
+		</method>
+		<method name="preset:rename">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Rename a preset
+			</digest>
+			<description>
+				The 'preset:rename' message followed by two string will rename the preset defined as first argument as the name defined as second argument
+			</description>
+		</method>
+		<method name="preset:interpolate">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Interpolate between two presets
+			</digest>
+			<description>
+				The 'preset:interpolate' message followed by two integers defining presets indexes and a float value will interpolate between the two prests
+			</description>
+		</method>
+		<method name="preset:mix">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Interpolate between multiple presets
+			</digest>
+			<description>
+				The 'preset:interpolate' message followed by pairs of integer defining a preset index and a float defining an amount will do a weighted mix of multiple presets
+			</description>
+		</method>
+		<method name="alias/remove">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Remove the OSC alias of the model
+			</digest>
+			<description>
+				Remove the OSC alias of the model
+			</description>
+		</method>
+		<method name="(mouse)">
+			<digest>
+				Opens a text editor with all current values of all parameters of the model
+			</digest>
+			<description>
+				Opens a text editor with all current values of all parameters of the model
+			</description>
+		</method>
+		<method name="dump">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Dump all attributes' values out the rightmost outlet			
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="init">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Initialize this model
+			</digest>
+			<description>
+				Initialize this model. This message is implemented as a j.message embedded in the j.model object
+			</description>
+		</method>
+		<method name="model/edit">
+			<digest>
+				Opens a text editor with all current values of all parameters of the model
+			</digest>
+		</method>
+		<method name="model:help/open">
+			<digest>
+				Opens the model's help patcher
+			</digest>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<!-- <attribute name="activity" get="1" set="1" type="atom" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
+		<attribute name="alias" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Provide the model with an OSC alias. This can be used for future remote OSC communication to the model
+			</digest>
+			<description>
+				Provide the model with an OSC alias. This can be used for future remote OSC communication to the model
+			</description>
+		</attribute>
+		<attribute name="amenities" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Allow to select j.model's provided services
+			</digest>
+			<description>
+				Select j.model's provided services to specific needs.
+			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="5">
+					<enumlist>
+						<enum name="all">
+							<digest>
+								Enable all j.model's services
+							</digest>
+							<description>
+								Enable all j.model's services
+							</description>
+						</enum>
+						<enum name="none">
+							<digest>
+								Disable all j.model's services
+							</digest>
+							<description>
+								Disable all j.model's services
+							</description>
+						</enum>
+						<enum name="preset">
+							<digest>
+								Enable preset service
+							</digest>
+							<description>
+								Enable preset service
+							</description>
+						</enum>
+						<enum name="audio">
+							<digest>
+								Enable audio signal service
+							</digest>
+							<description>
+								Enable audio signal service
+							</description>
+						</enum>
+						<enum name="data">
+							<digest>
+								Enable data signal service
+							</digest>
+							<description>
+								Enable data signal service
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum" />
+			</attributelist>
+		</attribute>
+		<attribute name="description" get="1" set="1" type="symbol" size="1">
+			<digest>
+				A textual description of the model for auto-documentation purposes
+			</digest>
+			<description>
+				A textual description of the model for auto-documentation purposes
+			</description>
+		</attribute>
+		<attribute name="priority" get="1" set="1" type="int" size="1">
+			<digest>
+				The priority of the model - used for preset and cue management
+			</digest>
+			<description>
+				The priority of the model - used for preset and cue management
+			</description>
+		</attribute>
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
+			<digest>
+				Arbitrary list of tags that can be further used by several services such as j.namespace
+			</digest>
+			<description>
+				Arbitrary list of tags that can be further used by several services such as j.namespace
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example img="./images/j._external_template.png" caption="My description"/>
+	</examplelist>
+	<!--SEEALSO-->
+	<!--Items listed here appear in the ? menu in maxhelps -->
+	<setdocpatch name="02jCreateAMatrix" patch="02jCreateAMatrix.maxpat"/>
+	<seealsolist>
+		<seealso name="j.model"/>
+		<seealso name="jamoma-example" type="vignette">Link to a specific Jamoma example</seealso>
+		<seealso name="jamomachapter01" module="jamoma" type="tutorial">
+			Jamoma Tutorial n°1</seealso>
+	</seealsolist>
+
+</c74object>

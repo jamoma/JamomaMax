@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.model" module="" category="Jamoma">
+	<digest>
+		Declare patcher as a model
+	</digest>
+	<description>
+		j.model is the central brain in a jamoma model. It parses input, distributes messages to parameters, generates documentation,  etc.
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			model
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<!-- <inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</inlet>
+		<inlet id="1" type="INLET_TYPE">
+			<digest>
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</inlet>
+	</inletlist> -->
+	<!--OUTLETS-->
+	<!-- <outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				model feeback
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+		<outlet id="1" type="OUTLET_TYPE">
+			<digest>
+				dumpout
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist> -->
+	<!--ARGUMENTS-->
+	<objarglist>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<!-- <method name="anything">
+			<arglist>
+				<arg name="" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method> -->
+		<method name="preset:new">
+			<arglist>
+				<arg name="Name of preset to store" type="list" optional="1"/>
+			</arglist>
+			<digest>
+				Store state of the model as preset
+			</digest>
+			<description>
+				The <m>preset:new</m> message stores current state of a model as a preset. First argument to the <m>preset:new</m> message will save state under a particular name. An optionnal second argument will set a position in the list of presets. With no argument, <m>preset:new</m> will override the last recalled state
+			</description>
+		</method>
+		<method name="preset">
+			<arglist>
+				<arg name="Name of preset to recall" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Recall state of a model
+			</digest>
+			<description>
+				The <m>preset</m> message followed by a preset name puts a model in a state previously saved. When the <m>preset</m> message is followed by an integer, it will recall the preset stored at this index			</description>
+		</method>
+		<method name="preset:delete">
+			<arglist>
+				<arg name="Name of preset to remove" type="list" optional="1"/>
+			</arglist>
+			<digest>
+				Remove a preset from the list of presets
+			</digest>
+			<description>
+				The <m>preset:remove</m> message followed by a preset name removes the preset from the current model's list of presets
+			</description>
+		</method>
+		<method name="preset:edit">
+			<arglist>
+				<arg name="Name of preset to edit" type="list" optional="1"/>
+			</arglist>
+			<digest>
+				Edit a preset in j.model text window
+			</digest>
+			<description>
+				The <m>preset:edit</m> message followed by a preset name brings up <o>j.model</o> text window to manually edit the preset's content. Without argument, <m>preset:edit</m> will bring up <o>j.model</o> text window with all presets
+			</description>
+		</method>
+		<method name="preset:clear">
+			<arglist/>
+			<digest>
+				Clear j.model's current list of presets
+			</digest>
+			<description>
+				The <m>preset:clear</m> message clears j.model's current list of presets
+			</description>
+		</method>
+		<method name="preset:read">
+			<arglist>
+				<arg name="Name of preset file to read" type="list" optional="1"/>
+			</arglist>
+			<digest>
+				Read a list of presets from file
+			</digest>
+			<description>
+				The <m>preset:read</m> message followed by a file name in Max searchpath reads list of preset previously saved. With no argument, <m>preset:read</m> brings a popup window to select the file to load
+			</description>
+		</method>
+		<method name="preset:write">
+			<arglist>
+				<arg name="Name of preset file to write" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Write a list of presets as a text file
+			</digest>
+			<description>
+				The <m>preset:write</m> message followed by a file name writes <o>j.model</o>'s current list of presets in a text file. Without any argument, <m>preset:write</m> brings a popup window to set where to write the file on disk
+			</description>
+		</method>
+		<method name="preset:write/again">
+			<arglist/>
+			<digest>
+				Save to disk previously saved preset file
+			</digest>
+			<description>
+				The <m>preset:write/again</m> saves <o>j.model</o>'s current list of preset in the opened text file 
+			</description>
+		</method>
+		<method name="preset:names">
+			<arglist/>
+			<digest>
+				Get the current list of presets
+			</digest>
+			<description>
+				The <m>preset:names</m> message sends the current list of presets out of <o>j.model</o> right-most window
+			</description>
+		</method>
+		<method name="preset:move">
+			<arglist>
+				<arg name="Name of presets to move" type="list" optional="0"/>
+				<arg name="New position of preset" type="int" optional="0"/>
+			</arglist>
+			<digest>
+				Move a preset from one index to another
+			</digest>
+			<description>
+				The <m>preset:move</m> message followed by a preset name and an index moves that preset to a new index. <m>preset:move</m> can also accepts two integers as argument defining <i>index of the preset to move</i> &amp; <i>new index</i>
+			</description>
+		</method>
+		<method name="preset:copy">
+			<arglist>
+				<arg name="Name of the preset to copy" type="symbol" optional="0"/>
+				<arg name="New name of the preset" type="symbol" optional="0"/>
+				<arg name="Optional index position" type="int" optional="1"/>
+			</arglist>
+			<digest>
+				Copy a preset to another index
+			</digest>
+			<description>
+				The <m>preset:copy</m> message followed by two string copies that preset to a new preset named as second argument. <m>preset:copy</m> can also accepts a third optional argument defining an index
+			</description>
+		</method>
+		<method name="preset:rename">
+			<arglist>
+				<arg name="Current name" type="symbol" optional="0"/>
+				<arg name="New name" type="symbol" optional="0"/>
+			</arglist>
+			<digest>
+				Rename a preset
+			</digest>
+			<description>
+				The <m>preset:rename</m> message followed by two strings renames the preset defined as first argument as the name defined as second argument
+			</description>
+		</method>
+		<method name="preset:interpolate">
+			<arglist>
+				<arg name="Presets name and interpolation value" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Interpolate between two presets
+			</digest>
+			<description>
+				The <m>preset:interpolate</m> message followed by two integers defining presets indexes and a float value will interpolate between the two prests
+			</description>
+		</method>
+		<method name="preset:mix">
+			<arglist>
+				<arg name="Preset name and weight value pairs" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Interpolate between multiple presets
+			</digest>
+			<description>
+				The <m>preset:interpolate</m> message followed by pairs of integer defining a preset index and a float defining an amount does a weighted mix of multiple presets
+			</description>
+		</method>
+		<method name="alias/remove">
+			<arglist>
+				<arg name="Name of the alias to remove" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Remove the OSC alias of the model
+			</digest>
+			<description>
+				The <m>alias/remove</m> message removes the OSC alias of the model
+			</description>
+		</method>
+		<method name="(mouse)">
+			<digest>
+				Opens a text editor with all current values of all parameters of the model
+			</digest>
+			<description>
+				Double-click object opens a text editor with all current values of all parameters of the model
+			</description>
+		</method>
+		<method name="dump">
+			<arglist/>
+			<digest>
+				Dump all attributes' values out the rightmost outlet			
+			</digest>
+			<description>
+				The <m>dump</m> message outputs all attributes' values out the rightmost outlet
+			</description>
+		</method>
+		<method name="init">
+			<arglist/>
+			<digest>
+				Initialize this model
+			</digest>
+			<description>
+				The <m>init</m> message initializes this model. This message is implemented as a <o>j.message</o> embedded in the <o>j.model</o> object
+			</description>
+		</method>
+		<method name="model/edit">
+			<digest>
+				Opens a text editor with all current values of all parameters of the model
+			</digest>
+		</method>
+		<method name="model:help/open">
+			<digest>
+				Opens the model's help patcher
+			</digest>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<!-- <attribute name="activity" get="1" set="1" type="atom" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
+		<attribute name="alias" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Provide the model with an OSC alias. This can be used for future remote OSC communication to the model
+			</digest>
+			<description>
+				The <at>alias</at> attribute provides the model with an OSC alias. This can be used for future remote OSC communication to the model
+			</description>
+		</attribute>
+		<attribute name="activity" get="1" set="1" type="boolean" size="1"/>
+		<attribute name="amenities" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Allow to select j.model's provided services
+			</digest>
+			<description>
+				The <at>amenities</at> attribute selects <o>j.model</o>'s provided services to specific needs. The <at>amenities</at> attribute can be set as an argument to its patcher. It will then override <at>amenities</at> defined within the model.
+			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="5">
+					<enumlist>
+						<enum name="all">
+							<digest>
+								Enable all j.model's services
+							</digest>
+							<description>
+								Enable all j.model's services
+							</description>
+						</enum>
+						<enum name="none">
+							<digest>
+								Disable all j.model's services
+							</digest>
+							<description>
+								Disable all j.model's services
+							</description>
+						</enum>
+						<enum name="preset">
+							<digest>
+								Enable preset service
+							</digest>
+							<description>
+								Enable preset service
+							</description>
+						</enum>
+						<enum name="audio">
+							<digest>
+								Enable audio signal service
+							</digest>
+							<description>
+								Enable audio signal service
+							</description>
+						</enum>
+						<enum name="data">
+							<digest>
+								Enable data signal service
+							</digest>
+							<description>
+								Enable data signal service
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
+			</attributelist>
+		</attribute>
+		<attribute name="description" get="1" set="1" type="symbol" size="1">
+			<digest>
+				A textual description of the model for auto-documentation purposes
+			</digest>
+			<description>
+				The <at>description</at> attribute sets a textual description of the model for auto-documentation purposes
+			</description>
+		</attribute>
+		<attribute name="presets" get="1" set="1" type="list" size="0">
+			<digest>
+				List of presets contained in j.model
+			</digest>
+			<description>
+				The <at>presets</at> attribute displays the list of j.model's current presets
+			</description>
+		</attribute>
+		<attribute name="priority" get="1" set="1" type="int" size="1">
+			<digest>
+				The priority of the model - used for preset and cue management
+			</digest>
+			<description>
+				The <at>priority</at> attribute sets the priority of the model. It allows to define the order in which model will be saved/recalled from preset and cue. The <at>priority</at> attribute can be set as an argument to its patcher. It will then override priority defined within the model.
+			</description>
+		</attribute>
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
+			<digest>
+				Arbitrary list of tags that can be further used by several services such as j.namespace
+			</digest>
+			<description>
+				The <at>tags</at> attribute sets an arbitrary list of tags that can be further used by several services such as j.namespace
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img=""/>
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.parameter" type="refpage" module="modular"/>
+		<seealso name="j.message" type="refpage" module="modular"/>
+		<seealso name="j.return" type="refpage" module="modular"/>
+		<seealso name="j.view" type="refpage" module="modular"/>
+		<seealso name="parameterattributes" module="jamoma" type="tutorial">Parameter attributes</seealso>
+		<seealso name="signalinputsandoutputs" module="jamoma" type="tutorial"/>
+		<seealso name="makeamodelview" module="jamoma" type="tutorial"/>
+	</seealsolist>
+</c74object>

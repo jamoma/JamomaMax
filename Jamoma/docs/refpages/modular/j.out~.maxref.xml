@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.out~" module="" category="Jamoma">
+	<digest>
+		Module conduit for audio output
+	</digest>
+	<description><o>j.out~</o> is an output conduit for audio signals in a Jamoma model (much like <o>j.out</o> is for control signals). It allows to turn on or off audio signal sent from the model or bypass audio signal processing in the model when used in combination with <o>j.in~</o>.
+	</description>
+	<discussion>
+		Audio input and output management provided by <o>j.in~</o> and <o>j.out~</o> are part of the services enabled by the  <link type="tutorial" name="amenities" module="jamoma">amenities</link> feature of a Jamoma model. When a model's <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> attribute is set to <b><i>all</i></b> or <b><i>audio</i></b>, several nodes are created under the model namespace so these features can be remotely accessed.<br/><br/>
+When enable, <o>j.in~</o> or <o>j.out~</o> creates an <b><i>audio/mute</i></b> node. This internal parameter allows to toggle audio signal input and output of the model.<br/><br/>
+When used in combination, paired <o>j.in~</o> and <o>j.out~</o> create an <b><i>audio/bypass</i></b> node. When set to 1, this internal parameter allows to sent audio signal coming at the model input straight to its output (that is, without passing through the whole audio processing chain of the model).<br/><br/>
+The use of <o>j.in~</o> and <o>j.out~</o> also creates <b><i>audio/in.&lt;instance name&gt;</i></b> and <b><i>audio/out.&lt;instance name&gt;</i></b> respectively, allowing to remotely send or receive audio signal to a model input or output.<br/><br/>
+When <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> is set to <b><i>none</i></b>, these features provided by <b><i>j.in~</i></b> and <b><i>j.out~</i></b> are disabled and the internal parameters are removed from the model's namespace.
+</discussion>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			model
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			output
+		</metadata>
+		<metadata name="tag">
+			amenities
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="signal">
+			<digest>
+				Signal to output from the model
+			</digest>
+			<description>
+				Signal to output from the model
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="signal">
+			<digest>
+				Audio output of the model
+			</digest>
+			<description>
+				Audio output of the model
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Dumpout
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist>
+		<objarg id="0" name="instance name" type="string|integer" optional="0">
+			<digest>
+				Instance name to subscribe input in Jamoma namespace
+			</digest>
+			<description>
+				An argument set to <o>j.out~</o> sets an instance name to subscribe output in the model namespace. The full address of this node will be <b><i>&lt;model name&gt;/audio/out.&lt;argument&gt;</i></b><br/><br/>It also sets the name of a <o>j.out</o> to pair with
+			</description>
+		</objarg>
+	</objarglist>
+	<methodlist>
+		<!-- <method name="bang">
+			<arglist />
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method> -->
+		<!-- <method name="int">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				Integer input
+			</digest>
+			<description>
+				Integer input
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="ARG_NAME_0" type="float" optional="0" />
+			</arglist>
+			<digest>
+				Float input
+			</digest>
+			<description>
+				Float input
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				List input
+			</digest>
+			<description>
+				List input
+			</description>
+		</method> -->
+		<method name="anything">
+			<arglist>
+				<arg name="parameter value" type="any" optional="1"/>
+			</arglist>
+			<digest>
+				Signal to send from the model
+			</digest>
+			<description>
+				When the <b><i>audio/mute</i></b> parameter is set to 0 (default), signal sent to <o>j.out~</o> inlet gets output at its outlet so it can be sent out of your model. When a j<o>.in~</o> object sharing the same instance name defined as argument is placed within the model and the internal parameter <b><i>audio/bypass</i></b> is set to 1 (default = 0), signal is directly received from paired <o>j.in~</o> without passing through the whole audio chain in your model
+			</description>
+		</method>
+		<method name="dump">
+			<arglist/>
+			<digest>
+				Dump attributes value
+			</digest>
+			<description>
+				The <m>dump</m> message outputs all attributes value out of <o>j.out~</o> rightmost outlet
+			</description>
+		</method>
+		<method name="signal">
+			<arglist/>
+			<digest>
+				Audio signal to send out of the model
+			</digest>
+			<description>
+				Audio signal to send out of the model
+			</description>
+		</method>
+	</methodlist>
+	<attributelist>
+		<attribute name="freeze" get="1" set="1" type="int" size="1">
+			<digest>
+				(inactive)
+			</digest>
+			<description>
+				(inactive)
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
+			</attributelist>
+		</attribute>
+		<attribute name="gain" get="1" set="1" type="float" size="1">
+			<digest>
+				Output gain
+			</digest>
+			<description>
+				The <at>gain</at> attribute sets the output gain level of your model. This attribute is internally mapped with the <b><i>audio/gain</i></b> parameter of your model
+			</description>
+		</attribute>
+		<attribute name="mix" get="1" set="1" type="float" size="1">
+			<digest>
+				Dry/wet balance
+			</digest>
+			<description>
+				The <at>mix</at> attribute sets a balance between audio signal coming at paired <o>j.in~</o> inlet and at <o>j.out~</o> inlet. This attribute is internally mapped to the model <b><i>audio/mix</i></b> parameter
+			</description>
+		</attribute>
+		<attribute name="mute" get="1" set="1" type="int" size="1">
+			<digest>
+				Mute audio output
+			</digest>
+			<description>
+				The <at>mute</at> attribute toggles audio output. This attribute is internally linked to the <b><i>audio/mute</i></b> model parameter
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
+			</attributelist>
+		</attribute>
+		<attribute name="type" get="1" set="0" type="symbol" size="1">
+			<digest>
+				Set the type of the output
+			</digest>
+			<description>
+				The <at>type</at> attribute sets the type of the output (default = audio)
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img=""/>
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.in~" type="refpage" module="modular"/>
+		<seealso name="j.out" type="refpage" module="modular"/>
+		<seealso name="j.ui" type="refpage" module="modular"/>
+	</seealsolist>
+</c74object>

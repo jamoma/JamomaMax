@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.init" module="modular" category="Jamoma">
+	<digest>
+		Loadbang for Jamoma models
+	</digest>
+	<description>
+		j.init is a utility to monitor initialization of models. It binds to the first j.model placed at the same patcher level or above and sends a bang when model start to initialize and a second bang when all j.parameters and submodels default value is recalled
+	</description>
+	<discussion>
+		When opening a Jamoma-based patcher, each of its models will set itself to a default state defined by the author of the models. There might be some cases where you would like to automatically trigger some actions once each model is properly intialized (ie. turning on DSP, then start playing some audio files, start openGL rendering and set fullscreen on, etc.). Such triggering can be made with objects such as <o>loadbang</o> or <o>loadmess</o> when using plain Max objects. However, while these two objects can help to know that each object is properly created in the patcher, they cannot ensure that Jamoma namespace is done building and that each model set its child j.parameters to their default value. <o>j.init</o> thus allows to get a loadbang-like initialization notification once its containing model is properly ready to go
+	</discussion>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			loadbang
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			init
+		</metadata>
+		<metadata name="tag">
+			initialization
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="none">
+			<digest>
+				(inactive)
+			</digest>
+			<description>
+				(inactive)
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="bang">
+			<digest>
+				Bang on initialization start
+			</digest>
+			<description>
+				Bang on initialization start
+			</description>
+		</outlet>
+		<outlet id="1" type="bang">
+			<digest>
+				Bang when initialization is done
+			</digest>
+			<description>
+				Bang when initialization is done
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg id="0" name="model address" type="symbol" optional="1">
+			<digest>
+				Address of the model to listen for initialization state
+			</digest>
+			<description>
+				An optional argument (<i>symbol</i>) sets the address of the model to listen for initialization state. Without any argument, <o>j.init</o> will bind to the j.model at the same patcher level or above
+			</description>
+		</objarg>
+	</objarglist>
+	<examplelist>
+		<example caption="" img=""/>
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.initialized" type="refpage" module="modular"/>
+		<seealso name="j.model" type="refpage" module="modular"/>
+		<seealso name="howto_get_initialization_state" type="vignette" module="modular"/>
+		<seealso name="loadbang"/>
+	</seealsolist>
+</c74object>

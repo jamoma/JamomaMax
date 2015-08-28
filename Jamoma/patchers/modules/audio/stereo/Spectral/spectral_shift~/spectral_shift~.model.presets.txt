@@ -1,21 +1,2342 @@
 
-
 - preset "default"
 # "edit a comment"
-limiter/dcblocker/active 1
 audio/bypass 0
-feedback/gain -60.00000
-audio/gain 100.000000
-limiter/lookahead 100
+audio/gain 0.000000
 audio/mix 100.000000
-limiter/mode exponenti60
 audio/mute 0
-limiter/postamp 0.000000
-limiter/preamp 5.000000
-limiter/release 250.000000
+feedback/gain -60.000000
+feedback/time 10.000000
 frequency/scale -2.260000
 frequency/shift -344.000000
+limiter/active 1
+limiter/dcblocker/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
 limiter/threshold 0.000000
-feedback/time 10.000000
- 
 
+# 
+# ###########################################
+
+- preset "Default_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -12.000000
+frequency/shift -500.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Default_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 7.000032
+frequency/shift -386.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Default_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -47.783904
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Default_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -24.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Default_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -12.000000
+frequency/shift 50.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Default_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -24.018048
+frequency/shift -200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Default_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 4.999968
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Default_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 76.223800
+audio/mute 0
+feedback/gain -6.000000
+feedback/time 33.566400
+frequency/scale -48.000000
+frequency/shift -437.734000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 54.545500
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -4.999968
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 46.853100
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 12.000000
+frequency/shift -285.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 46.153800
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 12.000000
+frequency/shift 348.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 60.139900
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -24.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 50.349700
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -24.000000
+frequency/shift 337.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 48.251700
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 7.000032
+frequency/shift -124.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 59.440600
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 12.000000
+frequency/shift -332.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Barking_Ring_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 54.545500
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 24.000000
+frequency/shift 130.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 52.453300
+audio/mute 0
+feedback/gain -27.000000
+feedback/time 65.734200
+frequency/scale 0.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 85.314700
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 120.279800
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 52.447600
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 30.769200
+frequency/scale -23.832192
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 52.447600
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 15.384600
+frequency/scale 7.000032
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 52.447600
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 30.769200
+frequency/scale -7.000032
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 87.412600
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 37.762200
+frequency/scale -11.992128
+frequency/shift 0.001000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 32.867100
+audio/mute 0
+feedback/gain -14.000000
+feedback/time 57.342600
+frequency/scale 4.999968
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Effervescent_Horn_Queues_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 52.447600
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 30.769200
+frequency/scale -12.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 52.447600
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 43.356600
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 62.237800
+audio/mute 0
+feedback/gain -22.000000
+feedback/time 34.000000
+frequency/scale 0.000000
+frequency/shift -0.200000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 55.944100
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 0.000000
+frequency/scale 0.000000
+frequency/shift 2.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 55.944100
+audio/mute 0
+feedback/gain -22.000000
+feedback/time 39.160800
+frequency/scale -0.249984
+frequency/shift 2.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 6.993000
+audio/mute 0
+feedback/gain -22.000000
+feedback/time 5.594400
+frequency/scale -12.019968
+frequency/shift 0.100000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 53.846200
+audio/mute 0
+feedback/gain -12.000000
+feedback/time 68.531400
+frequency/scale -0.300000
+frequency/shift 8.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 32.867100
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 135.664400
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Globe_of_Smeary_Echoes_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 58.741300
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 71.328600
+frequency/scale -0.019968
+frequency/shift 0.010000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -36.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 24.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -36.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -24.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -12.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 0.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 12.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Scratching_Ranges_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 24.000000
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 9.090900
+audio/mute 0
+feedback/gain -46.000000
+feedback/time 150.000000
+frequency/scale -24.000000
+frequency/shift 4.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 6.293700
+audio/mute 0
+feedback/gain -46.000000
+feedback/time 150.000000
+frequency/scale -12.000000
+frequency/shift 77.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 4.195800
+audio/mute 0
+feedback/gain -46.000000
+feedback/time 120.279800
+frequency/scale 0.000000
+frequency/shift 0.210000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 66.433600
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 16.783200
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 8.391600
+audio/mute 0
+feedback/gain -9.000000
+feedback/time 110.489600
+frequency/scale 0.009984
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 66.433600
+audio/mute 0
+feedback/gain -8.000000
+feedback/time 60.000000
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 10.000000
+audio/mute 0
+feedback/gain -36.000000
+feedback/time 150.000000
+frequency/scale -12.000000
+frequency/shift 0.010000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Shakin'_Remora_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 46.853100
+audio/mute 0
+feedback/gain -46.000000
+feedback/time 150.000000
+frequency/scale -24.000000
+frequency/shift 0.010000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 53.146900
+audio/mute 0
+feedback/gain -52.000000
+feedback/time 98.000000
+frequency/scale 0.000000
+frequency/shift -1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 46.853100
+audio/mute 0
+feedback/gain -2.000000
+feedback/time 9.790200
+frequency/scale 1.000032
+frequency/shift 1.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 19.580400
+audio/mute 0
+feedback/gain -4.000000
+feedback/time 98.000000
+frequency/scale 0.000000
+frequency/shift -0.010000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 66.433600
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 16.783200
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 8.391600
+audio/mute 0
+feedback/gain -9.000000
+feedback/time 110.489600
+frequency/scale 0.009984
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 66.433600
+audio/mute 0
+feedback/gain -8.000000
+feedback/time 60.000000
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 53.146900
+audio/mute 0
+feedback/gain -24.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Slap_Labyrinth_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 80.000000
+frequency/scale 0.000000
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 166.433600
+frequency/scale 0.000000
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 165.035000
+frequency/scale 1.000032
+frequency/shift -100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -47.783904
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 180.419600
+frequency/scale -1.999968
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 167.832200
+frequency/scale -4.000032
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -15.000000
+feedback/time 181.818200
+frequency/scale -4.999968
+frequency/shift -111.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Swamp_Taxonomy_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -15.000000
+feedback/time 181.818200
+frequency/scale 1.000032
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -9.000000
+feedback/time 100.000000
+frequency/scale -30.019488
+frequency/shift -100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -47.783904
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -6.000000
+feedback/time 99.300600
+frequency/scale 1.000032
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -13.000000
+feedback/time 132.867200
+frequency/scale -1.999968
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -6.000000
+feedback/time 0.000000
+frequency/scale -48.000000
+frequency/shift -437.734000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "The_Queasy_Cruise_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -9.000000
+feedback/time 100.000000
+frequency/scale -30.019488
+frequency/shift -100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -47.783904
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -6.000000
+feedback/time 99.300600
+frequency/scale 1.000032
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -13.000000
+feedback/time 132.867200
+frequency/scale -1.999968
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -6.000000
+feedback/time 0.000000
+frequency/scale -48.000000
+frequency/shift -437.734000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Try_The_Corners_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 166.433600
+frequency/scale 0.000000
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 165.035000
+frequency/scale 1.000032
+frequency/shift -100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -47.783904
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 180.419600
+frequency/scale -1.999968
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 167.832200
+frequency/scale -4.000032
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -15.000000
+feedback/time 181.818200
+frequency/scale -4.999968
+frequency/shift -111.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain 0.000000
+feedback/time 100.000000
+frequency/scale 0.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Midnight!_8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -15.000000
+feedback/time 181.818200
+frequency/scale 1.000032
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -12.000000
+frequency/shift -500.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 7.000032
+frequency/shift -386.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -47.783904
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -24.000000
+frequency/shift 200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -12.000000
+frequency/shift 50.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._6"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale -24.018048
+frequency/shift -200.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._7"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 0.000000
+frequency/scale 4.999968
+frequency/shift 0.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "Watch_out_for_Gizmo..._8"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gain 0.000000
+audio/mix 76.223800
+audio/mute 0
+feedback/gain -6.000000
+feedback/time 33.566400
+frequency/scale -48.000000
+frequency/shift -437.734000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+- preset "amogwai_default_1"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gai -2.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -12.000000
+frequency/shift -500.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_2"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gai -2.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale 7.000000
+frequency/shift -386.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_3"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gai -2.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -47.799999
+frequency/shift 100.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_4"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gai -2.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -24.000000
+frequency/shift 199.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1
+# 
+# ###########################################
+
+- preset "amogwai_default_5"
+- description "something about this preset"
+# ###########################################
+# 
+audio/bypass 0
+audio/gai -2.000000
+audio/mix 100.000000
+audio/mute 0
+feedback/gain -60.000000
+feedback/time 10.000000
+frequency/scale -12.000000
+frequency/shift 50.000000
+limiter/active 1
+limiter/lookahead 100
+limiter/mode exponential
+limiter/postamp 0.000000
+limiter/preamp 6.000000
+limiter/release 250.000000
+limiter/threshold 0.000000
+limiter/dcblocker/active 1

@@ -2,31 +2,40 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 25.0, 69.0, 1466.0, 407.0 ],
+		"rect" : [ 34.0, 79.0, 1466.0, 407.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -36,7 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "clear" ],
-					"patching_rect" : [ 192.0, 246.0, 43.0, 20.0 ],
+					"patching_rect" : [ 192.0, 246.0, 43.0, 22.0 ],
+					"style" : "",
 					"text" : "t clear"
 				}
 
@@ -51,7 +61,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 192.0, 37.0, 130.0, 100.0 ],
+					"patching_rect" : [ 192.0, 37.0, 130.0, 102.0 ],
+					"style" : "",
 					"text" : "j.message clear @type none @description \"Clears the history of previous samles used by the limiter and it's internal DC filter.\""
 				}
 
@@ -65,7 +76,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 330.0, 210.0, 35.0, 20.0 ],
+					"patching_rect" : [ 330.0, 210.0, 35.0, 22.0 ],
+					"style" : "",
 					"text" : "== 0"
 				}
 
@@ -79,7 +91,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 330.0, 246.0, 96.0, 20.0 ],
+					"patching_rect" : [ 330.0, 246.0, 96.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend bypass"
 				}
 
@@ -94,7 +107,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 330.0, 37.0, 124.0, 87.0 ],
+					"patching_rect" : [ 330.0, 37.0, 124.0, 89.0 ],
+					"style" : "",
 					"text" : "j.parameter active @type boolean @description \"When not active, the saturation effect is bypassed.\"",
 					"varname" : "mode[1]"
 				}
@@ -109,7 +123,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.0, 246.0, 111.0, 20.0 ],
+					"patching_rect" : [ 19.0, 246.0, 111.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend dcBlocker"
 				}
 
@@ -124,7 +139,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 19.0, 37.0, 162.0, 74.0 ],
+					"patching_rect" : [ 19.0, 37.0, 162.0, 76.0 ],
+					"style" : "",
 					"text" : "j.parameter dcblocker/active @type boolean @description \"Filter out eventual DC component of signal before limiting.\"",
 					"varname" : "preamp[1]"
 				}
@@ -139,7 +155,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1270.5, 246.0, 88.0, 20.0 ],
+					"patching_rect" : [ 1270.5, 246.0, 88.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend mode"
 				}
 
@@ -153,7 +170,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1116.5, 246.0, 97.0, 20.0 ],
+					"patching_rect" : [ 1116.5, 246.0, 97.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend release"
 				}
 
@@ -167,7 +185,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 940.5, 246.0, 113.0, 20.0 ],
+					"patching_rect" : [ 940.5, 246.0, 113.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend lookahead"
 				}
 
@@ -181,7 +200,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 769.5, 246.0, 107.0, 20.0 ],
+					"patching_rect" : [ 769.5, 246.0, 107.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend threshold"
 				}
 
@@ -195,7 +215,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 614.0, 246.0, 104.0, 20.0 ],
+					"patching_rect" : [ 614.0, 246.0, 104.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend postamp"
 				}
 
@@ -209,7 +230,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 459.0, 246.0, 99.0, 20.0 ],
+					"patching_rect" : [ 459.0, 246.0, 99.0, 22.0 ],
+					"style" : "",
 					"text" : "prepend preamp"
 				}
 
@@ -224,7 +246,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1270.5, 37.0, 149.0, 114.0 ],
+					"patching_rect" : [ 1270.5, 37.0, 149.0, 116.0 ],
+					"style" : "",
 					"text" : "j.parameter mode @repetitions/filter 1 @type string @description \"Set the function to be used for calculating the scaling. Possible values: exponential | linear\"",
 					"varname" : "mode"
 				}
@@ -232,6 +255,7 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-17",
@@ -240,8 +264,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 1116.5, 37.0, 149.0, 127.0 ],
-					"text" : "j.parameter release @type decimal @range 0 500 @clipmode low @dataspace time @unit ms @ramp/drive max @description \"The release time (ms).\"",
+					"patching_rect" : [ 1116.5, 37.0, 127.0, 129.0 ],
+					"style" : "",
+					"text" : "j.parameter release @type decimal @range 0 1000 @clipmode low @dataspace time @unit ms @ramp/drive max @description \"The release time (ms).\"",
 					"varname" : "release"
 				}
 
@@ -251,12 +276,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-18",
-					"linecount" : 11,
+					"linecount" : 10,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 940.5, 37.0, 171.0, 154.0 ],
+					"patching_rect" : [ 940.5, 37.0, 166.0, 143.0 ],
+					"style" : "",
 					"text" : "j.parameter lookahead @type integer @range 0 256 @clipmode both @ramp/drive max @repetitions/filter 1 @dataspace time @unit sample @description \"The number of samples (up to 256) to look ahead into the signal to see what is coming.\"",
 					"varname" : "lookahead"
 				}
@@ -267,12 +293,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-19",
-					"linecount" : 13,
+					"linecount" : 12,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 769.5, 37.0, 166.0, 181.0 ],
+					"patching_rect" : [ 769.5, 37.0, 163.0, 169.0 ],
+					"style" : "",
 					"text" : "j.parameter threshold @type decimal @range -48 6 @clipmode none @ramp/drive max @dataspace gain @unit dB @description \"The limiter threshold (in dB below full scale). When the input signal level exceeds this threshold, it will be attenuated as necessary to keep the level below the threshold.\"",
 					"varname" : "threshold"
 				}
@@ -283,12 +310,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-20",
-					"linecount" : 10,
+					"linecount" : 9,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 614.0, 37.0, 151.0, 141.0 ],
+					"patching_rect" : [ 614.0, 37.0, 136.0, 129.0 ],
+					"style" : "",
 					"text" : "j.parameter postamp @type decimal @range -6 48 @clipmode none @dataspace gain @unit dB @ramp/drive max @description \"The gain in dB applied to the signal after limiting. \"",
 					"varname" : "postamp"
 				}
@@ -296,16 +324,18 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-21",
-					"linecount" : 11,
+					"linecount" : 10,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 459.0, 37.0, 149.5, 154.0 ],
-					"text" : "j.parameter preamp @type decimal @range -6 48 @clipmode none @ramp/drive max @dataspace gain @unit dB @ramp/function linear @description \"The gain in dB applied to the signal before limiting.\"",
+					"patching_rect" : [ 459.0, 37.0, 136.0, 143.0 ],
+					"style" : "",
+					"text" : "j.parameter preamp @type decimal @range -36 48 @clipmode none @ramp/drive max @dataspace gain @unit dB @ramp/function linear @description \"The gain in dB applied to the signal before limiting.\"",
 					"varname" : "preamp"
 				}
 
@@ -317,7 +347,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 19.0, 331.0, 25.0, 25.0 ]
+					"patching_rect" : [ 19.0, 331.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -493,7 +524,17 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

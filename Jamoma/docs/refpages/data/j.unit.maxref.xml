@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.unit" module="data" category="Jamoma">
+	<digest>
+		Convert between different units
+	</digest>
+	<description>
+j.unit allows to convert input values into diffent units defined by a choosen dataspace
+</description>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			dataspace
+		</metadata>
+		<metadata name="tag">
+			measure
+		</metadata>
+		<metadata name="tag">
+			translate
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="any">
+			<digest>
+				Input values
+			</digest>
+			<description>
+				Input values
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="any">
+			<digest>
+				y=f(x)
+			</digest>
+			<description>
+				Converted values
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist/>
+	<methodlist>
+		<method name="int">
+			<arglist>
+				<arg name="value to convert" type="int" optional="0" />
+			</arglist>
+			<digest>
+				Convert value
+			</digest>
+			<description>
+				An int number at the input converts that value into the unit defined by the <at>output</at> attribute
+			</description>
+		</method>
+		<method name="float">
+			<digest>
+				Convert value
+			</digest>
+			<description>
+				A float number at the input converts that value into the unit defined by the <at>output</at> attribute
+			</description>
+		</method>
+		<method name="list">
+			<digest>
+				Convert values
+			</digest>
+			<description>
+				A list at the input converts that values into the unit defined by the <at>output</at> attribute
+			</description>
+		</method>
+		<method name="dataspaces.get">
+			<arglist />
+			<digest>
+				Get a list of available dataspaces
+			</digest>
+			<description>
+				The message <m>dataspaces.get</m> outputs a <m>DataspacesMenu</m> message followed by umenu formatted list of all dataspaces provided by the Jamoma framework's dataspaceLib
+			</description>
+		</method>
+		<method name="units.get">
+			<arglist>
+				<arg name="dataspace" type="symbol" optional="1" />
+			</arglist>
+			<digest>
+				Get a list of available units
+			</digest>
+			<description>
+				The message <m>units.get</m> outputs a <m>UnitMenu</m> message followed by umenu formatted list of all units belonging to the defined dataspace provided by the Jamoma framework's dataspaceLib. The <m>units.get</m> message can be followed by an optional argument defining a dataspace to get units from
+			</description>
+		</method>
+	</methodlist>
+	<attributelist>
+		<attribute name="dataspace" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Define a dataspace
+			</digest>
+			<description>
+				The <at>dataspace</at> attribute defines the dataspace managing the units conversion
+			</description>
+		</attribute>
+		<attribute name="input" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Input value unit
+			</digest>
+			<description>
+				The <at>input</at> attribute defines the unit of the incoming value
+			</description>
+		</attribute>
+		<attribute name="output" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Output value unit
+			</digest>
+			<description>
+				The <at>output</at> attribute defines the unit to convert incoming value into
+			</description>
+		</attribute>
+	</attributelist>
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<seealsolist>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
+		<seealso name="j.parameter" type="refpage" module="modular"/>
+		<seealso name="j.map" type="refpage" module="modular"/>
+		<seealso name="j.unit~" type="refpage" module="dsp"/>
+		<seealso name="j.unit-" type="refpage" module="audiograph"/>
+	</seealsolist>
+</c74object>

@@ -2,7 +2,7 @@
 
 
 - preset "default"
-  audio/gain 100.000000
+  audio/gain 0.000000
   audio/mute 0
   dimensions 2
   numSources 3

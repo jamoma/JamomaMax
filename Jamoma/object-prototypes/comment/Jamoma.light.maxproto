@@ -2,7 +2,7 @@
 	"boxes" : [ 		{
 			"box" : 			{
 				"maxclass" : "comment",
-				"text" : "Without any argument, the 'store' message will erase the last stored or recalled cue and store a new cue under the same name.",
+				"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
 				"linecount" : 5,
 				"frgb" : 0.0,
 				"fontsize" : 12.0,
@@ -10,7 +10,7 @@
 				"patching_rect" : [ 349.75, 340.0, 167.0, 74.0 ],
 				"numoutlets" : 0,
 				"id" : "obj-49",
-				"fontname" : "Arial",
+				"fontname" : "Lato Regular",
 				"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
 			}
 

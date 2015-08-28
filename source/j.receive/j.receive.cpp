@@ -341,14 +341,18 @@ void receive_return_value(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 void receive_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 {
 	if (msg==1)			// Inlets
-		strcpy(dst, "");		
+		strcpy(dst, "address of node");
 	else {							// Outlets
 		switch(arg) {
+			case data_out:
+#ifdef JCOM_RECEIVE_TILDE
+				strcpy(dst, "(signal) node value");
+#else
+				strcpy(dst, "node value");
+#endif
+				break;
 			case address_out:
 				strcpy(dst, "address output");
-				break;
-			case data_out:
-				strcpy(dst, "data output");
 				break;
 			case dump_out:
 				strcpy(dst, "dumpout");
@@ -434,74 +438,81 @@ t_int *receive_perform(t_int *w)
 	TTFloat32					d;
     TTBoolean                   active;
     
-    aReceiver->getAttributeValue(kTTSym_active, v);
-    active = v[0];
+    aReceiver->getAttributeValue(kTTSym_active, active);
     
     if (x->obj.z_disabled || !active)
+    {
+        // get signal vectorSize
+        aReceiver->mSignal.get(kTTSym_vectorSize, vectorSize);
+        
+        // fill it with 0.
+        TTAudioSignalPtr(aReceiver->mSignal.instance())->fill(0);
+        
+        // send signal to the outlet
+        TTAudioSignalPtr(aReceiver->mSignal.instance())->getVector(0, vectorSize, (TTFloat32*)w[3]);
+
         return w + 4;
-	
-	if (aReceiver) {
-		
-		// get signal vectorSize
-		aReceiver->mSignal.get(kTTSym_vectorSize, vectorSize);
-		
-		// store the input
-		TTAudioSignalPtr(aReceiver->mSignal.instance())->setVector(0, vectorSize, (TTFloat32*)w[2]);
-		
-		// get the object cache of the Receiver object
-		if (!x->wrappedObject.get(kTTSym_objectCache, v)) {
-			
-			objectCache = TTListPtr((TTPtr)v[0]);
-			
-			if (objectCache) {
-				
-				// sum all object signals
-				for (objectCache->begin(); objectCache->end(); objectCache->next()) {
-					
-					anObject = objectCache->current()[0];
-					
-					if (anObject.valid()) {
-						
-						// OUTPUT case : sum the signal from the output
-						if (anObject.name() == kTTSym_OutputAudio) {
-							
-							// get output signal vectorSize
-							TTOutputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
-							
-							// sum output signal
-							*TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTOutputPtr(anObject.instance())->mSignalOut.instance());
-						}
+    }
+    
+    // get signal vectorSize
+    aReceiver->mSignal.get(kTTSym_vectorSize, vectorSize);
+    
+    // store the input
+    TTAudioSignalPtr(aReceiver->mSignal.instance())->setVector(0, vectorSize, (TTFloat32*)w[2]);
+    
+    // get the object cache of the Receiver object
+    if (!x->wrappedObject.get(kTTSym_objectCache, v)) {
+        
+        objectCache = TTListPtr((TTPtr)v[0]);
+        
+        if (objectCache) {
+            
+            // sum all object signals
+            for (objectCache->begin(); objectCache->end(); objectCache->next()) {
+                
+                anObject = objectCache->current()[0];
+                
+                if (anObject.valid()) {
+                    
+                    // OUTPUT case : sum the signal from the output
+                    if (anObject.name() == kTTSym_OutputAudio) {
                         
-                        // INPUT AUDIO case : sum the signal from the input
-                        else if (anObject.name() == kTTSym_InputAudio) {
-                            
-                            // get output signal vectorSize
-							TTInputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
-							
-							// sum output signal
-							*TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTOutputPtr(anObject.instance())->mSignalOut.instance());
-                        }
-						
-						// DATA case : fill a signal with the data value and sum it
-						else if (anObject.name() == kTTSym_Data) {
-							
-							// get value
-							anObject.get(kTTSym_value, v);
-							d = v[0];
-							
-							// TEST : fill the signal with the value
-							// TODO : add a += TTFloat64 inline method to TTAudioSignal class  
-							TTAudioSignalPtr(aReceiver->mSignal.instance())->fill(d);
-						}
-					}
-				}
-			}
-			
-			// send signal to the outlet
-			TTAudioSignalPtr(aReceiver->mSignal.instance())->getVector(0, vectorSize, (TTFloat32*)w[3]);
-		}
-	}
-	
+                        // get output signal vectorSize
+                        TTOutputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
+                        
+                        // sum output signal
+                        *TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTOutputPtr(anObject.instance())->mSignalOut.instance());
+                    }
+                    
+                    // INPUT AUDIO case : sum the signal from the input
+                    else if (anObject.name() == kTTSym_InputAudio) {
+                        
+                        // get output signal vectorSize
+                        TTInputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
+                        
+                        // sum output signal
+                        *TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTOutputPtr(anObject.instance())->mSignalOut.instance());
+                    }
+                    
+                    // DATA case : fill a signal with the data value and sum it
+                    else if (anObject.name() == kTTSym_Data) {
+                        
+                        // get value
+                        anObject.get(kTTSym_value, v);
+                        d = v[0];
+                        
+                        // TEST : fill the signal with the value
+                        // TODO : add a += TTFloat64 inline method to TTAudioSignal class  
+                        TTAudioSignalPtr(aReceiver->mSignal.instance())->fill(d);
+                    }
+                }
+            }
+        }
+    }
+    
+    // send signal to the outlet
+    TTAudioSignalPtr(aReceiver->mSignal.instance())->getVector(0, vectorSize, (TTFloat32*)w[3]);
+    
 	return w + 4;
 }
 
@@ -519,84 +530,80 @@ void receive_perform64(TTPtr self, t_object *dsp64, double **ins, long numins, d
 	TTFloat32					d;
     TTBoolean                   active;
     
-    aReceiver->getAttributeValue(kTTSym_active, v);
-    active = v[0];
-    
-    if (x->obj.z_disabled || !active) {
-        
-        if (aReceiver) {
-            
-            // get signal vectorSize
-            aReceiver->mSignal.get(kTTSym_vectorSize, vectorSize);
-            
-            // send signal to the outlet
-            TTAudioSignalPtr(aReceiver->mSignal.instance())->getVectorCopy(0, vectorSize, outs[0]);
-        }
-        
-        return;
-    }
-	
-	if (aReceiver) {
-        
+    aReceiver->getAttributeValue(kTTSym_active, active);
+
+    if (x->obj.z_disabled || !active)
+    {
         // get signal vectorSize
         aReceiver->mSignal.get(kTTSym_vectorSize, vectorSize);
         
-        // store the input
-        TTAudioSignalPtr(aReceiver->mSignal.instance())->setVector64Copy(0, vectorSize, ins[0]);
-		
-		// get the object cache of the Receiver object
-		if (!aReceiver->getAttributeValue(kTTSym_objectCache, v)) {
-			
-			objectCache = TTListPtr((TTPtr)v[0]);
-			
-			if (objectCache) {
-				
-				// sum all object signals
-				for (objectCache->begin(); objectCache->end(); objectCache->next()) {
-					
-					anObject = objectCache->current()[0];
-					
-					if (anObject.valid()) {
-						
-						// OUTPUT AUDIO case : sum the signal from the output
-						if (anObject.name() == kTTSym_OutputAudio) {
-							
-							// get output signal vectorSize
-							TTOutputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
-							
-							// sum output signal
-							*TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTOutputPtr(anObject.instance())->mSignalOut.instance());
-						}
-                        
-                        // INPUT AUDIO case : sum the signal from the input
-                        else if (anObject.name() == kTTSym_InputAudio) {
-                            
-                            // get output signal vectorSize
-							TTInputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
-							
-							// sum output signal
-							*TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTInputPtr(anObject.instance())->mSignalOut.instance());
-                        }
-						
-						// DATA case : fill a signal with the data value and sum it
-						else if (anObject.name() == kTTSym_Data) {
-							
-							// get value
-							anObject.get(kTTSym_value, v);
-							d = v[0];
-							
-							// TEST : fill the signal with the value
-							// TODO : add a += TTFloat64 inline method to TTAudioSignal class
-							TTAudioSignalPtr(aReceiver->mSignal.instance())->fill(d);
-						}
-					}
-				}
-			}
-		}
+        // fill it with 0.
+        TTAudioSignalPtr(aReceiver->mSignal.instance())->fill(0);
         
         // send signal to the outlet
         TTAudioSignalPtr(aReceiver->mSignal.instance())->getVectorCopy(0, vectorSize, outs[0]);
-	}
+        
+        return;
+    }
+    
+    // get signal vectorSize
+    aReceiver->mSignal.get(kTTSym_vectorSize, vectorSize);
+    
+    // store the input
+    TTAudioSignalPtr(aReceiver->mSignal.instance())->setVector64Copy(0, vectorSize, ins[0]);
+    
+    // get the object cache of the Receiver object
+    if (!aReceiver->getAttributeValue(kTTSym_objectCache, v)) {
+        
+        objectCache = TTListPtr((TTPtr)v[0]);
+        
+        if (objectCache) {
+            
+            // sum all object signals
+            for (objectCache->begin(); objectCache->end(); objectCache->next()) {
+                
+                anObject = objectCache->current()[0];
+                
+                if (anObject.valid()) {
+                    
+                    // OUTPUT AUDIO case : sum the signal from the output
+                    if (anObject.name() == kTTSym_OutputAudio) {
+                        
+                        // get output signal vectorSize
+                        TTOutputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
+                        
+                        // sum output signal
+                        *TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTOutputPtr(anObject.instance())->mSignalOut.instance());
+                    }
+                    
+                    // INPUT AUDIO case : sum the signal from the input
+                    else if (anObject.name() == kTTSym_InputAudio) {
+                        
+                        // get output signal vectorSize
+                        TTInputPtr(anObject.instance())->mSignalOut.get(kTTSym_vectorSize, vectorSize);
+                        
+                        // sum output signal
+                        *TTAudioSignalPtr(aReceiver->mSignal.instance()) += *TTAudioSignalPtr(TTInputPtr(anObject.instance())->mSignalOut.instance());
+                    }
+                    
+                    // DATA case : fill a signal with the data value and sum it
+                    else if (anObject.name() == kTTSym_Data) {
+                        
+                        // get value
+                        anObject.get(kTTSym_value, v);
+                        d = v[0];
+                        
+                        // TEST : fill the signal with the value
+                        // TODO : add a += TTFloat64 inline method to TTAudioSignal class
+                        TTAudioSignalPtr(aReceiver->mSignal.instance())->fill(d);
+                    }
+                }
+            }
+        }
+    }
+    
+    // send signal to the outlet
+    TTAudioSignalPtr(aReceiver->mSignal.instance())->getVectorCopy(0, vectorSize, outs[0]);
 }
 
 // DSP Method

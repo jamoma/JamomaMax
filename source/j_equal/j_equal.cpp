@@ -13,7 +13,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 // Prototypes for methods
 t_object*	jamoma_new(t_symbol *s, long argc, t_atom* argv);
@@ -62,7 +62,7 @@ t_object* jamoma_new(t_symbol *s, long argc, t_atom* argv)
 			className = atom_getsym(argv+i);
 		i++;
 	}
-	
+
 	snprintf(maxClassName, 256, "j.%s=", className->s_name);
 
 	if (!s_jamoma_class_hash)

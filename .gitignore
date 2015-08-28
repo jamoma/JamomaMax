@@ -46,7 +46,12 @@ project.xcworkspace
 *.vcxproj
 
 JamomaMaxVersion.h
+j.js_systeminfo.js
 
 # théo needs to hide a j.leapmotion external (which is based on Jamoma script support so it is placed into the Implementation/Max folder on his machine)
 source/j.leapmotion/
+
+# Reaper DAW auto-generated files
+*.RPP-UNDO
+*.RPP-bak
 

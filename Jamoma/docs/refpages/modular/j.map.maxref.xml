@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.map" module="modular" category="Jamoma">
+	<digest>
+		Scale and map values
+	</digest>
+	<description>
+		j.map allows to scale and map values using various functions provided by the Jamoma function library. It handles continuous as well as discrete mappings. It also allows to set nodes address as input or output so you can remotely map Jamoma parameter or return values to parameter or messages
+	</description>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			scale
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			mapping
+		</metadata>
+		<metadata name="tag">
+			function
+		</metadata>
+		<metadata name="tag">
+			interaction
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="any">
+			<digest>Input value
+			</digest>
+			<description>
+				Int, float or list values sent at <o>j.map</o> leftmost inlet will get scaled and mapped according to the defined function and options
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="any">
+			<digest>
+				Scaled and mapped value
+			</digest>
+			<description><o>j.map</o> leftmost outlet outputs the scaled and mapped version of the incoming value
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Dumpout
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist/>
+	<methodlist>
+		<method name="int">
+			<arglist/>
+			<digest>
+				Value to be mapped
+			</digest>
+			<description>
+				Value to be mapped
+			</description>
+		</method>
+		<method name="float">
+			<arglist/>
+			<digest>
+				Value to be mapped
+			</digest>
+			<description>
+				Value to be mapped
+			</description>
+		</method>
+		<method name="list">
+			<arglist/>
+			<digest>
+				Values to be mapped
+			</digest>
+			<description>
+				Values to be mapped
+			</description>
+		</method>
+		<method name="anything">
+			<arglist/>
+			<digest>
+				Value to be mapped
+				</digest>
+			<description>
+				Value to be mapped
+				</description>
+		</method>
+		<method name="dump">
+			<arglist/>
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				The <m>dumpout</m> message outputs values of the various attributes
+			</description>
+		</method>
+		<method name="reset">
+			<arglist/>
+			<digest>
+				Reset j.map to initial attributes value
+			</digest>
+			<description>
+				The <m>reset</m> message sets <o>j.map</o> attributes back to their value defined on initialization
+			</description>
+		</method>
+	</methodlist>
+	<attributelist>
+		<attribute name="active" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable j.map
+			</digest>
+			<description>
+				The <at>enable</at> attribute toggles j.map mapping on or off (default = 1)
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
+			</attributelist>
+		</attribute>
+		<attribute name="clipmode" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set how values exceeding range will be clipped
+			</digest>
+			<description>
+				The <at>clipmode</at> attribute defines how values exceeding range will be clipped. Available clipmodes are:
+				<ul><li><m>none</m>: when set to <m>none</m> (default), exceeding values will be left untouched</li><li><m>low</m>: when set to <m>low</m>, values exceeding the lower bound will be clipped. Values exceeding the upper bound will be left untouched</li><li><m>high</m>: when set to <m>high</m>, values exceeding the upper bound will be clipped. Values exceeding the lower bound will be left untouched</li><li><m>both</m>: when set to <m>both</m>, values exceeding lower or upper bounds will be clipped</li><!-- <li><m>wrap</m>: when set to <m>wrap</m>, values exceeding lower or upper bound will wrap around the opposite bound</li><li><m>fold</m>: when set to <m>fold</m>, values exceeding lower or upper bound will fold back within the defined range</li> --></ul>
+			</description>
+			<!-- <attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="4">
+					<enumlist>
+						<enum name="none">
+							<digest>
+								Exceeding values will be left untouched (default)
+							</digest>
+							<description>
+								Results will be output as a list
+							</description>
+						</enum>
+						<enum name="low">
+							<digest>
+								Values exceeding the lower bound will be clipped
+							</digest>
+							<description>
+								Clip values below the lower bound. Values exceeding the upper bound will be left untouched
+							</description>
+						</enum>
+						<enum name="high">
+							<digest>
+								Values exceeding the upper bound will be clipped</digest>
+							<description>
+								Clip value above the upper bound only. Values exceeding the lower bound will be left untouched							
+							</description>
+						</enum>
+						<enum name="both">
+							<digest>
+								Values exceeding lower or upper bounds will be clipped
+							</digest>
+							<description/>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
+			</attributelist> -->
+		</attribute>
+		<attribute name="function" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Transfert function used for mapping
+			</digest>
+			<description>
+				The <at>function</at> attribute sets the function used for mapping incoming values
+			</description>
+		</attribute>
+		<attribute name="function/library" get="1" set="1" type="atom" size="1">
+			<digest>
+				Get available functions
+			</digest>
+			<description>
+				The <at>function/library</at> attribute displays a list of all available function
+			</description>
+		</attribute>
+		<attribute name="function/parameters" get="1" set="1" type="atom" size="1">
+			<digest>
+				Get parameters for the current function
+			</digest>
+			<description>
+				The <at>function/parameters</at> attribute displays a list of all parameters for the function defined by the <at>function</at> attribute
+			</description>
+		</attribute>
+		<attribute name="function/samples" get="1" set="1" type="atom" size="1">
+			<digest>
+				Get a list of mapped sample values
+			</digest>
+			<description>
+				The <at>function/samples</at> attribute displays a list of some mapped sample values. This can be useful to get visual feedback of the defined curve in a gui object ie. <o>multislider</o>, <o>plot~</o>)
+			</description>
+		</attribute>
+		<attribute name="input" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Address of a j.parameter or j.return to listen to
+			</digest>
+			<description>
+				The <at>input</at> attribute sets an address of a j.parameter or j.return to be used for mapping to another j.parameter or j.message
+			</description>
+		</attribute>
+		<attribute name="input/index" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Pick an item from list input
+			</digest>
+			<description>
+				When using as input a parameter or return address with <at>type</at> attribute set to <m>array</m> the <at>input/index</at> attribute selects an item to be mapped in the array. When set to 0 (default) all items from the array will get mapped
+			</description>
+		</attribute>
+		<attribute name="input/max" get="1" set="1" type="float" size="1">
+			<digest>
+				Maximum input value
+			</digest>
+			<description>
+				The <at>input/max</at> attribute sets the maximum input value
+			</description>
+		</attribute>
+		<attribute name="input/min" get="1" set="1" type="float" size="1">
+			<digest>
+				Minimum input value
+			</digest>
+			<description>
+				The <at>input/min</at> attribute sets the minimum input value
+			</description>
+		</attribute>
+		<attribute name="inverse" get="1" set="1" type="int" size="1">
+			<digest>
+				Switch minimum and maximum values
+			</digest>
+			<description>
+				The <at>inverse</at> attribute switches minimum and maximum values
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
+			</attributelist>
+		</attribute>
+		<attribute name="output" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Address of a j.parameter or j.message to send the value to
+			</digest>
+			<description>
+				The <at>output</at> attribute sets an address of a j.parameter or j.message to be used as the destination of the mapping
+			</description>
+		</attribute>
+		<attribute name="output/max" get="1" set="1" type="float" size="1">
+			<digest>
+				Maximum output value
+			</digest>
+			<description>
+				The <at>output/max</at> attribute sets the maximum output value
+			</description>
+		</attribute>
+		<attribute name="output/min" get="1" set="1" type="float" size="1">
+			<digest>
+				Minimum output value
+			</digest>
+			<description>
+				The <at>output/min</at> attribute sets the minimum output value
+			</description>
+		</attribute>
+		<attribute name="ramp" get="1" set="1" type="int" size="1">
+			<digest>
+				Smoothing function
+			</digest>
+			<description>
+				The <at>ramp</at> attribute sets a smoothing function value (in milliseconds)
+			</description>
+		</attribute>
+	</attributelist>
+	<examplelist>
+		<example caption="" img="./images/j.map.png"/>
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.ramp"/>
+		<seealso name="mapper.model"/>
+		<seealso name="j.function~"/>
+		<seealso name="scale"/>
+	</seealsolist>
+</c74object>

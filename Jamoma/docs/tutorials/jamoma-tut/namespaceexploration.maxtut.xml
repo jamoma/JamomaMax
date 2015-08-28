@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Namespace exploration and queries"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Namespace exploration patcher" patch="namespaceexploration01.maxpat"/>
+
+<previous name="amenities">Overriding features</previous>
+
+<next name="applicationscommunication">Remote application communication</next>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Namespace exploration and queries</h1>
+<h2>Navigating through your patcher namespace</h2>
+
+<illustration><img src="images/namespaceexploration01.png"/>A simple soundfile player</illustration>
+
+<h2>Working with namespace selection</h2>
+
+<h2>Summary</h2>
+<p>This tutorial shows some strategies to navigate or organize the namespace of your main patcher application. As the model number grows in your main patcher, navigation within the full Jamoma namespace can be complex. This shows some features provided by j.namespace for example to help circumvent queries, filter in models you want to work with, etc.</p>
+<seealsolist>
+	<seealso name="j.namespace"></seealso>
+	<seealso name="j.modular"></seealso>
+</seealsolist>
+</chapter>

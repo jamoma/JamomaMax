@@ -5,13 +5,14 @@ if(APPLE)
 	include_directories("/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers/")
 endif()
 
-include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Foundation/library/includes")
-include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/includes")
-include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/PeerObject")
-include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/ModularForMax")
-include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/SchedulerLib")
-include_directories("${PROJECT_SOURCE_DIR}/../../../Core/Modular/library/ProtocolLib")
-include_directories("${PROJECT_SOURCE_DIR}/../../../Core/DSP/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Foundation/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Modular/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Modular/library/PeerObject")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Modular/library/ModularForMax")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Modular/library/SchedulerLib")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Modular/library/ProtocolLib")
+include_directories("${JAMOMA_CORE_SRC_PATH}/DSP/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Score/library/includes")
 include_directories("${PROJECT_SOURCE_DIR}/classwrapper")
 
 include_directories("c74support/max-includes")
@@ -28,13 +29,18 @@ add_library(TTClassWrapperMax OBJECT
 add_library(TTModularClassWrapperMax OBJECT
  			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/TTModularClassWrapperMax.cpp)
 
+add_library(TTModularClassWrapperMaxAudio OBJECT
+			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/TTModularClassWrapperMax.cpp)
+set_property(TARGET TTModularClassWrapperMaxAudio
+			 PROPERTY COMPILE_DEFINITIONS AUDIO_EXTERNAL)
+
 add_library(TTModularClassWrapperMaxArray OBJECT
  			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/TTModularClassWrapperMax.cpp)
 set_property(TARGET TTModularClassWrapperMaxArray
 			 PROPERTY COMPILE_DEFINITIONS ARRAY_EXTERNAL)
 
-include_directories("../../../Core/Graph/library/includes")
-include_directories("../../../Core/AudioGraph/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/Graph/library/includes")
+include_directories("${JAMOMA_CORE_SRC_PATH}/AudioGraph/library/includes")
 add_library(MaxAudioGraph OBJECT 
 		 	${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/MaxAudioGraph.cpp
   			${CMAKE_CURRENT_SOURCE_DIR}/classwrapper/MaxGraph.cpp)

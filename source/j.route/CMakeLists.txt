@@ -7,7 +7,7 @@ set(PROJECT_SRCS
 # For some reason, this one won't link with maxcrt / maxcrt_p and complain about symbols defined twice.
 # TODO this need more investigation.
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/Cmake/MaxExternalCommon.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/../../Shared/CMake/MaxExternalCommon.cmake)
 
 	
 

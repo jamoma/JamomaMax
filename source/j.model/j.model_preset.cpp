@@ -35,7 +35,7 @@ void model_preset_amenities(TTPtr self)
     
     args = TTValue(presetAddress, *EXTRA->presetManager, x->patcherPtr);
 
-    if (!JamomaApplication.send("ObjectRegister", args, none)) {
+    if (!MaxApplication.send("ObjectRegister", args, none)) {
 	
         EXTRA->presetManager->set(kTTSym_address, modelAdrs);
         

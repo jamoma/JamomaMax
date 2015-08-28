@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="How to: Get Jamoma model init notification" package="Jamoma">
+	
+	<!-- SOME METADATAS -->
+	<metadatalist>
+		<metadata name="author">Jamoma</metadata>
+		<metadata name="author">Julien Rabin</metadata>
+		<metadata name="tag">init</metadata>
+		<metadata name="tag">cue</metadata>
+		<metadata name="tag">preset</metadata>
+	</metadatalist>
+	<h1>
+		Getting Jamoma model init notification
+	</h1>
+	<p>When opening a Jamoma-based patcher, each of its models will set itself to a default state defined by the author of the models or this main patcher. There might be some cases where you would like to automatically trigger some actions once each model is properly intialized (ie. turning on DSP, then start playing some audio files, start openGL rendering and set fullscreen on, etc.). Such triggering can be made with objects such as <o>loadbang</o> or <o>loadmess</o> when using plain Max objects. However, while these two objects can help to know that each object is properly created in the patcher, they cannot ensure that Jamoma namespace is done building and that each model set its child j.parameters to their default value.</p>
+	<br/>
+	<h2>
+		Initialization process monitoring
+	</h2>
+	<p>Each <o>j.model</o> has an internal read-only boolean <at>initialized</at> attribute reflecting the model initialization status. This model attribute can be queried using <o>j.receive</o> and the syntaxe <i>/myModel:initialized</i> as argument. Doing so will get you <i>1</i> at <o>j.receive</o> output notifying that the model is properly initialized.</p>
+	<br/>
+	<img src="images/howto_init_notification_01.png" caption="init notification">Init notification</img>
+
+	<br/>
+	<h2>
+		Using j.initialized component
+	</h2>
+	<p>Based on this <a>initialized</a> notification, Jamoma distribution includes a handy <link type="vignette" module="core" name="abstractions"> abstraction</link> to trigger events upon init process status. This will send out a deferlowed bang once a model is initialized.</p>
+
+	<!-- BLUEBOX IS USED TO EMPHASIS A SECTION IN THE DOC. THESE USUALLY ARE STEP BY STEP INSTRUCTIONS -->
+	<bluebox>
+		<h2>Setting up j.initialized</h2>
+			<ul>
+				<li>Press <i>n</i> key to create an object in your patcher and create <o>j.initialized</o> abstraction</li>
+				<li>Use a wildcard as argument <b>/*</b> so that <o>j.initialized</o> will listen to every model's <at>initialized</at> attribute in your patcher</li>
+				<li>You may add as second argument an optional delay time before <o>j.initialized</o> triggers its output</li>
+			</ul>
+			<p>Now if you connect <o>j.initialized</o> outlet to a <m>new myFirstCue</m> message sent to <o>j.cue</o> for instance, your first cue state will be recalled automatically when every model in your patch is properly initialized.</p>
+	</bluebox>
+	
+	<!-- SEE ALSO SECTION -->
+	<seealsolist>		
+		<seealso name="j.initialized"/>
+		<seealso name="j.init"/>
+		<seealso name="model_initialization" type="vignette" module="topic"/>
+	</seealsolist>
+</vignette>

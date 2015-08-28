@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Remote application communication"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Using models within your patcher" patch="applicationscommunication01.maxpat"/>
+
+<previous name="namespaceexploration">Namespace exploration and queries</previous>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Remote application communication</h1>
+<h2>Declaring patcher as a Jamoma application</h2>
+
+<h2>Listening to distant parameters</h2>
+
+<illustration><img src="images/applicationscommunication01.png"/>A simple soundfile player</illustration>
+
+<h2>Summary</h2>
+<p>This tutorial goes through the features provided by Jamoma for Max framework to use your Jamoma patcher with distant applications. This illustrate how Jamoma allows to run models and views on distant or local Max instances.</p>
+<seealsolist>
+	<seealso name="j.modular"></seealso>
+</seealsolist>
+</chapter>

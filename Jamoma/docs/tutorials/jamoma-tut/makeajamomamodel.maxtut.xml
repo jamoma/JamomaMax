@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Make a Jamoma model"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Make a Jamoma model patcher" patch="01_sfplay.model.maxpat"/>
+
+<previous name="generalpresentation">Jamoma 0.6 overview</previous>
+
+<next name="usingmodelswithinapatcher">Using models within your patcher</next>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+<h1>Make a Jamoma model</h1>
+<h2>What is a Jamoma model ?</h2>
+
+<illustration><img src="images/makeajamomamodel01.png"/>A simple soundfile player</illustration>
+
+<h2>Declaring services</h2>
+
+<illustration><img src="images/makeajamomamodel02.png"/>A Jamoma-based soundfile player model</illustration>
+
+<h2>Summary</h2>
+<p>This tutorial goes through the basics of making a Jamoma model patcher. This show how to take a ready made abstraction or patcher dedicated to audio or video processing for instance and see how core services can be architectured using Jamoma parameters, messages and returns</p>
+<seealsolist>
+	<seealso name="j.model"></seealso>
+	<seealso name="j.parameter"></seealso>
+	<seealso name="j.message"></seealso>
+	<seealso name="j.return"></seealso>
+</seealsolist>
+</chapter>

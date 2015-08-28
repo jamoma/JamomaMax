@@ -1,26 +1,26 @@
-- cue init
+- cue "init"
 - description "Initialisation. Models are ready to play."
 /mouse/reference screen
 /mouse/active 0
 /degrade~/samplerateRatio 1.000000
 /degrade~/bitdepth 24
-/degrade~/audio/gain 100.000000
+/degrade~/audio/gain 0.000000
 /degrade~/audio/mix 0.000000
 /degrade~/audio/bypass 0
 /degrade~/audio/mute 0
 
-- cue Act I - Scene I
+- cue "scene_1"
 - description "Mouse mapping activated + audio FX applied"
 /mouse/reference screen
 /mouse/active 1
 /degrade~/samplerateRatio 1.000000
 /degrade~/bitdepth 24
-/degrade~/audio/gain 100.000000
+/degrade~/audio/gain 0.000000
 /degrade~/audio/mix 100.000000
 /degrade~/audio/bypass 0
 /degrade~/audio/mute 0
 
-- cue Act I - Scene II
+- cue "scene_2"
 - description "audio degrade get harsher"
 /mouse/reference screen
 /mouse/active 1

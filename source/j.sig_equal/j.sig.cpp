@@ -4,7 +4,7 @@
  *
  * @brief j.sig= : wraps the #TTAudioSignal class as constant signal generator for AudioGraph
  *
- * @details 
+ * @details
  *
  * @authors Timothy Place, Trond Lossius
  *
@@ -14,19 +14,19 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 int C74_EXPORT main(void)
 {
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	MaxAudioGraphWrappedClassPtr		c = NULL;
-	
+
 	TTAudioGraphInit();
-	
+
 	options->append(TT("generator"), YES);
 	options->append(TT("userCanSetNumChannels"), YES);
 	wrapAsMaxAudioGraph(TT("audio.sig"), "j.sig=", &c, options);
 	wrapAsMaxAudioGraph(TT("audio.sig"), "sig=", &c, options);
-	
+
 	return 0;
 }

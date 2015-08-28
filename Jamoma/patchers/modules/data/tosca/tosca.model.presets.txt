@@ -1,0 +1,108 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+mode receive
+plugin_id 1
+network/in/port 4002
+network/out/ip_address localhost
+network/out/port 4001
+plugin_parameter.1/linked_to none
+plugin_parameter.1/name param1
+plugin_parameter.1/range -1.000000 1.000000
+plugin_parameter.2/linked_to none
+plugin_parameter.2/name param2
+plugin_parameter.2/range -1.000000 1.000000
+plugin_parameter.3/linked_to none
+plugin_parameter.3/name param3
+plugin_parameter.3/range -1.000000 1.000000
+plugin_parameter.4/linked_to none
+plugin_parameter.4/name param4
+plugin_parameter.4/range -1.000000 1.000000
+plugin_parameter.5/linked_to none
+plugin_parameter.5/name param5
+plugin_parameter.5/range -1.000000 1.000000
+plugin_parameter.6/linked_to none
+plugin_parameter.6/name param6
+plugin_parameter.6/range -1.000000 1.000000
+plugin_parameter.7/linked_to none
+plugin_parameter.7/name param7
+plugin_parameter.7/range -1.000000 1.000000
+plugin_parameter.8/linked_to none
+plugin_parameter.8/name param8
+plugin_parameter.8/range -1.000000 1.000000
+plugin_parameter.9/linked_to none
+plugin_parameter.9/name param9
+plugin_parameter.9/range -1.000000 1.000000
+plugin_parameter.10/linked_to none
+plugin_parameter.10/name param10
+plugin_parameter.10/range -1.000000 1.000000
+plugin_parameter.11/linked_to none
+plugin_parameter.11/name param11
+plugin_parameter.11/range -1.000000 1.000000
+plugin_parameter.12/linked_to none
+plugin_parameter.12/name param12
+plugin_parameter.12/range -1.000000 1.000000
+plugin_parameter.13/linked_to none
+plugin_parameter.13/name param13
+plugin_parameter.13/range -1.000000 1.000000
+plugin_parameter.14/linked_to none
+plugin_parameter.14/name param14
+plugin_parameter.14/range -1.000000 1.000000
+plugin_parameter.15/linked_to none
+plugin_parameter.15/name param15
+plugin_parameter.15/range -1.000000 1.000000
+plugin_parameter.16/linked_to none
+plugin_parameter.16/name param16
+plugin_parameter.16/range -1.000000 1.000000
+plugin_parameter.17/linked_to none
+plugin_parameter.17/name param17
+plugin_parameter.17/range -1.000000 1.000000
+plugin_parameter.18/linked_to none
+plugin_parameter.18/name param18
+plugin_parameter.18/range -1.000000 1.000000
+plugin_parameter.19/linked_to none
+plugin_parameter.19/name param19
+plugin_parameter.19/range -1.000000 1.000000
+plugin_parameter.20/linked_to none
+plugin_parameter.20/name param20
+plugin_parameter.20/range -1.000000 1.000000
+plugin_parameter.21/linked_to none
+plugin_parameter.21/name param21
+plugin_parameter.21/range -1.000000 1.000000
+plugin_parameter.22/linked_to none
+plugin_parameter.22/name param22
+plugin_parameter.22/range -1.000000 1.000000
+plugin_parameter.23/linked_to none
+plugin_parameter.23/name param23
+plugin_parameter.23/range -1.000000 1.000000
+plugin_parameter.24/linked_to none
+plugin_parameter.24/name param24
+plugin_parameter.24/range -1.000000 1.000000
+plugin_parameter.25/linked_to none
+plugin_parameter.25/name param25
+plugin_parameter.25/range -1.000000 1.000000
+plugin_parameter.26/linked_to none
+plugin_parameter.26/name param26
+plugin_parameter.26/range -1.000000 1.000000
+plugin_parameter.27/linked_to none
+plugin_parameter.27/name param27
+plugin_parameter.27/range -1.000000 1.000000
+plugin_parameter.28/linked_to none
+plugin_parameter.28/name param28
+plugin_parameter.28/range -1.000000 1.000000
+plugin_parameter.29/linked_to none
+plugin_parameter.29/name param29
+plugin_parameter.29/range -1.000000 1.000000
+plugin_parameter.30/linked_to none
+plugin_parameter.30/name param30
+plugin_parameter.30/range -1.000000 1.000000
+plugin_parameter.31/linked_to none
+plugin_parameter.31/name param31
+plugin_parameter.31/range -1.000000 1.000000
+plugin_parameter.32/linked_to none
+plugin_parameter.32/name param32
+plugin_parameter.32/range -1.000000 1.000000
+# 
+# ###########################################

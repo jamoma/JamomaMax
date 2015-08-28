@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Working with units"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Working with units patcher" patch="workingwithunits01.maxpat"/>
+
+<previous name="modelpresets">Model presets</previous>
+
+<next name="rampfeatures">Ramping</next>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Working with units</h1>
+<h2>Defining units</h2>
+
+<h2>converting units</h2>
+
+<illustration><img src="images/workingwithunits01.png"/>A simple soundfile player</illustration>
+
+
+
+<h2>Summary</h2>
+<p>This tutorial goes through the features provided by Jamoma unit management framework. This explains how to declare units and convert units from your patcher or from your views.</p>
+<seealsolist>
+	<seealso name="j.parameter"></seealso>
+	<seealso name="j.unit"></seealso>
+	<seealso name="j.remote"></seealso>
+</seealsolist>
+</chapter>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.receive" module="" category="Jamoma">
+	<digest>
+		Value or signal observer
+	</digest>
+	<description>
+		Subscribe to a model parameter or some other parameter node, and output new value whenever the value of the node change.
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+			</digest>
+			<description>
+				Set address of node to listen to
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				Value output
+			</digest>
+			<description>
+				Value output
+			</description>
+		</outlet>
+		<outlet id="1" type="OUTLET_TYPE">
+			<digest>
+				Address of the associated node
+			</digest>
+			<description>
+				Address of the associated node
+			</description>
+		</outlet>
+		<outlet id="2" type="OUTLET_TYPE">
+			<digest>
+				dumpout
+			</digest>
+			<description>
+				dumpout
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg id="0" name="subscription node address" type="symbol" optional="1">
+			<digest>
+				Address of associated node
+			</digest>
+			<description>
+				Address of the node that the object will listen to. If no argument is provided, the object will not be subscribing to any node initially.
+			</description>
+		</objarg>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="bang">
+			<arglist />
+			<digest>
+				Ouptut current value for the associated node.
+			</digest>
+			<description>
+				Ouptut current value for the associated node.
+			</description>
+		</method>
+		<method name="dump">
+			<arglist />
+			<digest>
+				Get state of associated node
+			</digest>
+			<description>
+				The message <m>dumb</m> will output the current value of all attributes for the associated node.
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="active" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable the return object
+			</digest>
+			<description>
+				When the <o>j.return</o> object is active, it will output new values whenever the value of the associated node changes. If <o>j.return</o> is not active, values will only be output when requested by a <m>bang</m>.
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="address" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Address of associated node
+			</digest>
+			<description>
+				This sets the address of the associated node that the object will listen to. The address can be <em>absolute</em> and take the form of an OSC address, or <em>relative</em>, in which case the relative address is appended to the address of the <o>j.model</o> or <o>j.view</o> object in the model or view that this <o>j.return</o> object is part of.
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.message">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.message_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.model">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.node">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.receive~">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.remote">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.send">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.view">
+			<!-- TEXT_HERE -->
+		</seealso>
+	</seealsolist>
+</c74object>

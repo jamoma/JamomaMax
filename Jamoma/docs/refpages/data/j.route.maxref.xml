@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.route" module="" category="Jamoma">
+	<digest>
+		A routing object with some advanced features
+	</digest>
+	<description>
+		j.route works somewhat like Max's route object but provides some advanced routing options
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			route
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="any">
+			<digest>
+				Input
+			</digest>
+			<description>
+				Incoming message to route
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="any">
+			<digest>
+				Matching output
+			</digest>
+			<description>
+				Output for messages matching the string defined in <at>searchstring</at> attribute
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				Unmatching output
+			</digest>
+			<description>
+				Output for messages unmatching the string defined in <at>searchstring</at> attribute
+			</description>
+		</outlet>
+		<outlet id="2" type="any">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Dumpout
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist/>
+	<methodlist>
+		<!-- <method name="bang">
+			<arglist />
+			<digest>
+				Value input
+			</digest>
+			<description>
+				Value input
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Value input
+			</digest>
+			<description>
+				Value input
+			</description>
+		</method> -->
+		<method name="anything">
+			<arglist>
+				<arg name="messages to route" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Value input
+			</digest>
+			<description>
+				Value input
+			</description>
+		</method>
+	</methodlist>
+	<attributelist>
+		<attribute name="partialmatch" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable or disable partial match
+			</digest>
+			<description>
+				The <at>partialmatch</at> attribute enables or disables partial match. When enabled, input messages partially matching the string defined at the <at>searchstring</at> attribute will pass
+			</description>
+		</attribute>
+		<attribute name="searchpositions" get="1" set="1" type="int" size="100">
+			<digest>
+				Set position in input list to test
+			</digest>
+			<description>
+				The <at>searchposition</at> attribute sets position in input list to test
+			</description>
+		</attribute>
+		<attribute name="searchstring" get="1" set="1" type="symbol" size="100">
+			<digest>
+				String to search within the input messages
+			</digest>
+			<description>
+				The <at>searchstringtring</at> attribute sets the string to search within the input messages
+			</description>
+		</attribute>
+	</attributelist>
+	<examplelist>
+		<example caption="" img=""/>
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.pass" type="refpage" module="data"/>
+		<seealso name="j.oscroute" type="refpage" module="data"/>
+		<seealso name="route"/>
+		<seealso name="regexp"/>
+	</seealsolist>
+</c74object>

@@ -1,0 +1,1919 @@
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.680000
+blob.1/center.y -0.000000
+blob.1/width.x 0.500000
+blob.1/width.y 0.400000
+blob.2/center.x -0.500000
+blob.2/center.y -0.500000
+blob.2/width.x 0.500000
+blob.2/width.y 0.500000
+blob.3/center.x -0.500000
+blob.3/center.y 0.500000
+blob.3/width.x 0.500000
+blob.3/width.y 0.500000
+blob.4/center.x 0.500000
+blob.4/center.y 0.500000
+blob.4/width.x 0.500000
+blob.4/width.y 0.500000
+blob.5/center.x 0.000000
+blob.5/center.y -0.680000
+blob.5/width.x 0.400000
+blob.5/width.y 0.500000
+blob.6/center.x -0.680000
+blob.6/center.y -0.000000
+blob.6/width.x 0.500000
+blob.6/width.y 0.400000
+blob.7/center.x 0.500000
+blob.7/center.y -0.500000
+blob.7/width.x 0.500000
+blob.7/width.y 0.500000
+blob.8/center.x 0.000000
+blob.8/center.y 0.680000
+blob.8/width.x 0.400000
+blob.8/width.y 0.500000
+# 
+# ###########################################
+
+- preset "4_color_compass"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 0.800000
+blob.1/width.x 0.900000
+blob.1/width.y 0.900000
+blob.2/center.x 0.800000
+blob.2/center.y -0.000000
+blob.2/width.x 0.900000
+blob.2/width.y 0.900000
+blob.3/center.x 0.000000
+blob.3/center.y -0.800000
+blob.3/width.x 0.900000
+blob.3/width.y 0.900000
+blob.4/center.x -1.000000
+blob.4/center.y 1.000000
+blob.4/width.x 0.010000
+blob.4/width.y 0.010000
+blob.5/center.x -0.800000
+blob.5/center.y -0.000000
+blob.5/width.x 0.900000
+blob.5/width.y 0.900000
+blob.6/center.x -1.000000
+blob.6/center.y 1.000000
+blob.6/width.x 0.010000
+blob.6/width.y 0.010000
+blob.7/center.x -1.000000
+blob.7/center.y 1.000000
+blob.7/width.x 0.010000
+blob.7/width.y 0.010000
+blob.8/center.x -1.000000
+blob.8/center.y 1.000000
+blob.8/width.x 0.010000
+blob.8/width.y 0.010000
+# 
+# ###########################################
+
+- preset "5_color_compass"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 0.800000
+blob.1/width.x 0.660000
+blob.1/width.y 0.660000
+blob.2/center.x 0.800000
+blob.2/center.y -0.000000
+blob.2/width.x 0.660000
+blob.2/width.y 0.660000
+blob.3/center.x 0.000000
+blob.3/center.y -0.800000
+blob.3/width.x 0.660000
+blob.3/width.y 0.660000
+blob.4/center.x -1.000000
+blob.4/center.y 1.000000
+blob.4/width.x 0.010000
+blob.4/width.y 0.010000
+blob.5/center.x 0.000000
+blob.5/center.y -0.000000
+blob.5/width.x 0.660000
+blob.5/width.y 0.660000
+blob.6/center.x -1.000000
+blob.6/center.y 1.000000
+blob.6/width.x 0.010000
+blob.6/width.y 0.010000
+blob.7/center.x -1.000000
+blob.7/center.y 1.000000
+blob.7/width.x 0.010000
+blob.7/width.y 0.010000
+blob.8/center.x -0.800000
+blob.8/center.y -0.000000
+blob.8/width.x 0.660000
+blob.8/width.y 0.660000
+# 
+# ###########################################
+
+- preset "alianscape"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y -0.100000
+blob.1/width.x 2.000000
+blob.1/width.y 0.030000
+blob.2/center.x 0.500000
+blob.2/center.y 0.520000
+blob.2/width.x 2.000000
+blob.2/width.y 0.400000
+blob.3/center.x 1.000000
+blob.3/center.y -0.120000
+blob.3/width.x 2.000000
+blob.3/width.y 0.500000
+blob.4/center.x 0.000000
+blob.4/center.y 0.340000
+blob.4/width.x 2.000000
+blob.4/width.y 0.450000
+blob.5/center.x 0.000000
+blob.5/center.y -0.800000
+blob.5/width.x 2.000000
+blob.5/width.y 0.510000
+blob.6/center.x -0.500000
+blob.6/center.y -0.000000
+blob.6/width.x 0.250000
+blob.6/width.y 2.000000
+blob.7/center.x -0.480000
+blob.7/center.y 1.000000
+blob.7/width.x 1.000000
+blob.7/width.y 1.000000
+blob.8/center.x 1.000000
+blob.8/center.y -1.000000
+blob.8/width.x 2.000000
+blob.8/width.y 2.000000
+# 
+# ###########################################
+
+- preset "aluminum_tree"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.500000
+blob.1/center.y -0.000000
+blob.1/width.x 0.600000
+blob.1/width.y 0.600000
+blob.2/center.x -0.500000
+blob.2/center.y -0.500000
+blob.2/width.x 0.600000
+blob.2/width.y 0.600000
+blob.3/center.x -0.500000
+blob.3/center.y 0.500000
+blob.3/width.x 0.600000
+blob.3/width.y 0.600000
+blob.4/center.x 0.500000
+blob.4/center.y 0.500000
+blob.4/width.x 0.600000
+blob.4/width.y 0.600000
+blob.5/center.x 0.000000
+blob.5/center.y -0.500000
+blob.5/width.x 0.600000
+blob.5/width.y 0.600000
+blob.6/center.x -0.500000
+blob.6/center.y -0.000000
+blob.6/width.x 0.600000
+blob.6/width.y 0.600000
+blob.7/center.x 0.500000
+blob.7/center.y -0.500000
+blob.7/width.x 0.600000
+blob.7/width.y 0.600000
+blob.8/center.x 0.000000
+blob.8/center.y 0.500000
+blob.8/width.x 0.600000
+blob.8/width.y 0.590000
+# 
+# ###########################################
+
+- preset "aqua_epiphany"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.500000
+blob.1/center.y 0.500000
+blob.1/width.x 0.500000
+blob.1/width.y 1.250000
+blob.2/center.x -0.500000
+blob.2/center.y -0.800000
+blob.2/width.x 0.750000
+blob.2/width.y 0.750000
+blob.3/center.x -0.500000
+blob.3/center.y -0.500000
+blob.3/width.x 0.750000
+blob.3/width.y 0.250000
+blob.4/center.x 1.000000
+blob.4/center.y -1.000000
+blob.4/width.x 2.000000
+blob.4/width.y 0.500000
+blob.5/center.x -1.000000
+blob.5/center.y -0.000000
+blob.5/width.x 0.750000
+blob.5/width.y 1.000000
+blob.6/center.x 0.000000
+blob.6/center.y 0.800000
+blob.6/width.x 0.500000
+blob.6/width.y 1.500000
+blob.7/center.x 0.500000
+blob.7/center.y -0.000000
+blob.7/width.x 0.750000
+blob.7/width.y 0.750000
+blob.8/center.x 1.000000
+blob.8/center.y -1.000000
+blob.8/width.x 1.500000
+blob.8/width.y 0.250000
+# 
+# ###########################################
+
+- preset "blurry_nautilus"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.699030
+blob.1/center.y -0.019420
+blob.1/width.x 0.400000
+blob.1/width.y 0.400000
+blob.2/center.x -0.330094
+blob.2/center.y -0.330096
+blob.2/width.x 0.390000
+blob.2/width.y 0.400000
+blob.3/center.x -0.160000
+blob.3/center.y 0.340000
+blob.3/width.x 0.400000
+blob.3/width.y 0.400000
+blob.4/center.x 0.000000
+blob.4/center.y -0.000000
+blob.4/width.x 0.400000
+blob.4/width.y 0.400000
+blob.5/center.x 0.000000
+blob.5/center.y -0.500000
+blob.5/width.x 0.400000
+blob.5/width.y 0.400000
+blob.6/center.x -0.407766
+blob.6/center.y 0.097086
+blob.6/width.x 0.400000
+blob.6/width.y 0.400000
+blob.7/center.x 0.427186
+blob.7/center.y -0.330096
+blob.7/width.x 0.400000
+blob.7/width.y 0.400000
+blob.8/center.x 0.320000
+blob.8/center.y 0.340000
+blob.8/width.x 0.400000
+blob.8/width.y 0.400000
+# 
+# ###########################################
+
+- preset "blurry_red_left"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.621360
+blob.1/center.y -0.504856
+blob.1/width.x 0.550000
+blob.1/width.y 1.772520
+blob.2/center.x 0.038836
+blob.2/center.y 0.543690
+blob.2/width.x 0.780000
+blob.2/width.y 0.530000
+blob.3/center.x 0.135920
+blob.3/center.y -0.679610
+blob.3/width.x 0.520000
+blob.3/width.y 0.500000
+blob.4/center.x 0.621360
+blob.4/center.y -0.427186
+blob.4/width.x 0.360000
+blob.4/width.y 0.440000
+blob.5/center.x 0.737864
+blob.5/center.y 0.077670
+blob.5/width.x 0.480000
+blob.5/width.y 0.470000
+blob.6/center.x 0.466020
+blob.6/center.y 0.466020
+blob.6/width.x 0.500000
+blob.6/width.y 0.640000
+blob.7/center.x -0.932040
+blob.7/center.y 0.970874
+blob.7/width.x 0.563107
+blob.7/width.y 1.504855
+blob.8/center.x 0.058250
+blob.8/center.y -0.038836
+blob.8/width.x 0.520000
+blob.8/width.y 0.530000
+# 
+# ###########################################
+
+- preset "blurry_red_stalk"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.058250
+blob.1/center.y -0.621360
+blob.1/width.x 0.550000
+blob.1/width.y 1.772520
+blob.2/center.x 0.582526
+blob.2/center.y -0.310680
+blob.2/width.x 0.780000
+blob.2/width.y 0.530000
+blob.3/center.x -0.038834
+blob.3/center.y 0.718446
+blob.3/width.x 0.520000
+blob.3/width.y 0.500000
+blob.4/center.x -0.601940
+blob.4/center.y -0.524270
+blob.4/width.x 0.360000
+blob.4/width.y 0.440000
+blob.5/center.x -0.504856
+blob.5/center.y -0.000000
+blob.5/width.x 0.480000
+blob.5/width.y 0.470000
+blob.6/center.x -0.427184
+blob.6/center.y 0.582524
+blob.6/width.x 0.500000
+blob.6/width.y 0.640000
+blob.7/center.x 0.582526
+blob.7/center.y 0.776700
+blob.7/width.x 0.563107
+blob.7/width.y 1.504855
+blob.8/center.x 0.058250
+blob.8/center.y -0.038836
+blob.8/width.x 0.520000
+blob.8/width.y 0.530000
+# 
+# ###########################################
+
+- preset "chromosome_test"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.640000
+blob.1/center.y -0.000000
+blob.1/width.x 0.250000
+blob.1/width.y 0.500000
+blob.2/center.x 0.000000
+blob.2/center.y 0.340000
+blob.2/width.x 1.000000
+blob.2/width.y 0.250000
+blob.3/center.x -0.280000
+blob.3/center.y -0.000000
+blob.3/width.x 0.250000
+blob.3/width.y 0.500000
+blob.4/center.x 0.000000
+blob.4/center.y -1.000000
+blob.4/width.x 2.000000
+blob.4/width.y 1.500000
+blob.5/center.x 0.280000
+blob.5/center.y -0.000000
+blob.5/width.x 0.250000
+blob.5/width.y 0.500000
+blob.6/center.x 0.000000
+blob.6/center.y 1.000000
+blob.6/width.x 2.000000
+blob.6/width.y 1.500000
+blob.7/center.x 0.640000
+blob.7/center.y -0.000000
+blob.7/width.x 0.250000
+blob.7/width.y 0.500000
+blob.8/center.x 0.000000
+blob.8/center.y -0.320000
+blob.8/width.x 1.000000
+blob.8/width.y 0.250000
+# 
+# ###########################################
+
+- preset "clockwise_colour_wheel"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.680000
+blob.1/center.y -0.000000
+blob.1/width.x 0.500000
+blob.1/width.y 0.400000
+blob.2/center.x -0.500000
+blob.2/center.y -0.500000
+blob.2/width.x 0.500000
+blob.2/width.y 0.500000
+blob.3/center.x -0.500000
+blob.3/center.y 0.500000
+blob.3/width.x 0.500000
+blob.3/width.y 0.500000
+blob.4/center.x 0.500000
+blob.4/center.y 0.500000
+blob.4/width.x 0.500000
+blob.4/width.y 0.500000
+blob.5/center.x 0.000000
+blob.5/center.y -0.680000
+blob.5/width.x 0.400000
+blob.5/width.y 0.500000
+blob.6/center.x -0.680000
+blob.6/center.y -0.000000
+blob.6/width.x 0.500000
+blob.6/width.y 0.400000
+blob.7/center.x 0.500000
+blob.7/center.y -0.500000
+blob.7/width.x 0.500000
+blob.7/width.y 0.500000
+blob.8/center.x 0.000000
+blob.8/center.y 0.680000
+blob.8/width.x 0.400000
+blob.8/width.y 0.500000
+# 
+# ###########################################
+
+- preset "clockwise_rainbow_donut"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.680000
+blob.1/center.y -0.000000
+blob.1/width.x 0.500000
+blob.1/width.y 0.400000
+blob.2/center.x -0.500000
+blob.2/center.y -0.500000
+blob.2/width.x 0.500000
+blob.2/width.y 0.500000
+blob.3/center.x -0.500000
+blob.3/center.y 0.500000
+blob.3/width.x 0.500000
+blob.3/width.y 0.500000
+blob.4/center.x 0.500000
+blob.4/center.y 0.500000
+blob.4/width.x 0.500000
+blob.4/width.y 0.500000
+blob.5/center.x 0.000000
+blob.5/center.y -0.680000
+blob.5/width.x 0.400000
+blob.5/width.y 0.500000
+blob.6/center.x -0.680000
+blob.6/center.y -0.000000
+blob.6/width.x 0.500000
+blob.6/width.y 0.400000
+blob.7/center.x 0.500000
+blob.7/center.y -0.500000
+blob.7/width.x 0.500000
+blob.7/width.y 0.500000
+blob.8/center.x 0.000000
+blob.8/center.y 0.680000
+blob.8/width.x 0.400000
+blob.8/width.y 0.500000
+# 
+# ###########################################
+
+- preset "clockwise_square"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 0.500000
+blob.1/width.x 0.250000
+blob.1/width.y 0.250000
+blob.2/center.x 0.500000
+blob.2/center.y 0.500000
+blob.2/width.x 0.250000
+blob.2/width.y 0.250000
+blob.3/center.x 0.500000
+blob.3/center.y -0.000000
+blob.3/width.x 0.250000
+blob.3/width.y 0.250000
+blob.4/center.x 0.500000
+blob.4/center.y -0.500000
+blob.4/width.x 0.250000
+blob.4/width.y 0.250000
+blob.5/center.x 0.000000
+blob.5/center.y -0.500000
+blob.5/width.x 0.250000
+blob.5/width.y 0.250000
+blob.6/center.x -0.500000
+blob.6/center.y -0.500000
+blob.6/width.x 0.250000
+blob.6/width.y 0.250000
+blob.7/center.x -0.500000
+blob.7/center.y -0.000000
+blob.7/width.x 0.250000
+blob.7/width.y 0.250000
+blob.8/center.x -0.500000
+blob.8/center.y 0.500000
+blob.8/width.x 0.250000
+blob.8/width.y 0.250000
+# 
+# ###########################################
+
+- preset "colour_wheel_2"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.500000
+blob.1/center.y 0.500000
+blob.1/width.x 0.600000
+blob.1/width.y 0.600000
+blob.2/center.x -0.500000
+blob.2/center.y -0.000000
+blob.2/width.x 0.600000
+blob.2/width.y 0.600000
+blob.3/center.x -0.500000
+blob.3/center.y -0.500000
+blob.3/width.x 0.600000
+blob.3/width.y 0.600000
+blob.4/center.x 0.000000
+blob.4/center.y 0.500000
+blob.4/width.x 0.600000
+blob.4/width.y 0.600000
+blob.5/center.x 0.000000
+blob.5/center.y -0.500000
+blob.5/width.x 0.600000
+blob.5/width.y 0.600000
+blob.6/center.x 0.500000
+blob.6/center.y 0.500000
+blob.6/width.x 0.600000
+blob.6/width.y 0.600000
+blob.7/center.x 0.500000
+blob.7/center.y -0.000000
+blob.7/width.x 0.600000
+blob.7/width.y 0.600000
+blob.8/center.x 0.500000
+blob.8/center.y -0.500000
+blob.8/width.x 0.600000
+blob.8/width.y 0.600000
+# 
+# ###########################################
+
+- preset "disco_blur"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.600000
+blob.1/center.y 0.340000
+blob.1/width.x 0.600000
+blob.1/width.y 0.600000
+blob.2/center.x -0.200000
+blob.2/center.y 0.340000
+blob.2/width.x 0.600000
+blob.2/width.y 0.590000
+blob.3/center.x 0.200000
+blob.3/center.y 0.340000
+blob.3/width.x 0.600000
+blob.3/width.y 0.600000
+blob.4/center.x 0.600000
+blob.4/center.y 0.340000
+blob.4/width.x 0.600000
+blob.4/width.y 0.600000
+blob.5/center.x -0.600000
+blob.5/center.y -0.320000
+blob.5/width.x 0.600000
+blob.5/width.y 0.600000
+blob.6/center.x -0.200000
+blob.6/center.y -0.320000
+blob.6/width.x 0.600000
+blob.6/width.y 0.600000
+blob.7/center.x 0.200000
+blob.7/center.y -0.320000
+blob.7/width.x 0.600000
+blob.7/width.y 0.600000
+blob.8/center.x 0.600000
+blob.8/center.y -0.320000
+blob.8/width.x 0.600000
+blob.8/width.y 0.600000
+# 
+# ###########################################
+
+- preset "disco_myopia"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.600000
+blob.1/center.y 0.340000
+blob.1/width.x 0.400000
+blob.1/width.y 0.400000
+blob.2/center.x -0.200000
+blob.2/center.y 0.340000
+blob.2/width.x 0.390000
+blob.2/width.y 0.400000
+blob.3/center.x 0.200000
+blob.3/center.y 0.340000
+blob.3/width.x 0.400000
+blob.3/width.y 0.400000
+blob.4/center.x 0.600000
+blob.4/center.y 0.340000
+blob.4/width.x 0.400000
+blob.4/width.y 0.400000
+blob.5/center.x -0.600000
+blob.5/center.y -0.320000
+blob.5/width.x 0.400000
+blob.5/width.y 0.400000
+blob.6/center.x -0.200000
+blob.6/center.y -0.320000
+blob.6/width.x 0.400000
+blob.6/width.y 0.400000
+blob.7/center.x 0.200000
+blob.7/center.y -0.320000
+blob.7/width.x 0.400000
+blob.7/width.y 0.400000
+blob.8/center.x 0.600000
+blob.8/center.y -0.320000
+blob.8/width.x 0.400000
+blob.8/width.y 0.400000
+# 
+# ###########################################
+
+- preset "donut_snapshot_ring"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 0.700000
+blob.1/width.x 0.500000
+blob.1/width.y 0.500000
+blob.2/center.x 0.500000
+blob.2/center.y 0.500000
+blob.2/width.x 0.500000
+blob.2/width.y 0.500000
+blob.3/center.x 0.700000
+blob.3/center.y -0.000000
+blob.3/width.x 0.500000
+blob.3/width.y 0.500000
+blob.4/center.x 0.500000
+blob.4/center.y -0.500000
+blob.4/width.x 0.500000
+blob.4/width.y 0.500000
+blob.5/center.x 0.000000
+blob.5/center.y -0.700000
+blob.5/width.x 0.500000
+blob.5/width.y 0.500000
+blob.6/center.x -0.500000
+blob.6/center.y -0.500000
+blob.6/width.x 0.500000
+blob.6/width.y 0.500000
+blob.7/center.x -0.680000
+blob.7/center.y -0.000000
+blob.7/width.x 0.500000
+blob.7/width.y 0.500000
+blob.8/center.x -0.500000
+blob.8/center.y 0.500000
+blob.8/width.x 0.500000
+blob.8/width.y 0.500000
+# 
+# ###########################################
+
+- preset "double_sphere_cross"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 0.340000
+blob.1/width.x 0.320000
+blob.1/width.y 0.330000
+blob.2/center.x 0.000000
+blob.2/center.y 0.600000
+blob.2/width.x 0.660000
+blob.2/width.y 0.660000
+blob.3/center.x 0.320000
+blob.3/center.y -0.000000
+blob.3/width.x 0.300000
+blob.3/width.y 0.300000
+blob.4/center.x 0.600000
+blob.4/center.y -0.000000
+blob.4/width.x 0.660000
+blob.4/width.y 0.660000
+blob.5/center.x 0.000000
+blob.5/center.y -0.320000
+blob.5/width.x 0.300000
+blob.5/width.y 0.300000
+blob.6/center.x 0.000000
+blob.6/center.y -0.600000
+blob.6/width.x 0.660000
+blob.6/width.y 0.660000
+blob.7/center.x -0.340000
+blob.7/center.y -0.000000
+blob.7/width.x 0.300000
+blob.7/width.y 0.300000
+blob.8/center.x -0.580000
+blob.8/center.y -0.000000
+blob.8/width.x 0.660000
+blob.8/width.y 0.660000
+# 
+# ###########################################
+
+- preset "double_sphere_reversed"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 0.800000
+blob.1/width.x 0.320000
+blob.1/width.y 0.330000
+blob.2/center.x 0.000000
+blob.2/center.y 0.600000
+blob.2/width.x 0.660000
+blob.2/width.y 0.660000
+blob.3/center.x 0.800000
+blob.3/center.y -0.000000
+blob.3/width.x 0.300000
+blob.3/width.y 0.300000
+blob.4/center.x 0.600000
+blob.4/center.y -0.000000
+blob.4/width.x 0.660000
+blob.4/width.y 0.660000
+blob.5/center.x 0.000000
+blob.5/center.y -0.800000
+blob.5/width.x 0.300000
+blob.5/width.y 0.300000
+blob.6/center.x 0.000000
+blob.6/center.y -0.600000
+blob.6/width.x 0.660000
+blob.6/width.y 0.660000
+blob.7/center.x -0.800000
+blob.7/center.y -0.000000
+blob.7/width.x 0.300000
+blob.7/width.y 0.300000
+blob.8/center.x -0.580000
+blob.8/center.y -0.000000
+blob.8/width.x 0.660000
+blob.8/width.y 0.660000
+# 
+# ###########################################
+
+- preset "eight_packing"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.800000
+blob.1/center.y -0.000000
+blob.1/width.x 0.400000
+blob.1/width.y 0.400000
+blob.2/center.x -0.800000
+blob.2/center.y -0.000000
+blob.2/width.x 0.400000
+blob.2/width.y 0.400000
+blob.3/center.x -0.400000
+blob.3/center.y -0.500000
+blob.3/width.x 0.400000
+blob.3/width.y 0.400000
+blob.4/center.x 0.380000
+blob.4/center.y -0.500000
+blob.4/width.x 0.400000
+blob.4/width.y 0.400000
+blob.5/center.x 0.200000
+blob.5/center.y -0.000000
+blob.5/width.x 0.400000
+blob.5/width.y 0.400000
+blob.6/center.x -0.400000
+blob.6/center.y 0.500000
+blob.6/width.x 0.400000
+blob.6/width.y 0.390000
+blob.7/center.x 0.400000
+blob.7/center.y 0.500000
+blob.7/width.x 0.400000
+blob.7/width.y 0.400000
+blob.8/center.x -0.200000
+blob.8/center.y -0.000000
+blob.8/width.x 0.400000
+blob.8/width.y 0.400000
+# 
+# ###########################################
+
+- preset "figure_four"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.600000
+blob.1/center.y -0.200000
+blob.1/width.x 0.400000
+blob.1/width.y 0.400000
+blob.2/center.x 0.260000
+blob.2/center.y -0.200000
+blob.2/width.x 0.400000
+blob.2/width.y 0.400000
+blob.3/center.x 0.000000
+blob.3/center.y -0.200000
+blob.3/width.x 0.400000
+blob.3/width.y 0.400000
+blob.4/center.x 0.000000
+blob.4/center.y -0.600000
+blob.4/width.x 0.400000
+blob.4/width.y 0.400000
+blob.5/center.x -0.480000
+blob.5/center.y -0.400000
+blob.5/width.x 1.500000
+blob.5/width.y 0.500000
+blob.6/center.x -0.680000
+blob.6/center.y 0.600000
+blob.6/width.x 0.400000
+blob.6/width.y 0.750000
+blob.7/center.x 0.000000
+blob.7/center.y 0.200000
+blob.7/width.x 0.400000
+blob.7/width.y 0.400000
+blob.8/center.x 0.000000
+blob.8/center.y 0.600000
+blob.8/width.x 0.750000
+blob.8/width.y 0.400000
+# 
+# ###########################################
+
+- preset "floating_square"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.700000
+blob.1/center.y -0.000000
+blob.1/width.x 0.250000
+blob.1/width.y 1.250000
+blob.2/center.x 0.700000
+blob.2/center.y -0.700000
+blob.2/width.x 1.000000
+blob.2/width.y 1.000000
+blob.3/center.x -0.700000
+blob.3/center.y -0.700000
+blob.3/width.x 1.000000
+blob.3/width.y 1.000000
+blob.4/center.x -0.700000
+blob.4/center.y 0.700000
+blob.4/width.x 1.000000
+blob.4/width.y 1.000000
+blob.5/center.x 0.000000
+blob.5/center.y 0.700000
+blob.5/width.x 1.250000
+blob.5/width.y 0.250000
+blob.6/center.x 0.700000
+blob.6/center.y -0.000000
+blob.6/width.x 0.250000
+blob.6/width.y 1.250000
+blob.7/center.x 0.700000
+blob.7/center.y 0.700000
+blob.7/width.x 1.000000
+blob.7/width.y 1.000000
+blob.8/center.x 0.000000
+blob.8/center.y -0.700000
+blob.8/width.x 1.250000
+blob.8/width.y 0.250000
+# 
+# ###########################################
+
+- preset "fog_ball"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.500000
+blob.1/center.y 0.500000
+blob.1/width.x 1.000000
+blob.1/width.y 1.000000
+blob.2/center.x -0.500000
+blob.2/center.y -0.000000
+blob.2/width.x 1.000000
+blob.2/width.y 1.000000
+blob.3/center.x -0.500000
+blob.3/center.y -0.500000
+blob.3/width.x 1.000000
+blob.3/width.y 1.000000
+blob.4/center.x 0.000000
+blob.4/center.y 0.500000
+blob.4/width.x 1.000000
+blob.4/width.y 1.000000
+blob.5/center.x 0.000000
+blob.5/center.y -0.500000
+blob.5/width.x 0.700000
+blob.5/width.y 0.700000
+blob.6/center.x 0.500000
+blob.6/center.y 0.500000
+blob.6/width.x 0.700000
+blob.6/width.y 0.700000
+blob.7/center.x 0.500000
+blob.7/center.y -0.000000
+blob.7/width.x 0.700000
+blob.7/width.y 0.700000
+blob.8/center.x 0.500000
+blob.8/center.y -0.500000
+blob.8/width.x 0.700000
+blob.8/width.y 0.700000
+# 
+# ###########################################
+
+- preset "four_square_corner"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.340000
+blob.1/center.y -0.000000
+blob.1/width.x 0.250000
+blob.1/width.y 1.250000
+blob.2/center.x 0.700000
+blob.2/center.y -0.700000
+blob.2/width.x 1.000000
+blob.2/width.y 1.000000
+blob.3/center.x -0.700000
+blob.3/center.y -0.700000
+blob.3/width.x 1.000000
+blob.3/width.y 1.000000
+blob.4/center.x -0.700000
+blob.4/center.y 0.700000
+blob.4/width.x 1.000000
+blob.4/width.y 1.000000
+blob.5/center.x 0.000000
+blob.5/center.y 0.340000
+blob.5/width.x 1.250000
+blob.5/width.y 0.250000
+blob.6/center.x 0.320000
+blob.6/center.y -0.000000
+blob.6/width.x 0.250000
+blob.6/width.y 1.250000
+blob.7/center.x 0.700000
+blob.7/center.y 0.700000
+blob.7/width.x 1.000000
+blob.7/width.y 1.000000
+blob.8/center.x 0.000000
+blob.8/center.y -0.320000
+blob.8/width.x 1.250000
+blob.8/width.y 0.260000
+# 
+# ###########################################
+
+- preset "full_vertical_rainbow"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 1.000000
+blob.1/center.y -0.000000
+blob.1/width.x 0.250000
+blob.1/width.y 2.000000
+blob.2/center.x 0.120000
+blob.2/center.y -0.000000
+blob.2/width.x 0.250000
+blob.2/width.y 2.000000
+blob.3/center.x -0.440000
+blob.3/center.y -0.000000
+blob.3/width.x 0.250000
+blob.3/width.y 2.000000
+blob.4/center.x -1.000000
+blob.4/center.y -0.000000
+blob.4/width.x 0.250000
+blob.4/width.y 2.000000
+blob.5/center.x 0.400000
+blob.5/center.y -0.000000
+blob.5/width.x 0.250000
+blob.5/width.y 2.000000
+blob.6/center.x -0.160000
+blob.6/center.y -0.000000
+blob.6/width.x 0.250000
+blob.6/width.y 2.000000
+blob.7/center.x 0.680000
+blob.7/center.y -0.000000
+blob.7/width.x 0.250000
+blob.7/width.y 2.000000
+blob.8/center.x -0.720000
+blob.8/center.y -0.000000
+blob.8/width.x 0.250000
+blob.8/width.y 2.000000
+# 
+# ###########################################
+
+- preset "colfcourse_aurora"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.100000
+blob.1/center.y 0.850000
+blob.1/width.x 0.600000
+blob.1/width.y 1.712500
+blob.2/center.x -0.912620
+blob.2/center.y -0.621360
+blob.2/width.x 2.000000
+blob.2/width.y 0.687500
+blob.3/center.x -0.776700
+blob.3/center.y -0.155340
+blob.3/width.x 0.650000
+blob.3/width.y 0.775000
+blob.4/center.x -0.407766
+blob.4/center.y -0.504856
+blob.4/width.x 0.637500
+blob.4/width.y 0.262500
+blob.5/center.x -1.000000
+blob.5/center.y 0.737864
+blob.5/width.x 1.150000
+blob.5/width.y 2.000000
+blob.6/center.x 0.466020
+blob.6/center.y 0.601940
+blob.6/width.x 0.562500
+blob.6/width.y 1.400000
+blob.7/center.x 0.912620
+blob.7/center.y -0.233010
+blob.7/width.x 0.662500
+blob.7/width.y 0.575000
+blob.8/center.x 0.000000
+blob.8/center.y 0.893206
+blob.8/width.x 0.875000
+blob.8/width.y 0.550000
+# 
+# ###########################################
+
+- preset "green_sea_at_sunset"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.320000
+blob.1/center.y 0.504856
+blob.1/width.x 2.000000
+blob.1/width.y 0.280000
+blob.2/center.x 0.174756
+blob.2/center.y 0.038834
+blob.2/width.x 0.600000
+blob.2/width.y 0.600000
+blob.3/center.x -0.582524
+blob.3/center.y -0.660194
+blob.3/width.x 0.600000
+blob.3/width.y 0.600000
+blob.4/center.x 0.893204
+blob.4/center.y 0.097086
+blob.4/width.x 0.600000
+blob.4/width.y 0.600000
+blob.5/center.x 0.388350
+blob.5/center.y 0.699030
+blob.5/width.x 0.600000
+blob.5/width.y 0.600000
+blob.6/center.x 0.038836
+blob.6/center.y -1.000000
+blob.6/width.x 0.600000
+blob.6/width.y 0.600000
+blob.7/center.x -0.621360
+blob.7/center.y -0.155340
+blob.7/width.x 0.600000
+blob.7/width.y 0.600000
+blob.8/center.x 0.466020
+blob.8/center.y -0.621360
+blob.8/width.x 1.030000
+blob.8/width.y 0.590000
+# 
+# ###########################################
+
+- preset "half_rainbow"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.040000
+blob.1/center.y -0.000000
+blob.1/width.x 0.100000
+blob.1/width.y 2.000000
+blob.2/center.x 0.400000
+blob.2/center.y -0.000000
+blob.2/width.x 0.100000
+blob.2/width.y 2.000000
+blob.3/center.x 0.640000
+blob.3/center.y -0.000000
+blob.3/width.x 0.100000
+blob.3/width.y 2.000000
+blob.4/center.x 0.880000
+blob.4/center.y -0.000000
+blob.4/width.x 0.100000
+blob.4/width.y 2.000000
+blob.5/center.x 0.280000
+blob.5/center.y -0.000000
+blob.5/width.x 0.100000
+blob.5/width.y 2.000000
+blob.6/center.x 0.520000
+blob.6/center.y -0.000000
+blob.6/width.x 0.100000
+blob.6/width.y 2.000000
+blob.7/center.x 0.160000
+blob.7/center.y -0.000000
+blob.7/width.x 0.100000
+blob.7/width.y 2.000000
+blob.8/center.x 0.760000
+blob.8/center.y -0.000000
+blob.8/width.x 0.100000
+blob.8/width.y 2.000000
+# 
+# ###########################################
+
+- preset "harmonic_convergence"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.360000
+blob.1/center.y 0.340000
+blob.1/width.x 0.330000
+blob.1/width.y 0.330000
+blob.2/center.x 0.340000
+blob.2/center.y 0.340000
+blob.2/width.x 0.330000
+blob.2/width.y 0.330000
+blob.3/center.x 0.000000
+blob.3/center.y -1.000000
+blob.3/width.x 1.750000
+blob.3/width.y 2.000000
+blob.4/center.x -0.800000
+blob.4/center.y -0.000000
+blob.4/width.x 0.330000
+blob.4/width.y 0.330000
+blob.5/center.x 0.000000
+blob.5/center.y 0.500000
+blob.5/width.x 0.330000
+blob.5/width.y 0.330000
+blob.6/center.x 0.800000
+blob.6/center.y -0.000000
+blob.6/width.x 0.330000
+blob.6/width.y 0.330000
+blob.7/center.x -0.340000
+blob.7/center.y 0.800000
+blob.7/width.x 0.330000
+blob.7/width.y 0.330000
+blob.8/center.x 0.320000
+blob.8/center.y 0.800000
+blob.8/width.x 0.330000
+blob.8/width.y 0.350000
+# 
+# ###########################################
+
+- preset "hex_ring"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.500000
+blob.1/center.y 0.500000
+blob.1/width.x 0.300000
+blob.1/width.y 0.300000
+blob.2/center.x -0.500000
+blob.2/center.y -0.000000
+blob.2/width.x 0.300000
+blob.2/width.y 0.300000
+blob.3/center.x -0.500000
+blob.3/center.y -0.500000
+blob.3/width.x 1.390000
+blob.3/width.y 1.580000
+blob.4/center.x 0.000000
+blob.4/center.y 0.500000
+blob.4/width.x 0.300000
+blob.4/width.y 0.300000
+blob.5/center.x 0.000000
+blob.5/center.y -0.500000
+blob.5/width.x 0.300000
+blob.5/width.y 0.300000
+blob.6/center.x 0.500000
+blob.6/center.y -0.000000
+blob.6/width.x 0.300000
+blob.6/width.y 0.300000
+blob.7/center.x 0.680000
+blob.7/center.y 0.320000
+blob.7/width.x 1.140000
+blob.7/width.y 1.180000
+blob.8/center.x 0.500000
+blob.8/center.y -0.500000
+blob.8/width.x 0.300000
+blob.8/width.y 0.300000
+# 
+# ###########################################
+
+- preset "jovian_cats_eye"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.225000
+blob.1/center.y -0.525000
+blob.1/width.x 2.000000
+blob.1/width.y 1.812500
+blob.2/center.x -0.125000
+blob.2/center.y 0.275000
+blob.2/width.x 2.000000
+blob.2/width.y 0.400000
+blob.3/center.x -0.125000
+blob.3/center.y -1.000000
+blob.3/width.x 2.000000
+blob.3/width.y 0.812500
+blob.4/center.x 0.500000
+blob.4/center.y -0.075000
+blob.4/width.x 2.000000
+blob.4/width.y 0.450000
+blob.5/center.x 0.500000
+blob.5/center.y -1.000000
+blob.5/width.x 2.000000
+blob.5/width.y 0.875000
+blob.6/center.x -0.075000
+blob.6/center.y 0.125000
+blob.6/width.x 0.862500
+blob.6/width.y 2.000000
+blob.7/center.x 0.525000
+blob.7/center.y -0.425000
+blob.7/width.x 2.000000
+blob.7/width.y 1.050000
+blob.8/center.x 1.000000
+blob.8/center.y -1.000000
+blob.8/width.x 1.250000
+blob.8/width.y 2.000000
+# 
+# ###########################################
+
+- preset "lattice_snapshot"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.600000
+blob.1/center.y 0.600000
+blob.1/width.x 0.250000
+blob.1/width.y 2.000000
+blob.2/center.x 0.200000
+blob.2/center.y 0.200000
+blob.2/width.x 2.000000
+blob.2/width.y 0.250000
+blob.3/center.x -0.200000
+blob.3/center.y -0.200000
+blob.3/width.x 2.000000
+blob.3/width.y 0.250000
+blob.4/center.x -0.600000
+blob.4/center.y -0.600000
+blob.4/width.x 2.000000
+blob.4/width.y 0.250000
+blob.5/center.x -0.200000
+blob.5/center.y 0.200000
+blob.5/width.x 0.260000
+blob.5/width.y 2.000000
+blob.6/center.x 0.200000
+blob.6/center.y -0.200000
+blob.6/width.x 0.250000
+blob.6/width.y 2.000000
+blob.7/center.x 0.600000
+blob.7/center.y 0.600000
+blob.7/width.x 2.000000
+blob.7/width.y 0.250000
+blob.8/center.x 0.600000
+blob.8/center.y -0.600000
+blob.8/width.x 0.250000
+blob.8/width.y 2.000000
+# 
+# ###########################################
+
+- preset "maltese_cross"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.320000
+blob.1/center.y 0.340000
+blob.1/width.x 0.320000
+blob.1/width.y 0.330000
+blob.2/center.x 0.000000
+blob.2/center.y 0.600000
+blob.2/width.x 0.660000
+blob.2/width.y 0.660000
+blob.3/center.x 0.320000
+blob.3/center.y -0.320000
+blob.3/width.x 0.300000
+blob.3/width.y 0.300000
+blob.4/center.x 0.600000
+blob.4/center.y -0.000000
+blob.4/width.x 0.660000
+blob.4/width.y 0.660000
+blob.5/center.x -0.340000
+blob.5/center.y -0.320000
+blob.5/width.x 0.300000
+blob.5/width.y 0.300000
+blob.6/center.x 0.000000
+blob.6/center.y -0.600000
+blob.6/width.x 0.660000
+blob.6/width.y 0.660000
+blob.7/center.x -0.340000
+blob.7/center.y 0.340000
+blob.7/width.x 0.300000
+blob.7/width.y 0.300000
+blob.8/center.x -0.580000
+blob.8/center.y -0.000000
+blob.8/width.x 0.660000
+blob.8/width.y 0.660000
+# 
+# ###########################################
+
+- preset "martini_olive"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.500000
+blob.1/center.y 0.500000
+blob.1/width.x 0.500000
+blob.1/width.y 0.500000
+blob.2/center.x 1.000000
+blob.2/center.y -0.500000
+blob.2/width.x 2.000000
+blob.2/width.y 2.000000
+blob.3/center.x -1.000000
+blob.3/center.y 1.000000
+blob.3/width.x 0.010000
+blob.3/width.y 0.010000
+blob.4/center.x -1.000000
+blob.4/center.y 1.000000
+blob.4/width.x 0.010000
+blob.4/width.y 0.010000
+blob.5/center.x -1.000000
+blob.5/center.y 1.000000
+blob.5/width.x 0.010000
+blob.5/width.y 0.010000
+blob.6/center.x -1.000000
+blob.6/center.y 1.000000
+blob.6/width.x 0.010000
+blob.6/width.y 0.010000
+blob.7/center.x -1.000000
+blob.7/center.y 1.000000
+blob.7/width.x 0.010000
+blob.7/width.y 0.010000
+blob.8/center.x -1.000000
+blob.8/center.y 1.000000
+blob.8/width.x 0.010000
+blob.8/width.y 0.010000
+# 
+# ###########################################
+
+- preset "mitosis_vertical"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.320000
+blob.1/center.y -0.000000
+blob.1/width.x 0.300000
+blob.1/width.y 0.300000
+blob.2/center.x -0.340000
+blob.2/center.y -0.000000
+blob.2/width.x 0.300000
+blob.2/width.y 0.300000
+blob.3/center.x -0.340000
+blob.3/center.y -0.500000
+blob.3/width.x 0.300000
+blob.3/width.y 0.300000
+blob.4/center.x 0.320000
+blob.4/center.y 0.500000
+blob.4/width.x 0.300000
+blob.4/width.y 0.300000
+blob.5/center.x 1.000000
+blob.5/center.y -0.000000
+blob.5/width.x 1.330000
+blob.5/width.y 2.000000
+blob.6/center.x -0.340000
+blob.6/center.y 0.500000
+blob.6/width.x 0.300000
+blob.6/width.y 0.300000
+blob.7/center.x 0.320000
+blob.7/center.y -0.500000
+blob.7/width.x 0.290000
+blob.7/width.y 0.300000
+blob.8/center.x -1.000000
+blob.8/center.y -0.000000
+blob.8/width.x 1.330000
+blob.8/width.y 2.000000
+# 
+# ###########################################
+
+- preset "neptune"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.500000
+blob.1/center.y -0.500000
+blob.1/width.x 0.750000
+blob.1/width.y 2.000000
+blob.2/center.x 1.000000
+blob.2/center.y -0.500000
+blob.2/width.x 0.750000
+blob.2/width.y 2.000000
+blob.3/center.x 0.500000
+blob.3/center.y 0.500000
+blob.3/width.x 2.000000
+blob.3/width.y 0.750000
+blob.4/center.x 0.500000
+blob.4/center.y -1.000000
+blob.4/width.x 2.000000
+blob.4/width.y 0.750000
+blob.5/center.x 0.500000
+blob.5/center.y -0.500000
+blob.5/width.x 0.750000
+blob.5/width.y 2.000000
+blob.6/center.x 0.500000
+blob.6/center.y -0.500000
+blob.6/width.x 2.000000
+blob.6/width.y 2.000000
+blob.7/center.x 0.900000
+blob.7/center.y -0.075000
+blob.7/width.x 0.010000
+blob.7/width.y 0.010000
+blob.8/center.x 0.075000
+blob.8/center.y -0.900000
+blob.8/width.x 0.010000
+blob.8/width.y 0.010000
+# 
+# ###########################################
+
+- preset "original_refault"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.125000
+blob.1/center.y 0.125000
+blob.1/width.x 0.875000
+blob.1/width.y 0.875000
+blob.2/center.x -0.125000
+blob.2/center.y -0.500000
+blob.2/width.x 0.875000
+blob.2/width.y 0.875000
+blob.3/center.x -0.125000
+blob.3/center.y -1.000000
+blob.3/width.x 0.875000
+blob.3/width.y 0.875000
+blob.4/center.x 0.500000
+blob.4/center.y 0.125000
+blob.4/width.x 0.875000
+blob.4/width.y 0.875000
+blob.5/center.x 0.500000
+blob.5/center.y -1.000000
+blob.5/width.x 0.875000
+blob.5/width.y 0.875000
+blob.6/center.x 1.000000
+blob.6/center.y 0.125000
+blob.6/width.x 0.875000
+blob.6/width.y 0.875000
+blob.7/center.x 1.000000
+blob.7/center.y -0.500000
+blob.7/width.x 0.875000
+blob.7/width.y 0.875000
+blob.8/center.x 1.000000
+blob.8/center.y -1.000000
+blob.8/width.x 0.875000
+blob.8/width.y 0.875000
+# 
+# ###########################################
+
+- preset "pillar_of_salt"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.275000
+blob.1/center.y 0.720000
+blob.1/width.x 2.000000
+blob.1/width.y 0.312500
+blob.2/center.x -0.125000
+blob.2/center.y 0.520000
+blob.2/width.x 2.000000
+blob.2/width.y 0.400000
+blob.3/center.x -0.500000
+blob.3/center.y -0.500000
+blob.3/width.x 2.000000
+blob.3/width.y 0.475000
+blob.4/center.x 0.000000
+blob.4/center.y 0.300000
+blob.4/width.x 2.000000
+blob.4/width.y 0.450000
+blob.5/center.x 0.000000
+blob.5/center.y -0.800000
+blob.5/width.x 2.000000
+blob.5/width.y 0.875000
+blob.6/center.x -0.520000
+blob.6/center.y 0.125000
+blob.6/width.x 0.225000
+blob.6/width.y 2.000000
+blob.7/center.x 0.000000
+blob.7/center.y 0.920000
+blob.7/width.x 0.640000
+blob.7/width.y 0.850000
+blob.8/center.x 1.000000
+blob.8/center.y -1.000000
+blob.8/width.x 2.000000
+blob.8/width.y 2.000000
+# 
+# ###########################################
+
+- preset "rainbow_propellor"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 1.000000
+blob.1/width.x 0.250000
+blob.1/width.y 1.250000
+blob.2/center.x 0.700000
+blob.2/center.y -0.700000
+blob.2/width.x 0.660000
+blob.2/width.y 0.660000
+blob.3/center.x -0.700000
+blob.3/center.y -0.700000
+blob.3/width.x 0.660000
+blob.3/width.y 0.660000
+blob.4/center.x -0.700000
+blob.4/center.y 0.700000
+blob.4/width.x 0.660000
+blob.4/width.y 0.660000
+blob.5/center.x 1.000000
+blob.5/center.y -0.000000
+blob.5/width.x 1.250000
+blob.5/width.y 0.250000
+blob.6/center.x 0.000000
+blob.6/center.y -1.000000
+blob.6/width.x 0.250000
+blob.6/width.y 1.250000
+blob.7/center.x 0.700000
+blob.7/center.y 0.700000
+blob.7/width.x 0.660000
+blob.7/width.y 0.660000
+blob.8/center.x -1.000000
+blob.8/center.y -0.000000
+blob.8/width.x 1.250000
+blob.8/width.y 0.240000
+# 
+# ###########################################
+
+- preset "red_green_horisontal"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -1.000000
+blob.1/center.y -0.000000
+blob.1/width.x 1.500000
+blob.1/width.y 1.500000
+blob.2/center.x 1.000000
+blob.2/center.y -0.000000
+blob.2/width.x 1.500000
+blob.2/width.y 1.500000
+blob.3/center.x -1.000000
+blob.3/center.y 1.000000
+blob.3/width.x 0.010000
+blob.3/width.y 0.010000
+blob.4/center.x -1.000000
+blob.4/center.y 1.000000
+blob.4/width.x 0.010000
+blob.4/width.y 0.010000
+blob.5/center.x -1.000000
+blob.5/center.y 1.000000
+blob.5/width.x 0.010000
+blob.5/width.y 0.010000
+blob.6/center.x -1.000000
+blob.6/center.y 1.000000
+blob.6/width.x 0.010000
+blob.6/width.y 0.010000
+blob.7/center.x -1.000000
+blob.7/center.y 1.000000
+blob.7/width.x 0.010000
+blob.7/width.y 0.010000
+blob.8/center.x -1.000000
+blob.8/center.y 1.000000
+blob.8/width.x 0.010000
+blob.8/width.y 0.010000
+# 
+# ###########################################
+
+- preset "red_green_vertical"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 1.000000
+blob.1/width.x 1.500000
+blob.1/width.y 1.500000
+blob.2/center.x 0.000000
+blob.2/center.y -1.000000
+blob.2/width.x 1.500000
+blob.2/width.y 1.500000
+blob.3/center.x -1.000000
+blob.3/center.y 1.000000
+blob.3/width.x 0.010000
+blob.3/width.y 0.010000
+blob.4/center.x -1.000000
+blob.4/center.y 1.000000
+blob.4/width.x 0.010000
+blob.4/width.y 0.010000
+blob.5/center.x -1.000000
+blob.5/center.y 1.000000
+blob.5/width.x 0.010000
+blob.5/width.y 0.010000
+blob.6/center.x -1.000000
+blob.6/center.y 1.000000
+blob.6/width.x 0.010000
+blob.6/width.y 0.010000
+blob.7/center.x -1.000000
+blob.7/center.y 1.000000
+blob.7/width.x 0.010000
+blob.7/width.y 0.010000
+blob.8/center.x -1.000000
+blob.8/center.y 1.000000
+blob.8/width.x 0.010000
+blob.8/width.y 0.010000
+# 
+# ###########################################
+
+- preset "shuttle_red_green"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.000000
+blob.1/center.y 0.500000
+blob.1/width.x 2.000000
+blob.1/width.y 0.050000
+blob.2/center.x 0.000000
+blob.2/center.y -0.500000
+blob.2/width.x 2.000000
+blob.2/width.y 0.050000
+blob.3/center.x -0.440000
+blob.3/center.y -0.200000
+blob.3/width.x 0.300000
+blob.3/width.y 0.800000
+blob.4/center.x 0.400000
+blob.4/center.y 0.200000
+blob.4/width.x 0.300000
+blob.4/width.y 0.800000
+blob.5/center.x -0.160000
+blob.5/center.y 0.200000
+blob.5/width.x 0.300000
+blob.5/width.y 0.800000
+blob.6/center.x 0.680000
+blob.6/center.y -0.200000
+blob.6/width.x 0.300000
+blob.6/width.y 0.800000
+blob.7/center.x -0.720000
+blob.7/center.y 0.200000
+blob.7/width.x 0.310000
+blob.7/width.y 0.800000
+blob.8/center.x 0.120000
+blob.8/center.y -0.200000
+blob.8/width.x 0.300000
+blob.8/width.y 0.810000
+# 
+# ###########################################
+
+- preset "six_beads"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.720000
+blob.1/center.y -0.000000
+blob.1/width.x 0.250000
+blob.1/width.y 0.250000
+blob.2/center.x -0.440000
+blob.2/center.y -0.000000
+blob.2/width.x 0.250000
+blob.2/width.y 0.250000
+blob.3/center.x -0.160000
+blob.3/center.y -0.000000
+blob.3/width.x 0.250000
+blob.3/width.y 0.250000
+blob.4/center.x 0.000000
+blob.4/center.y -1.000000
+blob.4/width.x 2.000000
+blob.4/width.y 1.500000
+blob.5/center.x 0.160000
+blob.5/center.y -0.000000
+blob.5/width.x 0.250000
+blob.5/width.y 0.250000
+blob.6/center.x 0.000000
+blob.6/center.y 1.000000
+blob.6/width.x 2.000000
+blob.6/width.y 1.500000
+blob.7/center.x 0.440000
+blob.7/center.y -0.000000
+blob.7/width.x 0.250000
+blob.7/width.y 0.250000
+blob.8/center.x 0.720000
+blob.8/center.y -0.000000
+blob.8/width.x 0.250000
+blob.8/width.y 0.250000
+# 
+# ###########################################
+
+- preset "stained_glass_mobile"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.407766
+blob.1/center.y 0.349516
+blob.1/width.x 0.630000
+blob.1/width.y 0.510000
+blob.2/center.x -0.737864
+blob.2/center.y -0.038836
+blob.2/width.x 0.900000
+blob.2/width.y 0.390000
+blob.3/center.x -0.485434
+blob.3/center.y -0.368930
+blob.3/width.x 0.630000
+blob.3/width.y 0.950000
+blob.4/center.x 0.524270
+blob.4/center.y 0.407766
+blob.4/width.x 0.220000
+blob.4/width.y 0.860000
+blob.5/center.x 0.077670
+blob.5/center.y -0.000000
+blob.5/width.x 0.410000
+blob.5/width.y 0.700000
+blob.6/center.x -0.019420
+blob.6/center.y 0.737864
+blob.6/width.x 0.540000
+blob.6/width.y 0.620000
+blob.7/center.x 0.660000
+blob.7/center.y -0.388350
+blob.7/width.x 0.470000
+blob.7/width.y 1.110000
+blob.8/center.x 0.058250
+blob.8/center.y -0.680000
+blob.8/width.x 0.500000
+blob.8/width.y 0.540000
+# 
+# ###########################################
+
+- preset "stored_maracas"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.600000
+blob.1/center.y 0.340000
+blob.1/width.x 0.200000
+blob.1/width.y 1.500000
+blob.2/center.x -0.200000
+blob.2/center.y 0.340000
+blob.2/width.x 0.390000
+blob.2/width.y 0.400000
+blob.3/center.x 0.200000
+blob.3/center.y 0.340000
+blob.3/width.x 0.200000
+blob.3/width.y 1.500000
+blob.4/center.x 0.600000
+blob.4/center.y 0.340000
+blob.4/width.x 0.400000
+blob.4/width.y 0.400000
+blob.5/center.x -0.600000
+blob.5/center.y -0.320000
+blob.5/width.x 0.400000
+blob.5/width.y 0.400000
+blob.6/center.x -0.200000
+blob.6/center.y -0.320000
+blob.6/width.x 0.200000
+blob.6/width.y 1.500000
+blob.7/center.x 0.200000
+blob.7/center.y -0.320000
+blob.7/width.x 0.400000
+blob.7/width.y 0.400000
+blob.8/center.x 0.600000
+blob.8/center.y -0.320000
+blob.8/width.x 0.200000
+blob.8/width.y 1.500000
+# 
+# ###########################################
+
+- preset "twist_lock_1"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.400000
+blob.1/center.y 0.200000
+blob.1/width.x 0.600000
+blob.1/width.y 0.400000
+blob.2/center.x 0.400000
+blob.2/center.y 0.600000
+blob.2/width.x 0.600000
+blob.2/width.y 0.400000
+blob.3/center.x 0.600000
+blob.3/center.y -0.400000
+blob.3/width.x 0.400000
+blob.3/width.y 0.600000
+blob.4/center.x -0.200000
+blob.4/center.y 0.400000
+blob.4/width.x 0.400000
+blob.4/width.y 0.600000
+blob.5/center.x -0.400000
+blob.5/center.y -0.200000
+blob.5/width.x 0.600000
+blob.5/width.y 0.400000
+blob.6/center.x -0.600000
+blob.6/center.y 0.400000
+blob.6/width.x 0.400000
+blob.6/width.y 0.600000
+blob.7/center.x 0.200000
+blob.7/center.y -0.400000
+blob.7/width.x 0.400000
+blob.7/width.y 0.600000
+blob.8/center.x -0.400000
+blob.8/center.y -0.600000
+blob.8/width.x 0.600000
+blob.8/width.y 0.400000
+# 
+# ###########################################
+
+- preset "twist_lock_2"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x 0.600000
+blob.1/center.y 0.200000
+blob.1/width.x 0.600000
+blob.1/width.y 0.400000
+blob.2/center.x 0.200000
+blob.2/center.y 0.600000
+blob.2/width.x 0.600000
+blob.2/width.y 0.400000
+blob.3/center.x 0.600000
+blob.3/center.y -0.200000
+blob.3/width.x 0.400000
+blob.3/width.y 0.600000
+blob.4/center.x -0.200000
+blob.4/center.y 0.600000
+blob.4/width.x 0.400000
+blob.4/width.y 0.600000
+blob.5/center.x -0.620000
+blob.5/center.y -0.200000
+blob.5/width.x 0.600000
+blob.5/width.y 0.400000
+blob.6/center.x -0.600000
+blob.6/center.y 0.200000
+blob.6/width.x 0.400000
+blob.6/width.y 0.600000
+blob.7/center.x 0.200000
+blob.7/center.y -0.600000
+blob.7/width.x 0.400000
+blob.7/width.y 0.600000
+blob.8/center.x -0.200000
+blob.8/center.y -0.600000
+blob.8/width.x 0.600000
+blob.8/width.y 0.400000
+# 
+# ###########################################
+
+- preset "warp_weft"
+- description "something about this preset"
+# ###########################################
+# 
+puck_position 0.000000 0.000000
+blob.1/center.x -0.160000
+blob.1/center.y 0.500000
+blob.1/width.x 0.250000
+blob.1/width.y 0.750000
+blob.2/center.x 0.500000
+blob.2/center.y 0.600000
+blob.2/width.x 0.750000
+blob.2/width.y 0.250000
+blob.3/center.x 0.600000
+blob.3/center.y -0.000000
+blob.3/width.x 0.250000
+blob.3/width.y 0.750000
+blob.4/center.x 0.500000
+blob.4/center.y -0.500000
+blob.4/width.x 0.750000
+blob.4/width.y 0.250000
+blob.5/center.x 0.160000
+blob.5/center.y -0.500000
+blob.5/width.x 0.250000
+blob.5/width.y 0.750000
+blob.6/center.x -0.500000
+blob.6/center.y -0.600000
+blob.6/width.x 0.750000
+blob.6/width.y 0.250000
+blob.7/center.x -0.600000
+blob.7/center.y -0.000000
+blob.7/width.x 0.250000
+blob.7/width.y 0.750000
+blob.8/center.x -0.500000
+blob.8/center.y 0.500000
+blob.8/width.x 0.750000
+blob.8/width.y 0.250000
+# 
+# ###########################################

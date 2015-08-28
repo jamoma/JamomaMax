@@ -14,14 +14,14 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 
 int C74_EXPORT main(void)
 {
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	TTValue								value(0);
-	
+
 	TTAudioGraphInit();
 
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels

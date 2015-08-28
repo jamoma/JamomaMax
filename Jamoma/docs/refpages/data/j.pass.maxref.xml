@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.pass" module="" category="Jamoma">
+	<digest>
+		Direct messages and numbers to different outlets
+	</digest>
+	<description>
+		j.pass routes messages such as node addresses and numbers without stripping the first item. It can route both relative and absolute addresses interchangeably. It can also force incoming addresses to be routed and output as relative adresses or keep unchanged
+	</description>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			routing
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			route
+		</metadata>
+		<metadata name="tag">
+			slash
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="any">
+			<digest>
+				Input
+			</digest>
+			<description>
+				Incoming node address or message to be passed
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="any">
+			<digest>
+				Matching input
+			</digest>
+			<description>
+				Incoming message if it matches symbol defined as first argument
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				Non matching inputs
+			</digest>
+			<description>
+				Incoming messages if it does not match any of the symbols defined as arguments
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist>
+		<objarg id="0" name="message to match" type="symbol" optional="0">
+			<digest>
+				Item to route
+			</digest>
+			<description>
+				Arguments set the messages to match
+			</description>
+		</objarg>
+	</objarglist>
+	<methodlist>
+		<!-- <method name="int">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="ARG_NAME_0" type="float" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method> -->
+		<method name="anything">
+			<arglist>
+				<arg name="messages to match" type="list" optional="0" />
+			</arglist>
+			<digest>
+				Messages to pass to outlets
+			</digest>
+			<description>
+				List of symbols and/or values are output to the outlet matching the symbol defined as argument. If it matches none of the argument, incoming list gets output out of the rightmost outlet
+			</description>
+		</method>
+	</methodlist>
+	<attributelist>
+		<attribute name="strip" get="1" set="1" type="int" size="1">
+			<digest>
+				Set whether j.pass will remove any leading slash
+			</digest>
+			<description>
+				The <at>strip</at> attribute sets whether <o>j.pass</o> will remove any leading slash
+			</description>
+		</attribute>
+		<attribute name="stripnonmatches" get="1" set="1" type="int" size="1">
+			<digest>
+				Set whether j.pass will remove any leading slash in non-matching messages
+			</digest>
+			<description>
+				The <at>strip</at> attribute sets whether <o>j.pass</o> will remove any leading slash in non-matching messages
+			</description>
+		</attribute>
+	</attributelist>
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.route" type="refpage" module="data"/>
+		<seealso name="j.oscroute" type="refpage" module="data"/>
+		<seealso name="route"/>
+	</seealsolist>
+</c74object>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="Jamoma under the hood (not yet available)" package="Jamoma">
+	<metadatalist>
+		<metadata name="author">Jamoma</metadata>
+		<metadata name="author">Julien Rabin</metadata>
+		<metadata name="tag">implementation</metadata>
+		<metadata name="tag">c++</metadata>
+		<metadata name="tag">developer</metadata>
+		<metadata name="tag">framework</metadata>
+	</metadatalist>
+	<h1>
+		Jamoma under the hood
+	</h1>
+	<p>
+		Jamoma modular externals (j.model, j.view, j.parameter, j.message, j.return and j.remote) rely on a c++ Modular library. This library deals with all the namespace organization and management and allows internal communication behind all these aformentioned externals. While it is generally uneeded to know the gory details behind Jamoma implementation for Max, there are cases where it might help to have a better knowledge of how things are done under the hood (ie. when writing some advanced j.namespace filters).<br/><br/>c++ developers may check out Jamoma implementation for Max <a href="https://github.com/jamoma/JamomaMax">source code</a> available on Github</p>
+	<br/>
+	<h2>
+		General overview
+	</h2>
+	<p></p>
+	<h2>
+		Object types
+	</h2>
+		<h3>Container</h3>
+		<h3>Data</h3>
+		<h3>Viewer</h3>
+		<h3>Simple nodes</h3>
+	<seealsolist>
+		<seealso name="j.model" type="refpage"/>
+		<seealso name="j.view" type="refpage"/>
+		<seealso name="j.parameter" type="refpage"/>
+		<seealso name="j.message" type="refpage"/>
+		<seealso name="j.return" type="refpage"/>
+		<seealso name="j.remote" type="refpage"/>
+		<seealso name="j.namespace" type="refpage"/>
+	</seealsolist>
+</vignette>

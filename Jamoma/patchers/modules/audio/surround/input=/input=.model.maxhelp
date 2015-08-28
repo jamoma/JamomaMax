@@ -2,43 +2,65 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 450.0, 100.0, 649.0, 461.0 ],
+		"rect" : [ 357.0, 79.0, 728.0, 755.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "jmod.sur.input~", "@description", "Playback of multichannel audiofiles based on sfplay" ],
-					"bgmode" : 1,
+					"border" : 0,
+					"filename" : "helpdetails.js",
 					"id" : "obj-2",
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "input=.model" ],
+					"maxclass" : "jsui",
 					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 10.0, 10.0, 470.0, 110.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"local" : 1,
+					"maxclass" : "ezdac~",
+					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 649.0, 70.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui"
+					"patching_rect" : [ 261.0, 585.0, 45.0, 45.0 ],
+					"style" : ""
 				}
 
 			}
@@ -46,27 +68,50 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 261.0, 547.0, 95.0, 22.0 ],
+					"style" : "",
+					"text" : "j.unpack= 2"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-33",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 547.0, 385.0, 93.0, 33.0 ],
+					"patching_rect" : [ 578.0, 579.0, 93.0, 33.0 ],
+					"style" : "",
 					"text" : "multichannel output"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-31",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "sur.meters~.module.maxpat",
+					"name" : "meters=.module.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 240.0, 199.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "audio.connect", "" ],
+					"patching_rect" : [ 261.0, 385.0, 300.0, 140.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -74,53 +119,12 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-27",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 38.0, 236.0, 179.0, 47.0 ],
-					"text" : "outputs the current position in the soundfile as a normalized value between 0..1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-21",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 22.0, 219.0, 15.0, 15.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-22",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 219.0, 132.0, 18.0 ],
-					"text" : "info/position:/enable $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-9",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 109.0, 337.0, 112.0, 20.0 ],
+					"patching_rect" : [ 53.0, 489.0, 112.0, 20.0 ],
+					"style" : "",
 					"text" : "SoundFileMerger 2",
 					"textcolor" : [ 0.4, 0.4, 0.8, 1.0 ]
 				}
@@ -134,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "bang", "bang", "", "int" ],
-					"patching_rect" : [ 108.0, 335.0, 94.0, 15.0 ]
+					"patching_rect" : [ 53.0, 489.0, 116.0, 20.0 ]
 				}
 
 			}
@@ -149,7 +153,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 55.0, 357.0, 141.0, 45.0 ],
+					"patching_rect" : [ 53.0, 528.0, 141.0, 49.0 ],
+					"style" : "",
 					"text" : ";\rmax launchbrowser http://www.e--j.com/"
 				}
 
@@ -158,211 +163,34 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-12",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 142.0, 98.0, 84.0, 20.0 ],
-					"text" : "playback level"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-13",
-					"maxclass" : "number",
-					"maximum" : 158,
-					"minimum" : 0,
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 1.0, 97.0, 35.0, 20.0 ],
-					"triscale" : 0.9
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-14",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.0, 97.0, 84.0, 18.0 ],
-					"text" : "/audio/gain $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-15",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 112.0, 128.0, 109.0, 33.0 ],
-					"text" : "loops the soundfile when finished"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
-					"id" : "obj-16",
-					"linecount" : 3,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 112.0, 165.0, 122.0, 47.0 ],
-					"text" : "change the time display in the module to countdown mode"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 20.0, 133.0, 15.0, 15.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-18",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 34.0, 133.0, 52.0, 18.0 ],
-					"text" : "/loop $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 18.0, 173.0, 15.0, 15.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-20",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 32.0, 173.0, 88.0, 18.0 ],
-					"text" : "/countdown $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"hidden" : 1,
-					"id" : "obj-23",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 69.0, 39.0, 20.0 ],
-					"text" : "r cmd"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"hidden" : 1,
-					"id" : "obj-24",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 172.0, 219.0, 42.0, 20.0 ],
-					"text" : "s cmd"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-25",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 293.0, 164.0, 234.0, 18.0 ],
-					"text" : "/view/color/border 0.62 0. 0.36 1."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-41",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 547.0, 231.0, 93.0, 20.0 ],
+					"patching_rect" : [ 578.0, 445.0, 93.0, 20.0 ],
+					"style" : "",
 					"text" : "metering"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-42",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "sur.output~.module.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 357.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"varname" : "/output~"
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-52",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "sur.input~.module.maxpat",
+					"name" : "input=.module.maxpat",
 					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 240.0, 89.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
+					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "audio.connect", "" ],
+					"patching_rect" : [ 261.0, 214.0, 300.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -370,19 +198,37 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-54",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 6.0, 311.0, 165.0, 47.0 ],
+					"patching_rect" : [ 49.0, 417.0, 165.0, 47.0 ],
+					"style" : "",
 					"text" : "to create multichannel audio files from mulitple monaural audio files, use e.g."
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
@@ -393,196 +239,99 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-21", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-24", 0 ],
-					"disabled" : 0,
-					"hidden" : 1,
-					"source" : [ "obj-22", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-42", 1 ],
+					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 1 ]
+					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-31", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-52", 0 ]
 				}
 
 			}
  ],
+		"parameters" : 		{
+			"obj-52::obj-1::obj-83" : [ "live.text[6]", "live.text[2]", 0 ],
+			"obj-52::obj-1::obj-27::obj-12" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-62" : [ "live.text[4]", "live.text[2]", 0 ],
+			"obj-52::obj-1::obj-1" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-27::obj-13" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-18" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-52::obj-1::obj-13" : [ "live.numbox[4]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-27::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-27::obj-9" : [ "live.numbox", "live.numbox", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
-				"name" : "sur.output~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.output~",
-				"patcherrelativepath" : "../sur.output~",
+				"name" : "input=.module.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.output~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.output~",
-				"patcherrelativepath" : "../sur.output~",
+				"name" : "input=.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
-				"type" : "TEXT",
+				"name" : "j.playbutton.svg",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media",
+				"type" : "svg ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "limiter~.panel.widget.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../audio/limiter~",
+				"name" : "j.pausebutton.svg",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media",
+				"type" : "svg ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input.timeDisplay.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.output~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.output~",
-				"patcherrelativepath" : "../sur.output~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "sur.limiter~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.limiter~",
-				"patcherrelativepath" : "../sur.limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/limiter~",
-				"patcherrelativepath" : "../../audio/limiter~",
+				"name" : "input=.model.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/thru",
-				"patcherrelativepath" : "../../../components/thru",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/record~",
-				"patcherrelativepath" : "../../audio/record~",
+				"name" : "meters=.module.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/meters=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.meters~.module.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.meters~",
-				"patcherrelativepath" : "../sur.meters~",
+				"name" : "meters=.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/meters=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.meters~.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.meters~",
-				"patcherrelativepath" : "../sur.meters~",
+				"name" : "meters=.model.maxpat",
+				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/meters=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "sur.meters~.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.meters~",
-				"patcherrelativepath" : "../sur.meters~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/maxhelpui",
-				"patcherrelativepath" : "../../../components/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/patchers/components/jamomaPath",
-				"patcherrelativepath" : "../../../components/jamomaPath",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -602,23 +351,15 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pack=.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unpack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.gain=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.limiter=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -626,7 +367,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.stats.mxo",
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -634,34 +375,35 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.gain=.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.remote_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.return_array.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.unpack=.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

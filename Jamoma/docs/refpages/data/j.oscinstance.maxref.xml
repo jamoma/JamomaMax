@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.oscinstance" module="" category="Jamoma">
+	<digest>
+		Retrieve the instance addressed in OSC-like address
+	</digest>
+	<description>
+		j.oscinstance allows to strip out the instance value (number or symbol) from an osc-like address
+	</description>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			osc
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			filtering
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="atom">
+			<digest>
+				osc address and value
+			</digest>
+			<description>
+				j.oscinstance leftmost inlet is used to send the osc address to strip out instance number
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="symbol">
+			<digest>
+				OSC address with instance value
+			</digest>
+			<description>
+				<o>j.oscinstance</o> first outlet output the incoming osc address with its instance value removed
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				OSC instance number or ID
+			</digest>
+			<description>
+				<o>j.oscinstance</o> second outlet outputs the incoming osc address instance number or symbol
+			</description>
+		</outlet>
+		<outlet id="2" type="any">
+			<digest>
+				Address value
+			</digest>
+			<description>
+				<o>j.oscinstance</o> second rightmost outlet outputs the value associated with the incoming address
+			</description>
+		</outlet>
+		<outlet id="3" type="any">
+			<digest>
+				Non-matching input
+			</digest>
+			<description>
+				<o>j.oscinstance</o> rightmost outlet outputs unmatching address
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist/>
+	<methodlist>
+		<method name="symbol">
+			<arglist>
+				<arg name="address value" type="list" optional="1" />
+			</arglist>
+			<digest>
+				Value associated with incoming osc-like address
+			</digest>
+			<description>
+				A osc address (symbol) followed by an associated value (symbol or number) gets stripped out if it match an osc address with instance pattern
+			</description>
+		</method>
+	</methodlist>
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.oscroute"/>
+		<seealso name="j.receive"/>
+		<seealso name="j.namespace"/>
+		<seealso name="regexp"/>
+	</seealsolist>
+</c74object>

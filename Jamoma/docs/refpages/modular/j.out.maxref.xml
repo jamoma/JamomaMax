@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+<c74object name="j.out" module="modular" category="Jamoma">
+	<digest>
+		Jamoma model output
+	</digest>
+	<description><o>j.out</o> is an output conduit for control signals in a Jamoma model (most often these are Jitter matrices), much like <o>j.out~</o> is for audio signals. It allows to turn on or off messages output from the model or bypass the value processing in the model when used in combination with <o>j.in</o>
+	</description>
+	<discussion>
+		Control input and output management provided by <o>j.in</o> and <o>j.out</o> are part of the services enabled by the  <link type="tutorial" name="amenities" module="jamoma">amenities</link> feature of a Jamoma model. When a model's <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> attribute is set to <b><i>all</i></b> or <b><i>data</i></b>, several nodes are created under the model namespace so these features can be remotely accessed.<br/><br/>
+When enable, <o>j.in</o> or <o>j.out</o> creates a <b><i>data/active</i></b> node. This internal parameter allows to toggle control signal input and output of the model.<br/><br/>
+When used in combination, paired <o>j.in</o> and <o>j.out</o> create a <b><i>data/bypass</i></b> node. When set to 1, this internal parameter allows to sent control signal coming at the model input straight to its output (that is, without passing through the whole processing chain of the model).<br/><br/>
+The use of <o>j.in</o> and <o>j.out</o> also creates <b><i>data/in.&lt;argument&gt;</i></b> and <b><i>data/out.&lt;argument&gt;</i></b> respectively, allowing to remotely send or receive control signal to a model input or output.<br/><br/>
+When <at><link type="tutorial" name="amenities" module="jamoma">amenities</link></at> is set to <b><i>none</i></b>, these features provided by <b><i>j.in</i></b> and <b><i>j.out</i></b> are disabled and the internal parameters are removed from the model's namespace.
+</discussion>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			model
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			output
+		</metadata>
+		<metadata name="tag">
+			amenities
+		</metadata>
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="any">
+			<digest>
+				Values to output from the model
+			</digest>
+			<description>
+				Values to output from the model
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="any">
+			<digest>
+				Model output
+			</digest>
+			<description>
+				Model output
+			</description>
+		</outlet>
+		<outlet id="1" type="any">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Dumpout
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist>
+		<objarg id="0" name="instance name" type="string|integer" optional="0">
+			<digest>
+				Instance name to subscribe output in the Jamoma model namespace
+			</digest>
+			<description>
+				An argument to <o>j.out</o> sets an instance name to subscribe output in the model namespace. The full address of this node will be <i>&lt;model name&gt;/data/out.&lt;argument&gt;</i><br/><br/>It also sets the name of a <o>j.out</o> to pair with
+			</description>
+		</objarg>
+	</objarglist>
+	<methodlist>
+		<!-- <method name="bang">
+			<arglist />
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method> -->
+		<!-- <method name="int">
+			<arglist>
+				<arg name="ARG_NAME_0" type="int" optional="0" />
+			</arglist>
+			<digest>
+				Integer input
+			</digest>
+			<description>
+				Integer input
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="ARG_NAME_0" type="float" optional="0" />
+			</arglist>
+			<digest>
+				Float input
+			</digest>
+			<description>
+				Float input
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				List input
+			</digest>
+			<description>
+				List input
+			</description>
+		</method> -->
+		<method name="anything">
+			<arglist>
+				<arg name="value" type="any" optional="1"/>
+			</arglist>
+			<digest>
+				Value to output from the model
+			</digest>
+			<description>Values coming at <i>j.out</i> inlet are output at <i>j.out</i> leftmost outlet. <br/><br/>When paired with a <o>j.in</o> object and <at>bypass</at> attribute set to 1, values coming at <o>j.in</o> inlet are silenced from its outlet and directly received by <o>j.out</o></description>
+		</method>
+		<method name="dump">
+			<arglist/>
+			<digest>
+				Dump attributes value
+			</digest>
+			<description>
+				The <m>dump</m> message outputs all attributes value out of <o>j.out</o> rightmost outlet
+			</description>
+		</method>
+	</methodlist>
+	<attributelist>
+		<attribute name="freeze" get="1" set="1" type="int" size="1">
+			<digest>
+				(inactive)
+			</digest>
+			<description>
+				(inactive)
+			</description>
+		</attribute>
+		<attribute name="gain" get="1" set="1" type="int" size="1">
+			<digest>
+				(inactive)
+			</digest>
+			<description>
+				(inactive)
+			</description>
+		</attribute>
+		<attribute name="mix" get="1" set="1" type="int" size="1">
+			<digest>
+				(inactive)
+			</digest>
+			<description>
+				(inactive)
+			</description>
+		</attribute>
+		<attribute name="mute" get="1" set="1" type="int" size="1">
+			<digest>
+				Mute output
+			</digest>
+			<description>
+				The <at>mute</at> attribute toggles value output. This attribute is internally linked to the model's internal parameter <b><i>data/active</i></b>
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff"/>
+			</attributelist>
+		</attribute>
+		<attribute name="type" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set the type of the output
+			</digest>
+			<description>
+				The <at>type</at> attribute sets the type of the outcoming values (default = control)
+			</description>
+		</attribute>
+		<!-- <attribute name="output/address" get="1" set="1" type="symbol" size="1">
+			<digest>
+				j.out address in the namespace to send data to when bypassing the model
+			</digest>
+			<description>
+				The <at>output/address</at> attribute set the <o>j.out</o> address in the namespace to send data to when bypassing the model. It is automatically set from the instance name defined as argument
+			</description>
+		</attribute> -->
+		<!-- <attribute name="type" get="1" set="0" type="symbol" size="1">
+			<digest>
+				Data type
+			</digest>
+			<description>
+				Data type
+			</description>
+		</attribute> -->
+	</attributelist>
+	<examplelist>
+		<example caption="" img=""/>
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.in" type="refpage" module="modular"/>
+		<seealso name="j.out~" type="refpage" module="modular"/>
+		<seealso name="j.model" type="refpage" module="modular"/>
+		<seealso name="j.ui" type="refpage" module="modular"/>
+	</seealsolist>
+</c74object>

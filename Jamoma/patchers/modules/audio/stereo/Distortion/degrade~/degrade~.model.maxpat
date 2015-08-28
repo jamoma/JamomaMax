@@ -194,7 +194,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 217.0, 44.0, 226.0, 80.0 ],
-					"text" : "j.parameter samplerateRatio @type decimal @range 0. 1. @repetitions/filter 0 @clipmode both @ramp/drive max @description \"A ratio of the emulated sample-rate to the global sample-rate.\" @priority 1"
+					"text" : "j.parameter samplerate_ratio @type decimal @range 0. 1. @repetitions/filter 0 @clipmode both @ramp/drive max @description \"A ratio of the emulated sample-rate to the global sample-rate.\" @priority 1"
 				}
 
 			}

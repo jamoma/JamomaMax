@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="How to: Remotely open view panel" package="Jamoma">
+	<h1>
+	Remotely opening view panel
+	</h1>
+	<p>
+			Jamoma model's views can embed a subpatcher. This can be useful if you want to keep only basic parameters access in your main view GUI and offer an additionnal panel for advanced parameters settings (see the <o>input~.model</o>'s view for example). Using <o>j.ui</o> in your model's view, user can bring the secondary view by clicking the (+) icon in the view top bar.
+		</p>
+	<br/>
+	<p>However, there may be cases where you may want to remotely access this secondary panel view (ie. using a Midi controller pad to open your view panel). To do so, we need to register your model's view in Jamoma namespace so it can be remotely accessed just like any regular Jamoma model.
+	</p>
+	<br/>
+	<bluebox>
+		<h2>
+	Registering view in Jamoma namespace
+	</h2>
+		<ul>
+			<li>
+			In your unlocked patcher, instantiate your view as a <o>bpatcher</o>
+		</li>
+			<li>
+			Select the <o>bpatcher</o> then bring its <link type="vignette" module="core" name="patcher_inspector">inspector</link>.	
+		</li>
+			<li>
+Set as first argument to the <o>bpatcher</o> the name of the model you want your view to bind to (ie. <b>/my_input_model~</b>)
+</li>
+			<li>
+Set as second argument a name your view will be registered under in Jamoma namespace (ie. <b>/my_input_view</b>)		</li>
+		</ul>
+	</bluebox>
+	<br/>
+	<img src="images/remotely_open_panel.png"  />
+	
+	<p>When done, you will be able to remotely access your view. In our case here, you may use <o>j.send</o> to open the secondary panel or use Jamoma <o>mapper.model</o> to map <i>note in</i> messages to <b>/my_input_view/ui:panel</b> destination address.</p>
+    <seealsolist>
+  	<seealso name="j.ui"/>
+    </seealsolist>
+</vignette>

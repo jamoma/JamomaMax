@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.parameter_array" module="" category="Jamoma">
+	<digest>
+		Define an array of remote access to parameters
+	</digest>
+	<description>
+		<o>j.remote_array</o> allows to declare an array or remote access to parameter values. This way views (user interfaces) can be separated from, and developed independently of, their underlying model.
+	</description>
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			view
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			mvc
+		</metadata>
+		
+	</metadatalist>
+	<inletlist>
+		<inlet id="0" type="any">
+			<digest>
+				Remote value of the selected instance(s)
+			</digest>
+			<description>
+				Remote value of the selected instance(s)
+			</description>
+		</inlet>
+		<inlet id="1" type="int">
+			<digest>
+				Index
+			</digest>
+			<description>
+				Index of the instance to send value to. (1 to max number of instance). <m>*</m> will send value to all instances)
+			</description>
+		</inlet>
+	</inletlist>
+	<outletlist>
+		<outlet id="0" type="any">
+			<digest>
+				Deferlowed selected instance parameter's value
+			</digest>
+			<description>
+				Deferlowed remote parameter's value prepended with the <m>set</m> message so that gui objects can be connected directly. When <at>format</at> attribute is set to <i>single</i> (default) output will be the selected instance remote parameter's value. When <at>format</at> is set to <i>array</i>, output will be a list of all remote parameters' value.
+			</description>
+		</outlet>
+		<outlet id="1" type="int">
+			<digest>
+				Selected instance remote parameter's value
+			</digest>
+			<description>
+				Remote parameter's value. When <at>format</at> attribute is set to <i>single</i> (default) output will be the selected instance remote parameter's value. When <at>format</at> is set to <i>array</i>, output will be a list of all remote parameters' value.
+			</description>
+		</outlet>
+		<outlet id="2" type="int">
+			<digest>
+				Selected instance number
+			</digest>
+			<description>
+				Output the instance number of the value output at both left outlets
+			</description>
+		</outlet>
+		<outlet id="3" type="none">
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Dump all attributes value
+			</description>
+		</outlet>
+	</outletlist>
+	<objarglist>
+		<objarg id="0" name="name" type="symbol" optional="0">
+			<digest>
+				Remote nodes array name
+			</digest>
+			<description>
+				Remote nodes array name defined using a bracket-based syntaxe: my/parameter.[2]
+			</description>
+		</objarg>
+	</objarglist>
+	<methodlist>
+		<method name="bang">
+			<arglist/>
+			<digest>
+				Outputs currently stored remote parameter value
+			</digest>
+			<description>
+				Outputs currently stored remote parameter value
+			</description>
+		</method>
+		<method name="anything">
+			<arglist>
+				<arg name="value" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Store and output current remote parameter's value.
+			</digest>
+			<description>
+				Store and output current remote parameter's value.
+			</description>
+		</method>
+		<!-- <method name="address">
+			<arglist>
+				<arg name="name" type="symbol" optional="0"/>
+			</arglist>
+			<digest>
+				Define an array of remote access to parameters
+			</digest>
+			<description>
+				The <m>address</m> message followed by an osc name containing a number of instances placed in bracket declares an array of distant parameters to bind to. Ex: 'address my/message.[5]'
+			</description>
+		</method> -->
+		<method name="array">
+			<arglist>
+				<arg name="values" type="list" optional="0"/>
+			</arglist>
+			<digest>
+				Dispatch a list of values to instances of the remote parameters
+			</digest>
+			<description>
+				The <m>array</m> message followed by a list dispatches a list of values to instances of the remote parameters
+			</description>
+		</method>
+		<method name="array/select">
+			<arglist>
+				<arg name="instance number" type="int" optional="0"/>
+			</arglist>
+			<digest>
+				This message select which instance to address
+			</digest>
+			<description>
+				The <m>array_select</m> message followed by an <m>int</m> select whichs j.parameter_array's instance to address
+			</description>
+		</method>
+		<method name="array/resize">
+			<arglist>
+				<arg name="array length" type="int" optional="0"/>
+			</arglist>
+			<digest>
+				Change the number of instances
+			</digest>
+			<description>
+				Change the number of instances
+			</description>
+		</method>
+		<method name="dump">
+			<arglist/>
+			<digest>
+				Dump
+			</digest>
+			<description>
+				The <m>dump</m> message dumps all attributes values out of the rightmost outlet
+			</description>
+		</method>
+		<method name="set">
+			<arglis name="selected parameter value" type="atom" optional="0"/>
+			<digest>
+				Send value to remote parameter without causing output
+			</digest>
+			<description>
+The <m>set</m> message followed by a value sends the value to the array of remoted parameters without causing output at <o>j.remote_array</o> two left outlets
+			</description>
+		</method>
+		<method name="setArray">
+			<arglis name="parameters value" type="atom" optional="0"/>
+			<digest>
+				Dispatch values to each instance of parameter remotes without causing output
+			</digest>
+			<description>
+The <m>setArray</m> message followed by a list dispatches the values to parameter remotes instances without causing output at <o>j.remote_array</o> two left outlets
+			</description>
+		</method>
+
+	</methodlist>
+	<attributelist>
+		<attribute name="active" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable or disable the remotes
+			</digest>
+			<description>
+				Enable or disable the remotes
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="address" get="1" set="0" type="symbol" size="1">
+			<digest>
+				Selected instance node address
+			</digest>
+			<description>
+				The <at>address</at> attribute is a read-only attribute that displays the selected distant parameter instance address
+			</description>
+		</attribute>
+		<attribute name="description" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Remotes description
+			</digest>
+			<description>
+				Description of the remotes
+			</description>
+		</attribute>
+		<attribute name="format" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Format of the values output: single or array
+			</digest>
+			<description>
+				Format of the values output. When set to <i>single</i> (default), output will be the selected instance distant parameter's value. When set to <i>array</i>, output will be a list of all instances distant parameter's value.
+			</description>
+			<attributelist>
+				<attribute name="enumvals" get="1" set="1" type="atom" size="2">
+					<enumlist>
+						<enum name="single">
+							<digest>
+								Output the selected instance distant parameter's value
+							</digest>
+							<description>
+								Output the selected instance distant parameter's value
+							</description>
+						</enum>
+						<enum name="array">
+							<digest>
+								Output the all instances distant parameter's value as a list
+							</digest>
+							<description>
+								Output the all instances distant parameter's value as a list
+							</description>
+						</enum>
+					</enumlist>
+				</attribute>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="enum"/>
+			</attributelist>
+		</attribute>
+		<attribute name="freeze" get="1" set="1" type="int" size="1">
+			<digest>
+				Prevent from causing output
+			</digest>
+			<description>
+				The <at>freeze</at> attribute makes j.remote_array to stop outputing value updates. Values can still be
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="highlight" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable ui highlighting
+			</digest>
+			<description>
+				Enable ui highlighting
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="tags" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Tags associated with the array of remotes
+			</digest>
+			<description>
+				Tags associated with the array of remotes
+			</description>
+		</attribute>
+		<attribute name="unit" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Unit used to exchange value with distant parameter
+			</digest>
+			<description>
+				The <at>unit</at> attribute allows to define a unit that will be used to send or receive value to/from a bound distant parameter. Available units depend on the distant parameters <at>dataspace</at> attribute.
+			</description>
+		</attribute>
+		<!-- <attribute name="type" get="1" set="1" type="symbol" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
+	</attributelist>
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<seealsolist>
+		<seealso name="j.remote"/>
+		<seealso name="j.parameter_array"/>
+		<seealso name="j.view"/>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
+	</seealsolist>
+</c74object>

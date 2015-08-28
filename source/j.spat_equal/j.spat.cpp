@@ -4,7 +4,7 @@
  *
  * @brief j.spat= : wraps the #TTSpat class as a spatialisation mixer for AudioGraph
  *
- * @details 
+ * @details
  *
  * @authors Timothy Place, Trond Lossius, Nils Peters
  *
@@ -14,14 +14,14 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 
 int C74_EXPORT main(void)
 {
 	MaxAudioGraphWrappedClassOptionsPtr	options = new MaxAudioGraphWrappedClassOptions;
 	TTValue								value(0);
-	
+
 	TTAudioGraphInit();
 
 	options->append(TT("nonadapting"), value); // don't change the number of out-channels in response to changes in the number of in-channels

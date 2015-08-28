@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="Absolute and relative addresses (in progress)" package="Jamoma">
+	
+	<!-- SOME METADATAS -->
+	<metadatalist>
+		<metadata name="author">Jamoma</metadata>
+		<metadata name="author">Julien Rabin</metadata>
+		<!-- AS MANY TAGS AS NEEDED -->
+		<metadata name="tag">namespace</metadata>
+		<metadata name="tag">hirarchy</metadata>
+		<metadata name="tag">mvc</metadata>
+	</metadatalist>
+	<h1>
+		Absolute and relative addresses
+	</h1>
+	<p>
+		Jamoma modular implementation for Max offers a way for Max developers to structure their patch, make an interface to standardize abstractions to be used in different projects and ease the communication and management of these various component. As your patcher grows in complexity, it might be useful to understand how to take advange of the structured namespace provided by Jamoma to access the various parameters of your patcher be it for remotely sending values or for monitoring purpose.
+	</p>
+	<br/>
+	<h2>
+		Jamoma namespace
+	</h2>
+	<p>
+		<i>To do: Short presentation of a simple patcher namespace</i>
+	</p>
+			
+	<h2>
+		Manage hierarchy
+	</h2>
+	<p>
+		<i>To do: When to use absolute vs relative addresses</i>
+	</p>
+	
+	<!-- BLUEBOX IS USED TO EMPHASIS A SECTION IN THE DOC. THESE USUALLY ARE STEP BY STEP INSTRUCTIONS -->
+	<!-- <bluebox>
+		<h2>Instantiating a model</h2>
+
+		<p>ie. You can instantiate a model in your main patcher just like any regular Max <link type="vignette" module="core" name="abstractions"> abstraction</link></p>
+		<ul>
+			<li>Press <i>n</i> key to create an object
+				</li>
+			<li>Start typing your model name and select it from the autocompletion list</li>
+		</ul>
+	</bluebox> -->
+	
+
+</vignette>

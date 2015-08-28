@@ -117,19 +117,24 @@ void WrappedApplicationClass_new(TTPtr self, long argc, t_atom *argv)
         protocol = accessProtocol(protocolName);
 		
 		// check if the protocol has been loaded
-		if (!protocol.valid()) {
-            
+		if (!protocol.valid())
+        {
             if (TTModularApplicationManager->sendMessage("ProtocolInstantiate", protocolName, out))
+            {
                 object_error((t_object*)x, "the %s protocol is not available", protocolName.c_str());
+            }
             
             protocol = out[0];
         }
+        
+        if (protocol.valid())
+        {
+            // register the application to the protocol
+            protocol.send("ApplicationRegister", applicationName, out);
 
-        // register the application to the protocol
-        protocol.send("ApplicationRegister", applicationName, out);
-
-        // run this protocol
-        protocol.send("Run");
+            // run this protocol
+            protocol.send("Run");
+        }
 	}
 	
 	// Prepare extra data
@@ -161,11 +166,14 @@ void WrappedApplicationClass_free(TTPtr self)
     anXmlHandler.set(kTTSym_object, empty);
     
      // unregister the application to the protocol
-    if (EXTRA->protocolName != kTTSymEmpty) {
-    
-        TTValue out;
-        protocol = accessProtocol(EXTRA->protocolName);
-        protocol.send("ApplicationUnregister", applicationName, out);
+    if (EXTRA->protocolName != kTTSymEmpty)
+    {
+        if (protocol.valid())
+        {
+            TTValue out;
+            protocol = accessProtocol(EXTRA->protocolName);
+            protocol.send("ApplicationUnregister", applicationName, out);
+        }
     }
     
 	// don't release the local application

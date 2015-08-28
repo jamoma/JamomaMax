@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="Jamoma dataspace" package="Jamoma">
+	<metadatalist>
+		<metadata name="author">Jamoma</metadata>
+		<metadata name="author">Julien Rabin</metadata>
+		<metadata name="tag">dataspace</metadata>
+		<metadata name="tag">unit</metadata>
+		<metadata name="tag">conversion</metadata>
+	</metadatalist>
+	<h1>
+		Jamoma dataspace
+	</h1>
+	<p>
+		The Jamoma framework (that is the C++ framework behind the Jamoma for Max implementation) includes a library allowing C++ developers to define dataspaces and handle various unit conversions (ie. xyz to aed positions). The Jamoma implemantation for Max relying on these frameworks makes available these features in a number of Max objects such as <o>j.parameter</o>, <o>j.message</o>, <o>j.return</o> and <o>j.remote</o> (and their relative j.*_array versions). There is also a j.unit external specifically dedicated to unit conversion. <br/><br/>
+		These features allow a great amount of flexibility for Max developers. For example, parameters value may be addressed in a particular unit specified at the end of the sent message as <openfilelink filename="jamoma_dataspace_topic.maxpat">illustrated below</openfilelink>.
+		<br/>
+<illustration><img src="images/jamoma_dataspace_topic.png" caption="Using units with j.parameter"/>Using units with j.parameter</illustration></p>
+	<br/>
+	<h2>
+		Dataspace and ramps
+	</h2>
+	<p>
+		While using units can be useful when building a dedicated GUI interface for example, it can also be useful when used in combination with the ramping features offered by Jamoma framework.<br/><br/>
+		When sending the <m>ramp 1000</m> message to a <o>j.parameter</o>, ramp will occur by default in the unit defined by the <o>j.parameter</o> <at>@unit</at> attribute. However, the <m>ramp</m> message may be preceeded by a unit symbol. In that case, the ramp will occur in this defined unit. An example of this can be seen in the "Dataspace and Ramp tab" in <openfilelink filename="j.parameter.maxhelp">j.parameter maxhelp</openfilelink>.
+	</p>
+	<h2>
+		Available dataspaces and units
+	</h2>
+	<techdetail>
+		<h3>Angle</h3>
+		<ul>
+			<li>radian (or <m>rad</m>)</li>
+			<li>degree (or <m>deg</m>)</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Color</h3>
+		<ul>
+			<li>rgb</li>
+			<li>rgb8</li>
+			<li>hsl</li>
+			<li>hsv</li>
+			<li>cmy</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Distance</h3>
+		<ul>
+			<li>meters (or <m>m</m>)</li>
+			<li>centimeters (or <m>cm</m>)</li>
+			<li>inches (or <m>''</m>)</li>
+			<li>feet (or <m>'</m>)</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Gain</h3>
+		<ul>
+			<li>linear</li>
+			<li>dB (or <m>db</m>)</li>
+			<li>midigain</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Orientation</h3>
+		<ul>
+			<li>quaternion (or <m>quat</m>)</li>
+			<li>euler</li>
+			<li>xyza</li>
+			<li>axis</li>
+			<li>ypr</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Position</h3>
+		<ul>
+			<li>daz</li>
+			<li>cylindrical</li>
+			<li>openGL</li>
+			<li>aed</li>
+			<li>ad</li>
+			<li>spherical</li>
+			<li>polar</li>
+			<li>xyz (or <m>cart3D</m>)</li>
+			<li>xy (or <m>cart2D</m>)</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Speed</h3>
+		<ul>
+			<li>fps</li>
+			<li>ft/s</li>
+			<li>kn</li>
+			<li>m/s</li>
+			<li>mi/h (or <m>mph</m>)</li>
+			<li>km/h (or <m>kmph</m>)</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Temperature</h3>
+		<ul>
+			<li>Kelvin (or <m>K</m>)</li>
+			<li>Fahrenheit (or <m>F</m>)</li>
+			<li>Celsius (or <m>C</m>)</li>
+		</ul>
+	</techdetail>
+	<techdetail>
+		<h3>Time</h3>
+		<ul>
+			<li>sample</li>
+			<li>speed</li>
+			<li>Hertz (or <m>Hz</m> or <m>hz</m>)</li>
+			<li>second (or <m>s</m>)</li>
+			<li>millisecond (or <m>ms</m>)</li>
+			<li>fps</li>
+			<li>midinote</li>
+			<li>mel</li>
+			<li>cents</li>
+			<li>bpm</li>
+			<li>bark</li>
+		</ul>
+	</techdetail>
+	<seealsolist>
+		<seealso name="j.unit" type="refpage" module="modular"/>
+		<seealso name="j.parameter" type="refpage" module="modular"/>
+		<seealso name="j.remote" type="refpage" module="modular"/>
+		<seealso name="j.ramp" type="refpage" module="modular"/>
+	</seealsolist>
+</vignette>

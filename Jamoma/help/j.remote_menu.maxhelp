@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 4,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 142.0, 131.0, 478.0, 565.0 ],
+		"rect" : [ 100.0, 100.0, 738.0, 552.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -25,7 +25,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 15,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -51,12 +51,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 478.0, 539.0 ],
+						"rect" : [ 0.0, 26.0, 738.0, 526.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -117,12 +117,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 142.0, 157.0, 478.0, 539.0 ],
+						"rect" : [ 100.0, 126.0, 738.0, 526.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -156,13 +156,13 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-1",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "j.parameter" ],
+									"jsarguments" : [ "j.remote_menu" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 7.0, 4.0, 458.0, 138.0 ]
+									"patching_rect" : [ 7.0, 4.0, 622.0, 119.0 ]
 								}
 
 							}
@@ -338,15 +338,13 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.remote_menu.maxpat",
-				"bootpath" : "~/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/remote_menu",
-				"patcherrelativepath" : "../patchers/components/remote_menu",
+				"bootpath" : "~/@dev/Jamoma-maxhelp/JamomaMax/Jamoma/patchers/components/remote_menu",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpdetails.js",
-				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/help/resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max.app/Contents/Resources/C74/help/resources",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

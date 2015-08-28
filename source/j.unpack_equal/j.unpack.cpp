@@ -14,7 +14,7 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 #include "jpatcher_api.h"
 //#define DEBUG_NOTIFICATIONS
 
@@ -63,20 +63,20 @@ int C74_EXPORT main(void)
 {
 	t_class *c;
 
-	TTAudioGraphInit();	
+	TTAudioGraphInit();
 	common_symbols_init();
 
 	c = class_new("j.unpack=", (method)UnpackNew, (method)UnpackFree, sizeof(t_unpack), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)UnpackNotify,		"notify",			A_CANT, 0);
 	class_addmethod(c, (method)UnpackReset,			"audio.reset",		A_CANT, 0);
 	class_addmethod(c, (method)UnpackConnect,		"audio.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)MaxAudioGraphDrop,	"audio.drop",		A_CANT, 0);
 	class_addmethod(c, (method)MaxAudioGraphObject,	"audio.object",		A_CANT, 0);
- 	class_addmethod(c, (method)UnpackDsp64,			"dsp64",			A_CANT, 0);		
-	class_addmethod(c, (method)UnpackAssist,		"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-	
+ 	class_addmethod(c, (method)UnpackDsp64,			"dsp64",			A_CANT, 0);
+	class_addmethod(c, (method)UnpackAssist,		"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	//CLASS_ATTR_FLOAT(c,		"gain", 0,		Unpack,	gain);
 	//CLASS_ATTR_ACCESSORS(c,	"gain",	NULL,	UnpackSetGain);
 
@@ -98,7 +98,7 @@ t_unpack* UnpackNew(t_symbol *msg, long argc, t_atom* argv)
 	short		i;
 	TTValue	v;
 	TTErr		err;
-   
+
     self = (t_unpack*)object_alloc(sUnpackClass);
     if (self) {
 		self->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
@@ -106,20 +106,20 @@ t_unpack* UnpackNew(t_symbol *msg, long argc, t_atom* argv)
 			self->maxNumChannels = atom_getlong(argv);
 
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
-		
+
 		v.resize(2);
 		v[0] = "thru";
 		v[1] = 1; // arg is the number of inlets
 		err = TTObjectBaseInstantiate(TT("audio.object"), (TTObjectBasePtr*)&self->audioGraphObject, v);
 		//self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("linearGain"), 1.0);
-		
+
 		attr_args_process(self, argc, argv);
-		
-    	object_obex_store((void*)self, _sym_dumpout, (object*)outlet_new(self, NULL));	// dumpout	
+
+    	object_obex_store((void*)self, _sym_dumpout, (object*)outlet_new(self, NULL));	// dumpout
 	    dsp_setup((t_pxobject*)self, 1);
 		for (i=0; i < self->maxNumChannels; i++)
 			outlet_new((t_pxobject*)self, "signal");
-		
+
 		self->qelem = qelem_new(self, (method)UnpackQFn);
 		self->obj.z_misc = Z_NO_INPLACE | Z_PUT_LAST;
 	}
@@ -156,13 +156,13 @@ t_max_err UnpackNotify(t_unpack* self, t_symbol *s, t_symbol *msg, t_object* sen
 	}
 	else {
 		if (msg == _sym_free) {
-			t_object*	sourceBox;	
+			t_object*	sourceBox;
 			t_object*	sourceObject;
 			long		sourceOutlet;
-			t_object*	destBox;		
-			t_object*	destObject;	
-			long		destInlet;			
-			
+			t_object*	destBox;
+			t_object*	destObject;
+			long		destInlet;
+
 			#ifdef DEBUG_NOTIFICATIONS
 			object_post(SELF, "patch line deleted");
 			#endif // DEBUG_NOTIFICATIONS
@@ -178,17 +178,17 @@ t_max_err UnpackNotify(t_unpack* self, t_symbol *s, t_symbol *msg, t_object* sen
 				goto out;
 			destObject = jbox_get_object(destBox);
 			destInlet = jpatchline_get_inletnum(sender);
-			
-			// if both boxes are audio graph objects 
+
+			// if both boxes are audio graph objects
 			if ( zgetfn(sourceObject, gensym("audio.object")) && zgetfn(destObject, gensym("audio.object")) ) {
 				#ifdef DEBUG_NOTIFICATIONS
 				object_post(SELF, "deleting audio graph patchline!");
 				#endif // DEBUG_NOTIFICATIONS
-				
+
 				object_method(destObject, gensym("audio.drop"), destInlet, sourceObject, sourceOutlet);
                 UnpackReset(self,  self->vectorSize);      // attempt for http://redmine.jamoma.org/issues/1248
 			}
-		out:		
+		out:
 			;
 		}
 	}
@@ -204,7 +204,7 @@ void UnpackQFn(t_unpack* self)
 	#ifdef DEBUG_NOTIFICATIONS
 	object_post(SELF, "patcher dirtied");
 	#endif // DEBUG_NOTIFICATIONS
-	
+
 	object_method(self->patcher, gensym("iterate"), (method)UnpackIterateSetupCallback, self, PI_DEEP, &result);
 
 	// attach to all of the patch cords so we will know if one is deleted
@@ -217,12 +217,12 @@ void UnpackQFn(t_unpack* self)
 void UnpackAssist(t_unpack* self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy(dst, "multichannel audio connection and control messages");		
+		strcpy(dst, "multichannel audio connection and control messages");
 	else if (msg==2) {	// Unpacklets
 		if (arg == self->maxNumChannels)
 			strcpy(dst, "dumpout");
 		else
-			snprintf(dst, 256, "(signal) single-channel output Nr. %ld", arg + 1); 
+			snprintf(dst, 256, "(signal) single-channel output Nr. %ld", arg + 1);
 	}
 }
 
@@ -245,7 +245,7 @@ void UnpackIterateResetCallback(t_unpack* self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method audioResetMethod = zgetfn(obj, gensym("audio.reset"));
-	
+
 	if (audioResetMethod)
 		err = (t_max_err)audioResetMethod(obj, self->vectorSize);
 }
@@ -255,7 +255,7 @@ void UnpackIterateSetupCallback(t_unpack* self, t_object* obj)
 {
 	t_max_err err = MAX_ERR_NONE;
 	method audioSetupMethod = zgetfn(obj, gensym("audio.setup"));
-	
+
 	if (audioSetupMethod)
 		err = (t_max_err)audioSetupMethod(obj);
 }
@@ -265,18 +265,18 @@ void UnpackAttachToPatchlinesForPatcher(t_unpack* self, t_object* patcher)
 {
 	t_object*	patchline = object_attr_getobj(patcher, _sym_firstline);
 	t_object*	box = jpatcher_get_firstobject(patcher);
-	
+
 	while (patchline) {
 		object_attach_byptr_register(self, patchline, _sym_nobox);
 		patchline = object_attr_getobj(patchline, _sym_nextline);
 	}
-		
+
 	while (box) {
 		t_symbol *classname = jbox_get_maxclass(box);
-		
+
 		if (classname == _sym_jpatcher) {
 			t_object*	subpatcher = jbox_get_object(box);
-			
+
 			UnpackAttachToPatchlinesForPatcher(self, subpatcher);
 		}
 		box = jbox_get_nextobject(box);
@@ -288,18 +288,18 @@ void UnpackAttachToPatchlinesForPatcher(t_unpack* self, t_object* patcher)
 void UnpackPerform64(t_unpack* self, t_object* dsp64, double **ins, long numins, double **outs, long numouts, long sampleframes, long flags, void *userparam)
 {
 	TTUInt16	numChannels;
-	
+
 	if (self->hasConnections) {
 		self->audioGraphObject->lockProcessing();
 		self->audioGraphObject->preprocess(self->initData);
 		self->audioGraphObject->process(self->audioSignal, self->sampleStamp);
 		self->sampleStamp += sampleframes;
 		self->audioGraphObject->unlockProcessing();
-		
-		numChannels = TTClip<TTUInt16>(self->numChannels, 0, self->audioSignal->getNumChannelsAsInt());			
+
+		numChannels = TTClip<TTUInt16>(self->numChannels, 0, self->audioSignal->getNumChannelsAsInt());
 		for (TTUInt16 channel=0; channel < numChannels; channel++) //TODO: what happens if the incomming multicable has 100 channels and we only want to unpack the first two, are we looping 100 times ?
 			self->audioSignal->getVectorCopy(channel, self->vectorSize, outs[channel]);
-		
+
 		if (numChannels  < self->maxNumChannels) { // in case the incomming smart signal has less channels than j.unpack has outlets
 			for (TTUInt16 channel=numChannels; channel < self->maxNumChannels; channel++)
 				for (int i=0 ; i < self->vectorSize; i++)
@@ -312,7 +312,7 @@ void UnpackPerform64(t_unpack* self, t_object* dsp64, double **ins, long numins,
 				outs[channel][i] = 0.0;
 		}
 	}
-	
+
 	self->hasReset = false;
 }
 
@@ -323,17 +323,17 @@ void UnpackDsp64(t_unpack* self, t_object* dsp64, short *count, double samplerat
 	TTUInt16	i;
 	t_max_err		err;
 	long		result = 0;
-	
+
 	self->vectorSize = maxvectorsize;
-	
+
 #ifdef DEBUG_NOTIFICATIONS
 	object_post(SELF, "dsp method called");
 #endif // DEBUG_NOTIFICATIONS
-	
+
 	t_object*	patcher = NULL;
 	t_object*	parent = NULL;
 	t_object*	patcherview = NULL;
-	
+
 	// first find the top-level patcher
 	err = object_obex_lookup(self, gensym("#P"), &patcher);
 	parent = patcher;
@@ -341,35 +341,35 @@ void UnpackDsp64(t_unpack* self, t_object* dsp64, short *count, double samplerat
 		patcher = parent;
 		parent = object_attr_getobj(patcher, _sym_parentpatcher);
 	}
-	
+
 
 	/*	We need to figure out what objects are connected to what inlets to build the graph:
-	 
+
 	 1. Broadcast 'audio.reset' to every object in the patcher, to remove all existing connections.
 	 2. Broadcast 'audio.setup' to every object in the patcher, to tell objects to then send
 	 'audio.connect' messages to any objects below them.
 	 3. When an object received 'audio.connect', then it makes the connection.
-	 
+
 	 At this point, the graph is configured and we just need to execute it.
 	 We execute the graph from our perform method, which MSP calls once per signal vector.
-	 
+
 	 5. Crawl the graph from bottom to top, calling the audio graph preprocess method (prepare for process)
 	 6. Crawl the graph from bottom to top, calling the audio graph process method (calculate the samples)
 	 7. (Maybe) crawl the graph from bottom to top, calling a audio graph postprocess method
-	 
-	 For steps 1 & 2, we have to traverse thge patcher twice, 
+
+	 For steps 1 & 2, we have to traverse thge patcher twice,
 	 because we have to clear all connections first, then add connections.
 	 It won't work to do them both during the same traversal because situations arise
-	 Where we setup the chain and then it gets reset again by another object 
+	 Where we setup the chain and then it gets reset again by another object
 	 (since the order in which we traverse objects is undefined).
-	 */ 
-	
+	 */
+
 	if (!self->hasReset) {
 		// now iterate recursively from the top-level patcher down through all of the subpatchers
 		object_method(patcher, gensym("iterate"), (method)UnpackIterateResetCallback, self, PI_DEEP, &result);
 		object_method(patcher, gensym("iterate"), (method)UnpackIterateSetupCallback, self, PI_DEEP, &result);
 	}
-	
+
 	// now let's attach to the patcherview to get notifications about any further changes to the patch cords
 	// the patcher 'dirty' attribute is not modified for each change, but the patcherview 'dirty' attribute is
 	if (!self->patcherview) {
@@ -378,22 +378,22 @@ void UnpackDsp64(t_unpack* self, t_object* dsp64, short *count, double samplerat
 		self->patcher = patcher;
 		object_attach_byptr_register(self, patcherview, _sym_nobox);
 	}
-	
+
 	// now we want to go a step further and attach to all of the patch cords
 	// this is how we will know if one is deleted
 	UnpackAttachToPatchlinesForPatcher(self, self->patcher);
-		
+
 	self->numChannels = 0;
 	for (i=1; i <= self->maxNumChannels; i++) {
 		self->numChannels++;
 	}
-	
+
 	self->audioGraphObject->getUnitGenerator().set(kTTSym_sampleRate, samplerate);
 	self->audioGraphObject->resetSampleStamp();
 	self->sampleStamp = 0;
-	
+
 	self->initData.vectorSize = self->vectorSize;
-	
+
 	object_method(dsp64, gensym("dsp_add64"), self, UnpackPerform64, 0, NULL);
 	//dsp_add64(dsp64, (t_object*)self, (t_perfroutine64)UnpackPerform64, 0, NULL);
 }
@@ -402,7 +402,7 @@ void UnpackDsp64(t_unpack* self, t_object* dsp64, short *count, double samplerat
 /*t_max_err UnpackSetGain(t_unpack* self, void* attr, long argc, t_atom* argv)
 {
 	if (argc) {
-		self->gain = atom_getfloat(argv); 
+		self->gain = atom_getfloat(argv);
 		self->audioGraphObject->getUnitGenerator()->setAttributeValue(TT("linearGain"), self->gain);
 	}
 	return MAX_ERR_NONE;

@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 2,
-			"architecture" : "x64",
+			"revision" : 3,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1572.0, 933.0 ],
+		"rect" : [ 34.0, 79.0, 1289.0, 933.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -206,9 +206,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 679.0, 684.0, 98.0, 35.0 ],
+					"patching_rect" : [ 679.0, 684.0, 204.0, 35.0 ],
 					"style" : "",
-					"text" : "test.list.equals @tolerance 2"
+					"text" : "test.list.equals @single_precision 1 @tolerance 10"
 				}
 
 			}

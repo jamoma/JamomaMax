@@ -14,7 +14,7 @@
  */
 
 
-#include "maxAudioGraph.h"
+#include "MaxAudioGraph.h"
 
 
 // Data Structure for this object
@@ -56,41 +56,41 @@ int C74_EXPORT main(void)
 {
 	t_class *c;
 
-	TTAudioGraphInit();	
+	TTAudioGraphInit();
 	common_symbols_init();
 
 	c = class_new("j.wavetable=", (method)OscilNew, (method)OscilFree, sizeof(t_oscil), (method)0L, A_GIMME, 0);
-	
+
 	class_addmethod(c, (method)OscilReset,			"audio.reset",		A_CANT, 0);
 	class_addmethod(c, (method)OscilSetup,			"audio.setup",		A_CANT,	0);
 	class_addmethod(c, (method)OscilConnectAudio,	"audio.connect",	A_OBJ, A_LONG, 0);
 	class_addmethod(c, (method)OscilDropAudio,		"audio.drop",		A_CANT, 0);
 	class_addmethod(c, (method)MaxAudioGraphObject,	"audio.object",		A_CANT, 0);
-	class_addmethod(c, (method)OscilAssist,			"assist",			A_CANT, 0); 
-    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);  
-	
+	class_addmethod(c, (method)OscilAssist,			"assist",			A_CANT, 0);
+    class_addmethod(c, (method)object_obex_dumpout,	"dumpout",			A_CANT, 0);
+
 	CLASS_ATTR_SYM(c,		"waveform",			0,		t_oscil,	attrWaveform);
 	CLASS_ATTR_ACCESSORS(c,	"waveform",			NULL,	OscilSetMode);
 	CLASS_ATTR_ENUM(c,		"waveform",			0,		"cosine ramp sawtooth sine square triangle");
 	CLASS_ATTR_DEFAULTNAME(c,"waveform",		0,		"sine");
-	
+
 	CLASS_ATTR_SYM(c,		"interpolation",	0,		t_oscil,	attrInterpolation);
 	CLASS_ATTR_ACCESSORS(c,	"interpolation",	NULL,	OscilSetInterpolation);
 	CLASS_ATTR_ENUM(c,		"interpolation",	0,		"none linear lfo");
 	CLASS_ATTR_DEFAULTNAME(c,"interpolation",	0,		"linear");
-	
+
 	CLASS_ATTR_FLOAT(c,		"frequency",		0,		t_oscil,	attrFrequency);
 	CLASS_ATTR_ACCESSORS(c,	"frequency",		NULL,	OscilSetFrequency);
 	CLASS_ATTR_DEFAULT(c,	"frequency",		0,		"1000");
-	
+
 	CLASS_ATTR_FLOAT(c,		"gain",				0,		t_oscil,	attrGain);
 	CLASS_ATTR_DEFAULT(c,	"gain",				0,		"1.0");
 	CLASS_ATTR_ACCESSORS(c,	"gain",				NULL,	OscilSetGain);
-		
+
 	CLASS_ATTR_LONG(c,		"numChannels",		0,		t_oscil,	attrNumChannels);
 	CLASS_ATTR_ACCESSORS(c,	"numChannels",		NULL,	OscilSetNumChannels);
 	CLASS_ATTR_DEFAULT(c,	"numChannels",		0,		"1");
-	
+
 	class_register(_sym_box, c);
 	s_oscil_class = c;
 	return 0;
@@ -135,7 +135,7 @@ void OscilFree(t_oscil* self)
 void OscilAssist(t_oscil* self, void* b, long msg, long arg, char* dst)
 {
 	if (msg==1)			// Inlets
-		strcpy(dst, "multichannel audio connection and control messages");		
+		strcpy(dst, "multichannel audio connection and control messages");
 	else if (msg==2) {	// Outlets
 		if (arg == 0)
 			strcpy(dst, "multichannel audio connection");
@@ -154,7 +154,7 @@ TTErr OscilReset(t_oscil* self)
 TTErr OscilSetup(t_oscil* self)
 {
 	t_atom a[2];
-	
+
 	atom_setobj(a+0, (t_object*)(self->audioGraphObject));
 	atom_setlong(a+1, 0);
 	outlet_anything(self->audioGraphOutlet, gensym("audio.connect"), 2, a);
@@ -174,12 +174,12 @@ TTErr OscilDropAudio(t_oscil* self, long inletNumber, t_object* sourceMaxObject,
 {
 	TTAudioGraphObjectBasePtr	sourceObject = NULL;
 	TTErr 					err;
-	
+
 	self->audioGraphObject->setAttributeValue(TT("numAudioInlets"), 0);
 	self->audioGraphObject->addAudioFlag(kTTAudioGraphGenerator);
 	err = (TTErr)(TTPtrSizedInt)(object_method(sourceMaxObject, gensym("audio.object"), &sourceObject));
 	if (self->audioGraphObject && sourceObject && !err)
-		err = self->audioGraphObject->dropAudio(sourceObject, sourceOutletNumber, inletNumber);	
+		err = self->audioGraphObject->dropAudio(sourceObject, sourceOutletNumber, inletNumber);
 	return err;
 }
 
@@ -187,14 +187,14 @@ TTErr OscilDropAudio(t_oscil* self, long inletNumber, t_object* sourceMaxObject,
 
 t_max_err OscilSetMode(t_oscil* self, void* attr, long argc, t_atom* argv)
 {
-	
+
 	if (argc) {
 		TTValue v;
-		
+
 		v.resize(argc);
 		for (int i=0; i<argc; i++)
 				v[i] = TT(atom_getsym(argv+i)->s_name);
-		
+
 		self->attrWaveform = atom_getsym(argv);
 		self->audioGraphObject->getUnitGenerator().set(TT("mode"), v);
 	}

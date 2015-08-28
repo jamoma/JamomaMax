@@ -16,6 +16,7 @@
 #include "Properties.h"
 #if defined(TT_PLATFORM_MAC)
 //#include <Multiprocessing.h>
+#include <CoreServices/CoreServices.h>
 #endif
 #include "ext_critical.h" //FIXME: this amy be added globally ?
 #include "TTBase.h"

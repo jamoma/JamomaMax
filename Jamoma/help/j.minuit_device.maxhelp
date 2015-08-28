@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 783.0, 67.0, 855.0, 616.0 ],
+		"rect" : [ 100.0, 100.0, 855.0, 616.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,36 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 18.0,
+					"frgb" : 0.0,
+					"id" : "obj-23",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 26.0, 170.0, 299.0, 27.0 ],
+					"presentation_rect" : [ 251.0, 147.0, 0.0, 0.0 ],
+					"text" : "available attributes : (default values)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-20",
+					"linecount" : 6,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 26.0, 191.0, 163.0, 87.0 ],
+					"text" : "@local/name (newDevice)\n@local/port (9998)\n@local/ip (127.0.0.1)\n@distant/name (i-score)\n@distant/port (13579)\n@distant/ip (127.0.0.1)"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -2493,114 +2523,114 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-13::obj-1::obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-13::obj-1::obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-13::obj-1::obj-1::obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-13::obj-1::obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-13::obj-1::obj-45" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-13::obj-1::obj-58" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-13::obj-1::obj-1::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-13::obj-1::obj-59" : [ "live.text[3]", "live.text[3]", 0 ],
-			"obj-13::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
 			"obj-13::obj-1::obj-74" : [ "live.dial[2]", "Transpose", 0 ],
+			"obj-13::obj-1::obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
 			"obj-13::obj-1::obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-13::obj-1::obj-1::obj-13" : [ "Release", "Release", 0 ],
-			"obj-13::obj-1::obj-82" : [ "pan", "Pan", 0 ],
-			"obj-13::obj-1::obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
-			"obj-13::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-13::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
 			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-13::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-13::obj-1::obj-108" : [ "live.text[5]", "live.text[4]", 0 ],
 			"obj-13::obj-1::obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-13::obj-1::obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-13::obj-1::obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-13::obj-1::obj-48" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-13::obj-1::obj-24" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-13::obj-1::obj-4" : [ "live.text[7]", "live.text[1]", 0 ],
 			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-13::obj-1::obj-1::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-13::obj-1::obj-108" : [ "live.text[4]", "live.text[4]", 0 ]
+			"obj-13::obj-1::obj-4" : [ "live.text[3]", "live.text[1]", 0 ],
+			"obj-13::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-13::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-13::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-13::obj-1::obj-24" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-13::obj-1::obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-13::obj-1::obj-62" : [ "live.text[7]", "live.text[3]", 0 ],
+			"obj-13::obj-1::obj-45" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-13::obj-1::obj-1::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-13::obj-1::obj-59" : [ "live.text[4]", "live.text[3]", 0 ],
+			"obj-13::obj-1::obj-58" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-13::obj-1::obj-48" : [ "live.menu[2]", "live.menu", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "degrade~.module.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.minuit_device.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/OSSIA/Jamoma/Implementations/Max/Jamoma/patchers/components/network",
-				"patcherrelativepath" : ".",
+				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/protocol",
+				"patcherrelativepath" : "../patchers/components/protocol",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.module.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.view.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.view.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
 				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
-				"patcherrelativepath" : "../../../../../../../../Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"patcherrelativepath" : "../patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

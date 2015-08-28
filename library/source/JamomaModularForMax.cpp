@@ -83,7 +83,6 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
                 TTSymbol  patcherClass;
                 TTSymbol  patcherName;
                 TTAddress patcherArg;
-                TTString  newPatcherArgument;
                 long argc = 0;
                 t_atom *  argv = NULL;
                 
@@ -95,13 +94,13 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
                 
                 if (patcherContext == kTTSym_model && argc == 1) {
                     
-                    if (atom_gettype(argv+1) == A_SYM)
-                        patcherArg = TTAddress(atom_getsym(argv+1)->s_name);
+                    if (atom_gettype(argv) == A_SYM)
+                        patcherArg = TTAddress(atom_getsym(argv)->s_name);
                 }
                 else if (patcherContext == kTTSym_view && argc == 2) {
                     
-                    if (atom_gettype(argv+2) == A_SYM)
-                        patcherArg = TTAddress(atom_getsym(argv+2)->s_name);
+                    if (atom_gettype(argv+1) == A_SYM)
+                        patcherArg = TTAddress(atom_getsym(argv+1)->s_name);
                 }
                 
                 // free args
@@ -110,12 +109,12 @@ TTErr jamoma_subscriber_create(t_object *x, TTObject& anObject, TTAddress relati
                 // warn the user that it should provide unique name
                 
                 // if no name has been provided
-                if (patcherArg == kTTAdrsEmpty && patcherContext == kTTSym_model)
-                    object_warn(patcher, "No name provided to %s %s. Using %s.", patcherClass.c_str(), patcherContext.c_str(), newContextAddress.getNameInstance().c_str());
+                if (patcherArg == kTTAdrsEmpty && patcherContext == kTTSym_model && jamoma_patcher_get_hierarchy(x) != gensym("poly"))
+                        object_warn(patcher, "No name provided to %s %s. Using %s.", patcherClass.c_str(), patcherContext.c_str(), newContextAddress.getNameInstance().c_str());
 
                 // if a duplicate name.instance was passed in argument
-                else
-                    object_warn(patcher, "Duplicate name provided to %s %s (%s). Using %s.", patcherClass.c_str(), patcherContext.c_str(), patcherArg.c_str(), newContextAddress.getNameInstance().c_str());
+                else if ( jamoma_patcher_get_hierarchy(x) != gensym("poly") )
+                        object_warn(patcher, "Duplicate name provided to %s %s (%s). Using %s.", patcherClass.c_str(), patcherContext.c_str(), patcherArg.c_str(), newContextAddress.getNameInstance().c_str());
 
 			}
             
@@ -409,12 +408,11 @@ TTErr jamoma_data_command(TTObject& aData, t_symbol *msg, long argc, const t_ato
 {
 	TTValue v, none;
 	
-	if (aData.valid()) {
-		
+	if (aData.valid())
+    {
 		jamoma_ttvalue_from_Atom(v, msg, argc, argv);
 		
-		aData.send(kTTSym_Command, v, none);
-		return kTTErrNone;
+		return aData.send(kTTSym_Command, v, none);
 	}
 	
 	return kTTErrGeneric;
@@ -734,7 +732,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	aFilter = new TTDictionaryBase;
 	aFilter->setSchema(kTTSym_filter);
 	aFilter->append(kTTSym_object, kTTSym_Data);
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("data"), (TTPtr)aFilter);
 	
 	// to look for j.parameter
@@ -743,7 +741,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	aFilter->append(kTTSym_object, kTTSym_Data);
 	aFilter->append(kTTSym_attribute, kTTSym_service);
 	aFilter->append(kTTSym_value, kTTSym_parameter);
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("parameter"), (TTPtr)aFilter);
 	
 	// to look for j.message
@@ -752,7 +750,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	aFilter->append(kTTSym_object, kTTSym_Data);
 	aFilter->append(kTTSym_attribute, kTTSym_service);
 	aFilter->append(kTTSym_value, kTTSym_message);
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("message"), (TTPtr)aFilter);
 	
 	// to look for j.return
@@ -761,7 +759,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	aFilter->append(kTTSym_object, kTTSym_Data);
 	aFilter->append(kTTSym_attribute, kTTSym_service);
 	aFilter->append(kTTSym_value, kTTSym_return);
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("return"), (TTPtr)aFilter);
 	
 	// to look for j.model
@@ -770,7 +768,7 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	aFilter->append(kTTSym_object, kTTSym_Container);
 	aFilter->append(kTTSym_attribute, kTTSym_service);
 	aFilter->append(kTTSym_value, kTTSym_model);
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("model"), (TTPtr)aFilter);
 	
 	// to look for j.view
@@ -779,21 +777,21 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	aFilter->append(kTTSym_object, kTTSym_Container);
 	aFilter->append(kTTSym_attribute, kTTSym_service);
 	aFilter->append(kTTSym_value, kTTSym_view);
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("view"), (TTPtr)aFilter);
 	
 	// to look for empty nodes
 	aFilter = new TTDictionaryBase;
 	aFilter->setSchema(kTTSym_filter);
 	aFilter->append(kTTSym_object, TTSymbol("none"));
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("none"), (TTPtr)aFilter);
 	
 	// to look for j.remote
 	aFilter = new TTDictionaryBase;
 	aFilter->setSchema(kTTSym_filter);
 	aFilter->append(kTTSym_object, kTTSym_Viewer);
-	aFilter->append(kTTSym_mode, kTTSym_include);
+	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("remote"), (TTPtr)aFilter);
 	
 	// to look for user-defined object
@@ -1287,6 +1285,8 @@ void jamoma_patcher_get_context(t_object **patcher, TTSymbol& returnedContext)
 			
 			// if the context is still NULL and there is a j.model|view at this level
 			// the default case would be to set it as a model patcher by default
+			// AV : this is never reach since found is FALSE as it's check in the if statement above
+			// TODO : fixme
 			if (returnedContext == kTTSymEmpty && found)
 				returnedContext = kTTSym_model;
 			// keep the upperPatcher if no j.model|view around

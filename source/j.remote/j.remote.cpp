@@ -183,7 +183,7 @@ void WrappedViewerClass_new(TTPtr self, long argc, t_atom *argv)
 void remote_assist(TTPtr self, void *b, long msg, long arg, char *dst)
 {
 	if (msg==1) 						// Inlet
-		strcpy(dst, "input");
+		strcpy(dst, "input: forwarded to node");
 	else {								// Outlets
 		switch(arg) {
 			case set_out:
@@ -253,10 +253,6 @@ void remote_subscribe(TTPtr self)
 	
 	// for relative address
 	jamoma_patcher_get_info((t_object*)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
-    
-    // if no name is provided or can be edited in remote_attach() : use the address
-    if (EXTRA->name == kTTAdrsEmpty)
-        EXTRA->name = x->address;
 	
     // if there is a context
     if (x->patcherContext != kTTSymEmpty) {
@@ -277,8 +273,12 @@ void remote_subscribe(TTPtr self)
                 err = jamoma_subscriber_create((t_object*)x, empty, x->address, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
             // else try to subscribe the Viewer with its name
-            else
+            else if (EXTRA->name != kTTAdrsEmpty)
                 err = jamoma_subscriber_create((t_object*)x, x->wrappedObject, EXTRA->name, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
+            
+            // else just bind to the view
+            else
+                err = jamoma_subscriber_create((t_object*)x, empty, kTTAdrsEmpty, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode);
             
         }
         // Model patcher case :
@@ -520,17 +520,6 @@ void remote_attach(TTPtr self, int attach_output_id)
 				EXTRA->w = atom_getlong(av+2);
 				EXTRA->h = atom_getlong(av+3);
 			}
-            
-            // if no name is provided : edit the name.instance part of the address and the name of the ui object
-            if (EXTRA->name == kTTAdrsEmpty) {
-                
-                TTString editName = x->address.c_str();
-                editName += "(";
-                editName += maxclass->s_name;
-                editName += ")";
-                
-                EXTRA->name = TTAddress(editName);
-            }
 		}
 	}
     

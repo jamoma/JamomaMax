@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 9,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
@@ -93,7 +93,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 88.5, 9.5, 130.0, 114.0 ],
+					"patching_rect" : [ 88.5, 9.5, 132.0, 114.0 ],
 					"text" : "patcherargs @local/name newDevice @local/port 9998 @local/ip 127.0.0.1 @distant/name i-score @distant/port 13579 @distant/ip 127.0.0.1"
 				}
 
@@ -107,7 +107,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "int" ],
 					"patching_rect" : [ 17.5, 67.5, 25.0, 25.0 ]
 				}
 
@@ -121,8 +121,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 383.0, 267.5, 119.0, 20.0 ],
-					"text" : "j.modular toto Minuit"
+					"patching_rect" : [ 383.0, 267.5, 136.0, 20.0 ],
+					"text" : "j.modular i-score Minuit"
 				}
 
 			}

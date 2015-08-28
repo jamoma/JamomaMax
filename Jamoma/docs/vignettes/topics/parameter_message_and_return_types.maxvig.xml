@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="_c74_vig.xsl" type="text/xsl"?>
+<vignette name="j.parameter, j.message and j.return value types" package="Jamoma">
+	<!-- SOME METADATAS -->
+	<metadatalist>
+		<metadata name="author">Jamoma</metadata>
+		<!-- <metadata name="author">Trond Lossius</metadata>
+		<metadata name="author">Julien Rabin</metadata> -->
+		<metadata name="tag">type</metadata>
+		<metadata name="tag">modular</metadata>
+		<metadata name="tag">dataspace</metadata>
+	</metadatalist>
+	<h1>
+	j.parameter, j.message and j.return value types
+	</h1>
+	<h2>General presentation</h2>
+	<p>
+			When creating access points in a Jamoma-based patcher (typically a Jamoma model), <o>j.parameter</o>, <o>j.message</o> and <o>j.return</o> value can be defined a <i>type</i> as attribute. This enables some features provided by the Jamoma framework as well as sets how incoming and outgoing messages will behave inside and outside of your model.<br/><br/>Available types are:<br/>
+			<techdetail><ul><li>none (j.message and j.return only)</li><li>generic</li><li>integer</li><li>decimal</li><li>array</li><li>string</li></ul></techdetail><br/>
+			By default, <o>j.parameter</o>, <o>j.message</o> and <o>j.return</o> created by the user are of type <i>generic</i>. Generic type does not assume a particular value type and provides no further data processing than clipping and repetitions filtering (if defined).<br/>
+			Defining a type as <i>integer</i>, <i>decimal</i> or <i>array</i> is required when wanting to use unit conversions provided by Jamoma dataspace library as well as ramping features. Doing so enables an optimized version of dataspace and ramps for that particular data type.<br/><br/><illustration><img src="images/parameter_message_and_return_types.gif" caption="Generic vs Decimal"/></illustration>
+	</p>
+	<br/>
+	<h2>
+		Type none
+	</h2>
+	<p><o>j.message</o> and <o>j.return</o> can be set another type as attribute: <i>none</i>. This specifies that no value is attached to that node address. It then implies a specific behaviour:
+	<ul><li>When using <o>j.message</o> and <o>j.return</o> of type <i>generic</i> (or any type except <i>none</i>), values sent at the object inlet will get output at its outlet (or at the object outlet remotely bound to it). Moreover, a bang at the object inlet will output its current value (0.0, by default).</li><li>When using <o>j.message</o> and <o>j.return</o> of type <i>none</i>, values sent at the object inlet will get ignored and converted to a bang at the outlet. When placed in a model, messages sent to <o>j.message</o> or <o>j.return</o> of type <i>none</i> (whether it is from inside the model or remotely) will cause <o>j.model</o> to output the relative node address only, without any argument.</li></ul>
+</p>
+	<techdetail><o>j.parameter</o> is designed to handle a value (so its value can be saved in a preset or a state) and always contains a value. Hence <at>@type</at> <i>none</i> is not available for <o>j.parameter</o>
+</techdetail>
+	<seealsolist>
+		<seealso name="Jamoma_dataspace" type="vignette" module="topics"/>
+		<seealso name="j.parameter" type="refpage" module="modular"/>
+		<seealso name="j.message" type="refpage" module="modular"/>
+		<seealso name="j.return" type="refpage" module="modular"/>
+		<seealso name="rampfeatures" type="tutorial" module="jamoma-tut"/>
+	</seealsolist>
+</vignette>

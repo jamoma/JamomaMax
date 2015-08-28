@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.receive~" module="" category="Jamoma">
+	<digest>
+		Output value of associated node as signal
+	</digest>
+	<description>
+		Subscribe to a model parameter or some other parameter node, and output current value of the node as an audio signal.
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+	</metadatalist>
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="INLET_TYPE">
+			<digest>
+			</digest>
+			<description>
+				Set address of node to listen to
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="signal">
+			<digest>
+				Output
+			</digest>
+			<description>
+				Current value of the associated node as an audio signal.
+			</description>
+		</outlet>
+		<outlet id="1" type="OUTLET_TYPE">
+			<digest>
+				Address of the associated node
+			</digest>
+			<description>
+				Address of the associated node
+			</description>
+		</outlet>
+		<outlet id="2" type="OUTLET_TYPE">
+			<digest>
+				dumpout
+			</digest>
+			<description>
+				dumpout
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg id="0" name="target node address" type="symbol" optional="1">
+			<digest>
+				Address of target node
+			</digest>
+			<description>
+				The address of the target node that <o>j.receive~</o> will subscribe to and receive audio signals or values from. This can be the address of a <o>j.parameter</o>, <o>j.in~</o> or <o>j.out~</o> object.<br />
+        <br />
+        If no address is provided, the object will output a zero audio signal.
+			</description>
+    </objarg>
+	</objarglist>
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="address">
+			<arglist>
+				<arg name="Target node" type="symbol" optional="0" />
+			</arglist>
+			<digest>
+				Target node address
+			</digest>
+			<description>
+				The message <m>address</m> followed by an absolute or relative address sets what node <o>j.receive~</o> will subscribe to and forward values from.
+			</description>
+		</method>
+		<method name="dump">
+			<arglist />
+			<digest>
+				Dumpout
+			</digest>
+			<description>
+				Dumps current value of all attributes.
+			</description>
+		</method>
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="active" get="1" set="1" type="int" size="1">
+			<digest>
+				Enable the <o>j.return~</o> object
+			</digest>
+			<description>
+				When the <o>j.return~</o> object is active, it will output an audio signal reflecting the current <m>signal</m> or <m>float</m> value of the associated node. If <o>j.return</o> is not active, it will stop listening to the subscribed node and instead output a zero signal.
+			</description>
+			<attributelist>
+				<attribute name="style" get="1" set="1" type="symbol" size="1" value="onoff" />
+			</attributelist>
+		</attribute>
+		<attribute name="address" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Address of associated node
+			</digest>
+			<description>
+				This sets the address of the associated node that the object will listen to.<br />
+        <br />
+        If the associated node is a <o>j.in~</o> or <o>j.out~</o> object, <o>j.receive~</o> will receive the audio signal output from that object. If the associated node is a <o>j.message</o>, <o>j.parameter</o> or <o>j.return</o> object, values output from thatobject will be output as an audio signal.<br />
+        <br />
+        The address can be <em>absolute</em> and take the form of an OSC address, or <em>relative</em>, in which case the relative address is appended to the address of the <o>j.model</o> or <o>j.view</o> object in the model or view that this <o>j.send</o> object is part of.
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="" img="" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.in~">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.message">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.message_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.model">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.node">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.out~">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.parameter_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.receive">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.remote">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.return_array">
+			<!-- TEXT_HERE -->
+		</seealso>
+    <seealso name="j.send">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.send~">
+			<!-- TEXT_HERE -->
+		</seealso>
+		<seealso name="j.view">
+			<!-- TEXT_HERE -->
+		</seealso>
+	</seealsolist>
+</c74object>

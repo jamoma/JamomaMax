@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -613,9 +613,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 54.0, 117.0, 50.0, 22.0 ],
+					"patching_rect" : [ 54.0, 117.0, 57.0, 22.0 ],
 					"style" : "",
-					"text" : "del 120"
+					"text" : "del 1200"
 				}
 
 			}
@@ -1155,7 +1155,7 @@
 		"dependency_cache" : [ 			{
 				"name" : "test.list.equals.maxpat",
 				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/integration_tests/test.list.equals",
-				"patcherrelativepath" : "../../../../../../../Jamoma/patchers/components/integration_tests/test.list.equals",
+				"patcherrelativepath" : "../../../../../components/integration_tests/test.list.equals",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1171,6 +1171,10 @@
 			}
 , 			{
 				"name" : "oscar.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
 , 			{

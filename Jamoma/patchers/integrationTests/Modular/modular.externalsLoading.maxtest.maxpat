@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
-			"architecture" : "x64",
+			"revision" : 3,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -230,32 +230,6 @@
 					"patching_rect" : [ 561.0, 135.0, 109.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.dbap_bformat"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-34",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 195.0, 605.0, 109.0, 22.0 ],
-					"style" : "default",
-					"text" : "j~ allpass"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-29",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 195.0, 633.0, 111.0, 22.0 ],
-					"style" : "default",
-					"text" : "j= allpass"
 				}
 
 			}

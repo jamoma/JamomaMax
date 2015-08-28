@@ -1,0 +1,14 @@
+language: cpp
+sudo: false
+os:
+- osx
+install:
+- "./script/depinstall.sh"
+script:
+- "./script/build.sh"
+after_success:
+- "./script/deploy-thor.sh"
+env:
+  global:
+  - secure: ftWYgyVVY2uxJyamJDnss61nY0ymLCHq4j93xitTfcB0IDA7JM4AN3gO+59T53yuCiCjndfFqF7yRijIq98WiLpVEQWmB8/GHCjjnqfU9Vr0MQdkTsLAijFY5YP4LAg8zj64APyAUB5f5JGFk39+D0OnlYuyoeN1gnnd0/BhYl4=
+  - secure: iiK+uchYC3zpeRm8cZdOlY4lZXbyrahQpsQTmvWXA5Js//t7XEosi72zMog9foobTv91JYB2cO4daip8D6OV3ijYm+z7a7KiedoCjzmqFyGPO6/EFm0BHsAKl5sofLPC2NRdGV6bQlDbnGCER5qPuP3JBA09ExPYUZoCG9D2eT4=

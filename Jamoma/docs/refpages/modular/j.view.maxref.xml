@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
+<c74object name="j.view" module="" category="Jamoma">
+	<digest>
+		Declare a patcher as a remote view of a Jamoma model patcher
+	</digest>
+	<description>
+		j.view is used to declare a patcher as a view binding to a model patcher. It handles all commodities so that j.remotes can bind to j.parameters in a model
+	</description>
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			Jamoma
+		</metadata>
+		<metadata name="tag">
+			modular
+		</metadata>
+		<metadata name="tag">
+			gui
+		</metadata>
+		<metadata name="tag">
+			view
+		</metadata>
+	</metadatalist>
+	<!-- <img="images/j.view.png" /> -->
+	<!--INLETS-->
+	<inletlist>
+		<inlet id="0" type="list">
+			<digest>Messages to be sent to the view or to the Jamoma model j.view is binding to
+			</digest>
+			<description>
+				Messages to be sent to the view or to the Jamoma model j.view is binding to
+			</description>
+		</inlet>
+	</inletlist>
+	<!--OUTLETS-->
+	<outletlist>
+		<outlet id="0" type="OUTLET_TYPE">
+			<digest>
+				view feeback
+			</digest>
+			<description>
+				Echo values sent to the Jamoma model j.view currently binds to
+			</description>
+		</outlet>
+		<outlet id="1" type="OUTLET_TYPE">
+			<digest>
+				dumpout
+			</digest>
+			<description>
+				Dump out outlet
+			</description>
+		</outlet>
+	</outletlist>
+	<!--ARGUMENTS-->
+	<!-- <objarglist>
+		<objarg id="0" name="OBJARG_NAME" type="OBJARG_TYPE" optional="0">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</objarg>
+	</objarglist> -->
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="anything">
+			<arglist>
+				<arg name="parameter name" type="atom" optional="0" />
+			</arglist>
+			<digest>
+				j.parameters' name and value to be sent
+			</digest>
+			<description>
+				j.parameters' name and value to be sent
+			</description>
+		</method>
+		<method name="alias/remove">
+			<arglist>
+				<arg name="alias name to remove" type="symbol" optional="0" />
+			</arglist>
+			<digest>
+				Remove alias name previously set to the view
+			</digest>
+			<description>
+				Remove alias name previously set to the view
+			</description>
+		</method>
+		<method name="dump">
+			<!-- <arglist>
+				<arg name="ARG_NAME_0" type="none" optional="0" />
+			</arglist> -->
+			<digest>
+				Dump the view internal state out the right-most outlet
+			</digest>
+			<description>
+				Dump the view internal state (address, description, tags, j.parameters it binds to) out the right-most outlet
+			</description>
+		</method>
+		<!-- <method name="init">
+			<arglist>
+				<arg name="ARG_NAME_0" type="list" optional="0" />
+			</arglist>
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</method> -->
+	</methodlist>
+	<!--ATTRIBUTES-->
+	<attributelist>
+		<attribute name="activity" get="1" set="0" type="atom" size="1">
+			<digest>
+				Read-only attribute to listen to the view activity
+			</digest>
+			<description>
+				Read-only attribute to listen to the view activity
+			</description>
+		</attribute>
+		<attribute name="alias" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set an alias name to the view
+			</digest>
+			<description>
+				Set an alias name to the view
+			</description>
+		</attribute>
+		<attribute name="description" get="1" set="1" type="symbol" size="1">
+			<digest>
+				Set a text description to the view
+			</digest>
+			<description>
+				Set a text description to the view
+			</description>
+		</attribute>
+		<!-- <attribute name="priority" get="1" set="1" type="int" size="1">
+			<digest>
+				TEXT_HERE
+			</digest>
+			<description>
+				TEXT_HERE
+			</description>
+		</attribute> -->
+		<attribute name="tags" get="1" set="1" type="atom" size="1">
+			<digest>
+				Some tags associated with this Jamoma model view			
+			</digest>
+			<description>
+				Some tags associated with this Jamoma model view. This can be useful for browsing purpose for example
+			</description>
+		</attribute>
+	</attributelist>
+	<!--EXAMPLE-->
+	<examplelist>
+		<example caption="j.view maxhelp patcher" img="./images/j.view.png" />
+	</examplelist>
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="j.model"/>
+		<seealso name="j.ui"/>
+		<seealso name="j.remote"/>
+		<seealso name="makeamodelview" module="jamoma" type="tutorial">test text</seealso>
+	</seealsolist>
+</c74object>

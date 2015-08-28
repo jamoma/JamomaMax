@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Using models within your patcher"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Using models within your patcher" patch="usingmodelswithinapatcher01.maxpat"/>
+
+<previous name="makeajamomamodel">Make a Jamoma model patcher</previous>
+
+<next name="makeamodelview">Make a model view patcher</next>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Using models within your patcher</h1>
+<h2>Instantiating a Jamoma model</h2>
+
+<h2>Send and receive values to models</h2>
+
+<illustration><img src="images/usingmodelswithinapatcher01.png"/>Model instantiated as abstraction</illustration>
+
+
+
+<h2>Summary</h2>
+<p>This tutorial goes through the basic usage of model in your patcher. This exemplify how to instantiate your model and how to address its features within your patch.</p>
+<seealsolist>
+	<seealso name="j.send"></seealso>
+	<seealso name="j.receive"></seealso>
+	<seealso name="j.remote"></seealso>
+</seealsolist>
+</chapter>

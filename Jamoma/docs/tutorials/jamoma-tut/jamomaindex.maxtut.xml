@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Jamoma Tutorials: Table of Contents">
+	<h1>Jamoma Tutorials - Table of Contents</h1>
+	<h2>Topics</h2>
+	<ul>
+		<li><link type="tutorial" module="jamoma" name="generalpresentation">Jamoma 0.6 overview</link> General presentation of Jamoma 0.6 features</li>
+	</ul>
+	<h2>Basics</h2>
+	<ul>
+		<li><link type="tutorial" module="jamoma" name="makeajamomamodel">Make a Jamoma model patcher</link> - How to turn a patchers into a Jamoma model patcher</li>
+		<li><link type="tutorial" module="jamoma" name="usingmodelswithinapatcher">Using models within your patcher</link> - How to instanciate and communicate to your models</li>
+		<li><link type="tutorial" module="jamoma" name="makeamodelview">Make a model view patcher</link> - How to a patcher view for your model</li>
+	</ul>
+	<h2>Advanced model design</h2>
+	<ul>
+		<li><link type="tutorial" module="jamoma" name="parameterattributes">Attributes and methods specification</link> - How to fine tune your model services</li>
+		<li><link type="tutorial" module="jamoma" name="signalinputsandoutputs">Model inputs and outputs</link> - How to manage inputs and outpus in your models</li>
+		<li><link type="tutorial" module="jamoma" name="modelpresets">Model presets</link> - How to set and recall model presets</li>
+		<li><link type="tutorial" module="jamoma" name="workingwithunits">Working with units</link> - How to setup and use Jamoma units</li>
+		<li><link type="tutorial" module="jamoma" name="rampfeatures">Ramping</link> - How to set up and use ramp features</li>
+	</ul>
+	<h2>Architecturing patchers</h2>
+	<ul>
+		<li><link type="tutorial" module="jamoma" name="amenities">Overriding features</link> - How to override model settings</li>
+		<li><link type="tutorial" module="jamoma" name="namespaceexploration">Namespace exploration and queries</link> - How to manage models in Jamoma namespace</li>
+		<li><link type="tutorial" module="jamoma" name="applicationscommunication">Remote application communication</link> - How to use Jamoma with distant applications</li>
+	</ul>
+</chapter>

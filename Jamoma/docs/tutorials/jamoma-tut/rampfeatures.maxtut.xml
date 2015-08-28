@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
+<chapter name="Ramping"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<setdocpatch name="Ramp features patcher" patch="rampfeatures01.maxpat"/>
+
+<previous name="workingwithunits">Working with units</previous>
+
+<next name="amenities">Overriding features</next>
+
+<parent name="jamomaindex">Jamoma Tutorials</parent>
+
+
+<h1>Ramping</h1>
+<h2>Defining functions</h2>
+
+<h2>Interpolation and ramps</h2>
+
+<illustration><img src="images/rampfeatures01.png"/>A simple soundfile player</illustration>
+
+
+
+<h2>Summary</h2>
+<p>This tutorial goes through the features provided by Jamoma ramp management feature. This explains how to define ramp functions for some parameters when doing interpolation or ramping to new values.</p>
+<seealsolist>
+	<seealso name="j.parameter"></seealso>
+	<seealso name="j.ramp"></seealso>
+</seealsolist>
+</chapter>
