@@ -35,7 +35,8 @@ after_build:
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - move /Y id_rsa %USERPROFILE%\.ssh\
   - cd c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\
-  - scp JamomaMax-Windows_%PLATFORM%.zip jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+  - ssh jamomabuild@thor.bek.no 'echo Test to connect to Thor server'
+  - scp JamomaMax-Windows_* jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
 
 artifacts:
   - name: Installer
