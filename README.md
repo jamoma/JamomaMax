@@ -15,7 +15,6 @@ Here are the steps to clone and build JamomaMax :
     
     git clone https://github.com/Jamoma/JamomaMax
     cd JamomaMax
-    git checkout dev
     git submodule update --init --recursive 
     ./build.sh --multi
 
