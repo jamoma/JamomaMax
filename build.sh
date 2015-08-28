@@ -14,7 +14,7 @@ JAMOMA_CMAKE_MAX_FLAGS="-DBUILD_JAMOMAMAX:bool=True"
 JAMOMA_CMAKE_PD_FLAGS="-DBUILD_JAMOMAPD:bool=False"
 
 JAMOMA_INSTALL_JAMOMA=""
-JAMOMA_INSTALL_JAMOMAPD=Yes
+JAMOMA_INSTALL_JAMOMAPD=No
 JAMOMA_INSTALL_JAMOMAMAX=Yes
 JAMOMA_UNINSTALL_JAMOMA=False
 
@@ -23,10 +23,6 @@ HELP_MESSAGE="Usage : $(basename "$0") [options]
 Builds Jamoma
 
 Options :
---no-jamoma-pd
-  Does not build Jamoma PureData implementation.
---no-jamoma-max
-  Does not build Jamoma Max implementation. Only effective on OS X (since there is no Max on Linux)
 --multi
   Builds using all your cores.
 --universal
@@ -75,11 +71,6 @@ do
 
 	--uninstall) echo "Will uninstall Jamoma"
 		sudo rm -rf /usr/local/jamoma
-		;;
-
-	--no-jamoma-max) echo "Will not install JamomaMax"
-		JAMOMA_CMAKE_MAX_FLAGS="-DBUILD_JAMOMAMAX:bool=False"
-		JAMOMA_INSTALL_JAMOMAMAX=No
 		;;
 
 	--clean) echo "Removal of the build folder"
