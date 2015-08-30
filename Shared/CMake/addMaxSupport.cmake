@@ -24,19 +24,8 @@ IF(WIN32)
 	MARK_AS_ADVANCED (MaxAudio_LIB)
 	MARK_AS_ADVANCED(Jitter_LIB)
 
-	if(CMAKE_BUILD_TYPE STREQUAL "Release")
-			add_definitions(-DMAXAPI_USE_MSCRT)
-	endif()
-# FIND_LIBRARY(MaxCRT_LIB
-			 # NAMES maxcrt
-			 # PATHS ${MAXSDK_PATH}/max-includes/)
-# MARK_AS_ADVANCED (MaxCRT_LIB)
-# SET(MaxCRT_LIB ${MaxCRT_LIB})
-# FIND_LIBRARY(MaxCRT_P_LIB
-			 # NAMES maxcrt_p
-			 # PATHS ${MAXSDK_PATH}/max-includes/)
-# MARK_AS_ADVANCED (MaxCRT_P_LIB)
-# SET(MaxCRT_P_LIB ${MaxCRT_P_LIB})
+	add_definitions(-DMAXAPI_USE_MSCRT)
+	
 ELSE()
 
 	FIND_LIBRARY(MaxAPI_LIB
