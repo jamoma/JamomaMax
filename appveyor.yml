@@ -40,8 +40,8 @@ after_build:
   - scp -v -o PreferredAuthentications=publickey JamomaMax-Windows_* jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
 
 artifacts:
-  - name: Installer
-    path: JamomaMax-*-win32.zip
+  - name: Jamoma for Max - Windows $(platform)
+    path: build\JamomaInstall\JamomaMax\JamomaMax-*.zip
 
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
