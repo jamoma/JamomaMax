@@ -164,7 +164,7 @@ void jamoma_init(void)
 			jamomaSymbol->s_thing = jamoma_object_new();
 		}
 		
-		post("Jamoma (build %s)                        Version %s | jamoma.org", JAMOMA_MAX_REV, JAMOMA_MAX_VERSION);
+		post("Jamoma  %s  |  build %s", JAMOMA_MAX_VERSION, JAMOMA_MAX_REV );
 
 		initialized = true;
 	}
