@@ -39,14 +39,14 @@ artifacts:
   - name: Jamoma for Max - Windows $(platform)
     path: JamomaMax-*.zip
 
-deploy:
-  release: $(APPVEYOR_REPO_TAG_NAME)
-  provider: GitHub
-  artifact: /.*\.zip/
-  draft: false
-  prerelease: false
-  on:
-    appveyor_repo_tag: true
+# deploy:
+#  release: $(APPVEYOR_REPO_TAG_NAME)
+#  provider: GitHub
+#  artifact: /.*\.zip/
+#  draft: false
+#  prerelease: false
+#  on:
+#    appveyor_repo_tag: true
 
 deploy:
   provider: FTP
@@ -56,5 +56,5 @@ deploy:
     secure: zLTEZ3VG//zxV7CUw5tWSw==
   password:
     secure: j1o2fQp8qxgDmJGRwSnnhQ==
-  folder:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+  folder: /Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
   artifact: JamomaMax-Windows_*.zip
