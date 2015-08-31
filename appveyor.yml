@@ -17,7 +17,7 @@ platform:
 
 before_build:
   - git submodule init
-  - git submodule update --depth 5
+  - git submodule update
   - mkdir build
   - cd build
   - set CMAKE=%CMAKE_PATH%\bin\cmake.exe
