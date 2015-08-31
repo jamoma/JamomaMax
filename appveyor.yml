@@ -16,7 +16,6 @@ platform:
   - x64
 
 before_build:
-  - move /Y %APPVEYOR_BUILD_FOLDER%\script\thor.bek.no.fingerprint %USERPROFILE%\.ssh\known_hosts
   - git submodule init
   - git submodule update --depth 1
   - mkdir build
@@ -34,13 +33,11 @@ after_build:
   - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
   - cd JamomaInstall\JamomaMax
   - 7z a JamomaMax-Windows_%PLATFORM%-%APPVEYOR_REPO_COMMIT:~0,7%-%APPVEYOR_REPO_TAG_NAME%.zip Jamoma > nul
-  - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
-  - move /Y id_rsa %USERPROFILE%\.ssh\
-  - scp -v -o PreferredAuthentications=publickey JamomaMax-Windows_* jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+  - mv /Y JamomaMax-Windows_*.zip %APPVEYOR_BUILD_FOLDER%
 
 artifacts:
   - name: Jamoma for Max - Windows $(platform)
-    path: build\JamomaInstall\JamomaMax\JamomaMax-*.zip
+    path: JamomaMax-*.zip
 
 deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
@@ -50,3 +47,14 @@ deploy:
   prerelease: false
   on:
     appveyor_repo_tag: true
+
+deploy:
+  provider: FTP
+  protocol: SFTP
+  host: thor.bek.no
+  username:
+    secure: zLTEZ3VG//zxV7CUw5tWSw==
+  password:
+    secure: j1o2fQp8qxgDmJGRwSnnhQ==
+  folder:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+  artifact: JamomaMax-Windows_*.zip
