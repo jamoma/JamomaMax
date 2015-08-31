@@ -16,6 +16,9 @@ platform:
   - x64
 
 before_build:
+  - move /Y %APPVEYOR_BUILD_FOLDER%\script\thor.bek.no.fingerprint  %USERPROFILE%\.ssh\known_hosts
+  - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
+  - move /Y id_rsa %USERPROFILE%\.ssh\
   - git submodule init
   - git submodule update
   - mkdir build
@@ -50,7 +53,7 @@ artifacts:
 
 deploy:
   provider: FTP
-  protocol: SFTP
+  protocol: sftp
   host: thor.bek.no
   username:
     secure: zLTEZ3VG//zxV7CUw5tWSw==
