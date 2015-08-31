@@ -55,8 +55,7 @@ deploy:
   provider: FTP
   protocol: sftp
   host: thor.bek.no
-  username:
-    secure: zLTEZ3VG//zxV7CUw5tWSw==
+  username: jamomabuild
   password:
     secure: j1o2fQp8qxgDmJGRwSnnhQ==
   folder: /Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
