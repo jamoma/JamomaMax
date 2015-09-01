@@ -41,12 +41,3 @@ after_build:
 artifacts:
   - name: Installer
     path: JamomaMax-*-win32.zip
-
-deploy:
-  release: $(APPVEYOR_REPO_TAG_NAME)
-  provider: GitHub
-  artifact: /.*\.zip/
-  draft: false
-  prerelease: false
-  on:
-    appveyor_repo_tag: true
