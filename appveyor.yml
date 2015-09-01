@@ -56,7 +56,5 @@ deploy:
   protocol: sftp
   host: thor.bek.no
   username: jamomabuild
-  password:
-    secure: j1o2fQp8qxgDmJGRwSnnhQ==
   folder: /Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
   artifact: JamomaMax-Windows_*.zip
