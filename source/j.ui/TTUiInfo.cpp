@@ -208,12 +208,21 @@ TTErr TTUiInfo::Panel()
 {
 	t_atom a;
     
-    if (mObject->patcher_panel) {
+    if (mObject->patcher_panel)
+    {
+        // output a bang to do some specific actions before to open
+        t_object    *box;
+        t_outlet    *outlet = NULL;
+        
+        object_obex_lookup(mObject, _sym_pound_B, &box);
+        outlet = (t_outlet*)jbox_getoutlet((t_jbox*)box, panel_out);
+        outlet_bang(outlet);
         
         // open ui panel and set title
         atom_setsym(&a, gensym((char*)mObject->viewAddress.c_str()));
         object_attr_setvalueof(mObject->patcher_panel, _sym_title, 1, &a);
         object_method(mObject->patcher_panel, _sym_vis);
+        
         return kTTErrNone;
     }
     
