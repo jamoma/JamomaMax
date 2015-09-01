@@ -211,7 +211,7 @@ TTErr TTUiInfo::Panel()
     if (mObject->patcher_panel)
     {
         // output a bang to do some specific actions before to open
-        t_object    *box;
+        t_object    *box = NULL;
         t_outlet    *outlet = NULL;
         
         object_obex_lookup(mObject, _sym_pound_B, &box);
