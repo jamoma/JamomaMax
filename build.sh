@@ -7,7 +7,9 @@ set -euf -o pipefail
 JAMOMA_CMAKE_TOOLCHAIN=""
 JAMOMA_CMAKE_BUILD_TYPE="-DCMAKE_BUILD_TYPE=Debug"
 
+JAMOMA_CMAKE_GENERATOR=""
 JAMOMA_CMAKE_UNIVERSAL_FLAGS=""
+JAMOMA_BUILD_FOLDER_SUFFIX=""
 JAMOMA_ENABLE_MULTICORE=False
 
 JAMOMA_CMAKE_MAX_FLAGS="-DBUILD_JAMOMAMAX:bool=True"
@@ -27,6 +29,8 @@ Options :
   Builds using all your cores.
 --universal
   Builds an universal binary for OS X. Warning: does not work well with brew; portmidi and gecode have to be built by hand
+--win64
+  Creates projects for 64-bits on Windows.
 --optimize
   Builds with optimizations enabled. More speed, but is not suitable for distribution on older computers or different processors.
 
@@ -61,6 +65,11 @@ do
 		JAMOMA_BREW_UNIVERSAL_FLAGS="--universal"
 		JAMOMA_CMAKE_UNIVERSAL_FLAGS="-DCMAKE_OSX_ARCHITECTURES=x86_64;i386"
 		;;
+	--win64) echo "64-bit build on Windows"
+		JAMOMA_CMAKE_UNIVERSAL_FLAGS="-DWIN64:Bool=True"
+		JAMOMA_CMAKE_GENERATOR="Visual Studio 12 2013 Win64"
+		JAMOMA_BUILD_FOLDER_SUFFIX="64"
+		;;
 	--install) echo "Will install Jamoma"
 		JAMOMA_INSTALL_JAMOMA="install"
 		;;
@@ -75,6 +84,7 @@ do
 
 	--clean) echo "Removal of the build folder"
 		rm -rf build
+		rm -rf build64
 		;;
 	*) echo "Wrong option : $1"
 		echo "$HELP_MESSAGE"
@@ -90,11 +100,20 @@ else
 	JAMOMA_NUM_THREADS=1
 fi
 
-mkdir -p build
+
+
+mkdir -p build"$JAMOMA_BUILD_FOLDER_SUFFIX"
 (
-	cd build
-	echo 	cmake .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
-	cmake .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+	cd build"$JAMOMA_BUILD_FOLDER_SUFFIX"
+
+	if [[ "$JAMOMA_CMAKE_GENERATOR" == "" ]]; then
+		echo 	cmake                             .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+		        cmake                             .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+	else
+		echo    cmake -G"$JAMOMA_CMAKE_GENERATOR" .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+		        cmake -G"$JAMOMA_CMAKE_GENERATOR" .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+	fi
+
 	echo make -j$JAMOMA_NUM_THREADS
 	make -j$JAMOMA_NUM_THREADS
 

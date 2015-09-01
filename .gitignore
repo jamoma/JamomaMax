@@ -6,6 +6,7 @@ max/externals
 
 logs
 build
+build64
 html
 Debug
 Release
