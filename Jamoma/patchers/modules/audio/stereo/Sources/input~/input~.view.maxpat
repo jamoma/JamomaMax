@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
-			"architecture" : "x64",
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 66.0, 79.0, 1130.0, 933.0 ],
+		"rect" : [ 475.0, 109.0, 920.0, 933.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -704,9 +704,10 @@
 							"parameter_longname" : "Master Gain",
 							"parameter_shortname" : "Master Gain",
 							"parameter_type" : 0,
-							"parameter_mmin" : -70.0,
+							"parameter_mmin" : -96.0,
 							"parameter_mmax" : 6.0,
-							"parameter_unitstyle" : 4
+							"parameter_unitstyle" : 9,
+							"parameter_units" : "dB"
 						}
 
 					}
@@ -879,8 +880,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1277,8 +1278,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1576,8 +1577,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2116,9 +2117,7 @@
 , 			{
 				"box" : 				{
 					"background" : 1,
-					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"fontface" : 0,
-					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-78",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -2656,34 +2655,34 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
 			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-4" : [ "live.text[4]", "live.text[1]", 0 ],
-			"obj-1::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-48" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-1::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-74" : [ "live.dial[1]", "Transpose", 0 ],
-			"obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-1::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-1::obj-6" : [ "live.text", "live.text", 0 ],
 			"obj-1::obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-24" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-45" : [ "live.text[3]", "live.text", 0 ],
+			"obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
+			"obj-59" : [ "live.text[8]", "live.text[3]", 0 ],
+			"obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-58" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-48" : [ "live.menu[2]", "live.menu", 0 ],
 			"obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
 			"obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-4" : [ "live.text[4]", "live.text[1]", 0 ],
 			"obj-1::obj-13" : [ "Release", "Release", 0 ],
-			"obj-58" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-59" : [ "live.text[8]", "live.text[3]", 0 ],
-			"obj-108" : [ "live.text[7]", "live.text[4]", 0 ],
-			"obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
-			"obj-82" : [ "pan", "Pan", 0 ],
 			"obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ]
+			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-45" : [ "live.text[3]", "live.text", 0 ],
+			"obj-82" : [ "pan", "Pan", 0 ],
+			"obj-24" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-108" : [ "live.text[7]", "live.text[4]", 0 ],
+			"obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
