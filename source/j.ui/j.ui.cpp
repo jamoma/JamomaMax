@@ -866,9 +866,9 @@ void ui_paint_address(t_ui *x, t_object *textfield)
         if (strlen(x->modelAddress.c_str()) >= maxLetter) {
             
             TTString        croppedAddress;
-            TTString        modelAddress = x->modelAddress.string();
-            TTStringIter    begin = modelAddress.begin();
-            TTStringIter    end = modelAddress.end();
+            auto			modelAddress = x->modelAddress.string();
+            auto			begin = modelAddress.begin();
+            auto			end = modelAddress.end();
             
             croppedAddress = TTString(begin, begin+(maxLetter/2)-1);
             croppedAddress += "..";
@@ -1125,7 +1125,7 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	long				size, i;
 	int 				selectedId;
 	t_jfont 			*font;
-	int					coord_x=0, coord_y=0;
+	long				coord_x=0, coord_y=0;
 	t_pt				pt;
 	
 	ui_menu_build(x);	// would be better to not rebuild the menu every single time?  or not?  this uses less memory...
@@ -1307,7 +1307,7 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	long				size, i;
 	int 				selectedId;
 	t_jfont 			*font;
-	int					coord_x=0, coord_y=0;
+	long				coord_x=0, coord_y=0;
 	t_pt				pt;
 	
 	ui_refmenu_build(x);	// TODO: would be better to not rebuild the menu every single time?  or not?  this uses less memory...

@@ -63,7 +63,7 @@ add_library(${PROJECT_NAME}
 			${PROJECT_SRCS} ${PROJECT_HDRS})
 
 set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY INSTALL_RPATH "@loader_path/../../../../support;@loader_path")
+			 PROPERTY INSTALL_RPATH "@loader_path/../../../../support/${SUPPORT_FOLDER};@loader_path")
 
 set_property(TARGET ${PROJECT_NAME}
 			 PROPERTY BUILD_WITH_INSTALL_RPATH TRUE)

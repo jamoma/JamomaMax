@@ -15,11 +15,12 @@
 #include "jit.common.h"
 #include "hull2D.h"
 
-const long MAX_NUM_SOURCES = 1024;
-const long MAX_NUM_DESTINATIONS = 1024;
+// This seems to be the current restrictions of matrix~
+const long MAX_NUM_SOURCES = 128;
+const long MAX_NUM_DESTINATIONS = 128;
 
-const long MAX_NUM_WEIGHTED_SOURCES = 1024;
-const long MAX_NUM_WEIGHTED_DESTINATIONS = 1024;
+const long MAX_NUM_WEIGHTED_SOURCES = 64;
+const long MAX_NUM_WEIGHTED_DESTINATIONS = 32;
 
 const long MAX_SIZE_VIEW_X = 80;
 const long MAX_SIZE_VIEW_Y = 60;

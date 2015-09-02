@@ -210,8 +210,8 @@ void model_subscribe(TTPtr self)
 	t_object*					aPatcher = jamoma_patcher_get((t_object*)x);
 
 	// if the subscription is successful
-	if (!jamoma_subscriber_create((t_object*)x, x->wrappedObject, kTTAdrsEmpty, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode)) {
-		
+	if (!jamoma_subscriber_create((t_object*)x, x->wrappedObject, kTTAdrsEmpty, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode))
+    {
 		// get all info relative to our patcher
 		jamoma_patcher_get_info((t_object*)x, &x->patcherPtr, x->patcherContext, x->patcherClass, x->patcherName);
 		
@@ -228,8 +228,8 @@ void model_subscribe(TTPtr self)
         object_attr_setvalueof(jpatcher_get_box(x->patcherPtr), _sym_annotation , 1, &a);
         
 		// if the j.model|j.view is well subscribed
-		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty) {
-            
+		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty)
+        {
             // create a model object (for j.view too !)
             *EXTRA->modelInfo = TTObject("ModelInfo", (TTPtr)x);
             
@@ -244,35 +244,40 @@ void model_subscribe(TTPtr self)
                 object_error((t_object*)x, "can't subscribe model object");
             
             // In model patcher : set model:address with the model address
-			if (x->patcherContext == kTTSym_model) {
-                
+			if (x->patcherContext == kTTSym_model)
+            {
 				EXTRA->modelInfo->set(kTTSym_address, returnedAddress);
                 
                 // then set the address attribute readOnly
                 TTModelInfoPtr(EXTRA->modelInfo->instance())->setAddressReadOnly(YES);
             }
             
+            // if the parent patcher is a bpatcher: bind on the parent bpatcher instead of the patcher it self
+            t_object *parentPatcher = object_attr_getobj(aPatcher, _sym_parentpatcher);
+            t_object *parentBox = object_attr_getobj(parentPatcher, _sym_box);
+            if (parentBox)
+            {
+                if (object_classname(parentBox) == _sym_bpatcher)
+                    aPatcher = parentPatcher;
+            }
+
             // Get patcher arguments
 			ac = 0;
 			av = NULL;
-			
-			// If x is in a bpatcher, the patcher is NULL
-      // AV : aPatcher can't be NULL since it's checked in the if statement above
-      // TODO fixme
-			if (!aPatcher)
-				aPatcher = object_attr_getobj(x, _sym_parentpatcher);
-			
+
 			jamoma_patcher_get_args(aPatcher, &ac, &av);
 			
 			// check if it's a sub model
 			isSubModel = atom_getsym(av) == _sym_p;
 			
 			// in subpatcher :
-			if (jamoma_patcher_get_hierarchy(aPatcher) == _sym_subpatcher) {
-                
+			if (jamoma_patcher_get_hierarchy(aPatcher) == _sym_subpatcher)
+            {
                 // remove first 'p' or 'patcher'
-                if (ac > 0 && av) {
-                    if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher) {
+                if (ac > 0 && av)
+                {
+                    if (atom_getsym(av) == _sym_p || atom_getsym(av) == _sym_patcher)
+                    {
                         ac--;
                         av++;
                     }
@@ -284,8 +289,8 @@ void model_subscribe(TTPtr self)
 			}
 			
 			// j.model case :
-			if (x->patcherContext == kTTSym_model) {
-                
+			if (x->patcherContext == kTTSym_model)
+            {
                 // use patcher arguments to setup the model attributes (like @priority and @amenities)
 				if (ac && av)
 					attr_args_process(x, ac, av);
@@ -307,8 +312,8 @@ void model_subscribe(TTPtr self)
                     model_preset_amenities(self);
                 
                 // Add amenities relative to signal informations
-                if (model_test_amenities(self, TTSymbol("data")) || model_test_amenities(self, TTSymbol("audio"))) {
-                    
+                if (model_test_amenities(self, TTSymbol("data")) || model_test_amenities(self, TTSymbol("audio")))
+                {
                     // look at model's content to create signal in/out datas
                     model_signal_amenities(self, _sym_nothing, 0, NULL);
                     
@@ -323,7 +328,8 @@ void model_subscribe(TTPtr self)
 			t_atom a;
 			x->subscriberObject.get("nodeAddress", v);
             
-            if (v.size() == 1) {
+            if (v.size() == 1)
+            {
                 returnedAddress = v[0];
                 atom_setsym(&a, gensym((char*)returnedAddress.c_str()));
                 object_obex_dumpout(self, gensym("address"), 1, &a);

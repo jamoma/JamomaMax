@@ -21,6 +21,12 @@ else
   CMAKE_OPTIONS="$CMAKE_OPTIONS -DCROSS_COMPILER_PATH=${HOME}/mingw-w64-install/ -DCMAKE_TOOLCHAIN_FILE=${TRAVIS_BUILD_DIR}/Shared/CMake/toolchains/mingw-w64.cmake"
 fi
 
+if [ "x$TRAVIS_TAG" = "x" ]; then
+  CMAKE_OPTIONS="$CMAKE_OPTIONS -DCMAKE_BUILD_TYPE=Debug"
+else
+  CMAKE_OPTIONS="$CMAKE_OPTIONS -DCMAKE_BUILD_TYPE=Release"
+fi
+
 echo "Configuring with CMAKE_OPTIONS=$CMAKE_OPTIONS"
 ${HOME}/cmake/bin/cmake .. ${CMAKE_OPTIONS}
 echo "Now make"
