@@ -250,7 +250,11 @@ void model_signal_return_audio_gain(TTPtr self, t_symbol *msg, long argc, t_atom
         
         jamoma_ttvalue_from_Atom(in, msg, argc, argv);
         
-        EXTRA->dataspaceConverter->send("convert", in, out);
+        // catch value lower than -96 db to completely mute the signal
+        if (TTFloat64(in[0]) <= TTFloat64(-96.))
+            out = 0.;
+        else
+            EXTRA->dataspaceConverter->send("convert", in, out);
         
         aSender.send(kTTSym_Send, out, none);
     }
