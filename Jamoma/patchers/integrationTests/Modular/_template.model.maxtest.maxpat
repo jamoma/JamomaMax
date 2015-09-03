@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,12 +38,25 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 163.0, 48.0, 56.0, 22.0 ],
+					"style" : "",
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 160.0, 63.0, 36.0, 22.0 ],
+					"patching_rect" : [ 163.0, 74.0, 36.0, 22.0 ],
 					"style" : "default",
 					"text" : "sel 1"
 				}
@@ -56,7 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 160.0, 37.0, 157.0, 22.0 ],
+					"patching_rect" : [ 163.0, 18.0, 157.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.receive template:initialized"
 				}
@@ -69,7 +82,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 226.5, 276.0, 141.0, 22.0 ],
+					"patching_rect" : [ 230.333328, 281.0, 141.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.remote /template/active"
 				}
@@ -83,7 +96,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 384.0, 169.5, 210.0, 37.0 ],
+					"patching_rect" : [ 387.0, 180.5, 210.0, 37.0 ],
 					"style" : "default",
 					"text" : "Testing that the active parameter of this model is set correctly."
 				}
@@ -98,7 +111,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 160.0, 399.5, 24.0, 24.0 ],
+					"patching_rect" : [ 163.0, 410.5, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -110,7 +123,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 160.0, 364.0, 35.0, 22.0 ],
+					"patching_rect" : [ 163.0, 375.0, 35.0, 22.0 ],
 					"style" : "default",
 					"text" : "== 1"
 				}
@@ -123,7 +136,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 160.0, 304.0, 127.0, 22.0 ],
+					"patching_rect" : [ 163.0, 315.0, 127.0, 22.0 ],
 					"style" : "default",
 					"text" : "i 0"
 				}
@@ -136,7 +149,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "bang" ],
-					"patching_rect" : [ 160.0, 90.0, 34.0, 22.0 ],
+					"patching_rect" : [ 163.0, 101.0, 34.0, 22.0 ],
 					"style" : "default",
 					"text" : "t b b"
 				}
@@ -149,7 +162,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 226.5, 148.0, 52.0, 22.0 ],
+					"patching_rect" : [ 229.5, 159.0, 52.0, 22.0 ],
 					"style" : "default",
 					"text" : "active 1"
 				}
@@ -163,7 +176,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 226.5, 178.0, 132.0, 22.0 ],
+					"patching_rect" : [ 229.5, 189.0, 132.0, 22.0 ],
 					"style" : "default",
 					"text" : "mouse.model template"
 				}
@@ -176,7 +189,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 455.0, 445.0, 22.0 ],
+					"patching_rect" : [ 163.0, 466.0, 445.0, 22.0 ],
 					"style" : "default",
 					"text" : "test.assert Jamoma/Modular/template/name_of_the_test @tags Jamoma Modular"
 				}
@@ -189,7 +202,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 56.0, 428.0, 24.0, 22.0 ],
+					"patching_rect" : [ 59.0, 439.0, 24.0, 22.0 ],
 					"style" : "default",
 					"text" : "t b"
 				}
@@ -201,7 +214,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 56.0, 455.0, 83.0, 22.0 ],
+					"patching_rect" : [ 59.0, 466.0, 83.0, 22.0 ],
 					"style" : "default",
 					"text" : "test.terminate"
 				}
@@ -241,6 +254,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -291,7 +313,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
@@ -310,8 +332,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../../modules/data/mouse",
+				"bootpath" : "~/dev/Jamoma/JamomaCmake/JamomaMax/Jamoma/patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
