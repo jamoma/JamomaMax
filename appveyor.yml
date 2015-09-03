@@ -16,7 +16,7 @@ platform:
   - x64
 
 before_build:
-  - ps: ssh-keyscan -t rsa thor.bek.no >> $env:USERPROFILE\.ssh\known_hosts
+  - ps: ssh-keyscan -v -t rsa thor.bek.no >> $env:USERPROFILE\.ssh\known_hosts
 #  - move /Y %APPVEYOR_BUILD_FOLDER%\script\thor.bek.no.fingerprint  %USERPROFILE%\.ssh\known_hosts
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - move /Y id_rsa %USERPROFILE%\.ssh\
