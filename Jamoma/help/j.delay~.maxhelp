@@ -242,7 +242,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-12",
-									"maxclass" : "j.meter~",
+									"maxclass" : "live.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -253,7 +253,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-18",
-									"maxclass" : "j.meter~",
+									"maxclass" : "live.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -264,7 +264,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-7",
-									"maxclass" : "j.meter~",
+									"maxclass" : "live.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -275,7 +275,7 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-5",
-									"maxclass" : "j.meter~",
+									"maxclass" : "live.meter~",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
@@ -790,7 +790,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.meter~.mxo",
+				"name" : "live.meter~.mxo",
 				"type" : "iLaX"
 			}
  ]
