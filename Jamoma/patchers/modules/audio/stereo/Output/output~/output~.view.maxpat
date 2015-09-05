@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"revision" : 6,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1162.0, 933.0 ],
+		"rect" : [ 34.0, 79.0, 1612.0, 933.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -717,8 +717,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1030,8 +1030,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1650,7 +1650,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 201.25, 24.5, 75.0, 87.0 ],
+					"patching_rect" : [ 201.25, 86.0, 75.0, 84.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 201.25, 86.0, 75.0, 84.0 ],
 					"proportion" : 0.39,
@@ -1700,7 +1700,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 201.0, 114.5, 75.0, 55.0 ],
+					"patching_rect" : [ 201.0, 24.5, 75.0, 58.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 201.0, 24.5, 75.0, 58.0 ],
 					"proportion" : 0.39,
@@ -2202,35 +2202,35 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-103" : [ "live.text[5]", "live.text", 0 ],
-			"obj-98" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
-			"obj-82" : [ "pan", "Pan", 0 ],
-			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
 			"obj-97" : [ "live.numbox", "CPU", 0 ],
-			"obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-12::obj-13" : [ "Release", "Release", 0 ],
-			"obj-102" : [ "live.text[3]", "live.text", 0 ],
-			"obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
-			"obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
 			"obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-82" : [ "pan", "Pan", 0 ],
+			"obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-12::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
+			"obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-102" : [ "live.text[3]", "live.text", 0 ],
+			"obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-12::obj-13" : [ "Release", "Release", 0 ],
+			"obj-53" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-103" : [ "live.text[5]", "live.text", 0 ],
 			"obj-104" : [ "live.dial[1]", "Depth", 0 ],
 			"obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-106" : [ "live.dial[3]", "Release", 0 ],
-			"obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-53" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-12::obj-6" : [ "live.text", "live.text", 0 ]
+			"obj-98" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
+			"obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-108" : [ "live.text[6]", "live.text[4]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
