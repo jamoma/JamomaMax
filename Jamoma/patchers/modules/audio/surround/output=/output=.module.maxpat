@@ -123,17 +123,26 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-1::obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-1::obj-53" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-1::obj-17::obj-12" : [ "live.numbox[3]", "live.numbox[3]", 0 ],
 			"obj-1::obj-103" : [ "live.text[5]", "live.text", 0 ],
-			"obj-1::obj-81" : [ "live.text[9]", "live.text[1]", 0 ],
-			"obj-1::obj-80" : [ "live.text[8]", "live.text[4]", 0 ],
-			"obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-1::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
+			"obj-1::obj-97" : [ "live.numbox[2]", "CPU", 0 ],
+			"obj-1::obj-53" : [ "Master Gain", "Master Gain", 0 ],
+			"obj-1::obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
+			"obj-1::obj-80" : [ "live.text[8]", "live.text[4]", 0 ],
+			"obj-1::obj-81" : [ "live.text[9]", "live.text[1]", 0 ],
+			"obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-1::obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-1::obj-12::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-1::obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-1::obj-17::obj-12" : [ "live.numbox[3]", "live.numbox[3]", 0 ],
 			"obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-1::obj-97" : [ "live.numbox[2]", "CPU", 0 ]
+			"obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-1::obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -149,14 +158,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/javascript",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter~.panel.widget.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"name" : "limiter=.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/limiter=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -203,7 +206,19 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.info=.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -236,14 +251,6 @@
 			}
 , 			{
 				"name" : "j.stats.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.info=.mxo",
 				"type" : "iLaX"
 			}
  ],
