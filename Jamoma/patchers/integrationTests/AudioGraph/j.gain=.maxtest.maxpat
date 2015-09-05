@@ -70,9 +70,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 201.0, 462.0, 344.0, 49.0 ],
+					"patching_rect" : [ 201.0, 438.0, 258.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=/mute_differs_from_0_and_1 @tags Jamoma AudioGraph"
+					"text" : "test.assert Jamoma/AudioGraph/j.gain=/midigain/cliplow @tags Jamoma AudioGraph"
 				}
 
 			}
@@ -125,9 +125,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 359.0, 408.0, 336.0, 49.0 ],
+					"patching_rect" : [ 359.0, 375.0, 250.0, 49.0 ],
 					"style" : "default",
-					"text" : "test.assert Jamoma/AudioGraph/j.mutesolo=solo_differs_from_0_and_1 @tags Jamoma AudioGraph"
+					"text" : "test.assert Jamoma/AudioGraph/j.gain=/dbgain/cliplow @tags Jamoma AudioGraph"
 				}
 
 			}
