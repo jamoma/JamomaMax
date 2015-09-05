@@ -143,7 +143,7 @@ void model_signal_amenities(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 aData.set(kTTSym_tags, kTTSym_generic);
                 v = TTValue(-96., 12);
                 aData.set(kTTSym_rangeBounds, v);
-                aData.set(kTTSym_rangeClipmode, kTTSym_none);
+                aData.set(kTTSym_rangeClipmode, kTTSym_low);
                 v = TTValue(0.);
                 aData.set(kTTSym_valueDefault, v);
                 aData.set(kTTSym_rampDrive, TTSymbol("max"));
