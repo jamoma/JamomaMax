@@ -10,7 +10,7 @@ configuration: Release
 install:
   - appveyor DownloadFile "http://www.cmake.org/files/v3.3/cmake-3.3.0-rc4-win32-x86.zip"
   - 7z x cmake-3.3.0-rc4-win32-x86.zip -y > nul
-  - appveyor DownloadFile "https://winscp.net/download/files/2015090617206c83cfed48fa7c8162329ac5a4448ceb/winscp575.zip"
+  - appveyor DownloadFile "http://downloads.sourceforge.net/project/winscp/WinSCP/5.7.5/winscp575.zip?r=&ts=1441560630&use_mirror=freefr"
   - 7z x winscp575.zip -y
 
 platform:
