@@ -1,9 +1,9 @@
 environment:
   CMAKE_PATH: c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86
   encrypted_key:
-    secure: NBgLiSQwqyGpdaFuCaU/pY71Crm4TQ1ClOHJj4cMekk=
+    secure: wMFDidPMGaYZm9nzEn9OSoPa2BIRrLw5bpKkvcGJCY8=
   encrypted_iv:
-    secure: 8TrT2dUy4RkrNMtaXzhTqEd/SP816Ev/pYdGksosxXA=
+    secure: iXPMeWgtvO5yvxY5yQodIH7+AAZhMjjLIAgUw429d7A=
 
 configuration: Release
 
@@ -21,9 +21,8 @@ before_build:
 # - ps: ssh-keyscan -v -t rsa thor.bek.no >> $env:USERPROFILE\.ssh\known_hosts
 #  - move /Y %APPVEYOR_BUILD_FOLDER%\script\thor.bek.no.fingerprint  %USERPROFILE%\.ssh\known_hosts
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
-  - move /Y id_rsa %USERPROFILE%\.ssh\
   - echo test > test.txt
-  - c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://thor.bek.no/ -privatekey=%USERPROFILE%\.ssh\id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put test.txt" "exit"
+  - c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://thor.bek.no/ -privatekey=id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put test.txt" "exit"
 #  - scp -v -o PreferredAuthentications=publickey -i %USERPROFILE%\.ssh\id_rsa test.txt jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
 #  - scp -v -o PreferredAuthentications=publickey JamomaMax-Windows_* jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
   - git submodule init
