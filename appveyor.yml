@@ -10,6 +10,8 @@ configuration: Release
 install:
   - appveyor DownloadFile "http://www.cmake.org/files/v3.3/cmake-3.3.0-rc4-win32-x86.zip"
   - 7z x cmake-3.3.0-rc4-win32-x86.zip -y > nul
+  - appveyor DownloadFile "https://winscp.net/download/winscp575.zip"
+  - 7z x winscp575.zip -y > nul
 
 platform:
   - Win32
@@ -21,7 +23,8 @@ before_build:
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - move /Y id_rsa %USERPROFILE%\.ssh\
   - echo test > test.txt
-  - scp -v -o PreferredAuthentications=publickey -i %USERPROFILE%\.ssh\id_rsa test.txt jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+  - c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://thor.bek.no/ -privatekey=%USERPROFILE%\.ssh\id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put test.txt" "exit"
+#  - scp -v -o PreferredAuthentications=publickey -i %USERPROFILE%\.ssh\id_rsa test.txt jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
 #  - scp -v -o PreferredAuthentications=publickey JamomaMax-Windows_* jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
   - git submodule init
   - git submodule update
