@@ -18,11 +18,11 @@ platform:
   - x64
 
 before_build:
+  - echo %APPVEYOR_REPO_COMMIT_TIMESTAMP%
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - git submodule init
   - git submodule update
   - git --version
-  - git show -s --format=%ci > temp.txt
   - set /p DATE=<temp.txt
   - set /p TIME=%DATE:~10,9%
   - mkdir build
