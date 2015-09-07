@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>namespace</title>
+    <expansionState>0,2,4,13,20,25,31,33,39,41,43,45,48</expansionState>
+  </head>
+  <body>
+    <outline text="Name">
+      <outline text=":/name" Type="Property read only" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+    <outline text="Node type">
+      <outline text=":/type" Type="Property" Description="Might be read only?" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+    <outline text="Controlling the node itself">
+      <outline text="implicitly set" Type="Alias" Implemented="Yes" Getimplemented="N/A"/>
+      <outline text=":/value" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/value/default" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/value/stepsize" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/value/inc" Type="Method" Implemented="Yes" Getimplemented="N/A"/>
+      <outline text=":/value/dec" Type="Method" Implemented="Yes" Getimplemented="N/A"/>
+      <outline text=":/+" Type="Alias" Implemented="Yes" Getimplemented="N/A"/>
+      <outline text=":/-" Type="Alias" Implemented="Yes" Getimplemented="N/A"/>
+    </outline>
+    <outline text="Controlling range" Description="1: Need to be possible to describe as vector for multi-dimentional data.&#10;2: Problem: Range depends on the /dataspace/unit/active used. How to implement?&#10;3: wrap and fold also relevant.">
+      <outline text=":/range/bounds/low" Type="Property" Implemented="No" Getimplemented="No"/>
+      <outline text=":/range/bounds.1 0 1 etc...."/>
+      <outline text=":/range/bounds [0 1] [0 127] [-50 50]"/>
+      <outline text=":/range/bounds/high" Type="Property" Implemented="No" Getimplemented="No"/>
+      <outline text=":/clipmode/low" Type="Property" Implemented="No" Getimplemented="No"/>
+      <outline text=":/clipmode/high" Type="Property" Implemented="No" Getimplemented="No"/>
+    </outline>
+    <outline text="Ramping">
+      <outline text=":/ramp/drive" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/ramp/drive:/catalog" Type="Method" Description="provides you with a list of available options for this node, what schedulers are available, typically used to fill a menu" Implemented="No" Getimplemented="N/A"/>
+      <outline text=":/ramp/drive:/dump" Type="Method" Description="dumping current setting of all properties" Implemented="No" Getimplemented="N/A"/>
+      <outline text=":/ramp/drive:/namespace" Type="Method" Description="dumping the namespace for this node, but not recursive if the nodes of this node themselves have properties" Getimplemented="N/A"/>
+      <outline text="Properities and methods of specific drives:">
+        <outline text=":/ramp/function:/granularity" Type="Property" Implemented="No" Getimplemented="No"/>
+      </outline>
+      <outline text=":/ramp/function" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/ramp/function:/catalog" Type="Method" Description="provides you with a list of available options for this node, what functions are available, typically used to fill a menu" Implemented="No" Getimplemented="N/A"/>
+      <outline text=":/ramp/function:/dump" Type="Method" Description="dumping current setting of all properties" Implemented="No" Getimplemented="N/A"/>
+      <outline text=":/ramp/function:/namespace" Type="Method" Description="dumping the namespace for this node, but not recursive if the nodes of this node themselves have properties" Implemented="No" Getimplemented="N/A"/>
+      <outline text="Properties and methods of specific functions:">
+        <outline text="&lt;example&gt;" Implemented="No" Getimplemented="No"/>
+      </outline>
+    </outline>
+    <outline text="Dataspace" Getimplemented="Yes">
+      <outline text=":/dataspace" Type="Property" Description="This should be a read-only property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/dataspace:/catalog" Type="Method" Implemented="No" Getimplemented="N/A"/>
+      <outline text=":/dataspace/unit/active" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/dataspace/unit/active:/catalog" Type="Method" Implemented="No" Getimplemented="N/A"/>
+      <outline text=":/dataspace/unit/native" Type="Property read only" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+    <outline text="Description" Getimplemented="No">
+      <outline text=":/description" Type="Property read only" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+    <outline text="Priority">
+      <outline text=":/priority" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+    <outline text="Repetitions">
+      <outline text=":/repetitions/filter" Type="Property" Description="0/1" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+    <outline text="User Interface">
+      <outline text=":/view/freeze" Type="Property" Implemented="Yes" Getimplemented="Yes"/>
+      <outline text=":/view/refresh" Type="Method" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+    <outline text="Implemented in j.return:">
+      <outline text=":/enable" Type="Property" Description="Enable or disable the return" Implemented="Yes" Getimplemented="Yes"/>
+    </outline>
+  </body>
+</opml>
