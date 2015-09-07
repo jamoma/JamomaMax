@@ -22,7 +22,6 @@ before_build:
   - set /p DATE=%APPVEYOR_REPO_COMMIT_TIMESTAMP:~0,10%
   - set /p TIME=%APPVEYOR_REPO_COMMIT_TIMESTAMP:~11,8%
   - set /p TIME=%TIME::=-%
-  - echo "Git commit time stamp : %DATE% %TIME%"
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - git submodule init
   - git submodule update
