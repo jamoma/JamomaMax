@@ -54,7 +54,7 @@ else
 fi
 
 DATE=`git show -s --format=%ci HEAD`
-TIME=${DATE:10:9}
+TIME=${DATE:11:8}
 TIME=${TIME//:/-}
 DATE=${DATE:0:10}
 
