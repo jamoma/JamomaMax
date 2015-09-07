@@ -4,9 +4,19 @@
 - preset "default"
   audio/gain 0.000000
   audio/mute 0
-  dimensions 2
-  numSources 3
-  numSpeakers 8
-  rolloff 6.000000
+  renderer/dimensions 2
+  renderer/hull 1
+  renderer/rolloff 6.000000
+  speakers/number_of_speakers 2
+  speakers/speaker.1/position -1. 0. 0.
+  speakers/speaker.2/position  1. 0. 0.
+  sources/number_of_sources 1
+  sources/source.1/active 1.
+  sources/source.1/blur 0.
+  sources/source.1/gain 0.
+  sources/source.1/speaker_weight 1. 1.
+  sources/source.1/position 0. 0. 0.
+  
+  
   
 
