@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 9,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 345.0, 171.0, 989.0, 431.0 ],
@@ -14,20 +15,41 @@
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 181.0, 75.0, 43.0, 22.0 ],
+					"style" : "",
+					"text" : "del 50"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -36,7 +58,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 181.0, 90.0, 56.0, 20.0 ],
+					"patching_rect" : [ 181.0, 108.0, 56.0, 22.0 ],
+					"style" : "",
 					"text" : "deferlow"
 				}
 
@@ -46,13 +69,13 @@
 					"bubble" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-14",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 249.5, 26.5, 170.0, 37.0 ],
+					"patching_rect" : [ 249.5, 1.5, 170.0, 37.0 ],
+					"style" : "",
 					"text" : "Alway update info when dsp processing is started"
 				}
 
@@ -66,7 +89,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 181.0, 63.0, 36.0, 20.0 ],
+					"patching_rect" : [ 181.0, 38.0, 36.0, 22.0 ],
+					"style" : "",
 					"text" : "sel 1"
 				}
 
@@ -80,7 +104,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "float", "int", "int" ],
-					"patching_rect" : [ 181.0, 35.0, 63.0, 20.0 ],
+					"patching_rect" : [ 181.0, 10.0, 63.0, 22.0 ],
+					"style" : "",
 					"text" : "dspstate~"
 				}
 
@@ -95,7 +120,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 758.0, 148.0, 142.0, 47.0 ],
+					"patching_rect" : [ 758.0, 185.0, 142.0, 49.0 ],
+					"style" : "",
 					"text" : "j.model @description \"Get information on multichannel signal.\""
 				}
 
@@ -107,7 +133,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 91.0, 309.0, 25.0, 25.0 ]
+					"patching_rect" : [ 91.0, 346.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -121,7 +148,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 561.5, 234.0, 150.0, 74.0 ],
+					"patching_rect" : [ 561.5, 271.0, 150.0, 76.0 ],
+					"style" : "",
 					"text" : "j.return numChannels @type integer @description \"Number of channels in the multichannel signal.\""
 				}
 
@@ -131,12 +159,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
-					"linecount" : 8,
+					"linecount" : 7,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 246.5, 234.0, 128.0, 114.0 ],
+					"patching_rect" : [ 246.5, 271.0, 130.0, 102.0 ],
+					"style" : "",
 					"text" : "j.return samplerate @type integer @dataspace time @unit Hz @dataspace time @unit Hz @description \"Sample rate (Hz).\""
 				}
 
@@ -151,7 +180,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 404.0, 234.0, 110.0, 60.0 ],
+					"patching_rect" : [ 404.0, 271.0, 110.0, 62.0 ],
+					"style" : "",
 					"text" : "j.return vectorsize @type integer \"Multichannel signal vector size.\""
 				}
 
@@ -165,7 +195,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "audio.connect", "", "", "", "" ],
-					"patching_rect" : [ 89.0, 180.0, 649.0, 20.0 ],
+					"patching_rect" : [ 89.0, 217.0, 649.0, 22.0 ],
+					"style" : "",
 					"text" : "j.info="
 				}
 
@@ -177,7 +208,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 758.0, 297.0, 25.0, 25.0 ]
+					"patching_rect" : [ 758.0, 334.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -189,7 +221,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 89.0, 35.0, 25.0, 25.0 ]
+					"patching_rect" : [ 89.0, 35.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -201,7 +234,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 758.0, 35.0, 25.0, 25.0 ]
+					"patching_rect" : [ 758.0, 35.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -215,7 +249,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 181.0, 117.5, 221.0, 47.0 ],
+					"patching_rect" : [ 181.0, 135.5, 221.0, 49.0 ],
+					"style" : "",
 					"text" : "j.message update @type none @description \"refreshes the signal information if necessary\""
 				}
 
@@ -305,7 +340,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-7", 0 ]
@@ -318,6 +353,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
@@ -338,7 +382,8 @@
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

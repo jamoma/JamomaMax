@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -298,7 +298,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 5,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -570,7 +570,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "audio.connect", "audio.connect", "audio.connect", "" ],
-					"patching_rect" : [ 51.21875, 276.0, 118.0, 22.0 ],
+					"patching_rect" : [ 51.21875, 276.0, 300.000031, 22.0 ],
 					"style" : "",
 					"text" : "aux=.model my_aux"
 				}
@@ -748,19 +748,19 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "aux=.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/aux=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "aux=.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/aux=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/aux=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}

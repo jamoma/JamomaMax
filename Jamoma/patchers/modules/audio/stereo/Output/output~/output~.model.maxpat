@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,32 +37,6 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.0, 109.0, 89.0, 22.0 ],
-					"style" : "",
-					"text" : "prepend signal"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 33.0, 79.0, 73.0, 22.0 ],
-					"style" : "",
-					"text" : "route signal"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
@@ -272,7 +246,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 1,
+							"revision" : 6,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -658,7 +632,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-20", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
@@ -730,24 +704,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -766,15 +722,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-20", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -785,50 +732,43 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
-				"patcherrelativepath" : "../../Distortion/saturation~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"patcherrelativepath" : "../../Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
-				"patcherrelativepath" : "../../Imaging/balance~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
-				"patcherrelativepath" : "../record~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "~/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
-				"patcherrelativepath" : "../record~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max.app/Contents/Resources/C74/patchers/m4l/Pluggo for Live resources/patches",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -858,6 +798,10 @@
 			}
 , 			{
 				"name" : "j.overdrive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
