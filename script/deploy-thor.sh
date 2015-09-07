@@ -58,7 +58,7 @@ TIME=${DATE:11:8}
 TIME=${TIME//:/-}
 DATE=${DATE:0:10}
 
-ARCHIVE_NAME="JamomaMax-${DATE}_${TIME}"
+ARCHIVE_NAME="JamomaMax-${DATE}-${TIME}"
 
 if [ "x${TRAVIS_OS_NAME}" = "xLinux" ]; then
   ARCHIVE_NAME="${ARCHIVE_NAME}-Windows-mingw-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
