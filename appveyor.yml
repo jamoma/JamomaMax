@@ -21,6 +21,9 @@ before_build:
   - ps: openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
   - git submodule init
   - git submodule update
+  - git show -s --format=%ci HEAD > temp.txt
+  - set /p DATE=<temp.txt
+  - set /p TIME=%DATE:~10,9%
   - mkdir build
   - cd build
   - set CMAKE=%CMAKE_PATH%\bin\cmake.exe
@@ -35,10 +38,10 @@ build:
 after_build:
   - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
   - cd JamomaInstall\JamomaMax
-  - 7z a JamomaMax-Windows_%PLATFORM%-%APPVEYOR_REPO_COMMIT:~0,7%-%APPVEYOR_REPO_TAG_NAME%.zip Jamoma > nul
-  - move /Y JamomaMax-Windows_*.zip %APPVEYOR_BUILD_FOLDER%
+  - 7z a JamomaMax-%DATE:~0,10%-%TIME:/:-%-Windows_%PLATFORM%-%APPVEYOR_REPO_COMMIT:~0,7%-%APPVEYOR_REPO_TAG_NAME%.zip Jamoma > nul
+  - move /Y JamomaMax-*.zip %APPVEYOR_BUILD_FOLDER%
   - cd  %APPVEYOR_BUILD_FOLDER%
-  - c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put JamomaMax-Windows_*.zip /Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds/" "exit"
+  - c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put JamomaMax-*.zip /Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds/" "exit"
 
 
 artifacts:
