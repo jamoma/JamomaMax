@@ -1,0 +1,90 @@
+nOSC
+
+* Retaining some familiarity and compatibility with OSC will ease usability and adoption.
+
+
+
+
+NODES
+
+
+
+
+PROPERTIES
+
+A node may have properties in addition to containing other nodes.
+These properties are themselves addressed using the same slash syntax as is used for the nodes themselves.
+Properties are accessed using the : character as proposed in the NIME08 paper.
+
+
+
+QUERIES
+
+A query is a two-part dialog, consisting of a request and a response.
+The address path of a query ends with the ? character:
+	* The request is simply the address path ending with the ? character
+	* The response is the same address path (ending with the ? character), but with additional data following the address path.
+
+When returning a value(s), the response must be returned using JSON.
+
+
+
+
+EXAMPLES
+
+Ask for a parameter's value:
+	/path/to/a/parameter?
+	
+Example Responses:
+	/path/to/a/parameter? "foo"
+	/path/to/a/parameter? 3.14
+
+
+
+Ask for a parameter's type:
+	/path/to/a/parameter:/type?
+
+Response:
+	/path/to/a/parameter:/type? "symbol"
+
+
+
+
+Define a parameter's available options:
+	/path/to/a/parameter:/catalog ["foo", "bar", "cat"]
+
+Ask for a parameter's available options:
+	/path/to/a/parameter:/catalog?
+
+Response:
+	/path/to/a/parameter:/catalog? ["foo", "bar", "cat"]
+
+
+
+Ask for the complete state of a parameter:
+	/path/to/a/parameter:/state?
+	
+Response:
+	/path/to/a/parameter:/state? {
+									"value" : "foo",
+									"catalog" : [ "foo", "bar", "cat" ],
+									"type" : "symbol",
+									"ramp" : {
+										"drive" : {
+											"value" : "scheduler",
+											"granularity" : 5.0
+										},
+										"function" : {
+											"value" : "lowpass",
+											"coefficient" : 0.75
+										}
+									}
+									"description" : "this is an example"
+								 }
+
+
+Asking for the namespace if a parameter:
+	/path
+
+
+

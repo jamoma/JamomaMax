@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+  <head>
+    <title>jamoma-roadmap</title>
+    <expansionState>0,4,7,8,10,12,14,20,22,28,33,35,40,41,42,44,45,49,51,53,54,56,63,67</expansionState>
+  </head>
+  <body>
+    <outline text="Jamoma core" _status="indeterminate" DiscussinAlbi="0">
+      <outline text="check j.ui properly" _status="checked" Priority="Short-term" Who="Trond" DiscussinAlbi="0"/>
+      <outline text="is ramp fully implemented using proper syntax?" _status="checked" Priority="Short-term" Who="All" DiscussinAlbi="2"/>
+      <outline text="implement additional functions and drives" Who="Trond" DiscussinAlbi="0"/>
+      <outline text="is unit lib properly implemented using correct syntax?" Priority="Short-term" Who="All" DiscussinAlbi="2">
+        <outline text="what kind of units need to be implemented" Who="All" DiscussinAlbi="2"/>
+        <outline text="spatdif" Who="Trond, Nils, Tim" DiscussinAlbi="2"/>
+      </outline>
+      <outline text="Check that the NIME Namespace is correctly implemented" Priority="Short-term" Who="All" DiscussinAlbi="0">
+        <outline text="especially the :/dump part in j.hub.cpp" Priority="Short-term" Who="Pascal, Tim" DiscussinAlbi="0">
+          <outline text="e.g how do we discriminate between parameters/messages/returns for the :/namespace query" DiscussinAlbi="0"/>
+          <outline text="query returns using JSON structures? e.g. {name:cf, type:parameter}" DiscussinAlbi="0">
+            <outline text="research how other apps (e.g. ROR) are returning query results" DiscussinAlbi="0"/>
+          </outline>
+        </outline>
+        <outline text="think about the instance separator : . -&gt; for non numerical instances (e.g. x, y, z)" Who="Pascal, Tim, Nils..." DiscussinAlbi="0">
+          <outline text="e.g. if we want to access one of the elements of a array parameter  (e.g. red channel of one layer of jmod.gl.alphamixer) with a float (from cont_mapper, e.g.), it could be handy to have /layer_0.1, or better /layer_0.r" DiscussinAlbi="0"/>
+        </outline>
+        <outline text="list support for range" DiscussinAlbi="0">
+          <outline text=":/range/bounds.1 0 1 etc...." DiscussinAlbi="0"/>
+          <outline text=":/range/bounds [0 1] [0 127] [-50 50]" DiscussinAlbi="0"/>
+        </outline>
+        <outline text="discuss the clip relationship with the dataspace" DiscussinAlbi="0"/>
+        <outline text="discuss some other subnodes of /repetitions attribute, e.g. /filters (could be behaving like Max's qlim or speedlim)" DiscussinAlbi="0"/>
+      </outline>
+      <outline text="making sure ramping happens in active unit" Priority="Kind of short term" DiscussinAlbi="0"/>
+      <outline text="fully develop and test j.paramui" Priority="Short-term" Who="Tim, Trond" DiscussinAlbi="0">
+        <outline text="review if we should have some &quot;default&quot; user interface objects, and what they should be" Priority="Mid-term" Who="All" DiscussinAlbi="0"/>
+      </outline>
+      <outline text="ability to retrieve :" Priority="Short-term" Who="Tim, Pascal" DiscussinAlbi="0">
+        <outline text="the number of inlets/outlets of a module" DiscussinAlbi="0"/>
+        <outline text="the module size" DiscussinAlbi="0"/>
+      </outline>
+      <outline text="Node support and Local sends" Priority="Mid-term" Who="Tim, Charles, Pascal" DiscussinAlbi="0"/>
+      <outline text="check if we can remove @module_type and @algorithm_type from the hub" Priority="Short Term" Who="Tim, Pascal, Trond" DiscussinAlbi="0"/>
+      <outline text="Contribute to post-OSC protocol and comply to it" Priority="Mid-term" Who="All" DiscussinAlbi="0"/>
+    </outline>
+    <outline text="Max5 port" _status="indeterminate" DiscussinAlbi="0">
+      <outline text="is audio working - j.in~ and j.out~? /aduio - mute, bypass, mix, gain, etc.? Metering?" _status="checked" Priority="Short-term" Who="Tim, Trond" DiscussinAlbi="2"/>
+      <outline text="converting existing components, algorithms and modules" _status="checked" Priority="Mid-term" Who="All" DiscussinAlbi="0"/>
+      <outline text="j.meter~ in vertical mode" Priority="Mid-term" DiscussinAlbi="0"/>
+      <outline text="textslider and numberslider turned into externals" Priority="Mid to long" DiscussinAlbi="0"/>
+    </outline>
+    <outline text="TTblue" _status="indeterminate" DiscussinAlbi="0">
+      <outline text="merging function lib with ttblue" _status="checked" Priority="Mid-term" Who="Tim, Trond, Dave" DiscussinAlbi="2"/>
+      <outline text="port old ttblue delay code to new ttblue version" Priority="Short-term" Who="Tim, Trond, Nils" DiscussinAlbi="2">
+        <outline text="implement doppler in ttblue" Priority="Short-term" Who="Trond, Tim" DiscussinAlbi="0"/>
+      </outline>
+      <outline text="implement air filter in ttblue" Priority="Short-term" Who="Trond, Nils" DiscussinAlbi="0"/>
+      <outline text="implement distance attenuation in ttblue " Priority="Short-term" Who="Trond, Nils" DiscussinAlbi="0"/>
+      <outline text="implement additional filters in ttblue so that filter module can depend on ttblue instead of biquad~" Priority="Short-term" Who="Trond, Tim" DiscussinAlbi="0"/>
+      <outline text="Passing multichannel 64-bit audio signals in Max" Priority="Mid-term" Who="Tim, Dave, Trond" DiscussinAlbi="0">
+        <outline text="support for audio matrix operations in ttblue?" Priority="Mid-term" DiscussinAlbi="0">
+          <outline text="dbap as external - in ttblue?" Priority="Mid-term" Who="Trond" DiscussinAlbi="0">
+            <outline text="convex hull" Priority="Mid-term" Who="Trond" DiscussinAlbi="0"/>
+          </outline>
+        </outline>
+      </outline>
+    </outline>
+    <outline text="Furter audio work" DiscussinAlbi="0">
+      <outline text="implement audio matrix" Priority="Mid-term" Who="Tim, Trond, Nils" DiscussinAlbi="0">
+        <outline text="Conception of GUI interface" Who="Nils, Trond" DiscussinAlbi="2"/>
+        <outline text="Conception of mapping between signals with different number of channels" DiscussinAlbi="0"/>
+      </outline>
+      <outline text="remote audio sending and receiving" Priority="Mid-term" Who="Tim" DiscussinAlbi="0"/>
+    </outline>
+    <outline text="Spatialisation" DiscussinAlbi="0">
+      <outline text="dealing with scripting issues in spatialisation modules" Priority="Short-term" Who="Trond" DiscussinAlbi="0"/>
+    </outline>
+    <outline text="OpenGL" DiscussinAlbi="0">
+      <outline text="overhauling open-gl modules" Priority="Short-term" Who="Trond" DiscussinAlbi="0"/>
+    </outline>
+    <outline text="Documentation and testing" DiscussinAlbi="0">
+      <outline text="system of creating ref pages for externals" Priority="mid-term" Who="Trond" DiscussinAlbi="0">
+        <outline text="the html generater crashes at the moment" Priority="short-term" Who="Trond, Tim" DiscussinAlbi="0"/>
+      </outline>
+      <outline text="develop automated test patches" Priority="short to mid" DiscussinAlbi="2">
+        <outline text="develop mechanisms for testing audio and jitter matrixes" Priority="mid-term" DiscussinAlbi="0"/>
+      </outline>
+      <outline text="help-files for several core objects are lacking in content" Priority="short-term" Who="All" DiscussinAlbi="0"/>
+      <outline text="gdif.org webpage" Priority="Before ICMC" Who="Trond, Nils, Alexander" DiscussinAlbi="0"/>
+      <outline text="spatdif.org webpage" Priority="Before ICMC" Who="Trond, Nils, Alexander" DiscussinAlbi="0"/>
+      <outline text="ttblue.org web page" Who="Tim, Trond" DiscussinAlbi="0"/>
+      <outline text="tutorials" Priority="Short-term" Who="BEK" DiscussinAlbi="2"/>
+    </outline>
+    <outline text="Future Jamoma work" DiscussinAlbi="0">
+      <outline text="separating view from the rest" Priority="deferred" Who="Alexander" DiscussinAlbi="0"/>
+      <outline text="further work on modules for high level control of other modules" Priority="mid to long" DiscussinAlbi="2"/>
+      <outline text="clean up UserLibs" Priority="mid-term" Who="Everyone" DiscussinAlbi="0"/>
+    </outline>
+    <outline text="Publications" DiscussinAlbi="0">
+      <outline text="dbap" DiscussinAlbi="0"/>
+      <outline text="ttblue?" DiscussinAlbi="0"/>
+      <outline text="CMJ article on Jamoma" DiscussinAlbi="0"/>
+    </outline>
+    <outline text="Unsorted" DiscussinAlbi="0"/>
+  </body>
+</opml>
