@@ -50,8 +50,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -65,8 +63,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-12",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -234,32 +230,26 @@
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 528.0, 77.0, 150.0, 21.0 ],
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 528.0, 77.0, 135.0, 22.0 ],
 					"style" : "",
-					"text" : "j.parameter renderer/rolloff",
+					"text" : "j.remote renderer/rolloff",
 					"varname" : "voices[3]"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 528.0, 42.0, 161.0, 21.0 ],
+					"patching_rect" : [ 528.0, 42.0, 168.0, 22.0 ],
 					"style" : "",
 					"text" : "j.remote renderer/dimensions",
 					"varname" : "voices[2]"
@@ -268,15 +258,12 @@
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-11",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 528.0, 149.0, 212.0, 21.0 ],
+					"patching_rect" : [ 528.0, 149.0, 223.0, 22.0 ],
 					"style" : "",
 					"text" : "j.remote speakers/number_of_speakers",
 					"varname" : "voices[1]"
@@ -353,15 +340,12 @@
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-44",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 528.0, 113.0, 199.0, 21.0 ],
+					"patching_rect" : [ 528.0, 113.0, 210.0, 22.0 ],
 					"style" : "",
 					"text" : "j.remote sources/number_of_sources",
 					"varname" : "voices"
@@ -520,10 +504,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-5" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-2" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-4" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-3" : [ "live.numbox[1]", "live.numbox", 0 ],
-			"obj-4" : [ "live.numbox[2]", "live.numbox", 0 ]
+			"obj-2" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-5" : [ "live.numbox[3]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -550,10 +534,6 @@
 			}
 , 			{
 				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
