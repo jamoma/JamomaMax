@@ -37,7 +37,7 @@ build:
   project: C:\projects\jamomamax\build\JamomaMax.sln
 
 deploy_script:
-  - PS: & script\appveyor-deploy.ps1
+  script\appveyor-deploy.ps1
 
 artifacts:
   - name: Jamoma for Max - Windows $(platform)
