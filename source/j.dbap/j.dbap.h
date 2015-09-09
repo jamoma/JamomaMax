@@ -22,8 +22,8 @@ const long MAX_NUM_DESTINATIONS = 128;
 const long MAX_NUM_WEIGHTED_SOURCES = 64;
 const long MAX_NUM_WEIGHTED_DESTINATIONS = 32;
 
-const long MAX_SIZE_VIEW_X = 80;
-const long MAX_SIZE_VIEW_Y = 60;
+// Using same max size for both dimensions, there's no reason to assume that visualisations should stick to 4x3 proportions
+const long MAX_SIZE_VIEW = 80;
 
 t_symbol		*ps_rollloff,
 				*ps_dimensions,

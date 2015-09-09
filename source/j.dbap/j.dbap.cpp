@@ -425,7 +425,7 @@ void dbap_hull(t_dbap *x, long f)
 														//TODO : a hull for each source
 }
 
-/** Display a hitmap view of the dbap for a destination and a source weight config or all (on the info outlet ?) */
+/** Display a bitmap view of the dbap for a destination and a source weight config or all (on the info outlet ?) */
 void dbap_view(t_dbap *x, void *msg, long argc, t_atom *argv)
 {
 	long dst, src,i;
@@ -479,14 +479,14 @@ void dbap_view_update(t_dbap *x, long io)
 	dbap_update_view(x);
 }
 
-/** Set the size of hitmap view window */
+/** Set the size of bitmap view window */
 void dbap_view_size(t_dbap *x, long sizeX, long sizeY) {
 	
 	if ((sizeX > 0)&&(sizeY > 0)) {
         
         // warn the user that large dimension while take a long to render
-        if ((sizeX > MAX_SIZE_VIEW_X)||(sizeY > MAX_SIZE_VIEW_Y))
-            object_warn((t_object*)x, "size over %d x %d takes time to render", MAX_SIZE_VIEW_X, MAX_SIZE_VIEW_Y);
+        if ((sizeX > MAX_SIZE_VIEW)||(sizeY > MAX_SIZE_VIEW))
+            object_warn((t_object*)x, "size over %d x %d takes time to render", MAX_SIZE_VIEW, MAX_SIZE_VIEW);
 		
 		x->view_info.dim[0] = sizeX;
 		x->view_info.dim[1] = sizeY;
@@ -500,7 +500,7 @@ void dbap_view_size(t_dbap *x, long sizeX, long sizeY) {
 		error("Invalid argument(s) for view_size");
 }
 
-/** Set the start point of the hitmap view window */
+/** Set the start point of the bitmap view window */
 void dbap_view_start(t_dbap *x, void *msg, long argc, t_atom *argv) {
 
 	if ((argc == x->attr_dimensions) && argv) {
@@ -529,7 +529,7 @@ void dbap_view_start(t_dbap *x, void *msg, long argc, t_atom *argv) {
 		error("Invalid argument(s) for view_start");
 }
 
-/** Set the end point of the hitmap view window */
+/** Set the end point of the bitmap view window */
 void dbap_view_end(t_dbap *x, void *msg, long argc, t_atom *argv) {
 
 	if ((argc == x->attr_dimensions) && argv) {
@@ -1177,6 +1177,8 @@ void dbap_calculate_view2D(t_dbap *x, long dst, long src)
 	double dx, dy;													// Distance vector
 	double r2;														// Bluriness ratio
 	double dia[MAX_NUM_DESTINATIONS];								// Distance to ith speaker to the power of x->a.
+	
+	long sizeX, sizeY;
 	double div_x, div_y;
 	double pix;
 	long i,j,d;
@@ -1189,13 +1191,16 @@ void dbap_calculate_view2D(t_dbap *x, long dst, long src)
 	if (!bp)
 		return;
 	
-	div_x = (x->attr_view_end.x - x->attr_view_start.x)/x->view_info.dim[0];
-	div_y = (x->attr_view_end.y - x->attr_view_start.y)/x->view_info.dim[1];
+	sizeX = x->view_info.dim[0];
+	sizeY = x->view_info.dim[1];
+	
+	div_x = (x->attr_view_end.x - x->attr_view_start.x)/double(sizeX);
+	div_y = (x->attr_view_end.y - x->attr_view_start.y)/double(sizeY);
 
 	// For each pixel of the view window
-	for (i=0; i<x->view_info.dim[0]; i++) {
+	for (i=0; i<sizeX; i++) {
 		
-		for (j=0 ; j<x->view_info.dim[1]; j++) {
+		for (j=0 ; j<sizeY; j++) {
 
 			temp_src.x = x->attr_view_start.x + i * div_x;
 			temp_src.y = x->attr_view_start.y + j * div_y;
@@ -1221,7 +1226,7 @@ void dbap_calculate_view2D(t_dbap *x, long dst, long src)
 			val = (unsigned char)(pix*255.);
 			
 			// get cell at (i,j)
-			p = bp + i + (x->view_info.dim[1] - j-1)*x->view_info.dim[0];
+			p = bp + i + (sizeY - j-1)*sizeX;
 
 			// keep the max
 			if (*((unsigned char *)p) < val)
