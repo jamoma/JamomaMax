@@ -38,6 +38,35 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-11",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 752.0, 158.0, 88.0, 60.0 ],
+					"presentation_rect" : [ 797.149597, 209.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "The below view can also be accessed from here",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"arrows" : 1,
+					"id" : "obj-7",
+					"justification" : 4,
+					"linecolor" : [ 0.450786, 0.49653, 0.528814, 1.0 ],
+					"maxclass" : "live.line",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 700.649597, 183.8125, 44.850403, 24.1875 ],
+					"presentation_rect" : [ 696.149597, 205.8125, 0.0, 0.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-20",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -52,13 +81,14 @@
 			}
 , 			{
 				"box" : 				{
+					"arrows" : 2,
 					"id" : "obj-16",
 					"justification" : 3,
 					"linecolor" : [ 0.450786, 0.49653, 0.528814, 1.0 ],
 					"maxclass" : "live.line",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 330.149597, 536.8125, 111.850403, 62.1875 ]
+					"patching_rect" : [ 330.149597, 536.8125, 98.850403, 59.1875 ]
 				}
 
 			}
@@ -69,7 +99,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 10.0, 93.0, 515.0, 20.0 ],
-					"presentation_rect" : [ 6.339378, 126.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "Spatialisation technique that works in situations where a \"sweet spot\" approach is not feasable.",
 					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -84,8 +113,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 10.0, 71.0, 429.0, 20.0 ],
 					"style" : "",
-					"text" : "Distance-Based Amplitude Panning",
-					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"text" : "Distance-Based Amplitude Panning"
 				}
 
 			}
@@ -99,7 +127,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 616.5, 408.0, 169.0, 52.0 ],
-					"presentation_rect" : [ 1024.5, 220.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "Control source parameters specific to DBAP.",
 					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
@@ -116,8 +143,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1217.5, 266.0, 169.0, 52.0 ],
-					"presentation_rect" : [ 556.0, 214.5, 0.0, 0.0 ],
+					"patching_rect" : [ 1217.5, 266.0, 171.0, 52.0 ],
 					"style" : "",
 					"text" : "Monitor and change positions of sources and speakers.",
 					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
@@ -134,7 +160,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 771.5, 93.0, 159.0, 52.0 ],
+					"patching_rect" : [ 471.5, 135.0, 159.0, 52.0 ],
 					"style" : "",
 					"text" : "View the most basic parameters of the renderer",
 					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
@@ -616,7 +642,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 701.0, 154.0, 300.0, 70.0 ],
+					"patching_rect" : [ 401.0, 196.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"viewvisibility" : 1
@@ -829,36 +855,62 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-21::obj-17::obj-5::obj-4" : [ "Blur[5]", "Blur", 0 ],
-			"obj-21::obj-17::obj-3::obj-8" : [ "live.text[3]", "live.text", 0 ],
-			"obj-21::obj-17::obj-4::obj-4" : [ "Blur[4]", "Blur", 0 ],
-			"obj-21::obj-3::obj-15" : [ "live.button", "live.button", 0 ],
-			"obj-17::obj-5" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-21::obj-17::obj-7::obj-6" : [ "Gain[7]", "Gain", 0 ],
-			"obj-21::obj-17::obj-8::obj-6" : [ "Gain", "Gain", 0 ],
-			"obj-21::obj-17::obj-2::obj-6" : [ "Gain[2]", "Gain", 0 ],
-			"obj-21::obj-17::obj-1::obj-4" : [ "Blur[1]", "Blur", 0 ],
-			"obj-21::obj-17::obj-6::obj-6" : [ "Gain[6]", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-6::obj-8" : [ "live.text[6]", "live.text", 0 ],
+			"obj-21::obj-17::obj-2::obj-6" : [ "Gain[10]", "Gain", 0 ],
 			"obj-17::obj-2" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-21::obj-17::obj-6::obj-4" : [ "Blur[6]", "Blur", 0 ],
-			"obj-21::obj-17::obj-5::obj-6" : [ "Gain[5]", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-7::obj-8" : [ "live.text[7]", "live.text", 0 ],
+			"obj-17::obj-10::obj-17::obj-4::obj-4" : [ "Blur[4]", "Blur", 0 ],
+			"obj-21::obj-17::obj-6::obj-8" : [ "live.text[15]", "live.text", 0 ],
+			"obj-21::obj-17::obj-3::obj-6" : [ "Gain[11]", "Gain", 0 ],
+			"obj-21::obj-17::obj-4::obj-8" : [ "live.text[13]", "live.text", 0 ],
+			"obj-17::obj-10::obj-17::obj-3::obj-6" : [ "Gain[3]", "Gain", 0 ],
+			"obj-21::obj-3::obj-15" : [ "live.button[1]", "live.button", 0 ],
+			"obj-17::obj-10::obj-17::obj-7::obj-4" : [ "Blur[7]", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-2::obj-4" : [ "Blur[2]", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-1::obj-8" : [ "live.text[1]", "live.text", 0 ],
 			"obj-17::obj-3" : [ "live.numbox[1]", "live.numbox", 0 ],
-			"obj-21::obj-17::obj-3::obj-4" : [ "Blur[3]", "Blur", 0 ],
-			"obj-21::obj-17::obj-2::obj-8" : [ "live.text[2]", "live.text", 0 ],
-			"obj-21::obj-17::obj-7::obj-8" : [ "live.text[7]", "live.text", 0 ],
-			"obj-21::obj-17::obj-1::obj-6" : [ "Gain[1]", "Gain", 0 ],
-			"obj-21::obj-17::obj-6::obj-8" : [ "live.text[6]", "live.text", 0 ],
-			"obj-21::obj-17::obj-7::obj-4" : [ "Blur[7]", "Blur", 0 ],
-			"obj-21::obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
-			"obj-21::obj-17::obj-4::obj-6" : [ "Gain[4]", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-4::obj-6" : [ "Gain[4]", "Gain", 0 ],
+			"obj-21::obj-17::obj-6::obj-4" : [ "Blur[14]", "Blur", 0 ],
+			"obj-21::obj-17::obj-1::obj-8" : [ "live.text[10]", "live.text", 0 ],
+			"obj-21::obj-17::obj-3::obj-8" : [ "live.text[12]", "live.text", 0 ],
+			"obj-21::obj-17::obj-7::obj-8" : [ "live.text[16]", "live.text", 0 ],
+			"obj-21::obj-17::obj-8::obj-6" : [ "Gain[8]", "Gain", 0 ],
+			"obj-21::obj-17::obj-2::obj-8" : [ "live.text[11]", "live.text", 0 ],
+			"obj-21::obj-17::obj-5::obj-8" : [ "live.text[14]", "live.text", 0 ],
+			"obj-17::obj-10::obj-17::obj-8::obj-4" : [ "Blur", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-5::obj-4" : [ "Blur[5]", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-3::obj-8" : [ "live.text[3]", "live.text", 0 ],
+			"obj-17::obj-10::obj-17::obj-4::obj-8" : [ "live.text[4]", "live.text", 0 ],
+			"obj-17::obj-10::obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
+			"obj-21::obj-17::obj-1::obj-6" : [ "Gain[9]", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-6::obj-6" : [ "Gain[6]", "Gain", 0 ],
+			"obj-21::obj-17::obj-5::obj-6" : [ "Gain[13]", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-2::obj-6" : [ "Gain[2]", "Gain", 0 ],
+			"obj-21::obj-17::obj-8::obj-8" : [ "live.text[9]", "live.text", 0 ],
+			"obj-17::obj-10::obj-17::obj-1::obj-4" : [ "Blur[1]", "Blur", 0 ],
 			"obj-17::obj-4" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-21::obj-17::obj-3::obj-6" : [ "Gain[3]", "Gain", 0 ],
-			"obj-21::obj-17::obj-8::obj-4" : [ "Blur", "Blur", 0 ],
-			"obj-21::obj-17::obj-2::obj-4" : [ "Blur[2]", "Blur", 0 ],
-			"obj-21::obj-17::obj-1::obj-8" : [ "live.text[1]", "live.text", 0 ],
-			"obj-21::obj-17::obj-4::obj-8" : [ "live.text[4]", "live.text", 0 ],
-			"obj-21::obj-17::obj-8::obj-8" : [ "live.text", "live.text", 0 ],
-			"obj-21::obj-17::obj-5::obj-8" : [ "live.text[5]", "live.text", 0 ]
+			"obj-17::obj-10::obj-17::obj-8::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-17::obj-10::obj-17::obj-6::obj-4" : [ "Blur[6]", "Blur", 0 ],
+			"obj-21::obj-17::obj-5::obj-4" : [ "Blur[13]", "Blur", 0 ],
+			"obj-21::obj-17::obj-8::obj-4" : [ "Blur[8]", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-5::obj-8" : [ "live.text[5]", "live.text", 0 ],
+			"obj-21::obj-17::obj-4::obj-4" : [ "Blur[12]", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-8::obj-6" : [ "Gain", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-5::obj-6" : [ "Gain[5]", "Gain", 0 ],
+			"obj-17::obj-10::obj-3::obj-15" : [ "live.button", "live.button", 0 ],
+			"obj-21::obj-17::obj-7::obj-4" : [ "Blur[15]", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-3::obj-4" : [ "Blur[3]", "Blur", 0 ],
+			"obj-21::obj-17::obj-1::obj-4" : [ "Blur[9]", "Blur", 0 ],
+			"obj-17::obj-10::obj-17::obj-2::obj-8" : [ "live.text[2]", "live.text", 0 ],
+			"obj-21::obj-17::obj-4::obj-6" : [ "Gain[12]", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-7::obj-6" : [ "Gain[7]", "Gain", 0 ],
+			"obj-21::obj-3::obj-16" : [ "live.text[17]", "live.text[8]", 0 ],
+			"obj-21::obj-17::obj-2::obj-4" : [ "Blur[10]", "Blur", 0 ],
+			"obj-21::obj-17::obj-7::obj-6" : [ "Gain[15]", "Gain", 0 ],
+			"obj-21::obj-17::obj-3::obj-4" : [ "Blur[11]", "Blur", 0 ],
+			"obj-21::obj-17::obj-6::obj-6" : [ "Gain[14]", "Gain", 0 ],
+			"obj-17::obj-10::obj-17::obj-1::obj-6" : [ "Gain[1]", "Gain", 0 ],
+			"obj-17::obj-5" : [ "live.numbox[3]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -874,18 +926,6 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "scene=.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "dbap=_channels.view.maxpat",
 				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
 				"type" : "JSON",
@@ -895,6 +935,18 @@
 				"name" : "dbap=_one_channel_display.maxpat",
 				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "scene=.view.maxpat",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -964,6 +1016,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "ambimonitor.mxo",
 				"type" : "iLaX"
 			}
@@ -981,10 +1037,6 @@
 			}
 , 			{
 				"name" : "j.unpack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
  ],

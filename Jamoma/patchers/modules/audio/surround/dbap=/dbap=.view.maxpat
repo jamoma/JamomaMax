@@ -41,10 +41,11 @@
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 261.0, 34.0, 22.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 36.0, 118.0, 56.0, 22.0 ],
 					"style" : "",
-					"text" : "print"
+					"text" : "deferlow"
 				}
 
 			}
@@ -55,7 +56,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 116.0, 137.0, 22.0 ],
+					"patching_rect" : [ 36.0, 149.0, 137.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend model:address"
 				}
@@ -82,9 +83,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 196.0, 119.0, 22.0 ],
+					"patching_rect" : [ 0.0, 196.0, 168.0, 22.0 ],
 					"style" : "",
-					"text" : "scene=.view.maxpat"
+					"text" : "dbap=_channels.view.maxpat"
 				}
 
 			}
@@ -378,15 +379,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -396,7 +388,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
+					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-12", 0 ]
@@ -409,6 +401,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -493,38 +494,49 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
  ],
 		"parameters" : 		{
-			"obj-4" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-3" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-10::obj-17::obj-1::obj-8" : [ "live.text[6]", "live.text", 0 ],
 			"obj-2" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-5" : [ "live.numbox[3]", "live.numbox", 0 ]
+			"obj-10::obj-17::obj-3::obj-4" : [ "Blur[4]", "Blur", 0 ],
+			"obj-10::obj-17::obj-4::obj-6" : [ "Gain[3]", "Gain", 0 ],
+			"obj-10::obj-17::obj-8::obj-4" : [ "Blur[7]", "Blur", 0 ],
+			"obj-10::obj-17::obj-5::obj-4" : [ "Blur[2]", "Blur", 0 ],
+			"obj-3" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-10::obj-17::obj-6::obj-8" : [ "live.text[1]", "live.text", 0 ],
+			"obj-10::obj-17::obj-3::obj-6" : [ "Gain[4]", "Gain", 0 ],
+			"obj-10::obj-17::obj-7::obj-4" : [ "Blur", "Blur", 0 ],
+			"obj-10::obj-17::obj-2::obj-4" : [ "Blur[5]", "Blur", 0 ],
+			"obj-10::obj-17::obj-4::obj-8" : [ "live.text[3]", "live.text", 0 ],
+			"obj-10::obj-17::obj-3::obj-8" : [ "live.text[4]", "live.text", 0 ],
+			"obj-10::obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
+			"obj-10::obj-17::obj-1::obj-6" : [ "Gain[6]", "Gain", 0 ],
+			"obj-10::obj-17::obj-5::obj-6" : [ "Gain[2]", "Gain", 0 ],
+			"obj-10::obj-17::obj-8::obj-8" : [ "live.text[9]", "live.text", 0 ],
+			"obj-4" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-10::obj-17::obj-6::obj-4" : [ "Blur[1]", "Blur", 0 ],
+			"obj-10::obj-17::obj-7::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-10::obj-17::obj-1::obj-4" : [ "Blur[6]", "Blur", 0 ],
+			"obj-10::obj-17::obj-2::obj-8" : [ "live.text[5]", "live.text", 0 ],
+			"obj-10::obj-17::obj-7::obj-6" : [ "Gain", "Gain", 0 ],
+			"obj-10::obj-17::obj-2::obj-6" : [ "Gain[5]", "Gain", 0 ],
+			"obj-10::obj-3::obj-15" : [ "live.button", "live.button", 0 ],
+			"obj-10::obj-17::obj-4::obj-4" : [ "Blur[3]", "Blur", 0 ],
+			"obj-10::obj-17::obj-5::obj-8" : [ "live.text[2]", "live.text", 0 ],
+			"obj-10::obj-17::obj-8::obj-6" : [ "Gain[7]", "Gain", 0 ],
+			"obj-5" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-10::obj-17::obj-6::obj-6" : [ "Gain[1]", "Gain", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "scene=.view.maxpat",
+				"name" : "dbap=_channels.view.maxpat",
 				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.ambimonitor2position.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/ambimonitor2position",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.position2ambimonitor.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/position2ambimonitor",
+				"name" : "dbap=_one_channel_display.maxpat",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -541,27 +553,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ambimonitor.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unit.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscinstance.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote_array.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
  ],
