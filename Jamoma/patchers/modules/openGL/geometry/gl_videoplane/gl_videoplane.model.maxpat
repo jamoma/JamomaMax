@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
@@ -121,7 +121,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 41.0, 610.0, 213.0, 19.0 ],
-					"text" : "j.out geometry_matrix @type jit_matrix"
+					"text" : "j.out geometry_matrix @tags jit_matrix"
 				}
 
 			}
@@ -173,7 +173,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 625.5, 604.0, 250.0, 31.0 ],
+					"patching_rect" : [ 625.5, 604.0, 251.0, 31.0 ],
 					"text" : "j.model @tags gl @description \"Apply incoming video matrix as texture to OpenGL videoplane.\"",
 					"varname" : "j.model"
 				}
