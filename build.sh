@@ -31,6 +31,8 @@ Options :
   Builds an universal binary for OS X. Warning: does not work well with brew; portmidi and gecode have to be built by hand
 --win64
   Creates projects for 64-bits on Windows.
+--xcode
+  Creates Xcode projects on the Mac.
 --optimize
   Builds with optimizations enabled. More speed, but is not suitable for distribution on older computers or different processors.
 
@@ -69,6 +71,9 @@ do
 		JAMOMA_CMAKE_UNIVERSAL_FLAGS="-DWIN64:Bool=True"
 		JAMOMA_CMAKE_GENERATOR="Visual Studio 12 2013 Win64"
 		JAMOMA_BUILD_FOLDER_SUFFIX="64"
+		;;
+	--xcode) echo "Use Xcode to build on Mac"
+		JAMOMA_CMAKE_GENERATOR="Xcode"
 		;;
 	--install) echo "Will install Jamoma"
 		JAMOMA_INSTALL_JAMOMA="install"
@@ -114,11 +119,19 @@ mkdir -p build"$JAMOMA_BUILD_FOLDER_SUFFIX"
 		        cmake -G"$JAMOMA_CMAKE_GENERATOR" .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
 	fi
 
-	echo make -j$JAMOMA_NUM_THREADS
-	make -j$JAMOMA_NUM_THREADS
+	if [[ "$JAMOMA_CMAKE_GENERATOR" == "Xcode" ]]; then
+		echo xcodebuild
+		xcodebuild
 
-	#sudo make $JAMOMA_INSTALL_JAMOMA
-	make install
+		#sudo make $JAMOMA_INSTALL_JAMOMA
+		#make install
+	else
+		echo make -j$JAMOMA_NUM_THREADS
+		make -j$JAMOMA_NUM_THREADS
+
+		#sudo make $JAMOMA_INSTALL_JAMOMA
+		make install
+	fi
 
 	if [ "x${JAMOMA_INSTALL_JAMOMAMAX}" = "xYes" ]; then 
 		rm -rf ../Jamoma/support
