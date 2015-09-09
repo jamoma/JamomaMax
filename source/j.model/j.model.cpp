@@ -277,8 +277,6 @@ void model_subscribe(TTPtr self)
                 {
                     if (object_classname(patcherBox) == _sym_bpatcher)
                     {
-                        object_post((t_object*)x, "i'm a view in a bpather");
-                        
                         // if the .view bpatcher is into a bpatcher (like in .module case)
                         t_object *parentPatcher = object_attr_getobj(aPatcher, _sym_parentpatcher);
                         t_object *parentBox = object_attr_getobj(parentPatcher, _sym_box);
@@ -286,8 +284,6 @@ void model_subscribe(TTPtr self)
                         {
                             if (object_classname(parentBox) == _sym_bpatcher)
                             {
-                                object_post((t_object*)x, "i'm a view in a bpather into a bpatcher");
-                                
                                 // get bpatcher arguments instead of the patcher it self
                                 aPatcher = parentPatcher;
                             }
