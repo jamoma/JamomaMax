@@ -38,6 +38,32 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"bg_image_mode" : 0,
+					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
+					"border_color" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
+					"circle_color" : [ 0.760784, 0.760784, 0.760784, 0.0 ],
+					"grid_color" : [ 0.690196, 0.690196, 0.94902, 0.0 ],
+					"group_name_color" : 1,
+					"hi_border_color" : [ 0.960784, 0.827451, 0.156863, 0.5 ],
+					"hi_grid_color" : [ 0.952941, 0.564706, 0.098039, 0.0 ],
+					"id" : "obj-1",
+					"maxclass" : "ambimonitor",
+					"name_color" : [ 0.870588, 0.415686, 0.062745, 1.0 ],
+					"numbers" : 1,
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 187.0, 608.0, 83.36499, 83.36499 ],
+					"point_color" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
+					"point_size" : 9.0,
+					"presentation" : 1,
+					"presentation_rect" : [ 14.0, 50.0, 422.0, 422.0 ],
+					"varname" : "sourcemonitor"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
@@ -52,33 +78,6 @@
 					"style" : "",
 					"text" : "meters",
 					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bg_image_mode" : 0,
-					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
-					"border_color" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
-					"circle_color" : [ 0.760784, 0.760784, 0.760784, 0.0 ],
-					"grid_color" : [ 0.690196, 0.690196, 0.94902, 0.0 ],
-					"group_name_color" : 1,
-					"hi_border_color" : [ 0.960784, 0.827451, 0.156863, 0.5 ],
-					"hi_grid_color" : [ 0.952941, 0.564706, 0.098039, 0.0 ],
-					"id" : "obj-1",
-					"ignoreclick" : 1,
-					"maxclass" : "ambimonitor",
-					"name_color" : [ 0.870588, 0.415686, 0.062745, 1.0 ],
-					"numbers" : 1,
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 187.0, 608.0, 83.36499, 83.36499 ],
-					"point_color" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
-					"point_size" : 9.0,
-					"presentation" : 1,
-					"presentation_rect" : [ 14.0, 50.0, 422.0, 422.0 ],
-					"varname" : "sourcemonitor"
 				}
 
 			}
@@ -112,7 +111,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -140,6 +139,19 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 250.0, 100.0, 147.0, 22.0 ],
+									"style" : "",
+									"text" : "j.send visualisation/radius"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-42",
 									"maxclass" : "newobj",
@@ -218,6 +230,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-127", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-31", 0 ]
 								}
 
 							}
@@ -773,7 +794,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1425.0, 96.0, 79.0, 22.0 ],
 					"style" : "",
-					"text" : "loadmess 10"
+					"text" : "loadmess 12"
 				}
 
 			}
@@ -1722,32 +1743,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 83.0, 164.0, 131.0, 22.0 ],
-					"style" : "",
-					"text" : "j.position2ambimonitor"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 78.0, 116.0, 131.0, 22.0 ],
-					"style" : "",
-					"text" : "j.ambimonitor2position"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"comment" : "",
 					"id" : "obj-14",
 					"maxclass" : "outlet",
@@ -1778,7 +1773,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 304.0, 146.0, 87.0, 22.0 ],
+					"patching_rect" : [ 492.0, 284.0, 87.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 730.0, 216.0, 87.0, 22.0 ],
 					"style" : "",
@@ -1793,7 +1788,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.0, 111.0, 87.0, 22.0 ],
+					"patching_rect" : [ 492.0, 258.0, 87.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 736.0, 181.0, 87.0, 22.0 ],
 					"style" : "",
@@ -1808,7 +1803,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 305.0, 87.0, 87.0, 22.0 ],
+					"patching_rect" : [ 492.0, 234.0, 87.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 730.0, 157.0, 87.0, 22.0 ],
 					"style" : "",
@@ -2969,7 +2964,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 623.0, 60.0, 72.0, 22.0 ],
 					"style" : "",
-					"text" : "loadmess 0"
+					"text" : "loadmess 1"
 				}
 
 			}
@@ -3359,18 +3354,6 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.ambimonitor2position.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/ambimonitor2position",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.position2ambimonitor.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/position2ambimonitor",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -3383,23 +3366,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.unit.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscinstance.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.remote_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ],
