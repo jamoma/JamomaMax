@@ -19,6 +19,14 @@ There are additional options to the `build.sh` command, including :
 
     --help
     List all available options and what they do.
+    --multi
+    Builds using all your cores.
+    --universal
+    Builds an universal binary for OS X. Warning: does not work well with brew; portmidi and gecode have to be built by hand
+    --win64
+    Creates projects for 64-bits on Windows.
+    --optimize
+    Builds with optimizations enabled. More speed, but is not suitable for distribution on older computers or different processors.
     --clean
     Removes the build folder and the executables prior to building.
     --install
