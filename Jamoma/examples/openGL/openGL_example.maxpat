@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 338.0, 53.0, 841.0, 685.0 ],
+		"rect" : [ 273.0, 298.0, 843.0, 576.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -122,7 +122,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 532.5, 81.0, 24.0 ],
+					"patching_rect" : [ 336.0, 434.5, 81.0, 24.0 ],
 					"text" : "modules !"
 				}
 
@@ -137,7 +137,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 385.5, 81.0, 24.0 ],
+					"patching_rect" : [ 336.0, 287.5, 81.0, 24.0 ],
 					"text" : "modules !"
 				}
 
@@ -152,7 +152,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 13.5, 123.0, 273.0, 18.0 ],
+					"patching_rect" : [ 13.5, 25.0, 273.0, 18.0 ],
 					"tabs" : [ "/videoplane.1", "/videoplane.2", "/videoplane.3" ]
 				}
 
@@ -166,7 +166,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.5, 149.0, 133.0, 19.0 ],
+					"patching_rect" : [ 13.5, 51.0, 133.0, 19.0 ],
 					"text" : "prepend model:address"
 				}
 
@@ -209,7 +209,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.5, 457.0, 300.0, 175.0 ],
+					"patching_rect" : [ 13.5, 359.0, 300.0, 175.0 ],
 					"presentation_rect" : [ 30.5, 515.5, 300.0, 175.0 ]
 				}
 
@@ -222,7 +222,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 13.5, 345.0, 300.0, 105.0 ],
+					"patching_rect" : [ 13.5, 247.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 300.0, 105.0 ]
 				}
 
@@ -236,7 +236,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 13.5, 639.0, 80.0, 35.0 ]
+					"patching_rect" : [ 13.5, 541.0, 80.0, 35.0 ]
 				}
 
 			}
@@ -250,23 +250,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.5, 173.0, 300.0, 140.0 ],
+					"patching_rect" : [ 13.5, 75.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 60.0, 60.0, 300.0, 140.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "Input from either a camera - video file - noise synthesis - or a real time screen capture.",
-					"id" : "obj-21",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "input%.view.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 13.5, 35.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 60.0, 60.0, 300.0, 70.0 ]
 				}
 
 			}
@@ -287,16 +272,16 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Multiple source video player",
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"annotation" : "noise generator",
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-14",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 355.5, 86.0, 121.0, 19.0 ],
-					"text" : "input%.model input%"
+					"patching_rect" : [ 355.5, 86.0, 100.0, 20.0 ],
+					"text" : "noise%.model"
 				}
 
 			}
@@ -427,141 +412,106 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "input%.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../patchers/modules/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "noise%.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/noise%",
 				"patcherrelativepath" : "../../patchers/modules/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie%.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../patchers/modules/video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "grab%.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../../patchers/modules/video/sources/grab%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "gl_videoplane.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
-				"patcherrelativepath" : "../../patchers/modules/openGL/geometry /gl_videoplane",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/openGL/geometry/gl_videoplane",
+				"patcherrelativepath" : "../../patchers/modules/openGL/geometry/gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "input%.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../patchers/modules/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../patchers/modules/video/sources/input%",
+				"name" : "gl_videoplane.view.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/openGL/geometry/gl_videoplane",
+				"patcherrelativepath" : "../../patchers/modules/openGL/geometry/gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"patcherrelativepath" : "../../patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl_videoplane.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
-				"patcherrelativepath" : "../../patchers/modules/openGL/geometry /gl_videoplane",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"patcherrelativepath" : "../../patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.module.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/output/window%",
 				"patcherrelativepath" : "../../patchers/modules/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/output/window%",
 				"patcherrelativepath" : "../../patchers/modules/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/output/window%",
 				"patcherrelativepath" : "../../patchers/modules/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_render.module.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : "../../patchers/modules/openGL/gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_render.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : "../../patchers/modules/openGL/gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_render_basic_view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render/view_tabs",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/openGL/gl_render/view_tabs",
 				"patcherrelativepath" : "../../patchers/modules/openGL/gl_render/view_tabs",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_render.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/openGL/gl_render",
 				"patcherrelativepath" : "../../patchers/modules/openGL/gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/initialized",
 				"patcherrelativepath" : "../../patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
@@ -599,7 +549,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -611,15 +569,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
