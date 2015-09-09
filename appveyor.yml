@@ -34,16 +34,10 @@ before_build:
 
 build:
   parallel: true
-  project: C:/projects/jamomamax/build/JamomaMax.sln
+  project: C:\projects\jamomamax\build\JamomaMax.sln
 
-after_build:
-  - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
-  - cd JamomaInstall\JamomaMax
-  - 7z a JamomaMax-%DATE%-%TIME%-Windows_%PLATFORM%-%APPVEYOR_REPO_COMMIT:~0,7%-%APPVEYOR_REPO_TAG_NAME%.zip Jamoma > nul
-  - move /Y JamomaMax-*.zip %APPVEYOR_BUILD_FOLDER%
-  - cd  %APPVEYOR_BUILD_FOLDER%
-  - c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put JamomaMax-*.zip /Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds/" "exit"
-
+deploy_script:
+  - PS: & script\appveyor-deploy.ps1
 
 artifacts:
   - name: Jamoma for Max - Windows $(platform)
