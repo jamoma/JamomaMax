@@ -251,17 +251,52 @@ void model_subscribe(TTPtr self)
                 // then set the address attribute readOnly
                 TTModelInfoPtr(EXTRA->modelInfo->instance())->setAddressReadOnly(YES);
             }
-            
-            // if the parent patcher is a bpatcher: bind on the parent bpatcher instead of the patcher it self
-            t_object *parentPatcher = object_attr_getobj(aPatcher, _sym_parentpatcher);
-            t_object *parentBox = object_attr_getobj(parentPatcher, _sym_box);
-            if (parentBox)
+
+            // select patcher/bpatcher where to read argument in j.model case
+            if (x->patcherContext == kTTSym_model)
             {
-                if (object_classname(parentBox) == _sym_bpatcher)
-                    aPatcher = parentPatcher;
+                // if the .model patcher is into a bpatcher (like in .module case)
+                t_object *parentPatcher = object_attr_getobj(aPatcher, _sym_parentpatcher);
+                t_object *parentBox = object_attr_getobj(parentPatcher, _sym_box);
+                if (parentBox)
+                {
+                    if (object_classname(parentBox) == _sym_bpatcher)
+                    {
+                        // get bpatcher arguments instead of the .model patcher it self
+                        aPatcher = parentPatcher;
+                    }
+                }
+            }
+            
+            // select patcher/bpatcher where to read argument in j.view case
+            else if (x->patcherContext == kTTSym_view)
+            {
+                // if the .view is in a bpatcher
+                t_object *patcherBox = object_attr_getobj(aPatcher, _sym_box);
+                if (patcherBox)
+                {
+                    if (object_classname(patcherBox) == _sym_bpatcher)
+                    {
+                        object_post((t_object*)x, "i'm a view in a bpather");
+                        
+                        // if the .view bpatcher is into a bpatcher (like in .module case)
+                        t_object *parentPatcher = object_attr_getobj(aPatcher, _sym_parentpatcher);
+                        t_object *parentBox = object_attr_getobj(parentPatcher, _sym_box);
+                        if (parentBox)
+                        {
+                            if (object_classname(parentBox) == _sym_bpatcher)
+                            {
+                                object_post((t_object*)x, "i'm a view in a bpather into a bpatcher");
+                                
+                                // get bpatcher arguments instead of the patcher it self
+                                aPatcher = parentPatcher;
+                            }
+                        }
+                    }
+                }
             }
 
-            // Get patcher arguments
+            // get patcher/bpatcher arguments
 			ac = 0;
 			av = NULL;
 
@@ -288,7 +323,7 @@ void model_subscribe(TTPtr self)
 				av++;
 			}
 			
-			// j.model case :
+			// j.model case:
 			if (x->patcherContext == kTTSym_model)
             {
                 // use patcher arguments to setup the model attributes (like @priority and @amenities)
@@ -320,8 +355,8 @@ void model_subscribe(TTPtr self)
                 }
 			}
 			
-			// In view patcher : see in model_subscribe_view
-			if (x->patcherContext == kTTSym_view)
+			// j.view case: see in model_subscribe_view
+			else if (x->patcherContext == kTTSym_view)
                 model_subscribe_view(self, _sym_nothing, ac, av);
 
 			// output node address
