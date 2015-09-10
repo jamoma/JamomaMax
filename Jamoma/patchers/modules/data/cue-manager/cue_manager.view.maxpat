@@ -8,7 +8,7 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 749.0, 360.0, 300.0, 175.0 ],
+		"rect" : [ 646.0, 45.0, 753.0, 495.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -28,6 +28,20 @@
 		"digest" : "",
 		"tags" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 439.0, 233.0, 74.0, 20.0 ],
+					"text" : "fromsymbol"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -196,7 +210,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 88.0, 199.5, 170.0, 18.0 ],
-					"text" : "model:address /cue_manager"
+					"text" : "model:address /events"
 				}
 
 			}
@@ -488,7 +502,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 439.0, 225.124908, 117.0, 20.0 ],
+					"patching_rect" : [ 439.0, 207.227509, 117.0, 20.0 ],
 					"text" : "j.receive description"
 				}
 
@@ -1474,8 +1488,6 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
-					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-1",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -1484,7 +1496,7 @@
 					"patching_rect" : [ 23.0, 18.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, -1.0, 300.0, 175.0 ],
-					"text" : "/no_model_address"
+					"text" : "/events"
 				}
 
 			}
@@ -1574,6 +1586,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-20", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-21", 0 ]
 				}
 
 			}
@@ -1807,7 +1828,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
+					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
@@ -1864,20 +1885,20 @@
 		"dependency_cache" : [ 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.datetime.maxpat",
-				"bootpath" : "/Volumes/data/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/datetime",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/datetime",
 				"patcherrelativepath" : "../../../components/data/datetime",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespace_selector.maxpat",
-				"bootpath" : "/Volumes/data/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/namespace/namespace_selector",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/namespace/namespace_selector",
 				"patcherrelativepath" : "../../../components/namespace/namespace_selector",
 				"type" : "JSON",
 				"implicit" : 1
