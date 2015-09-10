@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 555.0, 242.0, 968.0, 360.0 ],
+		"rect" : [ 338.0, 45.0, 370.0, 354.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,7 +36,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 491.5, 100.5, 82.0, 20.0 ],
+					"patching_rect" : [ 184.5, 107.5, 82.0, 20.0 ],
 					"text" : "loadmess 0.6"
 				}
 
@@ -50,7 +50,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 539.0, 154.0, 88.0, 20.0 ],
+					"patching_rect" : [ 217.0, 178.0, 88.0, 20.0 ],
 					"text" : "j.return motion"
 				}
 
@@ -64,7 +64,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 491.5, 303.0, 87.0, 24.0 ],
+					"patching_rect" : [ 184.5, 310.0, 87.0, 24.0 ],
 					"text" : "final signal"
 				}
 
@@ -78,7 +78,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 327.0, 303.0, 83.0, 24.0 ],
+					"patching_rect" : [ 20.0, 310.0, 83.0, 24.0 ],
 					"text" : "raw signal"
 				}
 
@@ -97,7 +97,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -135,11 +135,11 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 7,
+											"revision" : 10,
 											"architecture" : "x86"
 										}
 ,
-										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+										"rect" : [ 25.0, 70.0, 181.0, 287.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -167,7 +167,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 1,
 													"outlettype" : [ "float" ],
-													"patching_rect" : [ 50.0, 165.5, 123.0, 20.0 ],
+													"patching_rect" : [ 24.0, 159.5, 123.0, 20.0 ],
 													"text" : "slide 50. 10."
 												}
 
@@ -181,7 +181,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 100.0, 82.0, 20.0 ],
+													"patching_rect" : [ 24.0, 94.0, 82.0, 20.0 ],
 													"text" : "append 300"
 												}
 
@@ -195,7 +195,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 50.0, 131.5, 49.0, 20.0 ],
+													"patching_rect" : [ 24.0, 125.5, 49.0, 20.0 ],
 													"text" : "line 0."
 												}
 
@@ -208,7 +208,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 40.0, 25.0, 25.0 ]
+													"patching_rect" : [ 24.0, 34.0, 25.0, 25.0 ]
 												}
 
 											}
@@ -219,7 +219,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 50.0, 245.5, 25.0, 25.0 ]
+													"patching_rect" : [ 24.0, 239.5, 25.0, 25.0 ]
 												}
 
 											}
@@ -461,7 +461,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 327.0, 154.0, 183.5, 20.0 ],
+					"patching_rect" : [ 20.0, 161.0, 183.5, 20.0 ],
 					"saved_object_attributes" : 					{
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
@@ -489,7 +489,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 491.5, 127.0, 39.0, 19.0 ],
+					"patching_rect" : [ 184.5, 134.0, 39.0, 19.0 ],
 					"triscale" : 0.9
 				}
 
@@ -503,7 +503,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 435.75, 127.0, 58.0, 19.0 ],
+					"patching_rect" : [ 128.75, 134.0, 58.0, 19.0 ],
 					"text" : "threshold"
 				}
 
@@ -516,7 +516,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 327.0, 201.0, 131.0, 92.0 ],
+					"patching_rect" : [ 20.0, 208.0, 131.0, 92.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
 					"setstyle" : 3
 				}
@@ -530,7 +530,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 491.5, 201.0, 131.0, 92.0 ],
+					"patching_rect" : [ 184.5, 208.0, 131.0, 92.0 ],
 					"setminmax" : [ 0.0, 1.0 ],
 					"setstyle" : 3
 				}
@@ -538,96 +538,20 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 73.0, 154.0, 155.0, 20.0 ],
-					"text" : "MinuitInterface video 11111"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "window" ],
-					"id" : "obj-5",
-					"maxclass" : "bpatcher",
-					"name" : "window%.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 634.0, 211.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 317.0, 266.0, 300.0, 105.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "bpatcher",
-					"name" : "gl_render.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 634.0, 23.0, 300.0, 175.0 ],
-					"presentation_rect" : [ 330.0, 195.0, 300.0, 175.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "bpatcher",
-					"name" : "gl_videoplane.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 17.0, 198.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "cam.1" ],
+					"args" : [ "cam" ],
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
 					"name" : "grab%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 327.0, 23.0, 300.0, 70.0 ],
+					"patching_rect" : [ 20.0, 30.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 327.0, 23.0, 300.0, 70.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "movie.1" ],
-					"id" : "obj-1",
-					"maxclass" : "bpatcher",
-					"name" : "movie%.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 17.0, 23.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
@@ -683,158 +607,47 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "movie%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../patchers/modules/video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../patchers/modules/video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../patchers/modules/video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../patchers/components/data/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "grab%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../patchers/modules/video/sources/grab%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/grab%",
+				"patcherrelativepath" : "../../patchers/modules/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "grab%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../patchers/modules/video/sources/grab%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/grab%",
+				"patcherrelativepath" : "../../patchers/modules/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "grab%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../patchers/modules/video/sources/grab%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/grab%",
+				"patcherrelativepath" : "../../patchers/modules/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl_videoplane.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
-				"patcherrelativepath" : "../patchers/modules/openGL/geometry /gl_videoplane",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_videoplane.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
-				"patcherrelativepath" : "../patchers/modules/openGL/geometry /gl_videoplane",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../patchers/components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../patchers/components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_videoplane.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry /gl_videoplane",
-				"patcherrelativepath" : "../patchers/modules/openGL/geometry /gl_videoplane",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../patchers/components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_render.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
-				"patcherrelativepath" : "../patchers/modules/openGL/gl_render",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_render.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
-				"patcherrelativepath" : "../patchers/modules/openGL/gl_render",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_render_basic_view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render/view_tabs",
-				"patcherrelativepath" : "../patchers/modules/openGL/gl_render/view_tabs",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_render.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
-				"patcherrelativepath" : "../patchers/modules/openGL/gl_render",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "window%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
-				"patcherrelativepath" : "../patchers/modules/video/output/window%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "window%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
-				"patcherrelativepath" : "../patchers/modules/video/output/window%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "window%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
-				"patcherrelativepath" : "../patchers/modules/video/output/window%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "MinuitInterface.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/RTVI/max-package/patchers",
-				"patcherrelativepath" : "../../../../../RTVI/max-package/patchers",
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"patcherrelativepath" : "../../patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.motion%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/motion%",
-				"patcherrelativepath" : "../patchers/components/video/motion%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/video/motion%",
+				"patcherrelativepath" : "../../patchers/components/video/motion%",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.parameter.mxo",
@@ -845,35 +658,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -881,11 +670,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.ui.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -893,7 +686,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.modular.mxo",
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
  ]
