@@ -60,6 +60,9 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "dblclick",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edclose,              "edclose",				A_CANT, 0);
+#ifdef JCOM_VIEW
+    class_addmethod(c->maxClass, (method)model_bang,                        "bang",					0L);
+#endif
 #ifndef JCOM_VIEW
 	class_addmethod(c->maxClass, (method)model_preset_read,                 "preset:read",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_write,                "preset:write",			A_GIMME, 0);
@@ -680,4 +683,9 @@ TTBoolean model_test_amenities(TTPtr self, TTSymbol name)
     TTValue v;
     
     return !EXTRA->no_amenities && (EXTRA->all_amenities || !EXTRA->attr_amenities->lookup(name, v));
+}
+
+void model_bang(TTPtr self)
+{
+    // allows j.view to ignore bang because now j.ui outputs a bang to do some processing before to open the panel
 }

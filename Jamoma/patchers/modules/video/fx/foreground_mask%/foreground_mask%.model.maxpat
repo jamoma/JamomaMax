@@ -515,7 +515,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 246.0, 426.0, 131.0, 21.0 ],
 					"style" : "",
-					"text" : "j.out 1 @type jit_matrix"
+					"text" : "j.out 1 @tags jit_matrix"
 				}
 
 			}

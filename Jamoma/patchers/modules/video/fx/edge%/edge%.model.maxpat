@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
@@ -242,7 +242,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 98.0, 404.0, 131.0, 19.0 ],
-					"text" : "j.out 1 @type jit_matrix"
+					"text" : "j.out 1 @tags jit_matrix"
 				}
 
 			}
@@ -288,8 +288,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 196.0, 140.0, 380.0, 31.0 ],
-					"text" : "j.parameter thresh @type decimal @ramp/drive max @description \"Edge detection threshold - pixels below the threshold are set to black.\"",
+					"patching_rect" : [ 196.0, 140.0, 378.0, 31.0 ],
+					"text" : "j.parameter threshold @type decimal @ramp/drive max @description \"Edge detection threshold - pixels below the threshold are set to black.\"",
 					"varname" : "thresh"
 				}
 
@@ -501,23 +501,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
