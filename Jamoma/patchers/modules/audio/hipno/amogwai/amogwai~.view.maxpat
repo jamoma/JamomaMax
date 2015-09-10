@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,6 +37,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 719.0, 62.0, 56.0, 22.0 ],
+					"style" : "",
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"activeslidercolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
 					"appearance" : 2,
@@ -282,7 +295,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 719.0, 86.0, 128.0, 22.0 ],
+					"patching_rect" : [ 719.0, 92.0, 128.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf %s/hipnoscope"
 				}
@@ -297,7 +310,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 719.0, 118.0, 137.0, 22.0 ],
+					"patching_rect" : [ 719.0, 128.0, 137.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend model:address"
 				}
@@ -312,7 +325,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 719.0, 46.0, 137.0, 22.0 ],
+					"patching_rect" : [ 719.0, 33.0, 137.0, 22.0 ],
 					"style" : "",
 					"text" : "j.receive model:address"
 				}
@@ -568,9 +581,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"fontface" : 0,
-					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-14",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -695,6 +706,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-31", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -722,7 +742,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
@@ -740,71 +760,71 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-4" : [ "Pitch shift (semintones)", "Pitch shift (semintones)", 0 ],
-			"obj-23" : [ "Feedback delay time", "Feedback delay time", 0 ],
-			"obj-15" : [ "Frequency offset", "Frequency offset", 0 ],
 			"obj-28" : [ "Mix", "Mix", 0 ],
+			"obj-4" : [ "Pitch shift (semintones)", "Pitch shift (semintones)", 0 ],
+			"obj-6::obj-10" : [ "live.text", "live.text", 0 ],
 			"obj-17" : [ "Feedback level", "Feedback level", 0 ],
-			"obj-6::obj-10" : [ "live.text", "live.text", 0 ]
+			"obj-15" : [ "Frequency offset", "Frequency offset", 0 ],
+			"obj-23" : [ "Feedback delay time", "Feedback delay time", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "hipnoscope.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "red.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "orange.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "yellow.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "green.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "aqua.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "blue.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "purple.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "magenta.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media/hipnoscope-colours",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/hipnoscope-colours",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "hipnoscope.one_blob_gen_view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -816,13 +836,13 @@
 			}
 , 			{
 				"name" : "j.hipnopuck.js",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.hipno8circles.js",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/hipnoscope",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/data/hipnoscope",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
