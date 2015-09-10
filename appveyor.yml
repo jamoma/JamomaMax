@@ -7,6 +7,8 @@ environment:
 
 configuration: Release
 
+shallow_clone: true # clone repository as zip archive
+
 install:
   - appveyor DownloadFile "http://www.cmake.org/files/v3.3/cmake-3.3.0-rc4-win32-x86.zip"
   - 7z x cmake-3.3.0-rc4-win32-x86.zip -y > nul
@@ -18,6 +20,7 @@ platform:
   - x64
 
 before_build:
+  - ps: c:\projects\JamomaMax\script\appveyor.ps1
   - echo %APPVEYOR_REPO_COMMIT_TIMESTAMP%
   - set DATE=%APPVEYOR_REPO_COMMIT_TIMESTAMP:~0,10%
   - set TIME=%APPVEYOR_REPO_COMMIT_TIMESTAMP:~11,8%
@@ -34,16 +37,10 @@ before_build:
 
 build:
   parallel: true
-  project: C:/projects/jamomamax/build/JamomaMax.sln
+  project: C:\projects\jamomamax\build\JamomaMax.sln
 
-after_build:
-  - cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
-  - cd JamomaInstall\JamomaMax
-  - 7z a JamomaMax-%DATE%-%TIME%-Windows_%PLATFORM%-%APPVEYOR_REPO_COMMIT:~0,7%-%APPVEYOR_REPO_TAG_NAME%.zip Jamoma > nul
-  - move /Y JamomaMax-*.zip %APPVEYOR_BUILD_FOLDER%
-  - cd  %APPVEYOR_BUILD_FOLDER%
-  - c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put JamomaMax-*.zip /Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds/" "exit"
-
+deploy_script:
+  - ps: $env:APPVEYOR_BUILD_FOLDER\script\appveyor-deploy.ps1
 
 artifacts:
   - name: Jamoma for Max - Windows $(platform)
