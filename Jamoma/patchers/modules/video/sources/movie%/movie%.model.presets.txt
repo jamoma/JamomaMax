@@ -20,6 +20,6 @@ vol 1
 highquality 1
 singlefield 1
 deinterlace 1
-path countdown.mov
+file/path countdown.mov
 # 
 # ###########################################
