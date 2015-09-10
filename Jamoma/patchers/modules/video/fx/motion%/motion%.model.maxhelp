@@ -913,6 +913,7 @@
 			}
 , 			{
 				"box" : 				{
+					"args" : [ "motion_help" ],
 					"id" : "obj-57",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
