@@ -20,6 +20,11 @@ endif()
 # Since XCode does not like tildas in project names, if
 # a project_name ends by _tilda, we replace it with '~' in the
 # Max object.
+#if("${PROJECT_NAME}" STREQUAL "j_tilda")
+#	message(STATUS "Change ${PROJECT_NAME} to j~.")
+#	set_target_properties(${PROJECT_NAME}
+#						  PROPERTIES OUTPUT_NAME "j~")
+#else
 if("${PROJECT_NAME}" MATCHES ".*_tilda")
 	string(REGEX REPLACE "_tilda" "~" JAMOMAMAX_EXTERNAL_OUTPUT_NAME "${PROJECT_NAME}")
 	set_target_properties(${PROJECT_NAME}
