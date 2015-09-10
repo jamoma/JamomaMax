@@ -175,6 +175,10 @@ void		model_reference_write(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
  */
 void		model_reference_dowrite(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
+/**
+ @param self
+ */
+void		model_bang(TTPtr self);
 
 /**
  @param self
