@@ -1308,7 +1308,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 21.0, 309.0, 131.0, 21.0 ],
 					"style" : "",
-					"text" : "j.out 1 @type jit_matrix"
+					"text" : "j.out 1 @tags jit_matrix"
 				}
 
 			}
