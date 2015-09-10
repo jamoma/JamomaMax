@@ -22,7 +22,8 @@ Write-Host c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env
 
 # TODO : find a way to use variable instead of full path
 c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=c:\projects\JamomaMax\build\JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
-c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build .
+c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . > $null
+c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . --target install > $null
 
 if ( -Not $env:APPVEYOR_REPO_BRANCH -eq "master"){
 	Write-Host "We are not on master branch. Don't deploy."
@@ -41,9 +42,8 @@ if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
   $destFolder = "/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds/"
 }
 
-cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > $null
 cd JamomaInstall\JamomaMax
 7z a $archiveName Jamoma > $null
 move /Y $archiveName.zip $env:APPVEYOR_BUILD_FOLDER
 cd $env:APPVEYOR_BUILD_FOLDER
-c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put $archiveName $destFolder" "exit"
+c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey='ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff'" "put $archiveName $destFolder" "exit"
