@@ -1,3 +1,5 @@
+Write-Host Running Powershell script !
+
 $env:DATE = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(0,10)
 $env:TIME = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(11,8).replace(':','-')
 $env:CMAKE = $env:CMAKE_PATH + "\bin\cmake.exe"
