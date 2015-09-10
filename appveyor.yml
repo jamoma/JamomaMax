@@ -20,7 +20,7 @@ platform:
   - x64
 
 before_build:
-  - ps: $pwd + "\script\appveyor.ps1"
+  - ps: "c:\projects\JamomaMax\script\appveyor.ps1"
   - echo %APPVEYOR_REPO_COMMIT_TIMESTAMP%
   - set DATE=%APPVEYOR_REPO_COMMIT_TIMESTAMP:~0,10%
   - set TIME=%APPVEYOR_REPO_COMMIT_TIMESTAMP:~11,8%
