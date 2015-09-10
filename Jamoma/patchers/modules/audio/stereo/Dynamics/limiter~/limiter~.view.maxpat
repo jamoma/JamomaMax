@@ -38,19 +38,6 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 23.0, 167.0, 56.0, 22.0 ],
-					"style" : "",
-					"text" : "sel bang"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-44",
@@ -428,7 +415,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 60.0, 204.0, 63.0, 22.0 ],
+					"patching_rect" : [ 23.0, 192.0, 63.0, 22.0 ],
 					"style" : "",
 					"text" : "j.view"
 				}
@@ -550,7 +537,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 60.0, 239.0, 26.0, 26.0 ],
+					"patching_rect" : [ 23.0, 227.0, 26.0, 26.0 ],
 					"style" : ""
 				}
 
@@ -572,15 +559,6 @@
 			}
  ],
 		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
-				}
-
-			}
-, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-43", 0 ],
 					"disabled" : 0,
@@ -767,7 +745,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-38", 0 ]
@@ -860,15 +838,15 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-45" : [ "live.text[2]", "live.text", 0 ],
-			"obj-13" : [ "Release", "Release", 0 ],
-			"obj-30" : [ "live.menu", "live.menu", 0 ],
 			"obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-12" : [ "Lookahead", "Lookahead", 0 ]
+			"obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-13" : [ "Release", "Release", 0 ],
+			"obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-5" : [ "Preamp", "Preamp", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
