@@ -2145,8 +2145,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 233.166748, 180.0, 188.0, 20.0 ],
-									"text" : "j.message rename @type array"
+									"patching_rect" : [ 233.166748, 180.0, 109.0, 20.0 ],
+									"text" : "j.message rename"
 								}
 
 							}
@@ -2208,7 +2208,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 48.5, 116.03125, 29.5, 22.0 ],
+													"patching_rect" : [ 48.5, 116.03125, 29.5, 18.0 ],
 													"text" : "$3"
 												}
 
@@ -2233,7 +2233,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 3,
 													"outlettype" : [ "bang", "", "" ],
-													"patching_rect" : [ 14.5, 73.0, 87.0, 22.0 ],
+													"patching_rect" : [ 14.5, 73.0, 87.0, 20.0 ],
 													"text" : "t b l l"
 												}
 
@@ -2247,7 +2247,7 @@
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 14.5, 39.5, 99.0, 22.0 ],
+													"patching_rect" : [ 14.5, 39.5, 99.0, 20.0 ],
 													"text" : "prepend rename"
 												}
 
@@ -3789,39 +3789,6 @@
 					"source" : [ "obj-9", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.cue.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
