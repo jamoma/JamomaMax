@@ -1,6 +1,27 @@
+$env:DATE = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(0,10)
+$env:TIME = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(11,8).replace(':','-')
+$env:CMAKE = $env:CMAKE_PATH + "\bin\cmake.exe"
+if ( $env:PLATFORM -eq "x64" ) {
+  $env:CMAKE_GENERATOR = "Visual Studio 12 2013 Win64"
+  $env:CUSTOM_FLAG = "-DWIN64:Bool=True"
+} else {
+  $env:CMAKE_GENERATOR = "Visual Studio 12 2013"
+  $env:CUSTOM_FLAG = ""
+}
+
+openssl aes-256-cbc -K $env:encrypted_key -iv $env:encrypted_iv -in c:\projects\JamomaMax\script\id_rsa-appveyor.enc -out id_rsa -d
+git submodule init
+git submodule update
+mkdir build
+cd build
+
+$env:CMAKE -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=$pwd/JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
+
 if ( -Not $env:APPVEYOR_REPO_BRANCH -eq "master"){
 	Write-Host "We are not on master branch. Don't deploy."
 	exit
+} else {
+  Write-Host "Starting deployment..."
 }
 
 if ( $env:APPVEYOR_REPO_TAG ){
