@@ -1022,7 +1022,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.0, 153.0, 213.0, 21.0 ],
 					"style" : "",
-					"text" : "j.out geometry_matrix @type jit_matrix"
+					"text" : "j.out geometry_matrix @tags jit_matrix"
 				}
 
 			}

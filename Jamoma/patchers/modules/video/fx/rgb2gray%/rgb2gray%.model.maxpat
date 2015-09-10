@@ -53,7 +53,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 182.0, 337.0, 130.0, 19.0 ],
-					"text" : "j.out 1 @type jit_matrix"
+					"text" : "j.out 1 @tags jit_matrix"
 				}
 
 			}

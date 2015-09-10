@@ -16,7 +16,7 @@ git_describe(GIT_TAG --abbrev=0 --tags)
 string(SUBSTRING ${HASH} 0 7 GIT_SHA_SHORT)
 message("building on Git rev : " ${GIT_SHA_SHORT})
 message("Git tag : " ${GIT_TAG})
-string(LENGTH GIT_TAG taglen)
+string(LENGTH "${GIT_TAG}" taglen)
 message("Git tag length : " ${taglen})
 if (taglen GREATER 1)
   string(REPLACE "." ";" GIT_TAG_LIST ${GIT_TAG}) # make a list from the tag string
