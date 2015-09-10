@@ -19,7 +19,8 @@ cd build
 
 Write-Host c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=$pwd/JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
 
-c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=$pwd/JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
+c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=c:\projects\JamomaMax\build\JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
+c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build
 
 if ( -Not $env:APPVEYOR_REPO_BRANCH -eq "master"){
 	Write-Host "We are not on master branch. Don't deploy."
