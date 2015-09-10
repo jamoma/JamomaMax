@@ -1,4 +1,5 @@
 Write-Host Running Powershell script !
+Set-PSDebug -Trace 1
 
 $env:DATE = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(0,10)
 $env:TIME = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(11,8).replace(':','-')
@@ -40,7 +41,7 @@ if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
   $destFolder = "/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds/"
 }
 
-cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
+cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > $null
 cd JamomaInstall\JamomaMax
 7z a $archiveName Jamoma > $null
 move /Y $archiveName.zip $env:APPVEYOR_BUILD_FOLDER
