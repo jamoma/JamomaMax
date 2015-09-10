@@ -19,6 +19,7 @@ cd build
 
 Write-Host c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=$pwd/JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
 
+# TODO : find a way to use variable instead of full path
 c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=c:\projects\JamomaMax\build\JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
 c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build .
 
@@ -29,8 +30,8 @@ if ( -Not $env:APPVEYOR_REPO_BRANCH -eq "master"){
   Write-Host "Starting deployment..."
 }
 
-if ( $env:APPVEYOR_REPO_TAG ){
-	Write-Host "This is a release deployment with tag $env:APPVEYOR_REPO_TAG"
+if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
+	Write-Host "This is a release deployment with tag $env:APPVEYOR_REPO_TAG_NAME"
 	$archiveName = "JamomaMax-$env:DATE-$env:TIME-Windows_$env:PLATFORM-Release-$env:APPVEYOR_REPO_TAG_NAME.zip"
   $destFolder = "/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/releases/"
 } else {
@@ -41,7 +42,7 @@ if ( $env:APPVEYOR_REPO_TAG ){
 
 cmake -DBUILD_TYPE=Release -DCMAKE_INSTALL_COMPONENT=JamomaMax -P cmake_install.cmake > nul
 cd JamomaInstall\JamomaMax
-7z a $archiveName Jamoma > nul
-move /Y $archiveName.zip %APPVEYOR_BUILD_FOLDER%
-cd  %APPVEYOR_BUILD_FOLDER%
+7z a $archiveName Jamoma > $null
+move /Y $archiveName.zip $env:APPVEYOR_BUILD_FOLDER
+cd $env:APPVEYOR_BUILD_FOLDER
 c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey=""ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff""" "put $archiveName $destFolder" "exit"
