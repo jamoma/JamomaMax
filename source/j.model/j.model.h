@@ -26,6 +26,8 @@ typedef struct extra {
     TTAddress           containerAddress;   ///< Store the address of the container (see in model_subscribe and model_free).
     TTAddress           argAddress;         ///< Store the address from the argument (see in model_upper_view_model_address).
     
+    t_object*           argument_patcher;   ///< the patcher/bpatcher where to read arguments
+    
     TTString            *text;				///< The text of the editor to read after edclose.
 	t_object            *textEditor;		///< The text editor window.
     
@@ -131,7 +133,7 @@ void		model_subscribe(TTPtr self);
  @param argc
  @param argv
  */
-void		model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+void		model_address_to_bind(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 
 /**
