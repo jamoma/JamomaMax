@@ -29,5 +29,5 @@ artifacts:
   - name: Jamoma for Max - Windows $(platform)
     path: JamomaMax-*.zip
   - name: Log files
-    path: *.log
+    path: c:\projects\JamomaMax\*.log
 
