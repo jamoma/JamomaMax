@@ -1870,7 +1870,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 131.0, 151.0, 1220.0, 816.0 ],
+						"rect" : [ 0.0, 26.0, 1220.0, 816.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1902,12 +1902,74 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-15",
-									"linecount" : 5,
+									"id" : "obj-5",
+									"linecount" : 9,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 282.0, 591.126892, 444.0, 74.0 ],
+									"patching_rect" : [ 687.0, 192.0, 361.0, 127.0 ],
+									"style" : "",
+									"text" : "Determines whether communicated messages gets posted to the Max console or not.\n\nPlease note that due to the high amount of traffick in the network communication, not all messages will be printed. This is a necsessary measure to ensure that Max remains responsive whole network communication is ongoing.\n\nDefault value is 0, disabling printing of messages.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-6",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 587.0, 192.0, 81.0, 20.0 ],
+									"style" : "",
+									"text" : "@print",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-3",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 687.0, 101.0, 357.0, 60.0 ],
+									"style" : "",
+									"text" : "Monitoring is active, and messages are communicated between the two applicaitons using the Minuit protocol.\n\nDefauklt is 1.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-4",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 587.0, 101.0, 81.0, 20.0 ],
+									"style" : "",
+									"text" : "@active",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-15",
+									"linecount" : 6,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 179.0, 584.126892, 357.0, 87.0 ],
 									"style" : "",
 									"text" : "The IP address of the remote application that Jamoma will connect to.\n\nThe default value is 127.0.0.1 (localhost). This works well when both applications reside on the same computer. If not, then the network IP address of the remote computer has to be provided.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1922,7 +1984,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 182.0, 591.126892, 71.0, 20.0 ],
+									"patching_rect" : [ 79.0, 584.126892, 71.0, 20.0 ],
 									"style" : "",
 									"text" : "@remote/ip",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1938,7 +2000,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 282.0, 497.498718, 444.0, 60.0 ],
+									"patching_rect" : [ 179.0, 501.101501, 357.0, 60.0 ],
 									"style" : "",
 									"text" : "The UDP port used by the remote application to listen for incoming Minuit communication.\n\nThe default value is 13579.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1950,11 +2012,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-12",
-									"linecount" : 3,
+									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 282.0, 417.786133, 444.0, 47.0 ],
+									"patching_rect" : [ 179.0, 418.076141, 357.0, 60.0 ],
 									"style" : "",
 									"text" : "The name of the remote Minuit application that Jamoma is to connect to.\n\nDefault value is i-score.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1966,11 +2028,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-11",
-									"linecount" : 7,
+									"linecount" : 8,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 282.0, 281.340729, 447.0, 100.0 ],
+									"patching_rect" : [ 179.0, 281.050751, 360.0, 114.0 ],
 									"style" : "",
 									"text" : "The IP address of this application. This IP address will be communciated to other Minuit applications such as i-score, and they will try to reach this application on this IP-address.\n\nThe default is 127.0.0.1 (localhost). This works well when all appications reside at the same computer, but if they are distributed across several computers, the proper IP address has to be used instead.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1985,7 +2047,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 182.0, 281.340729, 60.0, 20.0 ],
+									"patching_rect" : [ 79.0, 281.050751, 60.0, 20.0 ],
 									"style" : "",
 									"text" : "@local/ip",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -1997,11 +2059,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-9",
-									"linecount" : 3,
+									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 282.0, 201.628159, 444.0, 47.0 ],
+									"patching_rect" : [ 179.0, 198.025375, 357.0, 60.0 ],
 									"style" : "",
 									"text" : "The network port used for Minuit communication over UDP to this application.\n\nThe default port is 9998.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2016,7 +2078,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 182.0, 201.628159, 71.0, 20.0 ],
+									"patching_rect" : [ 79.0, 198.025375, 71.0, 20.0 ],
 									"style" : "",
 									"text" : "@local/port",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2028,11 +2090,11 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"linecount" : 4,
+									"linecount" : 5,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 282.0, 108.0, 444.0, 60.0 ],
+									"patching_rect" : [ 179.0, 101.0, 357.0, 74.0 ],
 									"style" : "",
 									"text" : "The name that the local application (the Jamoma models currently open in Max) will present itself as to other Minuit applications such as i.score.\n\nThe default value is \"newDevice\".",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2047,7 +2109,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 182.0, 497.498718, 82.0, 20.0 ],
+									"patching_rect" : [ 79.0, 501.101501, 82.0, 20.0 ],
 									"style" : "",
 									"text" : "@remote/port",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2062,7 +2124,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 182.0, 417.786133, 91.0, 20.0 ],
+									"patching_rect" : [ 79.0, 418.076141, 91.0, 20.0 ],
 									"style" : "",
 									"text" : "@remote/name",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2078,7 +2140,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 166.0, 52.0, 330.0, 27.0 ],
+									"patching_rect" : [ 63.0, 45.0, 330.0, 27.0 ],
 									"style" : "",
 									"text" : "Attributes:",
 									"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
@@ -2093,7 +2155,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 182.0, 108.0, 81.0, 20.0 ],
+									"patching_rect" : [ 79.0, 101.0, 81.0, 20.0 ],
 									"style" : "",
 									"text" : "@local/name",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2134,7 +2196,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1220.0, 816.0 ],
+						"rect" : [ 131.0, 151.0, 1220.0, 816.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2163,6 +2225,19 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"linecount" : 8,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 38.0, 206.0, 148.0, 116.0 ],
+									"style" : "",
+									"text" : "j.minuit_device @local/name newDevice @local/port 9998 @local/ip 127.0.0.1 @remote/name i-score @remote/port 13579 @remote/ip 127.0.0.1 @active 1 @print 1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 2,
 									"fontsize" : 14.0,
@@ -2241,26 +2316,14 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-28",
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 195.0, 285.5, 175.0, 24.0 ],
+									"patching_rect" : [ 195.0, 245.5, 179.0, 37.0 ],
 									"style" : "",
-									"text" : "These are all default values",
+									"text" : "These are all default values, except for @print.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-24",
-									"maxclass" : "toggle",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 38.0, 206.0, 24.0, 24.0 ],
-									"style" : ""
 								}
 
 							}
@@ -2275,22 +2338,6 @@
 									"patching_rect" : [ 334.0, 563.0, 97.0, 20.0 ],
 									"style" : "",
 									"text" : "Monitoring stuff:",
-									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-30",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 74.0, 206.0, 170.0, 24.0 ],
-									"style" : "",
-									"text" : "Enable network monitoring",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2576,22 +2623,6 @@
 									"patching_rect" : [ 593.0, 656.0, 173.0, 22.0 ],
 									"style" : "",
 									"text" : "j.receive /deg/bitdepth"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"hidden" : 1,
-									"id" : "obj-7",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 38.0, 171.5, 76.0, 22.0 ],
-									"style" : "",
-									"text" : "loadmess 1"
 								}
 
 							}
@@ -2948,19 +2979,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-1",
-									"linecount" : 7,
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 38.0, 246.5, 150.0, 102.0 ],
-									"style" : "",
-									"text" : "j.minuit_device @local/name newDevice @local/port 9998 @local/ip 127.0.0.1 @remote/name i-score @remote/port 13579 @remote/ip 127.0.0.1"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-21",
 									"ignoreclick" : 1,
 									"maxclass" : "multislider",
@@ -3094,15 +3112,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-1", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-24", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -3157,15 +3166,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-24", 0 ],
-									"disabled" : 0,
-									"hidden" : 1,
-									"source" : [ "obj-7", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-22", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -3195,11 +3195,11 @@
 		"parameters" : 		{
 			"obj-1::obj-10::obj-1::obj-1::obj-13" : [ "Release[1]", "Release", 0 ],
 			"obj-1::obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-1::obj-10::obj-1::obj-108" : [ "live.text[12]", "live.text[4]", 0 ],
+			"obj-1::obj-10::obj-1::obj-62" : [ "live.text[12]", "live.text[3]", 0 ],
 			"obj-1::obj-10::obj-1::obj-55" : [ "Master Gain[2]", "Master Gain", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-5" : [ "Preamp[1]", "Preamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-47" : [ "live.numbox[4]", "live.numbox", 0 ],
+			"obj-1::obj-10::obj-1::obj-111" : [ "live.numbox[4]", "live.numbox[2]", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-30" : [ "live.menu[4]", "live.menu", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-1::obj-29::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
@@ -3214,31 +3214,31 @@
 			"obj-1::obj-29::obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
 			"obj-1::obj-29::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-10::obj-1::obj-45" : [ "live.text[11]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-58" : [ "live.text[11]", "live.text[4]", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-27" : [ "Threshold[1]", "Threshold", 0 ],
 			"obj-1::obj-10::obj-1::obj-74" : [ "live.dial[6]", "Transpose", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-15" : [ "Postamp[1]", "Postamp", 0 ],
 			"obj-1::obj-29::obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-1::obj-10::obj-1::obj-29::obj-48" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-1::obj-10::obj-1::obj-111" : [ "live.numbox[3]", "live.numbox[2]", 0 ],
+			"obj-1::obj-10::obj-1::obj-110" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-12" : [ "Lookahead[1]", "Lookahead", 0 ],
 			"obj-1::obj-29::obj-1::obj-102" : [ "live.text[3]", "live.text", 0 ],
-			"obj-1::obj-10::obj-1::obj-62" : [ "live.text[13]", "live.text[3]", 0 ],
+			"obj-1::obj-10::obj-1::obj-108" : [ "live.text[13]", "live.text[4]", 0 ],
 			"obj-1::obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-1::obj-29::obj-1::obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-1::obj-10::obj-1::obj-4" : [ "live.text[14]", "live.text[1]", 0 ],
+			"obj-1::obj-10::obj-1::obj-45" : [ "live.text[14]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-6" : [ "live.text[9]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
 			"obj-1::obj-29::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-1::obj-10::obj-1::obj-110" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
+			"obj-1::obj-10::obj-1::obj-47" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-1::obj-10::obj-1::obj-82" : [ "pan[1]", "Pan", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-42" : [ "live.text[10]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-45" : [ "live.text[10]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-103" : [ "live.text[5]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-58" : [ "live.text[16]", "live.text[4]", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-45" : [ "live.text[8]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-4" : [ "live.text[16]", "live.text[1]", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-42" : [ "live.text[8]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ],
 			"obj-1::obj-29::obj-1::obj-17" : [ "Master Gain[1]", "Master Gain", 0 ],
 			"obj-1::obj-29::obj-1::obj-104" : [ "live.dial[5]", "Depth", 0 ]
@@ -3265,12 +3265,6 @@
 , 			{
 				"name" : "degrade~.view.maxpat",
 				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.minuit_device.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/protocol",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3359,6 +3353,12 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.minuit_device.maxpat",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/protocol",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
@@ -3395,10 +3395,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.modular.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
@@ -3432,6 +3428,14 @@
 			}
 , 			{
 				"name" : "j.unit.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.modular.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
  ],
