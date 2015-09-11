@@ -54,7 +54,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 131.0, 151.0, 1220.0, 816.0 ],
+						"rect" : [ 0.0, 26.0, 1220.0, 816.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -90,7 +90,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 125.5, 273.355194, 147.0, 22.0 ],
-									"presentation_rect" : [ 91.0, 209.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "udpsend 127.0.0.1 13579"
 								}
@@ -104,7 +103,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 682.5, 555.0, 147.0, 22.0 ],
-									"presentation_rect" : [ 636.0, 741.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "udpsend 127.0.0.1 13579"
 								}
@@ -1872,7 +1870,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1220.0, 816.0 ],
+						"rect" : [ 131.0, 151.0, 1220.0, 816.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1926,7 +1924,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 182.0, 591.126892, 71.0, 20.0 ],
 									"style" : "",
-									"text" : "@distant/ip",
+									"text" : "@remote/ip",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2051,7 +2049,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 182.0, 497.498718, 82.0, 20.0 ],
 									"style" : "",
-									"text" : "@distant/port",
+									"text" : "@remote/port",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2066,7 +2064,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 182.0, 417.786133, 91.0, 20.0 ],
 									"style" : "",
-									"text" : "@distant/name",
+									"text" : "@remote/name",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2173,7 +2171,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 850.0, 100.0, 300.0, 38.0 ],
+									"patching_rect" : [ 850.0, 100.0, 304.0, 38.0 ],
 									"style" : "",
 									"text" : "These models can be monitored and controlled remotely using the Minuit protocol.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2955,9 +2953,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 38.0, 246.5, 145.0, 102.0 ],
+									"patching_rect" : [ 38.0, 246.5, 150.0, 102.0 ],
 									"style" : "",
-									"text" : "j.minuit_device @local/name newDevice @local/port 9998 @local/ip 127.0.0.1 @distant/name i-score @distant/port 13579 @distant/ip 127.0.0.1"
+									"text" : "j.minuit_device @local/name newDevice @local/port 9998 @local/ip 127.0.0.1 @remote/name i-score @remote/port 13579 @remote/ip 127.0.0.1"
 								}
 
 							}
@@ -3197,16 +3195,16 @@
 		"parameters" : 		{
 			"obj-1::obj-10::obj-1::obj-1::obj-13" : [ "Release[1]", "Release", 0 ],
 			"obj-1::obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-1::obj-10::obj-1::obj-45" : [ "live.text[12]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-108" : [ "live.text[12]", "live.text[4]", 0 ],
 			"obj-1::obj-10::obj-1::obj-55" : [ "Master Gain[2]", "Master Gain", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-5" : [ "Preamp[1]", "Preamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-110" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-1::obj-10::obj-1::obj-47" : [ "live.numbox[4]", "live.numbox", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-30" : [ "live.menu[4]", "live.menu", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-1::obj-29::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
 			"obj-1::obj-10::obj-1::obj-48" : [ "live.menu[5]", "live.menu", 0 ],
-			"obj-1::obj-10::obj-1::obj-58" : [ "live.text[15]", "live.text[4]", 0 ],
+			"obj-1::obj-10::obj-1::obj-59" : [ "live.text[15]", "live.text[3]", 0 ],
 			"obj-1::obj-29::obj-1::obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
 			"obj-1::obj-29::obj-1::obj-82" : [ "pan", "Pan", 0 ],
 			"obj-1::obj-29::obj-1::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
@@ -3216,31 +3214,31 @@
 			"obj-1::obj-29::obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
 			"obj-1::obj-29::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-10::obj-1::obj-4" : [ "live.text[11]", "live.text[1]", 0 ],
+			"obj-1::obj-10::obj-1::obj-45" : [ "live.text[11]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-27" : [ "Threshold[1]", "Threshold", 0 ],
 			"obj-1::obj-10::obj-1::obj-74" : [ "live.dial[6]", "Transpose", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-15" : [ "Postamp[1]", "Postamp", 0 ],
 			"obj-1::obj-29::obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-1::obj-10::obj-1::obj-29::obj-48" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-1::obj-10::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-1::obj-10::obj-1::obj-111" : [ "live.numbox[3]", "live.numbox[2]", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-12" : [ "Lookahead[1]", "Lookahead", 0 ],
 			"obj-1::obj-29::obj-1::obj-102" : [ "live.text[3]", "live.text", 0 ],
 			"obj-1::obj-10::obj-1::obj-62" : [ "live.text[13]", "live.text[3]", 0 ],
 			"obj-1::obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-1::obj-29::obj-1::obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-1::obj-10::obj-1::obj-59" : [ "live.text[14]", "live.text[3]", 0 ],
+			"obj-1::obj-10::obj-1::obj-4" : [ "live.text[14]", "live.text[1]", 0 ],
 			"obj-1::obj-29::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-42" : [ "live.text[9]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-6" : [ "live.text[9]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
 			"obj-1::obj-29::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-1::obj-10::obj-1::obj-111" : [ "live.numbox[5]", "live.numbox[2]", 0 ],
+			"obj-1::obj-10::obj-1::obj-110" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
 			"obj-1::obj-10::obj-1::obj-82" : [ "pan[1]", "Pan", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-45" : [ "live.text[10]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-42" : [ "live.text[10]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-103" : [ "live.text[5]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-108" : [ "live.text[16]", "live.text[4]", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-6" : [ "live.text[8]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-58" : [ "live.text[16]", "live.text[4]", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-45" : [ "live.text[8]", "live.text", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ],
 			"obj-1::obj-29::obj-1::obj-17" : [ "Master Gain[1]", "Master Gain", 0 ],
 			"obj-1::obj-29::obj-1::obj-104" : [ "live.dial[5]", "Depth", 0 ]
