@@ -2348,7 +2348,7 @@
                   "id": "obj-10",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2376,7 +2376,7 @@
                   "id": "obj-11",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2404,7 +2404,7 @@
                   "id": "obj-12",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2432,7 +2432,7 @@
                   "id": "obj-13",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2460,7 +2460,7 @@
                   "id": "obj-14",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2488,7 +2488,7 @@
                   "id": "obj-15",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2516,7 +2516,7 @@
                   "id": "obj-16",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2544,7 +2544,7 @@
                   "id": "obj-17",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2572,7 +2572,7 @@
                   "id": "obj-18",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2743,7 +2743,7 @@
                   "id": "obj-28",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2771,7 +2771,7 @@
                   "id": "obj-29",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2799,7 +2799,7 @@
                   "id": "obj-3",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2827,7 +2827,7 @@
                   "id": "obj-30",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2855,7 +2855,7 @@
                   "id": "obj-31",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2883,7 +2883,7 @@
                   "id": "obj-32",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2911,7 +2911,7 @@
                   "id": "obj-33",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2939,7 +2939,7 @@
                   "id": "obj-34",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2967,7 +2967,7 @@
                   "id": "obj-35",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -2995,7 +2995,7 @@
                   "id": "obj-36",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3023,7 +3023,7 @@
                   "id": "obj-37",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3051,7 +3051,7 @@
                   "id": "obj-38",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3079,7 +3079,7 @@
                   "id": "obj-39",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3107,7 +3107,7 @@
                   "id": "obj-4",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3134,7 +3134,7 @@
                   "id": "obj-40",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3161,7 +3161,7 @@
                   "id": "obj-41",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3188,7 +3188,7 @@
                   "id": "obj-42",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3215,7 +3215,7 @@
                   "id": "obj-43",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3273,7 +3273,7 @@
                   "id": "obj-5",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3457,7 +3457,7 @@
                   "id": "obj-6",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3485,7 +3485,7 @@
                   "id": "obj-7",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3513,7 +3513,7 @@
                   "id": "obj-8",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -3541,7 +3541,7 @@
                   "id": "obj-9",
                   "lockeddragscroll": 1,
                   "maxclass": "bpatcher",
-                  "name": "j.sur.channel.xyz_setup.maxpat",
+                  "name": "setup=._one_channel",
                   "numinlets": 1,
                   "numoutlets": 0,
                   "patching_rect": [
@@ -4283,7 +4283,7 @@
             ],
             "dependency_cache": [
               {
-                "name": "j.sur.channel.xyz_setup.maxpat",
+                "name": "setup=._one_channel",
                 "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.setup",
                 "type": "JSON",
                 "implicit": 1
@@ -4685,7 +4685,7 @@
     ],
     "dependency_cache": [
       {
-        "name": "j.sur.channel.xyz_setup.maxpat",
+        "name": "setup=._one_channel",
         "bootpath": "/Users/nilspeters/Documents/gits/Jamoma/Modules/Modular/Max/modules/spatialization/sur.setup",
         "patcherrelativepath": "",
         "type": "JSON",
