@@ -168,7 +168,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 930.0, 255.0, 252.0, 22.0 ],
+					"patching_rect" : [ 930.0, 255.0, 256.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf address %s/sources/channel.%ld/active"
 				}
@@ -181,7 +181,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 750.0, 221.0, 305.0, 22.0 ],
+					"patching_rect" : [ 750.0, 221.0, 309.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf address %s/sources/channel.%ld/speaker_weight"
 				}
@@ -194,7 +194,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 651.0, 194.0, 241.0, 22.0 ],
+					"patching_rect" : [ 651.0, 194.0, 245.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf address %s/sources/channel.%ld/blur"
 				}
@@ -207,7 +207,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 347.0, 65.0, 243.0, 22.0 ],
+					"patching_rect" : [ 347.0, 65.0, 247.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf address %s/sources/channel.%ld/gain"
 				}
@@ -438,8 +438,8 @@
 							"parameter_longname" : "Blur",
 							"parameter_shortname" : "Blur",
 							"parameter_type" : 0,
-							"parameter_mmax" : 100.0,
-							"parameter_unitstyle" : 5
+							"parameter_mmax" : 1.0,
+							"parameter_unitstyle" : 1
 						}
 
 					}
@@ -688,9 +688,9 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-4" : [ "Blur", "Blur", 0 ],
 			"obj-6" : [ "Gain", "Gain", 0 ],
-			"obj-8" : [ "live.text", "live.text", 0 ]
+			"obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-4" : [ "Blur", "Blur", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
