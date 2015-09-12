@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
-			"architecture" : "x86",
+			"revision" : 6,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 247.0, 177.0, 1203.0, 628.0 ],
+		"rect" : [ 102.0, 85.0, 1199.0, 628.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -51,12 +51,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 602.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 602.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -115,12 +115,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 247.0, 203.0, 1203.0, 602.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 602.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
@@ -369,12 +369,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 6,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 486.0, 582.0, 478.0, 25.0 ],
+										"rect" : [ 239.0, 405.0, 478.0, 25.0 ],
 										"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 										"editing_bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 										"bglocked" : 0,
@@ -784,7 +784,7 @@
 													"bgfillcolor_type" : "color",
 													"elementcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 													"id" : "obj-22",
-													"items" : [ "dB", ",", "db", ",", "midigain", ",", "linear" ],
+													"items" : [ "dB-raw", ",", "db", ",", "midigain", ",", "linear", ",", "db-raw", ",", "dB" ],
 													"labelclick" : 1,
 													"maxclass" : "umenu",
 													"numinlets" : 1,
@@ -842,7 +842,7 @@
 													"bgfillcolor_type" : "color",
 													"elementcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 													"id" : "obj-28",
-													"items" : [ "dB", ",", "db", ",", "midigain", ",", "linear" ],
+													"items" : [ "dB-raw", ",", "db", ",", "midigain", ",", "linear", ",", "db-raw", ",", "dB" ],
 													"labelclick" : 1,
 													"maxclass" : "umenu",
 													"numinlets" : 1,
@@ -1084,7 +1084,7 @@
 													"destination" : [ "obj-12", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [ 590.600037, 122.0, 590.5, 122.0 ],
+													"midpoints" : [ 590.600015, 122.0, 590.5, 122.0 ],
 													"source" : [ "obj-24", 3 ]
 												}
 
@@ -1568,12 +1568,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 602.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 602.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1733,8 +1733,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 6,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2126,7 +2126,8 @@
 									"maxclass" : "ambimonitor",
 									"mode" : 2,
 									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 59.0, 189.0, 128.0, 256.0 ],
 									"presentation_rect" : [ 0.0, 0.0, 20.0, 40.0 ]
 								}
@@ -2566,12 +2567,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 602.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 602.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2683,8 +2684,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 6,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2928,7 +2929,8 @@
 									"maxclass" : "ambimonitor",
 									"mode" : 2,
 									"numinlets" : 1,
-									"numoutlets" : 0,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 168.0, 223.0, 128.0, 256.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 20.0, 40.0 ]
 								}
@@ -3377,12 +3379,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 602.0 ],
+						"rect" : [ 102.0, 111.0, 1199.0, 602.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -3407,10 +3409,63 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"style" : "",
+						"style" : "default",
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"arrows" : 1,
+									"id" : "obj-6",
+									"justification" : 4,
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 815.0, 219.0, 73.0, 21.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"linecount" : 16,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 895.0, 157.0, 179.0, 221.0 ],
+									"style" : "",
+									"text" : "When presenting gain values in views, the live.slider object can be used with the following custom settings:\n\nRange: -96 12\nUnit style: custom\nUnit: \"%.1f dB\"\nExponent: 0.5\n\nThis wil numerically present the values using the dB unit, but slider interaction will be the same as for the midigain unit, with a finer resolution in the top gain region.",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "live.slider",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "float" ],
+									"parameter_enable" : 1,
+									"patching_rect" : [ 741.0, 195.0, 72.0, 108.0 ],
+									"saved_attribute_attributes" : 									{
+										"valueof" : 										{
+											"parameter_longname" : "live.slider",
+											"parameter_shortname" : "Gain",
+											"parameter_type" : 0,
+											"parameter_mmin" : -96.0,
+											"parameter_mmax" : 12.0,
+											"parameter_unitstyle" : 9,
+											"parameter_units" : "%.1f dB",
+											"parameter_exponent" : 0.5
+										}
+
+									}
+,
+									"varname" : "live.slider"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Lato Regular",
 									"fontsize" : 12.0,
@@ -3419,7 +3474,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 432.0, 203.0, 239.0, 64.0 ],
+									"patching_rect" : [ 340.0, 184.0, 239.0, 64.0 ],
 									"style" : "",
 									"text" : "Rather than the default Max/MSP convention that a midi value of 128 is like multiplying by 1.0, in the j.unit, a midivalue of 100 is like multiplying with 1.0",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -3435,7 +3490,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 391.0, 225.0, 33.0, 22.0 ],
+									"patching_rect" : [ 299.0, 206.0, 33.0, 22.0 ],
 									"style" : "",
 									"text" : "100."
 								}
@@ -3449,7 +3504,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 469.0, 391.0, 107.0, 21.0 ],
+									"patching_rect" : [ 379.0, 417.0, 107.0, 21.0 ],
 									"style" : "",
 									"text" : "linear gain value",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -3467,7 +3522,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 391.0, 391.0, 75.0, 22.0 ],
+									"patching_rect" : [ 299.0, 417.0, 75.0, 22.0 ],
 									"style" : "",
 									"triscale" : 0.9
 								}
@@ -3512,11 +3567,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-25",
+									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 391.0, 344.0, 338.0, 22.0 ],
+									"patching_rect" : [ 299.0, 325.0, 102.0, 62.0 ],
 									"style" : "",
 									"text" : "j.unit @dataspace gain @input midigain @output linear"
 								}
@@ -3534,7 +3590,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 391.0, 301.0, 50.0, 22.0 ],
+									"patching_rect" : [ 299.0, 282.0, 50.0, 22.0 ],
 									"style" : "",
 									"triscale" : 0.9
 								}
@@ -3548,7 +3604,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 443.0, 301.0, 70.0, 21.0 ],
+									"patching_rect" : [ 351.0, 282.0, 70.0, 21.0 ],
 									"style" : "",
 									"text" : "midi-value",
 									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
@@ -3591,7 +3647,7 @@
 						"description" : "",
 						"digest" : "",
 						"globalpatchername" : "",
-						"style" : "",
+						"style" : "default",
 						"tags" : ""
 					}
 ,
@@ -3613,12 +3669,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x86",
+							"revision" : 6,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 602.0 ],
+						"rect" : [ 0.0, 26.0, 1199.0, 602.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -3667,8 +3723,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 6,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -4082,7 +4138,7 @@
 													"bgfillcolor_type" : "color",
 													"elementcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 													"id" : "obj-22",
-													"items" : [ "rgb8", ",", "rgb", ",", "hsl", ",", "hsv", ",", "cmy" ],
+													"items" : [ "rgb", ",", "hsv", ",", "hsl", ",", "rgb8", ",", "cmy" ],
 													"labelclick" : 1,
 													"maxclass" : "umenu",
 													"numinlets" : 1,
@@ -4140,7 +4196,7 @@
 													"bgfillcolor_type" : "color",
 													"elementcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 													"id" : "obj-28",
-													"items" : [ "rgb8", ",", "rgb", ",", "hsl", ",", "hsv", ",", "cmy" ],
+													"items" : [ "rgb", ",", "hsv", ",", "hsl", ",", "rgb8", ",", "cmy" ],
 													"labelclick" : 1,
 													"maxclass" : "umenu",
 													"numinlets" : 1,
@@ -4382,7 +4438,7 @@
 													"destination" : [ "obj-12", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [ 590.600037, 122.0, 590.5, 122.0 ],
+													"midpoints" : [ 590.600015, 122.0, 590.5, 122.0 ],
 													"source" : [ "obj-24", 3 ]
 												}
 
@@ -4579,8 +4635,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 6,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -4994,7 +5050,7 @@
 													"bgfillcolor_type" : "color",
 													"elementcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 													"id" : "obj-22",
-													"items" : [ "rgb8", ",", "rgb", ",", "hsl", ",", "hsv", ",", "cmy" ],
+													"items" : [ "rgb", ",", "hsv", ",", "hsl", ",", "rgb8", ",", "cmy" ],
 													"labelclick" : 1,
 													"maxclass" : "umenu",
 													"numinlets" : 1,
@@ -5052,7 +5108,7 @@
 													"bgfillcolor_type" : "color",
 													"elementcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 													"id" : "obj-28",
-													"items" : [ "rgb8", ",", "rgb", ",", "hsl", ",", "hsv", ",", "cmy" ],
+													"items" : [ "rgb", ",", "hsv", ",", "hsl", ",", "rgb8", ",", "cmy" ],
 													"labelclick" : 1,
 													"maxclass" : "umenu",
 													"numinlets" : 1,
@@ -5294,7 +5350,7 @@
 													"destination" : [ "obj-12", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
-													"midpoints" : [ 590.600037, 122.0, 590.5, 122.0 ],
+													"midpoints" : [ 590.600015, 122.0, 590.5, 122.0 ],
 													"source" : [ "obj-24", 3 ]
 												}
 
@@ -5970,8 +6026,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x86",
+											"revision" : 6,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -6534,6 +6590,10 @@
 			}
  ],
 		"lines" : [  ],
+		"parameters" : 		{
+			"obj-8::obj-1" : [ "live.slider", "Gain", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "C74:/help/resources",
@@ -6542,6 +6602,10 @@
 			}
 , 			{
 				"name" : "j.unit.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "ambimonitor.mxo",
 				"type" : "iLaX"
 			}
  ],
