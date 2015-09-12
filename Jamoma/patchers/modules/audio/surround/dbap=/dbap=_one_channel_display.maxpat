@@ -89,7 +89,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 818.0, 408.0, 179.0, 35.0 ],
 					"style" : "",
-					"text" : "j.receive speakers/number_of_speakers",
+					"text" : "j.receive speakers/number_of_channels",
 					"varname" : "voices[1]"
 				}
 
@@ -170,7 +170,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 930.0, 255.0, 252.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf address %s/sources/source.%ld/active"
+					"text" : "sprintf address %s/sources/channel.%ld/active"
 				}
 
 			}
@@ -183,7 +183,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 750.0, 221.0, 305.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf address %s/sources/source.%ld/speaker_weight"
+					"text" : "sprintf address %s/sources/channel.%ld/speaker_weight"
 				}
 
 			}
@@ -196,7 +196,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 651.0, 194.0, 241.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf address %s/sources/source.%ld/blur"
+					"text" : "sprintf address %s/sources/channel.%ld/blur"
 				}
 
 			}
@@ -209,7 +209,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 347.0, 65.0, 243.0, 22.0 ],
 					"style" : "",
-					"text" : "sprintf address %s/sources/source.%ld/gain"
+					"text" : "sprintf address %s/sources/channel.%ld/gain"
 				}
 
 			}

@@ -462,7 +462,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 548.0, 35.0, 180.0, 35.0 ],
 					"style" : "",
-					"text" : "j.receive speakers/number_of_speakers"
+					"text" : "j.receive speakers/number_of_channels"
 				}
 
 			}
@@ -958,7 +958,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 639.0, 143.0, 171.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive number_of_speakers"
+									"text" : "j.receive number_of_channels"
 								}
 
 							}
@@ -1293,7 +1293,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 639.0, 219.0, 146.0, 102.0 ],
 									"style" : "",
-									"text" : "j.parameter_array speaker.[32]/position @type array @default 0. 1. 0. @dataspace position @unit xyz @description \"Position of the nth source.\""
+									"text" : "j.parameter_array channel.[32]/position @type array @default 0. 1. 0. @dataspace position @unit xyz @description \"Position of the nth channel.\""
 								}
 
 							}
@@ -1324,7 +1324,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 92.0, 167.0, 189.0, 89.0 ],
 									"style" : "",
-									"text" : "j.parameter number_of_speakers @type integer @range 1 32 @default 1 @clipmode both @description \"The number of speakers to diffuse to.\" @priority 1",
+									"text" : "j.parameter number_of_channels @type integer @range 1 32 @default 1 @clipmode both @description \"The number of speakers to diffuse to.\" @priority 1",
 									"varname" : "voices[1]"
 								}
 
@@ -1495,7 +1495,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 747.0, 309.0, 104.0, 156.0 ],
 									"style" : "",
-									"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @range -96. 12. @clipmode low @unit dB @default 0. @description \"Input gain for the nth source.\""
+									"text" : "j.parameter_array channel.[32]/gain @type decimal @dataspace gain @range -96. 12. @clipmode low @unit dB @default 0. @description \"Input gain for the nth channel.\""
 								}
 
 							}
@@ -1521,7 +1521,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 1433.0, 188.0, 165.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive number_of_sources"
+									"text" : "j.receive number_of_channels"
 								}
 
 							}
@@ -1575,7 +1575,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 876.0, 44.0, 126.0, 35.0 ],
 									"style" : "",
-									"text" : "j.receive number_of_sources"
+									"text" : "j.receive number_of_channels"
 								}
 
 							}
@@ -1655,7 +1655,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 1131.0, 451.0, 182.0, 35.0 ],
 									"style" : "",
-									"text" : "j.receive speakers/number_of_speakers"
+									"text" : "j.receive speakers/number_of_channels"
 								}
 
 							}
@@ -1735,7 +1735,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 1374.0, 309.0, 148.0, 196.0 ],
 									"style" : "",
-									"text" : "j.return_array source.[32]/hull_distance @type decimal @description \"If convex hull calculation is enabled, this returns how far the source is from the convex hull that delimits the speaker layout. When the source is inside the convex hull, the value is negative, and when it's outside, the value is positive.\""
+									"text" : "j.return_array channel.[32]/hull_distance @type decimal @description \"If convex hull calculation is enabled, this returns how far the source is from the convex hull that delimits the speaker layout. When the source is inside the convex hull, the value is negative, and when it's outside, the value is positive.\""
 								}
 
 							}
@@ -1761,7 +1761,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 383.0, 201.0, 165.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive number_of_sources"
+									"text" : "j.receive number_of_channels"
 								}
 
 							}
@@ -3043,7 +3043,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 1103.0, 309.0, 185.0, 116.0 ],
 									"style" : "",
-									"text" : "j.parameter_array source.[32]/speaker_weight @type array @range 0. 1. @default 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1 @description \"Set spatial weight of the nth source.\""
+									"text" : "j.parameter_array channel.[32]/speaker_weight @type array @range 0. 1. @default 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1 @description \"Set spatial weight of the nth channel.\""
 								}
 
 							}
@@ -3060,7 +3060,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 913.0, 309.0, 108.0, 102.0 ],
 									"style" : "",
-									"text" : "j.parameter_array source.[32]/active @type boolean @default 1 @description \"Mute or unmute the nth source.\""
+									"text" : "j.parameter_array channel.[32]/active @type boolean @default 1 @description \"Mute or unmute the nth channel.\""
 								}
 
 							}
@@ -3077,7 +3077,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 574.0, 309.0, 125.0, 116.0 ],
 									"style" : "",
-									"text" : "j.parameter_array source.[32]/blur @type decimal @range 0. 1. @default 0. @description \"Set spatial blur of the nth source.\""
+									"text" : "j.parameter_array channel.[32]/blur @type decimal @range 0. 1. @default 0. @description \"Set spatial blur of the nth channel.\""
 								}
 
 							}
@@ -3094,7 +3094,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 383.0, 309.0, 125.0, 156.0 ],
 									"style" : "",
-									"text" : "j.parameter_array source.[32]/position @type array @default 0. 1. 0. @range -20. 20. @clipmode none @dataspace position @unit xyz @description \"Position of the nth source.\""
+									"text" : "j.parameter_array channel.[32]/position @type array @default 0. 1. 0. @range -20. 20. @clipmode none @dataspace position @unit xyz @description \"Position of the nth channel.\""
 								}
 
 							}
@@ -3111,7 +3111,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 67.0, 309.0, 123.0, 129.0 ],
 									"style" : "",
-									"text" : "j.parameter number_of_sources @type integer @range 1 32 @default 1 @clipmode both @description \"The number of sources to process.\" @priority 1",
+									"text" : "j.parameter number_of_channels @type integer @range 1 32 @default 1 @clipmode both @description \"The number of sources to process.\" @priority 1",
 									"varname" : "voices"
 								}
 

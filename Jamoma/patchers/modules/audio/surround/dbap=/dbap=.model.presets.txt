@@ -8,15 +8,15 @@ audio/mute 0
 renderer/dimensions 2
 renderer/hull 1
 renderer/rolloff 6.000000
-speakers/number_of_speakers 2
-speakers/speaker.1/position -5.00000 0.000000 0.000000
-speakers/speaker.2/position 5.00000 0.000000 0.000000
-sources/number_of_sources 1
-sources/source.1/active 1.000000
-sources/source.1/blur 0.000000
-sources/source.1/gain 0.000000
-sources/source.1/speaker_weight 1.000000 1.000000
-sources/source.1/position 0.000000 0.000000 0.000000
+speakers/number_of_channels 2
+speakers/channel.1/position -5.00000 0.000000 0.000000
+speakers/channel.2/position 5.00000 0.000000 0.000000
+sources/number_of_channels 1
+sources/channel.1/active 1.000000
+sources/channel.1/blur 0.000000
+sources/channel.1/gain 0.000000
+sources/channel.1/speaker_weight 1.000000 1.000000
+sources/channel.1/position 0.000000 0.000000 0.000000
 
 
 - preset "speaker rig 2 (2-0) channel stereo"
@@ -24,9 +24,9 @@ sources/source.1/position 0.000000 0.000000 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 2
-speakers/speaker.1/position -2.500000 4.330127 0.000000
-speakers/speaker.2/position 2.500000 4.330127 0.000000
+speakers/number_of_channels 2
+speakers/channel.1/position -2.500000 4.330127 0.000000
+speakers/channel.2/position 2.500000 4.330127 0.000000
 
 
 - preset "speaker rig 3 (3-0) channel stereo"
@@ -34,10 +34,10 @@ speakers/speaker.2/position 2.500000 4.330127 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 3
-speakers/speaker.1/position -2.500000 4.330127 0.000000
-speakers/speaker.2/position 0.000000 5.000000 0.000000
-speakers/speaker.3/position 2.500000 4.330127 0.000000
+speakers/number_of_channels 3
+speakers/channel.1/position -2.500000 4.330127 0.000000
+speakers/channel.2/position 0.000000 5.000000 0.000000
+speakers/channel.3/position 2.500000 4.330127 0.000000
 
 
 - preset "speaker rig 4 (3-1) channel surround"
@@ -45,11 +45,11 @@ speakers/speaker.3/position 2.500000 4.330127 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 4
-speakers/speaker.1/position -2.500000 4.330127 0.000000
-speakers/speaker.2/position 0.000000 5.000000 0.000000
-speakers/speaker.3/position 2.500000 4.330127 0.000000
-speakers/speaker.4/position -0.000000 -5.000000 0.000000
+speakers/number_of_channels 4
+speakers/channel.1/position -2.500000 4.330127 0.000000
+speakers/channel.2/position 0.000000 5.000000 0.000000
+speakers/channel.3/position 2.500000 4.330127 0.000000
+speakers/channel.4/position -0.000000 -5.000000 0.000000
 
 
 - preset "speaker rig ITU 5 (3-2) channel surround"
@@ -57,12 +57,12 @@ speakers/speaker.4/position -0.000000 -5.000000 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 5
-speakers/speaker.1/position -2.500000 4.330127 0.000000
-speakers/speaker.2/position 0.000000 5.000000 0.000000
-speakers/speaker.3/position 2.500000 4.330127 0.000000
-speakers/speaker.4/position 4.698463 -1.710101 0.000000
-speakers/speaker.5/position -4.698463 -1.710101 0.000000
+speakers/number_of_channels 5
+speakers/channel.1/position -2.500000 4.330127 0.000000
+speakers/channel.2/position 0.000000 5.000000 0.000000
+speakers/channel.3/position 2.500000 4.330127 0.000000
+speakers/channel.4/position 4.698463 -1.710101 0.000000
+speakers/channel.5/position -4.698463 -1.710101 0.000000
 
 
 - preset "speaker rig ITU 7 (3-4) channel surround"
@@ -70,14 +70,14 @@ speakers/speaker.5/position -4.698463 -1.710101 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 7
-speakers/speaker.1/position -2.500000 4.330127 0.000000
-speakers/speaker.2/position 0.000000 5.000000 0.000000
-speakers/speaker.3/position 2.500000 4.330127 0.000000
-speakers/speaker.4/position 5.000000 0.000000 0.000000
-speakers/speaker.5/position 2.500000 -4.330127 0.000000
-speakers/speaker.6/position -2.500000 -4.330127 0.000000
-speakers/speaker.7/position -5.000000 0.000000 0.000000
+speakers/number_of_channels 7
+speakers/channel.1/position -2.500000 4.330127 0.000000
+speakers/channel.2/position 0.000000 5.000000 0.000000
+speakers/channel.3/position 2.500000 4.330127 0.000000
+speakers/channel.4/position 5.000000 0.000000 0.000000
+speakers/channel.5/position 2.500000 -4.330127 0.000000
+speakers/channel.6/position -2.500000 -4.330127 0.000000
+speakers/channel.7/position -5.000000 0.000000 0.000000
 
 
 - preset "speaker rig 2D 4 channels"
@@ -85,11 +85,11 @@ speakers/speaker.7/position -5.000000 0.000000 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 4
-speakers/speaker.1/position -3.535534 3.535534 0.000000
-speakers/speaker.2/position 3.535534 3.535534 0.000000
-speakers/speaker.3/position 3.535534 -3.535534 0.000000
-speakers/speaker.4/position -3.535534 -3.535534 0.000000
+speakers/number_of_channels 4
+speakers/channel.1/position -3.535534 3.535534 0.000000
+speakers/channel.2/position 3.535534 3.535534 0.000000
+speakers/channel.3/position 3.535534 -3.535534 0.000000
+speakers/channel.4/position -3.535534 -3.535534 0.000000
 
 
 - preset "speaker rig 2D 5 channels"
@@ -97,12 +97,12 @@ speakers/speaker.4/position -3.535534 -3.535534 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 5
-speakers/speaker.1/position -2.938926 4.045085 0.000000
-speakers/speaker.2/position 2.938926 4.045085 0.000000
-speakers/speaker.3/position 4.755282 -1.545085 0.000000
-speakers/speaker.4/position -0.000000 -5.000000 0.000000
-speakers/speaker.5/position -4.755282 -1.545085 0.000000
+speakers/number_of_channels 5
+speakers/channel.1/position -2.938926 4.045085 0.000000
+speakers/channel.2/position 2.938926 4.045085 0.000000
+speakers/channel.3/position 4.755282 -1.545085 0.000000
+speakers/channel.4/position -0.000000 -5.000000 0.000000
+speakers/channel.5/position -4.755282 -1.545085 0.000000
 
 
 - preset "speaker rig 2D 6 channels"
@@ -110,13 +110,13 @@ speakers/speaker.5/position -4.755282 -1.545085 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 6
-speakers/speaker.1/position -2.500000 4.330127 0.000000
-speakers/speaker.2/position 2.500000 4.330127 0.000000
-speakers/speaker.3/position 5.000000 0.000000 0.000000
-speakers/speaker.4/position 2.500000 -4.330127 0.000000
-speakers/speaker.5/position -2.500000 -4.330127 0.000000
-speakers/speaker.6/position -5.000000 0.000000 0.000000
+speakers/number_of_channels 6
+speakers/channel.1/position -2.500000 4.330127 0.000000
+speakers/channel.2/position 2.500000 4.330127 0.000000
+speakers/channel.3/position 5.000000 0.000000 0.000000
+speakers/channel.4/position 2.500000 -4.330127 0.000000
+speakers/channel.5/position -2.500000 -4.330127 0.000000
+speakers/channel.6/position -5.000000 0.000000 0.000000
 
 
 - preset "speaker rig 2D 8 channels 1"
@@ -124,15 +124,15 @@ speakers/speaker.6/position -5.000000 0.000000 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 8
-speakers/speaker.1/position -1.913416 4.619398 0.000000
-speakers/speaker.2/position 1.913416 4.619398 0.000000
-speakers/speaker.3/position 4.619398 1.913417 0.000000
-speakers/speaker.4/position 4.619398 -1.913417 0.000000
-speakers/speaker.5/position 1.913416 -4.619398 0.000000
-speakers/speaker.6/position -1.913416 -4.619398 0.000000
-speakers/speaker.7/position -4.619398 -1.913417 0.000000
-speakers/speaker.8/position -4.619398 1.913417 0.000000
+speakers/number_of_channels 8
+speakers/channel.1/position -1.913416 4.619398 0.000000
+speakers/channel.2/position 1.913416 4.619398 0.000000
+speakers/channel.3/position 4.619398 1.913417 0.000000
+speakers/channel.4/position 4.619398 -1.913417 0.000000
+speakers/channel.5/position 1.913416 -4.619398 0.000000
+speakers/channel.6/position -1.913416 -4.619398 0.000000
+speakers/channel.7/position -4.619398 -1.913417 0.000000
+speakers/channel.8/position -4.619398 1.913417 0.000000
 
 
 - preset "speaker rig 2D 8 channels 2"
@@ -140,15 +140,15 @@ speakers/speaker.8/position -4.619398 1.913417 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 8
-speakers/speaker.1/position 0.000000 5.000000 0.000000
-speakers/speaker.2/position 3.535534 3.535534 0.000000
-speakers/speaker.3/position 5.000000 0.000000 0.000000
-speakers/speaker.4/position 3.535534 -3.535534 0.000000
-speakers/speaker.5/position -0.000000 -5.000000 0.000000
-speakers/speaker.6/position -3.535534 -3.535534 0.000000
-speakers/speaker.7/position -5.000000 0.000000 0.000000
-speakers/speaker.8/position -3.535534 3.535534 0.000000
+speakers/number_of_channels 8
+speakers/channel.1/position 0.000000 5.000000 0.000000
+speakers/channel.2/position 3.535534 3.535534 0.000000
+speakers/channel.3/position 5.000000 0.000000 0.000000
+speakers/channel.4/position 3.535534 -3.535534 0.000000
+speakers/channel.5/position -0.000000 -5.000000 0.000000
+speakers/channel.6/position -3.535534 -3.535534 0.000000
+speakers/channel.7/position -5.000000 0.000000 0.000000
+speakers/channel.8/position -3.535534 3.535534 0.000000
 
 
 - preset "speaker rig 2D 12 channels"
@@ -156,19 +156,19 @@ speakers/speaker.8/position -3.535534 3.535534 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 12
-speakers/speaker.1/position 0.000000 5.000000 0.000000
-speakers/speaker.2/position 2.500000 4.330127 0.000000
-speakers/speaker.3/position 4.330127 2.500000 0.000000
-speakers/speaker.4/position 5.000000 0.000000 0.000000
-speakers/speaker.5/position 4.330127 -2.500000 0.000000
-speakers/speaker.6/position 2.500000 -4.330127 0.000000
-speakers/speaker.7/position 0.000000 -5.000000 0.000000
-speakers/speaker.8/position -2.500000 -4.330127 0.000000
-speakers/speaker.9/position -4.330127 -2.500000 0.000000
-speakers/speaker.10/position -5.000000 -0.000000 0.000000
-speakers/speaker.11/position -4.330127 2.500000 0.000000
-speakers/speaker.12/position -2.500000 4.330127 0.000000
+speakers/number_of_channels 12
+speakers/channel.1/position 0.000000 5.000000 0.000000
+speakers/channel.2/position 2.500000 4.330127 0.000000
+speakers/channel.3/position 4.330127 2.500000 0.000000
+speakers/channel.4/position 5.000000 0.000000 0.000000
+speakers/channel.5/position 4.330127 -2.500000 0.000000
+speakers/channel.6/position 2.500000 -4.330127 0.000000
+speakers/channel.7/position 0.000000 -5.000000 0.000000
+speakers/channel.8/position -2.500000 -4.330127 0.000000
+speakers/channel.9/position -4.330127 -2.500000 0.000000
+speakers/channel.10/position -5.000000 -0.000000 0.000000
+speakers/channel.11/position -4.330127 2.500000 0.000000
+speakers/channel.12/position -2.500000 4.330127 0.000000
 
 
 - preset "speaker rig 2D 16 channels"
@@ -176,23 +176,23 @@ speakers/speaker.12/position -2.500000 4.330127 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 16
-speakers/speaker.1/position 0.000000 5.000000 0.000000
-speakers/speaker.2/position 1.913417 4.619398 0.000000
-speakers/speaker.3/position 3.535534 3.535534 0.000000
-speakers/speaker.4/position 4.619398 1.913417 0.000000
-speakers/speaker.5/position 5.000000 0.000000 0.000000
-speakers/speaker.6/position 4.619398 -1.913417 0.000000
-speakers/speaker.7/position 3.535534 -3.535534 0.000000
-speakers/speaker.8/position 1.913417 -4.619398 0.000000
-speakers/speaker.9/position 0.000000 -5.000000 0.000000
-speakers/speaker.10/position -1.913417 -4.619398 0.000000
-speakers/speaker.11/position -3.535534 -3.535534 0.000000
-speakers/speaker.12/position -4.619398 -1.913417 0.000000
-speakers/speaker.13/position -5.000000 -0.000000 0.000000
-speakers/speaker.14/position -4.619398 1.913417 0.000000
-speakers/speaker.15/position -3.535534 3.535534 0.000000
-speakers/speaker.16/position -1.913417 4.619398 0.000000
+speakers/number_of_channels 16
+speakers/channel.1/position 0.000000 5.000000 0.000000
+speakers/channel.2/position 1.913417 4.619398 0.000000
+speakers/channel.3/position 3.535534 3.535534 0.000000
+speakers/channel.4/position 4.619398 1.913417 0.000000
+speakers/channel.5/position 5.000000 0.000000 0.000000
+speakers/channel.6/position 4.619398 -1.913417 0.000000
+speakers/channel.7/position 3.535534 -3.535534 0.000000
+speakers/channel.8/position 1.913417 -4.619398 0.000000
+speakers/channel.9/position 0.000000 -5.000000 0.000000
+speakers/channel.10/position -1.913417 -4.619398 0.000000
+speakers/channel.11/position -3.535534 -3.535534 0.000000
+speakers/channel.12/position -4.619398 -1.913417 0.000000
+speakers/channel.13/position -5.000000 -0.000000 0.000000
+speakers/channel.14/position -4.619398 1.913417 0.000000
+speakers/channel.15/position -3.535534 3.535534 0.000000
+speakers/channel.16/position -1.913417 4.619398 0.000000
 
 
 - preset "speaker rig 2D 16 channels 4x4 grid"
@@ -200,23 +200,23 @@ speakers/speaker.16/position -1.913417 4.619398 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 16
-speakers/speaker.1/position  -9.000000  9.000000 0.000000
-speakers/speaker.2/position  -3.000000  9.000000 0.000000
-speakers/speaker.3/position   3.000000  9.000000 0.000000
-speakers/speaker.4/position   9.000000  9.000000 0.000000
-speakers/speaker.5/position  -9.000000  3.000000 0.000000
-speakers/speaker.6/position  -3.000000  3.000000 0.000000
-speakers/speaker.7/position   3.000000  3.000000 0.000000
-speakers/speaker.8/position   9.000000  3.000000 0.000000
-speakers/speaker.9/position  -9.000000 -3.000000 0.000000
-speakers/speaker.10/position -3.000000 -3.000000 0.000000
-speakers/speaker.11/position  3.000000 -3.000000 0.000000
-speakers/speaker.12/position  9.000000 -3.000000 0.000000
-speakers/speaker.13/position -9.000000 -9.000000 0.000000
-speakers/speaker.14/position -3.000000 -9.000000 0.000000
-speakers/speaker.15/position  3.000000 -9.000000 0.000000
-speakers/speaker.16/position  9.000000 -9.000000 0.000000
+speakers/number_of_channels 16
+speakers/channel.1/position  -9.000000  9.000000 0.000000
+speakers/channel.2/position  -3.000000  9.000000 0.000000
+speakers/channel.3/position   3.000000  9.000000 0.000000
+speakers/channel.4/position   9.000000  9.000000 0.000000
+speakers/channel.5/position  -9.000000  3.000000 0.000000
+speakers/channel.6/position  -3.000000  3.000000 0.000000
+speakers/channel.7/position   3.000000  3.000000 0.000000
+speakers/channel.8/position   9.000000  3.000000 0.000000
+speakers/channel.9/position  -9.000000 -3.000000 0.000000
+speakers/channel.10/position -3.000000 -3.000000 0.000000
+speakers/channel.11/position  3.000000 -3.000000 0.000000
+speakers/channel.12/position  9.000000 -3.000000 0.000000
+speakers/channel.13/position -9.000000 -9.000000 0.000000
+speakers/channel.14/position -3.000000 -9.000000 0.000000
+speakers/channel.15/position  3.000000 -9.000000 0.000000
+speakers/channel.16/position  9.000000 -9.000000 0.000000
 
 
 - preset "speaker rig 2D 16 channels irregular"
@@ -224,38 +224,38 @@ speakers/speaker.16/position  9.000000 -9.000000 0.000000
 # ###########################################
 #
 renderer/dimensions 2
-speakers/number_of_speakers 16
-speakers/speaker.1/position   -9.500000  1.50000 0.000000
-speakers/speaker.2/position   -9.500000  7.50000 0.000000
-speakers/speaker.3/position    2.500000  7.50000 0.000000
-speakers/speaker.4/position    2.500000  1.50000 0.000000
-speakers/speaker.5/position    7.000000 -1.00000 0.000000
-speakers/speaker.6/position   11.500000 -2.50000 0.000000
-speakers/speaker.7/position   11.500000 -6.50000 0.000000
-speakers/speaker.8/position    6.500000 -6.50000 0.000000
-speakers/speaker.9/position    1.500000 -6.50000 0.000000
-speakers/speaker.10/position   1.500000 -2.50000 0.000000
-speakers/speaker.11/position   0.500000 -2.50000 0.000000
-speakers/speaker.12/position   0.500000 -6.50000 0.000000
-speakers/speaker.13/position  -5.500000 -6.50000 0.000000
-speakers/speaker.14/position  -9.500000 -6.50000 0.000000
-speakers/speaker.15/position  -9.500000 -2.50000 0.000000
-speakers/speaker.16/position  -5.000000  0.50000 0.000000
+speakers/number_of_channels 16
+speakers/channel.1/position   -9.500000  1.50000 0.000000
+speakers/channel.2/position   -9.500000  7.50000 0.000000
+speakers/channel.3/position    2.500000  7.50000 0.000000
+speakers/channel.4/position    2.500000  1.50000 0.000000
+speakers/channel.5/position    7.000000 -1.00000 0.000000
+speakers/channel.6/position   11.500000 -2.50000 0.000000
+speakers/channel.7/position   11.500000 -6.50000 0.000000
+speakers/channel.8/position    6.500000 -6.50000 0.000000
+speakers/channel.9/position    1.500000 -6.50000 0.000000
+speakers/channel.10/position   1.500000 -2.50000 0.000000
+speakers/channel.11/position   0.500000 -2.50000 0.000000
+speakers/channel.12/position   0.500000 -6.50000 0.000000
+speakers/channel.13/position  -5.500000 -6.50000 0.000000
+speakers/channel.14/position  -9.500000 -6.50000 0.000000
+speakers/channel.15/position  -9.500000 -2.50000 0.000000
+speakers/channel.16/position  -5.000000  0.50000 0.000000
 
 - preset "speaker rig 3D 8 channels (Cube)"
 - description "something about this preset"
 # ###########################################
 #
 renderer/dimensions 3
-speakers/number_of_speakers 8
-speakers/speaker.1/position -2.896140 2.896140 2.867882
-speakers/speaker.2/position 2.896140 2.896140 2.867882
-speakers/speaker.3/position 2.896140 -2.896140 2.867882
-speakers/speaker.4/position -2.896140 -2.896140 2.867882
-speakers/speaker.5/position -2.896140 2.896140 -2.867882
-speakers/speaker.6/position 2.896140 2.896140 -2.867882
-speakers/speaker.7/position 2.896140 -2.896140 -2.867882
-speakers/speaker.8/position -2.896140 -2.896140 -2.867882
+speakers/number_of_channels 8
+speakers/channel.1/position -2.896140 2.896140 2.867882
+speakers/channel.2/position 2.896140 2.896140 2.867882
+speakers/channel.3/position 2.896140 -2.896140 2.867882
+speakers/channel.4/position -2.896140 -2.896140 2.867882
+speakers/channel.5/position -2.896140 2.896140 -2.867882
+speakers/channel.6/position 2.896140 2.896140 -2.867882
+speakers/channel.7/position 2.896140 -2.896140 -2.867882
+speakers/channel.8/position -2.896140 -2.896140 -2.867882
 
 
 - preset "speaker rig 3D 12 channels (Dodecahedron1)"
@@ -263,19 +263,19 @@ speakers/speaker.8/position -2.896140 -2.896140 -2.867882
 # ###########################################
 #
 renderer/dimensions 3
-speakers/number_of_speakers 12
-speakers/speaker.1/position -0.000000 0.000000 5.000000
-speakers/speaker.2/position -0.000000 0.000000 -5.000000
-speakers/speaker.3/position -2.630147 3.620085 2.230989
-speakers/speaker.4/position 2.630147 -3.620086 -2.230989
-speakers/speaker.5/position 2.630147 3.620085 2.230989
-speakers/speaker.6/position -2.630147 -3.620086 -2.230989
-speakers/speaker.7/position -4.255666 -1.382750 2.230989
-speakers/speaker.8/position 4.255666 1.382748 -2.230989
-speakers/speaker.9/position 4.255666 -1.382750 2.230989
-speakers/speaker.10/position -4.255666 1.382749 -2.230989
-speakers/speaker.11/position -0.000000 -4.474672 2.230989
-speakers/speaker.12/position 0.000000 4.474672 -2.230989
+speakers/number_of_channels 12
+speakers/channel.1/position -0.000000 0.000000 5.000000
+speakers/channel.2/position -0.000000 0.000000 -5.000000
+speakers/channel.3/position -2.630147 3.620085 2.230989
+speakers/channel.4/position 2.630147 -3.620086 -2.230989
+speakers/channel.5/position 2.630147 3.620085 2.230989
+speakers/channel.6/position -2.630147 -3.620086 -2.230989
+speakers/channel.7/position -4.255666 -1.382750 2.230989
+speakers/channel.8/position 4.255666 1.382748 -2.230989
+speakers/channel.9/position 4.255666 -1.382750 2.230989
+speakers/channel.10/position -4.255666 1.382749 -2.230989
+speakers/channel.11/position -0.000000 -4.474672 2.230989
+speakers/channel.12/position 0.000000 4.474672 -2.230989
 
 
 - preset "speaker rig 3D 12 channels 2 (Dodecahedron 2)"
@@ -283,19 +283,19 @@ speakers/speaker.12/position 0.000000 4.474672 -2.230989
 # ###########################################
 #
 renderer/dimensions 3
-speakers/number_of_speakers 12
-speakers/speaker.1/position 0.000000 5.000000 0.000000
-speakers/speaker.2/position -0.000000 -5.000000 0.000000
-speakers/speaker.3/position 0.000000 2.230989 -4.474672
-speakers/speaker.4/position -0.000000 -2.230989 4.474672
-speakers/speaker.5/position -4.263248 2.219306 -1.378187
-speakers/speaker.6/position 4.263247 -2.219306 1.378187
-speakers/speaker.7/position 4.263247 2.219306 -1.378187
-speakers/speaker.8/position -4.263247 -2.219306 1.378187
-speakers/speaker.9/position -2.617144 2.235253 3.626872
-speakers/speaker.10/position 2.617144 -2.235253 -3.626872
-speakers/speaker.11/position 2.617144 2.235253 3.626872
-speakers/speaker.12/position -2.617144 -2.235253 -3.626872
+speakers/number_of_channels 12
+speakers/channel.1/position 0.000000 5.000000 0.000000
+speakers/channel.2/position -0.000000 -5.000000 0.000000
+speakers/channel.3/position 0.000000 2.230989 -4.474672
+speakers/channel.4/position -0.000000 -2.230989 4.474672
+speakers/channel.5/position -4.263248 2.219306 -1.378187
+speakers/channel.6/position 4.263247 -2.219306 1.378187
+speakers/channel.7/position 4.263247 2.219306 -1.378187
+speakers/channel.8/position -4.263247 -2.219306 1.378187
+speakers/channel.9/position -2.617144 2.235253 3.626872
+speakers/channel.10/position 2.617144 -2.235253 -3.626872
+speakers/channel.11/position 2.617144 2.235253 3.626872
+speakers/channel.12/position -2.617144 -2.235253 -3.626872
 
 
 

@@ -266,7 +266,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 528.0, 149.0, 223.0, 22.0 ],
 					"style" : "",
-					"text" : "j.remote speakers/number_of_speakers",
+					"text" : "j.remote speakers/number_of_channels",
 					"varname" : "voices[1]"
 				}
 
@@ -348,7 +348,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 528.0, 113.0, 210.0, 22.0 ],
 					"style" : "",
-					"text" : "j.remote sources/number_of_sources",
+					"text" : "j.remote sources/number_of_channels",
 					"varname" : "voices"
 				}
 
