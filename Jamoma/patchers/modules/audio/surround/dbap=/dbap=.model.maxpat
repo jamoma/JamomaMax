@@ -1484,6 +1484,23 @@
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
+									"fontface" : 0,
+									"fontname" : "Arial",
+									"fontsize" : 12.0,
+									"id" : "obj-7",
+									"linecount" : 11,
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 747.0, 309.0, 104.0, 156.0 ],
+									"style" : "",
+									"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @range -96. 12. @clipmode low @unit dB @default 0. @description \"Input gain for the nth source.\""
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-15",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -3052,23 +3069,6 @@
 									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"id" : "obj-7",
-									"linecount" : 8,
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 3,
-									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 747.0, 309.0, 122.0, 116.0 ],
-									"style" : "",
-									"text" : "j.parameter_array source.[32]/gain @type decimal @dataspace gain @unit dB @default 0. @description \"Input gain for the nth source.\""
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontface" : 0,
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
 									"id" : "obj-14",
 									"linecount" : 8,
 									"maxclass" : "newobj",
@@ -3087,14 +3087,14 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-18",
-									"linecount" : 9,
+									"linecount" : 11,
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 383.0, 309.0, 124.0, 129.0 ],
+									"patching_rect" : [ 383.0, 309.0, 125.0, 156.0 ],
 									"style" : "",
-									"text" : "j.parameter_array source.[32]/position @type array @default 0. 1. 0. @dataspace position @unit xyz @description \"Position of the nth source.\""
+									"text" : "j.parameter_array source.[32]/position @type array @default 0. 1. 0. @range -20. 20. @clipmode none @dataspace position @unit xyz @description \"Position of the nth source.\""
 								}
 
 							}
@@ -3104,12 +3104,12 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-44",
-									"linecount" : 5,
+									"linecount" : 9,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 67.0, 309.0, 207.0, 76.0 ],
+									"patching_rect" : [ 67.0, 309.0, 123.0, 129.0 ],
 									"style" : "",
 									"text" : "j.parameter number_of_sources @type integer @range 1 32 @default 1 @clipmode both @description \"The number of sources to process.\" @priority 1",
 									"varname" : "voices"
