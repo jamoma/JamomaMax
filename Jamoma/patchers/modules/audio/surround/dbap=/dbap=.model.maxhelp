@@ -601,7 +601,7 @@
 					"id" : "obj-18",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "scene=.view.maxpat",
+					"name" : "scene=.view.ambimonitor.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -938,7 +938,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "scene=.view.maxpat",
+				"name" : "scene=.view.ambimonitor.maxpat",
 				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
 				"type" : "JSON",
 				"implicit" : 1
