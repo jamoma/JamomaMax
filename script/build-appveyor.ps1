@@ -38,3 +38,6 @@ cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
 7z a $archiveName Jamoma > c:\projects\JamomaMax\archive.log
 move /Y *.zip $env:APPVEYOR_BUILD_FOLDER
 cd $env:APPVEYOR_BUILD_FOLDER
+
+# call deploy script in buid step so that the deploy log could be upload with others
+c:\projects\JamomaMax\script\deploy-appveyor.ps1

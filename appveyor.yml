@@ -22,8 +22,9 @@ platform:
 build_script:
   - ps: c:\projects\JamomaMax\script\build-appveyor.ps1
 
-deploy_script:
-  - ps: c:\projects\JamomaMax\script\deploy-appveyor.ps1
+
+# deploy_script:
+#  - ps: c:\projects\JamomaMax\script\deploy-appveyor.ps1
 
 artifacts:
   - name: Jamoma for Max - Windows $(platform)
