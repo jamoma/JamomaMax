@@ -1,7 +1,7 @@
 # c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey='ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff'" "put $archiveName $destFolder" "exit"
 
 
-if ( -Not $env:APPVEYOR_REPO_BRANCH -eq "master"){
+if ( $env:APPVEYOR_REPO_BRANCH -ne "master"){
     Write-Host "We are not on master branch. Don't deploy."
     exit
 } else {
