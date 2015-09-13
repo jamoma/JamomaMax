@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 1203.0, 885.0 ],
+		"rect" : [ 39.0, 84.0, 1203.0, 885.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -50,7 +50,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -272,7 +272,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -526,7 +526,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -999,7 +999,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -2053,12 +2053,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
+						"rect" : [ 39.0, 110.0, 1203.0, 859.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -2088,6 +2088,60 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"items" : "<empty>",
+									"maxclass" : "umenu",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "int", "", "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 349.0, 709.0, 100.0, 22.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-11",
+									"linecount" : 3,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 349.0, 648.5, 97.0, 49.0 ],
+									"style" : "",
+									"text" : "j.namespace @format umenu @sort priority"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-10",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 349.0, 616.5, 51.0, 22.0 ],
+									"style" : "",
+									"text" : "/Priority"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-7",
+									"linecount" : 2,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 349.0, 576.0, 150.0, 33.0 ],
+									"style" : "",
+									"text" : "Display the effective order using j.namespace"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 0,
 									"fontsize" : 14.0,
@@ -2628,6 +2682,24 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-11", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-10", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-11", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2691,7 +2763,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3217,7 +3289,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -3436,7 +3508,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
+											"revision" : 5,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -3929,7 +4001,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -3992,7 +4064,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -4756,12 +4828,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 1203.0, 859.0 ],
+						"rect" : [ 0.0, 26.0, 1203.0, 859.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -5288,7 +5360,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -6159,7 +6231,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
+							"revision" : 5,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -7078,32 +7150,32 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
-			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
 			"obj-3::obj-64" : [ "live.dial[1]", "To", 0 ],
-			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
-			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
-			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
-			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
-			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
-			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
-			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
-			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
-			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
-			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
 			"obj-3::obj-29" : [ "live.numbox[6]", "live.numbox[1]", 0 ],
-			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
-			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ],
-			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
 			"obj-2::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
-			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
-			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
-			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
+			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ],
 			"obj-1::obj-61" : [ "live.numbox[13]", "live.numbox[13]", 0 ],
-			"obj-4::obj-12" : [ "live.menu[2]", "live.menu", 0 ]
+			"obj-3::obj-32" : [ "live.numbox[7]", "live.numbox[1]", 0 ],
+			"obj-3::obj-63" : [ "live.dial", "From", 0 ],
+			"obj-3::obj-33" : [ "live.numbox[8]", "live.numbox[1]", 0 ],
+			"obj-1::obj-71" : [ "live.numbox[17]", "live.numbox[15]", 0 ],
+			"obj-3::obj-37" : [ "live.numbox[10]", "live.numbox[1]", 0 ],
+			"obj-3::obj-24" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
+			"obj-1::obj-73" : [ "live.numbox[18]", "live.numbox[14]", 0 ],
+			"obj-34::obj-12" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-3::obj-15" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-3::obj-25" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-3::obj-36" : [ "live.numbox[9]", "live.numbox[1]", 0 ],
+			"obj-1::obj-67" : [ "live.numbox[15]", "live.numbox[15]", 0 ],
+			"obj-3::obj-16" : [ "live.numbox[2]", "live.numbox[1]", 0 ],
+			"obj-31::obj-14" : [ "live.gain~", "gain", 0 ],
+			"obj-31::obj-31" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-3::obj-40" : [ "live.numbox[11]", "live.numbox[1]", 0 ],
+			"obj-1::obj-69" : [ "live.numbox[16]", "live.numbox[13]", 0 ],
+			"obj-31::obj-27" : [ "live.slider", "Frequency", 0 ],
+			"obj-3::obj-41" : [ "live.numbox[12]", "live.numbox[1]", 0 ],
+			"obj-1::obj-66" : [ "live.numbox[14]", "live.numbox[14]", 0 ],
+			"obj-3::obj-28" : [ "live.numbox[5]", "live.numbox[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -7140,6 +7212,10 @@
 			}
 , 			{
 				"name" : "j.node.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{

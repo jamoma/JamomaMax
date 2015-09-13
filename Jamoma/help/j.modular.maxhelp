@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1199.0, 792.0 ],
+		"rect" : [ 88.0, 155.0, 1165.0, 792.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 510.0, 327.0, 655.0, 450.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 766.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -82,7 +82,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-17",
@@ -410,7 +409,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 266.0, 228.0, 899.0, 601.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 766.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -438,7 +437,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-34",
@@ -1846,7 +1844,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 84.0, 129.0, 640.0, 480.0 ],
+						"rect" : [ 0.0, 26.0, 1165.0, 766.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1874,7 +1872,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontface" : 0,
@@ -4203,7 +4200,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+						"rect" : [ 88.0, 181.0, 1165.0, 766.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4231,7 +4228,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"showontab" : 1,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-3",
@@ -4334,7 +4330,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 270.0, 359.0, 146.0, 64.0 ],
+									"patching_rect" : [ 270.0, 359.0, 147.0, 64.0 ],
 									"style" : "",
 									"text" : "With one argument, j.modular can be used to connect to this same patcher itself.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4447,7 +4443,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 735.0, 363.0, 436.0, 417.0 ],
+										"rect" : [ 764.0, 440.0, 436.0, 417.0 ],
 										"bgcolor" : [ 0.864566, 0.853603, 0.817125, 1.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -4770,16 +4766,16 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-2::obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-2::obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-2::obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-2::obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-1::obj-31::obj-17" : [ "live.dial[1]", "my_int", 0 ],
-			"obj-2::obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-2::obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
-			"obj-2::obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-1::obj-31::obj-15" : [ "live.dial", "my_float", 0 ],
-			"obj-2::obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ]
+			"obj-2::obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-2::obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-2::obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-2::obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-2::obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-2::obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-2::obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-1::obj-31::obj-17" : [ "live.dial[1]", "my_int", 0 ],
+			"obj-2::obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
