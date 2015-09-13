@@ -35,5 +35,5 @@ if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
 
 cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
 7z a $archiveName Jamoma > c:\projects\JamomaMax\archive.log
-move /Y $archiveName.zip $env:APPVEYOR_BUILD_FOLDER
+move /Y $archiveName $env:APPVEYOR_BUILD_FOLDER
 cd $env:APPVEYOR_BUILD_FOLDER
