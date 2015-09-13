@@ -1,8 +1,3 @@
-# TODO fix the installation path
-cd JamomaInstall\jamoma\JamomaMax
-7z a $archiveName Jamoma > c:\projects\JamomaMax\archive.log
-move /Y $archiveName.zip $env:APPVEYOR_BUILD_FOLDER
-cd $env:APPVEYOR_BUILD_FOLDER
 # c:\projects\JamomaMax\WinScp.com /command "option batch abort" "open sftp://jamomabuild@thor.bek.no/ -privatekey=id_rsa -hostkey='ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff'" "put $archiveName $destFolder" "exit"
 
 
