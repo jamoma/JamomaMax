@@ -1,8 +1,8 @@
 Write-Host Running Powershell script !
 Set-PSDebug -Trace 1
 
-$env:DATE = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(0,10)
-$env:TIME = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(11,8).replace(':','-')
+$DATE = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(0,10)
+$TIME = $env:APPVEYOR_REPO_COMMIT_TIMESTAMP.substring(11,8).replace(':','-')
 $env:CMAKE = $env:CMAKE_PATH + "\bin\cmake.exe"
 if ( $env:PLATFORM -eq "x64" ) {
   $env:CMAKE_GENERATOR = "Visual Studio 12 2013 Win64"
@@ -30,10 +30,11 @@ if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
     $archiveName = "JamomaMax-$env:DATE-$env:TIME-Windows_$env:PLATFORM-Release-$env:APPVEYOR_REPO_TAG_NAME.zip"
 } else {
     Write-Host "This is debug deployment."
-    $archiveName = "JamomaMax-$env:DATE-$env:TIME-Windows_$env:PLATFORM-$env:APPVEYOR_REPO_COMMIT.substring(0,7).zip"
+    $sha = $env:APPVEYOR_REPO_COMMIT.Substring(0,7)
+    $archiveName = "JamomaMax-$DATE-$TIME-Windows_$env:PLATFORM-$sha.zip"
 }
 
 cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
 7z a $archiveName Jamoma > c:\projects\JamomaMax\archive.log
-move /Y $archiveName $env:APPVEYOR_BUILD_FOLDER
+move /Y *.zip $env:APPVEYOR_BUILD_FOLDER
 cd $env:APPVEYOR_BUILD_FOLDER
