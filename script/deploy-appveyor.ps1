@@ -28,10 +28,10 @@ try
     $sessionOptions.UserName = "jamombuild"
     $sessionOptions.SshPrivateKeyPath = "c:\projects\JamomaMax\id_rsa"
     $sessionOptions.SshHostKeyFingerprint = "ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff"
-    $sessionOptions.DebugLogPath = "c:\projects\JamomaMax\WinSCP-Debug.log"
-    $sessionOptions.SessionLogPath = "c:\projects\JamomaMax\WinSCP-Session.log"
 
     $session = New-Object WinSCP.Session
+    $session.DebugLogPath = "c:\projects\JamomaMax\WinSCP-Debug.log"
+    $session.SessionLogPath = "c:\projects\JamomaMax\WinSCP-Session.log"
 
     try
     {
