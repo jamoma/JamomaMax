@@ -144,7 +144,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 50.0, 116.0, 240.0, 19.0 ],
-									"text" : "j.getAllAttributes"
+									"text" : "j.get_attributes"
 								}
 
 							}
@@ -282,7 +282,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.getAllParameters", "@description", "Find names of all parameters in an existing Jamoma module" ],
+					"args" : [ "@name", "j.get_attributes", "@description", "Find attributes of  a parameter, message or return" ],
 					"bgmode" : 1,
 					"id" : "obj-2",
 					"maxclass" : "bpatcher",
@@ -384,7 +384,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 19.0, 102.0, 141.0, 19.0 ],
-									"text" : "j.getParameterNames"
+									"text" : "j.get_parameters"
 								}
 
 							}
@@ -554,7 +554,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 26.0, 102.0, 125.0, 19.0 ],
-									"text" : "j.getModuleNames /"
+									"text" : "j.get_modules /"
 								}
 
 							}
@@ -962,14 +962,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-7::obj-1::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-15" : [ "live.menu", "live.menu", 0 ],
 			"obj-7::obj-1::obj-7" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-1::obj-15" : [ "live.menu", "live.menu", 0 ],
+			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-7::obj-1::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-22" : [ "live.text", "live.text", 0 ]
+			"obj-7::obj-1::obj-22" : [ "live.text", "live.text", 0 ],
+			"obj-7::obj-1::obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-1::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -1029,16 +1029,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.getModuleNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getModuleNames",
-				"patcherrelativepath" : "../getModuleNames",
+				"name" : "j.get_modules.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_modules",
+				"patcherrelativepath" : "../j.get_modules",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.getParameterNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getParameterNames",
-				"patcherrelativepath" : "../getParameterNames",
+				"name" : "j.get_parameters.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_parameters",
+				"patcherrelativepath" : "../j.get_parameters",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1071,8 +1071,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.getAllAttributes.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getAllAttributes",
+				"name" : "j.get_attributes.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_attributes",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

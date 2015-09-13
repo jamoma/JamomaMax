@@ -59,14 +59,14 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.getReturnNames", "@description", "Find name of all returns in an existing Jamoma module" ],
+					"args" : [ "@name", "j.get_returns", "@description", "Find name of all returns in an existing Jamoma module" ],
 					"bgmode" : 1,
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 741.0, 70.0 ],
+					"patching_rect" : [ 0.0, 0.0, 609.0, 70.0 ],
 					"varname" : "maxhelpui"
 				}
 
@@ -183,7 +183,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 27.0, 389.0, 123.0, 19.0 ],
-					"text" : "j.getReturnNames"
+					"text" : "j.get_returns"
 				}
 
 			}
@@ -280,7 +280,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 27.0, 184.0, 125.0, 19.0 ],
-					"text" : "j.getModuleNames /"
+					"text" : "j.get_modules /"
 				}
 
 			}
@@ -400,15 +400,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.getModuleNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getModuleNames",
-				"patcherrelativepath" : "../getModuleNames",
+				"name" : "j.get_modules.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_modules",
+				"patcherrelativepath" : "../j.get_modules",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.getReturnNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getReturnNames",
+				"name" : "j.get_returns.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_returns",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

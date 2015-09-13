@@ -37,7 +37,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 331.0, 125.0, 90.0, 17.0 ],
-					"text" : "/noise%/dim/x"
+					"text" : "/noise%/planes"
 				}
 
 			}
@@ -73,7 +73,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.getOneAttribute", "@description", "Get the value of one attribute of a parameter, message or return" ],
+					"args" : [ "@name", "j.get_attribute_value", "@description", "Get the value of one attribute of a parameter, message or return" ],
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
@@ -151,8 +151,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 220.0, 149.0, 19.0 ],
-					"text" : "j.getOneAttribute value"
+					"patching_rect" : [ 240.0, 220.0, 148.0, 19.0 ],
+					"text" : "j.get_attribute_value value"
 				}
 
 			}
@@ -201,7 +201,7 @@
 					"destination" : [ "obj-29", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 493.5, 207.0, 379.5, 207.0 ],
+					"midpoints" : [ 493.5, 207.0, 378.5, 207.0 ],
 					"source" : [ "obj-8", 1 ]
 				}
 
@@ -218,8 +218,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.getOneAttribute.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getOneAttribute",
+				"name" : "j.get_attribute_value.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_attribute_value",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

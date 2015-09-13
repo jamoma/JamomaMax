@@ -29,7 +29,7 @@
 		"tags" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "j.getParameterNames", "@description", "Find names of all parameters in an existing Jamoma module" ],
+					"args" : [ "@name", "j.get_parameters", "@description", "Find names of all parameters in an existing Jamoma module" ],
 					"bgmode" : 1,
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
@@ -151,8 +151,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 30.0, 388.0, 141.0, 19.0 ],
-					"text" : "j.getParameterNames"
+					"patching_rect" : [ 30.0, 388.0, 97.0, 19.0 ],
+					"text" : "j.get_parameters"
 				}
 
 			}
@@ -278,7 +278,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 30.0, 183.0, 125.0, 19.0 ],
-					"text" : "j.getModuleNames /"
+					"text" : "j.get_modules /"
 				}
 
 			}
@@ -398,20 +398,20 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-7::obj-1::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-15" : [ "live.menu", "live.menu", 0 ],
 			"obj-7::obj-1::obj-7" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-1::obj-15" : [ "live.menu", "live.menu", 0 ],
+			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-7::obj-1::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-22" : [ "live.text", "live.text", 0 ]
+			"obj-7::obj-1::obj-22" : [ "live.text", "live.text", 0 ],
+			"obj-7::obj-1::obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-1::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "j.getModuleNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getModuleNames",
-				"patcherrelativepath" : "../getModuleNames",
+				"name" : "j.get_modules.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_modules",
+				"patcherrelativepath" : "../j.get_modules",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -472,8 +472,8 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.getParameterNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getParameterNames",
+				"name" : "j.get_parameters.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_parameters",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

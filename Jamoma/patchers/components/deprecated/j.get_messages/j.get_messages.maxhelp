@@ -59,7 +59,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.getMessageNames", "@description", "Find names of all messages in an existing Jamoma module" ],
+					"args" : [ "@name", "j.get_messages", "@description", "Find names of all messages in an existing Jamoma module" ],
 					"bgmode" : 1,
 					"id" : "obj-10",
 					"maxclass" : "bpatcher",
@@ -183,7 +183,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 34.0, 378.0, 132.0, 19.0 ],
-					"text" : "j.getMessageNames"
+					"text" : "j.get_messages"
 				}
 
 			}
@@ -280,7 +280,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 34.0, 173.0, 125.0, 19.0 ],
-					"text" : "j.getModuleNames /"
+					"text" : "j.get_modules /"
 				}
 
 			}
@@ -400,15 +400,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.getModuleNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getModuleNames",
-				"patcherrelativepath" : "../getModuleNames",
+				"name" : "j.get_modules.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_modules",
+				"patcherrelativepath" : "../j.get_modules",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.getMessageNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getMessageNames",
+				"name" : "j.get_messages.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_messages",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

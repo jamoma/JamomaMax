@@ -44,7 +44,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "j.getModuleNames", "@description", "Find names of all existing Jamoma modules" ],
+					"args" : [ "@name", "j.get_modules", "@description", "Find names of all existing Jamoma modules" ],
 					"bgmode" : 1,
 					"id" : "obj-19",
 					"maxclass" : "bpatcher",
@@ -177,7 +177,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 375.0, 205.0, 112.0, 19.0 ],
-					"text" : "j.getModuleNames"
+					"text" : "j.get_modules /"
 				}
 
 			}
@@ -240,19 +240,19 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-7::obj-1::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-15" : [ "live.menu", "live.menu", 0 ],
 			"obj-7::obj-1::obj-7" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-1::obj-15" : [ "live.menu", "live.menu", 0 ],
+			"obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-7::obj-1::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-7::obj-1::obj-22" : [ "live.text", "live.text", 0 ]
+			"obj-7::obj-1::obj-22" : [ "live.text", "live.text", 0 ],
+			"obj-7::obj-1::obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-1::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "j.getModuleNames.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getModuleNames",
+				"name" : "j.get_modules.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/j.get_modules",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
