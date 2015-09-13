@@ -25,6 +25,13 @@ c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENE
 c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . > c:\projects\JamomaMax\build.log
 c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . --target install > c:\projects\JamomaMax\install.log
 
+if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
+    Write-Host "This is a release deployment with tag $env:APPVEYOR_REPO_TAG_NAME"
+    $archiveName = "JamomaMax-$env:DATE-$env:TIME-Windows_$env:PLATFORM-Release-$env:APPVEYOR_REPO_TAG_NAME.zip"
+} else {
+    Write-Host "This is debug deployment."
+    $archiveName = "JamomaMax-$env:DATE-$env:TIME-Windows_$env:PLATFORM-$env:APPVEYOR_REPO_COMMIT.substring(0,7).zip"
+}
 
 cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
 7z a $archiveName Jamoma > c:\projects\JamomaMax\archive.log
