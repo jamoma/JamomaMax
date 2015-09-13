@@ -36,7 +36,7 @@ if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
 
 cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
 7z a $archiveName Jamoma > c:\projects\JamomaMax\archive.log
-move /Y *.zip $env:APPVEYOR_BUILD_FOLDER
+Move-Item *.zip $env:APPVEYOR_BUILD_FOLDER -force
 cd $env:APPVEYOR_BUILD_FOLDER
 
 # call deploy script in buid step so that the deploy log could be upload with others
