@@ -25,7 +25,7 @@ try
     $sessionOptions = New-Object WinSCP.SessionOptions
     $sessionOptions.Protocol = [WinSCP.Protocol]::Sftp
     $sessionOptions.HostName = "thor.bek.no"
-    $sessionOptions.UserName = "jamombuild"
+    $sessionOptions.UserName = "jamomabuild"
     $sessionOptions.SshPrivateKeyPath = "c:\projects\JamomaMax\id_rsa"
     $sessionOptions.SshHostKeyFingerprint = "ssh-rsa 2048 d1:79:9a:fd:b5:8d:f5:5e:ae:05:6d:92:6c:6f:06:ff"
 
