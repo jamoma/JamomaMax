@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
@@ -31,6 +31,35 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
+					"id" : "obj-8",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 35.0, 122.0, 123.0, 17.0 ],
+					"text" : "file/path garbage.mov"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Read QT movie film.",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 35.0, 91.0, 123.0, 19.0 ],
+					"text" : "j.initialized movie 400"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"frgb" : 0.0,
 					"id" : "obj-2",
 					"linecount" : 3,
@@ -38,7 +67,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 527.0, 171.5, 178.0, 43.0 ],
-					"presentation_rect" : [ 528.0, 164.0, 0.0, 0.0 ],
 					"text" : "you can send target value to the second inlet or use it as attributes target"
 				}
 
@@ -67,7 +95,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 503.0, 122.0, 80.0, 19.0 ],
+					"patching_rect" : [ 504.0, 122.0, 80.0, 19.0 ],
 					"text" : "loadmess 128"
 				}
 
@@ -97,7 +125,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 503.0, 148.5, 50.0, 19.0 ]
+					"patching_rect" : [ 504.0, 148.5, 50.0, 19.0 ]
 				}
 
 			}
@@ -154,15 +182,16 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Read QT movie film.",
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
 					"id" : "obj-20",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "input%.module.maxpat",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 34.0, 78.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 60.0, 60.0, 300.0, 70.0 ]
+					"patching_rect" : [ 35.0, 148.5, 123.0, 19.0 ],
+					"text" : "movie%.model movie"
 				}
 
 			}
@@ -199,8 +228,17 @@
 					"destination" : [ "obj-100", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 43.5, 183.0, 379.5, 183.0 ],
+					"midpoints" : [ 44.5, 183.0, 379.5, 183.0 ],
 					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
@@ -213,100 +251,74 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "input%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../modules/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../modules/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "noise%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../../../modules/video/sources/noise%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "movie%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/movie%",
 				"patcherrelativepath" : "../../../modules/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "grab%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../../../modules/video/sources/grab%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../modules/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../modules/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../data/list2parameter",
+				"name" : "max7specific.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components",
+				"patcherrelativepath" : "../..",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.autoexpose%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/autoexpose%",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/video/autoexpose%",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../../data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.parameter.mxo",
+				"name" : "j.initialized.maxpat",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/initialized",
+				"patcherrelativepath" : "../../data/initialized",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -318,7 +330,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.model.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -326,15 +338,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -342,15 +346,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.ui.mxo",
+				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.remote.mxo",
+				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.view.mxo",
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
