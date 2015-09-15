@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
-			"architecture" : "x64",
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 131.0, 125.0, 1220.0, 842.0 ],
+		"rect" : [ 305.0, 79.0, 1220.0, 842.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -49,8 +49,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -263,12 +263,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 6,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 25.0, 69.0, 1023.0, 226.0 ],
+										"rect" : [ 38.0, 79.0, 1023.0, 226.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -317,7 +317,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 788.0, 84.0, 192.0, 18.0 ],
+													"patching_rect" : [ 788.0, 84.0, 192.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Box.2:position disable"
 												}
@@ -332,7 +332,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 3,
 													"outlettype" : [ "bang", "bang", "" ],
-													"patching_rect" : [ 788.0, 40.0, 100.0, 20.0 ],
+													"patching_rect" : [ 788.0, 40.0, 100.0, 22.0 ],
 													"style" : "",
 													"text" : "sel 0 1"
 												}
@@ -347,7 +347,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 828.5, 63.0, 188.0, 18.0 ],
+													"patching_rect" : [ 828.5, 63.0, 188.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Box.2:position enable"
 												}
@@ -362,7 +362,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 525.0, 84.0, 170.0, 18.0 ],
+													"patching_rect" : [ 525.0, 84.0, 170.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Box.2:date disable"
 												}
@@ -377,7 +377,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 3,
 													"outlettype" : [ "bang", "bang", "" ],
-													"patching_rect" : [ 525.0, 40.0, 100.0, 20.0 ],
+													"patching_rect" : [ 525.0, 40.0, 100.0, 22.0 ],
 													"style" : "",
 													"text" : "sel 0 1"
 												}
@@ -392,7 +392,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 565.5, 63.0, 170.0, 18.0 ],
+													"patching_rect" : [ 565.5, 63.0, 170.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Box.2:date enable"
 												}
@@ -433,7 +433,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 270.0, 84.0, 192.0, 18.0 ],
+													"patching_rect" : [ 270.0, 84.0, 192.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Main:position disable"
 												}
@@ -448,7 +448,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 3,
 													"outlettype" : [ "bang", "bang", "" ],
-													"patching_rect" : [ 270.0, 40.0, 100.0, 20.0 ],
+													"patching_rect" : [ 270.0, 40.0, 100.0, 22.0 ],
 													"style" : "",
 													"text" : "sel 0 1"
 												}
@@ -463,7 +463,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 310.5, 63.0, 188.0, 18.0 ],
+													"patching_rect" : [ 310.5, 63.0, 188.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Main:position enable"
 												}
@@ -478,7 +478,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 7.0, 84.0, 170.0, 18.0 ],
+													"patching_rect" : [ 7.0, 84.0, 170.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Main:date disable"
 												}
@@ -493,7 +493,7 @@
 													"numinlets" : 3,
 													"numoutlets" : 3,
 													"outlettype" : [ "bang", "bang", "" ],
-													"patching_rect" : [ 7.0, 40.0, 100.0, 20.0 ],
+													"patching_rect" : [ 7.0, 40.0, 100.0, 22.0 ],
 													"style" : "",
 													"text" : "sel 0 1"
 												}
@@ -508,7 +508,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 47.5, 63.0, 170.0, 18.0 ],
+													"patching_rect" : [ 47.5, 63.0, 170.0, 22.0 ],
 													"style" : "",
 													"text" : "test?listen /Main:date enable"
 												}
@@ -854,8 +854,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 6,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1667,8 +1667,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1766,8 +1766,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1865,12 +1865,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1220.0, 816.0 ],
+						"rect" : [ 305.0, 105.0, 1220.0, 816.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1909,7 +1909,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 687.0, 192.0, 361.0, 127.0 ],
 									"style" : "",
-									"text" : "Determines whether communicated messages gets posted to the Max console or not.\n\nPlease note that due to the high amount of traffick in the network communication, not all messages will be printed. This is a necsessary measure to ensure that Max remains responsive whole network communication is ongoing.\n\nDefault value is 0, disabling printing of messages.",
+									"text" : "Determines whether communicated messages gets posted to the Max console or not.\n\nPlease note that due to the high amount of traffic in the network communication, not all messages will be printed. This is a necessary measure to ensure that Max remains responsive while network communication is ongoing.\n\nDefault value is 0, disabling printing of messages.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -1940,7 +1940,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 687.0, 101.0, 357.0, 60.0 ],
 									"style" : "",
-									"text" : "Monitoring is active, and messages are communicated between the two applicaitons using the Minuit protocol.\n\nDefauklt is 1.",
+									"text" : "Monitoring is active, and messages are communicated between the two applicaitons using the Minuit protocol.\n\nDefault is 1.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2063,7 +2063,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 179.0, 198.025375, 357.0, 60.0 ],
+									"patching_rect" : [ 179.0, 198.025375, 358.0, 60.0 ],
 									"style" : "",
 									"text" : "The network port used for Minuit communication over UDP to this application.\n\nThe default port is 9998.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -2191,12 +2191,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
-							"architecture" : "x64",
+							"revision" : 5,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 131.0, 151.0, 1220.0, 816.0 ],
+						"rect" : [ 0.0, 26.0, 1220.0, 816.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2387,8 +2387,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 6,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -2735,8 +2735,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 6,
-											"architecture" : "x64",
+											"revision" : 5,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -3193,55 +3193,55 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-1::obj-10::obj-1::obj-1::obj-13" : [ "Release[1]", "Release", 0 ],
-			"obj-1::obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-1::obj-10::obj-1::obj-62" : [ "live.text[12]", "live.text[3]", 0 ],
-			"obj-1::obj-10::obj-1::obj-55" : [ "Master Gain[2]", "Master Gain", 0 ],
-			"obj-1::obj-29::obj-1::obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-5" : [ "Preamp[1]", "Preamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-111" : [ "live.numbox[4]", "live.numbox[2]", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-30" : [ "live.menu[4]", "live.menu", 0 ],
-			"obj-1::obj-29::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-1::obj-29::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
-			"obj-1::obj-10::obj-1::obj-48" : [ "live.menu[5]", "live.menu", 0 ],
-			"obj-1::obj-10::obj-1::obj-59" : [ "live.text[15]", "live.text[3]", 0 ],
 			"obj-1::obj-29::obj-1::obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
-			"obj-1::obj-29::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-1::obj-6::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
 			"obj-1::obj-29::obj-1::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-5" : [ "Preamp[1]", "Preamp", 0 ],
+			"obj-1::obj-29::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-1::obj-29::obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-1::obj-29::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-1::obj-29::obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ],
+			"obj-1::obj-10::obj-1::obj-45" : [ "live.text[13]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-47" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-30" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-1::obj-29::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-1::obj-29::obj-1::obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-1::obj-29::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-6" : [ "live.text[9]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-108" : [ "live.text[12]", "live.text[4]", 0 ],
+			"obj-1::obj-29::obj-1::obj-17" : [ "Master Gain[1]", "Master Gain", 0 ],
+			"obj-1::obj-10::obj-1::obj-111" : [ "live.numbox[3]", "live.numbox[2]", 0 ],
+			"obj-1::obj-10::obj-1::obj-74" : [ "live.dial[6]", "Transpose", 0 ],
+			"obj-1::obj-29::obj-1::obj-102" : [ "live.text[3]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-29::obj-48" : [ "live.menu[3]", "live.menu", 0 ],
+			"obj-1::obj-29::obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-55" : [ "Master Gain[2]", "Master Gain", 0 ],
+			"obj-1::obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-1::obj-29::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
+			"obj-1::obj-29::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-1::obj-10::obj-1::obj-58" : [ "live.text[11]", "live.text[4]", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-1::obj-29::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-1::obj-29::obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-1::obj-29::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
 			"obj-1::obj-29::obj-1::obj-12::obj-6" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-10::obj-1::obj-58" : [ "live.text[11]", "live.text[4]", 0 ],
-			"obj-1::obj-29::obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-27" : [ "Threshold[1]", "Threshold", 0 ],
-			"obj-1::obj-10::obj-1::obj-74" : [ "live.dial[6]", "Transpose", 0 ],
+			"obj-1::obj-29::obj-1::obj-104" : [ "live.dial[5]", "Depth", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-15" : [ "Postamp[1]", "Postamp", 0 ],
-			"obj-1::obj-29::obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-1::obj-10::obj-1::obj-29::obj-48" : [ "live.menu[3]", "live.menu", 0 ],
-			"obj-1::obj-10::obj-1::obj-110" : [ "live.numbox[3]", "live.numbox[1]", 0 ],
 			"obj-1::obj-10::obj-1::obj-1::obj-12" : [ "Lookahead[1]", "Lookahead", 0 ],
-			"obj-1::obj-29::obj-1::obj-102" : [ "live.text[3]", "live.text", 0 ],
-			"obj-1::obj-10::obj-1::obj-108" : [ "live.text[13]", "live.text[4]", 0 ],
-			"obj-1::obj-6::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-1::obj-29::obj-1::obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-1::obj-10::obj-1::obj-45" : [ "live.text[14]", "live.text", 0 ],
-			"obj-1::obj-29::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-6" : [ "live.text[9]", "live.text", 0 ],
-			"obj-1::obj-29::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
-			"obj-1::obj-29::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-1::obj-10::obj-1::obj-47" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-1::obj-10::obj-1::obj-82" : [ "pan[1]", "Pan", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-45" : [ "live.text[10]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-48" : [ "live.menu[5]", "live.menu", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-42" : [ "live.text[10]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-59" : [ "live.text[14]", "live.text[3]", 0 ],
+			"obj-1::obj-29::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-1::obj-10::obj-1::obj-110" : [ "live.numbox[4]", "live.numbox[1]", 0 ],
+			"obj-1::obj-29::obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-1::obj-29::obj-1::obj-103" : [ "live.text[5]", "live.text", 0 ],
-			"obj-1::obj-29::obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-1::obj-10::obj-1::obj-4" : [ "live.text[16]", "live.text[1]", 0 ],
-			"obj-1::obj-10::obj-1::obj-1::obj-42" : [ "live.text[8]", "live.text", 0 ],
-			"obj-1::obj-29::obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ],
-			"obj-1::obj-29::obj-1::obj-17" : [ "Master Gain[1]", "Master Gain", 0 ],
-			"obj-1::obj-29::obj-1::obj-104" : [ "live.dial[5]", "Depth", 0 ]
+			"obj-1::obj-10::obj-1::obj-1::obj-45" : [ "live.text[8]", "live.text", 0 ],
+			"obj-1::obj-10::obj-1::obj-62" : [ "live.text[16]", "live.text[3]", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-27" : [ "Threshold[1]", "Threshold", 0 ],
+			"obj-1::obj-29::obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-1::obj-10::obj-1::obj-1::obj-13" : [ "Release[1]", "Release", 0 ],
+			"obj-1::obj-29::obj-1::obj-100" : [ "live.text[7]", "live.text[1]", 0 ],
+			"obj-1::obj-10::obj-1::obj-4" : [ "live.text[15]", "live.text[1]", 0 ],
+			"obj-1::obj-29::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
+			"obj-1::obj-10::obj-1::obj-82" : [ "pan[1]", "Pan", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -3252,67 +3252,67 @@
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -3324,37 +3324,37 @@
 			}
 , 			{
 				"name" : "output~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/input~",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.minuit_device.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/protocol",
+				"bootpath" : "~/@jamoma/Implementations/Max/Jamoma/patchers/components/protocol",
 				"type" : "JSON",
 				"implicit" : 1
 			}
