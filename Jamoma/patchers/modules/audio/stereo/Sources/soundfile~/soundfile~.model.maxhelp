@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -37,6 +37,18 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"local" : 1,
+					"maxclass" : "ezdac~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 478.0, 371.0, 45.0, 45.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"border" : 0,
 					"filename" : "helpdetails.js",
@@ -140,64 +152,70 @@
  ],
 		"parameters" : 		{
 			"obj-3::obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-3::obj-1::obj-102" : [ "live.text[11]", "live.text", 0 ],
+			"obj-1::obj-1::obj-9::obj-41" : [ "live.text[2]", "live.text", 0 ],
+			"obj-3::obj-1::obj-17" : [ "Master Gain[1]", "Master Gain", 0 ],
+			"obj-3::obj-1::obj-100" : [ "live.text[10]", "live.text[1]", 0 ],
+			"obj-3::obj-1::obj-99" : [ "live.menu[3]", "live.menu[2]", 0 ],
+			"obj-3::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-3::obj-1::obj-108" : [ "live.text[7]", "live.text[4]", 0 ],
+			"obj-3::obj-1::obj-104" : [ "live.dial[1]", "Depth", 0 ],
+			"obj-1::obj-1::obj-9::obj-43" : [ "Pitch Shift", "Pitch Shift", 0 ],
+			"obj-3::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
+			"obj-3::obj-1::obj-12::obj-6" : [ "live.text[5]", "live.text", 0 ],
+			"obj-3::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-1::obj-1::obj-9::obj-37" : [ "Basic Tuning", "Basic Tuning", 0 ],
+			"obj-1::obj-1::obj-9::obj-36" : [ "Slur Time", "Slur Time", 0 ],
+			"obj-3::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-1::obj-1::obj-9::obj-45" : [ "transposition", "transposition", 0 ],
+			"obj-1::obj-1::obj-58" : [ "live.text[8]", "live.text[4]", 0 ],
 			"obj-3::obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
 			"obj-3::obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ],
-			"obj-3::obj-1::obj-103" : [ "live.text[5]", "live.text", 0 ],
-			"obj-1::obj-1::obj-9::obj-5" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-1::obj-9::obj-45" : [ "transposition", "transposition", 0 ],
-			"obj-3::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-3::obj-1::obj-90" : [ "live.text[7]", "live.text[1]", 0 ],
-			"obj-1::obj-1::obj-9::obj-41" : [ "live.text[2]", "live.text", 0 ],
-			"obj-3::obj-1::obj-12::obj-45" : [ "live.text[10]", "live.text", 0 ],
-			"obj-1::obj-1::obj-9::obj-29" : [ "live.text[1]", "live.text", 0 ],
-			"obj-3::obj-1::obj-12::obj-42" : [ "live.text[4]", "live.text", 0 ],
-			"obj-1::obj-1::obj-9::obj-59" : [ "live.text[3]", "live.text", 0 ],
+			"obj-3::obj-1::obj-12::obj-42" : [ "live.text[9]", "live.text", 0 ],
 			"obj-3::obj-1::obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-1::obj-1::obj-9::obj-65" : [ "formant", "formant", 0 ],
-			"obj-3::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
-			"obj-3::obj-1::obj-12::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-1::obj-1::obj-9::obj-43" : [ "Pitch Shift", "Pitch Shift", 0 ],
-			"obj-1::obj-1::obj-9::obj-16" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-3::obj-1::obj-100" : [ "live.text[12]", "live.text[1]", 0 ],
-			"obj-1::obj-1::obj-58" : [ "live.text[8]", "live.text[4]", 0 ],
-			"obj-3::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-3::obj-1::obj-99" : [ "live.menu[3]", "live.menu[2]", 0 ],
-			"obj-1::obj-1::obj-9::obj-37" : [ "Basic Tuning", "Basic Tuning", 0 ],
-			"obj-3::obj-1::obj-98" : [ "live.menu[4]", "live.menu", 0 ],
-			"obj-1::obj-1::obj-9::obj-36" : [ "Slur Time", "Slur Time", 0 ],
-			"obj-1::obj-1::obj-9::obj-14" : [ "live.menu", "live.menu", 0 ],
-			"obj-3::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
 			"obj-3::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-3::obj-1::obj-12::obj-6" : [ "live.text[9]", "live.text", 0 ],
-			"obj-3::obj-1::obj-104" : [ "live.dial[1]", "Depth", 0 ],
-			"obj-3::obj-1::obj-82" : [ "pan", "Pan", 0 ],
-			"obj-3::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-3::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
-			"obj-3::obj-1::obj-53" : [ "Master Gain", "Master Gain", 0 ]
+			"obj-3::obj-1::obj-12::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-3::obj-1::obj-12::obj-45" : [ "live.text[4]", "live.text", 0 ],
+			"obj-3::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
+			"obj-1::obj-1::obj-9::obj-16" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-1::obj-1::obj-9::obj-59" : [ "live.text[3]", "live.text", 0 ],
+			"obj-3::obj-1::obj-90" : [ "live.text[12]", "live.text[1]", 0 ],
+			"obj-1::obj-1::obj-9::obj-14" : [ "live.menu", "live.menu", 0 ],
+			"obj-3::obj-1::obj-103" : [ "live.text[6]", "live.text", 0 ],
+			"obj-3::obj-1::obj-98" : [ "live.menu[4]", "live.menu", 0 ],
+			"obj-1::obj-1::obj-9::obj-5" : [ "live.text", "live.text", 0 ],
+			"obj-1::obj-1::obj-9::obj-29" : [ "live.text[1]", "live.text", 0 ],
+			"obj-3::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-1::obj-1::obj-9::obj-65" : [ "formant", "formant", 0 ],
+			"obj-3::obj-1::obj-102" : [ "live.text[11]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "soundfile~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soundfile~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "talk.aiff",
+				"bootpath" : "C74:/media/jitter",
+				"type" : "AIFF",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soundfile~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -209,61 +227,61 @@
 			}
 , 			{
 				"name" : "output~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
 				"type" : "JSON",
 				"implicit" : 1
 			}

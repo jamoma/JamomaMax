@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,11 +38,89 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 601.0, 363.178558, 180.0, 20.0 ],
+					"presentation_rect" : [ 599.0, 359.0, 0.0, 0.0 ],
+					"style" : "default",
+					"text" : "j.unpack- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 601.0, 316.342834, 150.0, 20.0 ],
+					"presentation_rect" : [ 603.0, 294.900024, 0.0, 0.0 ],
+					"style" : "default",
+					"text" : "j.pack- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 601.0, 292.925018, 150.0, 20.0 ],
+					"presentation_rect" : [ 530.0, 241.900009, 0.0, 0.0 ],
+					"style" : "default",
+					"text" : "j.op- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 601.0, 175.835709, 150.0, 20.0 ],
+					"presentation_rect" : [ 604.0, 100.0, 0.0, 0.0 ],
+					"style" : "default",
+					"text" : "j.iter- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 601.0, 152.417862, 150.0, 20.0 ],
+					"presentation_rect" : [ 600.0, 72.0, 0.0, 0.0 ],
+					"style" : "default",
+					"text" : "j.unit- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 601.0, 129.0, 150.0, 20.0 ],
+					"presentation_rect" : [ 599.0, 63.0, 0.0, 0.0 ],
+					"style" : "default",
+					"text" : "j.append- is quarantined"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 601.0, 240.900009, 150.0, 20.0 ],
+					"patching_rect" : [ 601.0, 269.507141, 150.0, 20.0 ],
 					"style" : "default",
 					"text" : "j.midi.out- is quarantined"
 				}
@@ -54,7 +132,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 601.0, 215.600006, 150.0, 20.0 ],
+					"patching_rect" : [ 601.0, 246.089279, 150.0, 20.0 ],
 					"style" : "default",
 					"text" : "j.midi.in- is quarantined"
 				}
@@ -66,7 +144,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 601.0, 190.300003, 159.0, 20.0 ],
+					"patching_rect" : [ 601.0, 222.671417, 159.0, 20.0 ],
 					"style" : "default",
 					"text" : "j.midi.format- is quarantined"
 				}
@@ -78,7 +156,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 601.0, 165.0, 150.0, 20.0 ],
+					"patching_rect" : [ 601.0, 199.253571, 150.0, 20.0 ],
 					"style" : "default",
 					"text" : "j.midi.filter- is quarantined"
 				}
@@ -90,7 +168,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 601.0, 321.0, 180.0, 20.0 ],
+					"patching_rect" : [ 601.0, 339.760712, 180.0, 20.0 ],
 					"style" : "default",
 					"text" : "j.plug.parameter- is quarantined"
 				}
@@ -145,84 +223,6 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 144.0, 230.0, 24.0, 24.0 ],
 					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 601.0, 142.600006, 111.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.iter-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 601.0, 92.0, 111.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.append-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 601.0, 117.300003, 111.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.unit-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 601.0, 269.100006, 111.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.op-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 601.0, 347.0, 111.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.unpack-"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "graph.connect", "" ],
-					"patching_rect" : [ 601.0, 294.399994, 111.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.pack-"
 				}
 
 			}
@@ -470,7 +470,6 @@
 		"dependency_cache" : [ 			{
 				"name" : "patchdescribe.js",
 				"bootpath" : "/Users/Shared/Max 7/Examples/javascript/patcher-scripting",
-				"patcherrelativepath" : "../../../../../../../../../../Shared/Max 7/Examples/javascript/patcher-scripting",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -480,30 +479,6 @@
 			}
 , 			{
 				"name" : "oscar.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pack-.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unpack-.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.op-.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unit-.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.append-.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.iter-.mxo",
 				"type" : "iLaX"
 			}
 , 			{

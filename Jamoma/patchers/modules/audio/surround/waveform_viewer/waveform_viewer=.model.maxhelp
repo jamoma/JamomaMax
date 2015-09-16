@@ -2,68 +2,91 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 10,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 231.0, 45.0, 581.0, 725.0 ],
+		"rect" : [ 231.0, 79.0, 660.0, 739.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-9",
-					"linecount" : 2,
+					"id" : "obj-10",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 329.0, 360.0, 86.0, 31.0 ],
-					"text" : "numberOfChannels 4"
+					"patching_rect" : [ 372.0, 368.0, 229.0, 22.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "toggle",
+					"fontsize" : 14.0,
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 10.0, 85.0, 286.0, 22.0 ],
+					"style" : "",
+					"text" : "Multichannel audio signal visualisation",
+					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpname.js",
+					"id" : "obj-6",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "waveform_viewer=.model" ],
+					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 219.0, 201.0, 20.0, 20.0 ]
+					"patching_rect" : [ 10.0, 10.0, 548.144409, 57.567627 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
 					"id" : "obj-4",
-					"maxclass" : "newobj",
+					"local" : 1,
+					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 145.0, 249.0, 57.0, 20.0 ],
-					"text" : "dac~ 1 2"
+					"patching_rect" : [ 101.5, 669.0, 45.0, 45.0 ],
+					"style" : ""
 				}
 
 			}
@@ -76,7 +99,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 145.0, 201.0, 72.0, 20.0 ],
+					"patching_rect" : [ 101.0, 637.0, 72.0, 22.0 ],
+					"style" : "",
 					"text" : "j.unpack= 2"
 				}
 
@@ -88,7 +112,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 115.0, 435.0, 320.0, 240.0 ]
+					"patching_rect" : [ 206.0, 419.0, 320.0, 240.0 ]
 				}
 
 			}
@@ -96,14 +120,22 @@
 				"box" : 				{
 					"annotation" : "Display waveform of real-time multi-channel signal as jitter matrix.",
 					"args" : [ "waveformViewer" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-3",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "waveform_viewer=.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 115.0, 276.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 294.0, 237.0, 300.0, 70.0 ]
+					"patching_rect" : [ 206.0, 309.0, 150.0, 70.0 ],
+					"presentation_rect" : [ 294.0, 237.0, 150.0, 70.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -111,29 +143,22 @@
 				"box" : 				{
 					"annotation" : "Playback of multichannel audiofiles based on sfplay~",
 					"args" : [ "multichannelPlayback" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-1",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "input=.module.maxpat",
 					"numinlets" : 0,
 					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 115.0, 115.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@description", "View waveform of real-time multichannel signal as jitter matrix" ],
-					"bgmode" : 1,
-					"id" : "obj-10",
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 581.0, 70.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui"
+					"patching_rect" : [ 101.0, 168.0, 300.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -176,17 +201,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 124.5, 424.0, 124.5, 424.0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 1 ],
+					"destination" : [ "obj-10", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-3", 1 ]
@@ -195,109 +210,100 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
+					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
+					"midpoints" : [ 215.5, 408.0, 215.5, 408.0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
  ],
+		"parameters" : 		{
+			"obj-3::obj-1::obj-5" : [ "live.numbox[6]", "live.numbox", 0 ],
+			"obj-1::obj-1::obj-27::obj-9" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-1::obj-1::obj-27::obj-12" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-1::obj-1::obj-16" : [ "live.text[7]", "live.text[3]", 0 ],
+			"obj-1::obj-1::obj-13" : [ "live.numbox[4]", "live.numbox", 0 ],
+			"obj-3::obj-1::obj-7" : [ "live.text", "live.text", 0 ],
+			"obj-1::obj-1::obj-1" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-1::obj-1::obj-27::obj-13" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-1::obj-1::obj-27::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-1::obj-1::obj-18" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-1::obj-1::obj-14" : [ "live.text[3]", "live.text[3]", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../../components/data/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "input=.module.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
-				"patcherrelativepath" : "../input=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input=.view.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
-				"patcherrelativepath" : "../input=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input.timeDisplay.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
-				"patcherrelativepath" : "../input=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
+				"name" : "j.playbutton.svg",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/playbar-icons",
+				"type" : "svg ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.pausebutton.svg",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/playbar-icons",
+				"type" : "svg ",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.truncate_string.js",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/javascript",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "input=.model.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
-				"patcherrelativepath" : "../input=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "waveform_viewer=.module.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/waveform_viewer",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/waveform_viewer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "waveform_viewer=.model.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/waveform_viewer",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/waveform_viewer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "waveform_viewer=.view.maxpat",
-				"bootpath" : "/Users/nilspeters/Documents/gits/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/waveform_viewer",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/waveform_viewer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
+				"name" : "helpname.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
+				"implicit" : 1
 			}
 , 			{
 				"name" : "j.ui.mxo",
@@ -313,6 +319,10 @@
 			}
 , 			{
 				"name" : "j.textslider.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -355,7 +365,12 @@
 				"name" : "j.op=.mxo",
 				"type" : "iLaX"
 			}
- ]
+, 			{
+				"name" : "j.info=.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

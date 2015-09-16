@@ -53,10 +53,17 @@ else
  echo "missing ${KEYFILE}"
 fi
 
+DATE=`git show -s --format=%ci HEAD`
+TIME=${DATE:11:8}
+TIME=${TIME//:/-}
+DATE=${DATE:0:10}
+
+ARCHIVE_NAME="JamomaMax-${DATE}-${TIME}"
+
 if [ "x${TRAVIS_OS_NAME}" = "xLinux" ]; then
-  ARCHIVE_NAME="JamomaMax-Windows-mingw-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="${ARCHIVE_NAME}-Windows-mingw-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
 else
-  ARCHIVE_NAME="JamomaMax-OSX-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="${ARCHIVE_NAME}-OSX-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
 fi
 
 cd ${TRAVIS_BUILD_DIR}/build

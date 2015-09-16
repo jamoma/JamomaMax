@@ -60,6 +60,9 @@ void WrapTTContainerClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)model_preset_edit,                 "dblclick",				A_CANT, 0);
 	class_addmethod(c->maxClass, (method)model_preset_edclose,              "edclose",				A_CANT, 0);
+#ifdef JCOM_VIEW
+    class_addmethod(c->maxClass, (method)model_bang,                        "bang",					0L);
+#endif
 #ifndef JCOM_VIEW
 	class_addmethod(c->maxClass, (method)model_preset_read,                 "preset:read",			A_GIMME, 0);
 	class_addmethod(c->maxClass, (method)model_preset_write,                "preset:write",			A_GIMME, 0);
@@ -207,7 +210,8 @@ void model_subscribe(TTPtr self)
 	long                        ac;
 	t_atom*						av;
     t_atom                      a;
-	t_object*					aPatcher = jamoma_patcher_get((t_object*)x);
+    
+    
 
 	// if the subscription is successful
 	if (!jamoma_subscriber_create((t_object*)x, x->wrappedObject, kTTAdrsEmpty, x->subscriberObject, returnedAddress, &returnedNode, &returnedContextNode))
@@ -227,8 +231,11 @@ void model_subscribe(TTPtr self)
         atom_setsym(&a, gensym(description.c_str()));
         object_attr_setvalueof(jpatcher_get_box(x->patcherPtr), _sym_annotation , 1, &a);
         
+        // by default: read argument from our patcher
+        EXTRA->argument_patcher = jamoma_patcher_get((t_object*)x);
+        
 		// if the j.model|j.view is well subscribed
-		if (aPatcher == x->patcherPtr && x->patcherContext != kTTSymEmpty)
+		if (EXTRA->argument_patcher == x->patcherPtr && x->patcherContext != kTTSymEmpty)
         {
             // create a model object (for j.view too !)
             *EXTRA->modelInfo = TTObject("ModelInfo", (TTPtr)x);
@@ -251,27 +258,40 @@ void model_subscribe(TTPtr self)
                 // then set the address attribute readOnly
                 TTModelInfoPtr(EXTRA->modelInfo->instance())->setAddressReadOnly(YES);
             }
-            
-            // if the parent patcher is a bpatcher: bind on the parent bpatcher instead of the patcher it self
-            t_object *parentPatcher = object_attr_getobj(aPatcher, _sym_parentpatcher);
-            t_object *parentBox = object_attr_getobj(parentPatcher, _sym_box);
-            if (parentBox)
+
+            // select patcher/bpatcher where to read argument in j.model case
+            if (x->patcherContext == kTTSym_model)
             {
-                if (object_classname(parentBox) == _sym_bpatcher)
-                    aPatcher = parentPatcher;
+                // if the .model patcher is into a bpatcher (like in .module case)
+                t_object *parentPatcher = object_attr_getobj(EXTRA->argument_patcher, _sym_parentpatcher);
+                t_object *parentBox = object_attr_getobj(parentPatcher, _sym_box);
+                if (parentBox)
+                {
+                    if (object_classname(parentBox) == _sym_bpatcher)
+                    {
+                        // get bpatcher arguments instead of the .model patcher it self
+                        EXTRA->argument_patcher = parentPatcher;
+                    }
+                }
+            }
+            
+            // select patcher/bpatcher where to read argument in j.view case
+            else if (x->patcherContext == kTTSym_view)
+            {
+                ;// j.view always reads arguments from its patcher
             }
 
-            // Get patcher arguments
+            // get patcher/bpatcher arguments
 			ac = 0;
 			av = NULL;
 
-			jamoma_patcher_get_args(aPatcher, &ac, &av);
+			jamoma_patcher_get_args(EXTRA->argument_patcher, &ac, &av);
 			
 			// check if it's a sub model
 			isSubModel = atom_getsym(av) == _sym_p;
 			
 			// in subpatcher :
-			if (jamoma_patcher_get_hierarchy(aPatcher) == _sym_subpatcher)
+			if (jamoma_patcher_get_hierarchy(EXTRA->argument_patcher) == _sym_subpatcher)
             {
                 // remove first 'p' or 'patcher'
                 if (ac > 0 && av)
@@ -288,7 +308,7 @@ void model_subscribe(TTPtr self)
 				av++;
 			}
 			
-			// j.model case :
+			// j.model case:
 			if (x->patcherContext == kTTSym_model)
             {
                 // use patcher arguments to setup the model attributes (like @priority and @amenities)
@@ -320,9 +340,9 @@ void model_subscribe(TTPtr self)
                 }
 			}
 			
-			// In view patcher : see in model_subscribe_view
-			if (x->patcherContext == kTTSym_view)
-                model_subscribe_view(self, _sym_nothing, ac, av);
+			// j.view case: see in model_address_to_bind
+			else if (x->patcherContext == kTTSym_view)
+                model_address_to_bind(self, _sym_nothing, ac, av);
 
 			// output node address
 			t_atom a;
@@ -342,7 +362,7 @@ void model_subscribe(TTPtr self)
 	}
 }
 
-void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
+void model_address_to_bind(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
     WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
     TTObject        aReceiver;
@@ -354,13 +374,13 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
     TTAddress       modelAdrs, argAdrs, viewAdrs;
     TTValue         v;
     
-    // look at hierarchy
-    hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
-    
     // if args exists, the first argument of the patcher is the model:address value
-    if (argc > 0 && atom_gettype(argv) == A_SYM) {
-
+    if (argc > 0 && atom_gettype(argv) == A_SYM)
+    {
         argAdrs = TTAddress(atom_getsym(argv)->s_name);
+        
+        // look at hierarchy of its patcher
+        hierarchy = jamoma_patcher_get_hierarchy(x->patcherPtr);
         
         // in poly case : use the same instance as the container address
         if (hierarchy == gensym("poly"))
@@ -376,11 +396,11 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         }
         
         // in case of relative address : try to use the upper view patcher model:address (else use root)
-        else {
-            
+        else
+        {
             // if there is a parent view address : get the upper view address
-            if (EXTRA->containerAddress.getParent() != kTTAdrsRoot) {
-                
+            if (EXTRA->containerAddress.getParent() != kTTAdrsRoot)
+            {
                 // keep the argument address
                 EXTRA->argAddress = argAdrs;
                 
@@ -388,29 +408,29 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 makeInternals_receiver(self, EXTRA->containerAddress.getParent(), TTAddress("model:address"), gensym("return_upper_view_model_address"), aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
             }
             // use the argument address as an absolute address
-            else {
-
+            else
+            {
                 // set the model:address attribute to notify all observers
                 EXTRA->modelInfo->set(kTTSym_address, kTTAdrsRoot.appendAddress(argAdrs));
                 return;
             }
         }
     }
-    // else look around the patcher for model of the same class
-    else {
-        
+    // else look around into the parent patcher for model of the same class
+    else
+    {
         // look for a model of the same class into the patcher of the bpatcher to get his model:address
         jamoma_patcher_get_model_patcher(jamoma_patcher_get(x->patcherPtr), x->patcherClass, &aPatcher);
         
         // if a model exists
-        if (aPatcher) {
-
+        if (aPatcher)
+        {
             // is there a container (e.g. a j.model) registered with the same context in this model patcher ?
             whereToSearch.append(accessApplicationLocalDirectory->getRoot());
             accessApplicationLocalDirectory->IsThere(&whereToSearch, &testNodeContext, (TTPtr)aPatcher, &isThere, &firstTTNode);
             
-            if (isThere) {
-                
+            if (isThere)
+            {
                 firstTTNode->getAddress(modelAdrs);
                 
                 // set the model:address attribute to notify all observers
@@ -419,9 +439,9 @@ void model_subscribe_view(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
             }
             
             // deferlow to try another time because the model patcher is maybe not ready
-            else {
-
-                defer_low((t_object*)x, (method)model_subscribe_view, _sym_nothing, argc, argv);
+            else
+            {
+                defer_low((t_object*)x, (method)model_address_to_bind, _sym_nothing, argc, argv);
                 return;
             }
         }
@@ -649,4 +669,9 @@ TTBoolean model_test_amenities(TTPtr self, TTSymbol name)
     TTValue v;
     
     return !EXTRA->no_amenities && (EXTRA->all_amenities || !EXTRA->attr_amenities->lookup(name, v));
+}
+
+void model_bang(TTPtr self)
+{
+    // allows j.view to ignore bang because now j.ui outputs a bang to do some processing before to open the panel
 }

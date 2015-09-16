@@ -676,7 +676,7 @@
 													"numoutlets" : 0,
 													"patching_rect" : [ 32.0, 42.0, 437.0, 20.0 ],
 													"style" : "",
-													"text" : "A similar function for mapping amplitude to displayed levels as used by j.meter~"
+													"text" : "A similar function for mapping amplitude to displayed levels as used by live.meter~"
 												}
 
 											}

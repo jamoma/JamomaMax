@@ -919,7 +919,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.meter~.mxo",
+				"name" : "live.meter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{

@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 5,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -257,50 +257,56 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-52::obj-1::obj-83" : [ "live.text[6]", "live.text[2]", 0 ],
-			"obj-52::obj-1::obj-27::obj-12" : [ "live.numbox[1]", "live.numbox", 0 ],
-			"obj-52::obj-1::obj-62" : [ "live.text[4]", "live.text[2]", 0 ],
-			"obj-52::obj-1::obj-1" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-52::obj-1::obj-27::obj-13" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-52::obj-1::obj-18" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-52::obj-1::obj-14" : [ "live.text[3]", "live.text[3]", 0 ],
+			"obj-52::obj-1::obj-27::obj-9" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-52::obj-1::obj-13" : [ "live.numbox[4]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-1" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-52::obj-1::obj-27::obj-15" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-52::obj-1::obj-27::obj-9" : [ "live.numbox", "live.numbox", 0 ]
+			"obj-52::obj-1::obj-27::obj-13" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-27::obj-12" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-52::obj-1::obj-16" : [ "live.text[7]", "live.text[3]", 0 ],
+			"obj-52::obj-1::obj-18" : [ "live.text[1]", "live.text[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "input=.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input=.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "input.timeDisplay.maxpat",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.playbutton.svg",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/playbar-icons",
 				"type" : "svg ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.pausebutton.svg",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/media",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/media/playbar-icons",
 				"type" : "svg ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "input.timeDisplay.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
-				"type" : "JSON",
+				"name" : "j.truncate_string.js",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/javascript",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input=.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/input=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/input=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -312,19 +318,19 @@
 			}
 , 			{
 				"name" : "meters=.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/meters=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/meters=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "meters=.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/meters=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/meters=",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "meters=.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/meters=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/meters=",
 				"type" : "JSON",
 				"implicit" : 1
 			}

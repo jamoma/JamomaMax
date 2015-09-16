@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 1,
+			"revision" : 6,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -118,10 +118,9 @@
 				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 543.434937, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 520.848694, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.mutesolo="
 				}
@@ -155,9 +154,8 @@
 				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 638.0, 31.999985, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j= allpass"
@@ -168,10 +166,9 @@
 				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 164.856812, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 166.403397, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.clip="
 				}
@@ -181,10 +178,9 @@
 				"box" : 				{
 					"id" : "obj-15",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 191.898102, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 193.668427, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.count="
 				}
@@ -194,9 +190,8 @@
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 547.5896, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.wavetable="
@@ -207,9 +202,8 @@
 				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 31.999985, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.op="
@@ -220,9 +214,8 @@
 				"box" : 				{
 					"id" : "obj-81",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 520.191345, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.waveshaper="
@@ -233,9 +226,8 @@
 				"box" : 				{
 					"id" : "obj-80",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "list", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 492.793091, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.unsig="
@@ -246,9 +238,8 @@
 				"box" : 				{
 					"id" : "obj-78",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 437.996582, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.trajectory="
@@ -259,9 +250,8 @@
 				"box" : 				{
 					"id" : "obj-77",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 383.200012, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.spat="
@@ -272,9 +262,8 @@
 				"box" : 				{
 					"id" : "obj-74",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 246.208694, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.ramp="
@@ -285,9 +274,8 @@
 				"box" : 				{
 					"id" : "obj-73",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 141.593048, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.pick="
@@ -298,10 +286,9 @@
 				"box" : 				{
 					"id" : "obj-70",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 597.517517, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 575.378784, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.offset="
 				}
@@ -311,10 +298,9 @@
 				"box" : 				{
 					"id" : "obj-55",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 137.815506, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 139.138382, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.average="
 				}
@@ -324,10 +310,9 @@
 				"box" : 				{
 					"id" : "obj-36",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 59.041283, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 59.265011, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.adsr="
 				}
@@ -337,10 +322,9 @@
 				"box" : 				{
 					"id" : "obj-49",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 86.082581, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 86.530037, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.array="
 				}
@@ -350,9 +334,8 @@
 				"box" : 				{
 					"id" : "obj-18",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 301.005249, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.sig="
@@ -365,7 +348,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 638.0, 113.123863, 169.0, 20.0 ],
+					"patching_rect" : [ 638.0, 113.795059, 169.0, 20.0 ],
 					"style" : "default",
 					"text" : "j.audiounit= is quarantined"
 				}
@@ -375,9 +358,8 @@
 				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 355.801758, 124.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.soundfile.recorder="
@@ -388,9 +370,8 @@
 				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "audio.connect", "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 328.403503, 124.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.soundfile.player="
@@ -401,9 +382,8 @@
 				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 273.606995, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.resample="
@@ -414,9 +394,8 @@
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 59.398254, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.overdrive="
@@ -425,24 +404,10 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "audio.connect", "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 381.187164, 103.0, 22.0 ],
-					"style" : "default",
-					"text" : "j.hilbert="
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-43",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 574.987854, 104.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.window="
@@ -453,9 +418,8 @@
 				"box" : 				{
 					"id" : "obj-41",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "signal", "signal", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 465.394836, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.unpack="
@@ -466,9 +430,8 @@
 				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 410.598328, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.split="
@@ -479,9 +442,8 @@
 				"box" : 				{
 					"id" : "obj-39",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 218.81044, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.pulsesub="
@@ -492,9 +454,8 @@
 				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 114.194778, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.phasor="
@@ -505,9 +466,8 @@
 				"box" : 				{
 					"id" : "obj-37",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
 					"patching_rect" : [ 828.0, 86.796509, 102.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.pack="
@@ -518,10 +478,9 @@
 				"box" : 				{
 					"id" : "obj-35",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 570.476257, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 548.11377, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.noise="
 				}
@@ -531,10 +490,9 @@
 				"box" : 				{
 					"id" : "obj-34",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 489.352325, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 466.318665, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.mixer="
 				}
@@ -544,10 +502,9 @@
 				"box" : 				{
 					"id" : "obj-33",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 516.393677, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 493.58371, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.multimixer="
 				}
@@ -557,10 +514,9 @@
 				"box" : 				{
 					"id" : "obj-32",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 462.311066, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 439.05365, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.limiter="
 				}
@@ -570,10 +526,9 @@
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 435.269745, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 411.788635, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.join="
 				}
@@ -583,10 +538,9 @@
 				"box" : 				{
 					"id" : "obj-30",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 5,
-					"outlettype" : [ "audio.connect", "", "", "", "" ],
-					"patching_rect" : [ 638.0, 408.228455, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 384.52359, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.info="
 				}
@@ -596,10 +550,9 @@
 				"box" : 				{
 					"id" : "obj-29",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 354.145874, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 357.258575, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.gain="
 				}
@@ -609,10 +562,9 @@
 				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 327.104553, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 329.99353, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.filter="
 				}
@@ -622,10 +574,9 @@
 				"box" : 				{
 					"id" : "obj-27",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 300.063293, 105.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 302.728546, 105.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.fft="
 				}
@@ -635,10 +586,9 @@
 				"box" : 				{
 					"id" : "obj-26",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 273.021973, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 275.463501, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.delay="
 				}
@@ -648,10 +598,9 @@
 				"box" : 				{
 					"id" : "obj-25",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 245.980682, 103.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 248.198471, 103.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.degrade="
 				}
@@ -661,10 +610,9 @@
 				"box" : 				{
 					"id" : "obj-23",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "audio.connect", "" ],
-					"patching_rect" : [ 638.0, 218.939392, 105.0, 22.0 ],
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 638.0, 220.933441, 105.0, 22.0 ],
 					"style" : "default",
 					"text" : "j.dcblock="
 				}
@@ -888,165 +836,8 @@
 		"dependency_cache" : [ 			{
 				"name" : "patchdescribe.js",
 				"bootpath" : "/Users/Shared/Max 7/Examples/javascript/patcher-scripting",
-				"patcherrelativepath" : "../../../../../../../../../../Shared/Max 7/Examples/javascript/patcher-scripting",
 				"type" : "TEXT",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "j.dcblock=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.degrade=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.delay=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.fft=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.filter=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.gain=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.info=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.join=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.limiter=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.multimixer=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.mixer=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.noise=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.phasor=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pulsesub=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.split=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unpack=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.window=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.hilbert=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.overdrive=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.resample=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.soundfile.player=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.soundfile.recorder=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.sig=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.array=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.adsr=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.average=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.offset=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pick=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ramp=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.spat=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.trajectory=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.unsig=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.waveshaper=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.op=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.wavetable=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.count=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.clip=.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.mutesolo=.mxo",
-				"type" : "iLaX"
 			}
 , 			{
 				"name" : "oscar.mxo",

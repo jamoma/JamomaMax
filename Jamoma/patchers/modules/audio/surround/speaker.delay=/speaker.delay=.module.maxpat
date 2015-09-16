@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
@@ -144,56 +144,42 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "speaker.delay=.view.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/speaker.delay=",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/audio/surround/speaker.delay=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1.8/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1.8/patches/m4l-patches/Pluggo for Live resources/patches",
+				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"patcherrelativepath" : "../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "speaker.delay=.model.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/speaker.delay=",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/audio/surround/speaker.delay=",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.message.array.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/message.array",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/message.array",
 				"patcherrelativepath" : "../../../../components/deprecated/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.message.array.instance.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/message.array",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/message.array",
 				"patcherrelativepath" : "../../../../components/deprecated/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.parameter.array.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/parameter.array",
-				"patcherrelativepath" : "../../../../components/deprecated/parameter.array",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.array.instance.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/parameter.array",
-				"patcherrelativepath" : "../../../../components/deprecated/parameter.array",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "j.speaker.delays=.js",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/surround/speaker.delay=",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/audio/surround/speaker.delay=",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
@@ -224,6 +210,10 @@
 			}
 , 			{
 				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

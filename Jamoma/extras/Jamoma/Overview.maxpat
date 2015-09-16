@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 181.0, 44.0, 216.0, 318.0 ],
+		"rect" : [ 181.0, 45.0, 211.0, 334.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -112,7 +112,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -122,9 +122,9 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
 						"boxanimatetime" : 200,
@@ -254,7 +254,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -264,9 +264,9 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
 						"boxanimatetime" : 200,
@@ -360,7 +360,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 10,
 											"architecture" : "x86"
 										}
 ,
@@ -1347,7 +1347,6 @@
 					"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 					"disabled" : [ 0 ],
 					"id" : "obj-3",
-					"inactivecolor" : [ 0.403922, 0.396078, 0.4, 1.0 ],
 					"itemtype" : 1,
 					"maxclass" : "radiogroup",
 					"numinlets" : 1,
@@ -1393,7 +1392,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 26.0, 90.0, 158.0, 210.0 ],
 					"spacing_y" : 10.0,
-					"tabs" : [ "Models", "Components", "Examples", "Application Builder", "UserLib", "Tutorials" ]
+					"tabs" : [ "Models", "Components", "Examples", "Application Builder", "Tutorials", "Plugtastic" ]
 				}
 
 			}
@@ -1423,7 +1422,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -1565,7 +1564,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -1681,11 +1680,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 4.0, 44.0, 1253.0, 747.0 ],
+						"rect" : [ 34.0, 79.0, 1281.0, 770.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 10.0,
@@ -1704,7 +1703,40 @@
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"frgb" : 0.0,
+									"id" : "obj-3",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 7.0, 459.450409, 150.0, 19.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 7.0, 459.0, 18.0, 19.0 ],
+									"text" : "*"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Verdana",
+									"fontsize" : 10.0,
+									"id" : "obj-30",
+									"maxclass" : "message",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 17.0, 462.176483, 130.0, 17.0 ],
+									"presentation" : 1,
+									"presentation_rect" : [ 17.0, 461.726074, 120.0, 17.0 ],
+									"text" : "j.remote"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
@@ -1732,7 +1764,7 @@
 									"patching_rect" : [ 84.0, 445.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 442.176483, 120.0, 17.0 ],
-									"text" : "j.remote"
+									"text" : "j.ui"
 								}
 
 							}
@@ -1861,7 +1893,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*j.allpass~", "*j.array~", "*j.average~", "*j.balance~", "*j.clip~", "*j.dcblock~", "*j.degrade~", "*j.delay~", "*j.filter~", "*j.function~", "*j.hmlshelf~", "*j.limiter~", "*j.meter~", "*j.mutesolo~", "*j.onepole~", "*j.op~", "*j.overdrive~", "*j.panorama~", "*j.ramp~", "*j.receive~", "*j.send~", "*j.waveshaper~", "*j.xfade~", "*j.zerox~", "*j~", "j.thru~" ]
+									"tabs" : [ "*j.allpass~", "*j.array~", "*j.average~", "*j.balance~", "*j.clip~", "*j.dcblock~", "*j.degrade~", "*j.delay~", "*j.filter~", "*j.function~", "*j.hmlshelf~", "*j.limiter~", "*j.mutesolo~", "*j.onepole~", "*j.op~", "*j.overdrive~", "*j.panorama~", "*j.ramp~", "*j.receive~", "*j.send~", "*j.unit~", "*j.waveshaper~", "*j.xfade~", "*j.zerox~", "*j~", "j.thru~" ]
 								}
 
 							}
@@ -1879,7 +1911,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 10,
 											"architecture" : "x86"
 										}
 ,
@@ -1889,9 +1921,9 @@
 										"default_fontsize" : 12.0,
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
-										"gridonopen" : 0,
+										"gridonopen" : 1,
 										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 0,
+										"gridsnaponopen" : 1,
 										"statusbarvisible" : 2,
 										"toolbarvisible" : 1,
 										"boxanimatetime" : 200,
@@ -1916,7 +1948,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 8,
+															"revision" : 10,
 															"architecture" : "x86"
 														}
 ,
@@ -1926,9 +1958,9 @@
 														"default_fontsize" : 12.0,
 														"default_fontface" : 0,
 														"default_fontname" : "Arial",
-														"gridonopen" : 0,
+														"gridonopen" : 1,
 														"gridsize" : [ 15.0, 15.0 ],
-														"gridsnaponopen" : 0,
+														"gridsnaponopen" : 1,
 														"statusbarvisible" : 2,
 														"toolbarvisible" : 1,
 														"boxanimatetime" : 200,
@@ -2100,7 +2132,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 8,
+															"revision" : 10,
 															"architecture" : "x86"
 														}
 ,
@@ -2110,9 +2142,9 @@
 														"default_fontsize" : 12.0,
 														"default_fontface" : 0,
 														"default_fontname" : "Arial",
-														"gridonopen" : 0,
+														"gridonopen" : 1,
 														"gridsize" : [ 15.0, 15.0 ],
-														"gridsnaponopen" : 0,
+														"gridsnaponopen" : 1,
 														"statusbarvisible" : 2,
 														"toolbarvisible" : 1,
 														"boxanimatetime" : 200,
@@ -2237,7 +2269,7 @@
 														"appversion" : 														{
 															"major" : 6,
 															"minor" : 1,
-															"revision" : 8,
+															"revision" : 10,
 															"architecture" : "x86"
 														}
 ,
@@ -2247,9 +2279,9 @@
 														"default_fontsize" : 12.0,
 														"default_fontface" : 0,
 														"default_fontname" : "Arial",
-														"gridonopen" : 0,
+														"gridonopen" : 1,
 														"gridsize" : [ 15.0, 15.0 ],
-														"gridsnaponopen" : 0,
+														"gridsnaponopen" : 1,
 														"statusbarvisible" : 2,
 														"toolbarvisible" : 1,
 														"boxanimatetime" : 200,
@@ -2590,14 +2622,14 @@
 													"fontname" : "Verdana",
 													"fontsize" : 11.0,
 													"id" : "obj-59",
-													"items" : [ "cue_conventions.maxpat", ",", "j.adsr=.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.append-.maxhelp", ",", "j.array=.maxhelp", ",", "j.array~.maxhelp", ",", "j.attrParameters.helper.maxpat", ",", "j.average=.maxhelp", ",", "j.average~.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip=.maxhelp", ",", "j.clip~.maxhelp", ",", "j.count=.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cue.maxhelp", ",", "j.dataspace-.maxhelp", ",", "j.dataspace.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbap_bformat.maxhelp", ",", "j.dcblock=.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade=.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.delay=.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft=.maxhelp", ",", "j.filter=.maxhelp", ",", "j.filter~-benchmark.maxpat", ",", "j.filter~.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain=.maxhelp", ",", "j.gainParameters.helper.maxpat", ",", "j.gang.maxhelp", ",", "j.get_onscreen_position.maxhelp", ",", "j.hilbert=.maxhelp", ",", "j.hmlshelf~.maxhelp", ",", "j.in.maxhelp", ",", "j.info=.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.iter-.maxhelp", ",", "j.jamomaBrowser.view.maxhelp", ",", "j.join=.maxhelp", ",", "j.js_systeminfo.maxhelp", ",", "j.jsui_multigain.maxhelp", ",", "j.limiter=.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.map.functions.maxpat", ",", "j.map.maxhelp", ",", "j.maxhelp", ",", "j.message.maxhelp", ",", "j.message_array.maxhelp", ",", "j.meter~.maxhelp", ",", "j.mixer=.maxhelp", ",", "j.mkdir.maxpat", ",", "j.model.maxhelp", ",", "j.modular.maxhelp", ",", "j.multimixer=.maxhelp", ",", "j.mutesolo=.maxhelp", ",", "j.mutesolo~.maxhelp", ",", "j.namespace.maxhelp", ",", "j.node.maxhelp", ",", "j.noise=.maxhelp", ",", "j.offset=.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op-.maxhelp", ",", "j.op=.maxhelp", ",", "j.op~.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive=.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.pack-.maxhelp", ",", "j.pack=.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.parameter_array.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor=.maxhelp", ",", "j.pick=.maxhelp", ",", "j.presetParameters.helper.maxpat", ",", "j.pulsesub=.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp=.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.receive.maxhelp", ",", "j.receive~.maxhelp", ",", "j.remote.maxhelp", ",", "j.remote_Array.maxhelp", ",", "j.resample=.maxhelp", ",", "j.return.maxhelp", ",", "j.return_array.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.scriptingUtilities.js.maxhelp", ",", "j.send.maxhelp", ",", "j.send~.maxhelp", ",", "j.sig=.maxhelp", ",", "j.soundfile.player=.maxhelp", ",", "j.soundfile.recorder=.maxhelp", ",", "j.spat=.maxhelp", ",", "j.SpatDIF.coordinates.maxpat", ",", "j.split=.maxhelp", ",", "j.stats.maxhelp", ",", "j.stickyPatcherWindow.js.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory=.maxhelp", ",", "j.ui.maxhelp", ",", "j.unfocus.maxhelp", ",", "j.unpack-.maxhelp", ",", "j.unpack=.maxhelp", ",", "j.unsig=.maxhelp", ",", "j.view.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper=.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.wavetable=.maxhelp", ",", "j.window=.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp", ",", "j=.maxhelp", ",", "j~.maxhelp" ],
+													"items" : [ "cue_conventions.maxpat", ",", "j._external_template.maxhelp", ",", "j.adsr=.maxhelp", ",", "j.allpass~.maxhelp", ",", "j.array=.maxhelp", ",", "j.array~.maxhelp", ",", "j.attrParameters.helper.maxpat", ",", "j.average=.maxhelp", ",", "j.average~.maxhelp", ",", "j.balance~.maxhelp", ",", "j.clip=.maxhelp", ",", "j.clip~.maxhelp", ",", "j.count=.maxhelp", ",", "j.cubicInterpolate.maxhelp", ",", "j.cue.maxhelp", ",", "j.dbap.maxhelp", ",", "j.dbap_bformat.maxhelp", ",", "j.dcblock=.maxhelp", ",", "j.dcblock~.maxhelp", ",", "j.degrade=.maxhelp", ",", "j.degrade~.maxhelp", ",", "j.delay=.maxhelp", ",", "j.delay~.maxhelp", ",", "j.delta.maxhelp", ",", "j.envexp.maxhelp", ",", "j.fft=.maxhelp", ",", "j.filter=.maxhelp", ",", "j.filter~-benchmark.maxpat", ",", "j.filter~.maxhelp", ",", "j.folder.maxhelp", ",", "j.function~.maxhelp", ",", "j.gain=.maxhelp", ",", "j.gainParameters.helper.maxpat", ",", "j.gang.maxhelp", ",", "j.get_onscreen_position.maxhelp", ",", "j.get_range.js.maxpat", ",", "j.hmlshelf~.maxhelp", ",", "j.in.maxhelp", ",", "j.info=.maxhelp", ",", "j.init.maxhelp", ",", "j.in~.maxhelp", ",", "j.join=.maxhelp", ",", "j.js_systeminfo.maxhelp", ",", "j.jsui_multigain.maxhelp", ",", "j.limiter=.maxhelp", ",", "j.limiter~.maxhelp", ",", "j.map.functions.maxpat", ",", "j.map.maxhelp", ",", "j.maxhelp", ",", "j.message.maxhelp", ",", "j.message_array.maxhelp", ",", "j.minuit_device.maxhelp", ",", "j.mixer=.maxhelp", ",", "j.mkdir.maxpat", ",", "j.model.maxhelp", ",", "j.modular.maxhelp", ",", "j.multimixer=.maxhelp", ",", "j.mutesolo=.maxhelp", ",", "j.mutesolo~.maxhelp", ",", "j.namespace-old.maxhelp", ",", "j.namespace.maxhelp", ",", "j.namespace_explorator.maxhelp", ",", "j.namespacebrowser.view.maxhelp", ",", "j.node.maxhelp", ",", "j.noise=.maxhelp", ",", "j.offset=.maxhelp", ",", "j.onepole~.maxhelp", ",", "j.op=.maxhelp", ",", "j.op~.maxhelp", ",", "j.oscinstance.maxhelp", ",", "j.oscroute.maxhelp", ",", "j.out.maxhelp", ",", "j.out~.maxhelp", ",", "j.overdrive=.maxhelp", ",", "j.overdrive~.maxhelp", ",", "j.pack=.maxhelp", ",", "j.panorama~.maxhelp", ",", "j.parameter.maxhelp", ",", "j.parameter_array.maxhelp", ",", "j.pass.maxhelp", ",", "j.phasor=.maxhelp", ",", "j.pick=.maxhelp", ",", "j.presetParameters.helper.maxpat", ",", "j.pulsesub=.maxhelp", ",", "j.push.maxhelp", ",", "j.ramp.maxhelp", ",", "j.ramp=.maxhelp", ",", "j.ramp~.maxhelp", ",", "j.receive.maxhelp", ",", "j.receive~.maxhelp", ",", "j.remote.maxhelp", ",", "j.remote_Array.maxhelp", ",", "j.remote_menu.maxhelp", ",", "j.resample=.maxhelp", ",", "j.return.maxhelp", ",", "j.return_array.maxhelp", ",", "j.route.maxhelp", ",", "j.savebang.maxhelp", ",", "j.score.maxhelp", ",", "j.scriptingUtilities.js.maxhelp", ",", "j.send.maxhelp", ",", "j.send~.maxhelp", ",", "j.sig=.maxhelp", ",", "j.soundfile.player=.maxhelp", ",", "j.soundfile.recorder=.maxhelp", ",", "j.spat=.maxhelp", ",", "j.SpatDIF.coordinates.maxpat", ",", "j.split=.maxhelp", ",", "j.stats.maxhelp", ",", "j.stickyPatcherWindow.js.maxhelp", ",", "j.test.sample~.maxhelp", ",", "j.textslider.maxhelp", ",", "j.trajectory=.maxhelp", ",", "j.truncate_string.js.maxpat", ",", "j.ui.maxhelp", ",", "j.unfocus.maxhelp", ",", "j.unit.maxhelp", ",", "j.unit~.maxhelp", ",", "j.unpack=.maxhelp", ",", "j.unsig=.maxhelp", ",", "j.view.maxhelp", ",", "j.vimic~.maxhelp", ",", "j.waveshaper=.maxhelp", ",", "j.waveshaper~.maxhelp", ",", "j.wavetable=.maxhelp", ",", "j.window=.maxhelp", ",", "j.xfade~.maxhelp", ",", "j.zerox~.maxhelp", ",", "j=.maxhelp", ",", "j~.maxhelp", ",", "max7specific.maxhelp" ],
 													"maxclass" : "umenu",
 													"numinlets" : 1,
 													"numoutlets" : 3,
 													"outlettype" : [ "int", "", "" ],
 													"parameter_enable" : 0,
 													"patching_rect" : [ 50.0, 324.0, 224.0, 20.0 ],
-													"prefix" : "Mac HD:/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/help/",
+													"prefix" : "system:/Users/reno/JamomaMax/Jamoma/help/",
 													"types" : "JSON"
 												}
 
@@ -2996,103 +3028,7 @@
 									"rounded" : 10.0,
 									"spacing_y" : 6.0,
 									"tabcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
-									"tabs" : [ "*j.adsr=", "*j.array=", "*j.average=", "*j.clip=", "*j.count=", "*j.dcblock=", "*j.degrade=", "*j.delay=", "*j.fft=", "*j.filter=", "*j.gain=", "*j.hilbert=", "*j.info=", "*j.join=", "*j.limiter=", "*j.mixer=", "*j.multimixer=", "*j.mutesolo=", "*j.noise=", "*j.offset=", "*j.op=", "*j.overdrive=", "*j.pack=", "*j.phasor=", "*j.pick=", "*j.pulsesub=", "*j.ramp=", "*j.resample=", "*j.sig=", "*j.soundfile.player=", "*j.soundfile.recorder=", "*j.spat=", "*j.split=", "*j.trajectory=", "*j.unpack=", "*j.unsig=", "*j.waveshaper=", "*j.wavetable=", "*j.window=", "*j=" ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"frgb" : 0.0,
-									"id" : "obj-211",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 440.0, 639.0, 150.0, 19.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 160.0, 462.0, 18.0, 19.0 ],
-									"text" : "*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-212",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 673.25, 727.0, 103.5, 17.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 170.0, 462.0, 143.0, 17.0 ],
-									"text" : "j.hipnoscope"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"frgb" : 0.0,
-									"id" : "obj-210",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 425.0, 624.0, 150.0, 19.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 160.0, 444.0, 18.0, 19.0 ],
-									"text" : "*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"frgb" : 0.0,
-									"id" : "obj-209",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 425.0, 585.0, 150.0, 19.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 160.0, 424.0, 18.0, 19.0 ],
-									"text" : "*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-208",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 673.25, 710.0, 103.5, 17.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 170.0, 444.0, 143.0, 17.0 ],
-									"text" : "j.spatDisplay"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-207",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 658.25, 695.0, 103.5, 17.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 170.0, 424.0, 143.0, 17.0 ],
-									"text" : "j.meter~"
+									"tabs" : [ "*j.adsr=", "*j.array=", "*j.average=", "*j.clip=", "*j.count=", "*j.dcblock=", "*j.degrade=", "*j.delay=", "*j.fft=", "*j.filter=", "*j.gain=", "*j.info=", "*j.join=", "*j.limiter=", "*j.mixer=", "*j.multimixer=", "*j.mutesolo=", "*j.noise=", "*j.offset=", "*j.op=", "*j.overdrive=", "*j.pack=", "*j.phasor=", "*j.pick=", "*j.pulsesub=", "*j.ramp=", "*j.resample=", "*j.sig=", "*j.soundfile.player=", "*j.soundfile.recorder=", "*j.spat=", "*j.split=", "*j.trajectory=", "*j.unpack=", "*j.unsig=", "*j.waveshaper=", "*j.wavetable=", "*j.window=", "*j=" ]
 								}
 
 							}
@@ -3310,22 +3246,6 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"frgb" : 0.0,
-									"id" : "obj-155",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 410.0, 570.0, 150.0, 19.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 160.0, 385.0, 18.0, 19.0 ],
-									"text" : "*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-136",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -3333,8 +3253,8 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 595.0, 515.0, 124.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 346.0, 424.555542, 140.0, 17.0 ],
-									"text" : "j.parameterCreate"
+									"presentation_rect" : [ 346.0, 424.555542, 141.0, 17.0 ],
+									"text" : "j.post"
 								}
 
 							}
@@ -3381,8 +3301,8 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 590.0, 500.0, 128.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 347.0, 405.833344, 140.0, 17.0 ],
-									"text" : "j.parameter.array"
+									"presentation_rect" : [ 347.0, 405.833344, 139.0, 17.0 ],
+									"text" : "j.parameterCreate"
 								}
 
 							}
@@ -3413,24 +3333,8 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 730.0, 105.0, 19.0, 19.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 337.0, 462.0, 18.0, 19.0 ],
+									"presentation_rect" : [ 336.0, 443.277771, 18.0, 19.0 ],
 									"text" : "*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-191",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 1169.0, 652.0, 120.0, 17.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 170.0, 405.0, 143.0, 17.0 ],
-									"text" : "j.jsui_multigain.js"
 								}
 
 							}
@@ -3478,22 +3382,6 @@
 									"patching_rect" : [ 665.0, 324.0, 150.0, 19.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 337.0, 201.0, 18.0, 19.0 ],
-									"text" : "*"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"frgb" : 0.0,
-									"id" : "obj-172",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 715.0, 90.0, 19.0, 19.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 7.0, 459.103577, 18.0, 19.0 ],
 									"text" : "*"
 								}
 
@@ -3756,22 +3644,6 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"id" : "obj-165",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 1045.0, 621.0, 140.0, 17.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 347.0, 462.0, 140.0, 17.0 ],
-									"text" : "j.route"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
 									"id" : "obj-166",
 									"maxclass" : "message",
 									"numinlets" : 2,
@@ -4019,8 +3891,8 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 69.0, 605.0, 130.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 422.352936, 121.0, 17.0 ],
-									"text" : "j.ui"
+									"presentation_rect" : [ 17.0, 422.352936, 120.0, 17.0 ],
+									"text" : "j.send~"
 								}
 
 							}
@@ -4036,7 +3908,7 @@
 									"patching_rect" : [ 35.0, 505.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 343.058838, 120.0, 17.0 ],
-									"text" : "j.receive~"
+									"text" : "j.receive"
 								}
 
 							}
@@ -4052,7 +3924,7 @@
 									"patching_rect" : [ 60.0, 585.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 402.529419, 120.0, 17.0 ],
-									"text" : "j.send~"
+									"text" : "j.send"
 								}
 
 							}
@@ -4114,7 +3986,7 @@
 									"patching_rect" : [ 55.0, 565.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 382.705872, 120.0, 17.0 ],
-									"text" : "j.send"
+									"text" : "j.return"
 								}
 
 							}
@@ -4130,7 +4002,7 @@
 									"patching_rect" : [ 69.0, 545.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 362.882355, 120.0, 17.0 ],
-									"text" : "j.return"
+									"text" : "j.receive~"
 								}
 
 							}
@@ -4162,7 +4034,7 @@
 									"patching_rect" : [ 35.0, 485.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 323.235291, 120.0, 17.0 ],
-									"text" : "j.receive"
+									"text" : "j.ramp"
 								}
 
 							}
@@ -4178,7 +4050,7 @@
 									"patching_rect" : [ 69.0, 465.0, 130.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 17.0, 303.411774, 120.0, 17.0 ],
-									"text" : "j.ramp"
+									"text" : "j.parameter_array"
 								}
 
 							}
@@ -4417,7 +4289,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 658.0, 639.0, 85.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 170.0, 365.0, 142.0, 17.0 ],
+									"presentation_rect" : [ 170.0, 365.833344, 142.0, 17.0 ],
 									"text" : "j.textslider"
 								}
 
@@ -5088,7 +4960,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 660.0, 657.0, 103.0, 17.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 170.0, 345.0, 142.0, 17.0 ],
+									"presentation_rect" : [ 170.0, 345.833344, 142.0, 17.0 ],
 									"text" : "j.numberslider"
 								}
 
@@ -5242,30 +5114,15 @@
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
 									"id" : "obj-28",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 660.0, 675.0, 62.0, 17.0 ],
+									"patching_rect" : [ 660.0, 675.0, 62.0, 29.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 170.0, 385.0, 142.0, 17.0 ],
-									"text" : "j.label"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-32",
-									"maxclass" : "message",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 495.0, 349.0, 52.0, 17.0 ],
-									"presentation" : 1,
-									"presentation_rect" : [ 17.0, 462.0, 120.0, 17.0 ],
-									"text" : "j.init"
+									"presentation_rect" : [ 170.0, 385.833344, 142.0, 17.0 ],
+									"text" : "j.jsui_multigain.js"
 								}
 
 							}
@@ -5280,7 +5137,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 658.0, 615.0, 91.0, 28.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 173.0, 297.0, 171.0, 28.0 ],
+									"presentation_rect" : [ 173.0, 308.722229, 171.0, 28.0 ],
 									"text" : "Widgets"
 								}
 
@@ -5447,7 +5304,7 @@
 									"patching_rect" : [ 490.0, 438.0, 58.0, 17.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 347.0, 443.277771, 140.0, 17.0 ],
-									"text" : "j.post"
+									"text" : "j.route"
 								}
 
 							}
@@ -5830,6 +5687,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-96", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-135", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-47", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -5941,15 +5807,6 @@
 									"destination" : [ "obj-162", 0 ],
 									"disabled" : 0,
 									"hidden" : 1,
-									"source" : [ "obj-165", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-162", 0 ],
-									"disabled" : 0,
-									"hidden" : 1,
 									"source" : [ "obj-166", 0 ]
 								}
 
@@ -5995,15 +5852,6 @@
 									"destination" : [ "obj-162", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"source" : [ "obj-191", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-162", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
 									"source" : [ "obj-192", 0 ]
 								}
 
@@ -6039,35 +5887,8 @@
 								"patchline" : 								{
 									"destination" : [ "obj-37", 0 ],
 									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-207", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-37", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-208", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-37", 0 ],
-									"disabled" : 0,
 									"hidden" : 1,
 									"source" : [ "obj-21", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-37", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-212", 0 ]
 								}
 
 							}
@@ -6194,15 +6015,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-31", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-47", 0 ],
-									"disabled" : 0,
-									"hidden" : 1,
-									"source" : [ "obj-32", 0 ]
 								}
 
 							}
@@ -6645,7 +6457,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -7266,7 +7078,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -7393,12 +7205,8 @@
 							}
 , 							{
 								"box" : 								{
-									"clicktabcolor" : [ 0.501961, 0.85098, 0.619608, 0.0 ],
-									"clicktextcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"hovertabcolor" : [ 0.74902, 0.74902, 0.74902, 0.0 ],
-									"hovertextcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 									"htabcolor" : [ 0.6, 0.6, 0.6, 0.0 ],
 									"id" : "obj-6",
 									"maxclass" : "tab",
@@ -7416,12 +7224,8 @@
 							}
 , 							{
 								"box" : 								{
-									"clicktabcolor" : [ 0.501961, 0.85098, 0.619608, 0.0 ],
-									"clicktextcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"hovertabcolor" : [ 0.74902, 0.74902, 0.74902, 0.0 ],
-									"hovertextcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 									"htabcolor" : [ 0.6, 0.6, 0.6, 0.0 ],
 									"id" : "obj-5",
 									"maxclass" : "tab",
@@ -7439,12 +7243,8 @@
 							}
 , 							{
 								"box" : 								{
-									"clicktabcolor" : [ 0.501961, 0.85098, 0.619608, 0.0 ],
-									"clicktextcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"hovertabcolor" : [ 0.74902, 0.74902, 0.74902, 0.0 ],
-									"hovertextcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 									"htabcolor" : [ 0.6, 0.6, 0.6, 0.0 ],
 									"id" : "obj-4",
 									"maxclass" : "tab",
@@ -7462,12 +7262,8 @@
 							}
 , 							{
 								"box" : 								{
-									"clicktabcolor" : [ 0.501961, 0.85098, 0.619608, 0.0 ],
-									"clicktextcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"hovertabcolor" : [ 0.74902, 0.74902, 0.74902, 0.0 ],
-									"hovertextcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 									"htabcolor" : [ 0.6, 0.6, 0.6, 0.0 ],
 									"id" : "obj-3",
 									"maxclass" : "tab",
@@ -7486,12 +7282,8 @@
 , 							{
 								"box" : 								{
 									"button" : 1,
-									"clicktabcolor" : [ 0.501961, 0.85098, 0.619608, 0.0 ],
-									"clicktextcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"hovertabcolor" : [ 0.74902, 0.74902, 0.74902, 0.0 ],
-									"hovertextcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 									"htabcolor" : [ 0.6, 0.6, 0.6, 0.0 ],
 									"id" : "obj-2",
 									"maxclass" : "tab",
@@ -7509,12 +7301,8 @@
 							}
 , 							{
 								"box" : 								{
-									"clicktabcolor" : [ 0.501961, 0.85098, 0.619608, 0.0 ],
-									"clicktextcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
-									"hovertabcolor" : [ 0.74902, 0.74902, 0.74902, 0.0 ],
-									"hovertextcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 									"htabcolor" : [ 0.6, 0.6, 0.6, 0.0 ],
 									"id" : "obj-1",
 									"maxclass" : "tab",
@@ -7572,7 +7360,7 @@
 										"appversion" : 										{
 											"major" : 6,
 											"minor" : 1,
-											"revision" : 8,
+											"revision" : 10,
 											"architecture" : "x86"
 										}
 ,
@@ -7582,9 +7370,9 @@
 										"default_fontsize" : 12.0,
 										"default_fontface" : 0,
 										"default_fontname" : "Arial",
-										"gridonopen" : 0,
+										"gridonopen" : 1,
 										"gridsize" : [ 15.0, 15.0 ],
-										"gridsnaponopen" : 0,
+										"gridsnaponopen" : 1,
 										"statusbarvisible" : 2,
 										"toolbarvisible" : 1,
 										"boxanimatetime" : 200,
@@ -8442,44 +8230,37 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"patcherrelativepath" : "../../patchers/components/data/maxhelpui",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/jamomaPath",
 				"patcherrelativepath" : "../../patchers/components/data/jamomaPath",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.getDescriptionFromHtml.maxpat",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/deprecated/getDescriptionFromHtml",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/getDescriptionFromHtml",
 				"patcherrelativepath" : "../../patchers/components/deprecated/getDescriptionFromHtml",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/jln/@Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../javascript",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

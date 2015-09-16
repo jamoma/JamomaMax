@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 3,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 574.0, 264.0, 765.0, 492.0 ],
+		"rect" : [ 100.0, 100.0, 765.0, 492.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -42,11 +42,11 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 3,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
-						"rect" : [ 574.0, 290.0, 765.0, 466.0 ],
+						"rect" : [ 100.0, 126.0, 765.0, 466.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -91,8 +91,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 511.0, 318.0, 56.0, 18.0 ],
-									"text" : "4efda"
+									"patching_rect" : [ 511.0, 318.0, 56.0, 18.0 ]
 								}
 
 							}
@@ -105,8 +104,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 436.0, 318.0, 69.0, 18.0 ],
-									"text" : "\"0.6.0 a17\""
+									"patching_rect" : [ 436.0, 318.0, 69.0, 18.0 ]
 								}
 
 							}
@@ -133,8 +131,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 374.0, 318.0, 56.0, 18.0 ],
-									"text" : "0"
+									"patching_rect" : [ 374.0, 318.0, 56.0, 18.0 ]
 								}
 
 							}
@@ -147,8 +144,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 312.0, 318.0, 56.0, 18.0 ],
-									"text" : "0"
+									"patching_rect" : [ 312.0, 318.0, 56.0, 18.0 ]
 								}
 
 							}
@@ -161,8 +157,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 249.0, 318.0, 56.0, 18.0 ],
-									"text" : "\"613\""
+									"patching_rect" : [ 249.0, 318.0, 56.0, 18.0 ]
 								}
 
 							}
@@ -175,8 +170,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 186.0, 318.0, 56.0, 18.0 ],
-									"text" : "\"83\""
+									"patching_rect" : [ 186.0, 318.0, 56.0, 18.0 ]
 								}
 
 							}
@@ -189,8 +183,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 115.0, 318.0, 64.0, 18.0 ],
-									"text" : "macintosh"
+									"patching_rect" : [ 115.0, 318.0, 64.0, 18.0 ]
 								}
 
 							}
@@ -436,16 +429,9 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.js_systeminfo.js",
-				"bootpath" : "/Users/jln/@jamoma/JamomaNew/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../javascript",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "helpdetails.js",
 				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"patcherrelativepath" : "../../../../../Applications/Max 6.1/Cycling '74/help-resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}

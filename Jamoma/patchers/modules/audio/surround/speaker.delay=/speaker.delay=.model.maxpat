@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
@@ -52,7 +52,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -222,7 +222,7 @@
 						"appversion" : 						{
 							"major" : 6,
 							"minor" : 1,
-							"revision" : 7,
+							"revision" : 10,
 							"architecture" : "x86"
 						}
 ,
@@ -663,7 +663,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 427.0, 345.0, 368.0, 33.0 ],
+					"patching_rect" : [ 427.0, 345.0, 371.0, 33.0 ],
 					"text" : "j.parameter automatic @type boolean @description \"position based calculation (automatic) or manual setting of delays.\" @priority 2"
 				}
 
@@ -678,7 +678,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 395.0, 6.0, 581.0, 47.0 ],
+					"patching_rect" : [ 395.0, 6.0, 523.0, 47.0 ],
 					"text" : "j.parameter temperature @type decimal @repetitions/filter 1 @range -273. 40. @clipmode low @description \"temperature to calculate speed of sound.\" @dataspace temperature @unit Celsius",
 					"varname" : "voices[1]"
 				}
@@ -695,7 +695,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 427.0, 294.0, 627.0, 33.0 ],
-					"text" : "j.parameter.array 32 speaker delay @type decimal @repetitions/filter 0 @range 0. 1000. @clipmode both @dataspace time @unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
+					"text" : "j.parameter_array speaker[32]/delay @type decimal @repetitions/filter 0 @range 0. 1000. @clipmode both @dataspace time @unit ms @description \"delay to be applied on the Nth speaker  in [ms] by default\""
 				}
 
 			}
@@ -738,7 +738,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 427.0, 190.0, 655.0, 33.0 ],
+					"patching_rect" : [ 427.0, 190.0, 657.0, 33.0 ],
 					"text" : "j.parameter numSpeakers @type integer @repetitions/filter 1 @range 2 32 @clipmode both @description \"The number of audio channels that the ambisonic signal is diffused to. Changes only take effect when audio is off.\" @priority 1",
 					"varname" : "voices"
 				}
@@ -899,35 +899,21 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.message.array.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/message.array",
-				"patcherrelativepath" : "../../../components/_deprecated/message.array",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/message.array",
+				"patcherrelativepath" : "../../../../components/deprecated/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.message.array.instance.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/message.array",
-				"patcherrelativepath" : "../../../components/_deprecated/message.array",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.array.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/parameter.array",
-				"patcherrelativepath" : "../../../components/_deprecated/parameter.array",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.array.instance.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/_deprecated/parameter.array",
-				"patcherrelativepath" : "../../../components/_deprecated/parameter.array",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/deprecated/message.array",
+				"patcherrelativepath" : "../../../../components/deprecated/message.array",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.speaker.delays=.js",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/spatialization/sur.speaker.delay~",
+				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/audio/surround/speaker.delay=",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
@@ -942,6 +928,10 @@
 			}
 , 			{
 				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{

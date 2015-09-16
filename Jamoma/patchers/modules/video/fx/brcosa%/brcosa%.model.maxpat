@@ -4,11 +4,11 @@
 		"appversion" : 		{
 			"major" : 6,
 			"minor" : 1,
-			"revision" : 7,
+			"revision" : 10,
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 291.0, 109.0, 978.0, 386.0 ],
+		"rect" : [ 291.0, 109.0, 919.0, 389.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -37,7 +37,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 46.0, 293.0, 131.0, 19.0 ],
-					"text" : "j.out 1 @type jit_matrix"
+					"text" : "j.out 1 @tags jit_matrix"
 				}
 
 			}
@@ -232,8 +232,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 435.0, 126.0, 514.0, 31.0 ],
-					"text" : "j.parameter saturation @type decimal @ramp/drive max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Saturation of image - 1 is default\"",
+					"patching_rect" : [ 435.0, 126.0, 451.0, 31.0 ],
+					"text" : "j.parameter saturation @type decimal @ramp/drive max @default 1 @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Saturation of image - 1 is default\"",
 					"varname" : "saturation[1]"
 				}
 
@@ -249,8 +249,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 326.0, 83.0, 504.0, 31.0 ],
-					"text" : "j.parameter contrast @type decimal @ramp/drive max @repetitions/filter 1 @range 0. 4. @clipmode none @description \"Contrast of image - 1 is default\"",
+					"patching_rect" : [ 326.0, 83.0, 455.0, 31.0 ],
+					"text" : "j.parameter contrast @type decimal @ramp/drive max @repetitions/filter 1 @default 1 @range 0. 4. @clipmode none @description \"Contrast of image - 1 is default\"",
 					"varname" : "contrast[1]"
 				}
 
@@ -266,7 +266,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 200.0, 46.0, 515.0, 19.0 ],
-					"text" : "j.parameter brightness @type decimal @ramp/drive max @repetitions/filter 1 @range 0",
+					"text" : "j.parameter brightness @type decimal @ramp/drive max @repetitions/filter 1 @range 0 @default 1",
 					"varname" : "brightness[1]"
 				}
 
