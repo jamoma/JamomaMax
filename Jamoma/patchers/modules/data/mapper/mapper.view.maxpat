@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2301.0, 413.0, 450.0, 105.0 ],
+		"rect" : [ 405.0, 221.0, 450.0, 105.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -175,7 +175,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 131.0, 240.0, 157.0, 64.0 ],
+					"patching_rect" : [ 187.333313, 258.0, 157.0, 64.0 ],
 					"style" : "",
 					"text" : "A workaround to disable panel processing when not editing mapping, thus save cpu cycles"
 				}
@@ -240,7 +240,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 66.0, 240.0, 40.0, 22.0 ],
+					"patching_rect" : [ 4.0, 254.0, 40.0, 22.0 ],
 					"style" : "",
 					"text" : "zl.reg"
 				}
@@ -251,11 +251,11 @@
 					"id" : "obj-42",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "open", "bang" ],
-					"patching_rect" : [ 4.0, 193.0, 54.0, 22.0 ],
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "open", "bang" ],
+					"patching_rect" : [ 4.0, 194.0, 74.333313, 22.0 ],
 					"style" : "",
-					"text" : "t open b"
+					"text" : "t b open b"
 				}
 
 			}
@@ -266,7 +266,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 4.0, 240.0, 53.0, 22.0 ],
+					"patching_rect" : [ 60.333313, 258.0, 53.0, 22.0 ],
 					"style" : "",
 					"text" : "pcontrol"
 				}
@@ -291,7 +291,7 @@
 					"rounded" : 51.0,
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.text[11]",
+							"parameter_longname" : "live.text[4]",
 							"parameter_shortname" : "live.text[4]",
 							"parameter_type" : 2,
 							"parameter_mmax" : 1.0,
@@ -317,7 +317,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -349,7 +349,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"title" : "/mapper(view).2",
+						"title" : "/mapper(view).1",
 						"boxes" : [ 							{
 								"box" : 								{
 									"comment" : "",
@@ -388,7 +388,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 87.0, 184.5, 137.0, 22.0 ],
+					"patching_rect" : [ 98.0, 202.5, 137.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend model:address"
 				}
@@ -401,7 +401,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 87.0, 160.5, 137.0, 22.0 ],
+					"patching_rect" : [ 98.0, 178.5, 137.0, 22.0 ],
 					"style" : "",
 					"text" : "j.receive model:address"
 				}
@@ -415,7 +415,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 4.0, 276.5, 107.0, 22.0 ],
+					"patching_rect" : [ 60.333313, 294.5, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "mapper.view.large"
 				}
@@ -486,7 +486,7 @@
 					"presentation_rect" : [ 422.166687, 25.0, 23.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.text[2]",
+							"parameter_longname" : "live.text[9]",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2,
 							"parameter_mmax" : 1.0,
@@ -549,7 +549,7 @@
 					"presentation_rect" : [ 422.166687, 51.0, 23.833313, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.text[3]",
+							"parameter_longname" : "live.text[10]",
 							"parameter_shortname" : "live.text",
 							"parameter_type" : 2,
 							"parameter_mmax" : 1.0,
@@ -1294,9 +1294,7 @@
 , 			{
 				"box" : 				{
 					"background" : 1,
-					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"fontface" : 0,
-					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-12",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -1422,7 +1420,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-53", 1 ],
+					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-18", 0 ]
@@ -1698,7 +1696,7 @@
 					"destination" : [ "obj-30", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-42", 0 ]
+					"source" : [ "obj-42", 1 ]
 				}
 
 			}
@@ -1707,7 +1705,7 @@
 					"destination" : [ "obj-53", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-42", 1 ]
+					"source" : [ "obj-42", 0 ]
 				}
 
 			}
@@ -1816,15 +1814,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-51", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-53", 0 ]
 				}
 
 			}

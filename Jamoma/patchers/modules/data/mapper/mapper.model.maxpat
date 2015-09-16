@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 2207.0, 143.0, 1098.0, 786.0 ],
+		"rect" : [ 708.0, 328.0, 1098.0, 786.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,33 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 850.0, 320.0, 106.0, 22.0 ],
+					"style" : "",
+					"text" : "prepend clipmode"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"linecount" : 4,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 850.0, 246.0, 190.0, 62.0 ],
+					"style" : "",
+					"text" : "j.parameter clipmode @type string @default both @description \"defines how values exceeding range will be clipped.\""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-31",
 					"linecount" : 3,
 					"maxclass" : "newobj",
@@ -65,7 +92,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -893,7 +920,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1256,7 +1283,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1561,12 +1588,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 2470.0, 145.0, 799.0, 750.0 ],
+						"rect" : [ 1087.0, 145.0, 799.0, 750.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1978,7 +2005,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2444,7 +2471,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 872.0, 223.0, 116.0, 22.0 ],
+					"patching_rect" : [ 812.0, 176.0, 116.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend input/index"
 				}
@@ -2460,7 +2487,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 872.0, 157.0, 145.0, 62.0 ],
+					"patching_rect" : [ 812.0, 110.0, 145.0, 62.0 ],
 					"style" : "",
 					"text" : "j.parameter input/index @type integer @range 0 10 @clipmode both @default 0"
 				}
@@ -2495,7 +2522,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -3125,7 +3152,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -3995,6 +4022,25 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-90", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 859.5, 383.5, 151.5, 383.5 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-35", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -4207,7 +4253,7 @@
 					"destination" : [ "obj-90", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 881.5, 383.0, 151.5, 383.0 ],
+					"midpoints" : [ 821.5, 383.0, 151.5, 383.0 ],
 					"source" : [ "obj-36", 0 ]
 				}
 

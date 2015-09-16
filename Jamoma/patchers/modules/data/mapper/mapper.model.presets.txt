@@ -4,6 +4,7 @@
 # ###########################################
 # 
 function linear
+clipmode both
 function/parameters none
 input/going.down/action.1 none
 input/going.up/action.1 none
@@ -41,6 +42,7 @@ input/threshold.up 1.000000
 # ###########################################
 # 
 function freehand
+clipmode both
 function/parameters curveList 0.000000 0.000000 exponential base 1.000000 0.136326 0.528325 exponential base 1.000000 0.536656 0.240148 exponential base 1.000000 0.697282 0.772168 exponential base 0.196894 1.000000 1.000000 exponential base 1.000000
 output/going.down/action.1 none
 input/going.up/action.1 none
@@ -62,7 +64,7 @@ output/max 1.000000
 input/max 1.000000
 output/min 0.000000
 input/min 0.000000
-output /degrade~/samplerateRatio
+output /degrade~/samplerate_ratio
 rampTime 0
 input/threshold.down 0.000000
 output/threshold.down 0.000000
@@ -76,6 +78,7 @@ input/threshold.up 1.000000
 # ###########################################
 # 
 function power
+clipmode both
 function/parameters powerValue 1.000000 symmetry none
 output/going.down/action.1 none
 input/going.up/action.1 none
