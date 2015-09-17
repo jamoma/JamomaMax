@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 569.0, 496.0 ],
+		"rect" : [ 353.0, 97.0, 404.0, 468.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -44,24 +44,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 33.0, 24.0, 291.0, 20.0 ],
+					"patching_rect" : [ 29.0, 6.0, 291.0, 20.0 ],
 					"style" : "",
 					"text" : "this model can instanciate any model multiple times"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-7",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 93.0, 133.0, 146.0, 22.0 ],
-					"style" : "",
-					"text" : "preset \"4 mappers demo\""
 				}
 
 			}
@@ -76,7 +61,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 22.0, 125.5, 69.0, 37.0 ],
+					"patching_rect" : [ 4.0, 47.5, 61.0, 37.0 ],
 					"style" : "",
 					"text" : "recall preset"
 				}
@@ -93,30 +78,14 @@
 					"id" : "obj-4",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "multiModel.view.maxpat",
+					"name" : "multiModel.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 253.0, 67.0, 300.0, 315.0 ],
+					"patching_rect" : [ 73.0, 58.0, 300.0, 315.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 315.0 ],
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "none",
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 93.0, 160.0, 105.0, 22.0 ],
-					"style" : "",
-					"text" : "multiModel.model"
 				}
 
 			}
@@ -135,7 +104,7 @@
 					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 200.0, 402.0, 150.0, 70.0 ],
+					"patching_rect" : [ 237.5, 384.0, 150.0, 70.0 ],
 					"presentation_rect" : [ 318.0, 251.0, 150.0, 70.0 ],
 					"viewvisibility" : 1
 				}
@@ -156,100 +125,81 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 35.5, 402.0, 150.0, 70.0 ],
+					"patching_rect" : [ 73.0, 384.0, 150.0, 70.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 150.0, 70.0 ],
 					"viewvisibility" : 1
 				}
 
 			}
  ],
-		"lines" : [ 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
- ],
+		"lines" : [  ],
 		"parameters" : 		{
-			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
-			"obj-4::obj-30::obj-93::obj-82::obj-50" : [ "live.text[21]", "live.text[1]", 0 ],
+			"obj-4::obj-4::obj-30::obj-93::obj-8" : [ "live.text[19]", "live.text", 0 ],
+			"obj-4::obj-4::obj-13" : [ "live.text[2]", "live.text", 0 ],
+			"obj-4::obj-4::obj-30::obj-93::obj-82::obj-50" : [ "live.text[21]", "live.text[1]", 0 ],
 			"obj-3::obj-1::obj-13" : [ "live.dial", "Sample rate", 0 ],
-			"obj-4::obj-30::obj-93::obj-82::obj-54" : [ "live.text[20]", "live.text[1]", 0 ],
-			"obj-4::obj-30::obj-93::obj-8" : [ "live.text[19]", "live.text", 0 ],
-			"obj-4::obj-13" : [ "live.text[2]", "live.text", 0 ],
-			"obj-4::obj-30::obj-93::obj-21" : [ "live.text[18]", "live.text", 0 ]
+			"obj-4::obj-4::obj-30::obj-93::obj-21" : [ "live.text[18]", "live.text", 0 ],
+			"obj-3::obj-1::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-4::obj-4::obj-30::obj-93::obj-82::obj-54" : [ "live.text[20]", "live.text[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "mouse.module.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../mouse",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../mouse",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mouse",
-				"patcherrelativepath" : "../mouse",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.module.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
-				"patcherrelativepath" : "../../audio/stereo/Distortion/degrade~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/degrade~",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "multiModel.module.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/multiModel",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multiModel.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/multiModel",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "mapper.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper",
-				"patcherrelativepath" : "../mapper",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/multiModel",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "multiModel.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/multiModel",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/multiModel",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper",
-				"patcherrelativepath" : "../mapper",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -260,23 +210,20 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.function_freehand.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/mapper/function_options",
-				"patcherrelativepath" : "../mapper/function_options",
+				"name" : "j.function_generic.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/mapper/function_options",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespacebrowser.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/namespacebrowser",
-				"patcherrelativepath" : "../../../components/data/namespacebrowser",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/namespace/namespacebrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -321,7 +268,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.map.mxo",
+				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -329,27 +276,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.remote_array.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.map.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote_array.mxo",
 				"type" : "iLaX"
 			}
  ],

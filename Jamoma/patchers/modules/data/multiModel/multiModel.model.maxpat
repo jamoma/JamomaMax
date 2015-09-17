@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -75,7 +75,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -158,26 +158,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 337.0, 100.0, 151.0, 106.0 ],
+									"patching_rect" : [ 310.0, 77.0, 151.0, 106.0 ],
 									"style" : "",
 									"text" : "because script-created models need to wait to be initialized before being able to receive parameter values from preset...\n:-s"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbleside" : 3,
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-6",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 337.0, 28.5, 69.0, 37.0 ],
-									"style" : "",
-									"text" : "recall preset"
 								}
 
 							}
@@ -209,14 +192,14 @@
 , 							{
 								"box" : 								{
 									"fontname" : "Arial",
-									"fontsize" : 12.0,
+									"fontsize" : 17.649158,
 									"id" : "obj-5",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 148.0, 33.0, 158.0, 20.0 ],
+									"patching_rect" : [ 178.0, 34.0, 167.0, 26.0 ],
 									"style" : "",
-									"text" : "auto recall preset twice (!!!) "
+									"text" : "recall preset twice !"
 								}
 
 							}
@@ -433,13 +416,14 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-14",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 157.0, 557.0, 89.0, 22.0 ],
+									"patching_rect" : [ 157.0, 557.0, 89.0, 35.0 ],
 									"style" : "",
-									"text" : "\"100 mappers\""
+									"text" : "\"4 mappers demo\""
 								}
 
 							}
@@ -452,9 +436,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 292.5, 463.5, 99.0, 22.0 ],
+									"patching_rect" : [ 292.5, 463.5, 117.0, 22.0 ],
 									"style" : "",
-									"text" : "3 \"100 mappers\""
+									"text" : "2 \"4 mappers demo\""
 								}
 
 							}
@@ -774,7 +758,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -978,13 +962,13 @@
 , 							{
 								"box" : 								{
 									"fontname" : "Courier Bold Oblique",
-									"fontsize" : 19.774582,
+									"fontsize" : 13.997483,
 									"hidden" : 1,
 									"id" : "obj-44",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 711.5, 691.5, 388.0, 26.0 ],
+									"patching_rect" : [ 751.375, 667.5, 299.0, 20.0 ],
 									"style" : "",
 									"text" : "TO DO : add \"duplicate\" function"
 								}
@@ -1083,7 +1067,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 5,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -1811,6 +1795,7 @@
 , 							{
 								"box" : 								{
 									"color" : [ 0.927504, 0.496095, 0.215242, 1.0 ],
+									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-1",
@@ -1819,9 +1804,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 778.375, 97.0, 263.0, 35.0 ],
+									"patching_rect" : [ 751.375, 103.0, 263.0, 35.0 ],
 									"style" : "",
-									"text" : "j.parameter modelPatchName @priority -1001 @repetitions/filter 1 @default degrade~.model"
+									"text" : "j.parameter modelPatchName @priority -1001 @repetitions/filter 1 @default mapper.model"
 								}
 
 							}
@@ -1834,7 +1819,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 778.375, 133.0, 175.0, 22.0 ],
+									"patching_rect" : [ 751.375, 143.0, 175.0, 22.0 ],
 									"style" : "",
 									"text" : "v #0_model degrade~.model"
 								}
