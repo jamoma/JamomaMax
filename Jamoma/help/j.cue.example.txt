@@ -2,7 +2,7 @@
 - description "Initialisation. Models are ready to play."
 /mouse/reference screen
 /mouse/active 0
-/degrade~/samplerateRatio 1.000000
+/degrade~/samplerate_ratio 1.000000
 /degrade~/bitdepth 24
 /degrade~/audio/gain 0.000000
 /degrade~/audio/mix 0.000000
@@ -13,7 +13,7 @@
 - description "Mouse mapping activated + audio FX applied"
 /mouse/reference screen
 /mouse/active 1
-/degrade~/samplerateRatio 1.000000
+/degrade~/samplerate_ratio 1.000000
 /degrade~/bitdepth 24
 /degrade~/audio/gain 0.000000
 /degrade~/audio/mix 100.000000
@@ -24,7 +24,7 @@
 - description "audio degrade get harsher"
 /mouse/reference screen
 /mouse/active 1
-/degrade~/samplerateRatio 0.100000
+/degrade~/samplerate_ratio 0.100000
 /degrade~/bitdepth 1
 /degrade~/audio/gain 80.000000
 /degrade~/audio/mix 100.000000
@@ -35,7 +35,7 @@
 - description "Slow fadeout toward the end of the show"
 /mouse/reference screen
 /mouse/active 0
-/degrade~/samplerateRatio 0.100000 ramp 2000
+/degrade~/samplerate_ratio 0.100000 ramp 2000
 /degrade~/bitdepth 1 ramp 2000
 /degrade~/audio/gain 0.000000 ramp 2000
 /degrade~/audio/mix 0.000000 ramp 2000
