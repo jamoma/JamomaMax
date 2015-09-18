@@ -17,8 +17,8 @@ result_filter = ((max.os === "windows") * NUM_WINDOWS_BOGUS_DLLs);
 
 
 // Query string for getting plug-in names from the Max database
-var query = "SELECT name FROM objects JOIN files ON file_id_ext = files.file_id WHERE role_id_ext in (SELECT role_id FROM roles WHERE rolename = \"audioplugin\") AND validity = 1";
-
+//var query = "SELECT name FROM objects JOIN files ON file_id_ext = files.file_id WHERE role_id_ext in (SELECT role_id FROM roles WHERE rolename = \"audioplugin\") AND validity = 1";
+var query = "SELECT _name FROM _things WHERE _kind = 'audioplugin' AND _status = ''";
 
 
 /* By default, the Max database is not used by the Max runtime or in standalones.
@@ -38,7 +38,8 @@ task.repeat();
 
 function open_db()
 {
-	var status = sqlite.open("__max5db__",1);
+//	var status = sqlite.open("__max5db__",1);
+	var status = sqlite.open("__maxdb__",1);
 
 	if (status == 0)
 	{	
