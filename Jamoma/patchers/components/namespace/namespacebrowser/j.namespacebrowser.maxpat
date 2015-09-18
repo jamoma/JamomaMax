@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -39,20 +39,6 @@
 		"subpatcher_template" : "",
 		"defaultfocusbox" : "textedit",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ -738.0, 639.0, 101.0, 22.0 ],
-					"style" : "",
-					"text" : "print SELECTED"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -95,7 +81,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -174,7 +160,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::comment::hidden",
-									"varname" : "u232009509"
+									"varname" : "u941010373"
 								}
 
 							}
@@ -195,7 +181,7 @@
 ,
 									"style" : "",
 									"text" : "pattr @bindto parent::menu::hidden",
-									"varname" : "u786009511"
+									"varname" : "u018010375"
 								}
 
 							}
@@ -394,7 +380,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ -421.0, 514.5, 143.0, 35.0 ],
+					"patching_rect" : [ -421.0, 512.5, 143.0, 35.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 68.0, 0.0, 232.0, 21.0 ],
 					"style" : "",
@@ -424,7 +410,6 @@
 					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"border" : 0,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 0, 1, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 0, 2, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ], [ 0, 3, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ] ],
 					"cols" : 1,
 					"colwidth" : 500,
 					"fgcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
@@ -443,7 +428,7 @@
 					"patching_rect" : [ -1091.0, 231.0, 188.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 190.0, 21.0, 184.0, 765.0 ],
-					"rows" : 4,
+					"rows" : 36,
 					"sccolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"selmode" : 3,
 					"sgcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
@@ -457,7 +442,6 @@
 					"bgcolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"border" : 0,
 					"bordercolor" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"celldef" : [ [ 0, 0, 0, 1, 0.0, 0.0, 0.0, 1.0, 0, 0.0, 0.0, 0.0, 1.0, -1, -1, -1 ] ],
 					"cols" : 1,
 					"colwidth" : 500,
 					"fgcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
@@ -477,7 +461,7 @@
 					"patching_rect" : [ -1365.0, 231.0, 184.0, 78.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 3.0, 21.0, 187.0, 765.0 ],
-					"rows" : 6,
+					"rows" : 5,
 					"sccolor" : [ 0.8, 0.8, 0.8, 1.0 ],
 					"selmode" : 3,
 					"sgcolor" : [ 0.7, 0.7, 0.7, 0.701961 ],
@@ -531,7 +515,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -740,7 +724,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1336,7 +1320,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1778,6 +1762,7 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-82",
@@ -1785,9 +1770,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 25.0, 112.5, 41.0, 22.0 ],
+					"patching_rect" : [ 27.0, 112.5, 41.0, 22.0 ],
 					"style" : "",
-					"text" : "+ 440"
+					"text" : "+ 760"
 				}
 
 			}
@@ -1866,7 +1851,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2080,7 +2065,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 6,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2410,10 +2395,10 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ -710.0, 190.0, 237.0, 26.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1.0, 0.0, 376.0, 20.0 ],
+					"presentation_rect" : [ 1.0, 0.0, 377.0, 20.0 ],
 					"style" : "default",
 					"tabmode" : 0,
-					"text" : "none",
+					"text" : "/degrade~/audio/bypass",
 					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ],
 					"varname" : "textedit"
 				}
@@ -3271,15 +3256,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-57", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-58", 0 ]
 				}
 
 			}
