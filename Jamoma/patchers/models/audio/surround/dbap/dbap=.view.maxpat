@@ -165,8 +165,8 @@
 					"presentation_rect" : [ 113.0, 46.5, 36.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.numbox[2]",
-							"parameter_shortname" : "live.numbox",
+							"parameter_longname" : "Blur[8]",
+							"parameter_shortname" : "Blur",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
 						}
@@ -283,7 +283,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 170.0, 45.0, 63.0, 18.0 ],
 					"style" : "",
-					"text" : "Rolloff (dB):",
+					"text" : "Rolloff (dB)",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 
@@ -300,7 +300,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 170.0, 25.0, 66.0, 18.0 ],
 					"style" : "",
-					"text" : "Dimensions:",
+					"text" : "Dimensions",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 
@@ -317,7 +317,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 45.0, 103.0, 18.0 ],
 					"style" : "",
-					"text" : "Number of speakers:",
+					"text" : "Number of speakers",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 
@@ -334,7 +334,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 5.0, 25.0, 98.0, 18.0 ],
 					"style" : "",
-					"text" : "Number of sources:",
+					"text" : "Number of sources",
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 
@@ -342,6 +342,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-44",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 4,
@@ -496,36 +497,36 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-10::obj-17::obj-1::obj-8" : [ "live.text[6]", "live.text", 0 ],
-			"obj-2" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-10::obj-17::obj-3::obj-4" : [ "Blur[4]", "Blur", 0 ],
-			"obj-10::obj-17::obj-4::obj-6" : [ "Gain[3]", "Gain", 0 ],
-			"obj-10::obj-17::obj-8::obj-4" : [ "Blur[7]", "Blur", 0 ],
-			"obj-10::obj-17::obj-5::obj-4" : [ "Blur[2]", "Blur", 0 ],
-			"obj-3" : [ "live.numbox[1]", "live.numbox", 0 ],
-			"obj-10::obj-17::obj-6::obj-8" : [ "live.text[1]", "live.text", 0 ],
-			"obj-10::obj-17::obj-3::obj-6" : [ "Gain[4]", "Gain", 0 ],
-			"obj-10::obj-17::obj-7::obj-4" : [ "Blur", "Blur", 0 ],
-			"obj-10::obj-17::obj-2::obj-4" : [ "Blur[5]", "Blur", 0 ],
-			"obj-10::obj-17::obj-4::obj-8" : [ "live.text[3]", "live.text", 0 ],
-			"obj-10::obj-17::obj-3::obj-8" : [ "live.text[4]", "live.text", 0 ],
-			"obj-10::obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
-			"obj-10::obj-17::obj-1::obj-6" : [ "Gain[6]", "Gain", 0 ],
-			"obj-10::obj-17::obj-5::obj-6" : [ "Gain[2]", "Gain", 0 ],
-			"obj-10::obj-17::obj-8::obj-8" : [ "live.text[9]", "live.text", 0 ],
-			"obj-4" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-10::obj-17::obj-6::obj-4" : [ "Blur[1]", "Blur", 0 ],
-			"obj-10::obj-17::obj-7::obj-8" : [ "live.text", "live.text", 0 ],
-			"obj-10::obj-17::obj-1::obj-4" : [ "Blur[6]", "Blur", 0 ],
-			"obj-10::obj-17::obj-2::obj-8" : [ "live.text[5]", "live.text", 0 ],
-			"obj-10::obj-17::obj-7::obj-6" : [ "Gain", "Gain", 0 ],
-			"obj-10::obj-17::obj-2::obj-6" : [ "Gain[5]", "Gain", 0 ],
-			"obj-10::obj-3::obj-15" : [ "live.button", "live.button", 0 ],
-			"obj-10::obj-17::obj-4::obj-4" : [ "Blur[3]", "Blur", 0 ],
-			"obj-10::obj-17::obj-5::obj-8" : [ "live.text[2]", "live.text", 0 ],
-			"obj-10::obj-17::obj-8::obj-6" : [ "Gain[7]", "Gain", 0 ],
+			"obj-10::obj-17::obj-5::obj-6" : [ "Gain[5]", "Gain", 0 ],
 			"obj-5" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-10::obj-17::obj-6::obj-6" : [ "Gain[1]", "Gain", 0 ]
+			"obj-10::obj-17::obj-2::obj-4" : [ "Blur[2]", "Blur", 0 ],
+			"obj-10::obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
+			"obj-10::obj-17::obj-4::obj-6" : [ "Gain[4]", "Gain", 0 ],
+			"obj-10::obj-17::obj-6::obj-8" : [ "live.text[6]", "live.text", 0 ],
+			"obj-10::obj-17::obj-8::obj-6" : [ "Gain", "Gain", 0 ],
+			"obj-10::obj-17::obj-6::obj-6" : [ "Gain[6]", "Gain", 0 ],
+			"obj-2" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-4" : [ "Blur[8]", "Blur", 0 ],
+			"obj-10::obj-17::obj-1::obj-6" : [ "Gain[1]", "Gain", 0 ],
+			"obj-10::obj-17::obj-2::obj-8" : [ "live.text[2]", "live.text", 0 ],
+			"obj-10::obj-17::obj-3::obj-8" : [ "live.text[3]", "live.text", 0 ],
+			"obj-10::obj-17::obj-4::obj-4" : [ "Blur[4]", "Blur", 0 ],
+			"obj-10::obj-17::obj-3::obj-6" : [ "Gain[3]", "Gain", 0 ],
+			"obj-10::obj-17::obj-7::obj-8" : [ "live.text[7]", "live.text", 0 ],
+			"obj-10::obj-17::obj-8::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-10::obj-17::obj-1::obj-4" : [ "Blur[1]", "Blur", 0 ],
+			"obj-10::obj-17::obj-5::obj-4" : [ "Blur[5]", "Blur", 0 ],
+			"obj-10::obj-17::obj-7::obj-6" : [ "Gain[7]", "Gain", 0 ],
+			"obj-10::obj-17::obj-8::obj-4" : [ "Blur", "Blur", 0 ],
+			"obj-10::obj-17::obj-3::obj-4" : [ "Blur[3]", "Blur", 0 ],
+			"obj-10::obj-17::obj-1::obj-8" : [ "live.text[1]", "live.text", 0 ],
+			"obj-10::obj-17::obj-6::obj-4" : [ "Blur[6]", "Blur", 0 ],
+			"obj-10::obj-17::obj-2::obj-6" : [ "Gain[2]", "Gain", 0 ],
+			"obj-10::obj-17::obj-4::obj-8" : [ "live.text[4]", "live.text", 0 ],
+			"obj-10::obj-17::obj-5::obj-8" : [ "live.text[5]", "live.text", 0 ],
+			"obj-10::obj-17::obj-7::obj-4" : [ "Blur[7]", "Blur", 0 ],
+			"obj-10::obj-3::obj-15" : [ "live.button", "live.button", 0 ],
+			"obj-3" : [ "live.numbox[1]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
