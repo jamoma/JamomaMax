@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
-			"architecture" : "x64",
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 58.0, 136.0, 644.0, 520.0 ],
+		"rect" : [ 338.0, 331.0, 150.0, 70.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -69,6 +69,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Choose the calculation mode for the crossfade: fast uses a lookup table while precisision performs trig calculations",
 					"id" : "obj-22",
 					"maxclass" : "live.menu",
 					"numinlets" : 1,
@@ -94,6 +95,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Choose the shape of the crossfade: linear or equal-power",
 					"id" : "obj-21",
 					"maxclass" : "live.menu",
 					"numinlets" : 1,
@@ -151,16 +153,17 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-18",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 6,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 141.0, 456.0, 42.0, 22.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 141.0, 456.0, 109.0, 22.0 ],
 					"style" : "",
-					"text" : "* 0.02"
+					"text" : "scale -50. 50. 1. 2."
 				}
 
 			}
@@ -196,16 +199,17 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-15",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 6,
 					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 141.0, 323.0, 35.0, 22.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 141.0, 323.0, 109.0, 22.0 ],
 					"style" : "",
-					"text" : "* 50."
+					"text" : "scale 1. 2. -50. 50."
 				}
 
 			}
@@ -356,9 +360,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"fontface" : 0,
-					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-6",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -367,7 +369,7 @@
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/no_model_address"
+					"text" : "/crossfade"
 				}
 
 			}
@@ -537,31 +539,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-10" : [ "Crossfade", "Crossfade", 0 ],
-			"obj-21" : [ "live.menu", "Shape", 0 ],
-			"obj-22" : [ "live.menu[1]", "Shape", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }

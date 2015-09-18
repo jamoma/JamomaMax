@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
-			"architecture" : "x64",
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 59.0, 104.0, 598.0, 511.0 ],
+		"rect" : [ 59.0, 104.0, 506.0, 474.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,92 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-4",
+					"id" : "obj-10",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 23.0, 93.0, 105.0, 22.0 ],
+					"presentation_rect" : [ 158.0, 109.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "file/path duduk.aif"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "none",
+					"args" : [ "soundfile_help" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-8",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "soundfile~.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 177.5, 157.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 570.0, 464.0, 300.0, 70.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Stereo sound file player.",
+					"id" : "obj-9",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 23.0, 157.0, 105.0, 35.0 ],
+					"style" : "",
+					"text" : "soundfile~.model soundfile_help"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "live.gain~",
+					"numinlets" : 2,
+					"numoutlets" : 5,
+					"outlettype" : [ "signal", "signal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 23.0, 206.5, 62.0, 165.0 ],
+					"presentation_rect" : [ 15.0, 15.0, 48.0, 50.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "Gain[1]",
+							"parameter_shortname" : "Gain",
+							"parameter_type" : 0,
+							"parameter_mmin" : -70.0,
+							"parameter_mmax" : 6.0,
+							"parameter_initial_enable" : 1,
+							"parameter_initial" : [ -30 ],
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "live.gain~[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
 					"local" : 1,
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 478.0, 371.0, 45.0, 45.0 ],
+					"patching_rect" : [ 23.0, 386.5, 45.0, 45.0 ],
 					"style" : ""
 				}
 
@@ -71,151 +151,94 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 140.0, 106.0, 83.0, 22.0 ],
+					"patching_rect" : [ 39.0, 122.0, 83.0, 22.0 ],
 					"style" : "",
 					"text" : "file/path none"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "output~" ],
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-3",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "output~.module.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 140.0, 237.0, 300.0, 175.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "soundfile" ],
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-1",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "soundfile~.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 140.0, 145.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"viewvisibility" : 1
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-1", 1 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-9", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 43.25, 378.5, 58.5, 378.5 ],
+					"source" : [ "obj-6", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
  ],
 		"parameters" : 		{
-			"obj-3::obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-1::obj-1::obj-9::obj-41" : [ "live.text[2]", "live.text", 0 ],
-			"obj-3::obj-1::obj-17" : [ "Master Gain[1]", "Master Gain", 0 ],
-			"obj-3::obj-1::obj-100" : [ "live.text[10]", "live.text[1]", 0 ],
-			"obj-3::obj-1::obj-99" : [ "live.menu[3]", "live.menu[2]", 0 ],
-			"obj-3::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-3::obj-1::obj-108" : [ "live.text[7]", "live.text[4]", 0 ],
-			"obj-3::obj-1::obj-104" : [ "live.dial[1]", "Depth", 0 ],
-			"obj-1::obj-1::obj-9::obj-43" : [ "Pitch Shift", "Pitch Shift", 0 ],
-			"obj-3::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-3::obj-1::obj-12::obj-6" : [ "live.text[5]", "live.text", 0 ],
-			"obj-3::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
-			"obj-1::obj-1::obj-9::obj-37" : [ "Basic Tuning", "Basic Tuning", 0 ],
-			"obj-1::obj-1::obj-9::obj-36" : [ "Slur Time", "Slur Time", 0 ],
-			"obj-3::obj-1::obj-82" : [ "pan", "Pan", 0 ],
-			"obj-1::obj-1::obj-9::obj-45" : [ "transposition", "transposition", 0 ],
-			"obj-1::obj-1::obj-58" : [ "live.text[8]", "live.text[4]", 0 ],
-			"obj-3::obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-3::obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ],
-			"obj-3::obj-1::obj-12::obj-42" : [ "live.text[9]", "live.text", 0 ],
-			"obj-3::obj-1::obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-3::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-3::obj-1::obj-12::obj-30" : [ "live.menu[2]", "live.menu", 0 ],
-			"obj-3::obj-1::obj-12::obj-45" : [ "live.text[4]", "live.text", 0 ],
-			"obj-3::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
-			"obj-1::obj-1::obj-9::obj-16" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-1::obj-1::obj-9::obj-59" : [ "live.text[3]", "live.text", 0 ],
-			"obj-3::obj-1::obj-90" : [ "live.text[12]", "live.text[1]", 0 ],
-			"obj-1::obj-1::obj-9::obj-14" : [ "live.menu", "live.menu", 0 ],
-			"obj-3::obj-1::obj-103" : [ "live.text[6]", "live.text", 0 ],
-			"obj-3::obj-1::obj-98" : [ "live.menu[4]", "live.menu", 0 ],
-			"obj-1::obj-1::obj-9::obj-5" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-1::obj-9::obj-29" : [ "live.text[1]", "live.text", 0 ],
-			"obj-3::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-1::obj-1::obj-9::obj-65" : [ "formant", "formant", 0 ],
-			"obj-3::obj-1::obj-102" : [ "live.text[11]", "live.text", 0 ]
+			"obj-8::obj-9::obj-43" : [ "Pitch Shift[1]", "Pitch Shift", 0 ],
+			"obj-8::obj-9::obj-36" : [ "Slur Time[1]", "Slur Time", 0 ],
+			"obj-6" : [ "Gain[1]", "Gain", 0 ],
+			"obj-8::obj-9::obj-59" : [ "live.text[13]", "live.text", 0 ],
+			"obj-8::obj-9::obj-65" : [ "formant[1]", "formant", 0 ],
+			"obj-8::obj-9::obj-5" : [ "live.text[16]", "live.text", 0 ],
+			"obj-8::obj-58" : [ "live.text[17]", "live.text[4]", 0 ],
+			"obj-8::obj-9::obj-14" : [ "live.menu[6]", "live.menu", 0 ],
+			"obj-8::obj-9::obj-45" : [ "transposition[1]", "transposition", 0 ],
+			"obj-8::obj-9::obj-41" : [ "live.text[14]", "live.text", 0 ],
+			"obj-8::obj-9::obj-29" : [ "live.text[15]", "live.text", 0 ],
+			"obj-8::obj-9::obj-37" : [ "Basic Tuning[1]", "Basic Tuning", 0 ],
+			"obj-8::obj-9::obj-16" : [ "live.menu[5]", "live.menu", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "soundfile~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "soundfile~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "talk.aiff",
-				"bootpath" : "C74:/media/jitter",
-				"type" : "AIFF",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/data/list2parameter",
-				"type" : "JSON",
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "soundfile~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -226,94 +249,16 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "output~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"name" : "soundfile~.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/soundfile~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "output~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "saturation~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "record~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/record~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "output~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Output/output~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.out~.mxo",
@@ -336,27 +281,27 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.stats.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.in~.mxo",
+				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.overdrive~.mxo",
+				"name" : "j.view.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.limiter~.mxo",
+				"name" : "j.remote.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.panorama~.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive~.mxo",
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
  ],

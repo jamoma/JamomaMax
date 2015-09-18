@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x64"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 555.0, 276.0, 308.0, 323.0 ],
@@ -15,32 +16,48 @@
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"annotation" : "none",
 					"args" : [ "#1" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-1",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "balance~view.maxpat",
+					"name" : "balance~.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -51,7 +68,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 91.5, 204.0, 27.0, 27.0 ]
+					"patching_rect" : [ 91.5, 204.0, 27.0, 27.0 ],
+					"style" : ""
 				}
 
 			}
@@ -65,7 +83,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 22.0, 165.0, 158.0, 20.0 ],
+					"patching_rect" : [ 22.0, 165.0, 158.0, 22.0 ],
+					"style" : "",
 					"text" : "balance~.model #1",
 					"varname" : "j.model"
 				}
@@ -79,7 +98,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 22.0, 102.0, 26.0, 26.0 ]
+					"patching_rect" : [ 22.0, 102.0, 26.0, 26.0 ],
+					"style" : ""
 				}
 
 			}
@@ -91,7 +111,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 161.0, 102.0, 27.0, 27.0 ]
+					"patching_rect" : [ 161.0, 102.0, 27.0, 27.0 ],
+					"style" : ""
 				}
 
 			}
@@ -102,7 +123,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 161.0, 204.0, 27.0, 27.0 ]
+					"patching_rect" : [ 161.0, 204.0, 27.0, 27.0 ],
+					"style" : ""
 				}
 
 			}
@@ -113,7 +135,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 22.0, 204.0, 26.0, 26.0 ]
+					"patching_rect" : [ 22.0, 204.0, 26.0, 26.0 ],
+					"style" : ""
 				}
 
 			}
@@ -164,17 +187,21 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-1::obj-22" : [ "live.menu[1]", "Shape", 0 ],
+			"obj-1::obj-10" : [ "Balance", "Balance", 0 ],
+			"obj-1::obj-21" : [ "live.menu", "Shape", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/balance~",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "balance~view.maxpat",
-				"bootpath" : "/Users/lossius/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/balance~",
-				"patcherrelativepath" : ".",
+				"name" : "balance~.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -210,7 +237,8 @@
 				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
