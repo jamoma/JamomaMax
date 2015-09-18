@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 10,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 3.0, 45.0, 686.0, 411.0 ],
@@ -17,16 +18,24 @@
 		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
 		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 0,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Arial",
@@ -36,13 +45,15 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 359.0, 90.0, 18.0 ],
+					"patching_rect" : [ 159.0, 357.0, 90.0, 22.0 ],
+					"style" : "",
 					"text" : "\"black & white\""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-13",
@@ -50,27 +61,32 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 383.0, 117.0, 20.0 ],
-					"text" : "j.send /events/recall"
+					"patching_rect" : [ 159.0, 381.0, 184.0, 22.0 ],
+					"style" : "",
+					"text" : "j.send /cue_manager_help/recall"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 188.0, 332.0, 160.0, 20.0 ],
-					"text" : "j.receive /events/read/done"
+					"patching_rect" : [ 159.0, 330.0, 180.0, 35.0 ],
+					"style" : "",
+					"text" : "j.receive /cue_manager_help/read/done"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-11",
@@ -78,8 +94,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 188.0, 303.714294, 131.0, 20.0 ],
-					"text" : "j.send /events/file/path"
+					"patching_rect" : [ 159.0, 301.714294, 197.0, 22.0 ],
+					"style" : "",
+					"text" : "j.send /cue_manager_help/file/path"
 				}
 
 			}
@@ -93,13 +110,15 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 188.0, 266.914276, 104.0, 33.0 ],
+					"patching_rect" : [ 159.0, 264.914276, 104.0, 35.0 ],
+					"style" : "",
 					"text" : "combine PATH example.cues.txt"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-10",
@@ -107,8 +126,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 138.0, 194.0, 139.0, 20.0 ],
-					"text" : "j.initialized /events 400"
+					"patching_rect" : [ 109.0, 192.0, 199.0, 22.0 ],
+					"style" : "",
+					"text" : "j.initialized /cue_manager_help 400"
 				}
 
 			}
@@ -121,7 +141,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 138.0, 218.914291, 34.0, 18.0 ],
+					"patching_rect" : [ 109.0, 216.914291, 34.0, 22.0 ],
+					"style" : "",
 					"text" : "path"
 				}
 
@@ -135,8 +156,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 138.0, 242.0, 69.0, 20.0 ],
+					"patching_rect" : [ 109.0, 240.0, 69.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"style" : "",
 					"text" : "thispatcher"
 				}
 
@@ -144,29 +166,29 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
+					"fontsize" : 11.955563,
 					"id" : "obj-5",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 332.0, 161.0, 53.0 ],
-					"text" : "If you want to sequence events, you should use cue_sheet"
+					"patching_rect" : [ 14.0, 330.329681, 140.0, 47.0 ],
+					"style" : "",
+					"text" : "If you want to sequence events, you should use cue_script"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 14.0,
-					"frgb" : 0.0,
+					"fontsize" : 12.051734,
 					"id" : "obj-4",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 294.0, 157.0, 38.0 ],
+					"patching_rect" : [ 14.0, 294.0, 136.521744, 33.0 ],
+					"style" : "",
 					"text" : "cue_manager is a bin of unordered events"
 				}
 
@@ -175,15 +197,22 @@
 				"box" : 				{
 					"annotation" : "none",
 					"bgcolor" : [ 0.937255, 0.937255, 0.937255, 0.0 ],
+					"bgmode" : 0,
 					"border" : 1,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-3",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "brcosa%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 362.0, 86.05835, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -191,6 +220,7 @@
 				"box" : 				{
 					"id" : "obj-9",
 					"maxclass" : "jit.pwindow",
+					"name" : "u287000608",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
@@ -202,32 +232,46 @@
 				"box" : 				{
 					"annotation" : "none",
 					"bgcolor" : [ 0.937255, 0.937255, 0.937255, 0.0 ],
+					"bgmode" : 0,
 					"border" : 1,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-7",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "noise%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 362.0, 9.05835, 150.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"annotation" : "none",
-					"args" : [ "events" ],
+					"args" : [ "cue_manager_help" ],
 					"bgcolor" : [ 0.937255, 0.937255, 0.937255, 0.0 ],
+					"bgmode" : 0,
 					"border" : 1,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-1",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "cue_manager.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 14.0, 9.05835, 300.0, 175.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -307,99 +351,85 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "cue_manager.module.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/data/cue-manager",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/cue-manager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cue_manager.model.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/data/cue-manager",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/cue-manager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cue_manager.view.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/data/cue-manager",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/cue-manager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.datetime.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/datetime",
-				"patcherrelativepath" : "../../../components/data/datetime",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/datetime",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespace_selector.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/namespace/namespace_selector",
-				"patcherrelativepath" : "../../../components/namespace/namespace_selector",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/namespace/namespace_selector",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.module.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../../video/sources/noise%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.model.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../../video/sources/noise%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.view.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../../video/sources/noise%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "brcosa%.module.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/fx/brcosa%",
-				"patcherrelativepath" : "../../video/fx/brcosa%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/video/fx/brcosa%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "brcosa%.model.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/fx/brcosa%",
-				"patcherrelativepath" : "../../video/fx/brcosa%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/video/fx/brcosa%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "brcosa%.view.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/fx/brcosa%",
-				"patcherrelativepath" : "../../video/fx/brcosa%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/video/fx/brcosa%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/initialized",
-				"patcherrelativepath" : "../../../components/data/initialized",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -463,7 +493,8 @@
 				"name" : "j.oscroute.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
