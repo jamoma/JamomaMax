@@ -1,0 +1,460 @@
+
+- preset "4 mappers demo"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName mapper.model
+modelsIDs mapper.1 mapper.2 mapper.3 mapper.4
+mapper.4/function linear
+mapper.2/function power
+mapper.3/function linear
+mapper.1/function freehand
+mapper.3/function/parameters.1 none
+mapper.1/function/parameters.1 curveList 0.000000 0.000000 exponential base 1.000000 0.119028 0.242611 exponential base 1.000000 0.445222 0.139163 exponential base 0.057630 0.613262 0.678571 exponential base 0.114113 0.810956 0.533251 exponential base 12.070166 1.000000 1.000000 exponential base 1.000000
+mapper.2/function/parameters.1 powerValue -1.000000
+mapper.4/function/parameters.1 none
+mapper.2/function/parameters.2 symmetry none
+mapper.2/output/going.up/action.1 none
+mapper.3/output/going.up/action.1 none
+mapper.1/input/going.down/action.1 none
+mapper.3/input/going.down/action.1 none
+mapper.4/input/going.up/action.1 none
+mapper.1/output/going.down/action.1 none
+mapper.2/input/going.down/action.1 none
+mapper.2/input/going.up/action.1 none
+mapper.3/input/going.up/action.1 none
+mapper.3/output/going.down/action.1 none
+mapper.4/input/going.down/action.1 none
+mapper.2/output/going.down/action.1 none
+mapper.4/output/going.down/action.1 none
+mapper.1/input/going.up/action.1 none
+mapper.1/output/going.up/action.1 none
+mapper.4/output/going.up/action.1 none
+mapper.1/output/going.down/action.2 none
+mapper.4/output/going.up/action.2 none
+mapper.1/input/going.down/action.2 none
+mapper.1/input/going.up/action.2 none
+mapper.2/output/going.up/action.2 none
+mapper.2/input/going.down/action.2 none
+mapper.2/input/going.up/action.2 none
+mapper.1/output/going.up/action.2 none
+mapper.3/output/going.down/action.2 none
+mapper.4/input/going.up/action.2 none
+mapper.3/input/going.down/action.2 none
+mapper.2/output/going.down/action.2 none
+mapper.4/input/going.down/action.2 none
+mapper.3/input/going.up/action.2 none
+mapper.4/output/going.down/action.2 none
+mapper.3/output/going.up/action.2 none
+mapper.2/output/going.up/action.3 none
+mapper.3/input/going.down/action.3 none
+mapper.1/input/going.up/action.3 none
+mapper.4/output/going.down/action.3 none
+mapper.4/output/going.up/action.3 none
+mapper.2/input/going.down/action.3 none
+mapper.3/output/going.down/action.3 none
+mapper.2/input/going.up/action.3 none
+mapper.1/output/going.up/action.3 none
+mapper.1/input/going.down/action.3 none
+mapper.4/input/going.up/action.3 none
+mapper.1/output/going.down/action.3 none
+mapper.3/input/going.up/action.3 none
+mapper.2/output/going.down/action.3 none
+mapper.4/input/going.down/action.3 none
+mapper.3/output/going.up/action.3 none
+mapper.2/data/active 1
+mapper.3/data/active 1
+mapper.4/data/active 1
+mapper.1/data/active 1
+mapper.2/data/bypass 0
+mapper.3/data/bypass 0
+mapper.4/data/bypass 0
+mapper.1/data/bypass 0
+mapper.4/input/index 0
+mapper.2/input/index 0
+mapper.1/input/index 0
+mapper.3/input/index 0
+mapper.4/input /mouse/delta/angle
+mapper.1/input /mouse/position/y
+mapper.3/input /mouse/button
+mapper.2/input /mouse/position/x
+mapper.4/output/max 100.000000
+mapper.4/input/max 3.140000
+mapper.2/output/max 24.000000
+mapper.1/input/max 1.000000
+mapper.3/output/max 0.000000
+mapper.3/input/max 1.000000
+mapper.1/output/max 1.000000
+mapper.2/input/max 1.000000
+mapper.4/input/min -3.140000
+mapper.2/input/min 0.000000
+mapper.3/output/min -96.000000
+mapper.4/output/min 0.000000
+mapper.2/output/min 1.000000
+mapper.3/input/min 0.000000
+mapper.1/output/min 0.000000
+mapper.1/input/min 0.000000
+mapper.2/output /degrade~/bitdepth
+mapper.4/output /degrade~/audio/mix
+mapper.3/output /degrade~/audio/gain
+mapper.1/output /degrade~/samplerate_ratio
+mapper.4/rampTime 0
+mapper.1/rampTime 0
+mapper.2/rampTime 0
+mapper.3/rampTime 250
+mapper.2/input/threshold.down 0.000000
+mapper.4/output/threshold.down 0.000000
+mapper.1/input/threshold.down 0.000000
+mapper.1/output/threshold.down 0.000000
+mapper.3/input/threshold.down 0.000000
+mapper.4/input/threshold.down 0.000000
+mapper.2/output/threshold.down 1.000000
+mapper.3/output/threshold.down 0.000000
+mapper.2/input/threshold.up 1.000000
+mapper.1/input/threshold.up 1.000000
+mapper.3/input/threshold.up 1.000000
+mapper.4/output/threshold.up 1.000000
+mapper.4/input/threshold.up 1.000000
+mapper.2/output/threshold.up 1.000000
+mapper.1/output/threshold.up 1.000000
+mapper.3/output/threshold.up 1.000000
+# 
+# ###########################################
+
+- preset "2 mappers demo"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName mapper.model
+modelsIDs mapper.1 mapper.2
+mapper.1/function hanning
+mapper.1/clipmode both
+mapper.1/data/active 1
+mapper.1/data/bypass 0
+mapper.1/input /mouse/position/x
+mapper.1/input/going.down/action.1 none
+mapper.1/input/going.down/action.2 none
+mapper.1/input/going.down/action.3 none
+mapper.1/input/going.up/action.1 none
+mapper.1/input/going.up/action.2 none
+mapper.1/input/going.up/action.3 none
+mapper.1/input/index 0
+mapper.1/input/max 1.000000
+mapper.1/input/min 0.000000
+mapper.1/input/threshold/active 0
+mapper.1/input/threshold.down 0.000000
+mapper.1/input/threshold.up 1.000000
+mapper.1/output /degrade~/samplerate_ratio
+mapper.1/output/going.down/action.1 none
+mapper.1/output/going.down/action.2 none
+mapper.1/output/going.down/action.3 none
+mapper.1/output/going.up/action.1 none
+mapper.1/output/going.up/action.2 none
+mapper.1/output/going.up/action.3 none
+mapper.1/output/index 0
+mapper.1/output/max 1.000000
+mapper.1/output/min 0.000000
+mapper.1/output/threshold/active 0
+mapper.1/output/threshold.down 0.000000
+mapper.1/output/threshold.up 1.000000
+mapper.1/output/unit none
+mapper.1/rampTime 0
+mapper.2/function easeInQuartic
+mapper.2/clipmode both
+mapper.2/data/active 1
+mapper.2/data/bypass 0
+mapper.2/input /mouse/position/y
+mapper.2/input/going.down/action.1 none
+mapper.2/input/going.down/action.2 none
+mapper.2/input/going.down/action.3 none
+mapper.2/input/going.up/action.1 none
+mapper.2/input/going.up/action.2 none
+mapper.2/input/going.up/action.3 none
+mapper.2/input/index 0
+mapper.2/input/max 1.000000
+mapper.2/input/min 0.000000
+mapper.2/input/threshold/active 0
+mapper.2/input/threshold.down 0.000000
+mapper.2/input/threshold.up 1.000000
+mapper.2/output /degrade~/bitdepth
+mapper.2/output/going.down/action.1 none
+mapper.2/output/going.down/action.2 none
+mapper.2/output/going.down/action.3 none
+mapper.2/output/going.up/action.1 none
+mapper.2/output/going.up/action.2 none
+mapper.2/output/going.up/action.3 none
+mapper.2/output/index 0
+mapper.2/output/max 24.000000
+mapper.2/output/min 1.000000
+mapper.2/output/threshold/active 0
+mapper.2/output/threshold.down 1.000000
+mapper.2/output/threshold.up 1.000000
+mapper.2/output/unit none
+mapper.2/rampTime 0
+# 
+# ###########################################
+
+- preset "gridshapes"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName gl_gridshape.model
+modelsIDs gl_gridshape.1 gl_gridshape.2 gl_gridshape.3
+gl_gridshape.1/GL/context my_world
+gl_gridshape.1/GL/alpha 1.000000
+gl_gridshape.1/GL/anchor 0.000000 0.000000 0.000000
+gl_gridshape.1/GL/anim UID
+gl_gridshape.1/GL/animmode none
+gl_gridshape.1/GL/antialias 0
+gl_gridshape.1/GL/automatic 1
+gl_gridshape.1/GL/aux_alpha 1.000000
+gl_gridshape.1/GL/aux_color 1.000000 1.000000 1.000000
+gl_gridshape.1/GL/axes 0
+gl_gridshape.1/GL/blend/enable 0
+gl_gridshape.1/GL/blend/mode 6.000000 7.000000
+gl_gridshape.1/GL/capture none
+gl_gridshape.1/GL/color 0.000000 1.000000 1.000000
+gl_gridshape.1/GL/color/inherit 0
+gl_gridshape.1/GL/cull_face 0
+gl_gridshape.1/GL/depth/clear 0
+gl_gridshape.1/GL/depth/enable 1
+gl_gridshape.1/GL/depth/inherit 0
+gl_gridshape.1/GL/depth/write 1
+gl_gridshape.1/GL/enable 1
+gl_gridshape.1/GL/filterclass default
+gl_gridshape.1/GL/fog/amount 0.000000
+gl_gridshape.1/GL/fog/inherit 0
+gl_gridshape.1/GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.1/GL/inherit_all 0
+gl_gridshape.1/GL/inherit_texture 0
+gl_gridshape.1/GL/layer 0
+gl_gridshape.1/GL/light/enable 1
+gl_gridshape.1/GL/line_width 1.000000
+gl_gridshape.1/GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.1/GL/material/automatic 1
+gl_gridshape.1/GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.1/GL/material/emission 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.1/GL/material/inherit 0
+gl_gridshape.1/GL/material/matfile none
+gl_gridshape.1/GL/material/name none
+gl_gridshape.1/GL/material/shininess 10.000000
+gl_gridshape.1/GL/material/specular 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.1/GL/matrixoutput 0
+gl_gridshape.1/GL/point_size 1.000000
+gl_gridshape.1/GL/poly_mode 1.000000 1.000000
+gl_gridshape.1/GL/position -0.090000 -0.290000 0.000000
+gl_gridshape.1/GL/rotate 0.000000 0.000000 0.000000 1.000000
+gl_gridshape.1/GL/scale 0.400000 0.400000 0.300000
+gl_gridshape.1/GL/shader none
+gl_gridshape.1/GL/smooth_shading 0
+gl_gridshape.1/GL/tex_map 0
+gl_gridshape.1/GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+gl_gridshape.1/GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+gl_gridshape.1/GL/texture none
+gl_gridshape.1/GL/transform_reset 0
+gl_gridshape.1/GL/viewalign 0
+gl_gridshape.1/cache_mode vertexarray
+gl_gridshape.1/data/active 1
+gl_gridshape.1/data/bypass 0
+gl_gridshape.1/dim 20.000000 20.000000
+gl_gridshape.1/displaylist 0
+gl_gridshape.1/gridmode 0
+gl_gridshape.1/rad_minor 0.250000
+gl_gridshape.1/shape sphere
+gl_gridshape.2/GL/context my_world
+gl_gridshape.2/GL/alpha 1.000000
+gl_gridshape.2/GL/anchor 0.000000 0.000000 0.000000
+gl_gridshape.2/GL/anim UID
+gl_gridshape.2/GL/animmode none
+gl_gridshape.2/GL/antialias 0
+gl_gridshape.2/GL/automatic 1
+gl_gridshape.2/GL/aux_alpha 1.000000
+gl_gridshape.2/GL/aux_color 1.000000 1.000000 1.000000
+gl_gridshape.2/GL/axes 0
+gl_gridshape.2/GL/blend/enable 0
+gl_gridshape.2/GL/blend/mode 6.000000 7.000000
+gl_gridshape.2/GL/capture none
+gl_gridshape.2/GL/color 1.000000 1.000000 0.000000
+gl_gridshape.2/GL/color/inherit 0
+gl_gridshape.2/GL/cull_face 0
+gl_gridshape.2/GL/depth/clear 0
+gl_gridshape.2/GL/depth/enable 1
+gl_gridshape.2/GL/depth/inherit 0
+gl_gridshape.2/GL/depth/write 1
+gl_gridshape.2/GL/enable 1
+gl_gridshape.2/GL/filterclass default
+gl_gridshape.2/GL/fog/amount 0.000000
+gl_gridshape.2/GL/fog/inherit 0
+gl_gridshape.2/GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.2/GL/inherit_all 0
+gl_gridshape.2/GL/inherit_texture 0
+gl_gridshape.2/GL/layer 0
+gl_gridshape.2/GL/light/enable 1
+gl_gridshape.2/GL/line_width 1.000000
+gl_gridshape.2/GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.2/GL/material/automatic 1
+gl_gridshape.2/GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.2/GL/material/emission 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.2/GL/material/inherit 0
+gl_gridshape.2/GL/material/matfile none
+gl_gridshape.2/GL/material/name none
+gl_gridshape.2/GL/material/shininess 10.000000
+gl_gridshape.2/GL/material/specular 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.2/GL/matrixoutput 0
+gl_gridshape.2/GL/point_size 1.000000
+gl_gridshape.2/GL/poly_mode 0.000000 0.000000
+gl_gridshape.2/GL/position 0.320000 0.400000 0.000000
+gl_gridshape.2/GL/rotate 26.000000 23.000000 7.000000 1.000000
+gl_gridshape.2/GL/scale 0.200000 0.200000 0.300000
+gl_gridshape.2/GL/shader none
+gl_gridshape.2/GL/smooth_shading 0
+gl_gridshape.2/GL/tex_map 0
+gl_gridshape.2/GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+gl_gridshape.2/GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+gl_gridshape.2/GL/texture none
+gl_gridshape.2/GL/transform_reset 0
+gl_gridshape.2/GL/viewalign 0
+gl_gridshape.2/cache_mode vertexarray
+gl_gridshape.2/data/active 1
+gl_gridshape.2/data/bypass 0
+gl_gridshape.2/dim 20.000000 20.000000
+gl_gridshape.2/displaylist 0
+gl_gridshape.2/gridmode 0
+gl_gridshape.2/rad_minor 0.250000
+gl_gridshape.2/shape cube
+gl_gridshape.3/GL/context my_world
+gl_gridshape.3/GL/alpha 1.000000
+gl_gridshape.3/GL/anchor 0.000000 0.000000 0.000000
+gl_gridshape.3/GL/anim UID
+gl_gridshape.3/GL/animmode none
+gl_gridshape.3/GL/antialias 0
+gl_gridshape.3/GL/automatic 1
+gl_gridshape.3/GL/aux_alpha 1.000000
+gl_gridshape.3/GL/aux_color 1.000000 1.000000 1.000000
+gl_gridshape.3/GL/axes 0
+gl_gridshape.3/GL/blend/enable 0
+gl_gridshape.3/GL/blend/mode 6.000000 7.000000
+gl_gridshape.3/GL/capture none
+gl_gridshape.3/GL/color 1.000000 0.500000 0.000000
+gl_gridshape.3/GL/color/inherit 0
+gl_gridshape.3/GL/cull_face 0
+gl_gridshape.3/GL/depth/clear 0
+gl_gridshape.3/GL/depth/enable 1
+gl_gridshape.3/GL/depth/inherit 0
+gl_gridshape.3/GL/depth/write 1
+gl_gridshape.3/GL/enable 1
+gl_gridshape.3/GL/filterclass default
+gl_gridshape.3/GL/fog/amount 0.000000
+gl_gridshape.3/GL/fog/inherit 0
+gl_gridshape.3/GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.3/GL/inherit_all 0
+gl_gridshape.3/GL/inherit_texture 0
+gl_gridshape.3/GL/layer 0
+gl_gridshape.3/GL/light/enable 1
+gl_gridshape.3/GL/line_width 1.000000
+gl_gridshape.3/GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.3/GL/material/automatic 1
+gl_gridshape.3/GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.3/GL/material/emission 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.3/GL/material/inherit 0
+gl_gridshape.3/GL/material/matfile none
+gl_gridshape.3/GL/material/name none
+gl_gridshape.3/GL/material/shininess 10.000000
+gl_gridshape.3/GL/material/specular 0.000000 0.000000 0.000000 0.000000
+gl_gridshape.3/GL/matrixoutput 0
+gl_gridshape.3/GL/point_size 1.000000
+gl_gridshape.3/GL/poly_mode 0.000000 0.000000
+gl_gridshape.3/GL/position -0.430000 0.400000 0.000000
+gl_gridshape.3/GL/rotate -22.000000 -17.000000 0.000000 1.000000
+gl_gridshape.3/GL/scale 0.200000 0.200000 0.200000
+gl_gridshape.3/GL/shader none
+gl_gridshape.3/GL/smooth_shading 1
+gl_gridshape.3/GL/tex_map 0
+gl_gridshape.3/GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+gl_gridshape.3/GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+gl_gridshape.3/GL/texture none
+gl_gridshape.3/GL/transform_reset 0
+gl_gridshape.3/GL/viewalign 0
+gl_gridshape.3/cache_mode vertexarray
+gl_gridshape.3/data/active 1
+gl_gridshape.3/data/bypass 0
+gl_gridshape.3/dim 20.000000 20.000000
+gl_gridshape.3/displaylist 0
+gl_gridshape.3/gridmode 0
+gl_gridshape.3/rad_minor 0.780000
+gl_gridshape.3/shape torus
+# 
+# ###########################################
+
+- preset "move text"
+- description "something about this preset"
+# ###########################################
+# 
+modelPatchName mapper.model
+modelsIDs mapper.1 mapper.2 mapper.3
+mapper.1/function linear
+mapper.1/clipmode both
+mapper.1/data/active 1
+mapper.1/data/bypass 0
+mapper.1/input /mouse/position/x
+mapper.1/input/going.down/action.1 none
+mapper.1/input/going.down/action.2 none
+mapper.1/input/going.down/action.3 none
+mapper.1/input/going.up/action.1 none
+mapper.1/input/going.up/action.2 none
+mapper.1/input/going.up/action.3 none
+mapper.1/input/index 0
+mapper.1/input/max 1.000000
+mapper.1/input/min 0.000000
+mapper.1/input/threshold/active 0
+mapper.1/input/threshold.down 0.000000
+mapper.1/input/threshold.up 1.000000
+mapper.1/output /text_help/GL/position
+mapper.1/output/going.down/action.1 none
+mapper.1/output/going.down/action.2 none
+mapper.1/output/going.down/action.3 none
+mapper.1/output/going.up/action.1 none
+mapper.1/output/going.up/action.2 none
+mapper.1/output/going.up/action.3 none
+mapper.1/output/index 1
+mapper.1/output/max 1.000000
+mapper.1/output/min -1.000000
+mapper.1/output/threshold/active 0
+mapper.1/output/threshold.down 0.000000
+mapper.1/output/threshold.up 1.000000
+mapper.1/output/unit none
+mapper.1/rampTime 0
+mapper.2/function linear
+mapper.2/clipmode both
+mapper.2/data/active 1
+mapper.2/data/bypass 0
+mapper.2/input /mouse/position/y
+mapper.2/input/going.down/action.1 none
+mapper.2/input/going.down/action.2 none
+mapper.2/input/going.down/action.3 none
+mapper.2/input/going.up/action.1 none
+mapper.2/input/going.up/action.2 none
+mapper.2/input/going.up/action.3 none
+mapper.2/input/index 0
+mapper.2/input/max 1.000000
+mapper.2/input/min 0.000000
+mapper.2/input/threshold/active 0
+mapper.2/input/threshold.down 0.000000
+mapper.2/input/threshold.up 1.000000
+mapper.2/output /text_help/GL/position
+mapper.2/output/going.down/action.1 none
+mapper.2/output/going.down/action.2 none
+mapper.2/output/going.down/action.3 none
+mapper.2/output/going.up/action.1 none
+mapper.2/output/going.up/action.2 none
+mapper.2/output/going.up/action.3 none
+mapper.2/output/index 2
+mapper.2/output/max 1.000000
+mapper.2/output/min -1.000000
+mapper.2/output/threshold/active 0
+mapper.2/output/threshold.down 1.000000
+mapper.2/output/threshold.up 1.000000
+mapper.2/output/unit none
+mapper.2/rampTime 0
+# 
+# ###########################################
