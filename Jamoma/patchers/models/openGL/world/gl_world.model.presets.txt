@@ -60,7 +60,7 @@ worldbox 1
 worldbox_scale 6.000000 3.000000 6.000000
 camera/lens_angle 45.000000
 camera/lookat 0.000000 0.000000 0.000000
-camera/position -13.437575 2.000000 -16.127193
+camera/position 0.000000 0.000000 2.000000
 camera/up 0.000000 1.000000 0.000000
 data/active 1
 data/bypass 0
