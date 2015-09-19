@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 5,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 84.0, 81.0, 1102.0, 835.0 ],
+		"rect" : [ 75.0, 79.0, 1102.0, 867.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,11 +38,53 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "A generic audio output model with built in master saturation, limiter, and recording abilities.",
+					"id" : "obj-12",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 38.0, 680.0, 146.0, 22.0 ],
+					"style" : "",
+					"text" : "output~.model output"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "One-sided ring modulator using Hilbert filter.",
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 3,
+					"outlettype" : [ "signal", "signal", "" ],
+					"patching_rect" : [ 38.0, 594.0, 146.0, 22.0 ],
+					"style" : "",
+					"text" : "hilbert_modulator~.model"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "none",
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 29.0, 103.5, 160.0, 22.0 ],
+					"style" : "",
+					"text" : "tosca.model tosca_mapping"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-20",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 658.0, 196.0, 361.0, 20.0 ],
+					"patching_rect" : [ 714.0, 172.0, 204.0, 20.0 ],
 					"style" : "",
 					"text" : "Initial mapping:",
 					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -59,7 +101,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 501.0, 542.0, 105.0, 91.0 ],
+					"patching_rect" : [ 109.0, 245.0, 105.0, 91.0 ],
 					"style" : "",
 					"text" : "Set up mappings between ToscA and Jamoma parameters."
 				}
@@ -78,7 +120,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -150,7 +192,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 261.0, 220.0, 34.0, 22.0 ],
+					"patching_rect" : [ 886.0, 11.0, 34.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -172,7 +214,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 59.0, 220.0, 191.0, 30.0 ],
+					"patching_rect" : [ 684.0, 11.0, 191.0, 30.0 ],
 					"style" : "",
 					"text" : "Download ToscA plugin"
 				}
@@ -185,7 +227,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 36.0, 88.0, 621.0, 33.0 ],
+					"patching_rect" : [ 19.0, 57.0, 621.0, 33.0 ],
 					"style" : "",
 					"text" : "ToscA  is a AudioUnit / VST plugin for sending and receiving OSC messages.\nWhen used with this model, you can record and playback parameter changes as automation data in a DAW.",
 					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -199,7 +241,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 658.0, 220.0, 154.0, 22.0 ],
+					"patching_rect" : [ 714.0, 196.0, 154.0, 22.0 ],
 					"style" : "",
 					"text" : "j.initialized /tosca_mapping"
 				}
@@ -218,7 +260,7 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 5,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -475,7 +517,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 261.0, 269.0, 143.0, 22.0 ],
+					"patching_rect" : [ 886.0, 60.0, 143.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -497,7 +539,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 59.0, 269.0, 191.0, 30.0 ],
+					"patching_rect" : [ 684.0, 60.0, 191.0, 30.0 ],
 					"style" : "",
 					"text" : "Open demo-project in REAPER"
 				}
@@ -510,7 +552,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 658.0, 280.0, 288.0, 22.0 ],
+					"patching_rect" : [ 714.0, 256.0, 288.0, 22.0 ],
 					"style" : "",
 					"text" : "j.send /tosca_mapping/plugin_parameter.1/linked_to"
 				}
@@ -523,7 +565,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 658.0, 251.0, 235.0, 22.0 ],
+					"patching_rect" : [ 714.0, 227.0, 235.0, 22.0 ],
 					"style" : "",
 					"text" : "/hilbert_modulator~/modulating_frequency"
 				}
@@ -531,6 +573,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "output" ],
 					"bgmode" : 0,
 					"border" : 0,
@@ -540,12 +583,12 @@
 					"id" : "obj-7",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "output~.module.maxpat",
-					"numinlets" : 2,
+					"name" : "output~.view.maxpat",
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 59.0, 577.0, 300.0, 175.0 ],
+					"patching_rect" : [ 223.0, 680.0, 300.0, 175.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
 					"viewvisibility" : 1
 				}
@@ -553,28 +596,28 @@
 			}
 , 			{
 				"box" : 				{
-					"clipheight" : 50.0,
+					"clipheight" : 29.0,
 					"data" : 					{
 						"clips" : [ 							{
 								"filename" : "duduk.aif",
 								"filekind" : "audiofile",
 								"loop" : 1,
 								"content_state" : 								{
-									"pitchcorrection" : [ 0 ],
-									"timestretch" : [ 0 ],
-									"speed" : [ 1.0 ],
 									"play" : [ 0 ],
-									"quality" : [ "basic" ],
-									"mode" : [ "basic" ],
 									"slurtime" : [ 0.0 ],
-									"followglobaltempo" : [ 0 ],
-									"formantcorrection" : [ 0 ],
-									"originallength" : [ 0.0, "ticks" ],
-									"pitchshift" : [ 1.0 ],
 									"basictuning" : [ 440 ],
+									"quality" : [ "basic" ],
+									"followglobaltempo" : [ 0 ],
 									"formant" : [ 1.0 ],
+									"mode" : [ "basic" ],
+									"formantcorrection" : [ 0 ],
 									"originallengthms" : [ 0.0 ],
-									"originaltempo" : [ 120.0 ]
+									"speed" : [ 1.0 ],
+									"pitchcorrection" : [ 0 ],
+									"originallength" : [ 0.0, "ticks" ],
+									"originaltempo" : [ 120.0 ],
+									"timestretch" : [ 0 ],
+									"pitchshift" : [ 1.0 ]
 								}
 
 							}
@@ -586,13 +629,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
-					"patching_rect" : [ 59.0, 410.5, 300.0, 51.0 ],
+					"patching_rect" : [ 38.0, 544.0, 219.0, 30.0 ],
 					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -601,12 +645,12 @@
 					"id" : "obj-3",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "hilbert_modulator~.module.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 3,
+					"name" : "hilbert_modulator~.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 59.0, 486.0, 300.0, 70.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 223.0, 594.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ],
 					"viewvisibility" : 1
 				}
@@ -614,6 +658,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "none",
 					"args" : [ "tosca_mapping" ],
 					"bgmode" : 0,
 					"border" : 0,
@@ -623,12 +668,12 @@
 					"id" : "obj-2",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "tosca.module.maxpat",
+					"name" : "tosca.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 613.0, 377.5, 450.0, 420.0 ],
+					"patching_rect" : [ 221.0, 103.5, 450.0, 420.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 450.0, 420.0 ],
 					"viewvisibility" : 1
 				}
@@ -646,7 +691,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 6.0, 5.0, 408.0, 78.0 ]
+					"patching_rect" : [ 7.0, 5.0, 407.0, 50.0 ]
 				}
 
 			}
@@ -680,39 +725,37 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 1 ],
+					"destination" : [ "obj-8", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 209.0, 566.0, 349.5, 566.0 ],
-					"source" : [ "obj-3", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 138.75, 473.25, 349.5, 473.25 ],
 					"source" : [ "obj-5", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
@@ -727,32 +770,32 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-7::obj-1::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
-			"obj-7::obj-1::obj-82" : [ "pan", "Pan", 0 ],
-			"obj-7::obj-1::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
-			"obj-7::obj-1::obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
-			"obj-7::obj-1::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
-			"obj-7::obj-1::obj-104" : [ "live.dial[1]", "Depth", 0 ],
-			"obj-3::obj-2::obj-5" : [ "live.text", "live.text", 0 ],
-			"obj-7::obj-1::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
-			"obj-7::obj-1::obj-106" : [ "live.dial[3]", "Release", 0 ],
-			"obj-7::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
-			"obj-7::obj-1::obj-100" : [ "live.text[8]", "live.text[1]", 0 ],
-			"obj-7::obj-1::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
-			"obj-3::obj-2::obj-3" : [ "live.dial", "Modulating Freq", 0 ],
-			"obj-7::obj-1::obj-12::obj-13" : [ "Release", "Release", 0 ],
-			"obj-7::obj-1::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-7::obj-1::obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
-			"obj-7::obj-1::obj-102" : [ "live.text[7]", "live.text", 0 ],
-			"obj-7::obj-1::obj-103" : [ "live.text[5]", "live.text", 0 ],
-			"obj-7::obj-1::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
-			"obj-7::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
-			"obj-7::obj-1::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
-			"obj-7::obj-1::obj-53" : [ "Master Gain", "Master Gain", 0 ],
-			"obj-7::obj-1::obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
-			"obj-7::obj-1::obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
-			"obj-7::obj-1::obj-97" : [ "live.numbox", "CPU", 0 ],
-			"obj-7::obj-1::obj-12::obj-6" : [ "live.text[3]", "live.text", 0 ]
+			"obj-7::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-7::obj-12::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-7::obj-17" : [ "Master Gain[1]", "Master Gain", 0 ],
+			"obj-7::obj-90" : [ "live.text[4]", "live.text[1]", 0 ],
+			"obj-7::obj-12::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-7::obj-12::obj-13" : [ "Release", "Release", 0 ],
+			"obj-7::obj-12::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-7::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-7::obj-97" : [ "live.numbox", "CPU", 0 ],
+			"obj-7::obj-98" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-7::obj-100" : [ "live.text[8]", "live.text[1]", 0 ],
+			"obj-7::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-7::obj-104" : [ "live.dial[1]", "Depth", 0 ],
+			"obj-7::obj-103" : [ "live.text[5]", "live.text", 0 ],
+			"obj-7::obj-107" : [ "live.dial[4]", "Preamp", 0 ],
+			"obj-7::obj-99" : [ "live.menu[2]", "live.menu[2]", 0 ],
+			"obj-7::obj-106" : [ "live.dial[3]", "Release", 0 ],
+			"obj-3::obj-3" : [ "live.dial", "Modulating Freq", 0 ],
+			"obj-7::obj-108" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-7::obj-12::obj-6" : [ "live.text[7]", "live.text", 0 ],
+			"obj-7::obj-12::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-7::obj-12::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-7::obj-102" : [ "live.text[3]", "live.text", 0 ],
+			"obj-7::obj-12::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-7::obj-12::obj-30" : [ "live.menu", "live.menu", 0 ],
+			"obj-3::obj-5" : [ "live.text", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -762,50 +805,26 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tosca.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/tosca",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "tosca.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/tosca",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/tosca",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespacebrowser.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/namespace/namespacebrowser",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/namespace/namespacebrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/javascript",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "tosca.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/tosca",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "hilbert_modulator~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbert_modulator~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "hilbert_modulator~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbert_modulator~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "hilbert_modulator~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Modulation/hilbert_modulator~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/modulation/hilbert_modulator",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -816,74 +835,80 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "output~.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"name" : "output~.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/output/output",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/dynamics/limiter",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.initialized.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/initialized",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "tosca.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/tosca",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "hilbert_modulator~.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/modulation/hilbert_modulator",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "output~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/output/output",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "saturation~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Distortion/saturation~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/distortion/saturation",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/dynamics/limiter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "limiter.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/dynamics/limiter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/imaging/balance",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record~.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/output/record",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "record.parametersAndMessages.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/record~",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/output/record",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
 				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "output~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Output/output~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "limiter~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Dynamics/limiter~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -897,6 +922,22 @@
 			}
 , 			{
 				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -916,10 +957,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.remote_array.mxo",
 				"type" : "iLaX"
 			}
@@ -933,10 +970,6 @@
 			}
 , 			{
 				"name" : "j.out~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -961,14 +994,6 @@
 			}
 , 			{
 				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
  ],

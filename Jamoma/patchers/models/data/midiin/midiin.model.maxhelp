@@ -86,6 +86,19 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-3",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 45.0, 182.0, 75.0, 38.0 ],
+									"style" : "",
+									"text" : "print midiin @popup 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"annotation" : "none",
 									"args" : [ "midiin" ],
 									"bgmode" : 0,
@@ -527,6 +540,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-3", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-5", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-26", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -634,7 +656,7 @@
 			}
 , 			{
 				"name" : "midiin.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/midiin",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/midiin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -646,7 +668,7 @@
 			}
 , 			{
 				"name" : "midiin.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/midiin",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/midiin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
