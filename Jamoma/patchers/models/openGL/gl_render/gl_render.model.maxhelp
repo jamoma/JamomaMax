@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 340.0, 79.0, 619.0, 474.0 ],
+		"rect" : [ 360.0, 79.0, 619.0, 474.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,6 +38,34 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 12.0, 66.0, 249.0, 19.0 ],
+					"style" : "",
+					"text" : "Create an Open GL render World"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-5",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "gl_render.model" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 12.0, 9.0, 455.0, 55.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "Output to an OpenGL window",
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
@@ -46,7 +74,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 337.0, 333.0, 135.0, 21.0 ],
+					"patching_rect" : [ 19.5, 292.0, 135.0, 21.0 ],
 					"style" : "",
 					"text" : "window%.model window"
 				}
@@ -62,7 +90,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 337.0, 145.0, 128.0, 21.0 ],
+					"patching_rect" : [ 19.5, 104.0, 128.0, 21.0 ],
 					"style" : "",
 					"text" : "gl_render.model render"
 				}
@@ -72,7 +100,7 @@
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
 					"fontname" : "Verdana",
-					"fontsize" : 12.0,
+					"fontsize" : 17.65629,
 					"id" : "obj-21",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
@@ -82,12 +110,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 110.0, 530.0, 420.0, 279.0 ],
+						"rect" : [ 202.0, 673.0, 420.0, 279.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -276,7 +304,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 20.5, 102.0, 83.0, 23.0 ],
+					"patching_rect" : [ 19.5, 425.0, 114.0, 30.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -306,31 +334,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 20.5, 333.0, 300.0, 105.0 ],
+					"patching_rect" : [ 193.5, 292.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 330.5, 249.0, 300.0, 105.0 ],
 					"varname" : "gl.videoplane[2]",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@name", "gl.render.model", "@description", "Create an Open GL render World" ],
-					"bgmode" : 1,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-3",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 0.0, 0.0, 619.0, 70.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui",
 					"viewvisibility" : 1
 				}
 
@@ -352,7 +358,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.5, 145.0, 300.0, 175.0 ],
+					"patching_rect" : [ 193.5, 104.0, 300.0, 175.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
 					"varname" : "gl.videoplane",
 					"viewvisibility" : 1
@@ -363,93 +369,62 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl_render.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_render_basic_view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render/view_tabs",
-				"patcherrelativepath" : "./view_tabs",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../components/data/jamomaPath",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/gl_render/view_tabs",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
-				"patcherrelativepath" : "../../video/output/window%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_render.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/gl_render",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/gl_render",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/window%",
-				"patcherrelativepath" : "../../video/output/window%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/output/window%",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
@@ -470,10 +445,6 @@
 			}
 , 			{
 				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{

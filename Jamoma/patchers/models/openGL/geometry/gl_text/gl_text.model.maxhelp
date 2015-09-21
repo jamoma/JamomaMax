@@ -48,17 +48,19 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 9.0, 3.0, 386.0, 53.0 ]
+					"patching_rect" : [ 9.0, 8.0, 386.0, 53.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
 					"id" : "obj-4",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 52.0, 262.0, 19.0 ],
+					"patching_rect" : [ 9.0, 57.0, 297.0, 21.0 ],
 					"style" : "",
 					"text" : "Render text in a GL context"
 				}
@@ -74,7 +76,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 80.0, 129.0, 21.0 ],
+					"patching_rect" : [ 9.0, 85.0, 129.0, 21.0 ],
 					"style" : "",
 					"text" : "j.initialized text_help"
 				}
@@ -89,7 +91,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 109.0, 191.0, 21.0 ],
+					"patching_rect" : [ 9.0, 114.0, 191.0, 21.0 ],
 					"style" : "",
 					"text" : "fontsize 34, text \"write a text here\""
 				}
@@ -104,7 +106,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 12.0, 401.0, 126.0, 21.0 ],
+					"patching_rect" : [ 12.0, 403.0, 126.0, 21.0 ],
 					"style" : "",
 					"text" : "jit.window default"
 				}
@@ -119,7 +121,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 12.0, 313.0, 117.0, 21.0 ],
+					"patching_rect" : [ 12.0, 318.0, 117.0, 21.0 ],
 					"style" : "",
 					"text" : "qmetro 20 @active 1"
 				}
@@ -134,7 +136,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "erase", "" ],
-					"patching_rect" : [ 12.0, 340.0, 124.5, 21.0 ],
+					"patching_rect" : [ 12.0, 345.0, 124.5, 21.0 ],
 					"style" : "",
 					"text" : "t b erase l"
 				}
@@ -149,7 +151,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 12.0, 375.0, 70.0, 21.0 ],
+					"patching_rect" : [ 12.0, 377.0, 70.0, 21.0 ],
 					"style" : "",
 					"text" : "jit.gl.render"
 				}
@@ -166,7 +168,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 9.0, 137.0, 156.0, 21.0 ],
+					"patching_rect" : [ 9.0, 142.0, 156.0, 21.0 ],
 					"style" : "",
 					"text" : "gl_text.model text_help"
 				}
@@ -189,7 +191,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 190.0, 137.0, 300.0, 140.0 ],
+					"patching_rect" : [ 190.0, 142.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"varname" : "gl.videoplane%",
 					"viewvisibility" : 1
@@ -229,7 +231,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 74.25, 371.0, 21.5, 371.0 ],
+					"midpoints" : [ 74.25, 370.0, 21.5, 370.0 ],
 					"source" : [ "obj-7", 1 ]
 				}
 

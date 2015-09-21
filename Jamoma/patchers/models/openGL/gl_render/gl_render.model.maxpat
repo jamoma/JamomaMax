@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -38,14 +38,26 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 397.0, 133.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-28",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 8.0, 228.0, 50.0, 21.0 ],
+					"patching_rect" : [ 45.0, 228.0, 106.0, 21.0 ],
 					"style" : "",
-					"text" : "drawto"
+					"text" : "drawto my_context"
 				}
 
 			}
@@ -57,22 +69,9 @@
 					"numinlets" : 11,
 					"numoutlets" : 11,
 					"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-					"patching_rect" : [ 72.0, 141.0, 137.0, 69.0 ],
+					"patching_rect" : [ 45.0, 98.0, 137.0, 69.0 ],
 					"style" : "",
 					"text" : "routepass drawto layer filterclass texture tex_map tex_plane_s tex_plane_t depth_clear animmode capture"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-19",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 97.5, 91.5, 80.0, 21.0 ],
-					"style" : "",
-					"text" : "depth_write 1"
 				}
 
 			}
@@ -132,7 +131,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -178,7 +177,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 5,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -636,7 +635,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 5,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -971,7 +970,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 5,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -1336,7 +1335,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 3,
+											"revision" : 5,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
@@ -1956,7 +1955,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 370.0, 228.0, 210.0, 49.0 ],
+					"patching_rect" : [ 370.0, 221.0, 210.0, 49.0 ],
 					"style" : "",
 					"text" : "j.return draw @type none @description \"draw bang that each render client have to observe\""
 				}
@@ -2036,12 +2035,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+						"rect" : [ 34.0, 79.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2077,7 +2076,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 171.5, 185.0, 32.5, 19.0 ],
+									"patching_rect" : [ 171.5, 185.0, 32.5, 21.0 ],
 									"style" : "",
 									"text" : "t b l"
 								}
@@ -2092,7 +2091,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 325.5, 222.0, 80.0, 19.0 ],
+									"patching_rect" : [ 325.5, 222.0, 80.0, 21.0 ],
 									"style" : "",
 									"text" : "prepend send"
 								}
@@ -2107,7 +2106,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 325.5, 185.0, 76.0, 19.0 ],
+									"patching_rect" : [ 325.5, 185.0, 76.0, 21.0 ],
 									"style" : "",
 									"text" : "route symbol"
 								}
@@ -2122,7 +2121,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 186.5, 100.0, 39.0, 17.0 ],
+									"patching_rect" : [ 186.5, 100.0, 39.0, 21.0 ],
 									"style" : "",
 									"text" : "dump"
 								}
@@ -2158,7 +2157,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 171.5, 137.0, 59.5, 19.0 ],
+									"patching_rect" : [ 171.5, 137.0, 59.5, 21.0 ],
 									"saved_object_attributes" : 									{
 										"embed" : 1
 									}
@@ -2177,7 +2176,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 325.5, 255.0, 51.0, 20.0 ],
+									"patching_rect" : [ 325.5, 255.0, 51.0, 22.0 ],
 									"style" : "",
 									"text" : "forward"
 								}
@@ -2287,7 +2286,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 393.0, 193.0, 74.0, 26.0 ],
+					"patching_rect" : [ 391.0, 185.0, 74.0, 26.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2320,6 +2319,7 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-6",
@@ -2328,9 +2328,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 428.5, 8.5, 310.0, 49.0 ],
+					"patching_rect" : [ 428.5, 8.5, 333.0, 49.0 ],
 					"style" : "",
-					"text" : "j.parameter framerate @type decimal @range 0. 10000. @clipmode low @dataspace time @unit fps @description \"the framerate you want\""
+					"text" : "j.parameter framerate @type decimal @range 0.001 10000. @clipmode low @default 25 @dataspace time @unit fps @description \"the framerate you want\""
 				}
 
 			}
@@ -2521,7 +2521,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 232.0, 297.0, 159.0, 21.0 ],
+					"patching_rect" : [ 232.0, 305.0, 159.0, 21.0 ],
 					"style" : "",
 					"text" : "jit.gl.render jamoma"
 				}
@@ -2535,7 +2535,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 232.0, 267.0, 150.0, 21.0 ],
+					"patching_rect" : [ 249.0, 279.0, 150.0, 21.0 ],
 					"style" : ""
 				}
 
@@ -2546,7 +2546,17 @@
 					"destination" : [ "obj-11", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 627.0, 250.5, 729.0, 250.5 ],
 					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-16", 0 ]
 				}
 
 			}
@@ -2638,6 +2648,7 @@
 					"destination" : [ "obj-28", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 54.5, 218.0, 141.5, 218.0 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -2647,7 +2658,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 199.5, 221.5, 241.5, 221.5 ],
+					"midpoints" : [ 172.5, 205.5, 241.5, 205.5 ],
 					"source" : [ "obj-22", 10 ]
 				}
 
@@ -2657,7 +2668,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 81.5, 236.0, 241.5, 236.0 ],
+					"midpoints" : [ 54.5, 212.0, 241.5, 212.0 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -2667,6 +2678,7 @@
 					"destination" : [ "obj-14", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 241.5, 329.0, 92.5, 329.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -2703,6 +2715,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 81.5, 292.0, 241.5, 292.0 ],
 					"source" : [ "obj-31", 0 ]
 				}
 
@@ -2731,15 +2744,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-19", 1 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-67", 0 ]
 				}
 
 			}

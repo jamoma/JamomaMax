@@ -2,88 +2,178 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 47.0, 59.0, 706.0, 394.0 ],
+		"rect" : [ 47.0, 79.0, 617.0, 638.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
+					"annotation" : "none",
+					"args" : [ "record%_help" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-12",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "edge%.module.maxpat",
+					"name" : "record%.view.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 42.0, 184.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ],
-					"varname" : "/edge%.module"
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 221.0, 277.5, 300.0, 70.0 ],
+					"presentation_rect" : [ 568.0, 318.0, 300.0, 70.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "record%.module.maxpat",
+					"annotation" : "Record video to QuickTime movie.",
+					"id" : "obj-11",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 42.0, 264.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ],
-					"varname" : "/record_demo"
+					"patching_rect" : [ 29.0, 277.5, 162.0, 21.0 ],
+					"style" : "",
+					"text" : "record%.model record%_help"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "input%.module.maxpat",
+					"annotation" : "Glowing Edges Effect",
+					"id" : "obj-3",
+					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 42.0, 109.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ],
-					"varname" : "/input_demo"
+					"patching_rect" : [ 29.0, 183.0, 173.0, 21.0 ],
+					"style" : "",
+					"text" : "edge%.model edge%_help"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "record%.model", "@description", "A module for recording video to disk" ],
-					"bgmode" : 1,
+					"annotation" : "Multiple source video player",
 					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 29.0, 98.0, 149.0, 21.0 ],
+					"style" : "",
+					"text" : "input%.model input%_help"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "Input from either a camera - video file - noise synthesis - or a real time screen capture.",
+					"args" : [ "input%_help" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-9",
+					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
+					"name" : "input%.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 221.0, 98.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "none",
+					"args" : [ "edge%_help" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-10",
+					"lockeddragscroll" : 1,
+					"maxclass" : "bpatcher",
+					"name" : "edge%.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 221.0, 183.0, 300.0, 70.0 ],
+					"presentation_rect" : [ 15.0, 15.0, 300.0, 70.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-2",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "record%.model" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 9.0, 8.0, 386.0, 53.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-4",
+					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 706.0, 70.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui"
+					"patching_rect" : [ 9.0, 57.0, 214.0, 21.0 ],
+					"style" : "",
+					"text" : "A model for recording video to disk."
 				}
 
 			}
@@ -91,175 +181,138 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "jit.pwindow",
+					"name" : "u422005682",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 365.0, 109.0, 322.0, 225.0 ]
+					"patching_rect" : [ 29.0, 362.0, 322.0, 225.0 ]
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 51.5, 336.0, 27.0, 336.0, 27.0, 96.0, 374.5, 96.0 ],
-					"source" : [ "obj-6", 0 ]
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-11", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../../components/data/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "noise%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../../sources/noise%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "grab%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../../sources/grab%",
+				"name" : "edge%.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/edge%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "record%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/record%",
-				"patcherrelativepath" : ".",
+				"name" : "input%.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "record%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/record%",
-				"patcherrelativepath" : ".",
+				"name" : "noise%.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.passmatrixinfo%.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/video/passmatrixinfo%",
-				"patcherrelativepath" : "../../../../components/video/passmatrixinfo%",
+				"name" : "movie%.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "record%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/output/record%",
-				"patcherrelativepath" : ".",
+				"name" : "max7specific.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "edge%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/edge%",
-				"patcherrelativepath" : "../../fx/edge%",
+				"name" : "grab%.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "edge%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/edge%",
-				"patcherrelativepath" : "../../fx/edge%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/edge%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "edge%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/edge%",
-				"patcherrelativepath" : "../../fx/edge%",
+				"name" : "record%.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/output/record%",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "j.passmatrixinfo%.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/video/passmatrixinfo%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "record%.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/output/record%",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.receive.mxo",
@@ -267,10 +320,6 @@
 			}
 , 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -290,6 +339,18 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.oscroute.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.message.mxo",
 				"type" : "iLaX"
 			}
@@ -298,26 +359,15 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
+				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.pass.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
