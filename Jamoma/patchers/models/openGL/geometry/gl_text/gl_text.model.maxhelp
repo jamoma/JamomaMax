@@ -9,12 +9,12 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 461.0, 133.0, 498.0, 429.0 ],
+		"rect" : [ 782.0, 135.0, 512.0, 389.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
-		"default_fontsize" : 10.0,
+		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
+		"default_fontname" : "Arial",
 		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 1,
@@ -37,6 +37,35 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontsize" : 12.0,
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "bang", "" ],
+					"patching_rect" : [ 9.0, 127.0, 165.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.world text_help @enable 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "enable",
+					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 9.0, 96.0, 86.0, 22.0 ],
+					"style" : "",
+					"text_width" : 65.0
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"border" : 0,
 					"filename" : "helpdetails.js",
@@ -70,13 +99,13 @@
 				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontsize" : 12.0,
 					"id" : "obj-16",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 85.0, 129.0, 21.0 ],
+					"patching_rect" : [ 9.0, 171.0, 153.0, 23.0 ],
 					"style" : "",
 					"text" : "j.initialized text_help"
 				}
@@ -85,13 +114,13 @@
 , 			{
 				"box" : 				{
 					"fontname" : "Arial",
-					"fontsize" : 11.302363,
+					"fontsize" : 12.0,
 					"id" : "obj-65",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 9.0, 114.0, 191.0, 21.0 ],
+					"patching_rect" : [ 9.0, 200.0, 203.0, 22.0 ],
 					"style" : "",
 					"text" : "fontsize 34, text \"write a text here\""
 				}
@@ -99,76 +128,16 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-14",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 12.0, 403.0, 126.0, 21.0 ],
-					"style" : "",
-					"text" : "jit.window default"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 12.0, 318.0, 117.0, 21.0 ],
-					"style" : "",
-					"text" : "qmetro 20 @active 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "bang", "erase", "" ],
-					"patching_rect" : [ 12.0, 345.0, 124.5, 21.0 ],
-					"style" : "",
-					"text" : "t b erase l"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 12.0, 377.0, 70.0, 21.0 ],
-					"style" : "",
-					"text" : "jit.gl.render"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "Write bitmap text.",
 					"fontface" : 0,
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 9.0, 142.0, 156.0, 21.0 ],
+					"patching_rect" : [ 9.0, 228.0, 161.0, 22.0 ],
 					"style" : "",
 					"text" : "gl_text.model text_help"
 				}
@@ -191,7 +160,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 190.0, 142.0, 300.0, 140.0 ],
+					"patching_rect" : [ 190.0, 228.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"varname" : "gl.videoplane%",
 					"viewvisibility" : 1
@@ -210,10 +179,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -223,25 +192,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-65", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 74.25, 370.0, 21.5, 370.0 ],
-					"source" : [ "obj-7", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
 				}
 
 			}

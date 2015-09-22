@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 216.0, 285.0, 507.0, 254.0 ],
@@ -14,19 +15,27 @@
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-8",
@@ -34,7 +43,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 331.5, 17.0, 20.0, 20.0 ]
+					"patching_rect" : [ 331.5, 17.0, 20.0, 20.0 ],
+					"style" : ""
 				}
 
 			}
@@ -47,7 +57,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 331.5, 82.0, 121.0, 17.0 ],
+					"patching_rect" : [ 331.5, 82.0, 121.0, 21.0 ],
+					"style" : "",
 					"text" : "/gl_gridshape"
 				}
 
@@ -61,7 +72,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 331.5, 51.0, 137.0, 19.0 ],
+					"patching_rect" : [ 331.5, 51.0, 137.0, 21.0 ],
+					"style" : "",
 					"text" : "j.receive model:address"
 				}
 
@@ -70,6 +82,7 @@
 				"box" : 				{
 					"annotation" : "none",
 					"color" : [ 0.0, 0.572549, 0.0, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 14.0,
 					"id" : "obj-30",
@@ -77,7 +90,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 112.0, 45.0, 154.0, 24.0 ],
+					"patching_rect" : [ 112.0, 45.0, 160.0, 26.0 ],
+					"style" : "",
 					"text" : "j.gl_group.model GL"
 				}
 
@@ -95,10 +109,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 5,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 82.0, 419.0, 730.0, 569.0 ],
@@ -107,19 +122,27 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -130,6 +153,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 163.5, 314.0, 103.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend gridmode"
 								}
 
@@ -145,6 +169,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 163.5, 288.0, 515.0, 19.0 ],
+									"style" : "",
 									"text" : "j.parameter gridmode @type boolean @default 0 @description \"Grid render mode\"",
 									"varname" : "face[3]"
 								}
@@ -160,6 +185,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 83.0, 181.0, 74.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend dim"
 								}
 
@@ -175,6 +201,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 83.0, 155.0, 515.0, 19.0 ],
+									"style" : "",
 									"text" : "j.parameter dim @type array @default 20 20 @description \"The dimensions of the grid\"",
 									"varname" : "face[2]"
 								}
@@ -190,6 +217,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 44.0, 118.0, 90.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend shape"
 								}
 
@@ -205,6 +233,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 44.0, 92.0, 515.0, 19.0 ],
+									"style" : "",
 									"text" : "j.parameter shape @type string @default sphere @description \"The shape to be used\"",
 									"varname" : "face[1]"
 								}
@@ -220,6 +249,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 10.0, 50.0, 118.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend cache_mode"
 								}
 
@@ -234,6 +264,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 196.0, 388.0, 128.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend rad_minor"
 								}
 
@@ -248,6 +279,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 149.5, 260.0, 105.0, 19.0 ],
+									"style" : "",
 									"text" : "prepend displaylist"
 								}
 
@@ -263,6 +295,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 10.0, 13.0, 600.0, 19.0 ],
+									"style" : "",
 									"text" : "j.parameter cache_mode @type string @default vertexarray @description \"The mode to use for the geometry cache\"",
 									"varname" : "face"
 								}
@@ -280,6 +313,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 196.0, 350.0, 380.0, 31.0 ],
+									"style" : "",
 									"text" : "j.parameter rad_minor @type decimal @default 0.25 @description \"The minor radius of a torus, if one is rendered or sent out as a matrix.\"",
 									"varname" : "tracking"
 								}
@@ -297,6 +331,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 149.5, 214.0, 504.0, 43.0 ],
+									"style" : "",
 									"text" : "j.parameter displaylist @type boolean @description \"Cache in displaylist flag (default = 0) This feature may be used to speed up rendering time by creating and storing a list of gl drawing commands on the graphics card. This will have no effect if matrixoutput turned on.\"",
 									"varname" : "interp"
 								}
@@ -309,7 +344,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 10.0, 521.0, 25.0, 25.0 ]
+									"patching_rect" : [ 10.0, 521.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -425,20 +461,16 @@
  ]
 					}
 ,
-					"patching_rect" : [ 66.0, 10.0, 182.0, 24.0 ],
+					"patching_rect" : [ 66.0, 10.0, 182.0, 26.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p gridshape_parameters"
 				}
 
@@ -454,7 +486,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 258.0, 137.0, 153.0, 43.0 ],
+					"patching_rect" : [ 258.0, 137.0, 153.0, 45.0 ],
+					"style" : "",
 					"text" : "j.model @description \"Generate simple geometric shapes as a grid\"",
 					"varname" : "jmod.hub"
 				}
@@ -467,7 +500,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 258.0, 184.0, 25.0, 25.0 ]
+					"patching_rect" : [ 258.0, 184.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -480,7 +514,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 5.0, 104.0, 86.0, 19.0 ],
+					"patching_rect" : [ 5.0, 104.0, 86.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.gl.gridshape"
 				}
 
@@ -493,7 +528,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.0, 10.0, 27.0, 27.0 ]
+					"patching_rect" : [ 5.0, 10.0, 27.0, 27.0 ],
+					"style" : ""
 				}
 
 			}
@@ -504,7 +540,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 167.0, 25.0, 25.0 ]
+					"patching_rect" : [ 5.0, 167.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -517,7 +554,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 5.0, 131.0, 213.0, 19.0 ],
+					"patching_rect" : [ 5.0, 131.0, 213.0, 21.0 ],
+					"style" : "",
 					"text" : "j.out geometry_matrix @tags jit_matrix"
 				}
 
@@ -531,7 +569,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 5.0, 45.0, 37.0, 19.0 ],
+					"patching_rect" : [ 5.0, 45.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 1"
 				}
 
@@ -622,8 +661,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -647,7 +685,8 @@
 				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

@@ -4,17 +4,17 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 0,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 694.0, 119.0, 671.0, 578.0 ],
+		"rect" : [ 788.0, 134.0, 563.0, 443.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
-		"default_fontsize" : 10.0,
+		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
+		"default_fontname" : "Arial",
 		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 1,
@@ -38,130 +38,216 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 26.0, 96.0, 74.0, 21.0 ],
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 21.0, 408.0, 100.0, 21.0 ],
 					"style" : "",
-					"text" : "path oh.mov"
+					"text" : "jit.gl.videoplane"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "toggle",
+					"annotation" : "Chromakey using jit.gl.slab.",
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 21.0, 279.0, 183.0, 22.0 ],
+					"style" : "",
+					"text" : "gl_chromakey.model chromakey"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 8.0, 65.0, 249.0, 19.0 ],
+					"style" : "",
+					"text" : "Slab-based keying based on chromatic distance"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-17",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "gl_chromakey.model" ],
+					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 353.0, 453.0, 24.0, 24.0 ],
+					"patching_rect" : [ 8.0, 8.0, 521.0, 55.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "bang", "" ],
+					"patching_rect" : [ 21.0, 150.0, 217.0, 22.0 ],
+					"style" : "",
+					"text" : "jit.world chromakey_help @enable 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"attr" : "enable",
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"maxclass" : "attrui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 21.0, 119.0, 86.0, 22.0 ],
+					"style" : "",
+					"text_width" : 65.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 21.0, 196.0, 73.0, 22.0 ],
+					"style" : "",
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"data" : 					{
+						"clips" : [ 							{
+								"filename" : "countdown.mov",
+								"filekind" : "moviefile",
+								"loop" : 1,
+								"content_state" : 								{
+									"outputmode" : [ 1 ],
+									"out_name" : [ "u237004501" ],
+									"dim" : [ 1, 1 ],
+									"position" : [ 0.0 ],
+									"vol" : [ 1.0 ],
+									"unique" : [ 0 ],
+									"colormode" : [ "argb" ],
+									"output_texture" : [ 0 ],
+									"rate" : [ 1.0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"drawto" : [ "" ],
+									"time_secs" : [ 0.0 ],
+									"adapt" : [ 1 ],
+									"looppoints" : [ 0, 0 ],
+									"time" : [ 0 ],
+									"usedstrect" : [ 0 ],
+									"loopreport" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"loopstart" : [ 0 ],
+									"framereport" : [ 0 ],
+									"loopend" : [ 0 ],
+									"autostart" : [ 1 ],
+									"interp" : [ 0 ],
+									"engine" : [ "avf" ],
+									"moviefile" : [ "" ],
+									"texture_name" : [ "u390004499" ],
+									"automatic" : [ 0 ],
+									"dstrect" : [ 0, 0, 1, 1 ]
+								}
+
+							}
+ ]
+					}
+,
+					"id" : "obj-10",
+					"maxclass" : "jit.playlist",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "jit_matrix", "", "dictionary" ],
+					"patching_rect" : [ 21.0, 234.0, 150.0, 30.0 ],
 					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
+					"data" : 					{
+						"clips" : [ 							{
+								"filename" : "wheel.mov",
+								"filekind" : "moviefile",
+								"loop" : 1,
+								"content_state" : 								{
+									"outputmode" : [ 1 ],
+									"out_name" : [ "u237004501" ],
+									"dim" : [ 1, 1 ],
+									"position" : [ 0.0 ],
+									"vol" : [ 1.0 ],
+									"unique" : [ 0 ],
+									"colormode" : [ "argb" ],
+									"output_texture" : [ 0 ],
+									"rate" : [ 1.0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"drawto" : [ "" ],
+									"time_secs" : [ 0.0 ],
+									"adapt" : [ 1 ],
+									"looppoints" : [ 0, 0 ],
+									"time" : [ 0 ],
+									"usedstrect" : [ 0 ],
+									"loopreport" : [ 0 ],
+									"usesrcrect" : [ 0 ],
+									"loopstart" : [ 0 ],
+									"framereport" : [ 0 ],
+									"loopend" : [ 0 ],
+									"autostart" : [ 1 ],
+									"interp" : [ 0 ],
+									"engine" : [ "avf" ],
+									"moviefile" : [ "" ],
+									"texture_name" : [ "u390004499" ],
+									"automatic" : [ 0 ],
+									"dstrect" : [ 0, 0, 1, 1 ]
+								}
+
+							}
+ ]
+					}
+,
+					"id" : "obj-8",
+					"maxclass" : "jit.playlist",
 					"numinlets" : 1,
 					"numoutlets" : 3,
-					"outlettype" : [ "", "bang", "" ],
-					"patching_rect" : [ 353.0, 490.0, 52.0, 21.0 ],
-					"style" : "",
-					"text" : "jit.world"
+					"outlettype" : [ "jit_matrix", "", "dictionary" ],
+					"patching_rect" : [ 185.0, 234.0, 150.0, 30.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-19",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "movie%.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 26.0, 130.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 27.0, 207.0, 300.0, 140.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@name", "gl_chromakey", "@description", "Slab-based keying based on chromatic distance" ],
-					"bgmode" : 1,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-4",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 0.0, 0.0, 657.0, 70.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-18",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "input%.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 353.0, 130.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 711.0, 193.0, 300.0, 70.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-11",
-					"lockeddragscroll" : 1,
-					"maxclass" : "bpatcher",
-					"name" : "gl_videoplane.module.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 26.0, 402.0, 300.0, 140.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"annotation" : "none",
+					"args" : [ "chromakey" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -170,12 +256,12 @@
 					"id" : "obj-12",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "gl_chromakey.module.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 2,
+					"name" : "gl_chromakey.view.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 26.0, 285.0, 300.0, 105.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 230.5, 279.0, 300.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"viewvisibility" : 1
 				}
@@ -184,28 +270,29 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
+					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-12", 0 ]
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 1 ],
+					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-18", 0 ]
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-12", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-19", 0 ]
+					"midpoints" : [ 30.5, 226.5, 194.5, 226.5 ],
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
@@ -214,228 +301,82 @@
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-5", 0 ]
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
-		"parameters" : 		{
-			"obj-19::obj-5::obj-91" : [ "live.text[5]", "live.text[2]", 0 ],
-			"obj-19::obj-5::obj-89" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-19::obj-5::obj-36" : [ "live.text", "live.text", 0 ],
-			"obj-19::obj-5::obj-41" : [ "live.text[4]", "live.text[4]", 0 ],
-			"obj-19::obj-5::obj-39" : [ "live.text[3]", "live.text", 0 ],
-			"obj-19::obj-5::obj-37" : [ "live.text[1]", "live.text", 0 ],
-			"obj-19::obj-5::obj-49" : [ "live.button", "live.button", 0 ],
-			"obj-19::obj-5::obj-53" : [ "live.button[1]", "live.button", 0 ]
-		}
-,
 		"dependency_cache" : [ 			{
-				"name" : "gl_chromakey.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_chromakey",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_chromakey.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_chromakey",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "gl_chromakey.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/texture/gl_chromakey",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_chromakey",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.panel.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl_videoplane.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry/gl_videoplane",
-				"patcherrelativepath" : "../../geometry/gl_videoplane",
-				"type" : "JSON",
+				"name" : "wheel.mov",
+				"bootpath" : "C74:/media/jitter",
+				"type" : "MooV",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl_videoplane.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry/gl_videoplane",
-				"patcherrelativepath" : "../../geometry/gl_videoplane",
-				"type" : "JSON",
+				"name" : "countdown.mov",
+				"bootpath" : "C74:/media/jitter",
+				"type" : "MooV",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "gl_videoplane.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry/gl_videoplane",
-				"patcherrelativepath" : "../../geometry/gl_videoplane",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../../../components/openGL/gl_group",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "noise%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../../../video/sources/noise%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../../video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "grab%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../../../video/sources/grab%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.ui.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../../video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../../components/data/jamomaPath",
+				"name" : "gl_chromakey.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_chromakey",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "movie%.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../../video/sources/movie%",
+				"name" : "j.gl_group_slab.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
-			}
-, 			{
-				"name" : "movie%.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../../video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.ui.mxo",
@@ -454,31 +395,19 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.send.mxo",
+				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.namespace.mxo",
+				"name" : "j.in.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.oscroute.mxo",
+				"name" : "j.out.mxo",
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.init.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.return.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
+				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
  ],

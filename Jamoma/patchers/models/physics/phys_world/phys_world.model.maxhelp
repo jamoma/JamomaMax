@@ -2,31 +2,40 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 8,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 480.0, 102.0, 805.0, 624.0 ],
+		"rect" : [ 480.0, 102.0, 977.0, 449.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"showrootpatcherontab" : 0,
 		"showontab" : 0,
 		"boxes" : [ 			{
@@ -35,12 +44,12 @@
 					"bubbletextmargin" : 10,
 					"fontname" : "Helvetica Neue",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-12",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 82.4375, 155.0, 221.0, 34.0 ],
+					"style" : "",
 					"text" : "this one should stay the last one",
 					"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 				}
@@ -52,13 +61,13 @@
 					"bubbleside" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-13",
 					"linecount" : 6,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 533.0, 3.5, 114.0, 106.0 ],
+					"style" : "",
 					"text" : "When you are done documenting a model, right-click on the tab bar and untick \"Show Root Patcher on Tab\""
 				}
 
@@ -68,12 +77,12 @@
 					"bubble" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-9",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 103.9375, 54.0, 178.0, 24.0 ],
+					"style" : "",
 					"text" : "This is where the models go "
 				}
 
@@ -91,33 +100,82 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 8,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 5,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
-						"rect" : [ 480.0, 128.0, 805.0, 598.0 ],
+						"rect" : [ 480.0, 128.0, 977.0, 423.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"maxclass" : "live.line",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 605.0, 84.0, 6.0, 334.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-3",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "phys_world.model" ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 9.0, 8.0, 386.0, 53.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"id" : "obj-5",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 9.0, 57.0, 263.0, 21.0 ],
+									"style" : "",
+									"text" : "Collision detection and rigid body dynamics."
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
@@ -126,13 +184,15 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 435.5, 258.0, 83.0, 18.0 ],
+									"patching_rect" : [ 79.5, 110.0, 83.0, 22.0 ],
+									"style" : "",
 									"text" : "preset default"
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-19",
@@ -140,7 +200,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 27.0, 190.0, 80.0, 35.0 ]
+									"patching_rect" : [ 638.0, 187.0, 80.0, 35.0 ],
+									"style" : ""
 								}
 
 							}
@@ -148,13 +209,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-20",
 									"linecount" : 4,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 563.0, 438.0, 150.0, 60.0 ],
+									"patching_rect" : [ 825.0, 285.0, 150.0, 60.0 ],
+									"style" : "",
 									"text" : "jit.phys.* objects must have their worldname specified accordingly to phys_world worldname"
 								}
 
@@ -168,7 +229,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 377.0, 258.0, 50.0, 18.0 ],
+									"patching_rect" : [ 21.0, 110.0, 50.0, 22.0 ],
+									"style" : "",
 									"text" : "reset"
 								}
 
@@ -182,7 +244,8 @@
 									"numinlets" : 8,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 393.5, 477.0, 100.0, 21.0 ],
+									"patching_rect" : [ 655.5, 324.0, 100.0, 23.0 ],
+									"style" : "",
 									"text" : "jit.gl.material"
 								}
 
@@ -197,7 +260,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 376.0, 435.0, 176.0, 36.0 ],
+									"patching_rect" : [ 638.0, 282.0, 176.0, 38.0 ],
+									"style" : "",
 									"text" : "jit.phys.body @worldname my_context-world"
 								}
 
@@ -211,23 +275,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 376.0, 506.0, 135.0, 21.0 ],
+									"patching_rect" : [ 638.0, 353.0, 135.0, 23.0 ],
+									"style" : "",
 									"text" : "jit.gl.gridshape"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"args" : [ "@name", "phys_world.model", "@description", "Collision detection and rigid body dynamics" ],
-									"bgmode" : 1,
-									"id" : "obj-12",
-									"maxclass" : "bpatcher",
-									"name" : "j.maxhelpui.maxpat",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 0.0, 0.0, 805.0, 70.0 ],
-									"prototypename" : "bphelp",
-									"varname" : "maxhelpui[1]"
 								}
 
 							}
@@ -240,7 +290,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 116.0, 190.0, 142.0, 19.0 ],
+									"patching_rect" : [ 727.0, 187.0, 142.0, 21.0 ],
+									"style" : "",
 									"text" : "jit.window my_context"
 								}
 
@@ -254,7 +305,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 27.0, 116.0, 135.0, 19.0 ],
+									"patching_rect" : [ 638.0, 113.0, 135.0, 21.0 ],
+									"style" : "",
 									"text" : "qmetro 60 hz @active 1"
 								}
 
@@ -268,7 +320,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "erase", "" ],
-									"patching_rect" : [ 27.0, 140.0, 70.0, 19.0 ],
+									"patching_rect" : [ 638.0, 137.0, 70.0, 21.0 ],
+									"style" : "",
 									"text" : "t b erase l"
 								}
 
@@ -282,7 +335,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 27.0, 168.0, 224.0, 19.0 ],
+									"patching_rect" : [ 638.0, 165.0, 224.0, 21.0 ],
+									"style" : "",
 									"text" : "jit.gl.render my_context @camera 0 0 15"
 								}
 
@@ -298,7 +352,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 377.0, 286.0, 187.0, 19.0 ],
+									"patching_rect" : [ 21.0, 138.0, 187.0, 21.0 ],
+									"style" : "",
 									"text" : "phys_world.model myWorld"
 								}
 
@@ -306,15 +361,22 @@
 , 							{
 								"box" : 								{
 									"annotation" : "none",
+									"bgmode" : 0,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"id" : "obj-9",
 									"lockeddragscroll" : 1,
 									"maxclass" : "bpatcher",
 									"name" : "phys_world.view.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 1,
+									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 27.0, 260.0, 300.0, 280.0 ],
-									"presentation_rect" : [ 15.0, 15.0, 300.0, 280.0 ]
+									"patching_rect" : [ 252.0, 138.0, 300.0, 280.0 ],
+									"presentation_rect" : [ 15.0, 15.0, 300.0, 280.0 ],
+									"viewvisibility" : 1
 								}
 
 							}
@@ -322,13 +384,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-15",
 									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 377.0, 330.0, 328.0, 47.0 ],
+									"patching_rect" : [ 252.0, 89.0, 328.0, 47.0 ],
+									"style" : "",
 									"text" : "Contains a jit.phys.world object that encapsulates a physics simulation context to perform collision detection and rigid body dynamics on its child objects."
 								}
 
@@ -343,7 +405,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 27.0, 92.0, 80.0, 20.0 ],
+									"patching_rect" : [ 638.0, 89.0, 80.0, 22.0 ],
+									"style" : "",
 									"text_width" : 56.0
 								}
 
@@ -417,7 +480,7 @@
 									"destination" : [ "obj-11", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 62.0, 164.0, 36.5, 164.0 ],
+									"midpoints" : [ 673.0, 161.0, 647.5, 161.0 ],
 									"source" : [ "obj-7", 1 ]
 								}
 
@@ -436,18 +499,14 @@
 ,
 					"patching_rect" : [ 6.21875, 54.0, 93.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p phys_world",
 					"varname" : "basic"
 				}
@@ -464,31 +523,40 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 8,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 5,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 805.0, 598.0 ],
+						"rect" : [ 0.0, 26.0, 977.0, 423.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [  ],
 						"lines" : [  ]
@@ -496,18 +564,14 @@
 ,
 					"patching_rect" : [ 20.21875, 162.0, 50.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p ?",
 					"varname" : "q_tab"
 				}
@@ -517,51 +581,26 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "phys_world.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/physics/phys_world",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/physics/phys_world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "phys_world.model.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/physics/phys_world",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/physics/phys_world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../components/data/jamomaPath",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -600,19 +639,8 @@
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }

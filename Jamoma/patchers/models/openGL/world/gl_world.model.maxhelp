@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 3,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 784.0, 83.0, 527.0, 315.0 ],
+		"rect" : [ 763.0, 69.0, 495.0, 452.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,22 +38,31 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"args" : [ "@name", "world.model", "@description", "3 models in 1" ],
-					"bgmode" : 1,
 					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-12",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
+					"filename" : "helpdetails.js",
+					"id" : "obj-1",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "gl_world.model" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 9.0, 8.0, 386.0, 53.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-3",
+					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 0.0, 0.0, 527.0, 70.0 ],
-					"prototypename" : "bphelp",
-					"viewvisibility" : 1
+					"patching_rect" : [ 9.0, 57.0, 154.0, 21.0 ],
+					"style" : "",
+					"text" : "jit.world wrapper."
 				}
 
 			}
@@ -70,12 +79,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 1068.0, 247.0, 549.0, 542.0 ],
+						"rect" : [ 1060.0, 439.0, 549.0, 542.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -109,9 +118,9 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 257.0, 18.0, 117.0, 22.0 ],
+									"patching_rect" : [ 257.0, 18.0, 131.0, 22.0 ],
 									"style" : "",
-									"text" : "j.initialized /gl_world"
+									"text" : "j.initialized /world_help"
 								}
 
 							}
@@ -392,9 +401,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 189.5, 486.0, 182.0, 22.0 ],
+									"patching_rect" : [ 189.5, 486.0, 195.0, 22.0 ],
 									"style" : "",
-									"text" : "j.send /gl_world/camera/position"
+									"text" : "j.send /world_help/camera/position"
 								}
 
 							}
@@ -585,7 +594,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 356.0, 265.0, 61.0, 22.0 ],
+					"patching_rect" : [ 9.0, 419.0, 61.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -612,7 +621,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -660,6 +669,7 @@
 							}
 , 							{
 								"box" : 								{
+									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-7",
@@ -667,9 +677,9 @@
 									"numinlets" : 8,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 511.0, 206.0, 154.0, 23.0 ],
+									"patching_rect" : [ 511.0, 206.0, 143.0, 23.0 ],
 									"style" : "",
-									"text" : "jit.gl.material default"
+									"text" : "jit.gl.material my_world"
 								}
 
 							}
@@ -684,9 +694,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 482.0, 237.0, 328.0, 35.0 ],
+									"patching_rect" : [ 482.0, 237.0, 333.0, 35.0 ],
 									"style" : "",
-									"text" : "jit.gl.gridshape my_world @shape plane @rotatexyz 90 0 0 @position 0 -3. 0. @scale 6 6"
+									"text" : "jit.gl.gridshape my_world @shape plane @rotatexyz -90 0 0 @position 0 -3. 0. @scale 6 6"
 								}
 
 							}
@@ -740,9 +750,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 22.0, 5.5, 168.0, 22.0 ],
+									"patching_rect" : [ 22.0, 5.5, 181.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive /gl_world/data/active"
+									"text" : "j.receive /world_help/data/active"
 								}
 
 							}
@@ -817,9 +827,9 @@
 									"numinlets" : 8,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 46.0, 290.0, 143.0, 23.0 ],
+									"patching_rect" : [ 46.0, 290.0, 288.0, 23.0 ],
 									"style" : "",
-									"text" : "jit.gl.material my_world"
+									"text" : "jit.gl.material my_world @matfile red.velvet.jitmtl"
 								}
 
 							}
@@ -1036,7 +1046,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 356.0, 236.0, 61.0, 22.0 ],
+					"patching_rect" : [ 9.0, 390.0, 61.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1053,6 +1063,7 @@
 , 			{
 				"box" : 				{
 					"annotation" : "none",
+					"args" : [ "world_help" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -1066,7 +1077,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 20.0, 86.0, 300.0, 210.0 ],
+					"patching_rect" : [ 164.0, 106.0, 300.0, 210.0 ],
 					"presentation_rect" : [ 58.5, 486.0, 300.0, 210.0 ],
 					"varname" : "view",
 					"viewvisibility" : 1
@@ -1076,18 +1087,19 @@
 , 			{
 				"box" : 				{
 					"annotation" : "an openGL context + a window + a phys.world",
-					"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"color" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 12.0,
 					"id" : "obj-9",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 356.0, 129.0, 103.0, 23.0 ],
+					"patching_rect" : [ 9.0, 106.0, 108.0, 38.0 ],
 					"style" : "",
-					"text" : "gl_world.model"
+					"text" : "gl_world.model world_help"
 				}
 
 			}
@@ -1105,12 +1117,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 3,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 1088.0, 143.0, 558.0, 647.0 ],
+						"rect" : [ 802.0, 131.0, 776.0, 808.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1138,6 +1150,31 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-8",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 234.0, 685.0, 150.0, 60.0 ],
+									"style" : "",
+									"text" : "jit.gl.model my_world @file duck.dae @lighting_enable 1 @smooth_shading 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 459.0, 725.0, 150.0, 20.0 ],
+									"style" : "",
+									"text" : "@material_mode 3"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-23",
 									"maxclass" : "newobj",
@@ -1171,9 +1208,9 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 241.0, 4.0, 117.0, 22.0 ],
+									"patching_rect" : [ 241.0, 4.0, 131.0, 22.0 ],
 									"style" : "",
-									"text" : "j.initialized /gl_world"
+									"text" : "j.initialized /world_help"
 								}
 
 							}
@@ -1183,13 +1220,14 @@
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-11",
+									"linecount" : 3,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 232.0, 559.0, 222.0, 23.0 ],
+									"patching_rect" : [ 279.0, 597.0, 226.0, 52.0 ],
 									"style" : "",
-									"text" : "jit.gl.model my_world @file duck.dae"
+									"text" : "jit.gl.model my_world @file duck.dae @lighting_enable 1 @material_mode 3"
 								}
 
 							}
@@ -1204,7 +1242,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 232.0, 513.0, 256.0, 38.0 ],
+									"patching_rect" : [ 279.0, 507.0, 256.0, 38.0 ],
 									"style" : "",
 									"text" : "jit.phys.body @worldname my_physWorld @kinematic 1"
 								}
@@ -1330,6 +1368,7 @@
 							}
 , 							{
 								"box" : 								{
+									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-17",
@@ -1337,9 +1376,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 241.0, 94.0, 142.0, 22.0 ],
+									"patching_rect" : [ 241.0, 94.0, 155.0, 22.0 ],
 									"style" : "",
-									"text" : "jit.map @map 0. 1. -3. 3."
+									"text" : "jit.map @map 0. 1. -2.5 2.5"
 								}
 
 							}
@@ -1668,7 +1707,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 356.0, 209.0, 46.0, 22.0 ],
+					"patching_rect" : [ 9.0, 363.0, 46.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1686,65 +1725,38 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/initialized",
-				"patcherrelativepath" : "../../../components/data/initialized",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_world.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/world",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_world.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/world",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "gl_world_physic.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/world",
-				"patcherrelativepath" : ".",
+				"name" : "gl_world_basic_view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "~/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../components/data/jamomaPath",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -1789,10 +1801,6 @@
 			}
 , 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
  ],

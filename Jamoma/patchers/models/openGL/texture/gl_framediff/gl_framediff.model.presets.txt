@@ -1,0 +1,19 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+context default
+active 1
+adapt 1
+antialias 0
+automatic 1
+data/active 1
+data/bypass 0
+dim 720.000000 480.000000
+mode none
+rect 0.000000 0.000000 1.000000 1.000000
+texrect 0.000000 0.000000 1.000000 1.000000
+threshold 0.000000
+# 
+# ###########################################

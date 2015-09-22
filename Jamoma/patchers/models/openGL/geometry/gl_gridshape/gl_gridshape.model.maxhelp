@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 464.0, 133.0, 710.0, 512.0 ],
+		"rect" : [ 787.0, 132.0, 546.0, 372.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -107,7 +107,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 464.0, 159.0, 710.0, 486.0 ],
+						"rect" : [ 787.0, 158.0, 546.0, 346.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -136,6 +136,20 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"linecount" : 2,
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "bang", "" ],
+									"patching_rect" : [ 12.0, 132.0, 142.0, 35.0 ],
+									"style" : "",
+									"text" : "jit.world gridshape_help @enable 1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-8",
 									"maxclass" : "comment",
@@ -193,6 +207,19 @@
 										"subpatcher_template" : "",
 										"boxes" : [ 											{
 												"box" : 												{
+													"id" : "obj-3",
+													"linecount" : 2,
+													"maxclass" : "comment",
+													"numinlets" : 1,
+													"numoutlets" : 0,
+													"patching_rect" : [ 231.0, 200.0, 150.0, 33.0 ],
+													"style" : "",
+													"text" : ", GL/context gridshape_help"
+												}
+
+											}
+, 											{
+												"box" : 												{
 													"bubble" : 1,
 													"bubbletextmargin" : 10,
 													"fontname" : "Helvetica Neue",
@@ -214,14 +241,13 @@
 													"fontname" : "Arial",
 													"fontsize" : 12.0,
 													"id" : "obj-4",
-													"linecount" : 2,
 													"maxclass" : "message",
 													"numinlets" : 2,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 123.5, 174.0, 35.0 ],
+													"patching_rect" : [ 50.0, 123.5, 174.0, 22.0 ],
 													"style" : "",
-													"text" : "preset:recall EnlightedSphere, GL/context gridshape_help"
+													"text" : "preset:recall EnlightedSphere"
 												}
 
 											}
@@ -274,7 +300,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 12.0, 103.0, 36.0, 22.0 ],
+									"patching_rect" : [ 11.0, 191.0, 36.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -299,7 +325,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 12.0, 133.0, 187.0, 22.0 ],
+									"patching_rect" : [ 11.0, 221.0, 187.0, 22.0 ],
 									"style" : "",
 									"text" : "gl_gridshape.model gl_gridshape"
 								}
@@ -317,67 +343,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 12.0, 9.0, 606.0, 55.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-14",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 12.0, 369.0, 142.0, 21.0 ],
-									"style" : "",
-									"text" : "jit.window gridshape_help"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-10",
-									"maxclass" : "newobj",
-									"numinlets" : 2,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 12.0, 295.0, 117.0, 21.0 ],
-									"style" : "",
-									"text" : "qmetro 20 @active 1"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-7",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "bang", "erase", "" ],
-									"patching_rect" : [ 12.0, 319.0, 70.0, 21.0 ],
-									"style" : "",
-									"text" : "t b erase l"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"fontname" : "Verdana",
-									"fontsize" : 10.0,
-									"id" : "obj-11",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 12.0, 347.0, 150.0, 21.0 ],
-									"style" : "",
-									"text" : "jit.gl.render gridshape_help"
+									"patching_rect" : [ 12.0, 9.0, 447.0, 55.0 ]
 								}
 
 							}
@@ -397,7 +363,7 @@
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 213.0, 133.0, 300.0, 105.0 ],
+									"patching_rect" : [ 212.0, 221.0, 300.0, 105.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 300.0, 105.0 ],
 									"viewvisibility" : 1
 								}
@@ -412,7 +378,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 213.0, 268.5, 316.0, 74.0 ],
+									"patching_rect" : [ 212.0, 142.5, 317.0, 74.0 ],
 									"style" : "",
 									"text" : "Creates one of several simple shapes (sphere, torus, cylinder, opencyclinder, cube, opencube, plane, circle) laid out on a connected grid. These shapes may be either rendered directly, or sent out the leftmost outlet as a matrix of values.",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -421,31 +387,20 @@
 							}
 , 							{
 								"box" : 								{
-									"attr" : "active",
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
+									"attr" : "enable",
 									"id" : "obj-2",
 									"maxclass" : "attrui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 12.0, 271.0, 80.0, 22.0 ],
+									"patching_rect" : [ 12.0, 102.0, 90.0, 22.0 ],
 									"style" : "",
-									"text_width" : 56.0
+									"text_width" : 69.0
 								}
 
 							}
  ],
 						"lines" : [ 							{
-								"patchline" : 								{
-									"destination" : [ "obj-7", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-10", 0 ]
-								}
-
-							}
-, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-13", 0 ],
 									"disabled" : 0,
@@ -456,29 +411,10 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-10", 0 ],
+									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-2", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-11", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"midpoints" : [ 47.0, 343.0, 21.5, 343.0 ],
-									"source" : [ "obj-7", 1 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-11", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-7", 0 ]
 								}
 
 							}
@@ -518,7 +454,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 710.0, 486.0 ],
+						"rect" : [ 0.0, 26.0, 546.0, 346.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,

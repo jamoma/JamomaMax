@@ -38,15 +38,42 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"border" : 5.0,
+					"id" : "obj-3",
+					"justification" : 3,
+					"linecolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
+					"maxclass" : "live.line",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 41.0, 229.5, 132.0, 62.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 37.0, 245.0, 158.0, 31.0 ],
+					"style" : "",
+					"text" : "second argument, if present, defines window name"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "Output to an OpenGL window",
 					"id" : "obj-7",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 37.0, 191.0, 173.0, 21.0 ],
+					"patching_rect" : [ 37.0, 191.0, 178.0, 33.0 ],
 					"style" : "",
-					"text" : "window%.model window%_help"
+					"text" : "window%.model window%_help window_help"
 				}
 
 			}

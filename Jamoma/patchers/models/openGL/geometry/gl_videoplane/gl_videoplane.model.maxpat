@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 10,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 5,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 280.0, 185.0, 1041.0, 686.0 ],
@@ -14,29 +15,37 @@
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : 0.0,
 					"id" : "obj-22",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 77.0, 641.0, 193.5, 19.0 ],
+					"style" : "",
 					"text" : "output geometry matrices"
 				}
 
@@ -50,7 +59,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 59.0, 92.0, 126.0, 19.0 ],
+					"patching_rect" : [ 59.0, 92.0, 126.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend client_storage"
 				}
 
@@ -64,7 +74,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 77.0, 143.0, 103.0, 19.0 ],
+					"patching_rect" : [ 77.0, 143.0, 103.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend displaylist"
 				}
 
@@ -78,7 +89,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 93.0, 194.0, 103.0, 19.0 ],
+					"patching_rect" : [ 93.0, 194.0, 103.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend gridmode"
 				}
 
@@ -92,7 +104,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 119.5, 273.0, 100.0, 19.0 ],
+					"patching_rect" : [ 119.5, 266.0, 100.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend nudge"
 				}
 
@@ -106,7 +119,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 140.0, 317.0, 100.0, 19.0 ],
+					"patching_rect" : [ 140.0, 317.0, 100.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend dim"
 				}
 
@@ -120,7 +134,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 41.0, 610.0, 213.0, 19.0 ],
+					"patching_rect" : [ 41.0, 610.0, 213.0, 21.0 ],
+					"style" : "",
 					"text" : "j.out geometry_matrix @tags jit_matrix"
 				}
 
@@ -133,7 +148,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 110.0, 493.0, 18.0, 18.0 ]
+					"patching_rect" : [ 110.0, 493.0, 18.0, 18.0 ],
+					"style" : ""
 				}
 
 			}
@@ -146,7 +162,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 110.0, 517.0, 37.0, 19.0 ],
+					"patching_rect" : [ 110.0, 517.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 1"
 				}
 
@@ -158,7 +175,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 638.0, 25.0, 25.0 ]
+					"patching_rect" : [ 41.0, 638.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -173,7 +191,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 625.5, 604.0, 251.0, 31.0 ],
+					"patching_rect" : [ 625.5, 604.0, 251.0, 33.0 ],
+					"style" : "",
 					"text" : "j.model @tags gl @description \"Apply incoming video matrix as texture to OpenGL videoplane.\"",
 					"varname" : "j.model"
 				}
@@ -186,7 +205,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 625.5, 638.0, 25.0, 25.0 ]
+					"patching_rect" : [ 625.5, 638.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -201,7 +221,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 156.0, 340.5, 155.0, 24.0 ],
+					"patching_rect" : [ 156.0, 340.5, 155.0, 26.0 ],
+					"style" : "",
 					"text" : "j.gl_group.model GL"
 				}
 
@@ -215,7 +236,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 41.0, 578.0, 91.0, 19.0 ],
+					"patching_rect" : [ 41.0, 578.0, 91.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.gl.videoplane"
 				}
 
@@ -223,6 +245,7 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1011",
@@ -230,8 +253,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 93.0, 173.0, 642.0, 19.0 ],
-					"text" : "j.parameter videoplane/gridmode @type string @description \"Grid mode (0 = quadrilated, 1 = triangular).\"",
+					"patching_rect" : [ 93.0, 173.0, 642.0, 21.0 ],
+					"style" : "",
+					"text" : "j.parameter videoplane/gridmode @type integer @description \"Grid mode (0 = quadrilated, 1 = triangular).\"",
 					"varname" : "videoplane/gridmode"
 				}
 
@@ -239,15 +263,18 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1013",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 444.5, 429.0, 568.0, 19.0 ],
-					"text" : "j.parameter videoplane/colormode @type string @description \"Color mode (argb or uyvy).\" @range argb uyvy",
+					"patching_rect" : [ 444.5, 429.0, 572.0, 33.0 ],
+					"style" : "",
+					"text" : "j.parameter videoplane/colormode @type string @description \"Color mode (argb or uyvy).\" @range argb uyvy @default argb",
 					"varname" : "videoplane/colormode"
 				}
 
@@ -263,7 +290,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 618.5, 459.0, 247.5, 31.0 ],
+					"patching_rect" : [ 616.5, 478.0, 247.5, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter videoplane/interpolate @type boolean @description Interpolation",
 					"varname" : "videoplane/interpolate"
 				}
@@ -279,7 +307,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 77.0, 123.0, 755.0, 19.0 ],
+					"patching_rect" : [ 77.0, 123.0, 755.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter videoplane/displaylist @type boolean @description \"Cache in displaylist (might speed up rendering on graphic card).\"",
 					"varname" : "videoplane/displaylist"
 				}
@@ -295,7 +324,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 59.0, 71.0, 925.0, 19.0 ],
+					"patching_rect" : [ 59.0, 71.0, 925.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter videoplane/client_storage @type boolean @description \"When set jit.videoplane use incoming matrix's storage rather than allocating texture memory.\"",
 					"varname" : "videoplane/client_storage"
 				}
@@ -312,7 +342,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 119.5, 227.0, 675.0, 31.0 ],
+					"patching_rect" : [ 119.5, 227.0, 675.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter videoplane/nudge @type decimal @range 0. 1. @clipmode both @description \"Amount of the texture that is nudged from boundary to accomodate for boundary errors when mapping the texture to the plane.\"",
 					"varname" : "videoplane/nudge"
 				}
@@ -321,6 +352,7 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1023",
@@ -328,8 +360,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 140.0, 297.0, 859.0, 19.0 ],
-					"text" : "j.parameter videoplane/dim @type generic @range 1 1000 @clipmode low @description \"Dimension of the grid (x, y coordinates).\"",
+					"patching_rect" : [ 140.0, 297.0, 859.0, 21.0 ],
+					"style" : "",
+					"text" : "j.parameter videoplane/dim @type generic @range 1 1000 @clipmode low @description \"Dimension of the grid (x, y coordinates).\" @default 20 20",
 					"varname" : "videoplane/dim"
 				}
 
@@ -344,7 +377,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 309.5, 399.0, 546.0, 19.0 ],
+					"patching_rect" : [ 309.5, 399.0, 546.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter videoplane/texture/scale @type array @description \"Texture scale (x, y coordinates).\"",
 					"varname" : "videoplane/texture/scale"
 				}
@@ -360,7 +394,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 182.5, 368.5, 550.0, 19.0 ],
+					"patching_rect" : [ 182.5, 368.5, 550.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter videoplane/texture/offset @type generic @description \"Texture offset (x, y coordinates).\"",
 					"varname" : "videoplane/texture/offset"
 				}
@@ -375,7 +410,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 618.5, 492.0, 91.0, 19.0 ],
+					"patching_rect" : [ 616.5, 511.0, 91.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend interp"
 				}
 
@@ -390,7 +426,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 444.5, 492.0, 65.0, 31.0 ],
+					"patching_rect" : [ 444.5, 492.0, 65.0, 33.0 ],
+					"style" : "",
 					"text" : "prepend colormode"
 				}
 
@@ -404,7 +441,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 309.5, 459.0, 80.0, 19.0 ],
+					"patching_rect" : [ 309.5, 459.0, 80.0, 21.0 ],
+					"style" : "",
 					"text" : "unpack 0. 0."
 				}
 
@@ -419,7 +457,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 370.5, 492.0, 61.0, 43.0 ],
+					"patching_rect" : [ 370.5, 492.0, 61.0, 45.0 ],
+					"style" : "",
 					"text" : "prepend tex_scale_y"
 				}
 
@@ -434,7 +473,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 309.5, 492.0, 61.0, 43.0 ],
+					"patching_rect" : [ 309.5, 492.0, 61.0, 45.0 ],
+					"style" : "",
 					"text" : "prepend tex_scale_x"
 				}
 
@@ -449,7 +489,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 243.5, 492.0, 60.0, 43.0 ],
+					"patching_rect" : [ 243.5, 492.0, 60.0, 45.0 ],
+					"style" : "",
 					"text" : "prepend tex_offset_y"
 				}
 
@@ -464,7 +505,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 182.5, 492.0, 60.0, 43.0 ],
+					"patching_rect" : [ 182.5, 492.0, 60.0, 45.0 ],
+					"style" : "",
 					"text" : "prepend tex_offset_x"
 				}
 
@@ -478,7 +520,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "float" ],
-					"patching_rect" : [ 182.5, 459.0, 80.0, 19.0 ],
+					"patching_rect" : [ 182.5, 459.0, 80.0, 21.0 ],
+					"style" : "",
 					"text" : "unpack 0. 0."
 				}
 
@@ -516,7 +559,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 628.0, 476.5, 628.0, 476.5 ],
+					"midpoints" : [ 626.0, 495.5, 626.0, 495.5 ],
 					"source" : [ "obj-1015", 0 ]
 				}
 
@@ -608,7 +651,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 628.0, 552.5, 50.5, 552.5 ],
+					"midpoints" : [ 626.0, 552.5, 50.5, 552.5 ],
 					"source" : [ "obj-15", 0 ]
 				}
 
@@ -762,7 +805,35 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.gl_group.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
