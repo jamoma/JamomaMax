@@ -2,179 +2,158 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 562.0, 498.0 ],
+		"rect" : [ 100.0, 100.0, 511.0, 432.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
-		"default_fontsize" : 10.0,
+		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"default_fontname" : "Arial",
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-3",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "j.parameter_create", 75 ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 10.0, 10.0, 476.0, 72.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 58.0, 327.0, 58.0, 19.0 ],
+					"patching_rect" : [ 58.0, 327.0, 58.0, 22.0 ],
+					"style" : "",
 					"text" : "j.model"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-7",
+					"linecount" : 7,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 191.0, 290.0, 301.0, 19.0 ],
-					"text" : "Double-click the object to open the configuration window.",
-					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+					"patching_rect" : [ 204.5, 249.0, 201.0, 104.0 ],
+					"style" : "",
+					"text" : "Double-click.\n\nProvide name of the object, and set all attributes. By hitting the \"Generate\" button, the object is script-created and added to the model.",
+					"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
-					"id" : "obj-5",
-					"linecount" : 5,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 166.0, 421.0, 67.0 ],
-					"text" : "Double-clicking j.parameterCreate brings up a window providing UI objects for each attribute needed to be defined. Once j.parameterCreate is opened, start by clicking the 'Make new' button. Once all the attributes are defined, clicking the 'Generate' button will script a new j.parameter, j.message or j.return in the patch."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"frgb" : 0.0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
 					"id" : "obj-4",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 114.0, 405.0, 31.0 ],
-					"text" : "j.parameterCreate helps at the creation of j.parameter, j.message or j.return objects needed while developping a module."
+					"patching_rect" : [ 10.0, 102.0, 399.0, 33.0 ],
+					"style" : "",
+					"text" : "Helper utility when creating j.parameter, j.message or j.return objects while developping a module.",
+					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
-					"patching_rect" : [ 58.0, 290.0, 124.0, 19.0 ],
-					"text" : "j.parameterCreate"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@name", "j.parameterCreate", "@description", "A utility to help the creation of j.parameter, j.message or j.return" ],
-					"bgmode" : 1,
-					"id" : "obj-21",
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 562.0, 70.0 ]
+					"patching_rect" : [ 58.0, 290.0, 124.0, 22.0 ],
+					"style" : "",
+					"text" : "j.parameter_create"
 				}
 
 			}
  ],
 		"lines" : [  ],
+		"parameters" : 		{
+			"obj-1::obj-163" : [ "live.text[2]", "live.text", 0 ],
+			"obj-1::obj-170" : [ "live.text[9]", "live.text", 0 ],
+			"obj-1::obj-171" : [ "live.text[10]", "live.text", 0 ],
+			"obj-1::obj-162" : [ "live.text[1]", "live.text", 0 ],
+			"obj-1::obj-172" : [ "live.text[11]", "live.text", 0 ],
+			"obj-1::obj-176" : [ "live.text[15]", "live.text", 0 ],
+			"obj-1::obj-173" : [ "live.text[12]", "live.text", 0 ],
+			"obj-1::obj-166" : [ "live.text[5]", "live.text", 0 ],
+			"obj-1::obj-167" : [ "live.text[6]", "live.text", 0 ],
+			"obj-1::obj-174" : [ "live.text[13]", "live.text", 0 ],
+			"obj-1::obj-168" : [ "live.text[7]", "live.text", 0 ],
+			"obj-1::obj-169" : [ "live.text[8]", "live.text", 0 ],
+			"obj-1::obj-164" : [ "live.text[3]", "live.text", 0 ],
+			"obj-1::obj-165" : [ "live.text[4]", "live.text", 0 ],
+			"obj-1::obj-175" : [ "live.text[14]", "live.text", 0 ],
+			"obj-1::obj-161" : [ "live.text", "live.text", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameterCreate.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/parameterCreate",
-				"patcherrelativepath" : ".",
+				"name" : "j.parameter_create.maxpat",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/data/parameter_create",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.thisparentpatcher.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.parameterCreatePresetDoc.js",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/javascript",
-				"patcherrelativepath" : "../../../../javascript",
+				"name" : "j.parameter_create_preset_doc.js",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
+				"implicit" : 1
 			}
 , 			{
 				"name" : "j.map.mxo",
@@ -188,7 +167,8 @@
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
