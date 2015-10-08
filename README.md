@@ -10,9 +10,8 @@ Jamoma implementation for Max.
 
 Here are the steps to clone and build JamomaMax :
     
-    git clone https://github.com/Jamoma/JamomaMax
+    git clone --recursive https://github.com/jamoma/JamomaMax.git
     cd JamomaMax
-    git submodule update --init --recursive 
     ./build.sh --multi
 
 There are additional options to the `build.sh` command, including : 
