@@ -46,5 +46,5 @@ You can do this in the Terminal:
 
 ### Pre-built Packages
 
-You will find nighlty builds of this code [here](https://github.com/jamoma/nightly-builds) for both OS X and Windows (32 and 64bit).
+You will find nighlty builds of this code [here](http://www.jamoma.org/download/JamomaMax/nightly-builds/) for both OS X and Windows (32 and 64bit).
 
