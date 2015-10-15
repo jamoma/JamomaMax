@@ -41,7 +41,7 @@ Options :
 --install
   Install in /usr/local/jamoma
 --package
-  Creates a ready-for-distribution package 
+  Creates a ready-for-distribution package
 --uninstall
   Removes /usr/local/jamoma
 
@@ -74,6 +74,7 @@ do
 		;;
 	--xcode) echo "Use Xcode to build on Mac"
 		JAMOMA_CMAKE_GENERATOR="Xcode"
+        JAMOMA_BUILD_FOLDER_SUFFIX="-xcode"
 		;;
 	--install) echo "Will install Jamoma"
 		JAMOMA_INSTALL_JAMOMA="install"
@@ -90,6 +91,7 @@ do
 	--clean) echo "Removal of the build folder"
 		rm -rf build
 		rm -rf build64
+        rm -rf build-xcode
 		;;
 	*) echo "Wrong option : $1"
 		echo "$HELP_MESSAGE"
@@ -133,7 +135,7 @@ mkdir -p build"$JAMOMA_BUILD_FOLDER_SUFFIX"
 		make install
 	fi
 
-	if [ "x${JAMOMA_INSTALL_JAMOMAMAX}" = "xYes" ]; then 
+	if [ "x${JAMOMA_INSTALL_JAMOMAMAX}" = "xYes" ]; then
 		rm -rf ../Jamoma/support
 		rm -rf ../Jamoma/externals
 		rm -rf ../Jamoma/extensions
