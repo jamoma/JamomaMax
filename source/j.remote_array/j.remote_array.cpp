@@ -81,6 +81,8 @@ int C74_EXPORT main(void)
 
 void WrapTTViewerClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)remote_assist,						"assist",				A_CANT, 0L);
 	class_addmethod(c->maxClass, (method)remote_return_model_address,		"return_model_address",	A_CANT, 0);
 		

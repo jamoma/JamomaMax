@@ -110,6 +110,8 @@ int C74_EXPORT main(void)
 
 void WrapTTReceiverClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)receive_assist,				"assist",				A_CANT, 0L);
 	
 	class_addmethod(c->maxClass, (method)receive_return_model_address,	"return_model_address",	A_CANT, 0);

@@ -76,6 +76,7 @@ int C74_EXPORT main(void)
 	class_addmethod(c, (method)ramp_dsp64,				"dsp64",	A_CANT, 0);
 	class_addmethod(c, (method)ramp_assist,				"assist",	A_CANT, 0L); 
     class_addmethod(c, (method)object_obex_dumpout,		"dumpout", 	A_CANT, 0);
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	attr = attr_offset_new("mode", _sym_symbol, attrflags,
 		(method)0L, (method)ramp_setMode, calcoffset(t_ramp, attrMode));

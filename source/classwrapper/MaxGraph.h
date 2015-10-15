@@ -18,6 +18,7 @@
 #include "z_dsp.h"					// MSP Header
 #include "jpatcher_api.h"			// Required for patcher traversal code
 
+#include "MaxCommon.h"
 #include "TTGraphAPI.h"				// Definitions for Jamoma Graph
 
 // TYPE DEFINITIONS

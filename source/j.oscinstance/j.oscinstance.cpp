@@ -15,6 +15,7 @@
 
 
 #include "JamomaForMax.h"
+#include "MaxCommon.h"
 
 #define MAX_MESS_SIZE 2048
 
@@ -68,6 +69,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
   	class_addmethod(c, (method)oscinstance_symbol,		"anything", A_GIMME, 0L);
 	class_addmethod(c, (method)oscinstance_assist,		"assist",	A_CANT, 0L); 
     class_addmethod(c, (method)object_obex_dumpout, 	"dumpout",	A_CANT,0);
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	// Finalize our class
 	class_register(CLASS_BOX, c);

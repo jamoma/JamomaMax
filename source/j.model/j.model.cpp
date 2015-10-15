@@ -35,6 +35,8 @@ int C74_EXPORT main(void)
 
 void WrapTTContainerClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)model_assist,                      "assist",				A_CANT, 0L);
 	
 	class_addmethod(c->maxClass, (method)model_share_patcher_info,          "share_patcher_info",	A_CANT, 0);

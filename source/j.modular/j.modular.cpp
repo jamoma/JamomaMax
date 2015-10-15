@@ -56,6 +56,8 @@ int C74_EXPORT main(void)
 
 void WrapTTApplicationClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)modular_assist,					"assist",						A_CANT, 0L);
 	
 	class_addmethod(c->maxClass, (method)modular_protocol_setup,			"protocol/setup",				A_GIMME, 0);

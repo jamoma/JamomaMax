@@ -81,6 +81,7 @@ int C74_EXPORT main(void)
 
 void WrapTTDataClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 	class_addmethod(c->maxClass, (method)data_assist,						"assist",				A_CANT, 0L);
 		
 	class_addmethod(c->maxClass, (method)data_bang,							"bang",					0L);

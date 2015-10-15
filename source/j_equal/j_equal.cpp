@@ -14,6 +14,7 @@
  */
 
 #include "MaxAudioGraph.h"
+#include "MaxCommon.h"
 
 // Prototypes for methods
 t_object*	jamoma_new(t_symbol *s, long argc, t_atom* argv);
@@ -30,6 +31,10 @@ static t_hashtab*	s_jamoma_class_hash = NULL;
 int C74_EXPORT main(void)
 {
 	s_jamoma_class = class_new("j=", (method)jamoma_new, (method)NULL, 0 /*sizeof(t_object)*/, (method)0L, A_GIMME, 0);
+	
+	// standalone support:
+	class_addmethod(s_jamoma_class, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_register(CLASS_BOX, s_jamoma_class);
 
 	common_symbols_init();

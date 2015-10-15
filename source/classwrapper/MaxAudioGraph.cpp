@@ -455,6 +455,8 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 	class_addmethod(wrappedMaxClass->maxClass, (method)MaxAudioGraphWrappedClass_assist, 	"assist",				A_CANT, 0L);
 	class_addmethod(wrappedMaxClass->maxClass, (method)stdinletinfo,			"inletinfo",			A_CANT, 0);
 
+	// standalone support:
+	class_addmethod(wrappedMaxClass->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	if (wrappedMaxClass->options) {
 		TTValue		userCanSetNumChannels = NO;

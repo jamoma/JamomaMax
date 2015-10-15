@@ -13,8 +13,8 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-#include "MaxCommon.h"
 #include "TTModularClassWrapperMax.h"
+#include "MaxCommon.h"
 
 #define data_out 0
 #define	dump_out 1

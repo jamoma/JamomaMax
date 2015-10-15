@@ -65,6 +65,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	jbox_initclass(c, flags);
 	c->c_flags |= CLASS_FLAG_NEWDICTIONARY; // to specify dictionary constructor
 	
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c, (method)ui_notify,							"notify",							A_CANT, 0);
 	class_addmethod(c, (method)ui_paint,							"paint",							A_CANT, 0);
 	class_addmethod(c, (method)ui_mousedown,						"mousedown",						A_CANT, 0);

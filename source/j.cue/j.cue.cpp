@@ -69,6 +69,8 @@ int C74_EXPORT main(void)
 
 void WrapTTCueManagerClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)cue_assist,				"assist",				A_CANT, 0L);
 	
 	class_addmethod(c->maxClass, (method)cue_return_value,			"return_value",			A_CANT, 0);

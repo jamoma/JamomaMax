@@ -16,6 +16,7 @@
 
 #include "JamomaForMax.h"
 #include "j.dbap.h"
+#include "MaxCommon.h"
 
 // Globals
 t_class		*this_class = 0;								// Required. Global pointing to this class
@@ -74,6 +75,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)dbap_assist,				"assist",		A_CANT,		0);
 	class_addmethod(c, (method)dbap_info,				"info",			0);
 	class_addmethod(c, (method)object_obex_dumpout,		"dumpout",		0);
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	// Add attributes to our class:	
 	CLASS_ATTR_LONG(c,		"dimensions",		0,		t_dbap,	attr_dimensions);

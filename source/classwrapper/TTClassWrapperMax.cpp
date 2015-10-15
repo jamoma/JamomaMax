@@ -463,6 +463,9 @@ TTErr wrapTTClassAsMaxClass(TTSymbol ttblueClassName, const char* maxClassName, 
     class_addmethod(wrappedMaxClass->maxClass, (method)object_obex_dumpout, 	"dumpout",		A_CANT, 0); 
 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedClass_assist, 	"assist",		A_CANT, 0L);
 	class_addmethod(wrappedMaxClass->maxClass, (method)stdinletinfo,			"inletinfo",	A_CANT, 0);
+
+	// standalone support:
+	class_addmethod(wrappedMaxClass->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 	
 	class_dspinit(wrappedMaxClass->maxClass);
 	class_register(_sym_box, wrappedMaxClass->maxClass);
