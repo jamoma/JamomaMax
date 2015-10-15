@@ -13,7 +13,7 @@
  * http://creativecommons.org/licenses/BSD/
  */
 
-
+#include "MaxCommon.h"
 #include "TTModularClassWrapperMax.h"
 
 #define data_out 0
@@ -144,6 +144,9 @@ void WrapTTDataClass(WrappedClassPtr c)
 	class_addmethod(c->maxClass, (method)data_dec,							"-",					A_GIMME, 0);
 	
 	class_addmethod(c->maxClass, (method)data_address,						"address",				A_SYM,0);
+	
+	// standalone support:
+	class_addmethod(c->maxClass, (method)jamoma_fileusage,					"fileusage",			A_CANT, 0);
 }
 
 
