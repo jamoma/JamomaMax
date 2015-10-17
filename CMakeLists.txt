@@ -77,3 +77,10 @@ if((APPLE AND NOT IOS) OR WIN32)
 	add_subdirectory(library)
 	add_subdirectory(source)
 endif()
+
+if (WIN32 AND NOT MINGW-W64)
+  find_package(LibXml2 CONFIG)
+  get_target_property(XML2_DLL xml2 IMPORTED_LOCATION)
+  install(FILES "${XML2_DLL}"
+    DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/support/${SUPPORT_FOLDER}")
+endif()
