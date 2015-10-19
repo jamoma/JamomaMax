@@ -88,21 +88,14 @@ void jamoma_init(void)
         }
         else
             MaxApplication = out[0];
-        
-        // Edit the path to the JamomaConfiguration.xml file
-        strncpy_zero(name, TTFoundationBinaryPath.data(), TTFoundationBinaryPath.size()-6);
-        JamomaConfigurationFilePath = name;
-        JamomaConfigurationFilePath = "JamomaConfiguration.xml";
-        
-        // check if the JamomaConfiguration.xml file exists
-        strncpy_zero(name, JamomaConfigurationFilePath.data(), MAX_PATH_CHARS);
-        if (locatefile_extended(name, &outvol, &outtype, &filetype, 1))
+
+        if (locatefile_extended("JamomaConfiguration.xml", &outvol, &outtype, &filetype, 1))
             return error("Jamoma not loaded : can't find %s", JamomaConfigurationFilePath.data());
-        
+
         // MaxApplication have to read JamomaConfiguration.xml
         TTObject anXmlHandler(kTTSym_XmlHandler);
         anXmlHandler.set(kTTSym_object, MaxApplication);
-        v = TTSymbol(JamomaConfigurationFilePath);
+        v = TTSymbol(name);
         anXmlHandler.send(kTTSym_Read, v, out);
 
 		// Initialize common symbols
