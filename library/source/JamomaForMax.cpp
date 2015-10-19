@@ -90,7 +90,7 @@ void jamoma_init(void)
             MaxApplication = out[0];
 
         // check if the JamomaConfiguration.xml file exists
-        strncpy_zero(name, "misc/JamomaConfiguration.xml", MAX_PATH_CHARS);
+        strncpy_zero(name, "JamomaConfiguration.xml", MAX_PATH_CHARS);
         if (locatefile_extended(name, &outvol, &outtype, &filetype, 1))
             return error("Jamoma not loaded : can't find %s", name);
 
