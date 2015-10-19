@@ -92,7 +92,7 @@ void jamoma_init(void)
         // Edit the path to the JamomaConfiguration.xml file
         strncpy_zero(name, TTFoundationBinaryPath.data(), TTFoundationBinaryPath.size()-6);
         JamomaConfigurationFilePath = name;
-        JamomaConfigurationFilePath += "JamomaConfiguration.xml";
+        JamomaConfigurationFilePath = "JamomaConfiguration.xml";
         
         // check if the JamomaConfiguration.xml file exists
         strncpy_zero(name, JamomaConfigurationFilePath.data(), MAX_PATH_CHARS);
