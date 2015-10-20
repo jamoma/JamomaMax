@@ -49,7 +49,7 @@ void jamoma_init(void)
 {
     short		outvol = 0;
     t_fourcc	outtype, filetype = 'TEXT';
-    char        name[MAX_PATH_CHARS];
+    char        name[MAX_PATH_CHARS], fullname[MAX_PATH_CHARS];
     
 	if (!initialized) {
         
@@ -93,11 +93,22 @@ void jamoma_init(void)
         strncpy_zero(name, "JamomaConfiguration.xml", MAX_PATH_CHARS);
         if (locatefile_extended(name, &outvol, &outtype, &filetype, 1))
             return error("Jamoma not loaded : can't find %s", name);
+        
+        path_topathname(outvol, name, fullname);
+
 
         // MaxApplication have to read JamomaConfiguration.xml
         TTObject anXmlHandler(kTTSym_XmlHandler);
         anXmlHandler.set(kTTSym_object, MaxApplication);
-        v = TTSymbol(name);
+        std::string path = fullname;
+        #if ( __APPLE__ )
+        // remove drive name prefix
+        size_t pos = path.find(":/");
+        path = path.substr(pos+1);
+       	v = TTSymbol(path);
+        #else
+        v = TTSymbol(fullname);
+		#endif
         anXmlHandler.send(kTTSym_Read, v, out);
 
 		// Initialize common symbols
