@@ -38,12 +38,14 @@ There are additional options to the `build.sh` command, including :
 ### QuickStart
 
 To use in Max7 from the repository, create a symbolic link from the Jamoma folder (in this folder) into /Users/yourName/Documents/Max 7/Packages    
-    
-You can do this in the Terminal :    
-    cd ~/Documents/Max\ 7/Packages    
-    ln -s /[replaceWithThePathTo]/JamomaMax/Jamoma     
 
-Now you can start Max 7 and the Max Console will print a message     
+You can do this in the Terminal : 
+
+    cd ~/Documents/Max\ 7/Packages    
+    ln -s /[replaceWithThePathTo]/JamomaMax/Jamoma    
+
+Now you can start Max 7 and the Max Console will print a message 
+
     Jamoma  v1.0-beta.1  |  build 8eb688d
 
 ### Pre-built Packages
