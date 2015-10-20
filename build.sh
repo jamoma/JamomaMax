@@ -20,6 +20,8 @@ JAMOMA_INSTALL_JAMOMAPD=No
 JAMOMA_INSTALL_JAMOMAMAX=Yes
 JAMOMA_UNINSTALL_JAMOMA=False
 
+JAMOMA_RUN_CMAKE="yes"
+
 
 HELP_MESSAGE="Usage : $(basename "$0") [options]
 Builds Jamoma
@@ -44,6 +46,8 @@ Options :
   Creates a ready-for-distribution package
 --uninstall
   Removes /usr/local/jamoma
+--nocmake)
+  Don't run CMake (speed up following build)
 
 --help
   Shows this message
@@ -93,6 +97,11 @@ do
 		rm -rf build64
         rm -rf build-xcode
 		;;
+
+	--nocmake) echo "Don't run CMake (speed up following build)"
+		JAMOMA_RUN_CMAKE="no"
+		;;
+
 	*) echo "Wrong option : $1"
 		echo "$HELP_MESSAGE"
 		exit 1
@@ -113,25 +122,30 @@ mkdir -p build"$JAMOMA_BUILD_FOLDER_SUFFIX"
 (
 	cd build"$JAMOMA_BUILD_FOLDER_SUFFIX"
 
-	if [[ "$JAMOMA_CMAKE_GENERATOR" == "" ]]; then
-		echo 	cmake                             .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
-		        cmake                             .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
-	else
-		echo    cmake -G"$JAMOMA_CMAKE_GENERATOR" .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
-		        cmake -G"$JAMOMA_CMAKE_GENERATOR" .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
-	fi
+	if [[ "$JAMOMA_RUN_CMAKE" != "no" ]]; then		
+		if [[ "$JAMOMA_CMAKE_GENERATOR" == "" ]]; then
+			echo 	cmake                             .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+			        cmake                             .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+		else
+			echo    cmake -G"$JAMOMA_CMAKE_GENERATOR" .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+			        cmake -G"$JAMOMA_CMAKE_GENERATOR" .. -DCMAKE_INSTALL_PREFIX="$PWD/JamomaInstall" $JAMOMA_CMAKE_BUILD_TYPE $JAMOMA_CMAKE_UNIVERSAL_FLAGS $JAMOMA_CMAKE_MAX_FLAGS $JAMOMA_CMAKE_PD_FLAGS $JAMOMA_CMAKE_TOOLCHAIN
+		fi
 
-	if [[ "$JAMOMA_CMAKE_GENERATOR" == "Xcode" ]]; then
-		echo xcodebuild
-		xcodebuild
+		if [[ "$JAMOMA_CMAKE_GENERATOR" == "Xcode" ]]; then
+			echo xcodebuild
+			xcodebuild
 
-		#sudo make $JAMOMA_INSTALL_JAMOMA
-		#make install
+			#sudo make $JAMOMA_INSTALL_JAMOMA
+			#make install
+		else
+			echo make -j$JAMOMA_NUM_THREADS
+			make -j$JAMOMA_NUM_THREADS
+
+			#sudo make $JAMOMA_INSTALL_JAMOMA
+			make install
+		fi
 	else
-		echo make -j$JAMOMA_NUM_THREADS
 		make -j$JAMOMA_NUM_THREADS
-
-		#sudo make $JAMOMA_INSTALL_JAMOMA
 		make install
 	fi
 
