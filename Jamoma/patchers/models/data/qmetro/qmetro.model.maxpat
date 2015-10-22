@@ -2,31 +2,40 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 797.0, 211.0, 764.0, 451.0 ],
+		"rect" : [ 797.0, 211.0, 613.0, 452.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "",
@@ -35,7 +44,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 19.0, 415.0, 25.0, 25.0 ],
-					"presentation_rect" : [ 16.0, 414.0, 0.0, 0.0 ]
+					"style" : ""
 				}
 
 			}
@@ -43,12 +52,12 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : 0.0,
 					"id" : "obj-24",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 150.0, 37.0, 275.0, 19.0 ],
+					"style" : "",
 					"text" : "active flag of this model sets qmetro on/off"
 				}
 
@@ -61,7 +70,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 19.0, 187.0, 20.0, 20.0 ]
+					"patching_rect" : [ 19.0, 187.0, 20.0, 20.0 ],
+					"style" : ""
 				}
 
 			}
@@ -73,7 +83,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 202.0, 25.0, 25.0 ]
+					"patching_rect" : [ 350.0, 202.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -86,7 +97,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 19.0, 37.0, 124.0, 19.0 ],
+					"patching_rect" : [ 19.0, 37.0, 124.0, 21.0 ],
+					"style" : "",
 					"text" : "j.receive data/active"
 				}
 
@@ -100,7 +112,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 19.0, 390.0, 42.0, 19.0 ],
+					"patching_rect" : [ 19.0, 390.0, 42.0, 21.0 ],
+					"style" : "",
 					"text" : "j.out 1"
 				}
 
@@ -112,21 +125,20 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 350.0, 279.0, 25.0, 25.0 ]
+					"patching_rect" : [ 350.0, 279.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.572549, 0.572549, 0.0, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-9",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 350.0, 238.0, 222.0, 19.0 ],
+					"patching_rect" : [ 350.0, 238.0, 202.0, 21.0 ],
+					"style" : "",
 					"text" : "j.model @description \"simple qmetro\""
 				}
 
@@ -139,9 +151,10 @@
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 87.0, 321.0, 35.0, 19.0 ],
+					"patching_rect" : [ 87.0, 321.0, 35.0, 21.0 ],
+					"style" : "",
 					"triscale" : 0.9
 				}
 
@@ -155,7 +168,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
-					"patching_rect" : [ 87.0, 248.0, 28.0, 19.0 ],
+					"patching_rect" : [ 87.0, 248.0, 28.0, 21.0 ],
+					"style" : "",
 					"text" : "t b i"
 				}
 
@@ -169,7 +183,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 87.0, 297.0, 28.0, 19.0 ],
+					"patching_rect" : [ 87.0, 297.0, 28.0, 21.0 ],
+					"style" : "",
 					"text" : "+"
 				}
 
@@ -182,9 +197,10 @@
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 118.0, 261.0, 35.0, 19.0 ],
+					"patching_rect" : [ 118.0, 261.0, 35.0, 21.0 ],
+					"style" : "",
 					"triscale" : 0.9
 				}
 
@@ -198,7 +214,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 118.0, 234.0, 73.0, 19.0 ],
+					"patching_rect" : [ 118.0, 234.0, 73.0, 21.0 ],
+					"style" : "",
 					"text" : "-"
 				}
 
@@ -212,7 +229,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 172.0, 208.0, 36.0, 19.0 ],
+					"patching_rect" : [ 172.0, 208.0, 36.0, 21.0 ],
+					"style" : "",
 					"text" : "* 0.5"
 				}
 
@@ -225,9 +243,10 @@
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 157.0, 171.0, 35.0, 19.0 ],
+					"patching_rect" : [ 157.0, 171.0, 35.0, 21.0 ],
+					"style" : "",
 					"triscale" : 0.9
 				}
 
@@ -241,7 +260,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 118.0, 208.0, 58.0, 19.0 ],
+					"patching_rect" : [ 118.0, 208.0, 58.0, 21.0 ],
+					"style" : "",
 					"text" : "random 0"
 				}
 
@@ -255,56 +275,52 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 19.0, 350.0, 87.0, 19.0 ],
+					"patching_rect" : [ 19.0, 350.0, 87.0, 21.0 ],
+					"style" : "",
 					"text" : "qmetro"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-1003",
 					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 157.0, 117.0, 591.0, 43.0 ],
-					"text" : "j.parameter randomness @type integer @ramp/drive max @repetitions/filter 1 @range 0 5000 @clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @unit ms",
+					"patching_rect" : [ 157.0, 117.0, 430.0, 45.0 ],
+					"style" : "",
+					"text" : "j.parameter randomness @type integer @repetitions/filter 1 @range 0 5000 @clipmode low @description \"Defines a range of randomness in milliseconds to be applied to the metro interval\" @dataspace time @unit ms",
 					"varname" : "randomness"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-1010",
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 73.0, 390.0, 549.0, 19.0 ],
+					"patching_rect" : [ 73.0, 390.0, 434.0, 33.0 ],
+					"style" : "",
 					"text" : "j.return trigger @type none @repetitions/filter 0 @description \"Sent every time the metronome fires.\""
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-1034",
 					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 87.0, 74.0, 606.0, 31.0 ],
-					"text" : "j.parameter time @type integer @ramp/drive max @repetitions/filter 1 @range 1 5000 @clipmode low @dataspace time @unit ms @description \"Metro interval (ms)\"",
+					"patching_rect" : [ 87.0, 74.0, 438.0, 33.0 ],
+					"style" : "",
+					"text" : "j.parameter time @type integer @repetitions/filter 1 @range 1 5000 @clipmode low @dataspace time @unit ms @description \"Metro interval (ms)\"",
 					"varname" : "time"
 				}
 
