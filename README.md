@@ -34,7 +34,7 @@ There are additional options to the `build.sh` command, including :
     Create a ready-for-distribution package 
     --uninstall
     Remove /usr/local/jamoma
-    --nocmake)
+    --nocmake
     Don't run CMake (speed up following build)
   
 ### QuickStart
