@@ -275,7 +275,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 118.0, 449.0, 62.0, 22.0 ],
 									"style" : "",
-									"text" : "activity $1"
+									"text" : "monitor $1"
 								}
 
 							}
@@ -1323,7 +1323,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 139.0, 358.0, 62.0, 22.0 ],
 									"style" : "",
-									"text" : "activity $1"
+									"text" : "monitor $1"
 								}
 
 							}
@@ -4414,7 +4414,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 307.0, 259.0, 62.0, 22.0 ],
 									"style" : "",
-									"text" : "activity $1"
+									"text" : "monitor $1"
 								}
 
 							}

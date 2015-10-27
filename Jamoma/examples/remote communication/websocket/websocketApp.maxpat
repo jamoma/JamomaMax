@@ -228,7 +228,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 17.0, 314.5, 62.0, 18.0 ],
-					"text" : "activity $1"
+					"text" : "monitor $1"
 				}
 
 			}
