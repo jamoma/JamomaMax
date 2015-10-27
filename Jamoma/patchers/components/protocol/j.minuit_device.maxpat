@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
-			"architecture" : "x64",
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -43,9 +43,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 69.5, 289.5, 137.0, 22.0 ],
+					"patching_rect" : [ 69.5, 289.5, 140.0, 22.0 ],
 					"style" : "",
-					"text" : "substitute active activity"
+					"text" : "substitute active monitor"
 				}
 
 			}
@@ -70,7 +70,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1191.666626, 321.0, 34.0, 22.0 ],
-					"presentation_rect" : [ 1190.0, 322.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "gate"
 				}
@@ -257,6 +256,7 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-26",
@@ -264,28 +264,30 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1206.666626, 224.5, 122.0, 22.0 ],
+					"patching_rect" : [ 1206.666626, 224.5, 125.0, 22.0 ],
 					"style" : "",
-					"text" : "j.receive /:activity/out"
+					"text" : "j.receive /:monitor/out"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-29",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1191.666626, 473.5, 94.0, 22.0 ],
+					"patching_rect" : [ 1191.666626, 473.5, 97.0, 22.0 ],
 					"style" : "",
-					"text" : "print activity/out"
+					"text" : "print monitor/out"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-23",
@@ -293,23 +295,24 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 1058.0, 224.5, 115.0, 22.0 ],
+					"patching_rect" : [ 1058.0, 224.5, 118.0, 22.0 ],
 					"style" : "",
-					"text" : "j.receive /:activity/in"
+					"text" : "j.receive /:monitor/in"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1043.0, 473.5, 87.0, 22.0 ],
+					"patching_rect" : [ 1043.0, 473.5, 90.0, 22.0 ],
 					"style" : "",
-					"text" : "print activity/in"
+					"text" : "print monitor/in"
 				}
 
 			}
@@ -586,21 +589,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.modular.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.pass.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }

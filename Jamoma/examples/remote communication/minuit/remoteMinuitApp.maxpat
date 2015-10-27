@@ -372,7 +372,7 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 10.0, 674.5, 137.0, 20.0 ],
-									"text" : "j.receive /:activity/in"
+									"text" : "j.receive /:monitor/in"
 								}
 
 							}
