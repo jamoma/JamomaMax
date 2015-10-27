@@ -390,8 +390,8 @@ void model_address_to_bind(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 argAdrs = argAdrs.appendInstance(EXTRA->containerAddress.getInstance());
         
         // if the address is absolute : use it directly
-        if (argAdrs.getType() == kAddressAbsolute) {
-            
+        if (argAdrs.getType() == kAddressAbsolute)
+        {
             // set the model:address attribute to notify all observers
             EXTRA->modelInfo->set(kTTSym_address, argAdrs);
             return;
@@ -446,6 +446,16 @@ void model_address_to_bind(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                 defer_low((t_object*)x, (method)model_address_to_bind, _sym_nothing, argc, argv);
                 return;
             }
+        }
+        
+        // if there is a parent view address : try to use the upper view patcher model:address
+        if (EXTRA->containerAddress.getParent() != kTTAdrsRoot)
+        {
+            // argument address
+            EXTRA->argAddress = kTTAdrsEmpty;
+            
+            // observe the selected view model:address attribute
+            makeInternals_receiver(self, EXTRA->containerAddress.getParent(), TTAddress("model:address"), gensym("return_upper_view_model_address"), aReceiver, YES); // we need to deferlow to avoid lock crash on TTContainer content
         }
     }
     
