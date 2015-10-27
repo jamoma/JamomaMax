@@ -4,8 +4,8 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 6,
-			"architecture" : "x64",
+			"revision" : 5,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -38,54 +38,15 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-14",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 118.0, 56.0, 22.0 ],
-					"style" : "",
-					"text" : "deferlow"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.0, 149.0, 137.0, 22.0 ],
-					"style" : "",
-					"text" : "prepend model:address"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-12",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 36.0, 86.0, 137.0, 22.0 ],
-					"style" : "",
-					"text" : "j.receive model:address"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "none",
 					"id" : "obj-10",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 0.0, 196.0, 168.0, 22.0 ],
+					"patching_rect" : [ 0.0, 84.0, 126.0, 22.0 ],
 					"style" : "",
-					"text" : "dbap=_channels.view.maxpat"
+					"text" : "dbap=_channels.view"
 				}
 
 			}
@@ -347,7 +308,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 528.0, 113.0, 210.0, 22.0 ],
+					"patching_rect" : [ 528.0, 113.0, 210.0, 35.0 ],
 					"style" : "",
 					"text" : "j.remote sources/number_of_channels",
 					"varname" : "voices"
@@ -389,28 +350,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-12", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-14", 0 ]
 				}
 
 			}
@@ -486,58 +429,49 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
  ],
 		"parameters" : 		{
-			"obj-10::obj-17::obj-5::obj-6" : [ "Gain[5]", "Gain", 0 ],
-			"obj-5" : [ "live.numbox[3]", "live.numbox", 0 ],
-			"obj-10::obj-17::obj-2::obj-4" : [ "Blur[2]", "Blur", 0 ],
-			"obj-10::obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
-			"obj-10::obj-17::obj-4::obj-6" : [ "Gain[4]", "Gain", 0 ],
 			"obj-10::obj-17::obj-6::obj-8" : [ "live.text[6]", "live.text", 0 ],
-			"obj-10::obj-17::obj-8::obj-6" : [ "Gain", "Gain", 0 ],
-			"obj-10::obj-17::obj-6::obj-6" : [ "Gain[6]", "Gain", 0 ],
-			"obj-2" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-4" : [ "Blur[8]", "Blur", 0 ],
-			"obj-10::obj-17::obj-1::obj-6" : [ "Gain[1]", "Gain", 0 ],
-			"obj-10::obj-17::obj-2::obj-8" : [ "live.text[2]", "live.text", 0 ],
-			"obj-10::obj-17::obj-3::obj-8" : [ "live.text[3]", "live.text", 0 ],
-			"obj-10::obj-17::obj-4::obj-4" : [ "Blur[4]", "Blur", 0 ],
-			"obj-10::obj-17::obj-3::obj-6" : [ "Gain[3]", "Gain", 0 ],
-			"obj-10::obj-17::obj-7::obj-8" : [ "live.text[7]", "live.text", 0 ],
-			"obj-10::obj-17::obj-8::obj-8" : [ "live.text", "live.text", 0 ],
-			"obj-10::obj-17::obj-1::obj-4" : [ "Blur[1]", "Blur", 0 ],
-			"obj-10::obj-17::obj-5::obj-4" : [ "Blur[5]", "Blur", 0 ],
-			"obj-10::obj-17::obj-7::obj-6" : [ "Gain[7]", "Gain", 0 ],
-			"obj-10::obj-17::obj-8::obj-4" : [ "Blur", "Blur", 0 ],
-			"obj-10::obj-17::obj-3::obj-4" : [ "Blur[3]", "Blur", 0 ],
-			"obj-10::obj-17::obj-1::obj-8" : [ "live.text[1]", "live.text", 0 ],
-			"obj-10::obj-17::obj-6::obj-4" : [ "Blur[6]", "Blur", 0 ],
-			"obj-10::obj-17::obj-2::obj-6" : [ "Gain[2]", "Gain", 0 ],
-			"obj-10::obj-17::obj-4::obj-8" : [ "live.text[4]", "live.text", 0 ],
-			"obj-10::obj-17::obj-5::obj-8" : [ "live.text[5]", "live.text", 0 ],
 			"obj-10::obj-17::obj-7::obj-4" : [ "Blur[7]", "Blur", 0 ],
+			"obj-10::obj-17::obj-2::obj-8" : [ "live.text[2]", "live.text", 0 ],
+			"obj-10::obj-17::obj-4::obj-8" : [ "live.text[4]", "live.text", 0 ],
+			"obj-10::obj-17::obj-6::obj-4" : [ "Blur[6]", "Blur", 0 ],
+			"obj-10::obj-17::obj-5::obj-8" : [ "live.text[5]", "live.text", 0 ],
+			"obj-4" : [ "Blur[8]", "Blur", 0 ],
 			"obj-10::obj-3::obj-15" : [ "live.button", "live.button", 0 ],
-			"obj-3" : [ "live.numbox[1]", "live.numbox", 0 ]
+			"obj-10::obj-17::obj-3::obj-6" : [ "Gain[3]", "Gain", 0 ],
+			"obj-10::obj-17::obj-1::obj-8" : [ "live.text[1]", "live.text", 0 ],
+			"obj-10::obj-17::obj-5::obj-4" : [ "Blur[5]", "Blur", 0 ],
+			"obj-10::obj-17::obj-7::obj-8" : [ "live.text[7]", "live.text", 0 ],
+			"obj-10::obj-17::obj-8::obj-6" : [ "Gain", "Gain", 0 ],
+			"obj-10::obj-17::obj-2::obj-6" : [ "Gain[2]", "Gain", 0 ],
+			"obj-10::obj-17::obj-8::obj-4" : [ "Blur", "Blur", 0 ],
+			"obj-10::obj-17::obj-4::obj-4" : [ "Blur[4]", "Blur", 0 ],
+			"obj-10::obj-17::obj-3::obj-4" : [ "Blur[3]", "Blur", 0 ],
+			"obj-10::obj-17::obj-8::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-10::obj-17::obj-7::obj-6" : [ "Gain[7]", "Gain", 0 ],
+			"obj-3" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-10::obj-17::obj-1::obj-6" : [ "Gain[1]", "Gain", 0 ],
+			"obj-10::obj-17::obj-2::obj-4" : [ "Blur[2]", "Blur", 0 ],
+			"obj-10::obj-17::obj-5::obj-6" : [ "Gain[5]", "Gain", 0 ],
+			"obj-10::obj-17::obj-4::obj-6" : [ "Gain[4]", "Gain", 0 ],
+			"obj-5" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-2" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-10::obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
+			"obj-10::obj-17::obj-3::obj-8" : [ "live.text[3]", "live.text", 0 ],
+			"obj-10::obj-17::obj-1::obj-4" : [ "Blur[1]", "Blur", 0 ],
+			"obj-10::obj-17::obj-6::obj-6" : [ "Gain[6]", "Gain", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "dbap=_channels.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/surround/dbap",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dbap=_one_channel_display.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/surround/dbap",
 				"type" : "JSON",
 				"implicit" : 1
 			}
