@@ -17,19 +17,16 @@ framemotor 1
 framemotor/fps 25
 movie/adapt 0
 movie/colormode argb
-movie/deinterlace 0
 movie/dim 640.000000 480.000000
 movie/file/path wheel.mov
 movie/file/play 0
 movie/framemotor 0
 movie/framemotor/fps 0
-movie/highquality 0
 movie/loop/mode loop
 movie/loop/points 0.000000 1000.000000
 movie/loop/report 0
 movie/output_texture 0
 movie/rate -0.000000
-movie/singlefield 0
 movie/unique 0
 movie/vol 0.000000
 noise/dim 640.000000 480.000000

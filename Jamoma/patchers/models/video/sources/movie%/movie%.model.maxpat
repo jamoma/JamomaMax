@@ -2084,7 +2084,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 24.0, 19.0, 381.0, 21.0 ],
 									"style" : "",
-									"text" : "j.parameter deinterlace @type boolean @description \"deinterlace movie.\"",
+									"text" : "j.message deinterlace @type boolean @description \"deinterlace movie.\"",
 									"varname" : "deinterlace"
 								}
 
@@ -2101,7 +2101,7 @@
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 266.0, 81.0, 381.0, 21.0 ],
 									"style" : "",
-									"text" : "j.parameter singlefield @type boolean @description \"singlefield playback\"",
+									"text" : "j.message singlefield @type boolean @description \"singlefield playback\"",
 									"varname" : "singlefield"
 								}
 
@@ -2116,9 +2116,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 144.0, 48.0, 387.0, 21.0 ],
+									"patching_rect" : [ 144.0, 48.0, 379.0, 21.0 ],
 									"style" : "",
-									"text" : "j.parameter highquality @type boolean @description \"High quality option.\"",
+									"text" : "j.message highquality @type boolean @description \"High quality option.\"",
 									"varname" : "highquality"
 								}
 
