@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 781.0, 134.0, 528.0, 420.0 ],
+		"rect" : [ 100.0, 100.0, 528.0, 420.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -101,13 +101,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 781.0, 160.0, 528.0, 394.0 ],
+						"rect" : [ 100.0, 126.0, 528.0, 394.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -172,31 +172,31 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u237004501" ],
 													"dim" : [ 1, 1 ],
-													"position" : [ 0.0 ],
-													"vol" : [ 1.0 ],
-													"unique" : [ 0 ],
-													"colormode" : [ "argb" ],
-													"output_texture" : [ 0 ],
-													"rate" : [ 1.0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
-													"drawto" : [ "" ],
-													"time_secs" : [ 0.0 ],
 													"adapt" : [ 1 ],
-													"looppoints" : [ 0, 0 ],
-													"time" : [ 0 ],
-													"usedstrect" : [ 0 ],
-													"loopreport" : [ 0 ],
-													"usesrcrect" : [ 0 ],
-													"loopstart" : [ 0 ],
-													"framereport" : [ 0 ],
-													"loopend" : [ 0 ],
-													"autostart" : [ 1 ],
-													"interp" : [ 0 ],
-													"engine" : [ "avf" ],
-													"moviefile" : [ "" ],
-													"texture_name" : [ "u390004499" ],
+													"drawto" : [ "" ],
 													"automatic" : [ 0 ],
-													"dstrect" : [ 0, 0, 1, 1 ]
+													"autostart" : [ 1 ],
+													"usesrcrect" : [ 0 ],
+													"time" : [ 0 ],
+													"loopstart" : [ 0 ],
+													"looppoints" : [ 0, 0 ],
+													"srcrect" : [ 0, 0, 1, 1 ],
+													"engine" : [ "avf" ],
+													"usedstrect" : [ 0 ],
+													"interp" : [ 0 ],
+													"loopend" : [ 0 ],
+													"output_texture" : [ 0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"moviefile" : [ "" ],
+													"rate" : [ 1.0 ],
+													"texture_name" : [ "u390004499" ],
+													"position" : [ 0.0 ],
+													"time_secs" : [ 0.0 ],
+													"vol" : [ 1.0 ],
+													"loopreport" : [ 0 ],
+													"framereport" : [ 0 ],
+													"unique" : [ 0 ],
+													"colormode" : [ "argb" ]
 												}
 
 											}
@@ -265,18 +265,6 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-8",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 12.0, 66.0, 149.0, 20.0 ],
-									"style" : "",
-									"text" : "Slab-based color controls."
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"annotation" : "Background model using jit.gl.slab.",
 									"fontface" : 0,
 									"fontname" : "Arial",
@@ -294,17 +282,23 @@
 							}
 , 							{
 								"box" : 								{
+									"args" : [ "@name", "gl_brcosa.model", "@description", "Slab-based color controls." ],
+									"bgmode" : 1,
 									"border" : 0,
-									"filename" : "helpdetails.js",
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"id" : "obj-12",
-									"ignoreclick" : 1,
-									"jsarguments" : [ "gl_brcosa.model" ],
-									"maxclass" : "jsui",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 12.0, 9.0, 447.0, 55.0 ]
+									"numoutlets" : 0,
+									"offset" : [ 0.0, 0.0 ],
+									"patching_rect" : [ 0.0, 4.0, 440.0, 68.0 ],
+									"prototypename" : "bphelp",
+									"varname" : "maxhelpui",
+									"viewvisibility" : 1
 								}
 
 							}
@@ -375,8 +369,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -431,44 +425,50 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_brcosa.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_brcosa.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.panel.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -511,7 +511,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

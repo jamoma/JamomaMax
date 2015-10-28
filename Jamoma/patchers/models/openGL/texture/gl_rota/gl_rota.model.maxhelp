@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 106.0, 557.0, 567.0, 402.0 ],
+		"rect" : [ 100.0, 100.0, 567.0, 402.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -46,7 +46,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 28.0, 171.0, 78.0, 23.0 ],
-					"presentation_rect" : [ 31.0, 141.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
@@ -87,31 +86,23 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 13.0,
-					"id" : "obj-16",
-					"maxclass" : "comment",
+					"args" : [ "@name", "gl_rota.model", "@description", "Slab-based rotation and repositioning." ],
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-17",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 65.0, 286.0, 21.0 ],
-					"style" : "",
-					"text" : "Slab-based rotation and repositioning."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"border" : 0,
-					"filename" : "helpdetails.js",
-					"id" : "obj-17",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "gl_rota.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 8.0, 8.0, 521.0, 55.0 ]
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 1.0, 2.0, 440.0, 68.0 ],
+					"prototypename" : "bphelp",
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -315,9 +306,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{

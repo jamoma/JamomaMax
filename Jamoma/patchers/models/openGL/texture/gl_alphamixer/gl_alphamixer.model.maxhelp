@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 204.0, 503.0, 709.0, 496.0 ],
+		"rect" : [ 100.0, 100.0, 709.0, 496.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -294,29 +294,23 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "comment",
+					"args" : [ "@name", "gl_alphamixer.model", "@description", "A four layer slab-based video mixer using alpha channel for each layer." ],
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-17",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 65.0, 387.0, 20.0 ],
-					"style" : "",
-					"text" : "A four layer slab-based video mixer using alpha channel for each layer."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"border" : 0,
-					"filename" : "helpdetails.js",
-					"id" : "obj-17",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "gl_alphamixer.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 8.0, 8.0, 521.0, 55.0 ]
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 2.0, 2.0, 440.0, 68.0 ],
+					"prototypename" : "bphelp",
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -530,9 +524,15 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{

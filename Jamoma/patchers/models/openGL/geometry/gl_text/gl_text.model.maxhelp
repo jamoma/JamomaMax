@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 123.0, 617.0, 512.0, 389.0 ],
+		"rect" : [ 100.0, 100.0, 512.0, 389.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -278,7 +278,8 @@
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
 					"patching_rect" : [ 44.5, 167.0, 226.0, 34.0 ],
-					"style" : ""
+					"style" : "",
+					"text" : "\"write a text here\""
 				}
 
 			}
@@ -308,36 +309,6 @@
 					"patching_rect" : [ 9.0, 96.0, 86.0, 22.0 ],
 					"style" : "",
 					"text_width" : 65.0
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"border" : 0,
-					"filename" : "helpdetails.js",
-					"id" : "obj-2",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "gl_text.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 9.0, 8.0, 386.0, 53.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 13.0,
-					"id" : "obj-4",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 57.0, 297.0, 21.0 ],
-					"style" : "",
-					"text" : "Render text in a GL context"
 				}
 
 			}
@@ -382,6 +353,28 @@
 				}
 
 			}
+, 			{
+				"box" : 				{
+					"args" : [ "@name", "gl_text.model", "@description", "Render text in a GL context" ],
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-2",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ -1.0, 1.0, 438.0, 67.0 ],
+					"prototypename" : "bphelp",
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
+				}
+
+			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -413,6 +406,18 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "gl_text.view.maxpat",
 				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_text",
 				"type" : "JSON",
@@ -446,12 +451,6 @@
 				"name" : "j.gl_group.model.maxpat",
 				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
