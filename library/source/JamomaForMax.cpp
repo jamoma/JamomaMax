@@ -57,8 +57,8 @@ void jamoma_init(void)
 		t_atom		a[4];
 		TTValue		v, out;
         TTErr       err;
- 
-		if (maxversion() < 0x0706)
+
+		if (maxversion() < 1798)
         {
 			error("Jamoma  %s  |  build %s can't run under Max version ealier than 7.0.6", JAMOMA_MAX_VERSION, JAMOMA_MAX_REV);
             return;
