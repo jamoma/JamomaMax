@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 795.0, 135.0, 567.0, 402.0 ],
+		"rect" : [ 106.0, 557.0, 567.0, 402.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,6 +38,22 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 28.0, 171.0, 78.0, 23.0 ],
+					"presentation_rect" : [ 31.0, 141.0, 0.0, 0.0 ],
+					"style" : "",
+					"text" : "loadmess 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
@@ -63,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 28.0, 253.0, 115.0, 23.0 ],
+					"patching_rect" : [ 28.0, 294.0, 115.0, 23.0 ],
 					"style" : "",
 					"text" : "gl_rota.model rota"
 				}
@@ -160,12 +176,12 @@
 					"fontsize" : 13.0,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 172.0, 78.0, 23.0 ],
+					"patching_rect" : [ 28.0, 206.0, 60.0, 23.0 ],
 					"style" : "",
-					"text" : "loadmess 1"
+					"text" : "pipe 800"
 				}
 
 			}
@@ -180,31 +196,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u259000581" ],
 									"dim" : [ 1, 1 ],
-									"position" : [ 0.0 ],
-									"vol" : [ 1.0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ],
-									"output_texture" : [ 0 ],
-									"rate" : [ 1.0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"drawto" : [ "" ],
-									"time_secs" : [ 0.0 ],
 									"adapt" : [ 1 ],
-									"looppoints" : [ 0, 0 ],
-									"time" : [ 0 ],
-									"usedstrect" : [ 0 ],
-									"loopreport" : [ 0 ],
-									"usesrcrect" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"framereport" : [ 0 ],
-									"loopend" : [ 0 ],
-									"autostart" : [ 1 ],
-									"interp" : [ 0 ],
-									"engine" : [ "avf" ],
-									"moviefile" : [ "" ],
-									"texture_name" : [ "u572000579" ],
+									"drawto" : [ "" ],
 									"automatic" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ]
+									"autostart" : [ 1 ],
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopstart" : [ 0 ],
+									"looppoints" : [ 0, 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"engine" : [ "avf" ],
+									"usedstrect" : [ 0 ],
+									"interp" : [ 0 ],
+									"loopend" : [ 0 ],
+									"output_texture" : [ 0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"moviefile" : [ "" ],
+									"rate" : [ 1.0 ],
+									"texture_name" : [ "u572000579" ],
+									"position" : [ 0.0 ],
+									"time_secs" : [ 0.0 ],
+									"vol" : [ 1.0 ],
+									"loopreport" : [ 0 ],
+									"framereport" : [ 0 ],
+									"unique" : [ 0 ],
+									"colormode" : [ "argb" ]
 								}
 
 							}
@@ -216,13 +232,22 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "", "dictionary" ],
-					"patching_rect" : [ 28.0, 206.0, 150.0, 30.0 ],
+					"patching_rect" : [ 28.0, 253.0, 150.0, 30.0 ],
 					"style" : ""
 				}
 
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
@@ -267,25 +292,25 @@
 			}
 , 			{
 				"name" : "gl_rota.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_rota",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_rota",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.panel.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -297,13 +322,13 @@
 			}
 , 			{
 				"name" : "gl_rota.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_rota",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_rota",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -344,7 +369,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
