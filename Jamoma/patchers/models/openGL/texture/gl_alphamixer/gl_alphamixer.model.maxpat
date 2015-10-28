@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 83.0, 258.0, 982.0, 416.0 ],
@@ -14,19 +15,27 @@
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"annotation" : "none",
@@ -38,7 +47,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 28.0, 161.0, 168.0, 24.0 ],
+					"patching_rect" : [ 28.0, 161.0, 168.0, 26.0 ],
+					"style" : "",
 					"text" : "j.gl_group_slab.model"
 				}
 
@@ -52,7 +62,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 104.0, 239.0, 37.0, 19.0 ],
+					"patching_rect" : [ 104.0, 239.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 1"
 				}
 
@@ -66,7 +77,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 189.0, 239.0, 37.0, 19.0 ],
+					"patching_rect" : [ 189.0, 239.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 2"
 				}
 
@@ -80,7 +92,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 274.0, 239.0, 37.0, 19.0 ],
+					"patching_rect" : [ 274.0, 239.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 3"
 				}
 
@@ -96,7 +109,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 531.0, 299.0, 144.0, 31.0 ],
+					"patching_rect" : [ 531.0, 299.0, 144.0, 33.0 ],
+					"style" : "",
 					"text" : "j.model @description \"4 channel slab-based mixer\""
 				}
 
@@ -109,7 +123,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 359.0, 330.0, 118.0, 19.0 ],
+					"patching_rect" : [ 359.0, 330.0, 118.0, 21.0 ],
+					"style" : "",
 					"text" : "print alphaslab_dump",
 					"varname" : "PRINT"
 				}
@@ -122,8 +137,9 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 359.0, 202.0, 25.0, 25.0 ]
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 359.0, 202.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -134,8 +150,9 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 274.0, 202.0, 25.0, 25.0 ],
+					"style" : "",
 					"varname" : "TEXTURE_2"
 				}
 
@@ -147,8 +164,9 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 189.0, 202.0, 25.0, 25.0 ],
+					"style" : "",
 					"varname" : "TEXTURE_1"
 				}
 
@@ -160,7 +178,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 531.0, 346.5, 25.0, 25.0 ]
+					"patching_rect" : [ 531.0, 346.5, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -171,8 +190,9 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 104.0, 202.0, 25.0, 25.0 ],
+					"style" : "",
 					"varname" : "TEXTURE_0"
 				}
 
@@ -184,7 +204,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 104.0, 367.0, 25.0, 25.0 ]
+					"patching_rect" : [ 104.0, 367.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -194,13 +215,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1058",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 104.0, 330.0, 82.0, 31.0 ],
-					"text" : "j.out 1 @type jit_gl_texture",
+					"patching_rect" : [ 104.0, 330.0, 151.0, 21.0 ],
+					"style" : "",
+					"text" : "j.out 1 @tags jit_gl_texture",
 					"varname" : "OUT"
 				}
 
@@ -214,7 +235,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 359.0, 239.0, 37.0, 19.0 ],
+					"patching_rect" : [ 359.0, 239.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 4"
 				}
 
@@ -228,7 +250,8 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 104.0, 299.0, 274.0, 18.0 ],
+					"patching_rect" : [ 104.0, 299.0, 274.0, 20.0 ],
+					"style" : "",
 					"text" : "jit.gl.slab @file j.4ch_alphamixer.jxs @inputs 4",
 					"varname" : "ALPHASLAB"
 				}
@@ -245,7 +268,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 627.0, 140.0, 341.0, 31.0 ],
+					"patching_rect" : [ 627.0, 140.0, 341.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter layer.4 @type array @description \"Blend coefficients for layer 4 (backmost layer) as list of rgba values.\"",
 					"varname" : "layer_3"
 				}
@@ -262,7 +286,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 557.0, 100.0, 278.0, 31.0 ],
+					"patching_rect" : [ 557.0, 100.0, 278.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter layer.3 @type array @description \"Blend coefficients for layer 3 as list of rgba values.\"",
 					"varname" : "layer_2"
 				}
@@ -279,7 +304,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 492.0, 63.0, 281.0, 31.0 ],
+					"patching_rect" : [ 492.0, 63.0, 281.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter layer.2 @type array @description \"Blend coefficients for layer 2 as list of rgba values.\"",
 					"varname" : "layer_1"
 				}
@@ -296,7 +322,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 422.0, 26.0, 329.0, 31.0 ],
+					"patching_rect" : [ 422.0, 26.0, 329.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter layer.1 @type array @description \"Blend coefficients for layer 1 (frontmost layer) as list of rgba values.\"",
 					"varname" : "layer_0"
 				}
@@ -311,7 +338,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 627.0, 179.0, 59.0, 19.0 ],
+					"patching_rect" : [ 627.0, 179.0, 59.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend d"
 				}
 
@@ -325,7 +353,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 557.0, 179.0, 58.0, 19.0 ],
+					"patching_rect" : [ 557.0, 179.0, 58.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend c"
 				}
 
@@ -339,7 +368,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 492.0, 179.0, 59.0, 19.0 ],
+					"patching_rect" : [ 492.0, 179.0, 59.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend b"
 				}
 
@@ -353,7 +383,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 422.0, 179.0, 59.0, 19.0 ],
+					"patching_rect" : [ 422.0, 179.0, 59.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend a"
 				}
 
@@ -367,7 +398,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 422.0, 239.0, 85.0, 19.0 ],
+					"patching_rect" : [ 422.0, 239.0, 85.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend param"
 				}
 
@@ -570,30 +602,6 @@
 					"source" : [ "obj-4", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
