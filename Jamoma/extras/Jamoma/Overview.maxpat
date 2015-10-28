@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 1,
 			"revision" : 0,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -50,7 +50,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -170,7 +170,7 @@
 											"major" : 7,
 											"minor" : 1,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1182,7 +1182,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1308,7 +1308,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1475,7 +1475,7 @@
 											"major" : 7,
 											"minor" : 1,
 											"revision" : 0,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1521,7 +1521,7 @@
 															"major" : 7,
 															"minor" : 1,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
@@ -1718,7 +1718,7 @@
 															"major" : 7,
 															"minor" : 1,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
@@ -1864,7 +1864,7 @@
 															"major" : 7,
 															"minor" : 1,
 															"revision" : 0,
-															"architecture" : "x64",
+															"architecture" : "x86",
 															"modernui" : 1
 														}
 ,
@@ -5447,7 +5447,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -5814,7 +5814,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -6006,7 +6006,7 @@
 									"presentation_rect" : [ 480.0, 110.0, 130.0, 610.0 ],
 									"style" : "",
 									"tabcolor" : [ 0.376471, 0.384314, 0.4, 1.0 ],
-									"tabs" : [ "gl_gridshape.model", "gl_text2d.model", "gl_videoplane.model", "gl_render.model", "gl_alphamixer.model", "gl_background.model", "gl_brcosa.model", "gl_chromakey.model", "gl_edgeblend.model", "gl_framediff.model", "gl_rota.model", "gl_syphonclient.model", "gl_syphonserver.model", "world.model" ],
+									"tabs" : [ "gl_gridshape.model", "gl_text.model", "gl_videoplane.model", "gl_render.model", "gl_alphamixer.model", "gl_background.model", "gl_brcosa.model", "gl_chromakey.model", "gl_edgeblend.model", "gl_framediff.model", "gl_rota.model", "gl_syphonclient.model", "gl_syphonserver.model", "world.model" ],
 									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 								}
 
