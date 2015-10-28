@@ -150,6 +150,7 @@ $(document).ready(function() {
                 case 'valueChange' :
                 case 'set' :
                 case ':get' :
+                case ':listen' :
                     var address = Object.keys(data)[2] ;
                     var input = document.querySelector('span[data-address="' + address + '"]');
                     input.innerHTML = data[address];
@@ -176,6 +177,12 @@ $(document).ready(function() {
                 'operation': '?get'
             };
             message[address] = null ;
+            ws.send(JSON.stringify(message));
+            message = {
+                'sender' : 'telecommande',
+                'operation': '?listen'
+            };
+            message[address] = true ;
             ws.send(JSON.stringify(message));
         });
     }

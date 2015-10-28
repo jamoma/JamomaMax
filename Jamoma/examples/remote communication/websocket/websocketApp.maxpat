@@ -228,7 +228,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 17.0, 314.5, 62.0, 18.0 ],
-					"text" : "activity $1"
+					"text" : "monitor $1"
 				}
 
 			}
@@ -271,7 +271,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 329.5, 235.0, 124.0, 20.0 ],
-					"text" : "j.receive /:activity/out"
+					"text" : "j.receive /:monitor/out"
 				}
 
 			}
@@ -284,7 +284,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 329.5, 257.0, 94.0, 20.0 ],
-					"text" : "print activity/out"
+					"text" : "print monitor/out"
 				}
 
 			}
@@ -298,7 +298,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 188.5, 235.0, 116.0, 20.0 ],
-					"text" : "j.receive /:activity/in"
+					"text" : "j.receive /:monitor/in"
 				}
 
 			}
@@ -311,7 +311,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 188.5, 257.0, 87.0, 20.0 ],
-					"text" : "print activity/in"
+					"text" : "print monitor/in"
 				}
 
 			}
