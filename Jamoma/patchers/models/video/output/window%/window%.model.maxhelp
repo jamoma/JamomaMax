@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"minor" : 1,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 377.0, 79.0, 571.0, 350.0 ],
+		"rect" : [ 358.0, 79.0, 571.0, 350.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,42 +38,15 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"border" : 5.0,
-					"id" : "obj-3",
-					"justification" : 3,
-					"linecolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
-					"maxclass" : "live.line",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 41.0, 229.5, 132.0, 62.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 37.0, 245.0, 158.0, 31.0 ],
-					"style" : "",
-					"text" : "second argument, if present, defines window name"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "Output to an OpenGL window",
 					"id" : "obj-7",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 37.0, 191.0, 178.0, 33.0 ],
+					"patching_rect" : [ 37.0, 191.0, 178.0, 21.0 ],
 					"style" : "",
-					"text" : "window%.model window%_help window_help"
+					"text" : "window%.model window%_help"
 				}
 
 			}
@@ -179,25 +152,25 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "window%.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/output/window%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -209,37 +182,31 @@
 			}
 , 			{
 				"name" : "input%.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie%.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "max7specific.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "grab%.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/grab%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/output/window%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -304,7 +271,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
