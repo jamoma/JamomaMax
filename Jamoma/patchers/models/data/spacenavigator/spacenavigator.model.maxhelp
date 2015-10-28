@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"minor" : 1,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1162.0, 532.0 ],
+		"rect" : [ 100.0, 100.0, 1162.0, 532.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,29 +38,23 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"args" : [ "@name", "spacenavigator.model", "@description", "Use the Space Navigator from 3D Connexion." ],
+					"bgmode" : 1,
 					"border" : 0,
-					"filename" : "helpdetails.js",
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-33",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "spacenavigator.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 10.0, 9.0, 606.0, 51.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-32",
-					"maxclass" : "comment",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 62.0, 476.0, 19.0 ],
-					"style" : "",
-					"text" : "Use the Space Navigator from 3D Connexion."
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 1.0, 2.0, 396.0, 90.0 ],
+					"prototypename" : "bphelp",
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -93,9 +87,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -278,8 +272,7 @@
 					"maxclass" : "ambimonitor",
 					"mode" : 2,
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
+					"numoutlets" : 0,
 					"patching_rect" : [ 562.0, 297.0, 58.0, 116.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 20.0, 40.0 ]
 				}
@@ -1579,7 +1572,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 631.166687, 239.0, 631.5, 239.0 ],
+					"midpoints" : [ 631.166672, 239.0, 631.5, 239.0 ],
 					"source" : [ "obj-30", 1 ]
 				}
 
@@ -1805,20 +1798,26 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "spacenavigator.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/spacenavigator",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/spacenavigator",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "spacenavigator.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/spacenavigator",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/spacenavigator",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
@@ -1842,10 +1841,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "ambimonitor.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.parameter.mxo",
 				"type" : "iLaX"
 			}
@@ -1858,7 +1853,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

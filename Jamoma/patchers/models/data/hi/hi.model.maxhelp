@@ -3,9 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"minor" : 1,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -37,20 +37,6 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 13.0,
-					"id" : "obj-3",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 2.0, 54.0, 431.0, 21.0 ],
-					"style" : "",
-					"text" : "Use any general human interface device (HID). Outputs OSC-messages."
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"annotation" : "none",
 					"args" : [ "hi_help" ],
@@ -89,22 +75,6 @@
 			}
 , 			{
 				"box" : 				{
-					"border" : 0,
-					"filename" : "helpdetails.js",
-					"id" : "obj-2",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "hi.model.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 2.0, 3.0, 606.0, 60.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-14",
@@ -129,7 +99,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 86.0, 252.0, 35.0, 21.0 ],
 					"style" : "",
-					"text" : "5"
+					"text" : "8"
 				}
 
 			}
@@ -175,7 +145,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 86.0, 187.0, 120.0, 21.0 ],
 					"style" : "",
-					"text" : "hi.5 0"
+					"text" : "device \"0\""
 				}
 
 			}
@@ -191,6 +161,30 @@
 					"patching_rect" : [ 569.0, 106.5, 336.0, 55.0 ],
 					"style" : "",
 					"text" : "USAGE\r1. Click on init to refresh the menu with the connected devices. \r2. Select device to use\r3. Click the off/on-button to start polling the device"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"args" : [ "@name", "hi.model", "@description", "Use any general human interface device (HID). Outputs OSC-messages." ],
+					"background" : 1,
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-136",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 0.0, 0.0, 513.0, 74.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 0.0, 0.0, 960.0, 70.0 ],
+					"prototypename" : "bphelp",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -242,20 +236,26 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "hi.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/hi",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/hi",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "hi.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/data/hi",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/hi",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -296,7 +296,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

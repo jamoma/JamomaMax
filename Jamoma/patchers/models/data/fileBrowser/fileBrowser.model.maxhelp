@@ -2,42 +2,51 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x64",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 302.0, 44.0, 748.0, 650.0 ],
+		"rect" : [ 116.0, 299.0, 748.0, 650.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : 0.0,
 					"id" : "obj-21",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 135.0, 505.0, 150.0, 43.0 ],
+					"style" : "",
 					"text" : "Don't forget to turn on the DSP and the gain slider in the above module "
 				}
 
@@ -46,14 +55,21 @@
 				"box" : 				{
 					"args" : [ "@name", "fileBrowser", "@description", "Choose files to play in your audio or video player" ],
 					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-14",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 0.0, 0.0, 748.0, 70.0 ],
 					"prototypename" : "bphelp",
-					"varname" : "maxhelpui"
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -69,10 +85,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
+							"major" : 7,
 							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"revision" : 0,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 88.0, 255.0, 322.0, 336.0 ],
@@ -81,19 +98,27 @@
 						"default_fontsize" : 10.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 5.0, 5.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -104,6 +129,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 182.0, 111.5, 32.5, 19.0 ],
+									"style" : "",
 									"text" : "0"
 								}
 
@@ -112,7 +138,6 @@
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-36",
 									"maxclass" : "comment",
 									"numinlets" : 1,
@@ -120,13 +145,13 @@
 									"patching_rect" : [ 210.0, 159.5, 81.0, 21.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 62.0, 157.0, 81.0, 21.0 ],
+									"style" : "",
 									"text" : "files played"
 								}
 
 							}
 , 							{
 								"box" : 								{
-									"bordercolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 									"cantchange" : 1,
 									"fontname" : "Verdana",
 									"fontsize" : 12.0,
@@ -134,11 +159,12 @@
 									"maxclass" : "number",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "int", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 155.0, 159.5, 50.0, 21.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 45.0, 157.0, 50.0, 21.0 ],
+									"style" : "",
 									"triangle" : 0
 								}
 
@@ -153,6 +179,7 @@
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
 									"patching_rect" : [ 155.0, 133.5, 73.0, 21.0 ],
+									"style" : "",
 									"text" : "counter"
 								}
 
@@ -167,6 +194,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 50.0, 192.5, 62.0, 19.0 ],
+									"style" : "",
 									"text" : "item $1"
 								}
 
@@ -178,7 +206,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 102.0, 155.5, 20.0, 20.0 ]
+									"patching_rect" : [ 102.0, 155.5, 20.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -190,9 +219,10 @@
 									"maxclass" : "number",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "int", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 50.0, 155.5, 50.0, 21.0 ]
+									"patching_rect" : [ 50.0, 155.5, 50.0, 21.0 ],
+									"style" : ""
 								}
 
 							}
@@ -206,6 +236,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "bang" ],
 									"patching_rect" : [ 50.0, 131.5, 70.5, 21.0 ],
+									"style" : "",
 									"text" : "urn"
 								}
 
@@ -218,7 +249,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 48.5, 39.0, 25.0, 25.0 ]
+									"patching_rect" : [ 48.5, 39.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -229,8 +261,9 @@
 									"maxclass" : "inlet",
 									"numinlets" : 0,
 									"numoutlets" : 1,
-									"outlettype" : [ "int" ],
-									"patching_rect" : [ 101.0, 40.0, 25.0, 25.0 ]
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 101.0, 40.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -241,7 +274,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 50.0, 271.5, 25.0, 25.0 ]
+									"patching_rect" : [ 50.0, 271.5, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -340,20 +374,18 @@
  ]
 					}
 ,
-					"patching_rect" : [ 25.0, 113.5, 125.0, 21.0 ],
+					"patching_rect" : [ 25.0, 113.5, 125.0, 23.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Verdana",
-						"default_fontsize" : 10.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
 						"fontname" : "Verdana",
 						"fontsize" : 10.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p random-playback"
 				}
 
@@ -367,7 +399,8 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 25.0, 89.0, 20.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 36.0, 42.0, 130.0, 130.0 ]
+					"presentation_rect" : [ 36.0, 42.0, 130.0, 130.0 ],
+					"style" : ""
 				}
 
 			}
@@ -377,7 +410,8 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 25.0, 505.0, 45.0, 45.0 ]
+					"patching_rect" : [ 25.0, 505.0, 45.0, 45.0 ],
+					"style" : ""
 				}
 
 			}
@@ -390,7 +424,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 377.0, 234.0, 105.0, 19.0 ],
+					"patching_rect" : [ 377.0, 234.0, 105.0, 21.0 ],
+					"style" : "",
 					"text" : "substitute file path"
 				}
 
@@ -408,32 +443,40 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
+							"major" : 7,
 							"minor" : 1,
-							"revision" : 7,
-							"architecture" : "x86"
+							"revision" : 0,
+							"architecture" : "x64",
+							"modernui" : 1
 						}
 ,
-						"rect" : [ 780.0, 44.0, 276.0, 267.0 ],
+						"rect" : [ 780.0, 79.0, 276.0, 267.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Verdana",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 5.0, 5.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
-						"visible" : 1,
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Verdana",
@@ -443,7 +486,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "int", "", "int" ],
-									"patching_rect" : [ 45.0, 115.0, 80.0, 19.0 ],
+									"patching_rect" : [ 45.0, 115.0, 80.0, 21.0 ],
+									"style" : "",
 									"text" : "t 1 l 0"
 								}
 
@@ -456,7 +500,8 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 45.0, 150.0, 20.0, 20.0 ]
+									"patching_rect" : [ 45.0, 150.0, 20.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -469,7 +514,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 45.0, 180.0, 156.0, 17.0 ],
+									"patching_rect" : [ 45.0, 180.0, 156.0, 21.0 ],
+									"style" : "",
 									"text" : "source soundfile, file/play $1"
 								}
 
@@ -483,7 +529,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 45.0, 85.0, 124.0, 19.0 ],
+									"patching_rect" : [ 45.0, 85.0, 124.0, 21.0 ],
+									"style" : "",
 									"text" : "substitute file file/path"
 								}
 
@@ -496,7 +543,8 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 45.0, 20.0, 25.0, 25.0 ]
+									"patching_rect" : [ 45.0, 20.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -507,7 +555,8 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 45.0, 215.0, 25.0, 25.0 ]
+									"patching_rect" : [ 45.0, 215.0, 25.0, 25.0 ],
+									"style" : ""
 								}
 
 							}
@@ -578,20 +627,18 @@
  ]
 					}
 ,
-					"patching_rect" : [ 25.0, 227.0, 68.0, 19.0 ],
+					"patching_rect" : [ 25.0, 227.0, 68.0, 21.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Verdana",
-						"default_fontsize" : 10.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
 						"fontname" : "Verdana",
 						"fontsize" : 10.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p load_play"
 				}
 
@@ -600,14 +647,14 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"htextcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
 					"id" : "obj-3",
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 135.0, 250.0, 35.0, 19.0 ],
+					"patching_rect" : [ 135.0, 250.0, 35.0, 21.0 ],
+					"style" : "",
 					"triscale" : 0.9
 				}
 
@@ -621,7 +668,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 135.0, 227.0, 81.0, 19.0 ],
+					"patching_rect" : [ 135.0, 227.0, 81.0, 21.0 ],
+					"style" : "",
 					"text" : "route poolsize"
 				}
 
@@ -630,14 +678,14 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"htextcolor" : [ 0.870588, 0.870588, 0.870588, 1.0 ],
 					"id" : "obj-6",
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "int", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 512.0, 257.0, 35.0, 19.0 ],
+					"patching_rect" : [ 512.0, 257.0, 35.0, 21.0 ],
+					"style" : "",
 					"triscale" : 0.9
 				}
 
@@ -651,7 +699,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 512.0, 234.0, 81.0, 19.0 ],
+					"patching_rect" : [ 512.0, 234.0, 81.0, 21.0 ],
+					"style" : "",
 					"text" : "route poolsize"
 				}
 
@@ -669,59 +718,87 @@
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-9",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "movie%.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 2,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 377.0, 285.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
+					"patching_rect" : [ 377.0, 285.0, 300.0, 140.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-12",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "input~.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 3,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 25.0, 285.0, 300.0, 175.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
-					"varname" : "/input~"
+					"varname" : "/input~",
+					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-13",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "fileBrowser.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 377.0, 140.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"varname" : "/fileBrowser[2]"
+					"varname" : "/fileBrowser[2]",
+					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-17",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
 					"name" : "fileBrowser.module.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 25.0, 140.0, 300.0, 70.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -856,116 +933,140 @@
 
 			}
  ],
+		"parameters" : 		{
+			"obj-12::obj-1::obj-1::obj-6" : [ "live.text", "live.text", 0 ],
+			"obj-12::obj-1::obj-62" : [ "live.text[5]", "live.text[3]", 0 ],
+			"obj-12::obj-1::obj-1::obj-27" : [ "Threshold", "Threshold", 0 ],
+			"obj-12::obj-1::obj-1::obj-42" : [ "live.text[1]", "live.text", 0 ],
+			"obj-12::obj-1::obj-45" : [ "live.text[3]", "live.text", 0 ],
+			"obj-12::obj-1::obj-1::obj-15" : [ "Postamp", "Postamp", 0 ],
+			"obj-12::obj-1::obj-1::obj-13" : [ "Release", "Release", 0 ],
+			"obj-9::obj-5::obj-91" : [ "live.text[13]", "live.text[2]", 0 ],
+			"obj-9::obj-5::obj-39" : [ "live.text[10]", "live.text", 0 ],
+			"obj-12::obj-1::obj-47" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-12::obj-1::obj-108" : [ "live.text[7]", "live.text[4]", 0 ],
+			"obj-12::obj-1::obj-4" : [ "live.text[4]", "live.text[1]", 0 ],
+			"obj-12::obj-1::obj-59" : [ "live.text[8]", "live.text[3]", 0 ],
+			"obj-12::obj-1::obj-1::obj-5" : [ "Preamp", "Preamp", 0 ],
+			"obj-12::obj-1::obj-1::obj-45" : [ "live.text[2]", "live.text", 0 ],
+			"obj-9::obj-5::obj-37" : [ "live.text[12]", "live.text", 0 ],
+			"obj-12::obj-1::obj-74" : [ "live.dial[1]", "Transpose", 0 ],
+			"obj-12::obj-1::obj-111" : [ "live.numbox[2]", "live.numbox[2]", 0 ],
+			"obj-9::obj-5::obj-49" : [ "live.button", "live.button", 0 ],
+			"obj-12::obj-1::obj-48" : [ "live.menu[2]", "live.menu", 0 ],
+			"obj-12::obj-1::obj-110" : [ "live.numbox[1]", "live.numbox[1]", 0 ],
+			"obj-9::obj-5::obj-53" : [ "live.button[1]", "live.button", 0 ],
+			"obj-9::obj-5::obj-36" : [ "live.text[14]", "live.text", 0 ],
+			"obj-9::obj-5::obj-41" : [ "live.text[9]", "live.text[4]", 0 ],
+			"obj-12::obj-1::obj-82" : [ "pan", "Pan", 0 ],
+			"obj-12::obj-1::obj-58" : [ "live.text[6]", "live.text[4]", 0 ],
+			"obj-9::obj-5::obj-89" : [ "live.text[11]", "live.text[2]", 0 ],
+			"obj-12::obj-1::obj-1::obj-12" : [ "Lookahead", "Lookahead", 0 ],
+			"obj-12::obj-1::obj-55" : [ "Master Gain[1]", "Master Gain", 0 ],
+			"obj-12::obj-1::obj-29::obj-48" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-12::obj-1::obj-1::obj-30" : [ "live.menu", "live.menu", 0 ]
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "fileBrowser.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/fileBrowser",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/fileBrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fileBrowser.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/fileBrowser",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/fileBrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fileBrowser.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/data/fileBrowser",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/fileBrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
-				"patcherrelativepath" : "../../audio/stereo/Sources/input~",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/sources/input",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
-				"patcherrelativepath" : "../../audio/stereo/Sources/input~",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/sources/input",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.view.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/dynamics/limiter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Sources/input~",
-				"patcherrelativepath" : "../../audio/stereo/Sources/input~",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/sources/input",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter~.model.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/dynamics/limiter",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "limiter.parametersAndMessages.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/dynamics/limiter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "balance~.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/Imaging/balance~",
-				"patcherrelativepath" : "../../audio/stereo/Imaging/balance~",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/imaging/balance",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie%.module.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../video/sources/movie%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie%.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../video/sources/movie%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie%.view.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../video/sources/movie%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../components/data/maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../components/data/jamomaPath",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -989,7 +1090,11 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.textslider.mxo",
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -997,11 +1102,23 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.savebang.mxo",
+				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
 , 			{
 				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out~.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.limiter~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1010,10 +1127,6 @@
 			}
 , 			{
 				"name" : "j.unit.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1029,14 +1142,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.namespace.mxo",
 				"type" : "iLaX"
 			}
@@ -1048,7 +1153,8 @@
 				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }

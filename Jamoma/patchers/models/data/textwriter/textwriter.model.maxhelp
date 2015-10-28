@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"minor" : 1,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 105.0, 86.0, 823.0, 593.0 ],
+		"rect" : [ 100.0, 100.0, 823.0, 593.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,29 +38,23 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"args" : [ "@name", "textwriter.model", "@description", "Write data to a text file, with timestamping for each line of values." ],
+					"bgmode" : 1,
 					"border" : 0,
-					"filename" : "helpdetails.js",
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-33",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "textwriter.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 10.0, 8.0, 606.0, 51.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-32",
-					"maxclass" : "comment",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 10.0, 61.0, 476.0, 19.0 ],
-					"style" : "",
-					"text" : "Write data to a text file, with timestamping for each line of values."
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 10.0, 8.0, 396.0, 90.0 ],
+					"prototypename" : "bphelp",
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -183,7 +177,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 34.0, 285.0, 284.0, 33.0 ],
 					"style" : "",
-					"text" : "0.732585 0.439354 0.893279 0.220153 0.59921 0.931801 0.862234 0.314365 0.920402 0.485963"
+					"text" : "0.946224 0.922784 0.451133 0.243313 0.767781 0.369377 0.344486 0.621306 0.743947 0.493865"
 				}
 
 			}
@@ -200,9 +194,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -556,20 +550,26 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "textwriter.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/textwriter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/textwriter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "textwriter.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/textwriter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/textwriter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
@@ -609,7 +609,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

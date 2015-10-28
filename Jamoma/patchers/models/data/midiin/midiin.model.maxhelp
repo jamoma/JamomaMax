@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"minor" : 1,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 377.0, 113.0, 768.0, 457.0 ],
+		"rect" : [ 100.0, 100.0, 768.0, 457.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,13 +50,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 377.0, 139.0, 768.0, 431.0 ],
+						"rect" : [ 100.0, 126.0, 768.0, 431.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -138,29 +138,23 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-14",
-									"maxclass" : "comment",
+									"args" : [ "@name", "midiin.model", "@description", "Receive and output messages from a MIDI device." ],
+									"bgmode" : 1,
+									"border" : 0,
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
+									"id" : "obj-12",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 4.0, 50.0, 300.0, 21.0 ],
-									"style" : "",
-									"text" : "Receive and output messages from a MIDI device."
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"border" : 0,
-									"filename" : "helpdetails.js",
-									"id" : "obj-12",
-									"ignoreclick" : 1,
-									"jsarguments" : [ "midiin.model" ],
-									"maxclass" : "jsui",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 0.0, 2.0, 569.0, 67.0 ]
+									"offset" : [ 0.0, 0.0 ],
+									"patching_rect" : [ 0.0, 2.0, 696.0, 70.0 ],
+									"prototypename" : "bphelp",
+									"varname" : "maxhelpui",
+									"viewvisibility" : 1
 								}
 
 							}
@@ -587,9 +581,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -649,26 +643,32 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "midiin.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/midiin",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/midiin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.scriptingUtilities.js",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/javascript",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "midiin.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/midiin",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/midiin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -717,7 +717,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

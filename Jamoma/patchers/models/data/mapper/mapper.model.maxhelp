@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
-			"architecture" : "x86",
+			"minor" : 1,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 101.0, 120.0, 914.0, 708.0 ],
+		"rect" : [ 100.0, 100.0, 888.0, 474.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,13 +50,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 914.0, 682.0 ],
+						"rect" : [ 0.0, 26.0, 888.0, 448.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -154,13 +154,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 101.0, 146.0, 914.0, 682.0 ],
+						"rect" : [ 100.0, 126.0, 888.0, 448.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -190,19 +190,6 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-14",
-									"linecount" : 2,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 10.0, 64.0, 326.0, 36.0 ],
-									"style" : "",
-									"text" : "Map data from a module's output (return or parameter) to another module's parameter (or message)"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-12",
 									"maxclass" : "newobj",
 									"numinlets" : 0,
@@ -211,9 +198,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 5,
-											"architecture" : "x86",
+											"minor" : 1,
+											"revision" : 0,
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -475,17 +462,23 @@
 							}
 , 							{
 								"box" : 								{
+									"args" : [ "@name", "mapper.model", "@description", "Map data from a module's output (return or parameter) to another module's parameter (or message)" ],
+									"bgmode" : 1,
 									"border" : 0,
-									"filename" : "helpdetails.js",
+									"clickthrough" : 0,
+									"enablehscroll" : 0,
+									"enablevscroll" : 0,
 									"id" : "obj-2",
-									"ignoreclick" : 1,
-									"jsarguments" : [ "mapper.model" ],
-									"maxclass" : "jsui",
+									"lockeddragscroll" : 0,
+									"maxclass" : "bpatcher",
+									"name" : "j.maxhelpui.maxpat",
 									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 9.0, 606.0, 60.0 ]
+									"numoutlets" : 0,
+									"offset" : [ 0.0, 0.0 ],
+									"patching_rect" : [ -4.0, 3.0, 696.0, 70.0 ],
+									"prototypename" : "bphelp",
+									"varname" : "maxhelpui",
+									"viewvisibility" : 1
 								}
 
 							}
@@ -521,13 +514,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
-							"architecture" : "x86",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 914.0, 682.0 ],
+						"rect" : [ 0.0, 26.0, 888.0, 448.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -577,68 +570,74 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-1::obj-4::obj-95" : [ "live.text[16]", "live.text", 0 ],
-			"obj-2::obj-3::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
 			"obj-2::obj-4::obj-10::obj-174" : [ "live.text[5]", "live.text[1]", 0 ],
 			"obj-1::obj-4::obj-174" : [ "live.text[17]", "live.text[1]", 0 ],
-			"obj-2::obj-4::obj-10::obj-188" : [ "live.text[6]", "live.text[1]", 0 ],
-			"obj-2::obj-4::obj-10::obj-145" : [ "live.menu[1]", "live.menu", 0 ],
-			"obj-2::obj-4::obj-10::obj-95" : [ "live.text[8]", "live.text", 0 ],
 			"obj-2::obj-4::obj-8" : [ "live.text[10]", "live.text", 0 ],
+			"obj-2::obj-4::obj-10::obj-196" : [ "live.text[7]", "live.text", 0 ],
+			"obj-1::obj-4::obj-188" : [ "live.text[18]", "live.text[1]", 0 ],
+			"obj-2::obj-4::obj-10::obj-95" : [ "live.text[8]", "live.text", 0 ],
 			"obj-2::obj-4::obj-182" : [ "live.text[4]", "live.text[4]", 0 ],
 			"obj-2::obj-3::obj-13" : [ "live.dial", "Sample rate", 0 ],
+			"obj-2::obj-3::obj-14" : [ "live.dial[1]", "Bit depth", 0 ],
+			"obj-1::obj-4::obj-145" : [ "live.menu[2]", "live.menu", 0 ],
 			"obj-2::obj-4::obj-21" : [ "live.text[9]", "live.text", 0 ],
-			"obj-1::obj-4::obj-188" : [ "live.text[18]", "live.text[1]", 0 ],
-			"obj-2::obj-4::obj-10::obj-196" : [ "live.text[7]", "live.text", 0 ],
+			"obj-2::obj-4::obj-10::obj-188" : [ "live.text[6]", "live.text[1]", 0 ],
 			"obj-1::obj-4::obj-196" : [ "live.text[11]", "live.text", 0 ],
-			"obj-1::obj-4::obj-145" : [ "live.menu[2]", "live.menu", 0 ]
+			"obj-2::obj-4::obj-10::obj-145" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-1::obj-4::obj-95" : [ "live.text[16]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mapper",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mouse",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/distortion/degrade",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/distortion/degrade",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mapper",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespacebrowser.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/namespace/namespacebrowser",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/namespace/namespacebrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/javascript",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.view.large.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mapper",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -650,19 +649,19 @@
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/distortion/degrade",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/audio/stereo/distortion/degrade",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mouse",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -741,7 +740,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
