@@ -5985,7 +5985,7 @@
 									"presentation_rect" : [ 780.0, 110.0, 150.0, 40.0 ],
 									"style" : "",
 									"tabcolor" : [ 0.376471, 0.384314, 0.4, 1.0 ],
-									"tabs" : [ "phys_world.module" ],
+									"tabs" : [ "phys_world.model" ],
 									"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ]
 								}
 
