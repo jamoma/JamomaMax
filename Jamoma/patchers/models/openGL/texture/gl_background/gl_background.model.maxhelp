@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 788.0, 134.0, 561.0, 442.0 ],
+		"rect" : [ 85.0, 545.0, 561.0, 442.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,6 +38,28 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"args" : [ "@name", "gl_background.model", "@description", "Slab based background extractor" ],
+					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-1",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "j.maxhelpui.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ 0.0, 3.0, 579.0, 70.0 ],
+					"prototypename" : "bphelp",
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 14.0,
 					"id" : "obj-9",
@@ -65,34 +87,6 @@
 					"patching_rect" : [ 26.0, 255.0, 134.0, 35.0 ],
 					"style" : "",
 					"text" : "gl_background.model background"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 8.0, 65.0, 295.0, 19.0 ],
-					"style" : "",
-					"text" : "Slab-based background extractor (foreground remover)."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"border" : 0,
-					"filename" : "helpdetails.js",
-					"id" : "obj-17",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "gl_background.model" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 8.0, 8.0, 521.0, 55.0 ]
 				}
 
 			}
@@ -169,31 +163,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u219002656" ],
 									"dim" : [ 1, 1 ],
-									"position" : [ 0.0 ],
-									"vol" : [ 1.0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ],
-									"output_texture" : [ 0 ],
-									"rate" : [ 1.0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"drawto" : [ "" ],
-									"time_secs" : [ 0.0 ],
 									"adapt" : [ 1 ],
-									"looppoints" : [ 0, 0 ],
-									"time" : [ 0 ],
-									"usedstrect" : [ 0 ],
-									"loopreport" : [ 0 ],
-									"usesrcrect" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"framereport" : [ 0 ],
-									"loopend" : [ 0 ],
-									"autostart" : [ 1 ],
-									"interp" : [ 0 ],
-									"engine" : [ "avf" ],
-									"moviefile" : [ "" ],
-									"texture_name" : [ "u825002654" ],
+									"drawto" : [ "" ],
 									"automatic" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ]
+									"autostart" : [ 1 ],
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopstart" : [ 0 ],
+									"looppoints" : [ 0, 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"engine" : [ "avf" ],
+									"usedstrect" : [ 0 ],
+									"interp" : [ 0 ],
+									"loopend" : [ 0 ],
+									"output_texture" : [ 0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"moviefile" : [ "" ],
+									"rate" : [ 1.0 ],
+									"texture_name" : [ "u825002654" ],
+									"position" : [ 0.0 ],
+									"time_secs" : [ 0.0 ],
+									"vol" : [ 1.0 ],
+									"loopreport" : [ 0 ],
+									"framereport" : [ 0 ],
+									"unique" : [ 0 ],
+									"colormode" : [ "argb" ]
 								}
 
 							}
@@ -273,25 +267,25 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl_background.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_background",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_background",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.panel.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -302,21 +296,27 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "gl_background.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_background",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_background",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpui.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.maxhelpuiButton.png",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
@@ -356,7 +356,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
