@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 409.0, 85.0, 545.0, 329.0 ],
+		"rect" : [ 83.0, 376.0, 545.0, 329.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,6 +38,36 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 25.0, 114.0, 74.0, 21.0 ],
+					"style" : "",
+					"text" : "pipe 1000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-2",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "bang", "" ],
+					"patching_rect" : [ 235.0, 226.0, 244.0, 35.0 ],
+					"style" : "",
+					"text" : "jit.world syphonserver_help @size 320 240 @windowposition 10 50 @enable 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -46,20 +76,6 @@
 					"patching_rect" : [ 44.0, 213.0, 100.0, 21.0 ],
 					"style" : "",
 					"text" : "jit.gl.videoplane"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
-					"id" : "obj-9",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 353.0, 102.5, 80.0, 35.0 ],
-					"style" : "",
-					"text" : "turn on rendering"
 				}
 
 			}
@@ -83,7 +99,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 109.0, 74.0, 21.0 ],
+					"patching_rect" : [ 25.0, 88.0, 74.0, 21.0 ],
 					"style" : "",
 					"text" : "loadmess 1"
 				}
@@ -95,36 +111,36 @@
 						"clips" : [ 							{
 								"filename" : "chickens.mp4",
 								"filekind" : "moviefile",
-								"loop" : 1,
+								"loop" : 0,
 								"content_state" : 								{
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u219002656" ],
 									"dim" : [ 1, 1 ],
-									"position" : [ 0.0 ],
-									"vol" : [ 1.0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ],
-									"output_texture" : [ 0 ],
-									"rate" : [ 1.0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"drawto" : [ "" ],
-									"time_secs" : [ 0.0 ],
 									"adapt" : [ 1 ],
-									"looppoints" : [ 0, 0 ],
-									"time" : [ 0 ],
-									"usedstrect" : [ 0 ],
-									"loopreport" : [ 0 ],
-									"usesrcrect" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"framereport" : [ 0 ],
-									"loopend" : [ 0 ],
-									"autostart" : [ 1 ],
-									"interp" : [ 0 ],
-									"engine" : [ "avf" ],
-									"moviefile" : [ "" ],
-									"texture_name" : [ "u825002654" ],
+									"drawto" : [ "" ],
 									"automatic" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ]
+									"autostart" : [ 1 ],
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopstart" : [ 0 ],
+									"looppoints" : [ 0, 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ],
+									"engine" : [ "avf" ],
+									"usedstrect" : [ 0 ],
+									"interp" : [ 0 ],
+									"loopend" : [ 0 ],
+									"output_texture" : [ 0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"moviefile" : [ "" ],
+									"rate" : [ 1.0 ],
+									"texture_name" : [ "u825002654" ],
+									"position" : [ 0.0 ],
+									"time_secs" : [ 0.0 ],
+									"vol" : [ 1.0 ],
+									"loopreport" : [ 0 ],
+									"framereport" : [ 0 ],
+									"unique" : [ 0 ],
+									"colormode" : [ "argb" ]
 								}
 
 							}
@@ -191,39 +207,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 0,
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-2",
-					"linecount" : 3,
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "bang", "" ],
-					"patching_rect" : [ 262.0, 140.0, 165.0, 49.0 ],
-					"style" : "",
-					"text" : "jit.world syphonserver_help @size 320 240 @windowposition 10 50"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"attr" : "enable",
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-6",
-					"maxclass" : "attrui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 262.0, 109.0, 86.0, 22.0 ],
-					"style" : "",
-					"text_width" : 65.0
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"annotation" : "none",
 					"args" : [ "syphonserver" ],
 					"bgmode" : 0,
@@ -238,7 +221,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 234.5, 248.0, 300.0, 70.0 ],
+					"patching_rect" : [ 214.5, 120.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"viewvisibility" : 1
 				}
@@ -265,6 +248,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -274,16 +266,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-7", 0 ]
@@ -293,25 +276,25 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl_syphonserver.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -323,13 +306,13 @@
 			}
 , 			{
 				"name" : "gl_syphonserver.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -380,7 +363,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
