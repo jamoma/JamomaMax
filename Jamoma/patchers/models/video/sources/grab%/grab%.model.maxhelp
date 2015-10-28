@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 528.0, 484.0 ],
+		"rect" : [ 100.0, 100.0, 528.0, 484.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,7 +39,7 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"annotation" : "none",
-					"args" : [ "Grab_help" ],
+					"args" : [ "grab_help" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
