@@ -1339,6 +1339,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Lato Light",
@@ -2856,7 +2857,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 345.0, 490.0, 141.0, 23.0 ],
 									"style" : "",
-									"text" : "j.parameterCreate"
+									"text" : "j.parameter_create"
 								}
 
 							}
@@ -3740,7 +3741,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 115.0, 146.0, 23.0 ],
 									"style" : "",
-									"text" : "j.getAllAttributes"
+									"text" : "j.get_attributes"
 								}
 
 							}
@@ -3954,7 +3955,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 140.0, 148.0, 23.0 ],
 									"style" : "",
-									"text" : "j.getModuleNames"
+									"text" : "j.get_modules"
 								}
 
 							}
@@ -3971,7 +3972,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 165.0, 145.0, 23.0 ],
 									"style" : "",
-									"text" : "j.getMessageNames"
+									"text" : "j.get_messages"
 								}
 
 							}
@@ -3988,7 +3989,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 190.0, 143.0, 23.0 ],
 									"style" : "",
-									"text" : "j.getParameterNames"
+									"text" : "j.get_parameters"
 								}
 
 							}
@@ -4005,7 +4006,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 215.0, 144.0, 23.0 ],
 									"style" : "",
-									"text" : "j.getReturnNames"
+									"text" : "j.get_returns"
 								}
 
 							}
@@ -4022,7 +4023,7 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 170.0, 240.0, 147.0, 23.0 ],
 									"style" : "",
-									"text" : "j.getOneAttribute"
+									"text" : "j.get_attribute_value"
 								}
 
 							}
