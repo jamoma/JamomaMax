@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 78.0, 86.0, 753.0, 413.0 ],
@@ -14,19 +15,27 @@
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Verdana",
@@ -36,7 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 257.0, 97.0, 38.0, 19.0 ],
+					"patching_rect" : [ 257.0, 97.0, 38.0, 21.0 ],
+					"style" : "",
 					"text" : "t l l"
 				}
 
@@ -52,7 +62,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 26.0, 82.0, 168.0, 24.0 ],
+					"patching_rect" : [ 26.0, 82.0, 168.0, 26.0 ],
+					"style" : "",
 					"text" : "j.gl_group_slab.model"
 				}
 
@@ -63,13 +74,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-32",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 257.0, 336.0, 82.0, 31.0 ],
-					"text" : "j.out 1 @type jit_gl_texture"
+					"patching_rect" : [ 257.0, 336.0, 151.0, 21.0 ],
+					"style" : "",
+					"text" : "j.out 1 @tags jit_gl_texture"
 				}
 
 			}
@@ -82,7 +93,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 257.0, 66.0, 37.0, 19.0 ],
+					"patching_rect" : [ 257.0, 66.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 1"
 				}
 
@@ -98,7 +110,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 497.0, 82.0, 204.0, 31.0 ],
+					"patching_rect" : [ 497.0, 82.0, 204.0, 33.0 ],
+					"style" : "",
 					"text" : "j.message clear @type none @description \"Clear buffered image.\"",
 					"varname" : "tolerance[1]"
 				}
@@ -115,7 +128,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 73.0, 135.0, 373.0, 31.0 ],
+					"patching_rect" : [ 73.0, 135.0, 373.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter weight @type decimal @range 0. 1. @clipmode both @description \"Low pass filter coefficient.\"",
 					"varname" : "tolerance"
 				}
@@ -132,7 +146,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 534.0, 255.0, 190.0, 31.0 ],
+					"patching_rect" : [ 534.0, 255.0, 190.0, 33.0 ],
+					"style" : "",
 					"text" : "j.model @description \"Background model using jit.gl.slab.\"",
 					"varname" : "jmod.hub"
 				}
@@ -147,7 +162,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 497.0, 219.0, 38.0, 19.0 ],
+					"patching_rect" : [ 497.0, 219.0, 38.0, 21.0 ],
+					"style" : "",
 					"text" : "zl reg"
 				}
 
@@ -161,7 +177,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 257.0, 295.0, 131.0, 19.0 ],
+					"patching_rect" : [ 257.0, 295.0, 131.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.gl.slab @type float32"
 				}
 
@@ -173,7 +190,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 534.0, 303.0, 25.0, 25.0 ]
+					"patching_rect" : [ 534.0, 303.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -186,7 +204,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 257.0, 255.0, 259.0, 19.0 ],
+					"patching_rect" : [ 257.0, 255.0, 259.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.gl.slab @file co.normal.jxs @type float32"
 				}
 
@@ -198,8 +217,9 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 257.0, 30.0, 25.0, 25.0 ]
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 257.0, 30.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -210,7 +230,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 257.0, 373.0, 25.0, 25.0 ]
+					"patching_rect" : [ 257.0, 373.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -223,7 +244,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 73.0, 174.0, 94.0, 19.0 ],
+					"patching_rect" : [ 73.0, 174.0, 94.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend amount"
 				}
 
@@ -237,7 +259,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 73.0, 202.0, 85.0, 19.0 ],
+					"patching_rect" : [ 73.0, 202.0, 85.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend param"
 				}
 
@@ -391,34 +414,6 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.message.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}
