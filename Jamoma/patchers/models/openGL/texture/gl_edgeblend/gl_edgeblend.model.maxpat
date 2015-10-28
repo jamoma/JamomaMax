@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 730.0, 439.0, 874.0, 455.0 ],
@@ -14,19 +15,27 @@
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"annotation" : "none",
@@ -38,7 +47,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.0, 60.0, 168.0, 24.0 ],
+					"patching_rect" : [ 19.0, 60.0, 168.0, 26.0 ],
+					"style" : "",
 					"text" : "j.gl_group_slab.model"
 				}
 
@@ -54,7 +64,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 604.0, 345.0, 220.0, 31.0 ],
+					"patching_rect" : [ 604.0, 345.0, 220.0, 33.0 ],
+					"style" : "",
 					"text" : "j.model @description \"Apply edgblending to incomming matrix or texture.\"",
 					"varname" : "j.model"
 				}
@@ -68,7 +79,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 370.0, 361.0, 32.0, 19.0 ],
+					"patching_rect" : [ 370.0, 361.0, 32.0, 21.0 ],
+					"style" : "",
 					"text" : "print",
 					"varname" : "PRINT"
 				}
@@ -83,7 +95,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 140.0, 291.0, 38.0, 19.0 ],
+					"patching_rect" : [ 140.0, 291.0, 38.0, 21.0 ],
+					"style" : "",
 					"text" : "thru",
 					"varname" : "THRU"
 				}
@@ -97,6 +110,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 140.0, 402.0, 25.0, 25.0 ],
+					"style" : "",
 					"varname" : "OUT"
 				}
 
@@ -108,7 +122,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 604.0, 403.0, 24.0, 24.0 ]
+					"patching_rect" : [ 604.0, 403.0, 24.0, 24.0 ],
+					"style" : ""
 				}
 
 			}
@@ -119,8 +134,9 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 139.0, 139.0, 25.0, 25.0 ]
+					"outlettype" : [ "jit_matrix" ],
+					"patching_rect" : [ 139.0, 139.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -133,7 +149,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 140.0, 331.0, 170.0, 19.0 ],
+					"patching_rect" : [ 140.0, 331.0, 170.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.gl.slab @file tr.edgeblend.jxs",
 					"varname" : "EDGE_BLEND_SLAB"
 				}
@@ -149,7 +166,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 351.0, 201.0, 427.0, 19.0 ],
+					"patching_rect" : [ 351.0, 201.0, 427.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter edgeblend/invert @type boolean @description \"Invert edge blending.\"",
 					"varname" : "edgeblend/invert"
 				}
@@ -166,7 +184,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 319.0, 150.0, 424.0, 31.0 ],
+					"patching_rect" : [ 319.0, 150.0, 424.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter edgeblend/fade/bottom @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/bottom"
 				}
@@ -183,7 +202,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 286.5, 108.0, 421.0, 31.0 ],
+					"patching_rect" : [ 286.5, 108.0, 422.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter edgeblend/fade/right @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/right"
 				}
@@ -200,7 +220,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 254.0, 59.0, 417.0, 31.0 ],
+					"patching_rect" : [ 254.0, 59.0, 417.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter edgeblend/fade/top @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/top"
 				}
@@ -217,7 +238,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 221.5, 23.0, 417.0, 31.0 ],
+					"patching_rect" : [ 221.5, 23.0, 417.0, 33.0 ],
+					"style" : "",
 					"text" : "j.parameter edgeblend/fade/left @type decimal @ramp/drive max @range 0. 1. @clipmode both @description \"Edge blend left side.\"",
 					"varname" : "edgeblend/fade/left"
 				}
@@ -234,8 +256,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 140.0, 361.0, 82.0, 31.0 ],
-					"text" : "j.out 1 @type jit_gl_texture"
+					"patching_rect" : [ 140.0, 361.0, 81.0, 33.0 ],
+					"style" : "",
+					"text" : "j.out 1 @tags jit_gl_texture"
 				}
 
 			}
@@ -248,7 +271,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 139.0, 175.0, 37.0, 19.0 ],
+					"patching_rect" : [ 139.0, 175.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 1"
 				}
 
@@ -262,7 +286,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 351.0, 229.0, 96.0, 19.0 ],
+					"patching_rect" : [ 351.0, 229.0, 96.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend invert"
 				}
 
@@ -276,7 +301,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 189.0, 259.0, 85.0, 19.0 ],
+					"patching_rect" : [ 189.0, 259.0, 85.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend param"
 				}
 
@@ -290,7 +316,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 189.0, 207.0, 149.0, 19.0 ],
+					"patching_rect" : [ 189.0, 207.0, 149.0, 21.0 ],
+					"style" : "",
 					"text" : "pak fade 0. 0. 0. 0."
 				}
 
@@ -440,37 +467,6 @@
 					"source" : [ "obj-8", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "thru.maxpat",
-				"bootpath" : "/Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"patcherrelativepath" : "../../../../../../../../../../../../../Applications/Max 6.1/patches/m4l-patches/Pluggo for Live resources/patches",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

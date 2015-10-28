@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 104.0, 413.0, 781.0, 474.0 ],
@@ -14,19 +15,27 @@
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"fontname" : "Verdana",
@@ -36,7 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 293.0, 70.0, 90.0, 19.0 ],
+					"patching_rect" : [ 293.0, 70.0, 90.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend anchor"
 				}
 
@@ -50,7 +60,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 175.0, 324.0, 87.0, 19.0 ],
+					"patching_rect" : [ 175.0, 324.0, 87.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend param"
 				}
 
@@ -64,7 +75,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 340.5, 275.0, 83.0, 19.0 ],
+					"patching_rect" : [ 340.5, 275.0, 83.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend offset"
 				}
 
@@ -78,7 +90,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 325.5, 223.0, 82.0, 19.0 ],
+					"patching_rect" : [ 325.5, 223.0, 82.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend zoom"
 				}
 
@@ -92,7 +105,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_gl_texture", "" ],
-					"patching_rect" : [ 128.0, 369.0, 271.0, 19.0 ],
+					"patching_rect" : [ 128.0, 369.0, 271.0, 21.0 ],
+					"style" : "",
 					"text" : "jit.gl.slab @file td.rota.jxs",
 					"varname" : "ROTASLAB"
 				}
@@ -109,7 +123,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 19.0, 198.0, 168.0, 24.0 ],
+					"patching_rect" : [ 19.0, 198.0, 168.0, 26.0 ],
+					"style" : "",
 					"text" : "j.gl_group_slab.model"
 				}
 
@@ -125,7 +140,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 536.0, 384.0, 187.0, 31.0 ],
+					"patching_rect" : [ 536.0, 384.0, 187.0, 33.0 ],
+					"style" : "",
 					"text" : "j.model @description \"Slab-based rotation and repositioning.\"",
 					"varname" : "jmod.hub"
 				}
@@ -139,7 +155,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 380.0, 396.0, 111.0, 19.0 ],
+					"patching_rect" : [ 380.0, 396.0, 111.0, 21.0 ],
+					"style" : "",
 					"text" : "print rotaslab_dump",
 					"varname" : "PRINT"
 				}
@@ -152,7 +169,8 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 535.5, 431.0, 25.0, 25.0 ]
+					"patching_rect" : [ 535.5, 431.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -163,8 +181,9 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 128.0, 230.0, 25.0, 25.0 ],
+					"style" : "",
 					"varname" : "TEXTURE_0"
 				}
 
@@ -177,6 +196,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 128.0, 431.0, 25.0, 25.0 ],
+					"style" : "",
 					"varname" : "OUT"
 				}
 
@@ -191,7 +211,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 311.0, 96.0, 411.0, 19.0 ],
+					"patching_rect" : [ 311.0, 96.0, 411.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter boundmode @type string @description \"Boundary handling mode.\"",
 					"varname" : "boundmode"
 				}
@@ -207,7 +228,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 175.0, 14.0, 576.0, 19.0 ],
+					"patching_rect" : [ 175.0, 14.0, 576.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter theta @type decimal @range 0 360 @clipmode none @description \"Rotation angle in degrees.\"",
 					"varname" : "theta"
 				}
@@ -223,7 +245,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 293.0, 46.0, 447.0, 19.0 ],
+					"patching_rect" : [ 293.0, 46.0, 447.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter anchor @type array @description \"Coordinates of the Anchor point (x-y)\"",
 					"varname" : "anchor"
 				}
@@ -239,7 +262,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 340.5, 249.0, 306.0, 19.0 ],
+					"patching_rect" : [ 340.5, 249.0, 306.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter offset @type array @description \"Offset (x-y)\"",
 					"varname" : "offset"
 				}
@@ -255,7 +279,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 325.5, 198.0, 336.0, 19.0 ],
+					"patching_rect" : [ 325.5, 198.0, 336.0, 21.0 ],
+					"style" : "",
 					"text" : "j.parameter zoom @type array @description \"Zoom factor (x-y)\"",
 					"varname" : "zoom"
 				}
@@ -267,13 +292,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1033",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 128.0, 396.0, 82.0, 31.0 ],
-					"text" : "j.out 1 @type jit_gl_texture"
+					"patching_rect" : [ 128.0, 396.0, 151.0, 21.0 ],
+					"style" : "",
+					"text" : "j.out 1 @tags jit_gl_texture"
 				}
 
 			}
@@ -286,7 +311,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 128.0, 275.0, 37.0, 19.0 ],
+					"patching_rect" : [ 128.0, 275.0, 37.0, 21.0 ],
+					"style" : "",
 					"text" : "j.in 1"
 				}
 
@@ -300,7 +326,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.0, 175.0, 115.0, 19.0 ],
+					"patching_rect" : [ 311.0, 175.0, 115.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend boundmode"
 				}
 
@@ -314,15 +341,15 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.0, 120.0, 89.0, 19.0 ],
+					"patching_rect" : [ 311.0, 120.0, 89.0, 21.0 ],
+					"style" : "",
 					"text" : "prepend symbol"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
+					"allowdrag" : 0,
 					"id" : "obj-20",
 					"items" : [ "clear", ",", "alpha", ",", "wrap", ",", "clip", ",", "fold" ],
 					"labelclick" : 1,
@@ -331,7 +358,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 311.0, 150.0, 100.0, 19.0 ]
+					"patching_rect" : [ 311.0, 150.0, 100.0, 21.0 ],
+					"style" : ""
 				}
 
 			}
@@ -345,7 +373,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 175.0, 46.0, 108.0, 55.0 ],
+					"patching_rect" : [ 175.0, 46.0, 108.0, 57.0 ],
+					"style" : "",
 					"text" : "j.unit @dataspace angle @input degree @output radian"
 				}
 
@@ -359,7 +388,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 175.0, 119.0, 51.0, 17.0 ],
+					"patching_rect" : [ 175.0, 119.0, 51.0, 21.0 ],
+					"style" : "",
 					"text" : "theta $1"
 				}
 
@@ -553,34 +583,6 @@
 					"source" : [ "obj-4", 0 ]
 				}
 
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "/Users/reno/Documents/GITs/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.unit.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
 			}
  ]
 	}

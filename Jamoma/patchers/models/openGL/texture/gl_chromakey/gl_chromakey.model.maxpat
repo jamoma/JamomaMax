@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
+			"minor" : 1,
 			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 1244.0, 597.0 ],
+		"rect" : [ 34.0, 79.0, 873.0, 415.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -138,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 766.0, 282.0, 271.0, 21.0 ],
+					"patching_rect" : [ 513.0, 252.0, 271.0, 21.0 ],
 					"style" : "",
 					"text" : "j.model @description \"Chromakey using jit.gl.slab.\""
 				}
@@ -151,7 +151,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 375.0, 233.0, 25.0, 25.0 ],
 					"style" : ""
 				}
@@ -164,7 +164,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 766.0, 324.0, 25.0, 25.0 ],
+					"patching_rect" : [ 513.0, 294.0, 25.0, 25.0 ],
 					"style" : ""
 				}
 
@@ -191,7 +191,7 @@
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "jit_matrix" ],
 					"patching_rect" : [ 63.0, 227.0, 25.0, 25.0 ],
 					"style" : ""
 				}
@@ -215,14 +215,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-1006",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 63.0, 327.0, 82.0, 33.0 ],
+					"patching_rect" : [ 63.0, 327.0, 151.0, 21.0 ],
 					"style" : "",
-					"text" : "j.out 1 @type jit_gl_texture"
+					"text" : "j.out 1 @tags jit_gl_texture"
 				}
 
 			}
@@ -631,32 +630,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL",
-				"patcherrelativepath" : "../../../../components/openGL",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
