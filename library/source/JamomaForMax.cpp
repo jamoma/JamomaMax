@@ -19,8 +19,7 @@
 static long                 initialized = false;			///< Global variabel indicating whether Jamoma has been initiated or not.
 static t_hashtab            *hash_modules = NULL;			///< A hashtab of all modules (j.hubs) currently instantiated
 
-bool                        max5 = false;					///< Is Jamoma currently running in Max 5 or newer?
-bool                        max6 = false;					///< Is Jamoma currently running in Max 6 or newer?
+bool                        max7 = false;					///< Is Jamoma currently running in Max 7.0.6 or newer ? (version from where stand alone feature is fixed)
 
 TTSymbol					kTTSym_Max;
 TTObject                    MaxApplicationManager;
@@ -59,11 +58,11 @@ void jamoma_init(void)
 		TTValue		v, out;
         TTErr       err;
  
-		if (maxversion() >= 0x0519)
-			max5 = true;
-        
-		if (maxversion() >= 0x0600)
-			max6 = true;
+		if (maxversion() < 0x0706)
+        {
+			error("Jamoma  %s  |  build %s can't run under Max version ealier than 7.0.6", JAMOMA_MAX_VERSION, JAMOMA_MAX_REV);
+            return;
+        }
         
 		// Initialize the Modular library
         TTModularInit();
