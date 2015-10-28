@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
+			"minor" : 1,
 			"revision" : 0,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 325.0, 93.0, 493.0, 636.0 ],
+		"rect" : [ 100.0, 100.0, 493.0, 636.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -37,6 +37,19 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontsize" : 18.0,
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 203.0, 101.5, 233.0, 28.0 ],
+					"style" : "",
+					"text" : "need external cv.jit.ravg"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-13",
 					"maxclass" : "newobj",
@@ -230,113 +243,85 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "foreground_mask%.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foreground_mask%",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/fx/foreground_mask%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "foreground_mask%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foreground_mask%",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/fx/foreground_mask%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.noiseremoval%.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/video/noiseremoval%",
-				"patcherrelativepath" : "../../../../components/video/noiseremoval%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/video/noiseremoval%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "foreground_mask%.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/fx/foreground_mask%",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/fx/foreground_mask%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../../../components/data/maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../../../components/data/jamomaPath",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "input%.module.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/noise%",
-				"patcherrelativepath" : "../../sources/noise%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../sources/movie%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "grab%.model.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/grab%",
-				"patcherrelativepath" : "../../sources/grab%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/modules/video/sources/input%",
-				"patcherrelativepath" : "../../sources/input%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../../../components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -357,10 +342,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "cv.jit.ravg.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.model.mxo",
 				"type" : "iLaX"
 			}
@@ -377,15 +358,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.receive.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "j.send.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.savebang.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -401,11 +374,19 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
+, 			{
+				"name" : "j.savebang.mxo",
+				"type" : "iLaX"
+			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
