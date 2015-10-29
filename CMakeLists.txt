@@ -85,7 +85,7 @@ if((APPLE AND NOT IOS) OR WIN32)
 
 	if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Release")
 		add_definitions(-DMAXAPI_USE_MSCRT)
-  if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Debug")
+  elseif(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Debug")
     SET(CMAKE_DEBUG_POSTFIX "")
 	endif()
 	add_subdirectory(library)
