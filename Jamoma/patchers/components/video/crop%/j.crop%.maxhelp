@@ -2,10 +2,11 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 10,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
 		"rect" : [ 100.0, 100.0, 615.0, 497.0 ],
@@ -14,30 +15,45 @@
 		"default_fontsize" : 10.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Verdana",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"args" : [ "@name", "j.crop%", "@description", "Manually crop video" ],
 					"bgmode" : 1,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-19",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "j.maxhelpui.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 0.0, 0.0, 621.0, 70.0 ],
-					"varname" : "maxhelpui"
+					"offset" : [ 0.0, 0.0 ],
+					"patching_rect" : [ -2.0, 0.0, 623.0, 58.0 ],
+					"varname" : "maxhelpui",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -45,19 +61,20 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : 0.0,
 					"id" : "obj-5",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 99.0, 113.0, 204.0, 43.0 ],
+					"patching_rect" : [ 104.0, 97.5, 204.0, 43.0 ],
+					"style" : "",
 					"text" : "remember to connect the output from the window you are cropping from to the right inlet of the component."
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-6",
@@ -66,12 +83,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 14.0, 448.0, 60.0, 35.0 ]
+					"patching_rect" : [ 14.0, 448.0, 60.0, 35.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-7",
@@ -80,7 +99,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 347.5, 448.0, 60.0, 35.0 ]
+					"patching_rect" : [ 349.0, 448.0, 60.0, 35.0 ],
+					"style" : ""
 				}
 
 			}
@@ -93,7 +113,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 349.0, 178.0, 99.0, 19.0 ],
+					"patching_rect" : [ 349.0, 178.0, 99.0, 21.0 ],
+					"style" : "",
 					"text" : "j.autosize%"
 				}
 
@@ -108,21 +129,25 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "jit_matrix", "" ],
-					"patching_rect" : [ 14.0, 118.0, 79.0, 19.0 ],
+					"patching_rect" : [ 14.0, 104.5, 79.0, 21.0 ],
+					"style" : "",
 					"text" : "j.crop%"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 2,
 					"fontname" : "Verdana",
 					"fontsize" : 14.0,
-					"frgb" : 0.0,
 					"id" : "obj-10",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 23.0, 184.0, 317.0, 24.0 ],
+					"patching_rect" : [ 72.0, 147.0, 192.0, 60.0 ],
+					"style" : "",
 					"text" : "click and drag in the window below to crop."
 				}
 
@@ -145,8 +170,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 354.0, 208.0, 204.0, 110.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 204.0, 110.0 ]
+					"patching_rect" : [ 349.0, 208.0, 226.0, 212.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 226.0, 212.0 ]
 				}
 
 			}
@@ -160,7 +185,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 14.0, 80.0, 86.0, 19.0 ],
+					"patching_rect" : [ 14.0, 66.5, 86.0, 21.0 ],
+					"style" : "",
 					"text" : "movie%.model",
 					"varname" : "/input%"
 				}
@@ -170,13 +196,13 @@
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
-					"frgb" : 0.0,
 					"id" : "obj-17",
 					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 349.0, 87.5, 254.0, 55.0 ],
+					"style" : "",
 					"text" : "This abstraction is useful if you have to crop the video, for example if there are unwanted elements that you would like to remove before calculating the quantity of motion."
 				}
 
@@ -196,7 +222,7 @@
 					"destination" : [ "obj-9", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 312.5, 450.0, 334.0, 450.0, 334.0, 105.0, 83.5, 105.0 ],
+					"midpoints" : [ 312.5, 450.0, 334.0, 450.0, 334.0, 95.0, 83.5, 95.0 ],
 					"source" : [ "obj-11", 1 ]
 				}
 
@@ -242,7 +268,7 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 53.5, 162.0, 358.5, 162.0 ],
+					"midpoints" : [ 53.5, 141.0, 358.5, 141.0 ],
 					"source" : [ "obj-9", 1 ]
 				}
 
@@ -250,58 +276,32 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "movie%.model.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/modules/video/sources/movie%",
-				"patcherrelativepath" : "../../../modules/video/sources/movie%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "max7specific.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components",
-				"patcherrelativepath" : "../..",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.crop%.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/video/crop%",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/video/crop%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.autosize%.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/video/autosize%",
-				"patcherrelativepath" : "../autosize%",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/video/autosize%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../data/maxhelpui",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../data/maxhelpui",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiResize.js",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"patcherrelativepath" : "../../data/maxhelpui",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.jamomaPath.maxpat",
-				"bootpath" : "/Users/reno/JamomaMax/Jamoma/patchers/components/data/jamomaPath",
-				"patcherrelativepath" : "../../data/jamomaPath",
-				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -348,11 +348,8 @@
 				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
-, 			{
-				"name" : "j.savebang.mxo",
-				"type" : "iLaX"
-			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }
