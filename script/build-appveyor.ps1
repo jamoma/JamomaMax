@@ -36,7 +36,7 @@ c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENE
 c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . > c:\projects\JamomaMax\build.log
 c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . --target install > c:\projects\JamomaMax\install.log
 
-cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
+cd c:\projects\JamomaMax\build\JamomaInstall\JamomaMax\
 7z a $archiveName Jamoma > c:\projects\JamomaMax\archive.log
 Move-Item *.zip $env:APPVEYOR_BUILD_FOLDER -force
 cd $env:APPVEYOR_BUILD_FOLDER
