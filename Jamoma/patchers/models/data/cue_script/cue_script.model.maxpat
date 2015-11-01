@@ -5,7 +5,7 @@
 			"major" : 7,
 			"minor" : 1,
 			"revision" : 0,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
@@ -37,20 +37,6 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 370.0, 66.0, 71.0, 22.0 ],
-					"style" : "",
-					"text" : "print READ"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -212,7 +198,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -440,11 +426,11 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 25.0, 69.0, 640.0, 480.0 ],
+						"rect" : [ 34.0, 79.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -507,7 +493,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "pause" ],
-									"patching_rect" : [ 190.0, 120.0, 48.0, 20.0 ],
+									"patching_rect" : [ 190.0, 120.0, 48.0, 22.0 ],
 									"style" : "",
 									"text" : "t pause"
 								}
@@ -522,7 +508,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 120.0, 94.0, 20.0 ],
+									"patching_rect" : [ 50.0, 120.0, 94.0, 22.0 ],
 									"style" : "",
 									"text" : "j.filewatcher"
 								}
@@ -623,7 +609,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -908,7 +894,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1113,7 +1099,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1239,7 +1225,7 @@
 											"major" : 7,
 											"minor" : 1,
 											"revision" : 0,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -1434,7 +1420,7 @@
 											"major" : 7,
 											"minor" : 1,
 											"revision" : 0,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -2118,7 +2104,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -3215,7 +3201,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -3676,7 +3662,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -4057,7 +4043,7 @@
 							"major" : 7,
 							"minor" : 1,
 							"revision" : 0,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -4130,7 +4116,7 @@
 											"major" : 7,
 											"minor" : 1,
 											"revision" : 0,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -4191,7 +4177,7 @@
 															"major" : 7,
 															"minor" : 1,
 															"revision" : 0,
-															"architecture" : "x86",
+															"architecture" : "x64",
 															"modernui" : 1
 														}
 ,
@@ -4408,7 +4394,7 @@
 															"major" : 7,
 															"minor" : 1,
 															"revision" : 0,
-															"architecture" : "x86",
+															"architecture" : "x64",
 															"modernui" : 1
 														}
 ,
@@ -5467,7 +5453,7 @@
 											"major" : 7,
 											"minor" : 1,
 											"revision" : 0,
-											"architecture" : "x86",
+											"architecture" : "x64",
 											"modernui" : 1
 										}
 ,
@@ -5796,15 +5782,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1022", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -6025,13 +6002,13 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.filesaver.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/filesaver",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/data/filesaver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.filewatcher.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/filewatcher",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/data/filewatcher",
 				"type" : "JSON",
 				"implicit" : 1
 			}
