@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 6,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -75,8 +75,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -277,8 +277,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -693,7 +693,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 581.0, 87.0, 305.0, 22.0 ],
+									"patching_rect" : [ 581.0, 87.0, 309.0, 22.0 ],
 									"style" : "",
 									"text" : "sprintf address %s/sources/channel.%ld/speaker_weight"
 								}
@@ -1100,8 +1100,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1169,8 +1169,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 6,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1509,6 +1509,7 @@
 , 											{
 												"box" : 												{
 													"id" : "obj-30",
+													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 3,
@@ -2610,37 +2611,37 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-17::obj-8::obj-4" : [ "Blur", "Blur", 0 ],
+			"obj-17::obj-7::obj-4" : [ "Blur[7]", "Blur", 0 ],
+			"obj-17::obj-1::obj-4" : [ "Blur[1]", "Blur", 0 ],
+			"obj-17::obj-2::obj-4" : [ "Blur[2]", "Blur", 0 ],
+			"obj-17::obj-4::obj-4" : [ "Blur[4]", "Blur", 0 ],
+			"obj-17::obj-6::obj-8" : [ "live.text[6]", "live.text", 0 ],
 			"obj-17::obj-1::obj-8" : [ "live.text[1]", "live.text", 0 ],
+			"obj-17::obj-3::obj-4" : [ "Blur[3]", "Blur", 0 ],
+			"obj-17::obj-4::obj-8" : [ "live.text[4]", "live.text", 0 ],
+			"obj-17::obj-8::obj-8" : [ "live.text", "live.text", 0 ],
+			"obj-17::obj-5::obj-8" : [ "live.text[5]", "live.text", 0 ],
+			"obj-17::obj-7::obj-8" : [ "live.text[7]", "live.text", 0 ],
+			"obj-17::obj-8::obj-4" : [ "Blur", "Blur", 0 ],
+			"obj-17::obj-2::obj-8" : [ "live.text[2]", "live.text", 0 ],
+			"obj-17::obj-3::obj-8" : [ "live.text[3]", "live.text", 0 ],
+			"obj-17::obj-5::obj-6" : [ "Gain[5]", "Gain", 0 ],
+			"obj-17::obj-6::obj-6" : [ "Gain[6]", "Gain", 0 ],
+			"obj-17::obj-1::obj-6" : [ "Gain[1]", "Gain", 0 ],
+			"obj-17::obj-4::obj-6" : [ "Gain[4]", "Gain", 0 ],
+			"obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
 			"obj-17::obj-6::obj-4" : [ "Blur[6]", "Blur", 0 ],
 			"obj-17::obj-7::obj-6" : [ "Gain[7]", "Gain", 0 ],
-			"obj-17::obj-3::obj-8" : [ "live.text[3]", "live.text", 0 ],
-			"obj-17::obj-7::obj-8" : [ "live.text[7]", "live.text", 0 ],
-			"obj-17::obj-2::obj-6" : [ "Gain[2]", "Gain", 0 ],
-			"obj-17::obj-1::obj-4" : [ "Blur[1]", "Blur", 0 ],
-			"obj-17::obj-4::obj-4" : [ "Blur[4]", "Blur", 0 ],
-			"obj-3::obj-16" : [ "live.text[8]", "live.text[8]", 0 ],
-			"obj-17::obj-6::obj-6" : [ "Gain[6]", "Gain", 0 ],
 			"obj-17::obj-8::obj-6" : [ "Gain", "Gain", 0 ],
-			"obj-17::obj-5::obj-6" : [ "Gain[5]", "Gain", 0 ],
-			"obj-17::obj-3::obj-4" : [ "Blur[3]", "Blur", 0 ],
-			"obj-17::obj-4::obj-6" : [ "Gain[4]", "Gain", 0 ],
-			"obj-17::obj-2::obj-8" : [ "live.text[2]", "live.text", 0 ],
-			"obj-17::obj-1::obj-6" : [ "Gain[1]", "Gain", 0 ],
-			"obj-17::obj-6::obj-8" : [ "live.text[6]", "live.text", 0 ],
-			"obj-17::obj-8::obj-8" : [ "live.text", "live.text", 0 ],
-			"obj-17::obj-5::obj-4" : [ "Blur[5]", "Blur", 0 ],
-			"obj-17::obj-5::obj-8" : [ "live.text[5]", "live.text", 0 ],
-			"obj-17::obj-3::obj-6" : [ "Gain[3]", "Gain", 0 ],
-			"obj-17::obj-2::obj-4" : [ "Blur[2]", "Blur", 0 ],
 			"obj-3::obj-15" : [ "live.button", "live.button", 0 ],
-			"obj-17::obj-7::obj-4" : [ "Blur[7]", "Blur", 0 ],
-			"obj-17::obj-4::obj-8" : [ "live.text[4]", "live.text", 0 ]
+			"obj-17::obj-2::obj-6" : [ "Gain[2]", "Gain", 0 ],
+			"obj-17::obj-3::obj-6" : [ "Gain[3]", "Gain", 0 ],
+			"obj-17::obj-5::obj-4" : [ "Blur[5]", "Blur", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "dbap=_one_channel_display.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/surround/dbap=",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/models/audio/surround/dbap",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2665,7 +2666,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

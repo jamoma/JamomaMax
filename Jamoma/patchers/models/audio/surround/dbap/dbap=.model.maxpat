@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 6,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -38,6 +38,31 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 947.0, 563.0, 93.0, 22.0 ],
+					"style" : "",
+					"text" : "print TO_DBAP"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 947.0, 530.0, 31.0, 22.0 ],
+					"style" : "",
+					"text" : "thru"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "none",
 					"id" : "obj-36",
 					"maxclass" : "newobj",
@@ -48,8 +73,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -82,6 +107,32 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-16",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 734.0, 307.0, 86.0, 22.0 ],
+									"style" : "",
+									"text" : "loadmess -12."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-12",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 951.0, 422.0, 72.0, 22.0 ],
+									"style" : "",
+									"text" : "loadmess 1"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-18",
 									"maxclass" : "newobj",
@@ -123,28 +174,28 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-11",
-									"linecount" : 7,
+									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 898.0, 252.0, 158.0, 102.0 ],
+									"patching_rect" : [ 898.0, 213.0, 118.0, 143.0 ],
 									"style" : "",
-									"text" : "j.message view_speaker @type generic @description \"What speaker to draw visualisation for. Options are one specific speaker or all.\""
+									"text" : "j.message view_speaker @type generic @default all @description \"What speaker to draw visualisation for. Options are one specific speaker or all.\""
 								}
 
 							}
 , 							{
 								"box" : 								{
 									"id" : "obj-10",
-									"linecount" : 7,
+									"linecount" : 8,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1083.0, 252.0, 110.0, 102.0 ],
+									"patching_rect" : [ 1083.0, 213.0, 111.0, 116.0 ],
 									"style" : "",
-									"text" : "j.message view_source @type integer @description \"What source to draw visualisation for.\""
+									"text" : "j.message view_source @type integer @default 1 @description \"What source to draw visualisation for.\""
 								}
 
 							}
@@ -199,7 +250,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 605.0, 252.0, 118.0, 116.0 ],
+									"patching_rect" : [ 605.0, 213.0, 118.0, 116.0 ],
 									"style" : "",
 									"text" : "j.message radius @type decimal @default 12. @range 0. 20. @clipmode low @description \"Size of the area to be visualised.\""
 								}
@@ -226,7 +277,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 1156.0, 454.0, 151.0, 22.0 ],
 									"style" : "",
-									"text" : "loadmess view_size 61 61"
+									"text" : "loadmess view_size 80 60"
 								}
 
 							}
@@ -253,7 +304,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 434.0, 252.0, 133.0, 102.0 ],
+									"patching_rect" : [ 434.0, 213.0, 133.0, 102.0 ],
 									"style" : "",
 									"text" : "j.message active @type boolean @description \"Vissualisation is CPU -intensive. Turn of to free CPU for ither processes.\""
 								}
@@ -280,7 +331,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 197.0, 252.0, 119.0, 102.0 ],
+									"patching_rect" : [ 197.0, 213.0, 119.0, 102.0 ],
 									"style" : "",
 									"text" : "j.return image @type generic @repetitions/filter 0 @description \"Visualisation of spatialisation as Jitter matrix.\""
 								}
@@ -320,6 +371,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-15", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-8", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -333,6 +393,24 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-13", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-16", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-7", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-16", 0 ]
 								}
 
 							}
@@ -559,8 +637,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -889,8 +967,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1066,8 +1144,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 6,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -1449,8 +1527,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 6,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -1488,14 +1566,14 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-7",
-									"linecount" : 11,
+									"linecount" : 10,
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 747.0, 309.0, 104.0, 156.0 ],
+									"patching_rect" : [ 747.0, 309.0, 126.0, 143.0 ],
 									"style" : "",
-									"text" : "j.parameter_array channel.[32]/gain @type decimal @dataspace gain @range -96. 12. @clipmode low @unit dB @default 0. @description \"Input gain for the nth channel.\""
+									"text" : "j.parameter_array channel.[1]/gain @type decimal @dataspace gain @range -96. 12. @clipmode low @unit dB @default 0. @description \"Input gain for the nth channel.\""
 								}
 
 							}
@@ -1515,11 +1593,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-17",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1433.0, 188.0, 165.0, 22.0 ],
+									"patching_rect" : [ 1433.0, 170.0, 165.0, 35.0 ],
 									"style" : "",
 									"text" : "j.receive number_of_channels"
 								}
@@ -1623,11 +1702,11 @@
 									"id" : "obj-29",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 3,
-									"outlettype" : [ "bang", "int", "*" ],
-									"patching_rect" : [ 1103.0, 161.0, 222.0, 22.0 ],
+									"numoutlets" : 4,
+									"outlettype" : [ "bang", "int", "*", "int" ],
+									"patching_rect" : [ 1103.0, 166.0, 243.0, 22.0 ],
 									"style" : "",
-									"text" : "t b i *"
+									"text" : "t b i * i"
 								}
 
 							}
@@ -1653,7 +1732,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1131.0, 451.0, 182.0, 35.0 ],
+									"patching_rect" : [ 1374.0, 619.0, 182.0, 35.0 ],
 									"style" : "",
 									"text" : "j.receive speakers/number_of_channels"
 								}
@@ -1666,7 +1745,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1103.0, 496.0, 47.0, 22.0 ],
+									"patching_rect" : [ 1103.0, 496.0, 243.0, 22.0 ],
 									"style" : "",
 									"text" : "zl.slice"
 								}
@@ -1728,14 +1807,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-16",
-									"linecount" : 14,
+									"linecount" : 12,
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1374.0, 309.0, 148.0, 196.0 ],
+									"patching_rect" : [ 1374.0, 309.0, 169.0, 169.0 ],
 									"style" : "",
-									"text" : "j.return_array channel.[32]/hull_distance @type decimal @description \"If convex hull calculation is enabled, this returns how far the source is from the convex hull that delimits the speaker layout. When the source is inside the convex hull, the value is negative, and when it's outside, the value is positive.\""
+									"text" : "j.return_array channel.[1]/hull_distance @type decimal @description \"If convex hull calculation is enabled, this returns how far the source is from the convex hull that delimits the speaker layout. When the source is inside the convex hull, the value is negative, and when it's outside, the value is positive.\""
 								}
 
 							}
@@ -1755,11 +1834,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-4",
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 383.0, 201.0, 165.0, 22.0 ],
+									"patching_rect" : [ 383.0, 191.0, 165.0, 35.0 ],
 									"style" : "",
 									"text" : "j.receive number_of_channels"
 								}
@@ -1859,8 +1939,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 6,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2085,8 +2165,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 6,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2336,8 +2416,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 6,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2589,8 +2669,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 6,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -2816,8 +2896,8 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 6,
+											"minor" : 1,
+											"revision" : 0,
 											"architecture" : "x64",
 											"modernui" : 1
 										}
@@ -3041,9 +3121,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 1103.0, 309.0, 185.0, 116.0 ],
+									"patching_rect" : [ 1103.0, 309.0, 184.0, 116.0 ],
 									"style" : "",
-									"text" : "j.parameter_array channel.[32]/speaker_weight @type array @range 0. 1. @default 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1 @description \"Set spatial weight of the nth channel.\""
+									"text" : "j.parameter_array channel.[1]/speaker_weight @type array @range 0. 1. @default 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1 @description \"Set spatial weight of the nth channel.\""
 								}
 
 							}
@@ -3058,9 +3138,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 913.0, 309.0, 108.0, 102.0 ],
+									"patching_rect" : [ 913.0, 309.0, 132.0, 102.0 ],
 									"style" : "",
-									"text" : "j.parameter_array channel.[32]/active @type boolean @default 1 @description \"Mute or unmute the nth channel.\""
+									"text" : "j.parameter_array channel.[1]/active @type boolean @default 1 @description \"Mute or unmute the nth channel.\""
 								}
 
 							}
@@ -3075,9 +3155,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 574.0, 309.0, 125.0, 116.0 ],
+									"patching_rect" : [ 574.0, 309.0, 116.0, 116.0 ],
 									"style" : "",
-									"text" : "j.parameter_array channel.[32]/blur @type decimal @range 0. 1. @default 0. @description \"Set spatial blur of the nth channel.\""
+									"text" : "j.parameter_array channel.[1]/blur @type decimal @range 0. 1. @default 0. @description \"Set spatial blur of the nth channel.\""
 								}
 
 							}
@@ -3092,9 +3172,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
-									"patching_rect" : [ 383.0, 309.0, 125.0, 156.0 ],
+									"patching_rect" : [ 383.0, 309.0, 124.0, 156.0 ],
 									"style" : "",
-									"text" : "j.parameter_array channel.[32]/position @type array @default 0. 1. 0. @range -20. 20. @clipmode none @dataspace position @unit xyz @description \"Position of the nth channel.\""
+									"text" : "j.parameter_array channel.[1]/position @type array @default 0. 1. 0. @range -20. 20. @clipmode none @dataspace position @unit xyz @description \"Position of the nth channel.\""
 								}
 
 							}
@@ -3109,7 +3189,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 67.0, 309.0, 123.0, 129.0 ],
+									"patching_rect" : [ 67.0, 309.0, 125.0, 129.0 ],
 									"style" : "",
 									"text" : "j.parameter number_of_channels @type integer @range 1 32 @default 1 @clipmode both @description \"The number of sources to process.\" @priority 1",
 									"varname" : "voices"
@@ -3189,15 +3269,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-12", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-12", 1 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-13", 0 ]
 								}
 
 							}
@@ -3342,6 +3413,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-28", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 1 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-29", 3 ]
 								}
 
 							}
@@ -3836,6 +3916,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -3927,6 +4016,12 @@
 			}
  ],
 		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "j.dbap.mxo",
 				"type" : "iLaX"
 			}
@@ -3979,7 +4074,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
