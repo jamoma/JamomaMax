@@ -30,6 +30,7 @@
 */
 
 #include "hull2D.h"
+#include <cmath>
 
 void	Swap(t_point point,int i, int j)
 {
@@ -79,8 +80,8 @@ int   Compare(const void *tpi, const void *tpj)
 	else if (a < 0)
 		return 1;
 	else { /* Collinear with P[0] (stored in each pi->p0  because we use qsort instead of qsort_s) */
-		x =  abs( pi->v[X] -  pi->p0[X] ) - abs( pj->v[X] -  pi->p0[X] );
-		y =  abs( pi->v[Y] -  pi->p0[Y] ) - abs( pj->v[Y] -  pi->p0[Y] );
+		x =  std::abs( pi->v[X] -  pi->p0[X] ) - std::abs( pj->v[X] -  pi->p0[X] );
+		y =  std::abs( pi->v[Y] -  pi->p0[Y] ) - std::abs( pj->v[Y] -  pi->p0[Y] );
 
 		//h2->nb_delete++; // Now it's done after the sorting
 
