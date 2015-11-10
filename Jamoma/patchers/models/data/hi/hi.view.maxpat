@@ -3,19 +3,19 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 1,
-			"revision" : 0,
-			"architecture" : "x64",
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 133.0, 149.0, 605.0, 342.0 ],
+		"rect" : [ 336.0, 207.0, 300.0, 70.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
-		"default_fontsize" : 10.0,
+		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
-		"default_fontname" : "Verdana",
+		"default_fontname" : "Arial",
 		"gridonopen" : 1,
 		"gridsize" : [ 5.0, 5.0 ],
 		"gridsnaponopen" : 1,
@@ -39,12 +39,110 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"annotation" : "send output in the low-priority queue",
+					"automation" : "Off",
+					"automationon" : "On",
+					"hint" : "send output in the low-priority queue",
+					"id" : "obj-15",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 482.0, 230.0, 63.0, 21.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 229.0, 47.0, 63.0, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.text[4]",
+							"parameter_shortname" : "live.text[1]",
+							"parameter_type" : 2,
+							"parameter_mmax" : 1.0,
+							"parameter_enum" : [ "Off", "On" ]
+						}
+
+					}
+,
+					"text" : "Defer Off",
+					"texton" : "Defer On",
+					"varname" : "live.text[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontface" : 0,
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 482.0, 255.0, 83.0, 21.0 ],
+					"style" : "",
+					"text" : "j.remote defer",
+					"varname" : "j.parameter[5]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "output device info to max window",
+					"hint" : "output device info to max window",
+					"id" : "obj-6",
+					"maxclass" : "live.text",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 482.0, 161.0, 39.0, 16.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 255.0, 23.0, 41.0, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.text",
+							"parameter_shortname" : "live.text",
+							"parameter_type" : 2,
+							"parameter_mmax" : 1.0,
+							"parameter_enum" : [ "val1", "val2" ]
+						}
+
+					}
+,
+					"text" : "info",
+					"varname" : "live.text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontface" : 0,
+					"fontname" : "Verdana",
+					"fontsize" : 10.0,
+					"id" : "obj-14",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 482.0, 186.0, 76.0, 21.0 ],
+					"style" : "",
+					"text" : "j.remote info",
+					"varname" : "j.parameter[4]"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-11",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 207.0, 78.0, 35.0, 21.0 ],
+					"patching_rect" : [ 207.0, 78.0, 35.0, 22.0 ],
 					"style" : "",
 					"text" : "clear"
 				}
@@ -69,23 +167,21 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
 					"id" : "obj-12",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 293.0, 230.0, 150.0, 19.0 ],
+					"patching_rect" : [ 293.0, 230.0, 154.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 105.0, 48.0, 150.0, 19.0 ],
+					"presentation_rect" : [ 101.0, 47.0, 115.0, 20.0 ],
 					"style" : "",
-					"text" : "number of elements"
+					"text" : "polling interval (ms)"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Verdana",
+					"annotation" : "polling interval in millisecond",
 					"fontsize" : 10.0,
 					"id" : "obj-8",
 					"maxclass" : "number",
@@ -93,9 +189,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 253.0, 230.0, 40.0, 21.0 ],
+					"patching_rect" : [ 253.0, 230.0, 38.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 65.0, 48.0, 40.0, 21.0 ],
+					"presentation_rect" : [ 56.0, 47.0, 43.0, 20.0 ],
 					"style" : ""
 				}
 
@@ -103,6 +199,7 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontface" : 0,
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-5",
@@ -110,9 +207,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 253.0, 255.0, 106.0, 21.0 ],
+					"patching_rect" : [ 253.0, 255.0, 134.0, 21.0 ],
 					"style" : "",
-					"text" : "j.remote elements",
+					"text" : "j.remote polling_interval",
 					"varname" : "j.parameter[2]"
 				}
 
@@ -134,18 +231,31 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "output event queue",
+					"hint" : "output event queue",
 					"id" : "obj-1",
-					"legacytextcolor" : 1,
-					"maxclass" : "textbutton",
+					"maxclass" : "live.text",
+					"mode" : 0,
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 368.0, 161.0, 43.0, 20.0 ],
-					"style" : "",
-					"text" : "Update",
-					"usebgoncolor" : 1,
-					"usetextovercolor" : 1
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 368.0, 161.0, 39.0, 16.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 6.0, 47.0, 44.0, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.text[1]",
+							"parameter_shortname" : "live.text",
+							"parameter_type" : 2,
+							"parameter_mmax" : 1.0,
+							"parameter_enum" : [ "val1", "val2" ]
+						}
+
+					}
+,
+					"text" : "update",
+					"varname" : "live.text[2]"
 				}
 
 			}
@@ -168,42 +278,30 @@
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Turn polling on (10 ms interval)",
-					"id" : "obj-25",
-					"legacytextcolor" : 1,
-					"maxclass" : "textbutton",
-					"mode" : 1,
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 301.0, 89.0, 92.0, 21.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 224.0, 25.0, 72.0, 20.0 ],
-					"style" : "",
-					"text" : "Active (Off)",
-					"texton" : "Active (On)",
-					"usebgoncolor" : 1,
-					"usetextovercolor" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"annotation" : "Initialization of hi object",
 					"id" : "obj-26",
-					"legacytextcolor" : 1,
-					"maxclass" : "textbutton",
+					"maxclass" : "live.text",
+					"mode" : 0,
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 250.0, 161.0, 43.0, 20.0 ],
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 250.0, 161.0, 39.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 13.0, 25.0, 43.0, 20.0 ],
-					"style" : "",
-					"text" : "Init",
-					"usebgoncolor" : 1,
-					"usetextovercolor" : 1
+					"presentation_rect" : [ 206.0, 23.0, 45.0, 20.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "live.text[2]",
+							"parameter_shortname" : "live.text",
+							"parameter_type" : 2,
+							"parameter_mmax" : 1.0,
+							"parameter_enum" : [ "val1", "val2" ]
+						}
+
+					}
+,
+					"text" : "refresh",
+					"varname" : "live.text[3]"
 				}
 
 			}
@@ -226,37 +324,20 @@
 			}
 , 			{
 				"box" : 				{
-					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
-					"fontname" : "Verdana",
-					"fontsize" : 10.0,
-					"id" : "obj-9",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 301.0, 113.0, 87.0, 21.0 ],
-					"style" : "",
-					"text" : "j.remote active",
-					"varname" : "hi_on[1]"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"allowdrag" : 0,
-					"annotation" : "none",
+					"annotation" : "Choose which HI device to use",
 					"hint" : "Device",
 					"id" : "obj-10",
-					"items" : "<empty>",
+					"items" : [ "SpaceNavigator", ",", "Apple Internal Keyboard / Trackpad", ",", "Apple Internal Keyboard / Trackpad 2", ",", "Apple Internal Keyboard / Trackpad 3", ",", "Apple Internal Keyboard / Trackpad 4", ",", "Apple IR", ",", "Apple Mikey HID Driver" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 93.0, 104.0, 149.0, 21.0 ],
+					"patching_rect" : [ 93.0, 104.0, 149.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 65.0, 25.0, 155.0, 21.0 ],
+					"presentation_rect" : [ 6.0, 23.0, 196.0, 22.0 ],
 					"style" : "",
 					"varname" : "device_menu"
 				}
@@ -330,7 +411,7 @@
 					"outlettype" : [ "" ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
-					"text" : "/no_model_address"
+					"text" : "/hi_help"
 				}
 
 			}
@@ -374,6 +455,34 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-14", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 491.5, 286.0, 470.5, 286.0, 470.5, 219.0, 491.5, 219.0 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -401,15 +510,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-25", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -428,6 +528,43 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 262.5, 286.0, 244.5, 286.0, 244.5, 219.0, 262.5, 219.0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-26", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-7", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -435,31 +572,7 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 310.5, 138.0, 288.0, 138.0, 288.0, 86.0, 310.5, 86.0 ],
-					"source" : [ "obj-9", 0 ]
-				}
-
-			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }
