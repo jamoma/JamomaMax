@@ -8,7 +8,8 @@ Jamoma implementation for Max.
 
 ### Set up 
 
-Here are the steps to clone and build JamomaMax :
+Here are the steps to clone and build JamomaMax :   
+(You need Cmake > 3.3 installed)
     
     git clone --recursive https://github.com/jamoma/JamomaMax.git
     cd JamomaMax
