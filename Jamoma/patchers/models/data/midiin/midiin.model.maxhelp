@@ -3,9 +3,9 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 1,
-			"revision" : 0,
-			"architecture" : "x64",
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
@@ -50,9 +50,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 1,
-							"revision" : 0,
-							"architecture" : "x64",
+							"minor" : 0,
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -85,6 +85,38 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"bgcolor" : [ 1.0, 0.410875, 0.275281, 0.723321 ],
+									"id" : "obj-17",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 459.0, 363.0, 154.0, 50.0 ],
+									"style" : "",
+									"text" : "midi controler 0 is mapped to instance 128\ncc.128"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"fontname" : "Arial",
+									"fontsize" : 13.0,
+									"format" : 6,
+									"id" : "obj-15",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 386.0, 333.0, 37.0, 23.0 ],
+									"presentation_rect" : [ 386.0, 335.0, 0.0, 0.0 ],
+									"style" : "",
+									"triscale" : 0.9
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-3",
 									"linecount" : 2,
@@ -194,16 +226,17 @@
 							}
 , 							{
 								"box" : 								{
+									"fontface" : 0,
 									"fontname" : "Arial",
 									"fontsize" : 13.0,
 									"id" : "obj-26",
 									"maxclass" : "newobj",
-									"numinlets" : 4,
-									"numoutlets" : 4,
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 263.0, 303.0, 145.0, 23.0 ],
+									"numinlets" : 5,
+									"numoutlets" : 5,
+									"outlettype" : [ "", "", "", "", "" ],
+									"patching_rect" : [ 263.0, 303.0, 183.0, 23.0 ],
 									"style" : "",
-									"text" : "route 1 2 74"
+									"text" : "route 1 2 74 128"
 								}
 
 							}
@@ -231,7 +264,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 263.0, 228.0, 181.0, 23.0 ],
+									"patching_rect" : [ 263.0, 226.0, 163.0, 23.0 ],
 									"style" : "",
 									"text" : "j.oscinstance"
 								}
@@ -498,6 +531,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-26", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-27", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -581,9 +623,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 1,
-							"revision" : 0,
-							"architecture" : "x64",
+							"minor" : 0,
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -644,31 +686,25 @@
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "midiin.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/midiin",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/midiin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "j.scriptingUtilities.js",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/javascript",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "midiin.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/data/midiin",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/midiin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -689,7 +725,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter_array.mxo",
+				"name" : "j.return_array.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -705,6 +741,10 @@
 				"type" : "iLaX"
 			}
 , 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
 				"name" : "j.ui.mxo",
 				"type" : "iLaX"
 			}
@@ -717,7 +757,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"autosave" : 0
+		"embedsnapshot" : 0
 	}
 
 }
