@@ -1164,12 +1164,14 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		}
 	}
 	
-	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);	
-	coord_x += x->box.b_presentation_rect.x;
-	coord_y += x->box.b_presentation_rect.y;
-	pt.x = coord_x;
-	pt.y = coord_y;
-	selectedId = jpopupmenu_popup(p, pt, x->menu_selection+1);
+//	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
+//	coord_x += x->box.b_presentation_rect.x;
+//	coord_y += x->box.b_presentation_rect.y;
+//	pt.x = coord_x;
+//	pt.y = coord_y;
+//	selectedId = jpopupmenu_popup(p, pt, x->menu_selection+1);
+	selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->menu_selection+1);
+
 	if (selectedId) {
 		x->menu_selection = selectedId -1;
 		qelem_set(x->menu_qelem);
@@ -1339,13 +1341,15 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		}
 	}
 	
-	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);	
-	coord_x += x->box.b_presentation_rect.x;
-	coord_y += x->box.b_presentation_rect.y;
-	pt.x = coord_x + 20.0;
-	pt.y = coord_y;
-	
-	selectedId = jpopupmenu_popup(p, pt, x->refmenu_selection+1);
+//	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
+//	coord_x += x->box.b_presentation_rect.x;
+//	coord_y += x->box.b_presentation_rect.y;
+//	pt.x = coord_x + 20.0;
+//	pt.y = coord_y;
+//
+//	selectedId = jpopupmenu_popup(p, pt, x->refmenu_selection+1);
+	selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->refmenu_selection+1);
+
 	if (selectedId) {
 		x->refmenu_selection = selectedId -1;
 		qelem_set(x->refmenu_qelem);
