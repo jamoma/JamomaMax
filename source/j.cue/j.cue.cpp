@@ -514,6 +514,10 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 		delete buffer;
 		buffer = NULL;
 	}
+    else
+    {
+        object_attr_setchar(EXTRA->textEditor, gensym("visible"), 1);
+    }
 }
 
 void cue_edclose(TTPtr self, char **text, long size)
