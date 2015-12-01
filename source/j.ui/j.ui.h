@@ -66,6 +66,7 @@ typedef struct _ui{
 	
 	TTAddress           viewAddress;
 	TTAddress           modelAddress;
+    TTSymbol            modelClass;
 	t_object            *patcherPtr;			///< the patcher in which the external is (ignoring subpatcher)
 	TTSymbol			patcherContext;			///< the patcher context in which the external is (model, view)
 	TTSymbol			patcherClass;			///< the patcher class in which the external is
@@ -201,6 +202,7 @@ void		ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void		ui_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_model_class(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 void		ui_return_mute(TTPtr self, t_symbol *msg, long argc, t_atom* argv);

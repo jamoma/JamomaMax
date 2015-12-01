@@ -472,6 +472,16 @@ void ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 	}
 }
 
+void ui_return_model_class(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
+{
+    t_ui* obj = (t_ui*)self;
+    
+    if (argc == 1)
+    {
+        obj->modelClass = TTSymbol(atom_getsym(argv)->s_name);
+    }
+}
+
 void ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
 {
     t_ui* obj = (t_ui*)self;

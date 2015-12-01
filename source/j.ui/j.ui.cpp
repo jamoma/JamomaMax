@@ -87,6 +87,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	
 	class_addmethod(c, (method)ui_return_model_init,				"return_model_init",				A_CANT, 0);
     
+    class_addmethod(c, (method)ui_return_model_class,				"return_model_class",				A_CANT, 0);
+    
     class_addmethod(c, (method)ui_return_model_content,             "return_model_content",             A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_mute,						"return_mute",						A_CANT, 0);
@@ -310,15 +312,27 @@ void ui_subscribe(t_ui *x, t_symbol *address)
         }
 		
         if (x->hash_receivers->lookup(kTTSym_initialized, v))
-            
+        {
             // observe model initialisation to explore (the method also get the value)
             ui_receiver_create(x, aReceiver, gensym("return_model_init"), kTTSym_initialized, x->modelAddress, NO, YES);
-        
-        else {
-            
+        }
+        else
+        {
             // update the model address and get the initialized state
             aReceiver = v[0];
             aReceiver.set(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
+        }
+        
+        if (x->hash_receivers->lookup("class", v))
+        {
+            // get the model:class attribute
+            ui_receiver_create(x, aReceiver, gensym("return_model_class"), TTSymbol("model:class"), x->modelAddress);
+        }
+        else
+        {
+            // update the model address
+            aReceiver = v[0];
+            aReceiver.set(kTTSym_address, x->modelAddress.appendAddress(TTAddress("model:class")));
         }
         
         // create internal TTPreset to handle model's state
@@ -1377,14 +1391,18 @@ void ui_refmenu_build(t_ui *x)
 	linklist_clear(x->refmenu_items);
 	
 	// Edit refmenu title
-	if (x->modelAddress != kTTSymEmpty)
-		snprintf(tempStr, 512, "Model: %s", x->modelAddress.c_str());
+	if (x->modelClass != kTTSymEmpty)
+		snprintf(tempStr, 512, "Model class: %s", x->modelClass.c_str());
 	else
-		strncpy_zero(tempStr, "Model: ?", 512);
+		strncpy_zero(tempStr, "Model class: ?", 512);
 	
 	item = (t_symobject *)symobject_new(gensym(tempStr));
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
+    
+    // Look for model addresses with same class
+    item = (t_symobject *)symobject_new(gensym("..."));
+    linklist_append(x->refmenu_items, item);
 	
 	// Look for User-Defined Parameters into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
