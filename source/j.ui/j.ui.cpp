@@ -82,6 +82,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_modelParamExplorer_callback,		"return_modelParamExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelMessExplorer_callback,		"return_modelMessExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelRetExplorer_callback,		"return_modelRetExploration",		A_CANT, 0);
+    class_addmethod(c, (method)ui_modelClassExplorer_callback,		"return_modelClassExploration",		A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_model_address,				"return_model_address",				A_CANT, 0);
 	
@@ -255,7 +256,7 @@ void ui_free(t_ui *x)
     ui_receiver_destroy_all(x);
     
 	ui_unregister_info(x);
-	ui_viewer_destroy_all(x);
+	ui_viewer_destroy_all(x, NO);
 }
 
 
@@ -293,9 +294,8 @@ void ui_subscribe(t_ui *x, t_symbol *address)
 		
 		x->modelAddress = adrs;
 		
-		// Clear all viewers
+		// Clear all viewers except "model:address"
 		ui_viewer_destroy_all(x);
-		x->hash_viewers = new TTHash();
 		
 		x->has_preset = false;
 		x->has_model = false;
@@ -323,7 +323,7 @@ void ui_subscribe(t_ui *x, t_symbol *address)
             aReceiver.set(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
         }
         
-        if (x->hash_receivers->lookup("class", v))
+        if (x->hash_receivers->lookup("model:class", v))
         {
             // get the model:class attribute
             ui_receiver_create(x, aReceiver, gensym("return_model_class"), TTSymbol("model:class"), x->modelAddress);
@@ -1374,8 +1374,17 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 void ui_refmenu_qfn(t_ui *x)
 {
 	t_symobject *item = (t_symobject *)linklist_getindex(x->refmenu_items, x->refmenu_selection);
-	
-	ui_data_interface(x, TTSymbol(item->sym->s_name));
+    
+    TTAddress address(item->sym->s_name);
+    
+    if (address.getType() == kAddressRelative)
+    {
+        ui_data_interface(x, TTSymbol(item->sym->s_name));
+    }
+    else
+    {
+        ui_viewer_send(x, TTSymbol("model:address"), address);
+    }
 }
 
 void ui_refmenu_build(t_ui *x)
@@ -1401,8 +1410,32 @@ void ui_refmenu_build(t_ui *x)
 	item->flags = 1;	// mark to disable this item (we use it as a label)
     
     // Look for model addresses with same class
-    item = (t_symobject *)symobject_new(gensym("..."));
-    linklist_append(x->refmenu_items, item);
+    ui_explorer_create((t_object*)x, x->modelClassExplorer, gensym("return_modelClassExploration"));
+    
+    // to look for /*.*/model ModelInfo object with a class attribute equals to modelClass
+    TTValue aFilter;
+    aFilter.append("filterModelClass");
+    aFilter.append(kTTSym_object);
+    aFilter.append(TTSymbol("ModelInfo"));
+    aFilter.append(kTTSym_attribute);
+    aFilter.append(TTSymbol("class"));
+    aFilter.append(kTTSym_value);
+    aFilter.append(x->modelClass);
+    aFilter.append(kTTSym_mode);
+    aFilter.append(kTTSym_restrict);
+    x->modelClassExplorer.send("FilterSet", aFilter);
+    
+    // exclude /*(view).* addresses in the mean time
+    aFilter.clear();
+    aFilter.append("filterViewPart");
+    aFilter.append("part");
+    aFilter.append(TTSymbol("(view)"));
+    aFilter.append(kTTSym_mode);
+    aFilter.append(kTTSym_exclude);
+    x->modelClassExplorer.send("FilterSet", aFilter);
+    
+    x->modelClassExplorer.set(kTTSym_address, kTTAdrsRoot);
+    x->modelClassExplorer.send("Explore");
 	
 	// Look for User-Defined Parameters into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1497,6 +1530,7 @@ void ui_refmenu_build(t_ui *x)
 	x->modelParamExplorer = TTObject();
     x->modelMessExplorer = TTObject();
     x->modelRetExplorer = TTObject();
+    x->modelClassExplorer = TTObject();
 }
 
 void* ui_oksize(t_ui *x, t_rect *rect)
