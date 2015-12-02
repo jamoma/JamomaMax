@@ -84,7 +84,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="namespace/build">
+		<method name="namespace/mirror">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
