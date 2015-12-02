@@ -1071,7 +1071,7 @@ void jamoma_ttvalue_to_typed_Atom(const TTValue& v, t_symbol **msg, long *argc, 
 				shifted = true;
 			}
 			else if (i>1)
-				*msg = _sym_list;
+				*msg = _sym_nothing;
 		}
 	}
 	else {
