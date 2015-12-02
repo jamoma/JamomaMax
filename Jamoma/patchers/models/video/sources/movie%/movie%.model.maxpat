@@ -45,7 +45,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 631.0, 193.0, 37.0, 22.0 ],
+					"patching_rect" : [ 631.0, 155.0, 37.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"attr_comment" : ""
 					}
@@ -63,7 +63,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 592.0, 193.0, 25.0, 25.0 ],
+					"patching_rect" : [ 592.0, 155.0, 25.0, 25.0 ],
+					"presentation_rect" : [ 582.5, 147.0, 0.0, 0.0 ],
 					"style" : ""
 				}
 
@@ -87,7 +88,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 59.0, 104.0, 1133.0, 581.0 ],
+						"rect" : [ 59.0, 104.0, 981.0, 389.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -123,7 +124,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 417.3125, 317.072388, 140.0, 22.0 ],
+									"patching_rect" : [ 357.237488, 312.072388, 140.0, 22.0 ],
 									"style" : "",
 									"text" : "j.send loop/points:range",
 									"varname" : "loop[2]"
@@ -139,7 +140,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 50.0, 223.036224, 69.0, 22.0 ],
+									"patching_rect" : [ 11.0, 145.036224, 69.0, 22.0 ],
 									"style" : "",
 									"text" : "j.send play",
 									"varname" : "loop[1]"
@@ -155,7 +156,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 643.9375, 129.0, 66.0, 22.0 ],
+									"patching_rect" : [ 618.599976, 84.0, 66.0, 22.0 ],
 									"style" : "",
 									"text" : "j.send dim"
 								}
@@ -170,7 +171,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 299.3125, 293.563354, 66.0, 22.0 ],
+									"patching_rect" : [ 239.237488, 274.563354, 66.0, 22.0 ],
 									"style" : "",
 									"text" : "prepend 0"
 								}
@@ -185,7 +186,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 299.3125, 317.072388, 105.0, 22.0 ],
+									"patching_rect" : [ 239.237488, 312.072388, 105.0, 22.0 ],
 									"style" : "",
 									"text" : "j.send loop/points",
 									"varname" : "loop[3]"
@@ -201,7 +202,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 590.5, 152.509064, 359.0, 22.0 ],
+									"patching_rect" : [ 560.200012, 118.509064, 359.0, 22.0 ],
 									"style" : "",
 									"text" : "j.return moviedim @type array \"@native size of the current video\""
 								}
@@ -216,7 +217,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 163.0, 160.0, 38.0, 22.0 ],
+									"patching_rect" : [ 93.0, 145.036224, 38.0, 22.0 ],
 									"style" : "",
 									"text" : "sel 1"
 								}
@@ -231,7 +232,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 163.0, 129.0, 59.0, 22.0 ],
+									"patching_rect" : [ 93.0, 84.0, 59.0, 22.0 ],
 									"style" : "",
 									"text" : "zl slice 1"
 								}
@@ -246,7 +247,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 537.0625, 176.018097, 464.0, 22.0 ],
+									"patching_rect" : [ 501.799988, 154.527161, 464.0, 22.0 ],
 									"style" : "",
 									"text" : "j.return loop/notify @type none @description \"notify that you reach the end of the file\""
 								}
@@ -261,7 +262,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 483.625, 199.527161, 96.0, 22.0 ],
+									"patching_rect" : [ 443.400024, 178.036224, 96.0, 22.0 ],
 									"style" : "",
 									"text" : "j.send getlength",
 									"varname" : "dim[6]"
@@ -277,7 +278,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 347.5, 246.545288, 168.0, 22.0 ],
+									"patching_rect" : [ 294.600006, 219.545288, 168.0, 22.0 ],
 									"style" : "",
 									"text" : "j.return length @type decimal",
 									"varname" : "dim[5]"
@@ -293,7 +294,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "float" ],
-									"patching_rect" : [ 347.5, 218.0, 51.0, 22.0 ],
+									"patching_rect" : [ 294.600006, 191.0, 51.0, 22.0 ],
 									"style" : "",
 									"text" : "/ 1."
 								}
@@ -308,7 +309,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 323.3125, 270.054321, 475.0, 22.0 ],
+									"patching_rect" : [ 268.200012, 249.054321, 475.0, 22.0 ],
 									"style" : "",
 									"text" : "j.return duration @type integer @description \"the current video file duration (in frames)\""
 								}
@@ -323,7 +324,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 269.875, 339.072388, 373.0, 22.0 ],
+									"patching_rect" : [ 209.799988, 346.072388, 373.0, 22.0 ],
 									"style" : "",
 									"text" : "j.return time @type integer @description \"the current video file time\""
 								}
@@ -339,7 +340,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 163.0, 182.0, 94.0, 76.0 ],
+									"patching_rect" : [ 93.0, 186.0, 94.0, 76.0 ],
 									"style" : "",
 									"text" : "getduration, getmoviedim, getmoviename, gettimescale, gettime, getdim"
 								}
@@ -354,7 +355,7 @@
 									"numinlets" : 11,
 									"numoutlets" : 11,
 									"outlettype" : [ "", "", "", "", "", "", "", "", "", "", "" ],
-									"patching_rect" : [ 163.0, 100.0, 603.0, 22.0 ],
+									"patching_rect" : [ 93.0, 55.0, 603.0, 22.0 ],
 									"style" : "",
 									"text" : "route read framedump time duration timescale moviename read loopnotify moviedim dim"
 								}
@@ -368,7 +369,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 163.0, 40.0, 30.0, 30.0 ],
+									"patching_rect" : [ 93.0, 8.0, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -380,7 +381,7 @@
 									"maxclass" : "outlet",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 163.0, 421.072388, 30.0, 30.0 ],
+									"patching_rect" : [ 93.0, 338.072388, 30.0, 30.0 ],
 									"style" : ""
 								}
 
@@ -391,7 +392,7 @@
 									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 308.8125, 314.0, 426.8125, 314.0 ],
+									"midpoints" : [ 248.737488, 305.0, 366.737488, 305.0 ],
 									"source" : [ "obj-17", 0 ]
 								}
 
@@ -1080,6 +1081,10 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 70.5, 19.0, 37.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"style" : "",
 					"text" : "in 1"
 				}
@@ -1094,6 +1099,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 117.5, 429.0, 37.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"style" : "",
 					"text" : "out 1"
 				}
@@ -1108,6 +1117,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 627.8125, 429.0, 37.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"style" : "",
 					"text" : "out 2"
 				}
