@@ -35,7 +35,7 @@ void	WrappedApplicationClass_free(TTPtr self);
 void	modular_assist(TTPtr self, void *b, long msg, long arg, char *dst);
 
 void	modular_protocol_setup(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
-void	modular_protocol_scan(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
+//void	modular_protocol_scan(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void	modular_namespace_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 void	modular_namespace_doread(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
@@ -62,7 +62,7 @@ void WrapTTApplicationClass(WrappedClassPtr c)
 	
 	class_addmethod(c->maxClass, (method)modular_protocol_setup,			"protocol/setup",				A_GIMME, 0);
     
-    class_addmethod(c->maxClass, (method)modular_protocol_scan,             "protocol/scan",				A_GIMME, 0);
+    //class_addmethod(c->maxClass, (method)modular_protocol_scan,             "protocol/scan",				A_GIMME, 0);
 	
 	class_addmethod(c->maxClass, (method)modular_namespace_read,			"namespace/read",				A_GIMME, 0);
     
@@ -262,7 +262,7 @@ void modular_protocol_setup(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 			object_error((t_object*)x, "doesn't handle any application");
 	}
 }
-
+/*
 void modular_protocol_scan(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	WrappedModularInstancePtr	x = (WrappedModularInstancePtr)self;
@@ -286,7 +286,7 @@ void modular_protocol_scan(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
         object_obex_dumpout(self, gensym("protocol/scan"), ac, av);
     }
 }
-
+*/
 void modular_namespace_read(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	defer(self, (method)modular_namespace_doread, msg, argc, argv);
