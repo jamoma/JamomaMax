@@ -1216,6 +1216,9 @@ void ui_menu_qfn(t_ui *x)
     else if (item->sym == gensym("Edit Current State"))
 		ui_edit_state(x);
     
+    else if (item->sym == gensym("Initialize Model State"))
+        object_method(modelObject, _sym_anything, gensym("init"), 0, NULL);
+    
 	else if (item->sym == gensym("Load Presets File"))
 		object_method(modelObject, gensym("preset:read"), 0, NULL);
     
@@ -1280,6 +1283,8 @@ void ui_menu_build(t_ui *x)
 		item = (t_symobject *)symobject_new(gensym("Open Model Internal"));
         linklist_append(x->menu_items, item);
         item = (t_symobject *)symobject_new(gensym("Edit Current State"));
+        linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Initialize Model State"));
         linklist_append(x->menu_items, item);
 	}
 	
