@@ -224,10 +224,10 @@ void cue_get(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                         object_obex_dumpout(self, atom_getsym(argv), ac, av);
                     }
                     else
-                        object_error((t_object*)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
+                        object_error((t_object*)x, "%s attribute doesn't exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((t_object*)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+                    object_error((t_object*)x, "%s cue doesn't exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
@@ -263,10 +263,10 @@ void cue_set(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
                     jamoma_ttvalue_from_Atom(v, _sym_nothing, argc-2, argv+2);
                     
                     if (cue.set(attribute, v))
-                        object_error((t_object*)x, "%s attribute does'nt exist", atom_getsym(argv)->s_name);
+                        object_error((t_object*)x, "%s attribute doesn't exist", atom_getsym(argv)->s_name);
                 }
                 else
-                    object_error((t_object*)x, "%s cue does'nt exist", atom_getsym(argv+1)->s_name);
+                    object_error((t_object*)x, "%s cue doesn't exist", atom_getsym(argv+1)->s_name);
             }
         }
     }
@@ -448,7 +448,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 				name = v[index-1];
 			else
             {
-				object_error((t_object*)x, "%d does'nt exist", atom_getlong(argv));
+				object_error((t_object*)x, "%d doesn't exist", atom_getlong(argv));
 				return;
 			}
 		}
@@ -472,7 +472,7 @@ void cue_edit(TTPtr self, t_symbol *msg, long argc, const t_atom *argv)
 				}
 				else
                 {
-					object_error((t_object*)x, "%s does'nt exist", atom_getsym(argv)->s_name);
+					object_error((t_object*)x, "%s doesn't exist", atom_getsym(argv)->s_name);
 					return;
 				}
 			}
