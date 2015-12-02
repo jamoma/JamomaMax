@@ -132,7 +132,7 @@ void ui_receiver_destroy_all(t_ui *obj)
 			
 			obj->hash_receivers->getKeys(hk);
 			
-			for (i=0; i<obj->hash_receivers->getSize(); i++) {
+			for (i=0; i<hk.size(); i++) {
 				
 				key = hk[i];
 				if (!obj->hash_receivers->lookup(key, v)) {
@@ -212,7 +212,7 @@ void ui_viewer_destroy_all(t_ui *obj, bool keepModelAddress)
         {
 			obj->hash_viewers->getKeys(hk);
 			
-			for (i=0; i<obj->hash_viewers->getSize(); i++)
+			for (i=0; i<hk.size(); i++)
             {
 				key = hk[i];
                 

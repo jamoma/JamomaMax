@@ -186,6 +186,7 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		
 		x->viewAddress = kTTAdrsEmpty;
 		x->modelAddress = kTTAdrsEmpty;
+        x->modelClass = kTTSymEmpty;
         x->patcherPtr = NULL;
         x->patcherContext = kTTSymEmpty;
         x->patcherClass = kTTSymEmpty;
