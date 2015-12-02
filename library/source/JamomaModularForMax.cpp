@@ -1061,17 +1061,15 @@ void jamoma_ttvalue_to_typed_Atom(const TTValue& v, t_symbol **msg, long *argc, 
 			}
 		}
 		
-		if (i>0) {
-			
-			if (atom_gettype(*argv) == A_SYM) {
-				
+		if (i>0)
+        {
+			if (atom_gettype(*argv) == A_SYM)
+            {
 				*msg = atom_getsym(*argv);
 				*argc = (*argc)-1;
 				*argv = (*argv)+1;
 				shifted = true;
 			}
-			else if (i>1)
-				*msg = _sym_list;
 		}
 	}
 	else {
