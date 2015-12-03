@@ -25,22 +25,23 @@
 
 
 // Data Structure for this object
-typedef struct _ramp {
-    t_pxobject			obj;
+typedef struct _ramp
+{
+    t_pxobject              obj;
 	TTAudioObjectBasePtr	ramp;
-	TTAudioSignalPtr	audioOut;
-	t_symbol*			attrMode;
-	TTUInt16			maxNumChannels;
-	TTUInt16			vs;
+	TTAudioSignalPtr        audioOut;
+	t_symbol*               attrMode;
+	TTUInt16                maxNumChannels;
+	TTUInt16                vs;
 } t_ramp;
 
 
 // Prototypes for methods: need a method for each incoming message type
-void*		ramp_new(t_symbol *msg, short argc, t_atom *argv);					// New Object Creation Method
+void*		ramp_new(t_symbol *msg, short argc, t_atom *argv);                          // New Object Creation Method
 void		ramp_free(t_ramp *x);
-void		ramp_assist(t_ramp *x, void *b, long msg, long arg, char *dst);	// Assistance Method
-t_int*		ramp_perform(t_int *w);												// An MSP Perform (signal) Method
-void		ramp_dsp(t_ramp *x, t_signal **sp, short *count);					// DSP Method
+void		ramp_assist(t_ramp *x, void *b, long msg, long arg, char *dst);             // Assistance Method
+t_int*		ramp_perform(t_int *w);                                                     // An MSP Perform (signal) Method
+void		ramp_dsp(t_ramp *x, t_signal **sp, short *count);                           // DSP Method
 void		ramp_dsp64(t_ramp *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags); // DSP64 Method
 void		ramp_stop(t_ramp *x);
 void		ramp_int(t_ramp *x, long newCurrentValue);
@@ -68,15 +69,15 @@ int C74_EXPORT main(void)
 	c = class_new("j.ramp~",(method)ramp_new, (method)ramp_free, (short)sizeof(t_ramp), 
 		(method)0L, A_GIMME, 0);
 
-    class_addmethod(c, (method)ramp_int,				"int",		A_FLOAT, 0L);
-    class_addmethod(c, (method)ramp_float,				"float",	A_FLOAT, 0L);
-    class_addmethod(c, (method)ramp_list,				"list",		A_FLOAT, A_FLOAT);
- 	class_addmethod(c, (method)ramp_stop,				"stop",		0L);		
- 	class_addmethod(c, (method)ramp_dsp,				"dsp",		A_CANT, 0L);
-	class_addmethod(c, (method)ramp_dsp64,				"dsp64",	A_CANT, 0);
-	class_addmethod(c, (method)ramp_assist,				"assist",	A_CANT, 0L); 
-    class_addmethod(c, (method)object_obex_dumpout,		"dumpout", 	A_CANT, 0);
-	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+    class_addmethod(c, (method)ramp_int,				"int",          A_FLOAT, 0L);
+    class_addmethod(c, (method)ramp_float,				"float",        A_FLOAT, 0L);
+    class_addmethod(c, (method)ramp_list,				"list",         A_FLOAT, A_FLOAT, 0L);
+ 	class_addmethod(c, (method)ramp_stop,				"stop",         0L);
+ 	class_addmethod(c, (method)ramp_dsp,				"dsp",          A_CANT, 0L);
+	class_addmethod(c, (method)ramp_dsp64,				"dsp64",        A_CANT, 0);
+	class_addmethod(c, (method)ramp_assist,				"assist",       A_CANT, 0L);
+    class_addmethod(c, (method)object_obex_dumpout,		"dumpout",      A_CANT, 0);
+	class_addmethod(c, (method)jamoma_fileusage,        "fileusage",    A_CANT, 0);
 
 	attr = attr_offset_new("mode", _sym_symbol, attrflags,
 		(method)0L, (method)ramp_setMode, calcoffset(t_ramp, attrMode));
@@ -94,32 +95,40 @@ int C74_EXPORT main(void)
 
 void* ramp_new(t_symbol *msg, short argc, t_atom *argv)
 {
-    t_ramp	*x;
+    t_ramp      *x;
 	TTValue		sr(sys_getsr());
  	long		attrstart = attr_args_offset(argc, argv);		// support normal arguments
 	short		i;
    
     x = (t_ramp *)object_alloc(ramp_class);
-    if (x) {
+    if (x)
+    {
 		x->maxNumChannels = 2;		// An initial argument to this object will set the maximum number of channels
 		if (attrstart && argv)
 			x->maxNumChannels = atom_getlong(argv);
 
 		ttEnvironment->setAttributeValue(kTTSym_sampleRate, sr);
-		//x->ramp = new TTRamp(x->maxNumChannels);
-		TTObjectBaseInstantiate(TT("ramp"), &x->ramp, x->maxNumChannels);
-		TTObjectBaseInstantiate(TT("audiosignal"), &x->audioOut, x->maxNumChannels);
+        
+		TTObjectBaseInstantiate("ramp", &x->ramp, x->maxNumChannels);
+		TTObjectBaseInstantiate("audiosignal", &x->audioOut, x->maxNumChannels);
 
-		attr_args_process(x,argc,argv);				// handle attribute args	
-				
-    	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));	// dumpout	
-	    dsp_setup((t_pxobject *)x, x->maxNumChannels);								// inlets
+        // handle attribute args
+		attr_args_process(x,argc,argv);
+        
+        // dumpout
+    	object_obex_store((void *)x, _sym_dumpout, (object *)outlet_new(x,NULL));
+        
+        // inlets
+	    dsp_setup((t_pxobject *)x, x->maxNumChannels);
+        
+        // outlets
 		for (i=0; i < x->maxNumChannels; i++)
-			outlet_new((t_pxobject *)x, "signal");									// outlets
+			outlet_new((t_pxobject *)x, "signal");
 		
 		x->obj.z_misc = Z_NO_INPLACE;
 	}
-	return (x);										// Return the pointer
+    
+	return (x);
 }
 
 // Memory Deallocation
@@ -151,12 +160,10 @@ void ramp_assist(t_ramp *x, void *b, long msg, long arg, char *dst)
 	}
 }
 
-
 void ramp_stop(t_ramp *x)
 {
 	x->ramp->sendMessage(TT("stop"));
 }
-
 
 void ramp_int(t_ramp *x, long newCurrentValue)
 {
@@ -165,15 +172,14 @@ void ramp_int(t_ramp *x, long newCurrentValue)
 
 void ramp_float(t_ramp *x, double newCurrentValue)
 {
-	x->ramp->setAttributeValue(TT("startValue"), newCurrentValue);
+	x->ramp->setAttributeValue("startValue", newCurrentValue);
 }
 
 void ramp_list(t_ramp *x, double endValue, double time)
 {
-	x->ramp->setAttributeValue(TT("destinationValue"), endValue);
-	x->ramp->setAttributeValue(TT("rampTime"), time);
+	x->ramp->setAttributeValue("destinationValue", endValue);
+	x->ramp->setAttributeValue("rampTime", time);
 }
-
 
 // Perform (signal) Method
 t_int *ramp_perform(t_int *w)
@@ -189,29 +195,27 @@ t_int *ramp_perform(t_int *w)
     return w+3;
 }
 
-
 // DSP Method
 void ramp_dsp(t_ramp *x, t_signal **sp, short *count)
 {
-	x->ramp->setAttributeValue(TT("sampleRate"), sp[0]->s_sr);
+	x->ramp->setAttributeValue("sampleRate", sp[0]->s_sr);
 	x->vs = sp[0]->s_n;
 	
-	x->audioOut->setAttributeValue(TT("numChannels"), x->maxNumChannels);
-	x->audioOut->setAttributeValue(TT("vectorSize"), TTUInt16(sp[0]->s_n));
-	x->audioOut->sendMessage(TT("alloc"));
+	x->audioOut->setAttributeValue("numChannels", x->maxNumChannels);
+	x->audioOut->setAttributeValue("vectorSize", TTUInt16(sp[0]->s_n));
+	x->audioOut->sendMessage("alloc");
 
 	dsp_add(ramp_perform, 2, x, sp[0]->s_vec);
 }
-
 
 t_max_err ramp_setMode(t_ramp *x, void *attr, long argc, t_atom *argv)
 {
 	if (argc) {
 		x->attrMode = atom_getsym(argv);
 		if (x->attrMode == gensym("sample_accurate"))
-			x->ramp->setAttributeValue(TT("mode"), TT("sample"));
+			x->ramp->setAttributeValue("mode", TTSymbol("sample"));
 		else if (x->attrMode == gensym("vector_accurate"))
-			x->ramp->setAttributeValue(TT("mode"), TT("vector"));
+			x->ramp->setAttributeValue("mode", TTSymbol("vector"));
 	}
 	return MAX_ERR_NONE;
 }
@@ -224,12 +228,12 @@ void ramp_perform64(t_ramp *x, t_object *dsp64, double **ins, long numins, doubl
 
 void ramp_dsp64(t_ramp *x, t_object *dsp64, short *count, double samplerate, long maxvectorsize, long flags)
 {
-	x->ramp->setAttributeValue(TT("sampleRate"), samplerate);
+	x->ramp->setAttributeValue("sampleRate", samplerate);
 	x->vs = maxvectorsize;
 	
-	x->audioOut->setAttributeValue(TT("numChannels"), x->maxNumChannels);
-	x->audioOut->setAttributeValue(TT("vectorSize"), (TTUInt16) maxvectorsize);
-	x->audioOut->sendMessage(TT("alloc"));
+	x->audioOut->setAttributeValue("numChannels", x->maxNumChannels);
+	x->audioOut->setAttributeValue("vectorSize", (TTUInt16) maxvectorsize);
+	x->audioOut->sendMessage("alloc");
 	object_method(dsp64, gensym("dsp_add64"), x, ramp_perform64, 0, NULL);
 }
 
