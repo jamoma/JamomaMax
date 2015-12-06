@@ -3,6 +3,8 @@
 
 #define C74_MAX_SDK_VERSION 0x0610
 
+#include <stdarg.h>
+
 #if !defined(WIN_VERSION) && !defined(MAC_VERSION)
 #define MAC_VERSION 1 // we'll assume that if we aren't requesting the windows version, that we build the mac version(s) of the product
 #endif  // WIN_VERSION
