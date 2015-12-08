@@ -19,8 +19,7 @@
 static long                 initialized = false;			///< Global variabel indicating whether Jamoma has been initiated or not.
 static t_hashtab            *hash_modules = NULL;			///< A hashtab of all modules (j.hubs) currently instantiated
 
-bool                        max5 = false;					///< Is Jamoma currently running in Max 5 or newer?
-bool                        max6 = false;					///< Is Jamoma currently running in Max 6 or newer?
+bool                        max7 = false;					///< Is Jamoma currently running in Max 7.0.6 or newer ? (version from where stand alone feature is fixed)
 
 TTSymbol					kTTSym_Max;
 TTObject                    MaxApplicationManager;
@@ -49,7 +48,7 @@ void jamoma_init(void)
 {
     short		outvol = 0;
     t_fourcc	outtype, filetype = 'TEXT';
-    char        name[MAX_PATH_CHARS];
+    char        name[MAX_PATH_CHARS], fullname[MAX_PATH_CHARS];
     
 	if (!initialized) {
         
@@ -58,12 +57,12 @@ void jamoma_init(void)
 		t_atom		a[4];
 		TTValue		v, out;
         TTErr       err;
- 
-		if (maxversion() >= 0x0519)
-			max5 = true;
-        
-		if (maxversion() >= 0x0600)
-			max6 = true;
+
+		if (maxversion() < 1798)
+        {
+			error("Jamoma  %s  |  build %s can't run under Max version ealier than 7.0.6", JAMOMA_MAX_VERSION, JAMOMA_MAX_REV);
+            return;
+        }
         
 		// Initialize the Modular library
         TTModularInit();
@@ -88,21 +87,27 @@ void jamoma_init(void)
         }
         else
             MaxApplication = out[0];
-        
-        // Edit the path to the JamomaConfiguration.xml file
-        strncpy_zero(name, TTFoundationBinaryPath.data(), TTFoundationBinaryPath.size()-6);
-        JamomaConfigurationFilePath = name;
-        JamomaConfigurationFilePath += "misc/JamomaConfiguration.xml";
-        
+
         // check if the JamomaConfiguration.xml file exists
-        strncpy_zero(name, JamomaConfigurationFilePath.data(), MAX_PATH_CHARS);
+        strncpy_zero(name, "JamomaConfiguration.xml", MAX_PATH_CHARS);
         if (locatefile_extended(name, &outvol, &outtype, &filetype, 1))
-            return error("Jamoma not loaded : can't find %s", JamomaConfigurationFilePath.data());
+            return error("Jamoma not loaded : can't find %s", name);
         
+        path_topathname(outvol, name, fullname);
+
+
         // MaxApplication have to read JamomaConfiguration.xml
         TTObject anXmlHandler(kTTSym_XmlHandler);
         anXmlHandler.set(kTTSym_object, MaxApplication);
-        v = TTSymbol(JamomaConfigurationFilePath);
+        std::string path = fullname;
+        #if ( __APPLE__ )
+        // remove drive name prefix
+        size_t pos = path.find(":/");
+        path = path.substr(pos+1);
+       	v = TTSymbol(path);
+        #else
+        v = TTSymbol(fullname);
+		#endif
         anXmlHandler.send(kTTSym_Read, v, out);
 
 		// Initialize common symbols

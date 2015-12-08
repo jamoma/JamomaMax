@@ -3,6 +3,7 @@
 #include "Moveable.h"
 #include "ext.h"
 #include "Coordinate.h"
+#include <cmath>
 
 extern bool globWarningFlag;
 extern bool globReportFlag;
@@ -74,17 +75,17 @@ void Moveable::flag(bool changed)
 
 bool Moveable::checkWidth(double newWidth)
 {
-    return ((newWidth * 0.5) >= abs(xPos_()));
+    return ((newWidth * 0.5) >= std::abs(xPos_()));
 }
 
 bool Moveable::checkDepth(double newDepth)
 {
-    return ((newDepth * 0.5) >= abs(yPos_()));
+    return ((newDepth * 0.5) >= std::abs(yPos_()));
 }
 
 bool Moveable::checkHeight(double newHeight)
 {
-    return ((newHeight * 0.5) >= abs(zPos_()));
+    return ((newHeight * 0.5) >= std::abs(zPos_()));
 }
 
 // vim:sw=4:et:cindent:

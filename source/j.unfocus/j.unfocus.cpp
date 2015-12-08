@@ -15,7 +15,7 @@
 
 
 #include "JamomaForMax.h"
-
+#include "MaxCommon.h"
 
 // Data Structure for this object
 typedef struct _unfocus{
@@ -43,6 +43,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	common_symbols_init();
 	class_addmethod(c, (method)unfocus_bang,	"bang",		0L);
     class_addmethod(c, (method)unfocus_assist,	"assist",	A_CANT, 0L); 
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	class_register(_sym_box, c);
 	sUnfocusClass = c;

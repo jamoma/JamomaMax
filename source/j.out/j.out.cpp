@@ -6,9 +6,9 @@
  *
  * @details
  *
- * @authors  Timothy Place, ThŽo de la Hogue, Trond Lossius
+ * @authors  Timothy Place, ThÂŽo de la Hogue, Trond Lossius
  *
- * @copyright © 2008 by Timothy Place and ThŽo de la Hogue @n
+ * @copyright Â© 2008 by Timothy Place and ThÂŽo de la Hogue @n
  * This code is licensed under the terms of the "New BSD License" @n
  * http://creativecommons.org/licenses/BSD/
  */
@@ -176,6 +176,8 @@ int C74_EXPORT main(void)
 
 void WrapTTOutputClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)out_assist,						"assist",				A_CANT, 0L);
 	
 #ifdef J_OUT_TILDE

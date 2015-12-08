@@ -66,6 +66,8 @@ int C74_EXPORT main(void)
 void WrapTTExplorerClass(WrappedClassPtr c)
 {
 	// add methods
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)nmspc_assist,				"assist",					A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)nmspc_return_value,		"return_value",				A_CANT, 0);

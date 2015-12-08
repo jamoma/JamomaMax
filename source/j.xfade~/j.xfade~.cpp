@@ -79,6 +79,7 @@ int C74_EXPORT main(void)				// main recieves a copy of the Max function macros 
 	class_addmethod(c, (method)fade_dsp64,				"dsp64",	A_CANT, 0);
     class_addmethod(c, (method)object_obex_dumpout, 	"dumpout",	A_CANT,	0);
     class_addmethod(c, (method)fade_assist, 			"assist",	A_CANT, 0L);
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 	
 	// Add attributes to our class:
 	CLASS_ATTR_LONG(c,		"shape",		0,	t_fade, attr_shape);

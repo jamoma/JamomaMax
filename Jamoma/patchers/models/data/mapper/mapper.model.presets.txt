@@ -1,0 +1,120 @@
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+function linear
+clipmode both
+data/active 1
+data/bypass 0
+input none
+input/going.down/action.1 none
+input/going.down/action.2 none
+input/going.down/action.3 none
+input/going.up/action.1 none
+input/going.up/action.2 none
+input/going.up/action.3 none
+input/index 0
+input/max 1.000000
+input/min 0.000000
+input/threshold/active 0
+input/threshold.down 0.000000
+input/threshold.up 1.000000
+output none
+output/going.down/action.1 none
+output/going.down/action.2 none
+output/going.down/action.3 none
+output/going.up/action.1 none
+output/going.up/action.2 none
+output/going.up/action.3 none
+output/index 0
+output/max 1.000000
+output/min 0.000000
+output/threshold/active 0
+output/threshold.down 0.000000
+output/threshold.up 1.000000
+output/unit none
+rampTime 0
+# 
+# ###########################################
+
+- preset "mouseY2samplerate"
+- description "something about this preset"
+# ###########################################
+# 
+function freehand
+function/parameters.1 curveList 0.000000 0.000000 exponential base 1.000000 0.246032 0.326840 exponential base 4.009105 0.259019 0.471861 exponential base 1.000000 0.304473 0.471861 exponential base 1.000000 0.306638 0.547619 exponential base 1.000000 0.362915 0.545455 exponential base 1.000000 0.367244 0.629870 exponential base 1.000000 0.434343 0.649351 exponential base 0.249432 0.592352 0.590909 exponential base 6.580887 0.711400 0.476190 exponential base 0.082849 0.862915 0.805195 exponential base 4.009105 1.000000 1.000000 exponential base 0.196894
+clipmode both
+data/active 1
+data/bypass 0
+input /mouse/position/y
+input/going.down/action.1 none
+input/going.down/action.2 none
+input/going.down/action.3 none
+input/going.up/action.1 none
+input/going.up/action.2 none
+input/going.up/action.3 none
+input/index 0
+input/max 1.000000
+input/min 0.000000
+input/threshold/active 0
+input/threshold.down 0.000000
+input/threshold.up 1.000000
+output /degrade~/samplerate_ratio
+output/going.down/action.1 none
+output/going.down/action.2 none
+output/going.down/action.3 none
+output/going.up/action.1 none
+output/going.up/action.2 none
+output/going.up/action.3 none
+output/index 0
+output/max 1.000000
+output/min 0.000000
+output/threshold/active 0
+output/threshold.down 0.000000
+output/threshold.up 1.000000
+output/unit none
+rampTime 0
+# 
+# ###########################################
+
+- preset "mouseX2bitdepth"
+- description "something about this preset"
+# ###########################################
+# 
+function power
+function/parameters.1 powerValue -0.750000
+function/parameters.2 symmetry none
+clipmode both
+data/active 1
+data/bypass 0
+input /mouse/position/x
+input/going.down/action.1 none
+input/going.down/action.2 none
+input/going.down/action.3 none
+input/going.up/action.1 none
+input/going.up/action.2 none
+input/going.up/action.3 none
+input/index 0
+input/max 1.000000
+input/min 0.000000
+input/threshold/active 0
+input/threshold.down 0.000000
+input/threshold.up 1.000000
+output /degrade~/bitdepth
+output/going.down/action.1 none
+output/going.down/action.2 none
+output/going.down/action.3 none
+output/going.up/action.1 none
+output/going.up/action.2 none
+output/going.up/action.3 none
+output/index 0
+output/max 24.000000
+output/min 1.000000
+output/threshold/active 0
+output/threshold.down 1.000000
+output/threshold.up 24.000000
+output/unit none
+rampTime 0
+# 
+# ###########################################

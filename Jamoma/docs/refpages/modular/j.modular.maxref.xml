@@ -84,7 +84,7 @@
 				TEXT_HERE
 			</description>
 		</method>
-		<method name="namespace/build">
+		<method name="namespace/mirror">
 			<arglist>
 				<arg name="ARG_NAME_0" type="list" optional="0" />
 			</arglist>
@@ -142,7 +142,7 @@
 	</methodlist>
 	<!--ATTRIBUTES-->
 	<attributelist>
-		<attribute name="activity" get="1" set="1" type="int" size="1">
+		<attribute name="monitor" get="1" set="1" type="int" size="1">
 			<digest>
 				TEXT_HERE
 			</digest>

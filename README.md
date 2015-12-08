@@ -8,11 +8,11 @@ Jamoma implementation for Max.
 
 ### Set up 
 
-Here are the steps to clone and build JamomaMax :
+Here are the steps to clone and build JamomaMax :   
+(You need Cmake > 3.3 installed)
     
-    git clone https://github.com/Jamoma/JamomaMax
+    git clone --recursive https://github.com/jamoma/JamomaMax.git
     cd JamomaMax
-    git submodule update --init --recursive 
     ./build.sh --multi
 
 There are additional options to the `build.sh` command, including : 
@@ -35,17 +35,23 @@ There are additional options to the `build.sh` command, including :
     Create a ready-for-distribution package 
     --uninstall
     Remove /usr/local/jamoma
+    --nocmake
+    Don't run CMake (speed up following build)
   
 ### QuickStart
 
 To use in Max7 from the repository, create a symbolic link from the Jamoma folder (in this folder) into /Users/yourName/Documents/Max 7/Packages    
-    
-You can do this in the Terminal:    
-1. cd to “/Users/[yourName]/Documents/Max 7/Packages"    
-2. make symlink, e.g. "ln -s /[replaceWithThePathTo]/Jamoma/Implementations/Max/Jamoma"    
-3. start Max    
+
+You can do this in the Terminal : 
+
+    cd ~/Documents/Max\ 7/Packages    
+    ln -s /[replaceWithThePathTo]/JamomaMax/Jamoma    
+
+Now you can start Max 7 and the Max Console will print a message 
+
+    Jamoma  v1.0-beta.1  |  build 8eb688d
 
 ### Pre-built Packages
 
-You will find nighlty builds of this code [here](https://github.com/jamoma/nightly-builds) for both OS X and Windows (32 and 64bit).
+You will find nighlty builds of this code [here](http://www.jamoma.org/download/JamomaMax/nightly-builds/) for both OS X and Windows (32 and 64bit).
 

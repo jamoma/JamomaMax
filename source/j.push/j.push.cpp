@@ -16,7 +16,7 @@
 
 #include "JamomaForMax.h"
 #include "TTDSP.h"	// use the Jamoma DSP clipping functions
-
+#include "MaxCommon.h"
 
 #define nonzero(x)				((x > 0) ? x : 1.)
 #define MAXDIMENSIONS			10
@@ -79,6 +79,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)push_clear,				"clear",	0);
 	class_addmethod(c, (method)push_assist, 			"assist",	A_CANT,		0); 
 	class_addmethod(c, (method)object_obex_dumpout, 	"dumpout",	A_CANT,		0);
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	CLASS_ATTR_FLOAT(c,		"friction",			0,		t_push,	attrFriction);
 	CLASS_ATTR_ACCESSORS(c,	"friction",			NULL,	push_attr_setfriction);

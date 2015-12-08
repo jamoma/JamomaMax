@@ -6,6 +6,7 @@ max/externals
 
 logs
 build
+build-xcode
 build64
 html
 Debug

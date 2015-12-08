@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 4,
-			"architecture" : "x64",
+			"revision" : 6,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 316.0, 185.0, 1034.0, 664.0 ],
+		"rect" : [ 308.0, 322.0, 1034.0, 664.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,12 +50,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1034.0, 638.0 ],
+						"rect" : [ 308.0, 348.0, 1034.0, 638.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -186,7 +186,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 553.0, 58.0, 389.0, 20.0 ],
 									"style" : "",
-									"text" : "Wildcards enable j.receieve to listen to several nodes at the same time.",
+									"text" : "Wildcards enable j.receive to listen to several nodes at the same time.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -560,7 +560,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 178.487442, 57.567627 ]
+									"patching_rect" : [ 10.0, 10.0, 178.487457, 57.567627 ]
 								}
 
 							}
@@ -852,8 +852,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -983,7 +983,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 178.487442, 57.567627 ]
+									"patching_rect" : [ 10.0, 10.0, 178.487457, 57.567627 ]
 								}
 
 							}
@@ -1248,8 +1248,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1310,8 +1310,8 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -1398,7 +1398,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 10.0, 10.0, 178.487442, 57.567627 ]
+									"patching_rect" : [ 10.0, 10.0, 178.487457, 57.567627 ]
 								}
 
 							}
@@ -1544,8 +1544,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 6,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1753,8 +1753,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 4,
-											"architecture" : "x64",
+											"revision" : 6,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1992,12 +1992,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 4,
-							"architecture" : "x64",
+							"revision" : 6,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 316.0, 211.0, 1034.0, 638.0 ],
+						"rect" : [ 0.0, 26.0, 1034.0, 638.0 ],
 						"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
@@ -2110,13 +2110,13 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-17",
-									"linecount" : 2,
+									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 637.0, 104.0, 312.0, 33.0 ],
+									"patching_rect" : [ 637.0, 104.0, 312.0, 47.0 ],
 									"style" : "",
-									"text" : "j.receive subscribes to a node (j.paraeter or j.return) and output values whenever the value of the node change.",
+									"text" : "j.receive subscribes to a node (j.parameter or j.return) and output values whenever the value of the node change.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 

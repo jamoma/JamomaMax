@@ -65,6 +65,8 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	jbox_initclass(c, flags);
 	c->c_flags |= CLASS_FLAG_NEWDICTIONARY; // to specify dictionary constructor
 	
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c, (method)ui_notify,							"notify",							A_CANT, 0);
 	class_addmethod(c, (method)ui_paint,							"paint",							A_CANT, 0);
 	class_addmethod(c, (method)ui_mousedown,						"mousedown",						A_CANT, 0);
@@ -80,10 +82,13 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)ui_modelParamExplorer_callback,		"return_modelParamExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelMessExplorer_callback,		"return_modelMessExploration",		A_CANT, 0);
 	class_addmethod(c, (method)ui_modelRetExplorer_callback,		"return_modelRetExploration",		A_CANT, 0);
+    class_addmethod(c, (method)ui_modelClassExplorer_callback,		"return_modelClassExploration",		A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_model_address,				"return_model_address",				A_CANT, 0);
 	
 	class_addmethod(c, (method)ui_return_model_init,				"return_model_init",				A_CANT, 0);
+    
+    class_addmethod(c, (method)ui_return_model_class,				"return_model_class",				A_CANT, 0);
     
     class_addmethod(c, (method)ui_return_model_content,             "return_model_content",             A_CANT, 0);
 	
@@ -181,6 +186,7 @@ t_ui* ui_new(t_symbol *s, long argc, t_atom *argv)
 		
 		x->viewAddress = kTTAdrsEmpty;
 		x->modelAddress = kTTAdrsEmpty;
+        x->modelClass = kTTSymEmpty;
         x->patcherPtr = NULL;
         x->patcherContext = kTTSymEmpty;
         x->patcherClass = kTTSymEmpty;
@@ -251,7 +257,7 @@ void ui_free(t_ui *x)
     ui_receiver_destroy_all(x);
     
 	ui_unregister_info(x);
-	ui_viewer_destroy_all(x);
+	ui_viewer_destroy_all(x, NO);
 }
 
 
@@ -289,9 +295,8 @@ void ui_subscribe(t_ui *x, t_symbol *address)
 		
 		x->modelAddress = adrs;
 		
-		// Clear all viewers
+		// Clear all viewers except "model:address"
 		ui_viewer_destroy_all(x);
-		x->hash_viewers = new TTHash();
 		
 		x->has_preset = false;
 		x->has_model = false;
@@ -308,15 +313,27 @@ void ui_subscribe(t_ui *x, t_symbol *address)
         }
 		
         if (x->hash_receivers->lookup(kTTSym_initialized, v))
-            
+        {
             // observe model initialisation to explore (the method also get the value)
             ui_receiver_create(x, aReceiver, gensym("return_model_init"), kTTSym_initialized, x->modelAddress, NO, YES);
-        
-        else {
-            
+        }
+        else
+        {
             // update the model address and get the initialized state
             aReceiver = v[0];
             aReceiver.set(kTTSym_address, x->modelAddress.appendAttribute(kTTSym_initialized));
+        }
+        
+        if (x->hash_receivers->lookup("model:class", v))
+        {
+            // get the model:class attribute
+            ui_receiver_create(x, aReceiver, gensym("return_model_class"), TTSymbol("model:class"), x->modelAddress);
+        }
+        else
+        {
+            // update the model address
+            aReceiver = v[0];
+            aReceiver.set(kTTSym_address, x->modelAddress.appendAddress(TTAddress("model:class")));
         }
         
         // create internal TTPreset to handle model's state
@@ -1162,12 +1179,14 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		}
 	}
 	
-	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);	
-	coord_x += x->box.b_presentation_rect.x;
-	coord_y += x->box.b_presentation_rect.y;
-	pt.x = coord_x;
-	pt.y = coord_y;
-	selectedId = jpopupmenu_popup(p, pt, x->menu_selection+1);
+//	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
+//	coord_x += x->box.b_presentation_rect.x;
+//	coord_y += x->box.b_presentation_rect.y;
+//	pt.x = coord_x;
+//	pt.y = coord_y;
+//	selectedId = jpopupmenu_popup(p, pt, x->menu_selection+1);
+	selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->menu_selection+1);
+
 	if (selectedId) {
 		x->menu_selection = selectedId -1;
 		qelem_set(x->menu_qelem);
@@ -1196,6 +1215,9 @@ void ui_menu_qfn(t_ui *x)
     
     else if (item->sym == gensym("Edit Current State"))
 		ui_edit_state(x);
+    
+    else if (item->sym == gensym("Initialize Model State"))
+        object_method(modelObject, _sym_anything, gensym("init"), 0, NULL);
     
 	else if (item->sym == gensym("Load Presets File"))
 		object_method(modelObject, gensym("preset:read"), 0, NULL);
@@ -1261,6 +1283,8 @@ void ui_menu_build(t_ui *x)
 		item = (t_symobject *)symobject_new(gensym("Open Model Internal"));
         linklist_append(x->menu_items, item);
         item = (t_symobject *)symobject_new(gensym("Edit Current State"));
+        linklist_append(x->menu_items, item);
+        item = (t_symobject *)symobject_new(gensym("Initialize Model State"));
         linklist_append(x->menu_items, item);
 	}
 	
@@ -1337,13 +1361,15 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		}
 	}
 	
-	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);	
-	coord_x += x->box.b_presentation_rect.x;
-	coord_y += x->box.b_presentation_rect.y;
-	pt.x = coord_x + 20.0;
-	pt.y = coord_y;
-	
-	selectedId = jpopupmenu_popup(p, pt, x->refmenu_selection+1);
+//	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
+//	coord_x += x->box.b_presentation_rect.x;
+//	coord_y += x->box.b_presentation_rect.y;
+//	pt.x = coord_x + 20.0;
+//	pt.y = coord_y;
+//
+//	selectedId = jpopupmenu_popup(p, pt, x->refmenu_selection+1);
+	selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->refmenu_selection+1);
+
 	if (selectedId) {
 		x->refmenu_selection = selectedId -1;
 		qelem_set(x->refmenu_qelem);
@@ -1354,8 +1380,17 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 void ui_refmenu_qfn(t_ui *x)
 {
 	t_symobject *item = (t_symobject *)linklist_getindex(x->refmenu_items, x->refmenu_selection);
-	
-	ui_data_interface(x, TTSymbol(item->sym->s_name));
+    
+    TTAddress address(item->sym->s_name);
+    
+    if (address.getType() == kAddressRelative)
+    {
+        ui_data_interface(x, TTSymbol(item->sym->s_name));
+    }
+    else
+    {
+        ui_viewer_send(x, TTSymbol("model:address"), address);
+    }
 }
 
 void ui_refmenu_build(t_ui *x)
@@ -1371,14 +1406,42 @@ void ui_refmenu_build(t_ui *x)
 	linklist_clear(x->refmenu_items);
 	
 	// Edit refmenu title
-	if (x->modelAddress != kTTSymEmpty)
-		snprintf(tempStr, 512, "Model: %s", x->modelAddress.c_str());
+	if (x->modelClass != kTTSymEmpty)
+		snprintf(tempStr, 512, "Model class: %s", x->modelClass.c_str());
 	else
-		strncpy_zero(tempStr, "Model: ?", 512);
+		strncpy_zero(tempStr, "Model class: ?", 512);
 	
 	item = (t_symobject *)symobject_new(gensym(tempStr));
 	linklist_append(x->refmenu_items, item);
 	item->flags = 1;	// mark to disable this item (we use it as a label)
+    
+    // Look for model addresses with same class
+    ui_explorer_create((t_object*)x, x->modelClassExplorer, gensym("return_modelClassExploration"));
+    
+    // to look for /*.*/model ModelInfo object with a class attribute equals to modelClass
+    TTValue aFilter;
+    aFilter.append("filterModelClass");
+    aFilter.append(kTTSym_object);
+    aFilter.append(TTSymbol("ModelInfo"));
+    aFilter.append(kTTSym_attribute);
+    aFilter.append(TTSymbol("class"));
+    aFilter.append(kTTSym_value);
+    aFilter.append(x->modelClass);
+    aFilter.append(kTTSym_mode);
+    aFilter.append(kTTSym_restrict);
+    x->modelClassExplorer.send("FilterSet", aFilter);
+    
+    // exclude /*(view).* addresses in the mean time
+    aFilter.clear();
+    aFilter.append("filterViewPart");
+    aFilter.append("part");
+    aFilter.append(TTSymbol("(view)"));
+    aFilter.append(kTTSym_mode);
+    aFilter.append(kTTSym_exclude);
+    x->modelClassExplorer.send("FilterSet", aFilter);
+    
+    x->modelClassExplorer.set(kTTSym_address, kTTAdrsRoot);
+    x->modelClassExplorer.send("Explore");
 	
 	// Look for User-Defined Parameters into the model
 	item = (t_symobject *)symobject_new(gensym("-"));
@@ -1473,6 +1536,7 @@ void ui_refmenu_build(t_ui *x)
 	x->modelParamExplorer = TTObject();
     x->modelMessExplorer = TTObject();
     x->modelRetExplorer = TTObject();
+    x->modelClassExplorer = TTObject();
 }
 
 void* ui_oksize(t_ui *x, t_rect *rect)

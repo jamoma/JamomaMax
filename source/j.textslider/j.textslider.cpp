@@ -22,6 +22,7 @@
 #include "jgraphics.h"
 #include "JamomaForMax.h"
 #include "TTFoundation.h"
+#include "MaxCommon.h"
 
 // Constants
 const double kPollIntervalDefault = 150;
@@ -143,6 +144,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)textslider_notify,			"notify",			A_CANT, 0);
 	class_addmethod(c, (method)textslider_assist,			"assist",			A_CANT, 0);	
 	class_addmethod(c, (method) textslider_mousedoubleclick, "mousedoubleclick",A_CANT, 0);
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	CLASS_ATTR_DEFAULT(c,					"patching_rect",	0,	"0. 0. 160. 20.");
 	CLASS_ATTR_MIN(c,						"patching_size",	0,	"1. 1.");

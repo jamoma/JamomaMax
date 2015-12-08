@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 0,
 			"revision" : 6,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 88.0, 155.0, 1165.0, 792.0 ],
+		"rect" : [ 137.0, 223.0, 1107.0, 779.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -50,11 +50,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 6,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1165.0, 766.0 ],
+						"rect" : [ 0.0, 26.0, 1107.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -131,7 +131,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 128.5, 293.0, 413.0, 35.0 ],
 									"style" : "",
-									"text" : "\"Users/lossius/dev/Jamoma/JamomaMax/Jamoma/examples/remote communication/websocket/jamomarmot\""
+									"text" : "\"Users/antoine/dev/JamomaMax/Jamoma/examples/remote communication/websocket/jamomarmot\""
 								}
 
 							}
@@ -269,13 +269,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-32",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 118.0, 449.0, 62.0, 22.0 ],
 									"style" : "",
-									"text" : "activity $1"
+									"text" : "monitor $1"
 								}
 
 							}
@@ -405,11 +406,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 6,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1165.0, 766.0 ],
+						"rect" : [ 0.0, 26.0, 1107.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -765,8 +766,8 @@
 									"id" : "obj-47",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
-									"numoutlets" : 2,
-									"outlettype" : [ "int", "int" ],
+									"numoutlets" : 3,
+									"outlettype" : [ "int", "int", "int" ],
 									"patching_rect" : [ 882.0, 640.0, 72.0, 22.0 ],
 									"style" : "",
 									"text" : "notein 36 1"
@@ -852,7 +853,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 6,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1317,13 +1318,14 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-32",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 139.0, 358.0, 62.0, 22.0 ],
 									"style" : "",
-									"text" : "activity $1"
+									"text" : "monitor $1"
 								}
 
 							}
@@ -1840,11 +1842,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 6,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1165.0, 766.0 ],
+						"rect" : [ 137.0, 249.0, 1107.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1873,6 +1875,33 @@
 						"subpatcher_template" : "",
 						"showontab" : 1,
 						"boxes" : [ 							{
+								"box" : 								{
+									"format" : 6,
+									"id" : "obj-6",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 481.0, 500.5, 50.0, 22.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-1",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 542.0, 500.5, 237.0, 22.0 ],
+									"style" : "",
+									"text" : "j.remote remoteMinuitApp:/decimal_param"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontface" : 0,
 									"id" : "obj-2",
@@ -1926,7 +1955,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 6,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -2203,7 +2232,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 57.5, 507.0, 101.0, 22.0 ],
 									"style" : "",
-									"text" : "namespace/build"
+									"text" : "namespace/mirror"
 								}
 
 							}
@@ -2273,7 +2302,7 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 6,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -2862,7 +2891,7 @@
 														"followglobaltempo" : 0,
 														"formantcorrection" : 0,
 														"mode" : "basic",
-														"originallength" : [ 2730.971429, "ticks" ],
+														"originallength" : [ 2730.971436, "ticks" ],
 														"originaltempo" : 120.0,
 														"pitchcorrection" : 0,
 														"quality" : "basic",
@@ -4060,6 +4089,15 @@
  ],
 						"lines" : [ 							{
 								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-1", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-27", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -4167,6 +4205,15 @@
 								}
 
 							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-6", 0 ]
+								}
+
+							}
  ]
 					}
 ,
@@ -4196,11 +4243,11 @@
 							"major" : 7,
 							"minor" : 0,
 							"revision" : 6,
-							"architecture" : "x64",
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 88.0, 181.0, 1165.0, 766.0 ],
+						"rect" : [ 0.0, 26.0, 1107.0, 753.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -4293,7 +4340,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 110.0, 615.0, 145.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive /:activity/out"
+									"text" : "j.receive /:monitor/out"
 								}
 
 							}
@@ -4303,9 +4350,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 110.0, 645.0, 153.0, 22.0 ],
+									"patching_rect" : [ 110.0, 645.0, 155.0, 22.0 ],
 									"style" : "",
-									"text" : "print activity/out @popup 1"
+									"text" : "print monitor/out @popup 1"
 								}
 
 							}
@@ -4318,7 +4365,7 @@
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 110.0, 530.0, 137.0, 22.0 ],
 									"style" : "",
-									"text" : "j.receive /:activity/in"
+									"text" : "j.receive /:monitor/in"
 								}
 
 							}
@@ -4330,7 +4377,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 270.0, 359.0, 147.0, 64.0 ],
+									"patching_rect" : [ 266.5, 388.0, 147.0, 64.0 ],
 									"style" : "",
 									"text" : "With one argument, j.modular can be used to connect to this same patcher itself.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
@@ -4356,9 +4403,9 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 110.0, 560.0, 145.0, 22.0 ],
+									"patching_rect" : [ 110.0, 560.0, 147.0, 22.0 ],
 									"style" : "",
-									"text" : "print activity/in @popup 1"
+									"text" : "print monitor/in @popup 1"
 								}
 
 							}
@@ -4379,12 +4426,11 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-33",
-									"linecount" : 4,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 110.0, 359.0, 137.0, 62.0 ],
+									"patching_rect" : [ 110.0, 354.0, 413.0, 22.0 ],
 									"style" : "",
 									"text" : "j.modular Minuit @name my_application @author org.jamoma @version v.1"
 								}
@@ -4412,9 +4458,9 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 307.0, 259.0, 62.0, 22.0 ],
+									"patching_rect" : [ 307.0, 259.0, 66.0, 22.0 ],
 									"style" : "",
-									"text" : "activity $1"
+									"text" : "monitor $1"
 								}
 
 							}
@@ -4439,11 +4485,11 @@
 											"major" : 7,
 											"minor" : 0,
 											"revision" : 6,
-											"architecture" : "x64",
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 764.0, 440.0, 436.0, 417.0 ],
+										"rect" : [ 676.0, 285.0, 436.0, 417.0 ],
 										"bgcolor" : [ 0.864566, 0.853603, 0.817125, 1.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
@@ -4766,15 +4812,15 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-1::obj-31::obj-15" : [ "live.dial", "my_float", 0 ],
 			"obj-2::obj-13::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
-			"obj-2::obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-2::obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-2::obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-2::obj-13::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-2::obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-2::obj-13::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-2::obj-13::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-1::obj-31::obj-15" : [ "live.dial", "my_float", 0 ],
 			"obj-2::obj-13::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-1::obj-31::obj-17" : [ "live.dial[1]", "my_int", 0 ],
+			"obj-2::obj-13::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-2::obj-13::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
 			"obj-2::obj-13::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ]
 		}
 ,
@@ -4786,25 +4832,25 @@
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.large.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/q2octavebandwith",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}

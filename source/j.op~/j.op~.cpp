@@ -69,6 +69,7 @@ int C74_EXPORT main(void)
 	class_addmethod(c, (method)op_dsp64,				"dsp64",		A_CANT, 0);
 	class_addmethod(c, (method)op_assist,				"assist",		A_CANT, 0); 
     class_addmethod(c, (method)object_obex_dumpout,		"dumpout", 		A_CANT, 0);  
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 	
 	CLASS_ATTR_SYM(c,		"operator",		0,	t_op,	attrOperator);
 	CLASS_ATTR_ACCESSORS(c,	"operator",		NULL,	op_setOperator);

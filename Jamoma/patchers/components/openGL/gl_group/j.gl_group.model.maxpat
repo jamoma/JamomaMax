@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 0,
-			"revision" : 0,
+			"revision" : 5,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 794.0, 582.0 ],
+		"rect" : [ 34.0, 79.0, 352.0, 356.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -61,7 +61,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -391,7 +391,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -644,12 +644,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 34.0, 79.0, 1206.0, 933.0 ],
+						"rect" : [ 34.0, 79.0, 1743.0, 727.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -688,12 +688,12 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 0,
+											"revision" : 5,
 											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+										"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -722,27 +722,28 @@
 										"subpatcher_template" : "",
 										"boxes" : [ 											{
 												"box" : 												{
-													"id" : "obj-34",
+													"id" : "obj-6",
+													"linecount" : 2,
 													"maxclass" : "newobj",
-													"numinlets" : 1,
-													"numoutlets" : 1,
-													"outlettype" : [ "bang" ],
-													"patching_rect" : [ 50.0, 136.0, 24.0, 22.0 ],
+													"numinlets" : 2,
+													"numoutlets" : 2,
+													"outlettype" : [ "", "" ],
+													"patching_rect" : [ 235.0, 192.0, 55.0, 35.0 ],
 													"style" : "",
-													"text" : "t b"
+													"text" : "zl reg drawto"
 												}
 
 											}
 , 											{
 												"box" : 												{
-													"id" : "obj-32",
-													"maxclass" : "message",
-													"numinlets" : 2,
+													"id" : "obj-34",
+													"maxclass" : "newobj",
+													"numinlets" : 1,
 													"numoutlets" : 1,
-													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 165.0, 50.0, 22.0 ],
+													"outlettype" : [ "bang" ],
+													"patching_rect" : [ 235.0, 140.0, 24.0, 22.0 ],
 													"style" : "",
-													"text" : "drawto"
+													"text" : "t b"
 												}
 
 											}
@@ -753,7 +754,7 @@
 													"numinlets" : 2,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 50.0, 100.0, 89.0, 22.0 ],
+													"patching_rect" : [ 235.0, 104.0, 89.0, 22.0 ],
 													"style" : "default",
 													"text" : "route default"
 												}
@@ -762,11 +763,12 @@
 , 											{
 												"box" : 												{
 													"id" : "obj-12",
+													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 120.0, 141.0, 119.0, 22.0 ],
+													"patching_rect" : [ 305.0, 145.0, 58.0, 35.0 ],
 													"style" : "default",
 													"text" : "prepend drawto"
 												}
@@ -780,7 +782,7 @@
 													"numinlets" : 0,
 													"numoutlets" : 1,
 													"outlettype" : [ "" ],
-													"patching_rect" : [ 50.0, 40.0, 30.0, 30.0 ],
+													"patching_rect" : [ 235.0, 44.0, 30.0, 30.0 ],
 													"style" : ""
 												}
 
@@ -792,7 +794,7 @@
 													"maxclass" : "outlet",
 													"numinlets" : 1,
 													"numoutlets" : 0,
-													"patching_rect" : [ 79.0, 247.0, 30.0, 30.0 ],
+													"patching_rect" : [ 305.0, 305.0, 30.0, 30.0 ],
 													"style" : ""
 												}
 
@@ -827,16 +829,7 @@
 											}
 , 											{
 												"patchline" : 												{
-													"destination" : [ "obj-36", 0 ],
-													"disabled" : 0,
-													"hidden" : 0,
-													"source" : [ "obj-32", 0 ]
-												}
-
-											}
-, 											{
-												"patchline" : 												{
-													"destination" : [ "obj-32", 0 ],
+													"destination" : [ "obj-6", 0 ],
 													"disabled" : 0,
 													"hidden" : 0,
 													"source" : [ "obj-34", 0 ]
@@ -852,10 +845,19 @@
 												}
 
 											}
+, 											{
+												"patchline" : 												{
+													"destination" : [ "obj-36", 0 ],
+													"disabled" : 0,
+													"hidden" : 0,
+													"source" : [ "obj-6", 0 ]
+												}
+
+											}
  ]
 									}
 ,
-									"patching_rect" : [ 98.5, 270.5, 145.0, 22.0 ],
+									"patching_rect" : [ 172.5, 571.5, 145.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -877,7 +879,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 252.5, 256.0, 295.0, 51.0 ],
+									"patching_rect" : [ 326.5, 557.0, 295.0, 51.0 ],
 									"style" : "default",
 									"text" : "When drawing to the default context in Max 7 or later, we use the default rendering context of the patch that this component belongs to."
 								}
@@ -1107,7 +1109,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 135.5, 382.5, 120.0, 22.0 ],
+									"patching_rect" : [ 134.5, 310.5, 120.0, 22.0 ],
 									"style" : "default",
 									"text" : "prepend capture"
 								}
@@ -1120,7 +1122,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 135.5, 363.5, 487.0, 22.0 ],
+									"patching_rect" : [ 134.5, 291.5, 487.0, 22.0 ],
 									"style" : "default",
 									"text" : "j.parameter capture @type string @description \"The name of a texture to be rendered to \"",
 									"varname" : "render/context[1]"
@@ -1134,7 +1136,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1032.5, 45.0, 109.0, 22.0 ],
+									"patching_rect" : [ 1010.5, 44.0, 109.0, 22.0 ],
 									"style" : "default",
 									"text" : "prepend line_width"
 								}
@@ -1147,7 +1149,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1032.5, 12.0, 485.0, 22.0 ],
+									"patching_rect" : [ 1010.5, 11.0, 485.0, 22.0 ],
 									"style" : "default",
 									"text" : "j.parameter line_width @type decimal @description \"The drawing line width.\" @default 1.",
 									"varname" : "render/antialias[3]"
@@ -1161,7 +1163,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 160.5, 510.5, 110.0, 22.0 ],
+									"patching_rect" : [ 159.5, 438.5, 110.0, 22.0 ],
 									"style" : "default",
 									"text" : "prepend inherit_all"
 								}
@@ -1175,7 +1177,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 160.5, 479.5, 666.0, 35.0 ],
+									"patching_rect" : [ 159.5, 407.5, 666.0, 35.0 ],
 									"style" : "default",
 									"text" : "j.parameter inherit_all @type boolean @description \"When the flag is set, all GL attributes from named drawing context are inherited.\" @default 0",
 									"varname" : "render/antialias[2]"
@@ -1189,7 +1191,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 160.5, 438.0, 121.0, 22.0 ],
+									"patching_rect" : [ 159.5, 366.0, 121.0, 22.0 ],
 									"style" : "default",
 									"text" : "prepend cull_face"
 								}
@@ -1202,7 +1204,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 160.5, 419.0, 445.0, 22.0 ],
+									"patching_rect" : [ 159.5, 347.0, 445.0, 22.0 ],
 									"style" : "default",
 									"text" : "j.parameter cull_face @type integer @description \"Face culling mode\" @default 0",
 									"varname" : "render/context[2]"
@@ -1216,7 +1218,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 117.0, 331.5, 112.0, 22.0 ],
+									"patching_rect" : [ 116.0, 259.5, 112.0, 22.0 ],
 									"style" : "default",
 									"text" : "prepend axes"
 								}
@@ -1229,7 +1231,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 117.0, 312.5, 469.0, 22.0 ],
+									"patching_rect" : [ 116.0, 240.5, 469.0, 22.0 ],
 									"style" : "default",
 									"text" : "j.parameter axes @type boolean @description \"x/y/z axis rendering off/on\" @default 0",
 									"varname" : "render/antialias[1]"
@@ -1310,7 +1312,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 98.5, 226.5, 667.0, 22.0 ],
+									"patching_rect" : [ 172.5, 527.5, 667.0, 22.0 ],
 									"style" : "default",
 									"text" : "j.parameter context @type string @description \"The named drawing context in which to draw.\" @default default @priority -1",
 									"varname" : "render/context"
@@ -1396,6 +1398,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1020.0, 501.75, 29.5, 501.75 ],
 									"source" : [ "obj-11", 0 ]
 								}
 
@@ -1414,6 +1417,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 144.0, 362.0, 29.5, 362.0 ],
 									"source" : [ "obj-14", 0 ]
 								}
 
@@ -1432,6 +1436,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1042.0, 500.75, 29.5, 500.75 ],
 									"source" : [ "obj-16", 0 ]
 								}
 
@@ -1450,6 +1455,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1042.0, 502.75, 29.5, 502.75 ],
 									"source" : [ "obj-18", 0 ]
 								}
 
@@ -1468,6 +1474,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 125.5, 291.0, 29.5, 291.0 ],
 									"source" : [ "obj-2", 0 ]
 								}
 
@@ -1477,6 +1484,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1042.0, 499.25, 29.5, 499.25 ],
 									"source" : [ "obj-20", 0 ]
 								}
 
@@ -1495,6 +1503,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1058.0, 498.75, 29.5, 498.75 ],
 									"source" : [ "obj-23", 0 ]
 								}
 
@@ -1513,6 +1522,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1082.5, 496.25, 29.5, 496.25 ],
 									"source" : [ "obj-25", 0 ]
 								}
 
@@ -1531,6 +1541,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1095.5, 495.5, 29.5, 495.5 ],
 									"source" : [ "obj-27", 0 ]
 								}
 
@@ -1549,6 +1560,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1104.5, 497.247253, 29.5, 497.247253 ],
 									"source" : [ "obj-29", 0 ]
 								}
 
@@ -1567,6 +1579,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 182.0, 624.0, 29.5, 624.0 ],
 									"source" : [ "obj-37", 0 ]
 								}
 
@@ -1585,6 +1598,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 1095.5, 497.5, 29.5, 497.5 ],
 									"source" : [ "obj-4", 0 ]
 								}
 
@@ -1630,6 +1644,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 29.5, 69.0, 29.5, 69.0 ],
 									"source" : [ "obj-50", 0 ]
 								}
 
@@ -1639,6 +1654,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 50.0, 208.0, 29.5, 208.0 ],
 									"source" : [ "obj-51", 0 ]
 								}
 
@@ -1648,6 +1664,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 87.5, 253.0, 29.5, 253.0 ],
 									"source" : [ "obj-54", 0 ]
 								}
 
@@ -1657,6 +1674,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 70.5, 227.0, 29.5, 227.0 ],
 									"source" : [ "obj-56", 0 ]
 								}
 
@@ -1666,6 +1684,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 169.0, 395.0, 29.5, 395.0 ],
 									"source" : [ "obj-6", 0 ]
 								}
 
@@ -1693,6 +1712,7 @@
 									"destination" : [ "obj-21", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 169.0, 489.0, 29.5, 489.0 ],
 									"source" : [ "obj-9", 0 ]
 								}
 
@@ -1726,7 +1746,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2005,7 +2025,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2284,7 +2304,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2460,7 +2480,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2742,7 +2762,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -2970,7 +2990,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 0,
-							"revision" : 0,
+							"revision" : 5,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -3049,7 +3069,7 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 0,
-											"revision" : 0,
+											"revision" : 5,
 											"architecture" : "x86",
 											"modernui" : 1
 										}

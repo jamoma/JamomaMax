@@ -164,6 +164,7 @@ int C74_EXPORT main(void)
 
 void WrapTTInputClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 	class_addmethod(c->maxClass, (method)in_assist,						"assist",				A_CANT, 0L);
 	
 #ifdef J_IN_TILDE

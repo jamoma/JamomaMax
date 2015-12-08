@@ -59,6 +59,8 @@ int C74_EXPORT main(void)
 
 void WrapTTMapperClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)map_assist, "assist", A_CANT, 0L);
 	
 	class_addmethod(c->maxClass, (method)map_return_value, "return_value", A_CANT, 0);

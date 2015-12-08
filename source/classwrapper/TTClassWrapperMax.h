@@ -17,6 +17,7 @@
 #include "ext_obex.h"				// Max Object Extensions (attributes) Header
 #include "TTFoundationAPI.h"		// Jamoma Foundation API
 #include "TTDSP.h"					// Jamoma DSP API
+#include "MaxCommon.h"
 
 // TYPE DEFINITIONS
 

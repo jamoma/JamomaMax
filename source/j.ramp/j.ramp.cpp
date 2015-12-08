@@ -99,6 +99,8 @@ int C74_EXPORT main(void)
 
 void WrapTTRampClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
     class_addmethod(c->maxClass, (method)ramp_assist,				"assist",					A_CANT,		0);
     
     class_addmethod(c->maxClass, (method)ramp_return_value,			"return_value",             A_CANT, 0);

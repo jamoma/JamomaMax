@@ -7,7 +7,11 @@ if [ "x${TRAVIS_BRANCH}" != "xmaster" ]; then
   exit 0
 fi
 
-DEPLOYTARGET=jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+if [ "x${TRAVIS_TAG}" = "x" ]; then
+  DEPLOYTARGET=jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
+else
+  DEPLOYTARGET=jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/releases
+fi
 
 if [ "x${DEPLOYTARGET}" = "x" ]; then
  echo "no deploy target defined; skipping deployment"
@@ -58,12 +62,12 @@ TIME=${DATE:11:8}
 TIME=${TIME//:/-}
 DATE=${DATE:0:10}
 
-ARCHIVE_NAME="JamomaMax-${DATE}-${TIME}"
+ARCHIVE_NAME="JamomaMax-${DATE}-OSX"
 
-if [ "x${TRAVIS_OS_NAME}" = "xLinux" ]; then
-  ARCHIVE_NAME="${ARCHIVE_NAME}-Windows-mingw-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
+if [ "x${TRAVIS_TAG}" = "x" ]; then
+  ARCHIVE_NAME="${ARCHIVE_NAME}.tgz"
 else
-  ARCHIVE_NAME="${ARCHIVE_NAME}-OSX-${TRAVIS_COMMIT:0:7}-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="${ARCHIVE_NAME}-${TRAVIS_TAG}.tgz"
 fi
 
 cd ${TRAVIS_BUILD_DIR}/build

@@ -18,20 +18,20 @@ git submodule update
 mkdir build
 cd build
 
-Write-Host c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=$pwd/JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
+Write-Host c:\projects\JamomaMax\cmake-3.4.1-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=$pwd/JamomaInstall -DCMAKE_BUILD_TYPE=Release ..
 
 # TODO : find a way to use variable instead of full path
-c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=c:\projects\JamomaMax\build\JamomaInstall -DCMAKE_BUILD_TYPE=Release .. > c:\projects\JamomaMax\configure.log
-c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . > c:\projects\JamomaMax\build.log
-c:\projects\JamomaMax\cmake-3.3.0-rc4-win32-x86\bin\cmake.exe --build . --target install > c:\projects\JamomaMax\install.log
+c:\projects\JamomaMax\cmake-3.4.1-win32-x86\bin\cmake.exe -G $env:CMAKE_GENERATOR $env:CUSTOM_FLAG  -DCMAKE_INSTALL_PREFIX=c:\projects\JamomaMax\build\JamomaInstall -DCMAKE_BUILD_TYPE=Release .. > c:\projects\JamomaMax\configure.log
+c:\projects\JamomaMax\cmake-3.4.1-win32-x86\bin\cmake.exe --build . --config Release > c:\projects\JamomaMax\build.log
+c:\projects\JamomaMax\cmake-3.4.1-win32-x86\bin\cmake.exe --build . --config Release --target install > c:\projects\JamomaMax\install.log
 
 if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
     Write-Host "This is a release deployment with tag $env:APPVEYOR_REPO_TAG_NAME"
-    $archiveName = "JamomaMax-$env:DATE-$env:TIME-Windows_$env:PLATFORM-Release-$env:APPVEYOR_REPO_TAG_NAME.zip"
+    $archiveName = "JamomaMax-$env:DATE-Windows_$env:PLATFORM-Release-$env:APPVEYOR_REPO_TAG_NAME.zip"
 } else {
     Write-Host "This is debug deployment."
     $sha = $env:APPVEYOR_REPO_COMMIT.Substring(0,7)
-    $archiveName = "JamomaMax-$DATE-$TIME-Windows_$env:PLATFORM-$sha.zip"
+    $archiveName = "JamomaMax-$DATE-Windows_$env:PLATFORM.zip"
 }
 
 cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/

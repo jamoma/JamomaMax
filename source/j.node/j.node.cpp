@@ -55,6 +55,8 @@ int C74_EXPORT main(void)
 
 void WrapTTNodeInfoClass(WrappedClassPtr c)
 {
+	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	
 	class_addmethod(c->maxClass, (method)node_assist,						"assist",				A_CANT, 0L);
 }
 

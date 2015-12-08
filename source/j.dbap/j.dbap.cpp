@@ -16,6 +16,7 @@
 
 #include "JamomaForMax.h"
 #include "j.dbap.h"
+#include "MaxCommon.h"
 
 // Globals
 t_class		*this_class = 0;								// Required. Global pointing to this class
@@ -74,6 +75,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 	class_addmethod(c, (method)dbap_assist,				"assist",		A_CANT,		0);
 	class_addmethod(c, (method)dbap_info,				"info",			0);
 	class_addmethod(c, (method)object_obex_dumpout,		"dumpout",		0);
+	class_addmethod(c, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	// Add attributes to our class:	
 	CLASS_ATTR_LONG(c,		"dimensions",		0,		t_dbap,	attr_dimensions);
@@ -141,6 +143,7 @@ void *dbap_new(t_symbol *msg, long argc, t_atom *argv)
 		x->view_info.type = gensym("char");
 		x->view_info.planecount = 1;
 		x->view_info.dimcount = 2;
+        x->view_info.type = _sym_char;
 		x->view_info.dim[0] = 80;						// x size of the view matrix
 		x->view_info.dim[1] = 60;						// y size of the view matrix
 		x->view_matrix = jit_object_new(ps_jit_matrix, &x->view_info);
@@ -1191,7 +1194,7 @@ void dbap_calculate_view2D(t_dbap *x, long dst, long src)
 	if (!bp)
 		return;
 	
-	sizeX = x->view_info.dim[0];
+	sizeX = x->view_info.dim[0]; // to have a multiple of 16
 	sizeY = x->view_info.dim[1];
 	
 	div_x = (x->attr_view_end.x - x->attr_view_start.x)/double(sizeX);
@@ -1226,7 +1229,9 @@ void dbap_calculate_view2D(t_dbap *x, long dst, long src)
 			val = (unsigned char)(pix*255.);
 			
 			// get cell at (i,j)
-			p = bp + i + (sizeY - j-1)*sizeX;
+            unsigned int rj = (sizeY-1 - j); // needed to reverse Y axe
+            
+            p = bp + (i + rj*sizeX);
 
 			// keep the max
 			if (*((unsigned char *)p) < val)

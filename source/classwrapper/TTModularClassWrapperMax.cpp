@@ -607,6 +607,9 @@ TTErr wrapTTModularClassAsMaxClass(TTSymbol& ttblueClassName, const char* maxCla
 				CLASS_ATTR_STYLE(wrappedMaxClass->maxClass,	"fontFace", 0, "font");
 		}
 	}
+	
+	// standalone support:
+	class_addmethod(wrappedMaxClass->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
 
 	class_addmethod(wrappedMaxClass->maxClass, (method)stdinletinfo,							"inletinfo",			A_CANT, 0);
 	class_addmethod(wrappedMaxClass->maxClass, (method)wrappedModularClass_notify,				"notify",				A_CANT, 0);

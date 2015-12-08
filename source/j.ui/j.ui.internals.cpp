@@ -37,8 +37,8 @@ void ui_register_info(t_ui* obj)
 		obj->uiSubscriber.get("contextAddress", v);
 		obj->viewAddress = v[0];
 		
-		// make a receiver on contextAddress/model:address attribute
-		ui_receiver_create(obj, anObject, gensym("return_model_address"), TTSymbol("model:address"), obj->viewAddress, YES); // YES : we want to deferlow this method
+		// make a viewer on contextAddress/model:address attribute
+		ui_viewer_create(obj, anObject, gensym("return_model_address"), TTSymbol("model:address"), obj->viewAddress, NO, YES); // YES : we want to deferlow this method
 	}
 }
 
@@ -132,7 +132,7 @@ void ui_receiver_destroy_all(t_ui *obj)
 			
 			obj->hash_receivers->getKeys(hk);
 			
-			for (i=0; i<obj->hash_receivers->getSize(); i++) {
+			for (i=0; i<hk.size(); i++) {
 				
 				key = hk[i];
 				if (!obj->hash_receivers->lookup(key, v)) {
@@ -199,35 +199,40 @@ void ui_viewer_destroy(t_ui *obj, TTSymbol name)
 		}
 }
 
-void ui_viewer_destroy_all(t_ui *obj)
+void ui_viewer_destroy_all(t_ui *obj, bool keepModelAddress)
 {
 	TTValue		hk, v, none;
 	TTSymbol	key, viewerAddress;
 	TTUInt8		i;
 	
 	// delete all viewers
-	if (obj->hash_viewers) {
-		
-		if (!obj->hash_viewers->isEmpty()) {
-			
+	if (obj->hash_viewers)
+    {
+		if (!obj->hash_viewers->isEmpty())
+        {
 			obj->hash_viewers->getKeys(hk);
 			
-			for (i=0; i<obj->hash_viewers->getSize(); i++) {
-				
+			for (i=0; i<hk.size(); i++)
+            {
 				key = hk[i];
-				if (!obj->hash_viewers->lookup(key, v)) {
-                    
+                
+                if (key == "model:address" && keepModelAddress)
+                    continue;
+                
+				if (!obj->hash_viewers->lookup(key, v))
+                {
                     TTObject viewer = v[0];
                     viewer.set(kTTSym_address, kTTAdrsEmpty);
                     
                     // Unregister viewer
                     viewerAddress = v[1];
                     MaxApplication.send("ObjectUnregister", viewerAddress, none);
+                    
+                    // remove viewer
+                    obj->hash_viewers->remove(key);
                 }
 			}
 		}
-		delete obj->hash_viewers;
-        obj->hash_viewers = NULL;
 	}
 }
 
@@ -352,6 +357,23 @@ void ui_modelRetExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* 
 	}
 }
 
+void ui_modelClassExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
+{
+    t_ui* obj = (t_ui*)self;
+    t_symobject	*item = NULL;
+    
+    if (obj->modelClass != kTTAdrsEmpty)
+    {
+        // fill item list
+        for (long i=0; i<argc; i++)
+        {
+            TTAddress modelAddress = TTAddress(atom_getsym(argv+i)->s_name).getParent();
+            item = (t_symobject *)symobject_new(gensym((char*)kTTAdrsRoot.appendAddress(modelAddress).c_str()));
+            linklist_append(obj->refmenu_items, item);
+        }
+    }
+}
+
 void ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv)
 {
 	t_ui        *obj = (t_ui*)self;
@@ -470,6 +492,16 @@ void ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
             aReceiver.set(kTTSym_address, obj->modelAddress.appendAttribute(kTTSym_content));
         }
 	}
+}
+
+void ui_return_model_class(TTPtr self, t_symbol *msg, long argc, t_atom* argv)
+{
+    t_ui* obj = (t_ui*)self;
+    
+    if (argc == 1)
+    {
+        obj->modelClass = TTSymbol(atom_getsym(argv)->s_name);
+    }
 }
 
 void ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv)

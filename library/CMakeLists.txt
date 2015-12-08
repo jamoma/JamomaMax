@@ -12,6 +12,7 @@ if ( APPLE )
             HINTS
             /System/Library/Frameworks/
             /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers/
+            /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers
             /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers
             /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Headers)
 	message( STATUS " Files.h have been found here : ${FILE_H_DIR}")
@@ -134,7 +135,7 @@ if(APPLE AND STATIC_TESTING)
 endif()
 
 install(TARGETS ${PROJECT_NAME}
-		DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/support"
+		DESTINATION "${JAMOMAMAX_INSTALL_FOLDER}/Jamoma/support/${SUPPORT_FOLDER}"
 		COMPONENT JamomaMax)
 
 

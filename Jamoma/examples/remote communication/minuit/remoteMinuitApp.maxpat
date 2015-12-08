@@ -2,43 +2,78 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 8,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 693.0, 44.0, 514.0, 657.0 ],
+		"rect" : [ 505.0, 79.0, 549.0, 658.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-6",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 221.0, 276.0, 50.0, 22.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 284.0, 276.0, 239.0, 22.0 ],
+					"style" : "",
+					"text" : "j.parameter decimal_param @type decimal"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-16",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 252.0, 363.0, 219.0, 33.0 ],
-					"presentation_rect" : [ 247.0, 358.5, 0.0, 0.0 ],
+					"style" : "",
 					"text" : "Which allows the control of parameters in myApplication:"
 				}
 
@@ -56,10 +91,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 8,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 6,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 1082.0, 99.0, 236.0, 152.0 ],
@@ -68,30 +104,38 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-8",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 3.0, 103.5, 215.0, 33.0 ],
+									"style" : "",
 									"text" : "This j.modular binds on i-score \n(see i-score.org)"
 								}
 
@@ -99,8 +143,16 @@
 , 							{
 								"box" : 								{
 									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+									"bgfillcolor_angle" : 270.0,
+									"bgfillcolor_autogradient" : 0.79,
+									"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+									"bgfillcolor_color1" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+									"bgfillcolor_color2" : [ 0.685, 0.685, 0.685, 1.0 ],
+									"bgfillcolor_proportion" : 0.39,
+									"bgfillcolor_type" : "gradient",
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"gradient" : 0,
 									"id" : "obj-2",
 									"linecount" : 3,
 									"maxclass" : "message",
@@ -108,7 +160,9 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 10.0, 31.5, 157.0, 45.0 ],
-									"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 13579, name, protocol/setup"
+									"style" : "",
+									"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 13579, name, protocol/setup",
+									"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 								}
 
 							}
@@ -122,6 +176,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 10.0, 8.5, 60.0, 20.0 ],
+									"style" : "",
 									"text" : "loadbang"
 								}
 
@@ -137,6 +192,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 10.0, 83.5, 180.0, 20.0 ],
+									"style" : "",
 									"text" : "j.modular i-score Minuit"
 								}
 
@@ -163,21 +219,16 @@
  ]
 					}
 ,
-					"patching_rect" : [ 439.0, 86.0, 72.0, 24.0 ],
-					"presentation_rect" : [ 437.0, 609.0, 0.0, 0.0 ],
+					"patching_rect" : [ 439.0, 86.0, 72.0, 26.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p i-score",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -187,18 +238,21 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"format" : 6,
 					"id" : "obj-21",
 					"maxclass" : "flonum",
 					"numinlets" : 1,
 					"numoutlets" : 2,
-					"outlettype" : [ "float", "bang" ],
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 252.0, 402.5, 50.0, 20.0 ]
+					"patching_rect" : [ 252.0, 402.5, 50.0, 22.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-12",
@@ -206,8 +260,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 309.5, 402.5, 181.0, 20.0 ],
-					"text" : "j.remote myApplication:/myFloat"
+					"patching_rect" : [ 309.5, 402.5, 189.0, 22.0 ],
+					"style" : "",
+					"text" : "j.remote my_application:/my_float"
 				}
 
 			}
@@ -221,7 +276,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 52.5, 223.5, 72.0, 20.0 ],
+					"patching_rect" : [ 52.5, 223.5, 72.0, 22.0 ],
+					"style" : "",
 					"text" : "loadmess 1"
 				}
 
@@ -234,22 +290,33 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 17.0, 223.5, 20.0, 20.0 ]
+					"patching_rect" : [ 17.0, 223.5, 20.0, 20.0 ],
+					"style" : ""
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.79,
+					"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_color1" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"bgfillcolor_color2" : [ 0.685, 0.685, 0.685, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "gradient",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"gradient" : 0,
 					"id" : "obj-32",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 249.5, 62.0, 18.0 ],
-					"text" : "activity $1"
+					"patching_rect" : [ 17.0, 249.5, 62.0, 22.0 ],
+					"style" : "",
+					"text" : "activity $1",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -266,10 +333,11 @@
 					"patcher" : 					{
 						"fileversion" : 1,
 						"appversion" : 						{
-							"major" : 6,
-							"minor" : 1,
-							"revision" : 8,
-							"architecture" : "x86"
+							"major" : 7,
+							"minor" : 0,
+							"revision" : 6,
+							"architecture" : "x86",
+							"modernui" : 1
 						}
 ,
 						"rect" : [ 644.0, 44.0, 664.0, 853.0 ],
@@ -278,30 +346,37 @@
 						"default_fontsize" : 12.0,
 						"default_fontface" : 0,
 						"default_fontname" : "Arial",
-						"gridonopen" : 0,
+						"gridonopen" : 1,
 						"gridsize" : [ 15.0, 15.0 ],
-						"gridsnaponopen" : 0,
+						"gridsnaponopen" : 1,
+						"objectsnaponopen" : 1,
 						"statusbarvisible" : 2,
 						"toolbarvisible" : 1,
+						"lefttoolbarpinned" : 0,
+						"toptoolbarpinned" : 0,
+						"righttoolbarpinned" : 0,
+						"bottomtoolbarpinned" : 0,
+						"toolbars_unpinned_last_save" : 0,
+						"tallnewobj" : 0,
 						"boxanimatetime" : 200,
-						"imprint" : 0,
 						"enablehscroll" : 1,
 						"enablevscroll" : 1,
 						"devicewidth" : 0.0,
 						"description" : "",
 						"digest" : "",
 						"tags" : "",
+						"style" : "",
+						"subpatcher_template" : "",
 						"boxes" : [ 							{
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-27",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 251.5, 188.0, 106.0, 20.0 ],
-									"presentation_rect" : [ 219.5, 190.0, 0.0, 0.0 ],
+									"style" : "",
 									"text" : "or with a j.remote:"
 								}
 
@@ -310,13 +385,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-25",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 309.5, 133.0, 150.0, 20.0 ],
-									"presentation_rect" : [ 311.0, 132.0, 0.0, 0.0 ],
+									"style" : "",
 									"text" : "with messages:"
 								}
 
@@ -331,6 +405,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 178.0, 255.0, 161.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?get /myInt"
 								}
 
@@ -344,6 +419,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 93.0, 140.0, 20.0 ],
+									"style" : "",
 									"text" : "udpsend 127.0.0.1 7001"
 								}
 
@@ -358,6 +434,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
 									"patching_rect" : [ 10.0, 698.0, 73.0, 20.0 ],
+									"style" : "",
 									"text" : "route Minuit"
 								}
 
@@ -372,7 +449,8 @@
 									"numoutlets" : 3,
 									"outlettype" : [ "", "", "" ],
 									"patching_rect" : [ 10.0, 674.5, 137.0, 20.0 ],
-									"text" : "j.receive /:activity/in"
+									"style" : "",
+									"text" : "j.receive /:monitor/in"
 								}
 
 							}
@@ -381,13 +459,13 @@
 									"fontface" : 1,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-7",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 6.0, 662.0, 33.0 ],
+									"style" : "",
 									"text" : "This is an overview of all the Minuit requests. All of this is happening under the hood for the end user  in normal usage, though, for debugging reasons, it can be important to understand how Minuit works."
 								}
 
@@ -403,6 +481,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 88.0, 721.0, 81.0, 20.0 ],
+									"style" : "",
 									"text" : "loadmess set"
 								}
 
@@ -411,12 +490,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-19",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 472.0, 493.0, 150.0, 20.0 ],
+									"style" : "",
 									"text" : "Observe value changes"
 								}
 
@@ -425,13 +504,13 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-12",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 417.0, 419.0, 224.0, 33.0 ],
+									"style" : "",
 									"text" : "Observe the creations and destructions of objects in myApplication"
 								}
 
@@ -440,12 +519,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-57",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 416.0, 150.0, 20.0 ],
+									"style" : "",
 									"text" : "Listen to myApplication"
 								}
 
@@ -454,12 +533,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-56",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 323.0, 150.0, 20.0 ],
+									"style" : "",
 									"text" : "Explore myApplication"
 								}
 
@@ -468,12 +547,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-55",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 227.0, 150.0, 20.0 ],
+									"style" : "",
 									"text" : "Ask to myApplication"
 								}
 
@@ -482,12 +561,12 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-54",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 154.0, 150.0, 20.0 ],
+									"style" : "",
 									"text" : "Control myApplication"
 								}
 
@@ -497,12 +576,12 @@
 									"fontface" : 1,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-52",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 51.0, 304.0, 20.0 ],
+									"style" : "",
 									"text" : "Requests from remoteMinuitApp to myApplication"
 								}
 
@@ -512,12 +591,12 @@
 									"fontface" : 1,
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-51",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 654.5, 382.0, 20.0 ],
+									"style" : "",
 									"text" : "Answers from myApplication to the request of remoteMinuitApp"
 								}
 
@@ -527,13 +606,12 @@
 									"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
-									"frgb" : 0.0,
 									"id" : "obj-49",
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 10.0, 752.0, 626.0, 20.0 ],
-									"text" : "myApplication:listen /myInt:life delete",
+									"style" : "",
 									"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 								}
 
@@ -547,6 +625,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 165.0, 606.0, 53.0, 20.0 ],
+									"style" : "",
 									"text" : "s to.udp"
 								}
 
@@ -561,6 +640,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 209.0, 568.0, 240.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?listen /mySymbol disable"
 								}
 
@@ -574,6 +654,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 165.0, 377.0, 53.0, 20.0 ],
+									"style" : "",
 									"text" : "s to.udp"
 								}
 
@@ -587,6 +668,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 165.0, 286.0, 53.0, 20.0 ],
+									"style" : "",
 									"text" : "s to.udp"
 								}
 
@@ -601,6 +683,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 345.0, 351.0, 233.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?namespace /mySymbol"
 								}
 
@@ -615,6 +698,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 209.0, 436.0, 203.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?listen /:life disable"
 								}
 
@@ -629,6 +713,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 209.0, 505.0, 227.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?listen /myFloat disable"
 								}
 
@@ -643,6 +728,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 209.0, 549.0, 238.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?listen /mySymbol enable"
 								}
 
@@ -657,6 +743,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 209.0, 485.0, 225.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?listen /myFloat enable"
 								}
 
@@ -671,6 +758,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 209.0, 416.0, 201.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?listen /:life enable"
 								}
 
@@ -685,6 +773,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 345.0, 324.0, 219.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?namespace /myFloat"
 								}
 
@@ -699,6 +788,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 165.0, 324.0, 177.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?namespace /"
 								}
 
@@ -713,6 +803,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 361.0, 255.0, 275.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?get /mySymbol:repetitionsFilter"
 								}
 
@@ -727,6 +818,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 345.0, 228.0, 187.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?get /mySymbol"
 								}
 
@@ -741,6 +833,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 165.0, 228.0, 174.0, 18.0 ],
+									"style" : "",
 									"text" : "remoteMinuitApp?get /myFloat"
 								}
 
@@ -755,6 +848,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 10.0, 721.0, 74.0, 20.0 ],
+									"style" : "",
 									"text" : "prepend set"
 								}
 
@@ -763,13 +857,15 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"format" : 6,
 									"id" : "obj-14",
 									"maxclass" : "flonum",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "float", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 240.0, 133.0, 50.0, 20.0 ]
+									"patching_rect" : [ 240.0, 133.0, 50.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -777,13 +873,15 @@
 								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
+									"format" : 6,
 									"id" : "obj-13",
 									"maxclass" : "flonum",
 									"numinlets" : 1,
 									"numoutlets" : 2,
-									"outlettype" : [ "float", "bang" ],
+									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 165.0, 133.0, 50.0, 20.0 ]
+									"patching_rect" : [ 165.0, 133.0, 50.0, 20.0 ],
+									"style" : ""
 								}
 
 							}
@@ -797,6 +895,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 10.0, 71.0, 51.0, 20.0 ],
+									"style" : "",
 									"text" : "r to.udp"
 								}
 
@@ -811,6 +910,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 461.0, 155.0, 140.0, 18.0 ],
+									"style" : "",
 									"text" : "/mySymbol takes it easy"
 								}
 
@@ -825,6 +925,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 369.0, 155.0, 90.0, 18.0 ],
+									"style" : "",
 									"text" : "/mySymbol foo"
 								}
 
@@ -839,6 +940,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 240.0, 155.0, 127.0, 18.0 ],
+									"style" : "",
 									"text" : "/myFloat $1 ramp 500"
 								}
 
@@ -853,6 +955,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 165.0, 155.0, 73.0, 18.0 ],
+									"style" : "",
 									"text" : "/myFloat $1"
 								}
 
@@ -866,6 +969,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 165.0, 186.0, 53.0, 20.0 ],
+									"style" : "",
 									"text" : "s to.udp"
 								}
 
@@ -1108,20 +1212,16 @@
  ]
 					}
 ,
-					"patching_rect" : [ 439.0, 62.0, 67.0, 24.0 ],
+					"patching_rect" : [ 439.0, 62.0, 67.0, 26.0 ],
 					"saved_object_attributes" : 					{
-						"default_fontface" : 0,
-						"default_fontname" : "Arial",
-						"default_fontsize" : 12.0,
 						"description" : "",
 						"digest" : "",
-						"fontface" : 0,
-						"fontname" : "Arial",
-						"fontsize" : 12.0,
 						"globalpatchername" : "",
+						"style" : "",
 						"tags" : ""
 					}
 ,
+					"style" : "",
 					"text" : "p Minuit",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -1131,13 +1231,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-11",
 					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 210.0, 441.0, 303.0, 60.0 ],
+					"style" : "",
 					"text" : "The local view below can be used:\n- to see  that the model is actually controlled remotely\n- to change value here and see that the remote view is also updated."
 				}
 
@@ -1146,14 +1246,22 @@
 				"box" : 				{
 					"annotation" : "none",
 					"args" : [ "/filter" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-7",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "equalizer~.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 210.0, 526.5, 150.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 150.0, 105.0 ]
+					"patching_rect" : [ 210.0, 526.5, 300.0, 105.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -1163,7 +1271,8 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 591.0, 45.0, 45.0 ]
+					"patching_rect" : [ 15.0, 591.0, 45.0, 45.0 ],
+					"style" : ""
 				}
 
 			}
@@ -1176,7 +1285,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 119.0, 512.0, 61.0, 19.0 ],
+					"patching_rect" : [ 119.0, 512.0, 61.0, 21.0 ],
+					"style" : "",
 					"text" : "saw~ 330"
 				}
 
@@ -1190,7 +1300,8 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 15.0, 512.0, 52.0, 19.0 ],
+					"patching_rect" : [ 15.0, 512.0, 52.0, 21.0 ],
+					"style" : "",
 					"text" : "tri~ 220"
 				}
 
@@ -1206,7 +1317,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 15.0, 539.5, 123.0, 33.0 ],
+					"patching_rect" : [ 15.0, 539.5, 123.0, 35.0 ],
+					"style" : "",
 					"text" : "equalizer~.model filter"
 				}
 
@@ -1215,13 +1327,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-53",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 301.0, 122.5, 142.0, 33.0 ],
+					"style" : "",
 					"text" : "write the namespace of remoteMinuitApplication"
 				}
 
@@ -1230,13 +1342,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-46",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 17.0, 389.5, 215.0, 33.0 ],
+					"style" : "",
 					"text" : "This j.modular binds on myApplication (see in j.modular.maxhelp)"
 				}
 
@@ -1245,12 +1357,12 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-45",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 17.0, 195.5, 320.0, 20.0 ],
+					"style" : "",
 					"text" : "This j.modular exposes this patch on the Jamoma network"
 				}
 
@@ -1259,13 +1371,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-44",
 					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 441.0, 196.0, 60.0 ],
+					"style" : "",
 					"text" : "The remoteMinuitApp has an equalizer~ model you can control remotely from an equalizer~ view in myApplication."
 				}
 
@@ -1273,15 +1385,25 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.79,
+					"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_color1" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+					"bgfillcolor_color2" : [ 0.685, 0.685, 0.685, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "gradient",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"gradient" : 0,
 					"id" : "obj-40",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 200.0, 130.0, 101.0, 18.0 ],
-					"text" : "namespace/write"
+					"patching_rect" : [ 200.0, 130.0, 101.0, 22.0 ],
+					"style" : "",
+					"text" : "namespace/write",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -1294,7 +1416,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 171.0, 93.5, 112.0, 20.0 ],
+					"patching_rect" : [ 171.0, 93.5, 112.0, 22.0 ],
+					"style" : "",
 					"text" : "loadmess activity 1"
 				}
 
@@ -1302,16 +1425,26 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.79,
+					"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_color1" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"bgfillcolor_color2" : [ 0.685, 0.685, 0.685, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "gradient",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"gradient" : 0,
 					"id" : "obj-31",
 					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 317.5, 157.0, 45.0 ],
-					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7001, name, protocol/setup"
+					"patching_rect" : [ 17.0, 317.5, 157.0, 49.0 ],
+					"style" : "",
+					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7001, name, protocol/setup",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -1324,7 +1457,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 17.0, 294.5, 60.0, 20.0 ],
+					"patching_rect" : [ 17.0, 294.5, 60.0, 22.0 ],
+					"style" : "",
 					"text" : "loadbang"
 				}
 
@@ -1332,6 +1466,7 @@
 , 			{
 				"box" : 				{
 					"color" : [ 0.619608, 0.0, 0.360784, 0.701961 ],
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-29",
@@ -1339,8 +1474,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 369.5, 180.0, 20.0 ],
-					"text" : "j.modular myApplication Minuit"
+					"patching_rect" : [ 17.0, 369.5, 179.0, 22.0 ],
+					"style" : "",
+					"text" : "j.modular my_application Minuit"
 				}
 
 			}
@@ -1349,12 +1485,12 @@
 					"fontface" : 1,
 					"fontname" : "Arial",
 					"fontsize" : 16.0,
-					"frgb" : 0.0,
 					"id" : "obj-10",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 5.0, 505.0, 24.0 ],
+					"style" : "",
 					"text" : "!!! THIS PATCH SHOULD BE OPENED USING MAX RUNTIME !!!"
 				}
 
@@ -1362,16 +1498,26 @@
 , 			{
 				"box" : 				{
 					"bgcolor" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"bgfillcolor_angle" : 270.0,
+					"bgfillcolor_autogradient" : 0.79,
+					"bgfillcolor_color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
+					"bgfillcolor_color1" : [ 0.619608, 0.0, 0.360784, 0.7 ],
+					"bgfillcolor_color2" : [ 0.685, 0.685, 0.685, 1.0 ],
+					"bgfillcolor_proportion" : 0.39,
+					"bgfillcolor_type" : "gradient",
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"gradient" : 0,
 					"id" : "obj-17",
 					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 116.5, 157.0, 45.0 ],
-					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7002, name, protocol/setup"
+					"patching_rect" : [ 17.0, 116.5, 157.0, 49.0 ],
+					"style" : "",
+					"text" : "protocol/setup ip 127.0.0.1, protocol/setup port 7002, name, protocol/setup",
+					"textcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 
 			}
@@ -1384,7 +1530,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 17.0, 93.5, 60.0, 20.0 ],
+					"patching_rect" : [ 17.0, 93.5, 60.0, 22.0 ],
+					"style" : "",
 					"text" : "loadbang"
 				}
 
@@ -1399,7 +1546,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 175.5, 241.0, 20.0 ],
+					"patching_rect" : [ 17.0, 175.5, 241.0, 22.0 ],
+					"style" : "",
 					"text" : "j.modular Minuit @name remoteMinuitApp"
 				}
 
@@ -1408,13 +1556,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-3",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 29.0, 505.0, 33.0 ],
+					"style" : "",
 					"text" : "This is a simulation of a remote application using the Minuit protocol to be controlled by, or to control, get or listen the parameters of myApplication (see in j.modular.maxhelp)"
 				}
 
@@ -1454,6 +1602,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -1552,6 +1709,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1561,48 +1727,43 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-7::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-7::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
 			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-7::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-7::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
-			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-7::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ]
+			"obj-7::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
+			"obj-7::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~.model.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../patchers/components/audio/q2octavebandwith",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
-				"patcherrelativepath" : "../../patchers/components/audio/octavebandwidth2q",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "equalizer~_large.view.maxpat",
-				"bootpath" : "/Users/bltzr/dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/equalizer~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/equalizer~",
+				"name" : "equalizer~.view.large.maxpat",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.q2octavebandwidth.maxpat",
+				"bootpath" : "~/dev/JamomaMax/Jamoma/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1662,7 +1823,8 @@
 				"name" : "j.send.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"embedsnapshot" : 0
 	}
 
 }
