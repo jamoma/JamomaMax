@@ -46,7 +46,7 @@ void		ramp_dsp64(t_ramp *x, t_object *dsp64, short *count, double samplerate, lo
 void		ramp_stop(t_ramp *x);
 void		ramp_int(t_ramp *x, long newCurrentValue);
 void		ramp_float(t_ramp *x, double newCurrentValue);
-void		ramp_list(t_ramp *x, double endValue, double time);
+void		ramp_list(t_ramp *x, t_symbol* msg, long argc, t_atom *argv);
 t_max_err	ramp_setMode(t_ramp *x, void *attr, long argc, t_atom *argv);
 
 
@@ -71,7 +71,7 @@ int C74_EXPORT main(void)
 
     class_addmethod(c, (method)ramp_int,				"int",          A_FLOAT, 0L);
     class_addmethod(c, (method)ramp_float,				"float",        A_FLOAT, 0L);
-    class_addmethod(c, (method)ramp_list,				"list",         A_FLOAT, A_FLOAT, 0L);
+    class_addmethod(c, (method)ramp_list,				"list",         A_GIMME, 0L);
  	class_addmethod(c, (method)ramp_stop,				"stop",         0L);
  	class_addmethod(c, (method)ramp_dsp,				"dsp",          A_CANT, 0L);
 	class_addmethod(c, (method)ramp_dsp64,				"dsp64",        A_CANT, 0);
@@ -175,10 +175,19 @@ void ramp_float(t_ramp *x, double newCurrentValue)
 	x->ramp->setAttributeValue("startValue", newCurrentValue);
 }
 
-void ramp_list(t_ramp *x, double endValue, double time)
+void ramp_list(t_ramp *x, t_symbol* msg, long argc, t_atom *argv)
 {
-	x->ramp->setAttributeValue("destinationValue", endValue);
-	x->ramp->setAttributeValue("rampTime", time);
+    if (argc == 2)
+    {
+        if (atom_gettype(argv) == A_FLOAT && atom_gettype(argv+1) == A_LONG)
+        {
+            double endValue = atom_getfloat(argv);
+            double time = atom_getlong(argv+1);
+            
+            x->ramp->setAttributeValue("destinationValue", endValue);
+            x->ramp->setAttributeValue("rampTime", time);
+        }
+    }
 }
 
 // Perform (signal) Method
