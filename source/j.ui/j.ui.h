@@ -63,9 +63,11 @@ typedef struct _ui{
 	TTObject            modelMessExplorer;		///< internal TTExplorer object to observe messages
 	TTObject            modelParamExplorer;		///< internal TTExplorer object to observe parameters
 	TTObject            modelRetExplorer;		///< internal TTExplorer object to observe returns
+    TTObject            modelClassExplorer;		///< internal TTExplorer object to observe all models with the same class
 	
 	TTAddress           viewAddress;
 	TTAddress           modelAddress;
+    TTSymbol            modelClass;
 	t_object            *patcherPtr;			///< the patcher in which the external is (ignoring subpatcher)
 	TTSymbol			patcherContext;			///< the patcher context in which the external is (model, view)
 	TTSymbol			patcherClass;			///< the patcher class in which the external is
@@ -187,7 +189,7 @@ void		ui_receiver_destroy_all(t_ui *obj);
 
 void		ui_viewer_create(t_ui *obj, TTObject& returnedViewer, t_symbol *aCallbackMethod, TTSymbol name, TTAddress address, TTBoolean subscribe, TTBoolean deferlow = NO);
 void		ui_viewer_destroy(t_ui *obj, TTSymbol name);
-void		ui_viewer_destroy_all(t_ui *obj);
+void		ui_viewer_destroy_all(t_ui *obj, bool keppModelAddress = YES);
 void		ui_viewer_send(t_ui *obj, TTSymbol name, TTValue v);
 void		ui_viewer_highlight(t_ui *obj, TTSymbol name, TTBoolean s);
 void		ui_viewer_freeze(t_ui *obj, TTSymbol name, TTBoolean f);
@@ -196,11 +198,13 @@ void		ui_explorer_create(t_object *x, TTObject& returnedExplorer, t_symbol *meth
 void		ui_modelMessExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_modelParamExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_modelRetExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_modelClassExplorer_callback(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 void		ui_view_panel_attach(TTPtr self, t_symbol *msg, long argc, t_atom *argv);
 
 void		ui_return_model_address(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_model_init(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
+void		ui_return_model_class(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 void		ui_return_model_content(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
 
 void		ui_return_mute(TTPtr self, t_symbol *msg, long argc, t_atom* argv);
