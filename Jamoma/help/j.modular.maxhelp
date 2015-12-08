@@ -2232,7 +2232,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 57.5, 507.0, 101.0, 22.0 ],
 									"style" : "",
-									"text" : "namespace/build"
+									"text" : "namespace/mirror"
 								}
 
 							}

@@ -10,10 +10,10 @@ configuration: Release
 #shallow_clone: true # clone repository as zip archive
 
 install:
-  - appveyor DownloadFile "http://www.cmake.org/files/v3.3/cmake-3.3.0-rc4-win32-x86.zip"
-  - 7z x cmake-3.3.0-rc4-win32-x86.zip -y > nul
-  - appveyor DownloadFile "http://downloads.sourceforge.net/project/winscp/WinSCP/5.7.5/winscp575automation.zip?r=&ts=1442052864&use_mirror=freefr"
-  - 7z x winscp575automation.zip -y
+  - curl --retry 10 -sO https://cmake.org/files/v3.4/cmake-3.4.1-win32-x86.zip
+  - 7z x cmake-3.4.1-win32-x86.zip -y > nul
+  - curl --retry 10 -sO http://freefr.dl.sourceforge.net/project/winscp/WinSCP/5.7.5/winscp575automation.zip
+  - 7z x winscp575automation.zip -y > nul
 
 platform:
   - Win32

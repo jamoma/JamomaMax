@@ -25,7 +25,7 @@
   <entry App="color/border" TT="ColorBorder"/>
   <entry App="dec" TT="Dec"/>
   <entry App="delete" TT="Delete"/>
-  <entry App="namespace/build" TT="DirectoryBuild"/>
+  <entry App="namespace/mirror" TT="DirectoryBuild"/>
   <entry App="namespace/clear" TT="DirectoryClear"/>
   <entry App="namespace/observe" TT="DirectoryObserve"/>
   <entry App="help/open" TT="HelpOpen"/>
