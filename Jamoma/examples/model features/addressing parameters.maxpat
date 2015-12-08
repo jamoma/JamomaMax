@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 1,
-			"architecture" : "x64",
+			"minor" : 1,
+			"revision" : 0,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 118.0, 206.0, 1510.0, 893.0 ],
+		"rect" : [ 18.0, 79.0, 1510.0, 893.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -51,9 +51,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -409,7 +409,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 369.5, 553.0, 50.0, 22.0 ],
 									"style" : "",
-									"text" : "2."
+									"text" : "0."
 								}
 
 							}
@@ -428,9 +428,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x64",
+											"minor" : 1,
+											"revision" : 0,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -688,13 +688,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 118.0, 232.0, 1510.0, 867.0 ],
+						"rect" : [ 18.0, 105.0, 1510.0, 867.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1063,9 +1063,9 @@
 										"fileversion" : 1,
 										"appversion" : 										{
 											"major" : 7,
-											"minor" : 0,
-											"revision" : 1,
-											"architecture" : "x64",
+											"minor" : 1,
+											"revision" : 0,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1310,24 +1310,6 @@
 									"bubbletextmargin" : 10,
 									"fontname" : "Helvetica Neue",
 									"fontsize" : 12.0,
-									"id" : "obj-13",
-									"linecount" : 4,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 513.5, 746.0, 133.0, 76.0 ],
-									"style" : "",
-									"text" : "different unit for remote control can also be set in remotes",
-									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"bubble" : 1,
-									"bubbletextmargin" : 10,
-									"fontname" : "Helvetica Neue",
-									"fontsize" : 12.0,
 									"id" : "obj-12",
 									"linecount" : 4,
 									"maxclass" : "comment",
@@ -1554,14 +1536,14 @@
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-29",
-									"linecount" : 3,
+									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 4,
 									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 346.0, 760.5, 140.0, 49.0 ],
+									"patching_rect" : [ 346.0, 766.5, 141.0, 35.0 ],
 									"style" : "",
-									"text" : "j.remote /filter-units/gain @dataspace gain @unit linear"
+									"text" : "j.remote /filter-units/gain @unit linear"
 								}
 
 							}
@@ -1593,6 +1575,24 @@
 									"style" : "",
 									"text" : "parameters inside a model can be addressed using different units thanks to j.parameter embedded unit conversion mechanism.\n\nJamoma for Max provides a number of units conversions (called dataspace) features. Checkout j.unit to see a list of all available datdspaces and units.",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbletextmargin" : 10,
+									"fontname" : "Helvetica Neue",
+									"fontsize" : 12.0,
+									"id" : "obj-13",
+									"linecount" : 4,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 513.5, 746.0, 133.0, 76.0 ],
+									"style" : "",
+									"text" : "different unit for remote control can also be set in remotes",
+									"textcolor" : [ 0.3, 0.3, 0.3, 1.0 ]
 								}
 
 							}
@@ -1977,9 +1977,9 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 1,
-							"architecture" : "x64",
+							"minor" : 1,
+							"revision" : 0,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
@@ -2505,70 +2505,63 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-7::obj-7" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-7::obj-26::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-7::obj-26::obj-15" : [ "live.menu", "live.menu", 0 ],
-			"obj-1::obj-26::obj-22" : [ "live.text[1]", "live.text", 0 ],
-			"obj-7::obj-26::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-7::obj-26::obj-22" : [ "live.text", "live.text", 0 ],
-			"obj-7::obj-26::obj-7" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-1::obj-26::obj-19" : [ "live.numbox[9]", "live.numbox", 0 ],
+			"obj-1::obj-26::obj-14" : [ "live.numbox[6]", "live.numbox", 0 ],
 			"obj-1::obj-26::obj-7" : [ "live.numbox[8]", "live.numbox", 0 ],
-			"obj-1::obj-10" : [ "live.gain~[1]", "live.gain~", 0 ],
 			"obj-7::obj-26::obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-1::obj-26::obj-19" : [ "live.numbox[9]", "live.numbox", 0 ],
+			"obj-1::obj-10" : [ "live.gain~[1]", "live.gain~", 0 ],
+			"obj-7::obj-26::obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-7::obj-26::obj-15" : [ "live.menu", "live.menu", 0 ],
 			"obj-1::obj-26::obj-15" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-1::obj-26::obj-12" : [ "live.numbox[7]", "live.numbox[4]", 0 ],
-			"obj-1::obj-5" : [ "linear gain[1]", "dB gain", 0 ],
+			"obj-1::obj-26::obj-22" : [ "live.text[1]", "live.text", 0 ],
+			"obj-7::obj-26::obj-22" : [ "live.text", "live.text", 0 ],
 			"obj-1::obj-2" : [ "linear gain", "linear gain", 0 ],
-			"obj-1::obj-26::obj-14" : [ "live.numbox[6]", "live.numbox", 0 ]
+			"obj-7::obj-7" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-7::obj-26::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-1::obj-5" : [ "linear gain[1]", "dB gain", 0 ],
+			"obj-7::obj-26::obj-7" : [ "live.numbox[5]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "filter~.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/filter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/filter~",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/audio/stereo/eq/filter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
-				"patcherrelativepath" : "../../patchers/components/audio/octavebandwidth2q",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
-				"patcherrelativepath" : "../../patchers/components/audio/q2octavebandwith",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "filter~.view.maxpat",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/audio/stereo/EQ/filter~",
-				"patcherrelativepath" : "../../patchers/modules/audio/stereo/EQ/filter~",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/audio/stereo/eq/filter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_videoplane.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/modules/openGL/geometry/gl_videoplane",
-				"patcherrelativepath" : "../../patchers/modules/openGL/geometry/gl_videoplane",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/openGL/geometry/gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : "../../patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.random.maxpat",
-				"bootpath" : "~/@dev/Jamoma/Implementations/Max/Jamoma/patchers/components/data/random",
-				"patcherrelativepath" : "../../patchers/components/data/random",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/components/data/random",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -2621,7 +2614,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
