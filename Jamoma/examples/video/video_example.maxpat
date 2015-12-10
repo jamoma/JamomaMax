@@ -60,9 +60,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 29.0, 51.0, 160.0, 21.0 ],
+					"patching_rect" : [ 29.0, 51.0, 159.0, 21.0 ],
 					"style" : "",
-					"text" : "source grab, grab/status open"
+					"text" : "source cam, cam/status open"
 				}
 
 			}
@@ -265,145 +265,145 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "edge%.module.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/edge%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/edge%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "edge%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/edge%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/edge%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "edge%.view.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/edge%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/edge%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mblur%.module.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/mblur%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/mblur%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mblur%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/mblur%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/mblur%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mblur%.view.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/mblur%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/mblur%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "op%.module.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/op%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/op%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "op%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/op%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/op%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "op%.view.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/op%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/op%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wake%.module.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/wake%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/wake%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wake%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/wake%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/wake%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "wake%.view.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/fx/wake%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/wake%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.module.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "movie%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "grab%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/sources/grab%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.view.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "input%.ui.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/input%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.module.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/output/window%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.view.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/output/window%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "window%.model.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/models/video/output/window%",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/output/window%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
