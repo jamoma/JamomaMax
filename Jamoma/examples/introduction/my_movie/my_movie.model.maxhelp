@@ -2,31 +2,40 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
+			"major" : 7,
 			"minor" : 1,
-			"revision" : 6,
-			"architecture" : "x86"
+			"revision" : 0,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 15.0, 61.0, 543.0, 598.0 ],
+		"rect" : [ 100.0, 100.0, 543.0, 598.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
 					"border" : 0,
@@ -47,14 +56,22 @@
 				"box" : 				{
 					"annotation" : "an interface for a movie model",
 					"args" : [ "movie.2" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-29",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "myMovie.view.maxpat",
+					"name" : "my_movie.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 236.5, 404.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 15.0, 15.0, 300.0, 105.0 ]
+					"presentation_rect" : [ 15.0, 15.0, 300.0, 105.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -67,7 +84,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 446.0, 166.0, 18.0 ],
+					"patching_rect" : [ 6.0, 446.0, 166.0, 22.0 ],
+					"style" : "",
 					"text" : "preset:recall \"the last preset\""
 				}
 
@@ -81,7 +99,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 425.0, 166.0, 18.0 ],
+					"patching_rect" : [ 6.0, 425.0, 166.0, 22.0 ],
+					"style" : "",
 					"text" : "preset:recall \"another preset\""
 				}
 
@@ -95,7 +114,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 404.0, 119.0, 18.0 ],
+					"patching_rect" : [ 6.0, 404.0, 119.0, 22.0 ],
+					"style" : "",
 					"text" : "preset:recall default"
 				}
 
@@ -121,8 +141,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 6.0, 472.0, 156.0, 20.0 ],
-					"text" : "myMovie.model movie.2"
+					"patching_rect" : [ 6.0, 472.0, 147.0, 22.0 ],
+					"style" : "",
+					"text" : "my_movie.model movie.2"
 				}
 
 			}
@@ -135,7 +156,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 243.0, 166.0, 18.0 ],
+					"patching_rect" : [ 6.0, 243.0, 166.0, 22.0 ],
+					"style" : "",
 					"text" : "preset:recall \"the last preset\""
 				}
 
@@ -149,7 +171,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 222.0, 166.0, 18.0 ],
+					"patching_rect" : [ 6.0, 222.0, 166.0, 22.0 ],
+					"style" : "",
 					"text" : "preset:recall \"another preset\""
 				}
 
@@ -163,7 +186,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 6.0, 201.0, 119.0, 18.0 ],
+					"patching_rect" : [ 6.0, 201.0, 119.0, 22.0 ],
+					"style" : "",
 					"text" : "preset:recall default"
 				}
 
@@ -172,12 +196,12 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-9",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 361.0, 101.5, 150.0, 20.0 ],
+					"style" : "",
 					"text" : "one model to rule them all"
 				}
 
@@ -191,7 +215,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 472.5, 168.5, 64.0, 20.0 ],
+					"patching_rect" : [ 472.5, 168.5, 64.0, 22.0 ],
+					"style" : "",
 					"text" : "j.model"
 				}
 
@@ -200,14 +225,22 @@
 				"box" : 				{
 					"annotation" : "an interface for a movie model",
 					"args" : [ "movie.1" ],
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-6",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "myMovie.view.maxpat",
+					"name" : "my_movie.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 236.5, 201.0, 300.0, 105.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ]
+					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
@@ -232,8 +265,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 6.0, 269.0, 156.0, 20.0 ],
-					"text" : "myMovie.model movie.1"
+					"patching_rect" : [ 6.0, 269.0, 147.0, 22.0 ],
+					"style" : "",
+					"text" : "my_movie.model movie.1"
 				}
 
 			}
@@ -312,23 +346,20 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "myMovie.model.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
-				"patcherrelativepath" : ".",
+				"name" : "my_movie.model.maxpat",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/examples/introduction/my_movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "myMovie.view.maxpat",
-				"bootpath" : "/Users/WALL-E/Documents/Jamoma/Implementations/Max/Jamoma/examples/Modular0.6_overview/movie",
-				"patcherrelativepath" : ".",
+				"name" : "my_movie.view.maxpat",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/examples/introduction/my_movie",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "helpdetails.js",
-				"bootpath" : "/Applications/Max 6.1/Cycling '74/help-resources",
-				"patcherrelativepath" : "../../../../../../../../../../Applications/Max 6.1/Cycling '74/help-resources",
+				"bootpath" : "C74:/help/resources",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
@@ -372,7 +403,8 @@
 				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }

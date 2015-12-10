@@ -250,7 +250,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 15.0, 353.0, 254.0, 60.0 ],
 					"style" : "",
-					"text" : "The j.out handles signal outputing.\n\nNotice a /out level is automatically created when a j.out is in added to a model"
+					"text" : "The j.out handles signal outputing.\n\nNotice a data/out level is automatically created when a j.out is in added to a model"
 				}
 
 			}
@@ -1384,7 +1384,33 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.init.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.message.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.return.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
