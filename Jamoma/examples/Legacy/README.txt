@@ -1,1 +1,0 @@
-Here you will find some old examples for your own curiosity pleasure. Please note that most of these will not be useful as these are part of history. Some of these have not been ported from Jamoma 0.5.x, and these will not work.
