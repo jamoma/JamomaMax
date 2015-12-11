@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 56.0, 79.0, 1201.0, 855.0 ],
+		"rect" : [ 56.0, 79.0, 1185.0, 855.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -57,7 +57,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 56.0, 105.0, 1201.0, 829.0 ],
+						"rect" : [ 0.0, 26.0, 1185.0, 829.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -96,7 +96,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 462.0, 312.0, 91.0, 22.0 ],
-									"presentation_rect" : [ 583.0, 273.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "loadmess set 1"
 								}
@@ -111,7 +110,6 @@
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 566.0, 338.0, 20.0, 20.0 ],
-									"presentation_rect" : [ 619.0, 394.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -126,7 +124,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 566.0, 368.0, 92.0, 22.0 ],
-									"presentation_rect" : [ 619.0, 424.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "data/bypass $1"
 								}
@@ -141,7 +138,6 @@
 									"outlettype" : [ "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 462.0, 338.0, 20.0, 20.0 ],
-									"presentation_rect" : [ 583.0, 299.0, 0.0, 0.0 ],
 									"style" : ""
 								}
 
@@ -156,7 +152,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 462.0, 368.0, 85.0, 22.0 ],
-									"presentation_rect" : [ 583.0, 329.0, 0.0, 0.0 ],
 									"style" : "",
 									"text" : "data/active $1"
 								}
@@ -678,7 +673,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 1201.0, 829.0 ],
+						"rect" : [ 56.0, 105.0, 1185.0, 829.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -749,10 +744,10 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 626.0, 425.0, 165.0, 33.0 ],
+									"patching_rect" : [ 625.5, 425.0, 165.0, 33.0 ],
 									"prototypename" : "Jamoma.light",
 									"style" : "",
-									"text" : "Gain value is set as midi unit where 100 equals unity gain",
+									"text" : "Gain value is set as db unit where 0 equals unity gain",
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 								}
 
@@ -861,6 +856,8 @@
 											"parameter_longname" : "live.slider[1]",
 											"parameter_shortname" : "live.slider",
 											"parameter_type" : 0,
+											"parameter_mmin" : -96.0,
+											"parameter_mmax" : 10.0,
 											"parameter_initial_enable" : 1,
 											"parameter_initial" : [ 100 ],
 											"parameter_unitstyle" : 0
@@ -1219,63 +1216,63 @@
 		"lines" : [  ],
 		"parameters" : 		{
 			"obj-7::obj-14" : [ "live.slider", "live.slider", 0 ],
-			"obj-7::obj-2::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-7::obj-2::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-7::obj-2::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-7::obj-2::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-7::obj-19" : [ "live.slider[1]", "live.slider", 0 ],
 			"obj-7::obj-2::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
+			"obj-7::obj-2::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-7::obj-2::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-2::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-7::obj-2::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-7::obj-2::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-7::obj-2::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-7::obj-5" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-7::obj-2::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-7::obj-2::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ]
+			"obj-7::obj-2::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "equalizer~.model.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/audio/stereo/eq/equalizer",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/components/audio/octavebandwidth2q",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/audio/stereo/eq/equalizer",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "equalizer~.view.large.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/audio/stereo/eq/equalizer",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/eq/equalizer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/components/audio/q2octavebandwith",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "plur%.model.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/video/fx/plur%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/plur%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "plur%.view.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/video/fx/plur%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/plur%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "television%.model.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/video/fx/television%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/television%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -1287,7 +1284,7 @@
 			}
 , 			{
 				"name" : "television%.view.maxpat",
-				"bootpath" : "~/Documents/Max 7/Packages/Jamoma 1.0.0/patchers/models/video/fx/television%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/television%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
