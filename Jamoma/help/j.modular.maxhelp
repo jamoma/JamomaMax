@@ -92,7 +92,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 15.0, 270.0, 154.0, 35.0 ],
 									"style" : "",
-									"text" : "protocol/setup ip localhost, protocol/setup port 9999"
+									"text" : "protocol/setup ip localhost, protocol/setup port 8002"
 								}
 
 							}
@@ -116,7 +116,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 15.0, 314.0, 159.0, 22.0 ],
+									"patching_rect" : [ 15.0, 313.0, 159.0, 22.0 ],
 									"style" : "",
 									"text" : "j.modular my_remote Minuit"
 								}
@@ -132,7 +132,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 15.0, 137.0, 154.0, 35.0 ],
 									"style" : "",
-									"text" : "protocol/setup ip localhost, protocol/setup port 8888"
+									"text" : "protocol/setup ip localhost, protocol/setup port 8001"
 								}
 
 							}
@@ -263,7 +263,7 @@
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 400.0, 587.0, 150.0, 22.0 ],
 									"style" : "",
-									"text" : "udpreceive localhost 9999"
+									"text" : "udpreceive localhost 8002"
 								}
 
 							}
@@ -321,7 +321,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 400.0, 525.0, 137.0, 22.0 ],
 									"style" : "",
-									"text" : "udpsend localhost 8888"
+									"text" : "udpsend localhost 8001"
 								}
 
 							}
@@ -333,7 +333,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 400.0, 342.0, 137.0, 22.0 ],
 									"style" : "",
-									"text" : "udpsend localhost 8888"
+									"text" : "udpsend localhost 8001"
 								}
 
 							}
@@ -345,7 +345,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 400.0, 254.0, 137.0, 22.0 ],
 									"style" : "",
-									"text" : "udpsend localhost 8888"
+									"text" : "udpsend localhost 8001"
 								}
 
 							}
@@ -557,7 +557,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 400.0, 143.5, 137.0, 22.0 ],
 									"style" : "",
-									"text" : "udpsend localhost 8888"
+									"text" : "udpsend localhost 8001"
 								}
 
 							}
@@ -829,16 +829,98 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-21",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 167.0, 256.5, 24.0, 24.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "2",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-20",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 47.0, 75.0, 24.0, 24.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "1",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"bubble" : 1,
-									"bubbleside" : 2,
-									"id" : "obj-13",
+									"id" : "obj-15",
 									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 17.5, 7.0, 218.0, 52.0 ],
+									"patching_rect" : [ 201.0, 250.0, 186.0, 37.0 ],
 									"style" : "",
-									"text" : "Enable WebSocket communication to watch a jamoma patcher from the web.",
+									"text" : "Connect to the jamoma patch using any web browser",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"id" : "obj-6",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 201.0, 90.5, 202.0, 51.0 ],
+									"style" : "",
+									"text" : "The jamoma patch is exposed to any client thru a given html page in media/html_interface folder",
+									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbleside" : 2,
+									"id" : "obj-13",
+									"linecount" : 3,
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 17.5, 7.0, 213.0, 66.0 ],
+									"style" : "",
+									"text" : "Enable WebSocket communication to control and watch a jamoma patch from the web.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -850,33 +932,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 17.5, 66.0, 24.0, 24.0 ],
+									"patching_rect" : [ 17.5, 75.0, 24.0, 24.0 ],
 									"style" : ""
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-10",
-									"linecount" : 3,
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 146.0, 373.5, 300.0, 47.0 ],
-									"style" : "",
-									"text" : "we setup our local application to return an example html page (in \"example/remote communication\" folder) when a client wants to connect to ourself"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-3",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 168.0, 319.5, 357.0, 20.0 ],
-									"style" : "",
-									"text" : "Setup the local application to be controlled remotly from the web :"
 								}
 
 							}
@@ -1085,7 +1142,7 @@
  ]
 									}
 ,
-									"patching_rect" : [ 17.5, 96.0, 179.0, 22.0 ],
+									"patching_rect" : [ 17.5, 105.0, 179.0, 22.0 ],
 									"saved_object_attributes" : 									{
 										"description" : "",
 										"digest" : "",
@@ -1101,24 +1158,12 @@
 							}
 , 							{
 								"box" : 								{
-									"id" : "obj-17",
-									"maxclass" : "comment",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"patching_rect" : [ 574.5, 86.0, 356.0, 20.0 ],
-									"style" : "",
-									"text" : "Connect to our local application via its own html representation :"
-								}
-
-							}
-, 							{
-								"box" : 								{
 									"id" : "obj-16",
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 574.5, 115.5, 143.0, 22.0 ],
+									"patching_rect" : [ 17.5, 257.5, 143.0, 22.0 ],
 									"style" : "",
 									"text" : "url http://127.0.0.1:9001"
 								}
@@ -1132,7 +1177,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 574.5, 154.5, 387.0, 266.0 ],
+									"patching_rect" : [ 17.5, 296.5, 394.5, 352.0 ],
 									"rendermode" : 0,
 									"url" : "http://127.0.0.1:9001/"
 								}
@@ -1146,7 +1191,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 17.5, 122.5, 158.0, 35.0 ],
+									"patching_rect" : [ 17.5, 131.5, 158.0, 35.0 ],
 									"style" : "",
 									"text" : "protocol/setup htmlPath $1, protocol/setup port 9001"
 								}
@@ -1159,7 +1204,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 17.5, 162.5, 137.0, 22.0 ],
+									"patching_rect" : [ 17.5, 171.5, 137.0, 22.0 ],
 									"style" : "",
 									"text" : "j.modular WebSocket"
 								}
@@ -1189,7 +1234,7 @@
 									"destination" : [ "obj-7", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 27.0, 154.0, 27.0, 154.0 ],
+									"midpoints" : [ 27.0, 163.0, 27.0, 163.0 ],
 									"source" : [ "obj-5", 0 ]
 								}
 
@@ -1329,7 +1374,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"annotation" : "none",
@@ -1849,6 +1893,84 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-5",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 506.0, 427.0, 24.0, 24.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "3",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-4",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 506.0, 293.5, 24.0, 24.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "2",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+									"fontface" : 1,
+									"fontname" : "Helvetica Neue Bold",
+									"id" : "obj-2",
+									"ignoreclick" : 1,
+									"legacytextcolor" : 1,
+									"maxclass" : "textbutton",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 221.0, 67.0, 24.0, 24.0 ],
+									"rounded" : 180.0,
+									"style" : "",
+									"text" : "1",
+									"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+									"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+									"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"usebgoncolor" : 1,
+									"usetextovercolor" : 1
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"hidden" : 1,
 									"id" : "obj-3",
 									"maxclass" : "newobj",
@@ -1942,7 +2064,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 612.5, 208.5, 177.0, 52.0 ],
 									"style" : "",
-									"text" : "Link incoming MIDI messages to any  registered j.parameter",
+									"text" : "Link incoming MIDI messages to any registered j.parameter",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -1955,32 +2077,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"patching_rect" : [ 386.0, 401.0, 60.0, 22.0 ],
-									"style" : "",
-									"text" : "loadbang"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-5",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 385.0, 269.0, 60.0, 22.0 ],
-									"style" : "",
-									"text" : "loadbang"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"id" : "obj-4",
-									"maxclass" : "newobj",
-									"numinlets" : 1,
-									"numoutlets" : 1,
-									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 15.0, 59.0, 60.0, 22.0 ],
 									"style" : "",
 									"text" : "loadbang"
 								}
@@ -2023,12 +2119,13 @@
 									"bubble" : 1,
 									"bubbleside" : 2,
 									"id" : "obj-14",
+									"linecount" : 2,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.0, 14.0, 196.0, 39.0 ],
+									"patching_rect" : [ 15.0, 14.0, 200.0, 52.0 ],
 									"style" : "",
-									"text" : "Expose our patch as a MIDI input",
+									"text" : "Expose a jamoma patch as a MIDI input",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2118,7 +2215,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 15.0, 86.5, 201.0, 22.0 ],
+									"patching_rect" : [ 15.0, 68.0, 201.0, 22.0 ],
 									"style" : "",
 									"text" : "protocol/setup input to_my_patcher"
 								}
@@ -2194,7 +2291,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 15.0, 117.0, 90.0, 22.0 ],
+									"patching_rect" : [ 15.0, 98.5, 90.0, 22.0 ],
 									"style" : "",
 									"text" : "j.modular MIDI"
 								}
@@ -2239,15 +2336,6 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-39", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-4", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
 									"destination" : [ "obj-45", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -2271,15 +2359,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-44", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-53", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-5", 0 ]
 								}
 
 							}
@@ -2550,9 +2629,9 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 177.0, 585.0, 169.0, 51.0 ],
+									"patching_rect" : [ 177.0, 585.0, 173.0, 51.0 ],
 									"style" : "",
-									"text" : "receive messages emited from any opened jamoma patchers.",
+									"text" : "Receive messages emited from any opened jamoma patches.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2567,7 +2646,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 177.0, 500.0, 169.0, 51.0 ],
 									"style" : "",
-									"text" : "receive messages dedicated to control any opened jamoma patchers.",
+									"text" : "Receive messages dedicated to control any opened jamoma patches.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2610,7 +2689,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 8.0, 68.0, 447.0, 33.0 ],
 									"style" : "",
-									"text" : "Control or observe a jamoma patch remotely using many protocols such as OSC, MIDI, Websocket and Minuit. "
+									"text" : "Control or watch a jamoma patch remotely using many protocols such as OSC, MIDI, Websocket and Minuit. "
 								}
 
 							}
@@ -2705,7 +2784,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 147.0, 293.0, 153.0, 64.0 ],
 									"style" : "",
-									"text" : "With one argument, j.modular allow to control any opened jamoma patchers.",
+									"text" : "With one argument, j.modular allow to control any opened jamoma patches.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2773,7 +2852,7 @@
 									"numoutlets" : 0,
 									"patching_rect" : [ 89.0, 425.0, 166.0, 51.0 ],
 									"style" : "",
-									"text" : "enable listening of messages from/to any opened jamoma patchers.",
+									"text" : "Enable listening of messages from/to any opened jamoma patches.",
 									"textcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
 								}
 
@@ -2982,16 +3061,16 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-76::obj-4::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-76::obj-4::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-76::obj-4::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-76::obj-4::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-76::obj-4::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-76::obj-4::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-76::obj-8::obj-13" : [ "live.dial[3]", "Sample rate", 0 ],
+			"obj-76::obj-8::obj-14" : [ "live.dial[2]", "Bit depth", 0 ],
 			"obj-76::obj-4::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-76::obj-4::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-76::obj-4::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-76::obj-4::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-76::obj-4::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-76::obj-4::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
-			"obj-76::obj-8::obj-14" : [ "live.dial[2]", "Bit depth", 0 ]
+			"obj-76::obj-8::obj-13" : [ "live.dial[3]", "Sample rate", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{

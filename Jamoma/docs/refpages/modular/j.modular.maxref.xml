@@ -5,7 +5,7 @@
 <!--Data marked TEXT_HERE, INLET_TYPE, OUTLET_TYPE, ARG_NAME and ARG_TYPE need to be filled in-->
 <c74object name="j.modular" module="" category="Jamoma">
 	<digest>
-		TEXT_HERE
+		"Control or watch a jamoma patch remotely using many protocols such as OSC, MIDI, Websocket and Minuit."
 	</digest>
 	<description>
 		TEXT_HERE
@@ -203,8 +203,6 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="bogus">
-			TEXT_HERE
-		</seealso>
+		<seealso name="j.minuit_device"/>
 	</seealsolist>
 </c74object>
