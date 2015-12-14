@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 6,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -79,9 +79,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 76.0, 495.5, 240.0, 40.0 ],
+					"patching_rect" : [ 72.0, 495.5, 244.0, 40.0 ],
 					"style" : "",
-					"text" : "A model to be controled remotely using application_with_views.maxpat"
+					"text" : "A model to be controled remotely using \"application with views.maxpat\""
 				}
 
 			}
@@ -93,7 +93,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 6.0, 421.0, 20.0 ],
 					"style" : "",
-					"text" : "You need to open application_with_views.maxpat with another Max instance."
+					"text" : "You need to open \"application with views.maxpat\" with another Max instance."
 				}
 
 			}
@@ -374,7 +374,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0,
+		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "jpatcher001",
 				"parentstyle" : "",

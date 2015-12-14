@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 6,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -231,7 +231,7 @@
 				"box" : 				{
 					"allowdrag" : 0,
 					"id" : "obj-11",
-					"items" : [ "filter", ",", "filter/frequency", ",", "filter/type", ",", "player", ",", "player/end", ",", "player/gain", ",", "player/play" ],
+					"items" : [ "", ",", "filter", ",", "filter/frequency", ",", "filter/type", ",", "player", ",", "player/end", ",", "player/gain", ",", "player/play" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -345,7 +345,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 20.0, 21.0, 304.0, 20.0 ],
 					"style" : "",
-					"text" : "You need to open application_with_processing.maxpat."
+					"text" : "You need to open \"application with processing.maxpat\"."
 				}
 
 			}
@@ -592,7 +592,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0,
+		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "jpatcher001",
 				"parentstyle" : "",

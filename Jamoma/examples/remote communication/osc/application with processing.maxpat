@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 6,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -44,7 +44,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 42.0, 22.0, 261.0, 20.0 ],
 					"style" : "",
-					"text" : "You need to open application_with_gui.maxpat."
+					"text" : "You need to open \"application with gui.maxpat\"."
 				}
 
 			}
@@ -762,7 +762,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0,
+		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "jpatcher001",
 				"parentstyle" : "",

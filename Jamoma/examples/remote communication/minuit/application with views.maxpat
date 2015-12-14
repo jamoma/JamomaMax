@@ -74,7 +74,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 124.0, 431.0, 229.0, 40.0 ],
 					"style" : "",
-					"text" : "Explore \"application_with_models\" to mirro its namespace"
+					"text" : "Explore \"application_with_models\" to mirror its namespace"
 				}
 
 			}
@@ -117,7 +117,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 11.0, 545.0, 229.0, 40.0 ],
 					"style" : "",
-					"text" : "Control remotely  application_with_models.maxpat"
+					"text" : "Control remotely  \"application with models.maxpat\""
 				}
 
 			}
@@ -161,7 +161,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 5.0, 6.0, 427.0, 20.0 ],
 					"style" : "",
-					"text" : "You need to open application_with_models.maxpat with another Max instance."
+					"text" : "You need to open \"application with models.maxpat\" with another Max instance."
 				}
 
 			}
@@ -351,14 +351,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-7::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-7::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-7::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
-			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-7::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-7::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-7::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ]
+			"obj-7::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
