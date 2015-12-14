@@ -176,7 +176,7 @@ int C74_EXPORT main(void)
 
 void WrapTTOutputClass(WrappedClassPtr c)
 {
-	class_addmethod(c->maxClass, (method)jamoma_fileusage, "fileusage", A_CANT, 0);
+	class_addmethod(c->maxClass, (method)jamoma_fileusage,                  "fileusage",            A_CANT, 0);
 	
 	class_addmethod(c->maxClass, (method)out_assist,						"assist",				A_CANT, 0L);
 	
@@ -185,9 +185,9 @@ void WrapTTOutputClass(WrappedClassPtr c)
 #endif
     
 #ifdef J_OUT_MULTI
-    class_addmethod(c->maxClass, (method)out_reset,                          "audio.reset",          A_CANT, 0);
-	class_addmethod(c->maxClass, (method)out_setup,                          "audio.setup",          A_CANT, 0);
-	class_addmethod(c->maxClass, (method)out_connect,                        "audio.connect",        A_OBJ, A_LONG, 0);
+    class_addmethod(c->maxClass, (method)out_reset,                         "audio.reset",          A_CANT, 0);
+	class_addmethod(c->maxClass, (method)out_setup,                         "audio.setup",          A_CANT, 0);
+	class_addmethod(c->maxClass, (method)out_connect,                       "audio.connect",        A_OBJ, A_LONG, 0);
 #endif
     
 #ifndef J_OUT_TILDE
