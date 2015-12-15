@@ -779,6 +779,34 @@ TTHashPtr jamoma_explorer_default_filter_bank(void)
 	aFilter->append(kTTSym_value, kTTSym_view);
 	aFilter->append(kTTSym_mode, kTTSym_restrict);
 	defaultFilterBank->append(TTSymbol("view"), (TTPtr)aFilter);
+    
+    // to look for j.in
+    aFilter = new TTDictionaryBase;
+    aFilter->setSchema(kTTSym_filter);
+    aFilter->append(kTTSym_object, "Input");
+    aFilter->append(kTTSym_mode, kTTSym_restrict);
+    defaultFilterBank->append(TTSymbol("in"), (TTPtr)aFilter);
+    
+    // to look for j.out
+    aFilter = new TTDictionaryBase;
+    aFilter->setSchema(kTTSym_filter);
+    aFilter->append(kTTSym_object, "Output");
+    aFilter->append(kTTSym_mode, kTTSym_restrict);
+    defaultFilterBank->append(TTSymbol("out"), (TTPtr)aFilter);
+    
+    // to look for j.in~
+    aFilter = new TTDictionaryBase;
+    aFilter->setSchema(kTTSym_filter);
+    aFilter->append(kTTSym_object, "Input.audio");
+    aFilter->append(kTTSym_mode, kTTSym_restrict);
+    defaultFilterBank->append(TTSymbol("in~"), (TTPtr)aFilter);
+    
+    // to look for j.out~
+    aFilter = new TTDictionaryBase;
+    aFilter->setSchema(kTTSym_filter);
+    aFilter->append(kTTSym_object, "Output.audio");
+    aFilter->append(kTTSym_mode, kTTSym_restrict);
+    defaultFilterBank->append(TTSymbol("out~"), (TTPtr)aFilter);
 	
 	// to look for empty nodes
 	aFilter = new TTDictionaryBase;
