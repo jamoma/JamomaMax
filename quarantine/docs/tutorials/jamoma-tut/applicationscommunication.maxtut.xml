@@ -17,7 +17,7 @@
 <illustration><img src="images/applicationscommunication01.png"/>A simple soundfile player</illustration>
 
 <h2>Summary</h2>
-<p>This tutorial goes through the features provided by Jamoma for Max framework to use your Jamoma patcher with distant applications. This illustrate how Jamoma allows to run models and views on distant or local Max instances.</p>
+<p>This tutorial goes through the features provided by Jamoma framework to use your Jamoma patcher with distant applications. This illustrate how Jamoma allows to run models and views on distant or local Max instances.</p>
 <seealsolist>
 	<seealso name="j.modular"></seealso>
 </seealsolist>

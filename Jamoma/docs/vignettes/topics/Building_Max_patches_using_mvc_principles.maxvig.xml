@@ -18,7 +18,7 @@
 		Build Max patches using MVC principles
 	</h1>
 	<p>
-		Jamoma 0.6 enables MVC separation in Max through custom externals and patching guidelines for developers. This page gives an overview of the MVC approach and how it is done using the Jamoma modular implementation for Max.
+		Jamoma enables MVC separation in Max through custom externals and patching guidelines for developers. This page gives an overview of the MVC approach and how it is done using the Jamoma modular implementation for Max.
 		<br/>
 		<br/>
 		This page sums up parts of an extensive presentation paper <i><a href="http://jamoma.org/publications/">Model-View-Controller separation in Max using Jamoma</a></i>, written by <a href="http://www.trondlossius.no/bio">T. Lossius</a>, T. de la Hogue, <a href="http://www.baltazars.org">P. Baltazar</a>, <a href="http://74objects.com/">T. Place</a>, <a href="http://www.nathanwolek.com/about/">N. Wolek</a> and J. Rabin for the 2014 joint 40th International Computer Music Conference and 11th Sound and Music Computing Conference in Athens.
@@ -40,7 +40,7 @@
 		MVC in Max using Jamoma
 	</h2>
 	<p>
-		Jamoma 0.6 for Max employs an object-oriented programming approach along side a client-server architecture in order to provide MVC separation. 
+		Jamoma employs an object-oriented programming approach along side a client-server architecture in order to provide MVC separation. 
 		<ul><li>The <i>model</i> is a Max patcher that wraps a high-level entity such as a media generator or signal processor with an accompanying set of functional services declared by the mean of <o>j.model</o>, <o>j.parameter</o>, <o>j.message</o> and <o>j.return</o> externals</li>
 		<li>The <i>view</i> is implemented as a separate Max patcher based on <o>j.view</o> and <o>j.remote</o> providing an interface for monitoring and controlling the services of one or many models, most commonly by means of a GUI.</li>
 	</ul>

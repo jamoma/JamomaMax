@@ -4,7 +4,7 @@
 <chapter name="Make a Jamoma model"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
 <setdocpatch name="Make a Jamoma model patcher" patch="01_sfplay.model.maxpat"/>
 
-<previous name="generalpresentation">Jamoma 0.6 overview</previous>
+<previous name="generalpresentation">Jamoma overview</previous>
 
 <next name="usingmodelswithinapatcher">Using models within your patcher</next>
 

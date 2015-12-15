@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
 <?xml-stylesheet href="./_c74_tut.xsl" type="text/xsl"?>
-<chapter name="Jamoma 0.6 overview"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
+<chapter name="Jamoma overview"> <!-- this tag is used to display name in other refpages and maxhelp tabs -->
 <setdocpatch name="Make a Jamoma model patcher" patch="generalpresentation.maxpat"/>
 
 <next name="makeajamomamodel">Make a Jamoma model patcher</next>
@@ -10,7 +10,7 @@
 
 
 
-<h1>Jamoma 0.6 overview</h1>
+<h1>Jamoma overview</h1>
 <h2>mvc approach for your Max patches</h2>
 
 <illustration><img src="images/generalpresentation01.png"/>A simple soundfile player</illustration>
@@ -22,7 +22,7 @@
 <h2>Remote communication</h2>
 
 <h2>Summary</h2>
-<p>Jamoma for Max offers strategies to structure your patches.</p>
+<p>Jamoma offers strategies to structure your patches.</p>
 <seealsolist>
 	<seealso name="mapper.model"></seealso>
 	<seealso name="cue_manager.model"></seealso>
