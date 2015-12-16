@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 977.0, 449.0 ],
+		"rect" : [ 135.0, 403.0, 977.0, 449.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -107,7 +107,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 977.0, 423.0 ],
+						"rect" : [ 135.0, 429.0, 977.0, 423.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -282,9 +282,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "bang", "" ],
-									"patching_rect" : [ 727.0, 187.0, 142.0, 21.0 ],
+									"patching_rect" : [ 727.0, 187.0, 186.0, 21.0 ],
 									"style" : "",
-									"text" : "jit.window my_context"
+									"text" : "jit.window my_context @floating 1"
 								}
 
 							}
@@ -573,31 +573,31 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "phys_world.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/physics/phys_world",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/physics/phys_world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "phys_world.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/physics/phys_world",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/physics/phys_world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
