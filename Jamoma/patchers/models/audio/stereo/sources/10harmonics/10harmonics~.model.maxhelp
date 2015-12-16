@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 222.0, 79.0, 578.0, 532.0 ],
+		"rect" : [ 100.0, 100.0, 578.0, 532.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -66,13 +66,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 222.0, 105.0, 578.0, 506.0 ],
+						"rect" : [ 100.0, 126.0, 578.0, 506.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -104,13 +104,14 @@
 								"box" : 								{
 									"dontreplace" : 1,
 									"id" : "obj-9",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 110.0, 254.0, 82.0, 23.0 ],
+									"patching_rect" : [ 110.0, 254.0, 82.0, 38.0 ],
 									"style" : "",
-									"text" : "factor.10 10."
+									"text" : "frequency 246.94165"
 								}
 
 							}
@@ -232,7 +233,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 37.0, 151.0, 34.0, 22.0 ],
+									"patching_rect" : [ 37.0, 145.0, 34.0, 22.0 ],
 									"style" : "",
 									"text" : "mtof"
 								}
@@ -246,7 +247,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "int", "int" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 37.0, 107.0, 252.0, 41.0 ],
+									"patching_rect" : [ 37.0, 100.0, 252.0, 41.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 336.0, 53.0 ],
 									"style" : ""
 								}
@@ -357,8 +358,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -413,18 +414,18 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-2::obj-7::obj-32" : [ "live.numbox[19]", "live.numbox", 0 ],
+			"obj-2::obj-7::obj-15" : [ "live.numbox[23]", "live.numbox", 0 ],
 			"obj-2::obj-7::obj-35" : [ "live.numbox[17]", "live.numbox", 0 ],
-			"obj-2::obj-7::obj-16" : [ "live.numbox[22]", "live.numbox", 0 ],
-			"obj-2::obj-7::obj-23" : [ "live.numbox[20]", "live.numbox", 0 ],
-			"obj-2::obj-7::obj-34" : [ "live.numbox[18]", "live.numbox", 0 ],
+			"obj-2::obj-3" : [ "Gain[1]", "Gain", 0 ],
+			"obj-2::obj-7::obj-32" : [ "live.numbox[19]", "live.numbox", 0 ],
+			"obj-2::obj-7::obj-21" : [ "live.numbox[21]", "live.numbox", 0 ],
+			"obj-2::obj-7::obj-37" : [ "live.numbox[15]", "live.numbox", 0 ],
 			"obj-2::obj-7::obj-6" : [ "live.numbox[24]", "live.numbox", 0 ],
 			"obj-2::obj-7::obj-38" : [ "live.numbox[14]", "live.numbox[10]", 0 ],
-			"obj-2::obj-3" : [ "Gain[1]", "Gain", 0 ],
-			"obj-2::obj-7::obj-36" : [ "live.numbox[16]", "live.numbox", 0 ],
-			"obj-2::obj-7::obj-37" : [ "live.numbox[15]", "live.numbox", 0 ],
-			"obj-2::obj-7::obj-15" : [ "live.numbox[23]", "live.numbox", 0 ],
-			"obj-2::obj-7::obj-21" : [ "live.numbox[21]", "live.numbox", 0 ]
+			"obj-2::obj-7::obj-34" : [ "live.numbox[18]", "live.numbox", 0 ],
+			"obj-2::obj-7::obj-16" : [ "live.numbox[22]", "live.numbox", 0 ],
+			"obj-2::obj-7::obj-23" : [ "live.numbox[20]", "live.numbox", 0 ],
+			"obj-2::obj-7::obj-36" : [ "live.numbox[16]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -435,19 +436,19 @@
 			}
 , 			{
 				"name" : "10harmonics~.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/10harmonics~",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/stereo/sources/10harmonics",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "10harmonics~.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Sources/10harmonics~",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/stereo/sources/10harmonics",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -494,7 +495,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 319.0, 157.0, 659.0, 565.0 ],
+		"rect" : [ 100.0, 100.0, 659.0, 565.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -66,13 +66,13 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 319.0, 183.0, 659.0, 539.0 ],
+						"rect" : [ 100.0, 126.0, 659.0, 539.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 13.0,
@@ -102,17 +102,27 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"dontreplace" : 1,
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
-									"id" : "obj-3",
-									"maxclass" : "message",
-									"numinlets" : 2,
+									"id" : "obj-8",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
 									"numoutlets" : 1,
-									"outlettype" : [ "" ],
-									"patching_rect" : [ 142.0, 268.0, 100.0, 22.0 ],
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 164.0, 303.0, 24.0, 24.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-2",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 2,
+									"outlettype" : [ "", "" ],
+									"patching_rect" : [ 164.0, 268.0, 78.0, 23.0 ],
 									"style" : "",
-									"text" : "status 1"
+									"text" : "route status"
 								}
 
 							}
@@ -202,21 +212,21 @@
 												"filekind" : "audiofile",
 												"loop" : 1,
 												"content_state" : 												{
-													"originaltempo" : [ 120.0 ],
-													"play" : [ 0 ],
-													"pitchcorrection" : [ 0 ],
-													"quality" : [ "basic" ],
-													"originallength" : [ 0.0, "ticks" ],
-													"formantcorrection" : [ 0 ],
-													"pitchshift" : [ 1.0 ],
-													"followglobaltempo" : [ 0 ],
-													"originallengthms" : [ 0.0 ],
 													"timestretch" : [ 0 ],
-													"slurtime" : [ 0.0 ],
-													"mode" : [ "basic" ],
-													"formant" : [ 1.0 ],
-													"basictuning" : [ 440 ],
+													"formantcorrection" : [ 0 ],
 													"speed" : [ 1.0 ],
+													"play" : [ 0 ],
+													"formant" : [ 1.0 ],
+													"originaltempo" : [ 120.0 ],
+													"mode" : [ "basic" ],
+													"pitchcorrection" : [ 0 ],
+													"slurtime" : [ 0.0 ],
+													"followglobaltempo" : [ 0 ],
+													"pitchshift" : [ 1.0 ],
+													"originallength" : [ 0.0, "ticks" ],
+													"quality" : [ "basic" ],
+													"originallengthms" : [ 0.0 ],
+													"basictuning" : [ 440 ],
 													"pitchshiftcent" : [ 0 ]
 												}
 
@@ -272,6 +282,15 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-8", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-2", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-6", 1 ],
 									"disabled" : 0,
 									"hidden" : 0,
@@ -310,9 +329,10 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-3", 1 ],
+									"destination" : [ "obj-2", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
+									"midpoints" : [ 232.5, 255.5, 173.5, 255.5 ],
 									"source" : [ "obj-6", 2 ]
 								}
 
@@ -348,8 +368,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -404,12 +424,12 @@
  ],
 		"lines" : [  ],
 		"parameters" : 		{
-			"obj-2::obj-7::obj-9" : [ "Release[4]", "Release", 0 ],
-			"obj-2::obj-7::obj-5" : [ "Preamp[2]", "Preamp", 0 ],
-			"obj-2::obj-11" : [ "Gain", "Gain", 0 ],
 			"obj-2::obj-7::obj-11" : [ "Threshold[3]", "Threshold", 0 ],
+			"obj-2::obj-7::obj-5" : [ "Preamp[2]", "Preamp", 0 ],
+			"obj-2::obj-7::obj-13" : [ "Release[3]", "Release", 0 ],
+			"obj-2::obj-11" : [ "Gain", "Gain", 0 ],
 			"obj-2::obj-7::obj-3" : [ "Attack[1]", "Attack", 0 ],
-			"obj-2::obj-7::obj-13" : [ "Release[3]", "Release", 0 ]
+			"obj-2::obj-7::obj-9" : [ "Release[4]", "Release", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -426,13 +446,13 @@
 			}
 , 			{
 				"name" : "noisegate~.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/noisegate~",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/stereo/dynamics/noisegate",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noisegate~.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/modules/audio/stereo/Dynamics/noisegate~",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/stereo/dynamics/noisegate",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -479,7 +499,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
