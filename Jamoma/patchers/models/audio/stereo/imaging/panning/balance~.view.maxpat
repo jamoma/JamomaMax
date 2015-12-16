@@ -3,15 +3,15 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+		"rect" : [ 404.0, 351.0, 150.0, 70.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -68,6 +68,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Choose internal calculation mode for panning: FastMode uses a lookup table while PrecisionMode performs trigonometric calculations",
 					"id" : "obj-22",
 					"maxclass" : "live.menu",
 					"numinlets" : 1,
@@ -93,6 +94,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Choose the panning function: linear, squareroot, or equal-power",
 					"id" : "obj-21",
 					"maxclass" : "live.menu",
 					"numinlets" : 1,
@@ -369,7 +371,7 @@
 					"patching_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 150.0, 70.0 ],
-					"text" : "/no_..ess"
+					"text" : "/balance"
 				}
 
 			}
@@ -539,31 +541,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-10" : [ "Balance", "Balance", 0 ],
-			"obj-21" : [ "live.menu", "Shape", 0 ],
-			"obj-22" : [ "live.menu[1]", "Shape", 0 ]
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "j.ui.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.view.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.remote.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.receive~.mxo",
-				"type" : "iLaX"
-			}
- ],
-		"embedsnapshot" : 0
+ ]
 	}
 
 }
