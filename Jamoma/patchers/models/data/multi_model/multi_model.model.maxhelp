@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 750.0, 58.0, 1008.0, 856.0 ],
+		"rect" : [ 100.0, 100.0, 1008.0, 856.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 347.0, 488.0, 129.0, 21.0 ],
+					"patching_rect" : [ 458.0, 533.0, 129.0, 21.0 ],
 					"style" : "",
 					"text" : "j.initialized text_help"
 				}
@@ -62,7 +62,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 347.0, 517.0, 204.0, 34.0 ],
+					"patching_rect" : [ 458.0, 562.0, 134.0, 34.0 ],
 					"style" : "",
 					"text" : "GL/context my_world, fontsize 34, text Jamoma"
 				}
@@ -79,7 +79,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 347.0, 557.0, 156.0, 21.0 ],
+					"patching_rect" : [ 458.0, 602.0, 156.0, 21.0 ],
 					"style" : "",
 					"text" : "gl_text.model text_help"
 				}
@@ -102,7 +102,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 528.0, 545.0, 300.0, 140.0 ],
+					"patching_rect" : [ 453.0, 637.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"varname" : "gl.videoplane%",
 					"viewvisibility" : 1
@@ -157,8 +157,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -502,46 +502,46 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-4::obj-30::obj-93::obj-10::obj-188" : [ "live.text[6]", "live.text[1]", 0 ],
+			"obj-4::obj-30::obj-93::obj-10::obj-174" : [ "live.text[5]", "live.text[1]", 0 ],
 			"obj-4::obj-13" : [ "live.text[2]", "live.text", 0 ],
 			"obj-4::obj-30::obj-93::obj-182" : [ "live.text[4]", "live.text[4]", 0 ],
-			"obj-3::obj-14" : [ "live.dial[3]", "Bit depth", 0 ],
-			"obj-4::obj-30::obj-93::obj-10::obj-188" : [ "live.text[6]", "live.text[1]", 0 ],
 			"obj-3::obj-13" : [ "live.dial[2]", "Sample rate", 0 ],
-			"obj-4::obj-30::obj-93::obj-10::obj-196" : [ "live.text[7]", "live.text", 0 ],
-			"obj-4::obj-30::obj-93::obj-8" : [ "live.text[10]", "live.text", 0 ],
-			"obj-4::obj-30::obj-93::obj-10::obj-174" : [ "live.text[5]", "live.text[1]", 0 ],
-			"obj-4::obj-30::obj-93::obj-10::obj-145" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-4::obj-30::obj-93::obj-21" : [ "live.text[9]", "live.text", 0 ],
-			"obj-4::obj-30::obj-93::obj-10::obj-95" : [ "live.text[8]", "live.text", 0 ]
+			"obj-4::obj-30::obj-93::obj-10::obj-145" : [ "live.menu[1]", "live.menu", 0 ],
+			"obj-4::obj-30::obj-93::obj-8" : [ "live.text[10]", "live.text", 0 ],
+			"obj-4::obj-30::obj-93::obj-10::obj-95" : [ "live.text[8]", "live.text", 0 ],
+			"obj-3::obj-14" : [ "live.dial[3]", "Bit depth", 0 ],
+			"obj-4::obj-30::obj-93::obj-10::obj-196" : [ "live.text[7]", "live.text", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "multi_model.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/multi_model",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/multi_model",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mapper",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespacebrowser.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/namespace/namespacebrowser",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/namespace/namespacebrowser",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.get_onscreen_position.js",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/javascript",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/javascript",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.view.large.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mapper",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -559,97 +559,97 @@
 			}
 , 			{
 				"name" : "multi_model.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/multi_model",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/multi_model",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mapper.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mapper",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/mapper",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mouse",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/distortion/degrade",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/stereo/distortion/degrade",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "degrade~.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/audio/stereo/distortion/degrade",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/audio/stereo/distortion/degrade",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mouse.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/mouse",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/mouse",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_world.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/world",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/openGL/world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_world_basic_view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/world",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/openGL/world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_world.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/world",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/openGL/world",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_text.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_text",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/openGL/geometry/gl_text",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_text.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_text",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/openGL/geometry/gl_text",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -726,7 +726,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
