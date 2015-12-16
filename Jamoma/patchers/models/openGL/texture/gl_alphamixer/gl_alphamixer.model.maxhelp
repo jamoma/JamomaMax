@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 709.0, 496.0 ],
+		"rect" : [ 100.0, 100.0, 709.0, 440.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,13 +39,28 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"maxclass" : "newobj",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2.0, 58.0, 387.0, 20.0 ],
+					"style" : "",
+					"text" : "A four layer slab-based video mixer using alpha channel for each layer."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-9",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "gl_alphamixer.model" ],
+					"maxclass" : "jsui",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 166.0, 72.0, 22.0 ],
-					"style" : "",
-					"text" : "loadmess 1"
+					"parameter_enable" : 0,
+					"patching_rect" : [ 2.0, 3.0, 450.0, 71.0 ]
 				}
 
 			}
@@ -61,31 +76,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u219002656" ],
 									"dim" : [ 1, 1 ],
-									"adapt" : [ 1 ],
+									"time_secs" : [ 0.0 ],
 									"drawto" : [ "" ],
-									"automatic" : [ 0 ],
-									"autostart" : [ 1 ],
-									"usesrcrect" : [ 0 ],
-									"time" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"engine" : [ "avf" ],
 									"usedstrect" : [ 0 ],
 									"interp" : [ 0 ],
-									"loopend" : [ 0 ],
 									"output_texture" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ],
+									"colormode" : [ "argb" ],
 									"moviefile" : [ "" ],
-									"rate" : [ 1.0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"loopstart" : [ 0 ],
 									"texture_name" : [ "u825002654" ],
 									"position" : [ 0.0 ],
-									"time_secs" : [ 0.0 ],
 									"vol" : [ 1.0 ],
+									"looppoints" : [ 0, 0 ],
+									"adapt" : [ 1 ],
+									"rate" : [ 1.0 ],
+									"unique" : [ 0 ],
 									"loopreport" : [ 0 ],
 									"framereport" : [ 0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ]
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopend" : [ 0 ],
+									"autostart" : [ 1 ],
+									"engine" : [ "avf" ],
+									"automatic" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ]
 								}
 
 							}
@@ -97,7 +112,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "", "dictionary" ],
-					"patching_rect" : [ 397.5, 227.0, 119.0, 30.0 ],
+					"patching_rect" : [ 397.5, 184.0, 119.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -114,31 +129,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u219002656" ],
 									"dim" : [ 1, 1 ],
-									"adapt" : [ 1 ],
+									"time_secs" : [ 0.0 ],
 									"drawto" : [ "" ],
-									"automatic" : [ 0 ],
-									"autostart" : [ 1 ],
-									"usesrcrect" : [ 0 ],
-									"time" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"engine" : [ "avf" ],
 									"usedstrect" : [ 0 ],
 									"interp" : [ 0 ],
-									"loopend" : [ 0 ],
 									"output_texture" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ],
+									"colormode" : [ "argb" ],
 									"moviefile" : [ "" ],
-									"rate" : [ 1.0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"loopstart" : [ 0 ],
 									"texture_name" : [ "u825002654" ],
 									"position" : [ 0.0 ],
-									"time_secs" : [ 0.0 ],
 									"vol" : [ 1.0 ],
+									"looppoints" : [ 0, 0 ],
+									"adapt" : [ 1 ],
+									"rate" : [ 1.0 ],
+									"unique" : [ 0 ],
 									"loopreport" : [ 0 ],
 									"framereport" : [ 0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ]
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopend" : [ 0 ],
+									"autostart" : [ 1 ],
+									"engine" : [ "avf" ],
+									"automatic" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ]
 								}
 
 							}
@@ -150,7 +165,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "", "dictionary" ],
-					"patching_rect" : [ 275.333344, 227.0, 119.0, 30.0 ],
+					"patching_rect" : [ 275.333344, 184.0, 119.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -167,31 +182,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u219002656" ],
 									"dim" : [ 1, 1 ],
-									"adapt" : [ 1 ],
+									"time_secs" : [ 0.0 ],
 									"drawto" : [ "" ],
-									"automatic" : [ 0 ],
-									"autostart" : [ 1 ],
-									"usesrcrect" : [ 0 ],
-									"time" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"engine" : [ "avf" ],
 									"usedstrect" : [ 0 ],
 									"interp" : [ 0 ],
-									"loopend" : [ 0 ],
 									"output_texture" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ],
+									"colormode" : [ "argb" ],
 									"moviefile" : [ "" ],
-									"rate" : [ 1.0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"loopstart" : [ 0 ],
 									"texture_name" : [ "u825002654" ],
 									"position" : [ 0.0 ],
-									"time_secs" : [ 0.0 ],
 									"vol" : [ 1.0 ],
+									"looppoints" : [ 0, 0 ],
+									"adapt" : [ 1 ],
+									"rate" : [ 1.0 ],
+									"unique" : [ 0 ],
 									"loopreport" : [ 0 ],
 									"framereport" : [ 0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ]
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopend" : [ 0 ],
+									"autostart" : [ 1 ],
+									"engine" : [ "avf" ],
+									"automatic" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ]
 								}
 
 							}
@@ -203,7 +218,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "", "dictionary" ],
-					"patching_rect" : [ 149.666672, 227.0, 119.0, 30.0 ],
+					"patching_rect" : [ 149.666672, 184.0, 119.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -220,31 +235,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u219002656" ],
 									"dim" : [ 1, 1 ],
-									"adapt" : [ 1 ],
+									"time_secs" : [ 0.0 ],
 									"drawto" : [ "" ],
-									"automatic" : [ 0 ],
-									"autostart" : [ 1 ],
-									"usesrcrect" : [ 0 ],
-									"time" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"engine" : [ "avf" ],
 									"usedstrect" : [ 0 ],
 									"interp" : [ 0 ],
-									"loopend" : [ 0 ],
 									"output_texture" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ],
+									"colormode" : [ "argb" ],
 									"moviefile" : [ "" ],
-									"rate" : [ 1.0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"loopstart" : [ 0 ],
 									"texture_name" : [ "u825002654" ],
 									"position" : [ 0.0 ],
-									"time_secs" : [ 0.0 ],
 									"vol" : [ 1.0 ],
+									"looppoints" : [ 0, 0 ],
+									"adapt" : [ 1 ],
+									"rate" : [ 1.0 ],
+									"unique" : [ 0 ],
 									"loopreport" : [ 0 ],
 									"framereport" : [ 0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ]
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopend" : [ 0 ],
+									"autostart" : [ 1 ],
+									"engine" : [ "avf" ],
+									"automatic" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ]
 								}
 
 							}
@@ -256,7 +271,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "", "dictionary" ],
-					"patching_rect" : [ 25.0, 227.0, 119.0, 30.0 ],
+					"patching_rect" : [ 25.0, 184.0, 119.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -272,7 +287,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 416.0, 436.0, 256.0, 38.0 ],
+					"patching_rect" : [ 416.0, 380.0, 256.0, 38.0 ],
 					"style" : "",
 					"text" : "Test out the alpha values. They control opacity."
 				}
@@ -286,7 +301,7 @@
 					"numinlets" : 4,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 25.0, 302.0, 183.0, 22.0 ],
+					"patching_rect" : [ 25.0, 246.0, 183.0, 22.0 ],
 					"style" : "",
 					"text" : "gl_alphamixer.model alphamixer"
 				}
@@ -294,28 +309,11 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "gl_alphamixer.model", "@description", "A four layer slab-based video mixer using alpha channel for each layer." ],
-					"bgmode" : 1,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-17",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 2.0, 2.0, 440.0, 68.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
+					"frozen_object_attributes" : 					{
+						"floating" : 1,
+						"windowposition" : [ 700, 65 ]
+					}
+,
 					"id" : "obj-2",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -349,22 +347,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 25.0, 465.0, 93.0, 22.0 ],
+					"patching_rect" : [ 25.0, 401.0, 93.0, 22.0 ],
 					"style" : "",
 					"text" : "jit.gl.videoplane"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 195.0, 57.0, 22.0 ],
-					"style" : "",
-					"text" : "pipe 500"
 				}
 
 			}
@@ -385,7 +370,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 234.5, 302.0, 300.0, 140.0 ],
+					"patching_rect" : [ 234.5, 246.0, 300.0, 140.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"viewvisibility" : 1
 				}
@@ -394,59 +379,10 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-13", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-14", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 34.5, 221.5, 407.0, 221.5 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 34.5, 221.5, 34.5, 221.5 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 34.5, 221.5, 159.166672, 221.5 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"midpoints" : [ 34.5, 221.5, 284.833344, 221.5 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-18", 3 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 407.0, 293.0, 198.5, 293.0 ],
+					"midpoints" : [ 407.0, 237.0, 198.5, 237.0 ],
 					"source" : [ "obj-14", 0 ]
 				}
 
@@ -474,7 +410,7 @@
 					"destination" : [ "obj-18", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 159.166672, 279.0, 89.166664, 279.0 ],
+					"midpoints" : [ 159.166672, 223.0, 89.166664, 223.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
@@ -493,7 +429,7 @@
 					"destination" : [ "obj-18", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 284.833344, 286.0, 143.833328, 286.0 ],
+					"midpoints" : [ 284.833344, 230.0, 143.833328, 230.0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -501,49 +437,37 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl_alphamixer.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_alphamixer",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_alphamixer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.panel.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_alphamixer.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_alphamixer",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_alphamixer",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -569,6 +493,12 @@
 				"name" : "garbage.mov",
 				"bootpath" : "C74:/media/jitter",
 				"type" : "MooV",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

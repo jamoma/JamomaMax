@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 528.0, 420.0 ],
+		"rect" : [ 100.0, 100.0, 528.0, 374.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -107,7 +107,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 528.0, 394.0 ],
+						"rect" : [ 100.0, 126.0, 528.0, 348.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -138,13 +138,28 @@
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-4",
-									"maxclass" : "newobj",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 2.0, 58.0, 387.0, 20.0 ],
+									"style" : "",
+									"text" : "Slab-based color controls."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-9",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "gl_brcosa.model" ],
+									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 12.0, 194.0, 100.0, 22.0 ],
-									"style" : "",
-									"text" : "loadmess 1"
+									"parameter_enable" : 0,
+									"patching_rect" : [ 2.0, 3.0, 450.0, 71.0 ]
 								}
 
 							}
@@ -155,7 +170,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "jit_matrix", "" ],
-									"patching_rect" : [ 12.0, 357.0, 100.0, 22.0 ],
+									"patching_rect" : [ 13.0, 319.0, 100.0, 22.0 ],
 									"style" : "",
 									"text" : "jit.gl.videoplane"
 								}
@@ -172,31 +187,31 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u237004501" ],
 													"dim" : [ 1, 1 ],
-													"adapt" : [ 1 ],
+													"time_secs" : [ 0.0 ],
 													"drawto" : [ "" ],
-													"automatic" : [ 0 ],
-													"autostart" : [ 1 ],
-													"usesrcrect" : [ 0 ],
-													"time" : [ 0 ],
-													"loopstart" : [ 0 ],
-													"looppoints" : [ 0, 0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
-													"engine" : [ "avf" ],
 													"usedstrect" : [ 0 ],
 													"interp" : [ 0 ],
-													"loopend" : [ 0 ],
 													"output_texture" : [ 0 ],
-													"dstrect" : [ 0, 0, 1, 1 ],
+													"colormode" : [ "argb" ],
 													"moviefile" : [ "" ],
-													"rate" : [ 1.0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"loopstart" : [ 0 ],
 													"texture_name" : [ "u390004499" ],
 													"position" : [ 0.0 ],
-													"time_secs" : [ 0.0 ],
 													"vol" : [ 1.0 ],
+													"looppoints" : [ 0, 0 ],
+													"adapt" : [ 1 ],
+													"rate" : [ 1.0 ],
+													"unique" : [ 0 ],
 													"loopreport" : [ 0 ],
 													"framereport" : [ 0 ],
-													"unique" : [ 0 ],
-													"colormode" : [ "argb" ]
+													"usesrcrect" : [ 0 ],
+													"time" : [ 0 ],
+													"loopend" : [ 0 ],
+													"autostart" : [ 1 ],
+													"engine" : [ "avf" ],
+													"automatic" : [ 0 ],
+													"srcrect" : [ 0, 0, 1, 1 ]
 												}
 
 											}
@@ -208,19 +223,24 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "jit_matrix", "", "dictionary" ],
-									"patching_rect" : [ 12.0, 225.0, 150.0, 30.0 ],
+									"patching_rect" : [ 13.0, 187.0, 150.0, 30.0 ],
 									"style" : ""
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"frozen_object_attributes" : 									{
+										"size" : [ 320, 240 ],
+										"windowposition" : [ 66, 530 ]
+									}
+,
 									"id" : "obj-5",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "" ],
-									"patching_rect" : [ 12.0, 150.0, 206.0, 22.0 ],
+									"patching_rect" : [ 12.0, 135.0, 206.0, 22.0 ],
 									"style" : "",
 									"text" : "jit.world brcosa_help @enable 1"
 								}
@@ -234,7 +254,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 12.0, 119.0, 86.0, 22.0 ],
+									"patching_rect" : [ 12.0, 104.0, 86.0, 22.0 ],
 									"style" : "",
 									"text_width" : 65.0
 								}
@@ -257,7 +277,7 @@
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 209.5, 270.0, 300.0, 70.0 ],
+									"patching_rect" : [ 210.5, 232.0, 300.0, 70.0 ],
 									"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 									"viewvisibility" : 1
 								}
@@ -274,31 +294,9 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 12.0, 270.0, 150.0, 22.0 ],
+									"patching_rect" : [ 13.0, 232.0, 150.0, 22.0 ],
 									"style" : "",
 									"text" : "gl_brcosa.model brcosa"
-								}
-
-							}
-, 							{
-								"box" : 								{
-									"args" : [ "@name", "gl_brcosa.model", "@description", "Slab-based color controls." ],
-									"bgmode" : 1,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
-									"id" : "obj-12",
-									"lockeddragscroll" : 0,
-									"maxclass" : "bpatcher",
-									"name" : "j.maxhelpui.maxpat",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 0.0, 4.0, 440.0, 68.0 ],
-									"prototypename" : "bphelp",
-									"varname" : "maxhelpui",
-									"viewvisibility" : 1
 								}
 
 							}
@@ -318,15 +316,6 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-2", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-2", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-4", 0 ]
 								}
 
 							}
@@ -375,7 +364,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 528.0, 394.0 ],
+						"rect" : [ 0.0, 26.0, 528.0, 348.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -425,50 +414,38 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "gl_brcosa.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_brcosa.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_brcosa",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.panel.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group_slab.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -476,6 +453,12 @@
 				"name" : "wheel.mov",
 				"bootpath" : "C74:/media/jitter",
 				"type" : "MooV",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
