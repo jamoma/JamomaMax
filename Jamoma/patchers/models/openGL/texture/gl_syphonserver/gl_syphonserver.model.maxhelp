@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 545.0, 329.0 ],
+		"rect" : [ 100.0, 100.0, 584.0, 329.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -38,14 +38,29 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"id" : "obj-8",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2.0, 58.0, 249.0, 19.0 ],
+					"style" : "",
+					"text" : "publish a GL texture to Syphon protocol.\""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-9",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "gl_syphonserver.model" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 114.0, 74.0, 21.0 ],
-					"style" : "",
-					"text" : "pipe 1000"
+					"parameter_enable" : 0,
+					"patching_rect" : [ 2.0, 3.0, 492.0, 74.0 ]
 				}
 
 			}
@@ -54,15 +69,19 @@
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
+					"frozen_object_attributes" : 					{
+						"size" : [ 320, 240 ],
+						"windowposition" : [ 66, 500 ]
+					}
+,
 					"id" : "obj-2",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "" ],
-					"patching_rect" : [ 235.0, 226.0, 244.0, 35.0 ],
+					"patching_rect" : [ 25.0, 100.0, 244.0, 22.0 ],
 					"style" : "",
-					"text" : "jit.world syphonserver_help @size 320 240 @windowposition 10 50 @enable 1"
+					"text" : "jit.world syphonserver_help @enable 1"
 				}
 
 			}
@@ -94,19 +113,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 88.0, 74.0, 21.0 ],
-					"style" : "",
-					"text" : "loadmess 1"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"data" : 					{
 						"clips" : [ 							{
 								"filename" : "chickens.mp4",
@@ -116,31 +122,31 @@
 									"outputmode" : [ 1 ],
 									"out_name" : [ "u219002656" ],
 									"dim" : [ 1, 1 ],
-									"adapt" : [ 1 ],
+									"time_secs" : [ 0.0 ],
 									"drawto" : [ "" ],
-									"automatic" : [ 0 ],
-									"autostart" : [ 1 ],
-									"usesrcrect" : [ 0 ],
-									"time" : [ 0 ],
-									"loopstart" : [ 0 ],
-									"looppoints" : [ 0, 0 ],
-									"srcrect" : [ 0, 0, 1, 1 ],
-									"engine" : [ "avf" ],
 									"usedstrect" : [ 0 ],
 									"interp" : [ 0 ],
-									"loopend" : [ 0 ],
 									"output_texture" : [ 0 ],
-									"dstrect" : [ 0, 0, 1, 1 ],
+									"colormode" : [ "argb" ],
 									"moviefile" : [ "" ],
-									"rate" : [ 1.0 ],
+									"dstrect" : [ 0, 0, 1, 1 ],
+									"loopstart" : [ 0 ],
 									"texture_name" : [ "u825002654" ],
 									"position" : [ 0.0 ],
-									"time_secs" : [ 0.0 ],
 									"vol" : [ 1.0 ],
+									"looppoints" : [ 0, 0 ],
+									"adapt" : [ 1 ],
+									"rate" : [ 1.0 ],
+									"unique" : [ 0 ],
 									"loopreport" : [ 0 ],
 									"framereport" : [ 0 ],
-									"unique" : [ 0 ],
-									"colormode" : [ "argb" ]
+									"usesrcrect" : [ 0 ],
+									"time" : [ 0 ],
+									"loopend" : [ 0 ],
+									"autostart" : [ 1 ],
+									"engine" : [ "avf" ],
+									"automatic" : [ 0 ],
+									"srcrect" : [ 0, 0, 1, 1 ]
 								}
 
 							}
@@ -164,36 +170,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-18",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 25.0, 248.0, 183.0, 35.0 ],
+					"patching_rect" : [ 25.0, 242.0, 223.0, 22.0 ],
 					"style" : "",
 					"text" : "gl_syphonserver.model syphonserver"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"args" : [ "@name", "gl_syphonserver.model", "@description", "publish a GL texture to Syphon protocol." ],
-					"bgmode" : 1,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-17",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "j.maxhelpui.maxpat",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 0.0, 2.0, 440.0, 68.0 ],
-					"prototypename" : "bphelp",
-					"varname" : "maxhelpui",
-					"viewvisibility" : 1
 				}
 
 			}
@@ -213,7 +196,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 214.5, 120.0, 300.0, 70.0 ],
+					"patching_rect" : [ 261.5, 242.0, 300.0, 70.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 70.0 ],
 					"viewvisibility" : 1
 				}
@@ -240,15 +223,6 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -256,61 +230,40 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-4", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl_syphonserver.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_syphonserver.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/texture/gl_syphonserver",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -318,6 +271,12 @@
 				"name" : "chickens.mp4",
 				"bootpath" : "C74:/media/jitter",
 				"type" : "mpg4",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

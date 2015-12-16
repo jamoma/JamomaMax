@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 564.0, 412.0 ],
+		"rect" : [ 100.0, 100.0, 564.0, 376.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -107,7 +107,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 100.0, 126.0, 564.0, 386.0 ],
+						"rect" : [ 100.0, 126.0, 564.0, 350.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -137,14 +137,29 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
-									"id" : "obj-1",
-									"maxclass" : "newobj",
+									"id" : "obj-8",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 2.0, 58.0, 249.0, 20.0 ],
+									"style" : "",
+									"text" : "jit.gl.videoplane wrapper."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-9",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "gl_videoplane.model" ],
+									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 18.0, 168.0, 72.0, 22.0 ],
-									"style" : "",
-									"text" : "loadmess 1"
+									"parameter_enable" : 0,
+									"patching_rect" : [ 2.0, 3.0, 450.0, 71.0 ]
 								}
 
 							}
@@ -159,31 +174,31 @@
 													"outputmode" : [ 1 ],
 													"out_name" : [ "u993005217" ],
 													"dim" : [ 1, 1 ],
-													"adapt" : [ 1 ],
+													"time_secs" : [ 0.0 ],
 													"drawto" : [ "" ],
-													"automatic" : [ 0 ],
-													"autostart" : [ 1 ],
-													"usesrcrect" : [ 0 ],
-													"time" : [ 0 ],
-													"loopstart" : [ 0 ],
-													"looppoints" : [ 0, 0 ],
-													"srcrect" : [ 0, 0, 1, 1 ],
-													"engine" : [ "avf" ],
 													"usedstrect" : [ 0 ],
 													"interp" : [ 0 ],
-													"loopend" : [ 0 ],
 													"output_texture" : [ 0 ],
-													"dstrect" : [ 0, 0, 1, 1 ],
+													"colormode" : [ "argb" ],
 													"moviefile" : [ "" ],
-													"rate" : [ 1.0 ],
+													"dstrect" : [ 0, 0, 1, 1 ],
+													"loopstart" : [ 0 ],
 													"texture_name" : [ "u644005215" ],
 													"position" : [ 0.0 ],
-													"time_secs" : [ 0.0 ],
 													"vol" : [ 1.0 ],
+													"looppoints" : [ 0, 0 ],
+													"adapt" : [ 1 ],
+													"rate" : [ 1.0 ],
+													"unique" : [ 0 ],
 													"loopreport" : [ 0 ],
 													"framereport" : [ 0 ],
-													"unique" : [ 0 ],
-													"colormode" : [ "argb" ]
+													"usesrcrect" : [ 0 ],
+													"time" : [ 0 ],
+													"loopend" : [ 0 ],
+													"autostart" : [ 1 ],
+													"engine" : [ "avf" ],
+													"automatic" : [ 0 ],
+													"srcrect" : [ 0, 0, 1, 1 ]
 												}
 
 											}
@@ -195,13 +210,18 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "jit_matrix", "", "dictionary" ],
-									"patching_rect" : [ 18.0, 198.0, 150.0, 30.0 ],
+									"patching_rect" : [ 18.0, 167.0, 150.0, 30.0 ],
 									"style" : ""
 								}
 
 							}
 , 							{
 								"box" : 								{
+									"frozen_object_attributes" : 									{
+										"size" : [ 320, 240 ],
+										"windowposition" : [ 66, 540 ]
+									}
+,
 									"id" : "obj-2",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -244,7 +264,7 @@
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 225.5, 236.0, 300.0, 140.0 ],
+									"patching_rect" : [ 225.5, 205.0, 300.0, 140.0 ],
 									"presentation_rect" : [ 45.0, 45.0, 300.0, 140.0 ],
 									"viewvisibility" : 1
 								}
@@ -253,53 +273,19 @@
 , 							{
 								"box" : 								{
 									"annotation" : "Apply incoming video matrix as texture to OpenGL videoplane.",
-									"color" : [ 0.619608, 0.0, 0.360784, 0.7 ],
-									"fontname" : "Arial",
-									"fontsize" : 12.0,
 									"id" : "obj-12",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 18.0, 236.0, 183.0, 22.0 ],
+									"patching_rect" : [ 18.0, 205.0, 183.0, 22.0 ],
 									"style" : "",
 									"text" : "gl_videoplane.model videoplane"
 								}
 
 							}
-, 							{
-								"box" : 								{
-									"args" : [ "@name", "gl_videoplane.model", "@description", "jit.gl.videoplane wrapper" ],
-									"bgmode" : 1,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
-									"id" : "obj-3",
-									"lockeddragscroll" : 0,
-									"maxclass" : "bpatcher",
-									"name" : "j.maxhelpui.maxpat",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 2.0, 4.0, 543.0, 68.0 ],
-									"prototypename" : "bphelp",
-									"varname" : "maxhelpui",
-									"viewvisibility" : 1
-								}
-
-							}
  ],
 						"lines" : [ 							{
-								"patchline" : 								{
-									"destination" : [ "obj-10", 0 ],
-									"disabled" : 0,
-									"hidden" : 0,
-									"source" : [ "obj-1", 0 ]
-								}
-
-							}
-, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-12", 0 ],
 									"disabled" : 0,
@@ -316,6 +302,16 @@
 									"source" : [ "obj-6", 0 ]
 								}
 
+							}
+ ],
+						"styles" : [ 							{
+								"name" : "Jamoma_highlighted_orange",
+								"default" : 								{
+									"accentcolor" : [ 1.0, 0.5, 0.0, 1.0 ]
+								}
+,
+								"parentstyle" : "",
+								"multi" : 0
 							}
  ]
 					}
@@ -353,7 +349,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 564.0, 386.0 ],
+						"rect" : [ 0.0, 26.0, 564.0, 350.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -403,50 +399,38 @@
  ],
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "PNG ",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "gl_videoplane.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_videoplane",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_videoplane.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_videoplane",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_videoplane",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -454,6 +438,12 @@
 				"name" : "wheel.mov",
 				"bootpath" : "C74:/media/jitter",
 				"type" : "MooV",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{

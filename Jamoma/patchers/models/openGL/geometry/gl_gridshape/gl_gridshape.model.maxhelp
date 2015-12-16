@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 752.0, 123.0, 546.0, 372.0 ],
+		"rect" : [ 100.0, 100.0, 553.0, 300.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -107,7 +107,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 752.0, 149.0, 546.0, 346.0 ],
+						"rect" : [ 100.0, 126.0, 553.0, 274.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -137,6 +137,34 @@
 						"showontab" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-11",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1.0, 57.0, 249.0, 20.0 ],
+									"style" : "",
+									"text" : "Generate simple geometric shapes as a grid."
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"border" : 0,
+									"filename" : "helpdetails.js",
+									"id" : "obj-5",
+									"ignoreclick" : 1,
+									"jsarguments" : [ "gl_gridshape.model" ],
+									"maxclass" : "jsui",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 1.0, 2.0, 423.0, 71.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"fontname" : "Arial",
 									"fontsize" : 12.0,
 									"id" : "obj-4",
@@ -144,7 +172,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 11.0, 127.5, 174.0, 22.0 ],
+									"patching_rect" : [ 11.0, 116.5, 174.0, 22.0 ],
 									"style" : "",
 									"text" : "preset:recall EnlightedSphere"
 								}
@@ -159,7 +187,7 @@
 									"numinlets" : 0,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 11.0, 104.0, 141.0, 22.0 ],
+									"patching_rect" : [ 11.0, 93.0, 141.0, 22.0 ],
 									"style" : "",
 									"text" : "j.initialized /gl_gridshape"
 								}
@@ -167,35 +195,18 @@
 							}
 , 							{
 								"box" : 								{
-									"args" : [ "@name", "gl_gridshape.model", "@description", "Generate simple geometric shapes as a grid." ],
-									"bgmode" : 1,
-									"border" : 0,
-									"clickthrough" : 0,
-									"enablehscroll" : 0,
-									"enablevscroll" : 0,
-									"id" : "obj-3",
-									"lockeddragscroll" : 0,
-									"maxclass" : "bpatcher",
-									"name" : "j.maxhelpui.maxpat",
-									"numinlets" : 1,
-									"numoutlets" : 0,
-									"offset" : [ 0.0, 0.0 ],
-									"patching_rect" : [ 0.0, 1.0, 543.0, 68.0 ],
-									"prototypename" : "bphelp",
-									"varname" : "maxhelpui",
-									"viewvisibility" : 1
-								}
-
-							}
-, 							{
-								"box" : 								{
+									"frozen_object_attributes" : 									{
+										"size" : [ 320, 240 ],
+										"windowposition" : [ 66, 470 ]
+									}
+,
 									"id" : "obj-1",
 									"linecount" : 2,
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "" ],
-									"patching_rect" : [ 11.0, 291.0, 137.0, 35.0 ],
+									"patching_rect" : [ 11.0, 229.0, 141.0, 35.0 ],
 									"style" : "",
 									"text" : "jit.world gridshape_help @enable 1"
 								}
@@ -212,7 +223,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 11.0, 174.0, 187.0, 22.0 ],
+									"patching_rect" : [ 11.0, 163.0, 187.0, 22.0 ],
 									"style" : "",
 									"text" : "gl_gridshape.model gl_gridshape"
 								}
@@ -234,7 +245,7 @@
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 212.0, 174.0, 300.0, 105.0 ],
+									"patching_rect" : [ 212.0, 163.0, 300.0, 105.0 ],
 									"presentation_rect" : [ 15.0, 15.0, 300.0, 105.0 ],
 									"viewvisibility" : 1
 								}
@@ -249,7 +260,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 212.0, 98.0, 300.0, 74.0 ],
+									"patching_rect" : [ 212.0, 87.0, 300.0, 74.0 ],
 									"style" : "",
 									"text" : "Creates one of several simple shapes (sphere, torus, cylinder, opencyclinder, cube, opencube, plane, circle) laid out on a connected grid. These shapes may be either rendered directly, or sent out the leftmost outlet as a matrix of values.",
 									"textcolor" : [ 0.6, 0.6, 0.6, 1.0 ]
@@ -264,7 +275,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 11.0, 261.0, 90.0, 22.0 ],
+									"patching_rect" : [ 11.0, 200.0, 90.0, 22.0 ],
 									"style" : "",
 									"text_width" : 69.0
 								}
@@ -301,7 +312,7 @@
  ]
 					}
 ,
-					"patching_rect" : [ 6.21875, 54.0, 84.0, 22.0 ],
+					"patching_rect" : [ 6.21875, 54.0, 84.0, 24.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -334,7 +345,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 26.0, 546.0, 346.0 ],
+						"rect" : [ 0.0, 26.0, 553.0, 274.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -366,7 +377,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 20.21875, 162.0, 50.0, 20.0 ],
+					"patching_rect" : [ 20.21875, 162.0, 50.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -385,56 +396,50 @@
 		"lines" : [  ],
 		"dependency_cache" : [ 			{
 				"name" : "gl_gridshape.view.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/openGL/geometry/gl_gridshape",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_gridshape",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "gl_gridshape.model.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/openGL/geometry/gl_gridshape",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/openGL/geometry/gl_gridshape",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.model.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/maxhelpui",
-				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
