@@ -26,7 +26,7 @@ movie/loop/mode loop
 movie/loop/points 0.000000 1000.000000
 movie/loop/report 0
 movie/output_texture 0
-movie/rate -0.000000
+movie/rate 1.000000
 movie/unique 0
 movie/vol 0.000000
 noise/dim 640.000000 480.000000
