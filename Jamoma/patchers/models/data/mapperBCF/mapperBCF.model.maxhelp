@@ -47,7 +47,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 213.5, 454.0, 67.0, 20.0 ],
 					"style" : "",
-					"text" : "time 5755"
+					"text" : "time 3752"
 				}
 
 			}
@@ -62,7 +62,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 123.5, 454.0, 67.0, 20.0 ],
 					"style" : "",
-					"text" : "time 3994"
+					"text" : "time 2282"
 				}
 
 			}
@@ -77,7 +77,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 41.0, 455.0, 67.0, 20.0 ],
 					"style" : "",
-					"text" : "time 2953"
+					"text" : "time 1176"
 				}
 
 			}
@@ -170,7 +170,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 800.0, 445.0, 402.0, 215.0 ],
+						"rect" : [ 491.0, 296.0, 402.0, 215.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -197,7 +197,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-4",
@@ -206,7 +205,8 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 166.0, 153.0, 180.0, 20.0 ],
-									"style" : ""
+									"style" : "",
+									"text" : "model:address /movie%"
 								}
 
 							}
@@ -218,7 +218,8 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 166.0, 43.0, 180.0, 20.0 ],
-									"style" : ""
+									"style" : "",
+									"text" : "track.1/turn.1/value 0.461538"
 								}
 
 							}
