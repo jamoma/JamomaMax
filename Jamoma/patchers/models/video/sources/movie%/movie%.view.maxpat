@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 243.0, 143.0, 909.0, 824.0 ],
+		"rect" : [ 686.0, 79.0, 909.0, 824.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -38,6 +38,19 @@
 		"style" : "default",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 577.5, 681.0, 49.5, 22.0 ],
+					"style" : "",
+					"text" : "t b l"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
@@ -251,7 +264,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 0.0, 0.0, 640.0, 480.0 ],
+						"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -478,7 +491,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "int" ],
-					"patching_rect" : [ 561.0, 673.879639, 57.0, 22.0 ],
+					"patching_rect" : [ 561.0, 646.879639, 57.0, 22.0 ],
 					"style" : "",
 					"text" : "strippath"
 				}
@@ -1571,7 +1584,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 561.0, 707.202515, 147.0, 22.0 ],
+					"patching_rect" : [ 561.0, 717.202515, 66.0, 22.0 ],
 					"style" : "default",
 					"text" : "zl join"
 				}
@@ -1649,7 +1662,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 561.0, 641.145508, 101.0, 22.0 ],
+					"patching_rect" : [ 561.0, 614.145508, 101.0, 22.0 ],
 					"style" : "",
 					"text" : "j.receive file/path"
 				}
@@ -2079,9 +2092,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-9", 1 ],
+					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"midpoints" : [ 698.0, 701.0, 636.0, 701.0, 636.0, 675.0, 587.0, 675.0 ],
 					"source" : [ "obj-12", 0 ]
 				}
 
@@ -2619,6 +2633,24 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-9", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-50", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2692,19 +2724,19 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-36" : [ "live.text", "live.text", 0 ],
-			"obj-49" : [ "live.button", "live.button", 0 ],
-			"obj-41" : [ "live.text[4]", "live.text[4]", 0 ],
 			"obj-39" : [ "live.text[3]", "live.text", 0 ],
 			"obj-37" : [ "live.text[1]", "live.text", 0 ],
+			"obj-41" : [ "live.text[4]", "live.text[4]", 0 ],
+			"obj-49" : [ "live.button", "live.button", 0 ],
 			"obj-89" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-53" : [ "live.button[1]", "live.button", 0 ],
+			"obj-36" : [ "live.text", "live.text", 0 ],
 			"obj-91" : [ "live.text[5]", "live.text[2]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
