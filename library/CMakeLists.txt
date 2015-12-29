@@ -70,12 +70,12 @@ set_property(TARGET ${PROJECT_NAME}
 			 PROPERTY BUILD_WITH_INSTALL_RPATH TRUE)
 
 # Version
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY VERSION ${Jamoma_VERSION})
-set_property(TARGET ${PROJECT_NAME}
-			 PROPERTY SOVERSION ${Jamoma_SOVERSION})
-set_property(TARGET ${PROJECT_NAME} APPEND
-			 PROPERTY COMPATIBLE_INTERFACE_STRING Jamoma_MAJOR_VERSION)
+# set_property(TARGET ${PROJECT_NAME}
+# 			 PROPERTY VERSION ${Jamoma_VERSION})
+# set_property(TARGET ${PROJECT_NAME}
+# 			 PROPERTY SOVERSION ${Jamoma_SOVERSION})
+# set_property(TARGET ${PROJECT_NAME} APPEND
+# 			 PROPERTY COMPATIBLE_INTERFACE_STRING Jamoma_MAJOR_VERSION)
 
 # TODO replace with target_include_directories
 if(APPLE)
@@ -161,6 +161,28 @@ target_link_libraries(${PROJECT_NAME} ${Jitter_LIB})
 
 target_link_libraries(${PROJECT_NAME} Foundation)
 target_link_libraries(${PROJECT_NAME} Modular)
+
+
+
+
+if(APPLE)
+
+	ADD_CUSTOM_COMMAND(
+	  TARGET ${PROJECT_NAME}
+	  POST_BUILD
+	  COMMAND ${CMAKE_COMMAND} -E make_directory
+	   ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/support
+	)
+	ADD_CUSTOM_COMMAND(
+	  TARGET ${PROJECT_NAME} #Jamoma::Foundation # for instance
+	  POST_BUILD
+	  COMMAND ${CMAKE_COMMAND} -E copy
+	      ${CMAKE_BINARY_DIR}/library/${CMAKE_BUILD_TYPE}/lib${PROJECT_NAME}.dylib #* # we have to be careful with .so / .dll
+	      ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/support #/libJamomaFoundation.dylib
+	)
+endif() # APPLE
+
+
 
 ### Tests ###
 addTestTarget()
