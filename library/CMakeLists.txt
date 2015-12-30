@@ -166,20 +166,21 @@ target_link_libraries(${PROJECT_NAME} Modular)
 
 
 if(APPLE)
-
-	ADD_CUSTOM_COMMAND(
-	  TARGET ${PROJECT_NAME} #Jamoma::Foundation # for instance
-	  POST_BUILD
-#	  COMMAND ${CMAKE_COMMAND} -E make_directory
-#	  	${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/support
-  	  COMMAND ${CMAKE_COMMAND} -E make_directory
-  	  	${CMAKE_BINARY_DIR}/Debug/support
-  	  COMMAND ${CMAKE_COMMAND} -E make_directory
-  	  	${CMAKE_BINARY_DIR}/Release/support
-	  COMMAND ${CMAKE_COMMAND} -E copy
-	  	${CMAKE_BINARY_DIR}/library/${CMAKE_BUILD_TYPE}/lib${PROJECT_NAME}.dylib #* # we have to be careful with .so / .dll
-		${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/support #/libJamomaFoundation.dylib
-	)
+	if(!$ENV{TRAVIS})
+		ADD_CUSTOM_COMMAND(
+		  TARGET ${PROJECT_NAME} #Jamoma::Foundation # for instance
+		  POST_BUILD
+	#	  COMMAND ${CMAKE_COMMAND} -E make_directory
+	#	  	${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/support
+	  	  COMMAND ${CMAKE_COMMAND} -E make_directory
+	  	  	${CMAKE_BINARY_DIR}/Debug/support
+	  	  COMMAND ${CMAKE_COMMAND} -E make_directory
+	  	  	${CMAKE_BINARY_DIR}/Release/support
+		  COMMAND ${CMAKE_COMMAND} -E copy
+		  	${CMAKE_BINARY_DIR}/library/${CMAKE_BUILD_TYPE}/lib${PROJECT_NAME}.dylib #* # we have to be careful with .so / .dll
+			${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/support #/libJamomaFoundation.dylib
+		)
+	endif() # !$ENV{TRAVIS}		
 endif() # APPLE
 
 
