@@ -179,7 +179,7 @@ void stats_bang(t_stats *x)
 
 /////small optimization by Nils Peters////
 
-	if (x->valueCount >= 0)
+	if (x->valueCount > 0)
 		mean = x->sumOfValues / x->valueCount;  
 	else
 		mean = 0;
