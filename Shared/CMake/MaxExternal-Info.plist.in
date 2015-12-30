@@ -9,7 +9,7 @@
         <key>CFBundleExecutable</key>
         <string>@JAMOMAMAX_EXTERNAL_OUTPUT_NAME@</string>
         <key>CFBundleIdentifier</key>
-        <string>org.jamoma.@JAMOMAMAX_EXTERNAL_OUTPUT_NAME@</string>
+        <string>org.jamoma.@JAMOMAMAX_EXTERNAL_IDENTIFIER@</string>
         <key>CFBundleInfoDictionaryVersion</key>
         <string>6.0</string>
         <key>CFBundleLongVersionString</key>
