@@ -11,7 +11,7 @@
 
 extern "C" void fileusage_addpackage(void *w, C74_CONST char *name, t_object *subfoldernames);
 
-static void jamoma_fileusage(void* self, void* w)
+inline void jamoma_fileusage(void* self, void* w)
 {       
        fileusage_addpackage(w, "Jamoma", nullptr);
 }

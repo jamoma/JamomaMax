@@ -348,12 +348,12 @@ void MaxAudioGraphWrappedClass_assist(WrappedInstancePtr self, void *b, long msg
 
 
 
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c)
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c)
 {
 	return wrapAsMaxAudioGraph(ttClassName, maxClassName, c, (MaxAudioGraphWrappedClassOptionsPtr)NULL);
 }
 
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, MaxAudioGraphWrappedClassOptionsPtr options)
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, MaxAudioGraphWrappedClassOptionsPtr options)
 {
 	TTObjectBasePtr				o = NULL;
 	TTValue						v;
@@ -478,7 +478,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 }
 
 
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck)
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck)
 {
 	TTErr err = wrapAsMaxAudioGraph(ttClassName, maxClassName, c);
 
@@ -489,7 +489,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 	return err;
 }
 
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, MaxAudioGraphWrappedClassOptionsPtr options)
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, MaxAudioGraphWrappedClassOptionsPtr options)
 {
 	TTErr err = wrapAsMaxAudioGraph(ttClassName, maxClassName, c, options);
 
@@ -501,7 +501,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 }
 
 
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument)
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument)
 {
 	TTErr err = wrapAsMaxAudioGraph(ttClassName, maxClassName, c);
 
@@ -512,7 +512,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
 	return err;
 }
 
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, MaxAudioGraphWrappedClassOptionsPtr options)
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, MaxAudioGraphWrappedClassOptionsPtr options)
 {
 	TTErr err = wrapAsMaxAudioGraph(ttClassName, maxClassName, c, options);
 

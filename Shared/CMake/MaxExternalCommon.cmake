@@ -38,6 +38,10 @@ else()
         set_target_properties(${PROJECT_NAME}
                                                   PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_OUTPUT_NAME}")
 endif()
+
+string(REGEX REPLACE "_" "-" JAMOMAMAX_EXTERNAL_IDENTIFIER "${PROJECT_NAME}")
+set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "${JAMOMAMAX_EXTERNAL_IDENTIFIER}")
+
 configure_file("${CMAKE_CURRENT_LIST_DIR}/MaxExternal-Info.plist.in" "${PROJECT_BINARY_DIR}/Info.plist" @ONLY)
 
 set_property(TARGET ${PROJECT_NAME}
