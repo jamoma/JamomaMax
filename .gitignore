@@ -12,6 +12,9 @@ html
 Debug
 Release
 Makefile
+Jamoma/externals
+Jamoma/extensions
+Jamoma/support
 
 # XCode files to be ignored
 xcuserdata

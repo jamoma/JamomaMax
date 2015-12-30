@@ -54,8 +54,6 @@ endif()
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/library/includes/JamomaMaxVersion.h.in" "${CMAKE_CURRENT_SOURCE_DIR}/library/includes/JamomaMaxVersion.h" @ONLY)
 configure_file("${CMAKE_CURRENT_SOURCE_DIR}/Jamoma/javascript/j.js_systeminfo.js.in" "${CMAKE_CURRENT_SOURCE_DIR}/Jamoma/javascript/j.js_systeminfo.js" @ONLY)
 
-if(NOT JAMOMA_UMBRELLA)
-
     if (APPLE)
         option(FAT_BINARY "Build a fat binary (32bit and 64bit)" ON)
     endif(APPLE)
@@ -77,9 +75,11 @@ if(NOT JAMOMA_UMBRELLA)
         DESTINATION ${JAMOMAMAX_INSTALL_FOLDER}
             COMPONENT JamomaMax)
     add_subdirectory(${JAMOMA_CORE_SRC_PATH})
-else()
-	set(JAMOMA_CORE_SRC_PATH "${PROJECT_SOURCE_DIR}/../../Core/")
-endif()
+
+
+
+
+
 
 if((APPLE AND NOT IOS) OR WIN32)
 
