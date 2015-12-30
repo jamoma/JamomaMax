@@ -120,7 +120,7 @@ typedef MaxAudioGraphWrappedClassOptions* MaxAudioGraphWrappedClassOptionsPtr;
  * @param c                     Address to a variable to hold the wrapped Max class upon return.
  * @return						#TTErr error code if the method fails to execute, else #kTTErrNone.
  */
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c);
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c);
 
 
 /**
@@ -132,7 +132,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
  * @param validityCheck			Pointer to a function that will return a true or false regarding whether or not it is okay to instantiate the object.
  * @return						#TTErr error code if the method fails to execute, else #kTTErrNone.
  */
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck);
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck);
 
 
 /**
@@ -145,7 +145,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
  * @param validityCheckArgument	An argument that will be passed to the validity check function, or NULL if you don't wish to pass an argument.
  * @return						#TTErr error code if the method fails to execute, else #kTTErrNone.
  */
-TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument);
+TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument);
 
 
 // These are versions of the above, but for which additional options can be specified.
@@ -159,7 +159,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttClassName, char* maxClassName, MaxAudioGrap
  * @param options               Pointer to additional options that will be forwarded to the wrapped object when instantiated.
  * @return						#TTErr error code if the method fails to execute, else #kTTErrNone.
  */
-TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, MaxAudioGraphWrappedClassOptionsPtr options);
+TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, MaxAudioGraphWrappedClassOptionsPtr options);
 
 
 /**
@@ -172,7 +172,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, char* maxClassName, MaxAudio
  * @param options               Pointer to additional options that will be forwarded to the wrapped object when instantiated.
  * @return						#TTErr error code if the method fails to execute, else #kTTErrNone.
  */
-TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, MaxAudioGraphWrappedClassOptionsPtr options);
+TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, MaxAudioGraphWrappedClassOptionsPtr options);
 
 /**
  This version can be passed a method that is called to make sure it is okay to instantiate the class.
@@ -184,7 +184,7 @@ TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, char* maxClassName, MaxAudio
  * @param validityCheckArgument	An argument that will be passed to the validity check function, or NULL if you don't wish to pass an argument.
  * @param options               Pointer to additional options that will be forwarded to the wrapped object when instantiated.
  */
-TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, MaxAudioGraphWrappedClassOptionsPtr options);
+TTErr wrapAsMaxAudioGraph(TTSymbol ttblueClassName, const char* maxClassName, MaxAudioGraphWrappedClassPtr* c, TTValidityCheckFunction validityCheck, TTPtr validityCheckArgument, MaxAudioGraphWrappedClassOptionsPtr options);
 
 
 /**

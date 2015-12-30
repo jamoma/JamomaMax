@@ -287,9 +287,9 @@ void ui_subscribe(t_ui *x, t_symbol *address)
 {
 	TTAddress       adrs = TTAddress(address->s_name);
 	TTValue			v, args;
-	TTAttributePtr	anAttribute;
+	//	TTAttributePtr	anAttribute;
 	TTObject        aReceiver;
-	TTErr			err;
+	//	TTErr			err;
     
 	if ((x->modelAddress == kTTAdrsEmpty && adrs != kTTAdrsEmpty) || adrs != x->modelAddress) {
 		
@@ -1142,8 +1142,8 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	long				size, i;
 	int 				selectedId;
 	t_jfont 			*font;
-	long				coord_x=0, coord_y=0;
-	t_pt				pt;
+	//long				coord_x=0, coord_y=0;
+	//t_pt				pt;
 	
 	ui_menu_build(x);	// would be better to not rebuild the menu every single time?  or not?  this uses less memory...
 	
@@ -1331,8 +1331,9 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	long				size, i;
 	int 				selectedId;
 	t_jfont 			*font;
-	long				coord_x=0, coord_y=0;
-	t_pt				pt;
+	//long				coord_x=0,
+	//long				coord_y = 0;
+	//t_pt				pt;
 	
 	ui_refmenu_build(x);	// TODO: would be better to not rebuild the menu every single time?  or not?  this uses less memory...
 	
