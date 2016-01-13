@@ -161,7 +161,7 @@ void vimic_sensitivity(double *sensi, double *del, Mic *mic, Mirror *mirror, Sou
             else if (newDel < 0.0)
                 post("new Delay less than 0: %f", newDel);
 
-            if (/*order == DIRECT &&*/ (abs(*del - *oldDelay) > fades->fadeThreshold() 
+			if (/*order == DIRECT &&*/ (std::abs(*del - *oldDelay) > fades->fadeThreshold()
                         && (mode == Properties::X_FADE_LITE || mode == Properties::X_FADE_XL)))		
             {
                 if (fades->startFade() && globReportFlag)
@@ -186,7 +186,7 @@ double vimic_invSqrtSumSensi(double *sensi, long size)
 
 void vimic_floorSensi(double *sensi, double minSensi)
 {
-    if (abs(*sensi) < minSensi)
+    if (std::abs(*sensi) < minSensi)
         *sensi = 0.0;
 }
 

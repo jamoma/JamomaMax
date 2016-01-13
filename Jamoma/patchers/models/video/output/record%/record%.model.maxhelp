@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 1,
 			"revision" : 0,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 617.0, 638.0 ],
+		"rect" : [ 648.0, 93.0, 572.0, 574.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -97,14 +97,14 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 29.0, 98.0, 149.0, 21.0 ],
 					"style" : "",
-					"text" : "input%.model input%_help"
+					"text" : "grab%.model grab%_help"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"annotation" : "Input from either a camera - video file - noise synthesis - or a real time screen capture.",
-					"args" : [ "input%_help" ],
+					"annotation" : "none",
+					"args" : [ "grab%_help" ],
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
@@ -113,7 +113,7 @@
 					"id" : "obj-9",
 					"lockeddragscroll" : 1,
 					"maxclass" : "bpatcher",
-					"name" : "input%.view.maxpat",
+					"name" : "grab%.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
@@ -232,38 +232,14 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "input%.view.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.ui.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
+				"name" : "grab%.view.maxpat",
+				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/grab%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
 				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/components/data/list2parameter",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "input%.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/input%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "noise%.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "movie%.model.maxpat",
-				"bootpath" : "~/Documents/GITs/JamomaMax/Jamoma/patchers/models/video/sources/movie%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -318,31 +294,7 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.parameter.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.in.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.out.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.model.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.namespace.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.oscroute.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "j.init.mxo",
+				"name" : "j.return.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -350,7 +302,23 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "j.return.mxo",
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.init.mxo",
 				"type" : "iLaX"
 			}
 , 			{

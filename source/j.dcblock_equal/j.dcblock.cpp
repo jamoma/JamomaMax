@@ -18,7 +18,7 @@
 
 
 // Data Structure for this object
-typedef struct DCBlock {
+struct DCBlock {
     t_object				obj;
 	TTAudioGraphObjectBasePtr	audioGraphObject;
 	TTPtr					audioGraphOutlet;

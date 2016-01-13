@@ -606,7 +606,7 @@ void object_poststring(t_object *ob, long kind, long flags, char *text);
 void object_error_obtrusive(t_object *x, char *s, ...);
 
 
-long jdialog_showtext(char *prompt, char *deftext, long flags, char **text);
+long jdialog_showtext(const char *prompt, char *deftext, long flags, char **text);
 
 
 // inlet/outlet functions

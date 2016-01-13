@@ -3,8 +3,8 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 1,
+			"revision" : 0,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -38,6 +38,21 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "int" ],
+					"patching_rect" : [ 492.0, 356.295959, 133.0, 22.0 ],
+					"style" : "",
+					"text" : "conformpath slash boot"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -369,7 +384,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 499.5, 401.443298, 42.0, 16.758072 ],
+					"patching_rect" : [ 533.5, 399.508606, 42.0, 16.758072 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 35.553665, 1.0, 36.0, 19.0 ],
 					"style" : "",
@@ -449,7 +464,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 499.5, 422.122864, 95.0, 33.0 ],
+					"patching_rect" : [ 533.5, 420.188171, 95.0, 33.0 ],
 					"style" : "",
 					"text" : "j.send movie/eject"
 				}
@@ -462,14 +477,13 @@
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
 					"id" : "obj-51",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 399.5, 434.0, 88.0, 33.0 ],
+					"patching_rect" : [ 399.5, 434.0, 123.0, 21.0 ],
 					"style" : "",
-					"text" : "j.send movie/path"
+					"text" : "j.send movie/file/path"
 				}
 
 			}
@@ -517,9 +531,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 310.695923, 369.295959, 66.804077, 35.0 ],
+					"patching_rect" : [ 492.0, 306.295959, 66.804077, 35.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -1.0, 0.0, 177.948227, 47.0 ]
+					"presentation_rect" : [ 1.0, 0.0, 180.948227, 51.0 ]
 				}
 
 			}
@@ -845,8 +859,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 1,
+							"revision" : 0,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -1298,6 +1312,15 @@
 					"destination" : [ "obj-51", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-51", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
 					"source" : [ "obj-35", 0 ]
 				}
 
@@ -1360,7 +1383,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-51", 0 ],
+					"destination" : [ "obj-33", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-48", 0 ]
@@ -1562,7 +1585,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }

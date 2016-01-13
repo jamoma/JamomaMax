@@ -109,7 +109,7 @@ static t_class*	s_textslider_class;
 #if 0
 #pragma mark -
 #pragma mark Class Definition
-#endif 0
+#endif // 0
 
 int JAMOMA_EXPORT_MAXOBJ main(void)
 {
@@ -241,7 +241,7 @@ int JAMOMA_EXPORT_MAXOBJ main(void)
 #if 0
 #pragma mark -
 #pragma mark Life Cycle
-#endif 0
+#endif //0
 
 
 void *textslider_new(t_symbol *s, long argc, t_atom *argv)
@@ -301,7 +301,7 @@ void textslider_free(t_textslider *x)
 #if 0
 #pragma mark -
 #pragma mark Methods
-#endif 0
+#endif //0
 
 
 t_max_err textslider_notify(t_textslider *x, t_symbol *s, t_symbol *msg, void *sender, void *data)
@@ -410,7 +410,7 @@ void textslider_set(t_textslider *x, double value)
 #if 0
 #pragma mark -
 #pragma mark Attributes
-#endif 0
+#endif //0
 
 t_max_err textslider_getRange(t_textslider *x, void *attr, long *argc, t_atom **argv)
 {
@@ -524,7 +524,7 @@ t_max_err textslider_set_unit(t_textslider *x, void *attr, long argc, t_atom *ar
 #if 0
 #pragma mark -
 #pragma mark User Interface
-#endif 0
+#endif //0
 
 
 void textslider_mousedoubleclick(t_textslider *x, t_object *patcherview, t_pt pt, long modifiers)
