@@ -78,3 +78,5 @@ tar czf "${TRAVIS_BUILD_DIR}/${ARCHIVE_NAME}" Jamoma/
 
 cd ${TRAVIS_BUILD_DIR}
 scp ${ARCHIVE_NAME} ${DEPLOYTARGET}
+
+mv ${ARCHIVE_NAME} Jamoma-OSX.tgz
