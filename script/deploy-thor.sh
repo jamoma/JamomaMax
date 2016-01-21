@@ -2,11 +2,6 @@
 
 set -v
 
-if [ "x${TRAVIS_BRANCH}" != "xmaster" ]; then
-  echo "We are not on master branch, don't upload build."
-  exit 0
-fi
-
 if [ "x${TRAVIS_TAG}" = "x" ]; then
   DEPLOYTARGET=jamomabuild@thor.bek.no:/Volumes/ThorData/WebServer/Jamoma/nanoc-website/output/download/JamomaMax/nightly-builds
 else
@@ -77,6 +72,9 @@ cd ${TRAVIS_BUILD_DIR}/JamomaInstall/JamomaMax/
 tar czf "${TRAVIS_BUILD_DIR}/${ARCHIVE_NAME}" Jamoma/
 
 cd ${TRAVIS_BUILD_DIR}
-scp ${ARCHIVE_NAME} ${DEPLOYTARGET}
+
+if [ "x${TRAVIS_BRANCH}" = "xmaster" ]; then
+  scp ${ARCHIVE_NAME} ${DEPLOYTARGET}
+fi
 
 mv ${ARCHIVE_NAME} Jamoma-OSX.tgz
