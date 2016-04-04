@@ -62,7 +62,7 @@ ARCHIVE_NAME="JamomaMax-${DATE}-OSX"
 if [ "x${TRAVIS_TAG}" = "x" ]; then
   ARCHIVE_NAME="${ARCHIVE_NAME}.tgz"
 else
-  ARCHIVE_NAME="${ARCHIVE_NAME}-${TRAVIS_TAG}.tgz"
+  ARCHIVE_NAME="JamomaMax-OSX-Release-${TRAVIS_TAG}.tgz"
 fi
 
 cd ${TRAVIS_BUILD_DIR}/build
