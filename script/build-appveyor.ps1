@@ -39,5 +39,5 @@ cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
 Move-Item *.zip $env:APPVEYOR_BUILD_FOLDER -force
 cd $env:APPVEYOR_BUILD_FOLDER
 
-# call deploy script in buid step so that the deploy log could be upload with others
+# call deploy script in build step so that the deploy log could be upload with others
 c:\projects\JamomaMax\script\deploy-appveyor.ps1
