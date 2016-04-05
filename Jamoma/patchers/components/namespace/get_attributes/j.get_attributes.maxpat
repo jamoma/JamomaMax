@@ -43,7 +43,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 111.0, 295.0, 27.0, 22.0 ],
+					"patching_rect" : [ 191.0, 239.0, 27.0, 22.0 ],
 					"style" : "",
 					"text" : "iter"
 				}
@@ -56,7 +56,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 111.0, 240.0, 117.0, 22.0 ],
+					"patching_rect" : [ 191.0, 153.0, 117.0, 22.0 ],
 					"style" : "",
 					"text" : "$1, output attributes"
 				}
@@ -69,22 +69,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
-					"patching_rect" : [ 111.0, 269.0, 79.0, 22.0 ],
+					"patching_rect" : [ 191.0, 195.0, 79.0, 22.0 ],
 					"style" : "",
 					"text" : "j.namespace"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-29",
-					"maxclass" : "newobj",
-					"numinlets" : 3,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 111.0, 160.0, 363.0, 22.0 ],
-					"style" : "",
-					"text" : "combine MODEL / PARAMETER|MESSAGERETURN @triggers 2"
 				}
 
 			}
@@ -94,47 +81,21 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 48.0, 380.0, 156.0, 20.0 ],
+					"patching_rect" : [ 128.0, 345.0, 156.0, 20.0 ],
 					"style" : "",
-					"text" : "All attributes and their state"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-21",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 266.5, 380.0, 185.0, 33.0 ],
-					"style" : "",
-					"text" : "Full OSC name of the parameter, message or return"
+					"text" : "Relative attribute name"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
-					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 65.0, 9.0, 122.0, 33.0 ],
+					"patching_rect" : [ 97.5, 54.0, 217.0, 20.0 ],
 					"style" : "",
 					"text" : "Name of parameter, message or return"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 288.5, 9.0, 83.0, 20.0 ],
-					"style" : "",
-					"text" : "Module name"
 				}
 
 			}
@@ -145,20 +106,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 111.0, 322.0, 30.0, 30.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "module name",
-					"id" : "obj-14",
-					"maxclass" : "inlet",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 315.0, 56.0, 30.0, 30.0 ],
+					"patching_rect" : [ 191.0, 286.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -171,19 +119,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 111.0, 56.0, 30.0, 30.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"comment" : "formatted OSC /module/function name",
-					"id" : "obj-16",
-					"maxclass" : "outlet",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 344.0, 322.0, 30.0, 30.0 ],
+					"patching_rect" : [ 191.0, 100.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -200,37 +136,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-29", 2 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-29", 0 ]
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
