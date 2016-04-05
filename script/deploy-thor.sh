@@ -73,7 +73,7 @@ tar czf "${TRAVIS_BUILD_DIR}/${ARCHIVE_NAME}" Jamoma/
 
 cd ${TRAVIS_BUILD_DIR}
 
-if [ "x${TRAVIS_BRANCH}" = "xmaster" ]; then
+if [ "x${TRAVIS_BRANCH}" = "xmaster" ] || [ "x${TRAVIS_TAG}" != "x" ]; then
   scp ${ARCHIVE_NAME} ${DEPLOYTARGET}
 fi
 
