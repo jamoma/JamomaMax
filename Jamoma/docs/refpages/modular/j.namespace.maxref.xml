@@ -390,11 +390,21 @@
 	</examplelist>
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="j.cue"/>
-		<seealso name="j.model"/>
-		<seealso name="j.parameter"/>
-		<seealso name="j.message"/>
-		<seealso name="j.return"/>
+        <seealso name="j.cue"/>
+        <seealso name="j.get_attributes"/>
+        <seealso name="j.get_attribute_value"/>
+        <seealso name="j.get_messages"/>
+        <seealso name="j.get_modeles"/>
+        <seealso name="j.get_parameters"/>
+        <seealso name="j.get_returns"/>
+        <seealso name="j.message"/>
+        <seealso name="j.model"/>
+        <seealso name="j.namespacebrowser"/>
+        <seealso name="j.namespaceMenu"/>
+        <seealso name="j.namespace_selector"/>
+        <seealso name="j.parameter"/>
+        <seealso name="j.parent_address"/>
+        <seealso name="j.return"/>
 		<seealso name="absolute_and_relative_address" type="vignette" module="topics"/>
 		<seealso name="namespaceexploration" type="tutorial" module="jamoma"/>
 		<seealso name="Jamoma_under_the_hood" type="vignette" module="topics"/>
