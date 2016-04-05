@@ -27,7 +27,7 @@ c:\projects\JamomaMax\cmake-3.4.1-win32-x86\bin\cmake.exe --build . --config Rel
 
 if ( $env:APPVEYOR_REPO_TAG -eq "true" ){
     Write-Host "This is a release deployment with tag $env:APPVEYOR_REPO_TAG_NAME"
-    $archiveName = "JamomaMax-$env:DATE-Windows_$env:PLATFORM-Release-$env:APPVEYOR_REPO_TAG_NAME.zip"
+    $archiveName = "JamomaMax-Windows_$env:PLATFORM-Release-$env:APPVEYOR_REPO_TAG_NAME.zip"
 } else {
     Write-Host "This is debug deployment."
     $sha = $env:APPVEYOR_REPO_COMMIT.Substring(0,7)
@@ -39,5 +39,5 @@ cd c:/projects/JamomaMax/build/JamomaInstall/JamomaMax/
 Move-Item *.zip $env:APPVEYOR_BUILD_FOLDER -force
 cd $env:APPVEYOR_BUILD_FOLDER
 
-# call deploy script in buid step so that the deploy log could be upload with others
+# call deploy script in build step so that the deploy log could be upload with others
 c:\projects\JamomaMax\script\deploy-appveyor.ps1

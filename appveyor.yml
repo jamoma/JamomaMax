@@ -22,7 +22,7 @@ platform:
 build_script:
   - ps: c:\projects\JamomaMax\script\build-appveyor.ps1
 
-
+# deploy script is called in the build script above
 # deploy_script:
 #  - ps: c:\projects\JamomaMax\script\deploy-appveyor.ps1
 
