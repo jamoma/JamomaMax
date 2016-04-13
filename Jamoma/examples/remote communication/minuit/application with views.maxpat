@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 1,
-			"revision" : 0,
-			"architecture" : "x86",
+			"minor" : 0,
+			"revision" : 6,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 653.0, 79.0, 549.0, 658.0 ],
+		"rect" : [ 85.0, 79.0, 549.0, 658.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,61 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 11.0, 467.0, 129.0, 22.0 ],
+					"style" : "",
+					"text" : "namespace/observe 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"fontname" : "Arial",
+					"fontsize" : 13.0,
+					"id" : "obj-14",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 151.0, 458.0, 309.0, 40.0 ],
+					"style" : "",
+					"text" : "Enable observation of \"application_with_models\" namespace to keep in touch with any changes"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
+					"fontface" : 1,
+					"fontname" : "Helvetica Neue Bold",
+					"id" : "obj-12",
+					"ignoreclick" : 1,
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 11.0, 439.0, 24.0, 24.0 ],
+					"rounded" : 180.0,
+					"style" : "",
+					"text" : "2",
+					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
+					"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"usebgoncolor" : 1,
+					"usetextovercolor" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"bgoncolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"fontface" : 1,
@@ -50,10 +105,10 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 11.0, 517.0, 24.0, 24.0 ],
+					"patching_rect" : [ 11.0, 549.0, 24.0, 24.0 ],
 					"rounded" : 180.0,
 					"style" : "",
-					"text" : "2",
+					"text" : "3",
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 0.698039 ],
 					"textoncolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textovercolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
@@ -72,7 +127,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 124.0, 431.0, 229.0, 40.0 ],
+					"patching_rect" : [ 151.0, 382.0, 229.0, 40.0 ],
 					"style" : "",
 					"text" : "Explore \"application_with_models\" to mirror its namespace"
 				}
@@ -92,7 +147,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 11.0, 412.0, 24.0, 24.0 ],
+					"patching_rect" : [ 11.0, 363.0, 24.0, 24.0 ],
 					"rounded" : 180.0,
 					"style" : "",
 					"text" : "1",
@@ -115,7 +170,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 11.0, 545.0, 229.0, 40.0 ],
+					"patching_rect" : [ 11.0, 577.0, 229.0, 40.0 ],
 					"style" : "",
 					"text" : "Control remotely  \"application with models.maxpat\""
 				}
@@ -131,7 +186,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 303.0, 334.0, 182.0, 54.0 ],
+					"patching_rect" : [ 303.0, 311.0, 182.0, 54.0 ],
 					"style" : "",
 					"text" : "Declare a remote patch as a Minuit device called \"application_with_models\""
 				}
@@ -147,7 +202,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 303.0, 208.0, 180.0, 54.0 ],
+					"patching_rect" : [ 303.0, 185.0, 180.0, 54.0 ],
 					"style" : "",
 					"text" : "Declare this patch as a Minuit device called \"application_with_views\""
 				}
@@ -176,7 +231,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 5.0, 83.0, 229.0, 69.0 ],
+					"patching_rect" : [ 5.0, 60.0, 229.0, 69.0 ],
 					"style" : "",
 					"text" : "This is a j.modular setup example illustrating how views can remotely control models using Minuit protocol."
 				}
@@ -189,7 +244,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 11.0, 351.0, 229.0, 22.0 ],
+					"patching_rect" : [ 11.0, 328.0, 229.0, 22.0 ],
 					"style" : "",
 					"text" : "j.modular application_with_models Minuit"
 				}
@@ -202,7 +257,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 11.0, 224.0, 266.0, 22.0 ],
+					"patching_rect" : [ 11.0, 201.0, 266.0, 22.0 ],
 					"style" : "",
 					"text" : "j.modular Minuit @name application_with_views"
 				}
@@ -216,7 +271,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 11.0, 310.0, 156.0, 35.0 ],
+					"patching_rect" : [ 11.0, 287.0, 156.0, 35.0 ],
 					"style" : "",
 					"text" : "protocol/setup ip localhost, protocol/setup port 8001"
 				}
@@ -230,7 +285,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 11.0, 183.0, 156.0, 35.0 ],
+					"patching_rect" : [ 11.0, 160.0, 156.0, 35.0 ],
 					"style" : "",
 					"text" : "protocol/setup ip localhost, protocol/setup port 8002"
 				}
@@ -253,7 +308,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 242.0, 512.5, 300.0, 105.0 ],
+					"patching_rect" : [ 242.0, 544.5, 300.0, 105.0 ],
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 105.0 ],
 					"viewvisibility" : 1
 				}
@@ -268,7 +323,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 11.0, 283.5, 60.0, 22.0 ],
+					"patching_rect" : [ 11.0, 260.5, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -283,7 +338,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 11.0, 156.5, 60.0, 22.0 ],
+					"patching_rect" : [ 11.0, 133.5, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -296,7 +351,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 11.0, 440.0, 107.0, 22.0 ],
+					"patching_rect" : [ 11.0, 391.0, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "namespace/mirror"
 				}
@@ -304,6 +359,16 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 20.5, 494.0, 4.5, 494.0, 4.5, 324.0, 20.5, 324.0 ],
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
 					"disabled" : 0,
@@ -344,21 +409,21 @@
 					"destination" : [ "obj-8", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 20.5, 468.0, 4.5, 468.0, 4.5, 347.0, 20.5, 347.0 ],
+					"midpoints" : [ 20.5, 418.0, 4.5, 418.0, 4.5, 324.0, 20.5, 324.0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
-			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
+			"obj-7::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-7::obj-5::obj-9" : [ "live.menu", "live.menu", 0 ],
 			"obj-7::obj-5::obj-45" : [ "live.text", "live.text", 0 ],
+			"obj-7::obj-5::obj-7" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-7::obj-5::obj-46" : [ "live.text[1]", "live.text", 0 ],
 			"obj-7::obj-5::obj-27" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-7::obj-5::obj-19" : [ "live.numbox", "live.numbox", 0 ]
+			"obj-7::obj-5::obj-6" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
+			"obj-7::obj-5::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -414,7 +479,7 @@
 				"type" : "iLaX"
 			}
  ],
-		"autosave" : 0,
+		"embedsnapshot" : 0,
 		"styles" : [ 			{
 				"name" : "jpatcher001",
 				"parentstyle" : "",
