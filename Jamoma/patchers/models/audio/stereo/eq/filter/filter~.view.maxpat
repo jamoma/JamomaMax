@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 4,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 703.0, 160.0, 493.0, 760.0 ],
+		"rect" : [ 703.0, 160.0, 758.0, 813.0 ],
 		"bgcolor" : [ 1.0, 1.0, 1.0, 0.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
@@ -38,6 +38,45 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 56.5, 333.0, 41.0, 22.0 ],
+					"style" : "",
+					"text" : "atodb"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 375.0, 76.0, 22.0 ],
+					"style" : "",
+					"text" : "pack 0. 0. 0."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 15.0, 408.0, 124.0, 22.0 ],
+					"style" : "",
+					"text" : "j.send all_coefficients"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"appearance" : 2,
 					"id" : "obj-7",
@@ -291,7 +330,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 117.5, 317.0, 119.0, 22.0 ],
+					"patching_rect" : [ 102.0, 309.0, 119.0, 22.0 ],
 					"style" : "",
 					"text" : "j.q2octavebandwidth"
 				}
@@ -572,9 +611,7 @@
 			}
 , 			{
 				"box" : 				{
-					"bgcolor" : [ 0.93, 0.93, 0.93, 1.0 ],
 					"fontface" : 0,
-					"headercolor" : [ 0.82, 0.82, 0.82, 1.0 ],
 					"id" : "obj-44",
 					"maxclass" : "j.ui",
 					"numinlets" : 1,
@@ -673,6 +710,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -759,19 +805,19 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 2 ]
+					"source" : [ "obj-31", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-31", 1 ]
+					"source" : [ "obj-31", 2 ]
 				}
 
 			}
@@ -781,6 +827,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-31", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -842,7 +897,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
+					"destination" : [ "obj-18", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-9", 0 ]
@@ -851,23 +906,23 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
 			"obj-19" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-15" : [ "live.menu", "live.menu", 0 ],
-			"obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ],
-			"obj-14" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-22" : [ "live.text", "live.text", 0 ],
 			"obj-7" : [ "live.numbox[5]", "live.numbox", 0 ],
-			"obj-22" : [ "live.text", "live.text", 0 ]
+			"obj-12" : [ "live.numbox[4]", "live.numbox[4]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "j.octavebandwidth2q.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/octavebandwidth2q",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/octavebandwidth2q",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.q2octavebandwidth.maxpat",
-				"bootpath" : "~/dev/Jamoma/Jamoma/Implementations/Max/Jamoma/patchers/components/audio/q2octavebandwith",
+				"bootpath" : "~/dev/Jamoma/JamomaMax/Jamoma/patchers/components/audio/q2octavebandwith",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -891,8 +946,12 @@
 				"name" : "j.receive~.mxo",
 				"type" : "iLaX"
 			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
  ],
-		"embedsnapshot" : 0
+		"autosave" : 0
 	}
 
 }
