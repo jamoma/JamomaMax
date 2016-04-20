@@ -1142,8 +1142,8 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	long				size, i;
 	int 				selectedId;
 	t_jfont 			*font;
-	//long				coord_x=0, coord_y=0;
-	//t_pt				pt;
+	long				coord_x=0, coord_y=0;
+	t_pt				pt;
 	
 	ui_menu_build(x);	// would be better to not rebuild the menu every single time?  or not?  this uses less memory...
 	
@@ -1179,13 +1179,27 @@ void ui_menu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		}
 	}
 	
-//	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
-//	coord_x += x->box.b_presentation_rect.x;
-//	coord_y += x->box.b_presentation_rect.y;
-//	pt.x = coord_x;
-//	pt.y = coord_y;
-//	selectedId = jpopupmenu_popup(p, pt, x->menu_selection+1);
-	selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->menu_selection+1);
+	object_method_direct(void, (void*, double, double, long*, long*) ,patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
+	if (patcherview_get_presentation(patcherview)) {
+		coord_x += x->box.b_presentation_rect.x;
+		coord_y += x->box.b_presentation_rect.y;
+	}
+	else {
+		coord_x += x->box.b_patching_rect.x;
+		coord_y += x->box.b_patching_rect.y;
+	}
+	pt.x = coord_x;
+	pt.y = coord_y;
+	selectedId = jpopupmenu_popup(p, pt, x->menu_selection+1);
+	//selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->menu_selection+1);
+
+	
+	coord_x += x->box.b_presentation_rect.x;
+	coord_y += x->box.b_presentation_rect.y;
+	pt.x = coord_x;
+	pt.y = coord_y;
+	selectedId = jpopupmenu_popup(p, pt, x->menu_selection+1);
+	//selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->menu_selection+1);
 
 	if (selectedId) {
 		x->menu_selection = selectedId -1;
@@ -1331,9 +1345,9 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 	long				size, i;
 	int 				selectedId;
 	t_jfont 			*font;
-	//long				coord_x=0,
-	//long				coord_y = 0;
-	//t_pt				pt;
+	long				coord_x=0;
+	long				coord_y = 0;
+	t_pt				pt;
 	
 	ui_refmenu_build(x);	// TODO: would be better to not rebuild the menu every single time?  or not?  this uses less memory...
 	
@@ -1362,14 +1376,19 @@ void ui_refmenu_do(t_ui *x, t_object *patcherview, t_pt px, long modifiers)
 		}
 	}
 	
-//	object_method(patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
-//	coord_x += x->box.b_presentation_rect.x;
-//	coord_y += x->box.b_presentation_rect.y;
-//	pt.x = coord_x + 20.0;
-//	pt.y = coord_y;
-//
-//	selectedId = jpopupmenu_popup(p, pt, x->refmenu_selection+1);
-	selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->refmenu_selection+1);
+	object_method_direct(void, (void*, double, double, long*, long*), patcherview, gensym("canvastoscreen"), 0.0, 0.0, &coord_x, &coord_y);
+	if (patcherview_get_presentation(patcherview)) {
+		coord_x += x->box.b_presentation_rect.x;
+		coord_y += x->box.b_presentation_rect.y;
+	} else {
+		coord_x += x->box.b_patching_rect.x;
+		coord_y += x->box.b_patching_rect.y;
+	}
+	pt.x = coord_x + 20.0;
+	pt.y = coord_y;
+
+	selectedId = jpopupmenu_popup(p, pt, x->refmenu_selection+1);
+	//selectedId = jpopupmenu_popup_nearbox(p, (t_object*)x, patcherview, x->refmenu_selection+1);
 
 	if (selectedId) {
 		x->refmenu_selection = selectedId -1;
