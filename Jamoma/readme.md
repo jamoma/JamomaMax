@@ -14,6 +14,7 @@ Visit [jamoma.org/max](http://jamoma.org/max/) for more information, video tutor
 * Renamed component j.get_modules => j.get_models
 * Added namespace-related components to "see also" section of j.namespace ref page
 * j.ui pop-up manues now pup up in the right place (#714)
+* Substituting old for new logo, improves look in Max Package manager
 
 
 ### v1.0.1
