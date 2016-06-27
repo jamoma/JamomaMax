@@ -1,5 +1,7 @@
 JamomaMax
 =========
+
+[![Join the chat at https://gitter.im/jamoma/JamomaMax](https://badges.gitter.im/jamoma/JamomaMax.svg)](https://gitter.im/jamoma/JamomaMax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Jamoma implementation for Max.
 
 | MacOS X build status | Windows build status | Waffle Stories |
