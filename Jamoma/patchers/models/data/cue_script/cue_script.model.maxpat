@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -223.0, 79.0, 1469.0, 810.0 ],
+		"rect" : [ 34.0, 79.0, 1469.0, 810.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -663,7 +663,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 16.0, 173.0, 153.0, 23.0 ],
+									"patching_rect" : [ 16.0, 173.0, 149.0, 23.0 ],
 									"style" : "",
 									"text" : "sel macintosh windows"
 								}
@@ -721,9 +721,9 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 16.0, 59.0, 207.0, 22.0 ],
+									"patching_rect" : [ 16.0, 59.0, 183.0, 22.0 ],
 									"style" : "",
-									"text" : "sel bang 0"
+									"text" : "sel bang none"
 								}
 
 							}
@@ -783,7 +783,7 @@
 									"destination" : [ "obj-1", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 213.5, 256.0, 90.5, 256.0 ],
+									"midpoints" : [ 189.5, 256.0, 90.5, 256.0 ],
 									"source" : [ "obj-13", 2 ]
 								}
 
@@ -793,7 +793,7 @@
 									"destination" : [ "obj-5", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
-									"midpoints" : [ 119.5, 90.0, 25.5, 90.0 ],
+									"midpoints" : [ 107.5, 90.0, 25.5, 90.0 ],
 									"source" : [ "obj-13", 1 ]
 								}
 
