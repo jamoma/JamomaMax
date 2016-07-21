@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 2,
 			"revision" : 3,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 353.0, 246.0, 300.0, 175.0 ],
+		"rect" : [ 353.0, 246.0, 729.0, 664.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,47 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"bgcolor" : [ 0.764847, 0.764824, 0.764837, 1.0 ],
+					"bgoncolor" : [ 0.764847, 0.764824, 0.764837, 1.0 ],
+					"id" : "obj-54",
+					"legacytextcolor" : 1,
+					"maxclass" : "textbutton",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 448.5, 5.350098, 49.5, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 72.586266, 23.199982, 61.5, 17.800018 ],
+					"style" : "",
+					"text" : "readagain",
+					"textcolor" : [ 0.15, 0.15, 0.15, 1.0 ],
+					"texton" : "Monitor Input ON",
+					"textoncolor" : [ 0.804051, 0.0, 0.0, 1.0 ],
+					"textovercolor" : [ 0.1, 0.1, 0.1, 1.0 ],
+					"usebgoncolor" : 1,
+					"usetextovercolor" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"color" : [ 0.0, 0.572549, 0.811765, 1.0 ],
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-58",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 448.5, 33.850098, 103.0, 22.0 ],
+					"style" : "",
+					"text" : "j.send read/again"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-55",
 					"maxclass" : "comment",
@@ -94,7 +135,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 759.0, 49.0, 49.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 198.336273, 23.199982, 42.5, 17.800018 ],
+					"presentation_rect" : [ 229.336273, 23.199982, 28.5, 17.800018 ],
 					"style" : "",
 					"text" : "edit",
 					"textcolor" : [ 0.15, 0.15, 0.15, 1.0 ],
@@ -220,7 +261,7 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 3,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -613,7 +654,7 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 3,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1076,7 +1117,7 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 3,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1318,7 +1359,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 638.25, 355.0, 49.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 255.95575, 23.199982, 38.5, 17.800018 ],
+					"presentation_rect" : [ 263.95575, 23.199982, 33.5, 17.800018 ],
 					"style" : "",
 					"text" : "clear",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
@@ -1377,7 +1418,7 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 3,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1665,7 +1706,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 458.0, 131.649902, 49.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 146.836273, 23.199982, 49.5, 17.800018 ],
+					"presentation_rect" : [ 172.836273, 23.199982, 49.5, 17.800018 ],
 					"style" : "",
 					"text" : "save as",
 					"textcolor" : [ 0.15, 0.15, 0.15, 1.0 ],
@@ -1685,7 +1726,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 426.0, 44.0, 28.0, 18.0 ],
+					"patching_rect" : [ 396.0, 18.0, 28.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 9.0, 25.199982, 28.0, 18.0 ],
 					"style" : "",
@@ -1721,7 +1762,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 341.25, 71.649902, 49.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 43.25, 23.199982, 49.5, 17.800018 ],
+					"presentation_rect" : [ 40.25, 23.199982, 31.5, 17.800018 ],
 					"style" : "",
 					"text" : "read",
 					"textcolor" : [ 0.15, 0.15, 0.15, 1.0 ],
@@ -1761,7 +1802,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 458.0, 68.0, 49.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 95.336266, 23.199982, 49.5, 17.800018 ],
+					"presentation_rect" : [ 138.935974, 23.199982, 32.599709, 17.800018 ],
 					"style" : "",
 					"text" : "save",
 					"textcolor" : [ 0.15, 0.15, 0.15, 1.0 ],
@@ -1783,7 +1824,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 458.0, 99.850098, 71.0, 22.0 ],
+					"patching_rect" : [ 458.0, 96.5, 71.0, 22.0 ],
 					"style" : "",
 					"text" : "j.send save"
 				}
@@ -1958,7 +1999,7 @@
 					"patching_rect" : [ 23.0, 18.0, 300.0, 70.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 175.0 ],
-					"text" : "/cue_manager_help"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -2317,6 +2358,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-58", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-54", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-13", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2388,7 +2438,51 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "thru.maxpat",
+				"bootpath" : "C74:/patchers/m4l/Pluggo for Live resources/patches",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.datetime.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/datetime",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.namespace_selector.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/namespace/namespace_selector",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.namespace.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
