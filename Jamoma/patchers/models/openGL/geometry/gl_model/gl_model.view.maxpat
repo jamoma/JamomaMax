@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 503.0, 610.0, 300.0, 280.0 ],
+		"rect" : [ 491.0, 363.0, 755.0, 523.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
@@ -37,6 +37,38 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"annotation" : "model file path",
+					"id" : "obj-8",
+					"keymode" : 1,
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 154.5, 379.5, 100.0, 50.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 52.5, 20.5, 245.0, 20.0 ],
+					"style" : "",
+					"text" : "none"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bordercolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
+					"id" : "obj-30",
+					"maxclass" : "dropfile",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 65.695923, 280.295959, 66.804077, 35.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 46.679199, 18.5, 253.320801, 25.5 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"fontname" : "Verdana",
 					"fontsize" : 10.0,
@@ -433,7 +465,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 16.930664, 69.0, 70.0, 19.0 ],
 					"style" : "",
-					"text" : "draw_group"
+					"text" : "drawgroup"
 				}
 
 			}
@@ -448,7 +480,7 @@
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 471.927734, 149.0, 117.0, 21.0 ],
 					"style" : "",
-					"text" : "j.remote draw_group",
+					"text" : "j.remote drawgroup",
 					"varname" : "fontsize[1]"
 				}
 
@@ -481,23 +513,6 @@
 					"patching_rect" : [ 154.5, 441.0, 100.0, 21.0 ],
 					"style" : "",
 					"text" : "route text"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "model file path",
-					"id" : "obj-8",
-					"maxclass" : "textedit",
-					"numinlets" : 1,
-					"numoutlets" : 4,
-					"outlettype" : [ "", "int", "", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 154.5, 379.5, 100.0, 50.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 52.5, 20.5, 245.0, 20.0 ],
-					"style" : "",
-					"text" : "duck.dae"
 				}
 
 			}
@@ -552,20 +567,6 @@
 					"patching_rect" : [ 154.5, 353.0, 108.0, 21.0 ],
 					"style" : "",
 					"text" : "j.remote file/path"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bordercolor" : [ 0.501961, 0.501961, 0.501961, 0.0 ],
-					"id" : "obj-30",
-					"maxclass" : "dropfile",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 65.695923, 280.295959, 66.804077, 35.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 317.0, 20.5, 300.0, 20.0 ]
 				}
 
 			}
@@ -923,7 +924,7 @@
 					"patching_rect" : [ 0.0, 0.0, 300.0, 140.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 300.0, 280.0 ],
-					"text" : "/gl_model"
+					"text" : "/no_model_address"
 				}
 
 			}
@@ -1253,7 +1254,51 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-36" : [ "live.text", "live.text", 0 ]
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "j.gl_group.panel.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.gl_group.view.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.list2parameter.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.ui.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.view.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.remote.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
