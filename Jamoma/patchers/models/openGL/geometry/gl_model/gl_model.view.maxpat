@@ -1121,7 +1121,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-4", 1 ]
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
@@ -1265,7 +1265,7 @@
 					"destination" : [ "obj-59", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-94", 1 ]
+					"source" : [ "obj-94", 0 ]
 				}
 
 			}
@@ -1276,19 +1276,19 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "j.gl_group.panel.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/BlueYeti/Developement/Jamoma/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"bootpath" : "~/Documents/BlueYeti/Developement/Jamoma/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/BlueYeti/Developement/Jamoma/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
