@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 2,
-			"revision" : 3,
-			"architecture" : "x64",
+			"revision" : 4,
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 52.0, 579.0, 554.0, 299.0 ],
+		"rect" : [ 215.0, 676.0, 554.0, 299.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 10.0,
@@ -173,7 +173,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 101.5, 234.0, 121.0, 21.0 ],
 					"style" : "",
-					"text" : "/models/myModel.1"
+					"text" : "/gl_model"
 				}
 
 			}
@@ -225,12 +225,12 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 2,
-							"revision" : 3,
-							"architecture" : "x64",
+							"revision" : 4,
+							"architecture" : "x86",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 62.0, 133.0, 921.0, 569.0 ],
+						"rect" : [ 395.0, 394.0, 921.0, 569.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -258,6 +258,45 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-5",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 355.5, 486.0, 100.0, 22.0 ],
+									"style" : "",
+									"text" : "j.send GL/enable"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-4",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 355.5, 454.0, 24.0, 24.0 ],
+									"style" : ""
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-23",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 3,
+									"outlettype" : [ "", "", "" ],
+									"patching_rect" : [ 355.5, 424.0, 122.0, 22.0 ],
+									"style" : "",
+									"text" : "j.receive data/active"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"fontname" : "Verdana",
 									"fontsize" : 10.0,
@@ -302,8 +341,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 2,
-											"revision" : 3,
-											"architecture" : "x64",
+											"revision" : 4,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -856,8 +895,8 @@
 										"appversion" : 										{
 											"major" : 7,
 											"minor" : 2,
-											"revision" : 3,
-											"architecture" : "x64",
+											"revision" : 4,
+											"architecture" : "x86",
 											"modernui" : 1
 										}
 ,
@@ -1265,10 +1304,28 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-4", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-23", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-24", 0 ],
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-3", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-5", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-4", 0 ]
 								}
 
 							}

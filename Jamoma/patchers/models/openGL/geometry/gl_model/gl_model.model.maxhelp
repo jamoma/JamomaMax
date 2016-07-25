@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 2,
-			"revision" : 3,
+			"revision" : 4,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
@@ -102,7 +102,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 2,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -201,7 +201,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 3,
 									"outlettype" : [ "", "bang", "" ],
-									"patching_rect" : [ 11.0, 229.0, 141.0, 35.0 ],
+									"patching_rect" : [ 11.0, 229.0, 124.0, 35.0 ],
 									"style" : "",
 									"text" : "jit.world model_help @enable 1"
 								}
@@ -218,7 +218,7 @@
 									"numinlets" : 1,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 11.0, 163.0, 187.0, 22.0 ],
+									"patching_rect" : [ 11.0, 163.0, 150.0, 22.0 ],
 									"style" : "",
 									"text" : "gl_model.model gl_model"
 								}
@@ -335,7 +335,7 @@
 						"appversion" : 						{
 							"major" : 7,
 							"minor" : 2,
-							"revision" : 3,
+							"revision" : 4,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
