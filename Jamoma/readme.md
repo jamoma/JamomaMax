@@ -9,6 +9,7 @@ Visit [jamoma.org/max](http://jamoma.org/max/) for more information, video tutor
 
 ### v1.0.2
 
+* Fixed issues with cue_script model reported by Reinhold
 * Changed how j.get_attributes works: Now takes full absolute or relative address as input
 * Improved help patchers for namespace-related components (j.get_models, j.get_parameters, j.get_messages, j.get_returns, j.get_attributes, j.get_attribute_value)
 * Renamed component j.get_modules => j.get_models
