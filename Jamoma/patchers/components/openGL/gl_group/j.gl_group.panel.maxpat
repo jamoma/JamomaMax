@@ -2,31 +2,40 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 6,
-			"minor" : 1,
-			"revision" : 7,
-			"architecture" : "x86"
+			"major" : 7,
+			"minor" : 2,
+			"revision" : 3,
+			"architecture" : "x86",
+			"modernui" : 1
 		}
 ,
-		"rect" : [ 62.0, 149.0, 547.0, 589.0 ],
+		"rect" : [ 62.0, 149.0, 547.0, 602.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
-		"gridonopen" : 0,
+		"gridonopen" : 1,
 		"gridsize" : [ 15.0, 15.0 ],
-		"gridsnaponopen" : 0,
+		"gridsnaponopen" : 1,
+		"objectsnaponopen" : 1,
 		"statusbarvisible" : 1,
 		"toolbarvisible" : 0,
+		"lefttoolbarpinned" : 0,
+		"toptoolbarpinned" : 0,
+		"righttoolbarpinned" : 0,
+		"bottomtoolbarpinned" : 0,
+		"toolbars_unpinned_last_save" : 0,
+		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"imprint" : 0,
 		"enablehscroll" : 0,
 		"enablevscroll" : 0,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
+		"style" : "",
+		"subpatcher_template" : "",
 		"title" : "/noModelAddress",
 		"boxes" : [ 			{
 				"box" : 				{
@@ -38,6 +47,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 92.5, 218.0, 100.0, 20.0 ],
+					"style" : "",
 					"text" : "loadmess #1"
 				}
 
@@ -51,7 +61,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 124.0, 174.0, 50.0, 18.0 ]
+					"patching_rect" : [ 124.0, 174.0, 50.0, 18.0 ],
+					"style" : ""
 				}
 
 			}
@@ -65,6 +76,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 151.0, 273.0, 75.0, 19.0 ],
+					"style" : "",
 					"text" : "prepend title"
 				}
 
@@ -80,6 +92,7 @@
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 151.0, 295.0, 67.0, 19.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"style" : "",
 					"text" : "thispatcher"
 				}
 
@@ -92,7 +105,8 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 26.0, 138.0, 20.0, 20.0 ]
+					"patching_rect" : [ 26.0, 138.0, 20.0, 20.0 ],
+					"style" : ""
 				}
 
 			}
@@ -106,6 +120,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 26.0, 166.5, 45.5, 20.0 ],
+					"style" : "",
 					"text" : "gate"
 				}
 
@@ -120,6 +135,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"patching_rect" : [ 86.5, 72.0, 39.5, 20.0 ],
+					"style" : "",
 					"text" : "t 0 b"
 				}
 
@@ -134,6 +150,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "int" ],
 					"patching_rect" : [ 5.5, 92.0, 39.5, 20.0 ],
+					"style" : "",
 					"text" : "t b 1"
 				}
 
@@ -148,6 +165,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 5.5, 192.0, 100.0, 20.0 ],
+					"style" : "",
 					"text" : "zl reg"
 				}
 
@@ -156,13 +174,13 @@
 				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"frgb" : 0.0,
 					"id" : "obj-9",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 122.0, 323.0, 125.0, 47.0 ],
+					"style" : "",
 					"text" : "binds to model only when this panel is opened"
 				}
 
@@ -177,6 +195,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 238.0, 240.0, 125.0, 17.0 ],
+					"style" : "",
 					"text" : "/noModelAddress"
 				}
 
@@ -191,6 +210,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 5.5, 351.0, 65.75, 20.0 ],
+					"style" : "",
 					"text" : "deferlow"
 				}
 
@@ -205,6 +225,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 5.5, 323.0, 106.0, 18.0 ],
+					"style" : "",
 					"text" : "model:address $1"
 				}
 
@@ -219,6 +240,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 86.5, 41.0, 75.0, 20.0 ],
+					"style" : "",
 					"text" : "closebang"
 				}
 
@@ -231,7 +253,8 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 5.5, 7.0, 25.0, 25.0 ]
+					"patching_rect" : [ 5.5, 7.0, 25.0, 25.0 ],
+					"style" : ""
 				}
 
 			}
@@ -245,6 +268,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "bang", "" ],
 					"patching_rect" : [ 5.5, 63.0, 49.0, 20.0 ],
+					"style" : "",
 					"text" : "sel 1"
 				}
 
@@ -259,6 +283,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"patching_rect" : [ 5.5, 41.0, 59.0, 20.0 ],
+					"style" : "",
 					"text" : "active"
 				}
 
@@ -273,6 +298,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 5.5, 247.0, 106.0, 20.0 ],
+					"style" : "",
 					"text" : "sprintf %s/%s"
 				}
 
@@ -287,6 +313,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 86.5, 132.5, 137.0, 20.0 ],
+					"style" : "",
 					"text" : "j.receive model:address"
 				}
 
@@ -294,15 +321,23 @@
 , 			{
 				"box" : 				{
 					"annotation" : "none",
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
 					"id" : "obj-3",
+					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "j.gl_group.view.maxpat",
 					"numinlets" : 1,
 					"numoutlets" : 0,
+					"offset" : [ 0.0, 0.0 ],
 					"patching_rect" : [ 5.5, 382.0, 203.0, 130.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.5, 0.0, 542.0, 585.0 ],
-					"varname" : "view"
+					"presentation_rect" : [ 0.5, 0.0, 542.0, 599.0 ],
+					"varname" : "view",
+					"viewvisibility" : 1
 				}
 
 			}
@@ -501,15 +536,13 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "j.gl_group.view.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/openGL/gl_group",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "/Users/mathieuchamagne/Documents/GITHUB/Jamoma/Implementations/Max/Jamoma/patchers/components/data/list2parameter",
-				"patcherrelativepath" : "../../data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -529,7 +562,8 @@
 				"name" : "j.receive.mxo",
 				"type" : "iLaX"
 			}
- ]
+ ],
+		"autosave" : 0
 	}
 
 }

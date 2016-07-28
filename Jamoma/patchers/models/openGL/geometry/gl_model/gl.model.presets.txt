@@ -1,0 +1,157 @@
+
+- preset "duck"
+- description "something about this preset"
+# ###########################################
+# 
+GL/context default
+GL/alpha 1.000000
+GL/anchor 0.000000 0.000000 0.000000
+GL/anim UID
+GL/animmode none
+GL/antialias 0
+GL/automatic 1
+GL/aux_alpha 1.000000
+GL/aux_color 1.000000 1.000000 1.000000
+GL/axes 0
+GL/blend/enable 0
+GL/blend/mode 6.000000 7.000000
+GL/capture none
+GL/color 1.000000 1.000000 1.000000
+GL/color/inherit 0
+GL/cull_face 0
+GL/depth/clear 0
+GL/depth/enable 1
+GL/depth/inherit 0
+GL/depth/write 1
+GL/enable 1
+GL/filterclass default
+GL/fog/amount 0.000000
+GL/fog/inherit 0
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+GL/inherit_all 0
+GL/inherit_texture 0
+GL/layer 0
+GL/light/enable 1
+GL/line_width 1.000000
+GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+GL/material/automatic 1
+GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+GL/material/emission 0.000000 0.000000 0.000000 0.000000
+GL/material/inherit 0
+GL/material/matfile none
+GL/material/name none
+GL/material/shininess 10.000000
+GL/material/specular 0.000000 0.000000 0.000000 0.000000
+GL/matrixoutput 0
+GL/point_size 1.000000
+GL/poly_mode 0.000000 0.000000
+GL/position 0.000000 0.000000 -1.000000
+GL/rotate 0.000000 0.000000 0.000000 1.000000
+GL/scale 1.000000 1.000000 1.000000
+GL/shader none
+GL/smooth_shading 1
+GL/tex_map 0
+GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+GL/texture none
+GL/transform_reset 0
+GL/viewalign 0
+animblendmode 0
+cache_mode var
+data/active 1
+data/bypass 0
+displaylist 0
+displaylist.1 0
+drawgroup 0
+drawskeleton 0
+file/path duck.dae
+find_instances 1
+fix_normals 0
+gen_normals 1
+gen_tangents 1
+material_mode 1
+nodeaxes 0
+normalize 1
+optimize 1
+smoothing_angle 89.000000
+verbose 0
+# 
+# ###########################################
+
+- preset "default"
+- description "something about this preset"
+# ###########################################
+# 
+GL/context default
+GL/alpha 1.000000
+GL/anchor 0.000000 0.000000 0.000000
+GL/anim UID
+GL/animmode none
+GL/antialias 0
+GL/automatic 1
+GL/aux_alpha 1.000000
+GL/aux_color 1.000000 1.000000 1.000000
+GL/axes 0
+GL/blend/enable 0
+GL/blend/mode 6.000000 7.000000
+GL/capture none
+GL/color 1.000000 1.000000 1.000000
+GL/color/inherit 0
+GL/cull_face 0
+GL/depth/clear 0
+GL/depth/enable 1
+GL/depth/inherit 0
+GL/depth/write 1
+GL/enable 1
+GL/filterclass default
+GL/fog/amount 0.000000
+GL/fog/inherit 0
+GL/fog/params 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+GL/inherit_all 0
+GL/inherit_texture 0
+GL/layer 0
+GL/light/enable 0
+GL/line_width 1.000000
+GL/material/ambient 0.000000 0.000000 0.000000 0.000000
+GL/material/automatic 1
+GL/material/diffuse 0.000000 0.000000 0.000000 0.000000
+GL/material/emission 0.000000 0.000000 0.000000 0.000000
+GL/material/inherit 0
+GL/material/matfile none
+GL/material/name none
+GL/material/shininess 10.000000
+GL/material/specular 0.000000 0.000000 0.000000 0.000000
+GL/matrixoutput 0
+GL/point_size 1.000000
+GL/poly_mode 0.000000 0.000000
+GL/position 0.000000 0.000000 0.000000
+GL/rotate 0.000000 0.000000 0.000000 1.000000
+GL/scale 1.000000 1.000000 1.000000
+GL/shader none
+GL/smooth_shading 0
+GL/tex_map 0
+GL/tex_plane_s 1.000000 0.000000 0.000000 0.000000
+GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
+GL/texture none
+GL/transform_reset 0
+GL/viewalign 0
+animblendmode 0
+cache_mode var
+data/active 1
+data/bypass 0
+displaylist 0
+drawgroup 0
+drawskeleton 0
+file/path none
+find_instances 1
+fix_normals 0
+gen_normals 1
+gen_tangents 1
+material_mode 1
+nodeaxes 0
+normalize 1
+optimize 1
+smoothing_angle 89.000000
+verbose 0
+# 
+# ###########################################
