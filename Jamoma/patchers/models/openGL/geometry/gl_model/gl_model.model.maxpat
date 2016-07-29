@@ -38,21 +38,6 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 13.0,
-					"id" : "obj-18",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 439.5, 195.0, 95.0, 23.0 ],
-					"style" : "",
-					"text" : "read duck.dae"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"attr" : "lighting_enable",
 					"fontface" : 0,
 					"fontname" : "Arial",
@@ -173,7 +158,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 101.5, 234.0, 121.0, 21.0 ],
 					"style" : "",
-					"text" : "/gl_model"
+					"text" : "/gl"
 				}
 
 			}
@@ -230,7 +215,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 395.0, 394.0, 921.0, 569.0 ],
+						"rect" : [ 325.0, 394.0, 592.0, 569.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -346,7 +331,7 @@
 											"modernui" : 1
 										}
 ,
-										"rect" : [ 604.0, 172.0, 789.0, 797.0 ],
+										"rect" : [ 457.0, 172.0, 789.0, 797.0 ],
 										"bglocked" : 0,
 										"openinpresentation" : 0,
 										"default_fontsize" : 12.0,
@@ -413,9 +398,9 @@
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 223.0, 669.0, 343.0, 21.0 ],
+													"patching_rect" : [ 223.0, 669.0, 399.0, 21.0 ],
 													"style" : "",
-													"text" : "j.parameter file/path @type string @description \"model file path\""
+													"text" : "j.parameter file/path @type string @description \"model file path\" @priority 2"
 												}
 
 											}
@@ -447,7 +432,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 238.0, 578.0, 534.0, 33.0 ],
 													"style" : "",
-													"text" : "j.parameter verbose @type boolean @default 0 @description \"If enabled, messages useful for debugging are printed to the Max Console.\"",
+													"text" : "j.parameter verbose @type boolean @default 0 @description \"If enabled, messages useful for debugging are printed to the Max Console.\" @priority 1",
 													"varname" : "face[8]"
 												}
 
@@ -480,7 +465,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 151.0, 505.0, 545.0, 33.0 ],
 													"style" : "",
-													"text" : "j.parameter smoothing_angle @type decimal @default 89. @description \"Specifies the edge angle above which to smooth vertex normals (default = 89.)\"",
+													"text" : "j.parameter smoothing_angle @type decimal @default 89. @description \"Specifies the edge angle above which to smooth vertex normals (default = 89.)\" @priority 1",
 													"varname" : "face[7]"
 												}
 
@@ -513,7 +498,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 136.0, 428.0, 529.0, 33.0 ],
 													"style" : "",
-													"text" : "j.parameter optimize @type boolean @default 1 @description \"Optimize vertices and nodes on import (default = 1).\"",
+													"text" : "j.parameter optimize @type boolean @default 1 @description \"Optimize vertices and nodes on import (default = 1).\" @priority 1",
 													"varname" : "face[6]"
 												}
 
@@ -539,14 +524,14 @@
 													"fontname" : "Verdana",
 													"fontsize" : 10.0,
 													"id" : "obj-11",
-													"linecount" : 2,
+													"linecount" : 3,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 119.0, 348.0, 529.0, 33.0 ],
+													"patching_rect" : [ 119.0, 342.0, 529.0, 45.0 ],
 													"style" : "",
-													"text" : "j.parameter normalize @type boolean @default 1 @description \"Normalize model coordinates flag (default = 1). When enabled, the model is scaled to the range (-1.,1.) for the x, y, and z axes.\"",
+													"text" : "j.parameter normalize @type boolean @default 1 @description \"Normalize model coordinates flag (default = 1). When enabled, the model is scaled to the range (-1.,1.) for the x, y, and z axes.\" @priority 1",
 													"varname" : "face[5]"
 												}
 
@@ -579,7 +564,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 103.0, 271.0, 521.0, 33.0 ],
 													"style" : "",
-													"text" : "j.parameter gen_tangents @type boolean @default 1 @description \"Generate tangents on import (default = 1)\"",
+													"text" : "j.parameter gen_tangents @type boolean @default 1 @description \"Generate tangents on import (default = 1)\" @priority 1",
 													"varname" : "face[4]"
 												}
 
@@ -612,7 +597,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 103.0, 194.0, 521.0, 33.0 ],
 													"style" : "",
-													"text" : "j.parameter gen_normals @type boolean @default 1 @description \"Generate normals on import (default = 1)\"",
+													"text" : "j.parameter gen_normals @type boolean @default 1 @description \"Generate normals on import (default = 1)\" @priority 1",
 													"varname" : "face[3]"
 												}
 
@@ -638,13 +623,14 @@
 													"fontname" : "Verdana",
 													"fontsize" : 10.0,
 													"id" : "obj-5",
+													"linecount" : 2,
 													"maxclass" : "newobj",
 													"numinlets" : 1,
 													"numoutlets" : 2,
 													"outlettype" : [ "", "" ],
-													"patching_rect" : [ 74.0, 111.0, 534.0, 21.0 ],
+													"patching_rect" : [ 74.0, 111.0, 534.0, 33.0 ],
 													"style" : "",
-													"text" : "j.parameter fix_normals @type boolean @default 0 @description \"Fix normals on import (default = 0)\"",
+													"text" : "j.parameter fix_normals @type boolean @default 0 @description \"Fix normals on import (default = 0)\" @priority 1",
 													"varname" : "face[1]"
 												}
 
@@ -677,7 +663,7 @@
 													"outlettype" : [ "", "" ],
 													"patching_rect" : [ 50.0, 34.0, 521.0, 33.0 ],
 													"style" : "",
-													"text" : "j.parameter find_instances @type boolean @default 1 @description \"Mesh instance removal on import (default = 1)\"",
+													"text" : "j.parameter find_instances @type boolean @default 1 @description \"Mesh instance removal on import (default = 1)\" @priority 1",
 													"varname" : "face[2]"
 												}
 
@@ -1506,15 +1492,6 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -1619,7 +1596,39 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "j.gl_group.model.maxpat",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/openGL/gl_group",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "j.in.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.out.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.model.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.parameter.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.receive.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "j.send.mxo",
+				"type" : "iLaX"
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
