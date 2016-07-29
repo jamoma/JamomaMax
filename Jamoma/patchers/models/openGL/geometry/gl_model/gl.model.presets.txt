@@ -56,25 +56,24 @@ GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
 GL/texture none
 GL/transform_reset 0
 GL/viewalign 0
+find_instances 1
+fix_normals 0
+gen_normals 1
+gen_tangents 1
+normalize 1
+optimize 1
+smoothing_angle 89.000000
+verbose 0
 animblendmode 0
 cache_mode var
 data/active 1
 data/bypass 0
 displaylist 0
-displaylist.1 0
 drawgroup 0
 drawskeleton 0
 file/path duck.dae
-find_instances 1
-fix_normals 0
-gen_normals 1
-gen_tangents 1
 material_mode 1
 nodeaxes 0
-normalize 1
-optimize 1
-smoothing_angle 89.000000
-verbose 0
 # 
 # ###########################################
 
@@ -135,6 +134,14 @@ GL/tex_plane_t 0.000000 1.000000 0.000000 0.000000
 GL/texture none
 GL/transform_reset 0
 GL/viewalign 0
+find_instances 1
+fix_normals 0
+gen_normals 1
+gen_tangents 1
+normalize 1
+optimize 1
+smoothing_angle 89.000000
+verbose 0
 animblendmode 0
 cache_mode var
 data/active 1
@@ -143,15 +150,7 @@ displaylist 0
 drawgroup 0
 drawskeleton 0
 file/path none
-find_instances 1
-fix_normals 0
-gen_normals 1
-gen_tangents 1
 material_mode 1
 nodeaxes 0
-normalize 1
-optimize 1
-smoothing_angle 89.000000
-verbose 0
 # 
 # ###########################################
