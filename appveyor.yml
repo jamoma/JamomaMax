@@ -12,7 +12,7 @@ configuration: Release
 install:
   - curl --retry 10 -sO https://cmake.org/files/v3.4/cmake-3.4.1-win32-x86.zip
   - 7z x cmake-3.4.1-win32-x86.zip -y > nul
-  - curl --retry 10 -sO http://freefr.dl.sourceforge.net/project/winscp/WinSCP/5.7.5/winscp575automation.zip
+  - curl --retry 10 -sO http://jaist.dl.sourceforge.net/project/winscp/WinSCP/5.7.5/winscp575automation.zip
   - 7z x winscp575automation.zip -y > nul
 
 platform:

@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 1,
-			"revision" : 0,
+			"minor" : 2,
+			"revision" : 3,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 100.0, 100.0, 988.0, 485.0 ],
+		"rect" : [ 138.0, 148.0, 988.0, 485.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,19 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 17.0, 240.0, 58.0, 22.0 ],
+					"style" : "",
+					"text" : "deferlow"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-16",
@@ -45,7 +58,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 17.0, 251.0, 122.0, 22.0 ],
+					"patching_rect" : [ 17.0, 269.0, 122.0, 22.0 ],
 					"style" : "",
 					"text" : "recall \"black & white\""
 				}
@@ -61,7 +74,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 17.0, 225.0, 95.0, 22.0 ],
+					"patching_rect" : [ 17.0, 211.0, 95.0, 22.0 ],
 					"style" : "",
 					"text" : "route read/done"
 				}
@@ -141,7 +154,7 @@
 			}
 , 			{
 				"box" : 				{
-					"args" : [ "@name", "cue_manager.model", "@description", "Make dinamic events" ],
+					"args" : [ "@name", "cue_manager.model", "@description", "Make dynamics events" ],
 					"background" : 1,
 					"bgmode" : 1,
 					"border" : 0,
@@ -282,7 +295,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-16", 0 ],
+					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-12", 0 ]
@@ -303,7 +316,7 @@
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 26.5, 283.0, 7.5, 283.0, 7.5, 160.0, 26.5, 160.0 ],
+					"midpoints" : [ 26.5, 302.0, 7.5, 302.0, 7.5, 160.0, 26.5, 160.0 ],
 					"source" : [ "obj-16", 0 ]
 				}
 
@@ -328,6 +341,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -338,7 +360,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "cue_manager.view.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/cue_manager",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/cue_manager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -350,67 +372,67 @@
 			}
 , 			{
 				"name" : "j.datetime.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/datetime",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/datetime",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespace_selector.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/namespace/namespace_selector",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/namespace/namespace_selector",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.view.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/noise%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.list2parameter.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/list2parameter",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/list2parameter",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "brcosa%.view.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/brcosa%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/brcosa%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpui.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.maxhelpuiButton.png",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/maxhelpui",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/maxhelpui",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cue_manager.model.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/data/cue_manager",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/data/cue_manager",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "noise%.model.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/sources/noise%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/sources/noise%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "brcosa%.model.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/models/video/fx/brcosa%",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/models/video/fx/brcosa%",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.initialized.maxpat",
-				"bootpath" : "~/Documents/Developpements/Jamoma/Max/Jamoma/patchers/components/data/initialized",
+				"bootpath" : "~/Documents/GITHUB/JamomaMax/Jamoma/patchers/components/data/initialized",
 				"type" : "JSON",
 				"implicit" : 1
 			}
