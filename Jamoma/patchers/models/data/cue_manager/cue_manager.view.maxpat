@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 2,
 			"revision" : 4,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 335.0, 65.0, 729.0, 664.0 ],
+		"rect" : [ 312.0, 567.0, 300.0, 175.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -302,7 +302,7 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -695,11 +695,11 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 565.0, 70.0, 381.0, 907.0 ],
+						"rect" : [ 73.0, 45.0, 381.0, 907.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -728,6 +728,19 @@
 						"subpatcher_template" : "",
 						"title" : "/cue_manager(view)",
 						"boxes" : [ 							{
+								"box" : 								{
+									"id" : "obj-37",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"patching_rect" : [ 123.0, 56.0, 42.0, 22.0 ],
+									"style" : "",
+									"text" : "active"
+								}
+
+							}
+, 							{
 								"box" : 								{
 									"id" : "obj-9",
 									"legacytextcolor" : 1,
@@ -865,7 +878,7 @@
 									"lockeddragscroll" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "j.namespace_selector.maxpat",
-									"numinlets" : 0,
+									"numinlets" : 1,
 									"numoutlets" : 0,
 									"offset" : [ 0.0, 0.0 ],
 									"patching_rect" : [ 123.0, 97.649902, 128.0, 128.0 ],
@@ -896,6 +909,15 @@
 									"disabled" : 0,
 									"hidden" : 0,
 									"source" : [ "obj-12", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"disabled" : 0,
+									"hidden" : 0,
+									"source" : [ "obj-37", 0 ]
 								}
 
 							}
@@ -1118,7 +1140,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 6.0, 113.199982, 292.0, 35.350128 ],
 					"style" : "",
-					"text" : "vivid colors are nice too",
+					"text" : "pixels are only black, grey or white",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"varname" : "textedit"
 				}
@@ -1158,7 +1180,7 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -1459,7 +1481,7 @@
 							"major" : 7,
 							"minor" : 2,
 							"revision" : 4,
-							"architecture" : "x86",
+							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
@@ -2497,13 +2519,13 @@
 			}
 , 			{
 				"name" : "j.datetime.maxpat",
-				"bootpath" : "~/Documents/BlueYeti/Developement/Jamoma/JamomaMax/Jamoma/patchers/components/data/datetime",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/components/data/datetime",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "j.namespace_selector.maxpat",
-				"bootpath" : "~/Documents/BlueYeti/Developement/Jamoma/JamomaMax/Jamoma/patchers/components/namespace/namespace_selector",
+				"bootpath" : "~/Documents/Max 7/Packages/Jamoma/patchers/components/namespace/namespace_selector",
 				"type" : "JSON",
 				"implicit" : 1
 			}
